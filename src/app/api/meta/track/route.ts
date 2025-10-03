@@ -2,40 +2,30 @@
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
 
-// Ejecutar en Node (no Edge) para usar 'crypto'
 export const runtime = "nodejs";
 
-// ─────────────────────────────────────────────────────────────────────────────
-// ENV requeridas
-// ─────────────────────────────────────────────────────────────────────────────
-const PIXEL_ID = process.env.META_PIXEL_ID;
-const ACCESS_TOKEN = process.env.META_ACCESS_TOKEN;
+// ENV: acepta ambos nombres para mayor compatibilidad
+const PIXEL_ID =
+  process.env.META_PIXEL_ID ?? process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID ?? "";
+const ACCESS_TOKEN =
+  process.env.META_ACCESS_TOKEN ?? process.env.FACEBOOK_ACCESS_TOKEN ?? "";
 const GRAPH_VERSION = process.env.META_GRAPH_VERSION || "v19.0";
-
-// ⚠️ TEST EVENTS FORZADO para pruebas:
-const FORCE_TEST_EVENT_CODE = "TEST25016" as const;
-// Para dejar de usar Test Events después de probar:
-// 1) pon FORCE_TEST_EVENT_CODE = undefined (o comenta la const)
-// 2) y/o borra META_TEST_EVENT_CODE del .env
-
 const ENV_TEST_EVENT_CODE = process.env.META_TEST_EVENT_CODE;
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Tipos
-// ─────────────────────────────────────────────────────────────────────────────
-type CurrencyISO = string; // p.ej., "CLP" | "ARS" | "USD"
+// === Tipos (front -> server) ===
+type CurrencyISO = string; // p.ej. "CLP" | "ARS" | "USD"
 
 interface FrontMeta {
   url?: string;
   referrer?: string;
   fbc?: string;
   fbp?: string;
-  [k: string]: string | undefined; // UTMs u otros campos string
+  [k: string]: string | undefined; // UTM u otros strings
 }
 
 interface FrontBody {
   event_name?: string;      // por defecto "InitiateCheckout"
-  event_id?: string;        // deduplicación
+  event_id?: string;        // para deduplicación
   value?: number;
   currency?: CurrencyISO;
   content_ids?: string[];
@@ -43,13 +33,15 @@ interface FrontBody {
   source?: string;          // etiqueta propia (inline/sticky/etc.)
   meta?: FrontMeta;         // { url, referrer, utms..., fbc, fbp }
   client_ts?: number;       // timestamp del cliente (ms)
-  // PII opcional (se hashea aquí)
+  // PII opcional (se hashea aquí):
   email?: string;
   phone?: string;
   external_id?: string;
-  test_event_code?: string; // opcional para Test Events
+  // Test Events (para Events Manager)
+  test_event_code?: string;
 }
 
+// === Tipos (Graph API) ===
 interface UserData {
   client_user_agent?: string;
   client_ip_address?: string;
@@ -92,13 +84,10 @@ interface GraphResponse {
     error_subcode?: number;
     fbtrace_id?: string;
   };
-  messages?: unknown[];
   [k: string]: unknown;
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Helpers
-// ─────────────────────────────────────────────────────────────────────────────
+// === Utils ===
 function sha256(v: string): string {
   return crypto.createHash("sha256").update(v.trim().toLowerCase()).digest("hex");
 }
@@ -129,7 +118,6 @@ function toFrontBody(raw: unknown): FrontBody {
   for (const [k, v] of Object.entries(metaRec)) {
     if (typeof v === "string") meta[k] = v;
   }
-
   return {
     event_name: typeof r.event_name === "string" ? r.event_name : undefined,
     event_id: typeof r.event_id === "string" ? r.event_id : undefined,
@@ -147,20 +135,17 @@ function toFrontBody(raw: unknown): FrontBody {
   };
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Handler
-// ─────────────────────────────────────────────────────────────────────────────
+// === Handler ===
 export async function POST(req: NextRequest) {
   try {
     if (!PIXEL_ID || !ACCESS_TOKEN) {
       return NextResponse.json(
-        { ok: false, error: "Faltan META_PIXEL_ID o META_ACCESS_TOKEN" },
+        { ok: false, error: "Faltan PIXEL_ID o ACCESS_TOKEN en variables de entorno" },
         { status: 500 }
       );
     }
 
-    const bodyRaw = (await req.json()) as unknown;
-    const body = toFrontBody(bodyRaw);
+    const body = toFrontBody(await req.json());
 
     const event_name = body.event_name ?? "InitiateCheckout";
     const event_id = body.event_id;
@@ -174,7 +159,7 @@ export async function POST(req: NextRequest) {
       fbp: body.meta?.fbp,
     };
 
-    // PII opcional hasheada
+    // PII opcional hasheada (recomendado por Meta)
     if (body.email) user_data.em = [sha256(body.email)];
     if (body.phone) {
       const digits = body.phone.replace(/[^\d]/g, "");
@@ -185,12 +170,7 @@ export async function POST(req: NextRequest) {
     // custom_data
     const custom_data: CustomData = {
       currency: body.currency,
-      value:
-        typeof body.value === "number"
-          ? body.value
-          : Number.isFinite(body.value)
-          ? Number(body.value)
-          : undefined,
+      value: typeof body.value === "number" ? body.value : undefined,
       content_ids: body.content_ids,
       content_type: body.content_type,
     };
@@ -207,16 +187,11 @@ export async function POST(req: NextRequest) {
       custom_data,
     };
 
+    // Test Events: prioridad -> body > ENV
     const payload: GraphPayload = {
       data: [graphEvent],
-      // Prioridad:
-      // 1) body.test_event_code (si lo manda el cliente),
-      // 2) FORCE_TEST_EVENT_CODE (forzado en este archivo),
-      // 3) ENV_TEST_EVENT_CODE (si existe en .env)
       ...(body.test_event_code
         ? { test_event_code: body.test_event_code }
-        : FORCE_TEST_EVENT_CODE
-        ? { test_event_code: FORCE_TEST_EVENT_CODE }
         : ENV_TEST_EVENT_CODE
         ? { test_event_code: ENV_TEST_EVENT_CODE }
         : {}),
