@@ -11,6 +11,7 @@ const ACCESS_TOKEN =
   process.env.META_ACCESS_TOKEN ?? process.env.FACEBOOK_ACCESS_TOKEN ?? "";
 const GRAPH_VERSION = process.env.META_GRAPH_VERSION || "v19.0";
 const ENV_TEST_EVENT_CODE = process.env.META_TEST_EVENT_CODE;
+const ENV_TEST_ENABLED = process.env.META_TEST_EVENTS_ENABLED === "1"; // ← flag global opcional
 
 // === Tipos (front -> server) ===
 type CurrencyISO = string; // p.ej. "CLP" | "ARS" | "USD"
@@ -146,10 +147,35 @@ export async function POST(req: NextRequest) {
     }
 
     const body = toFrontBody(await req.json());
+    const qs = req.nextUrl.searchParams;
+
+    // Toggle para ver explícitamente “Servidor” en Test Events (evita deduplicación)
+    const showServer = qs.get("showServer") === "1";
+
+    // Toggle de Test Events:
+    // - ?test=1  → fuerza enviar test_event_code (body > env)
+    // - ?test=0  → fuerza NO enviar test_event_code
+    // - sin ?test → usa body.test_event_code o (si ENV_TEST_ENABLED) ENV_TEST_EVENT_CODE
+    const testParam = qs.get("test");
+    let test_event_code: string | undefined;
+    if (testParam === "1") {
+      test_event_code = body.test_event_code ?? ENV_TEST_EVENT_CODE;
+    } else if (testParam === "0") {
+      test_event_code = undefined;
+    } else {
+      test_event_code = body.test_event_code ?? (ENV_TEST_ENABLED ? ENV_TEST_EVENT_CODE : undefined);
+    }
 
     const event_name = body.event_name ?? "InitiateCheckout";
-    const event_id = body.event_id;
+    const original_event_id = body.event_id;
     const event_time = Math.floor(Number(body.client_ts ?? Date.now()) / 1000);
+
+    // Si queremos que NO se deduzca con el del navegador, alteramos el event_id
+    const event_id = showServer
+      ? (original_event_id
+          ? `${original_event_id}-srv`
+          : `srv-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`)
+      : original_event_id;
 
     // user_data
     const user_data: UserData = {
@@ -187,14 +213,9 @@ export async function POST(req: NextRequest) {
       custom_data,
     };
 
-    // Test Events: prioridad -> body > ENV
     const payload: GraphPayload = {
       data: [graphEvent],
-      ...(body.test_event_code
-        ? { test_event_code: body.test_event_code }
-        : ENV_TEST_EVENT_CODE
-        ? { test_event_code: ENV_TEST_EVENT_CODE }
-        : {}),
+      ...(test_event_code ? { test_event_code } : {}),
     };
 
     const url = `https://graph.facebook.com/${GRAPH_VERSION}/${PIXEL_ID}/events?access_token=${encodeURIComponent(
@@ -219,6 +240,7 @@ export async function POST(req: NextRequest) {
           event_id,
           event_time,
           source: body.source,
+          test_event_code: test_event_code ?? null,
           meta: { ...body.meta, url: event_source_url },
         },
       },
