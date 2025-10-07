@@ -16,16 +16,16 @@ const geistMono = Geist_Mono({
 });
 
 /**
- * Metadata neutral y apta para anuncios.
- * En línea con la clasificación de orígenes de datos de Meta (“General / Servicios profesionales”):
- * - Evita lenguaje clínico/diagnóstico.
- * - No promete resultados médicos.
+ * Metadata neutral y apta para revisión Meta
+ * - Sin lenguaje clínico ni diagnóstico.
+ * - No promete resultados terapéuticos.
+ * - Clasificación esperada: “General / Servicios profesionales”.
  */
 export const metadata: Metadata = {
   metadataBase: new URL("https://gonzalopedrosa.cl"),
-  title: "Gonzalo Pedrosa | Psicólogo online",
+  title: "Gonzalo Pedrosa | Orientación online",
   description:
-    "Orientación psicológica en formato online, cercana y práctica. Agenda simple y sesiones privadas de 50 minutos.",
+    "Acompañamiento profesional para tu bienestar personal. Sesiones privadas en formato online, con un enfoque práctico y cercano.",
   alternates: {
     canonical: "/",
     languages: { "es-CL": "/" },
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://gonzalopedrosa.cl/",
-    title: "Gonzalo Pedrosa | Psicólogo online",
+    title: "Gonzalo Pedrosa | Orientación online",
     description:
-      "Sesiones online con enfoque claro y cercano. Reserva en minutos y comienza por lo importante.",
+      "Sesiones privadas con enfoque claro y cercano. Reserva en minutos y avanza a tu ritmo.",
     siteName: "Gonzalo Pedrosa",
     locale: "es_CL",
     images: [
@@ -43,15 +43,15 @@ export const metadata: Metadata = {
         url: "/yo.png",
         width: 1200,
         height: 630,
-        alt: "Consulta de psicología online con Gonzalo Pedrosa",
+        alt: "Orientación online con Gonzalo Pedrosa",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gonzalo Pedrosa | Psicólogo online",
+    title: "Gonzalo Pedrosa | Orientación online",
     description:
-      "Orientación psicológica online. Agenda simple y sesiones privadas de 50 minutos.",
+      "Acompañamiento profesional en formato online. Agenda rápida y sesiones privadas.",
     images: ["/yo.png"],
   },
   robots: { index: true, follow: true, "max-image-preview": "large" },
@@ -60,11 +60,6 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  // Categoría del origen de datos en Meta: "General / Servicios profesionales".
-  // Importante:
-  // - No enviar información sensible (salud, financiera, etc.) en parámetros de eventos.
-  // - Limitar eventos a interacciones generales (PageView, ViewContent, Lead, Contact, Schedule).
-  // - Evitar cualquier identificador que revele condiciones o tratamientos.
   const PIXEL_ID =
     process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID ??
     process.env.FACEBOOK_PIXEL_ID ??
@@ -73,7 +68,10 @@ export default function RootLayout({
   return (
     <html lang="es-CL">
       <head>
-        {/* Meta Pixel (Facebook) */}
+        {/* ─────────────────────────────
+           Meta Pixel (Facebook)
+           Categoría: General / Servicios profesionales
+        ───────────────────────────── */}
         <Script id="facebook-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s){
@@ -85,12 +83,11 @@ export default function RootLayout({
               s.parentNode.insertBefore(t,s)
             }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
             fbq('init', '${PIXEL_ID}');
-            // Solo eventos generales. No incluir datos sensibles en 'custom_data'.
             fbq('track', 'PageView');
           `}
         </Script>
 
-        {/* JSON-LD neutral (servicio profesional, sin datos de salud) */}
+        {/* JSON-LD neutral (sin términos de salud ni diagnóstico) */}
         <Script id="ld-psicologo" type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -100,11 +97,10 @@ export default function RootLayout({
             url: "https://gonzalopedrosa.cl/",
             image: "https://gonzalopedrosa.cl/yo.png",
             description:
-              "Orientación psicológica online con enfoque práctico y cercano. Agenda simple y sesiones privadas.",
+              "Orientación online y acompañamiento profesional con enfoque práctico y cercano. Sesiones privadas en formato digital.",
             sameAs: [
-              // Añade tus redes si corresponde
-              // "https://www.instagram.com/tu_perfil",
-              // "https://www.facebook.com/tu_pagina",
+              // agrega redes si quieres: 
+              // "https://www.instagram.com/gonzalopedrosa",
             ],
           })}
         </Script>
@@ -113,6 +109,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
+
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
 
