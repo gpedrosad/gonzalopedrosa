@@ -5,22 +5,33 @@ import Image from "next/image";
 import { AiFillStar, AiOutlineStar, AiOutlineCheckCircle } from "react-icons/ai";
 import Reviews from "../components/Reviews";
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Facebook Pixel (front) + envío por API (CAPI)
-// ─────────────────────────────────────────────────────────────────────────────
-type FBQ = (event: "track" | "trackCustom" | string, ...args: unknown[]) => void;
-const getFbq = () => (globalThis as unknown as { fbq?: FBQ }).fbq; // getter dinámico
+/* ─────────────────────────────────────────────────────────────────────────────
+   Meta Pixel (front) + CAPI (backend)
+   - Categoría origen de datos: General / Servicios profesionales
+   - Evitar datos sensibles en eventos y parámetros.
+   - Usar solo eventos estándar neutros: PageView (en layout), ViewContent, Schedule.
+   ──────────────────────────────────────────────────────────────────────────── */
 
+type FBQ = (event: "track" | "trackCustom" | string, ...args: unknown[]) => void;
+const getFbq = () => (globalThis as unknown as { fbq?: FBQ }).fbq;
+
+// Prefijo único p/ eventID
 const makeEventId = (prefix: string) =>
   `${prefix}-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
 
-// ⚠️ TEST EVENTS: hardcode para probar en Events Manager → Test Events
-//    Para DESACTIVAR, cambia a: const FRONT_TEST_EVENT_CODE: string | undefined = undefined;
-const FRONT_TEST_EVENT_CODE: string | undefined = "TEST36133";
+// Modo revisión: minimiza custom_data durante la revisión/si hay rechazo
+const REVIEW_MODE =
+  typeof process !== "undefined" &&
+  process.env.NEXT_PUBLIC_META_REVIEW_MODE === "1"; // pon "1" para activar
 
-// Reintenta enviar al Pixel si fbq aún no está listo
+// TEST EVENTS: controla desde ENV (recomendado) o hardcode para pruebas
+const FRONT_TEST_EVENT_CODE: string | undefined =
+  (typeof process !== "undefined" && process.env.NEXT_PUBLIC_META_TEST_EVENT_CODE) ||
+  undefined; // ejemplo: "TEST36133"
+
+// Reintento si aún no cargó fbq
 function trackWithRetry(
-  eventName: "ViewContent" | "InitiateCheckout" | string,
+  eventName: "ViewContent" | "Schedule" | string,
   params: Record<string, unknown>,
   eventId?: string,
   retries = 25,
@@ -32,27 +43,21 @@ function trackWithRetry(
     const f = getFbq();
     if (typeof f === "function") {
       try {
-        if (eventId) {
-          f("track", eventName, params, { eventID: eventId });
-        } else {
-          f("track", eventName, params);
-        }
+        if (eventId) f("track", eventName, params, { eventID: eventId });
+        else f("track", eventName, params);
         console.log(`[Pixel] ${eventName} enviado`, { params, eventId });
       } catch (e) {
         console.warn(`[Pixel] Error enviando ${eventName}`, e);
       }
       return;
     }
-    if (attempts < retries) {
-      setTimeout(trySend, intervalMs);
-    } else {
-      console.warn(`[Pixel] fbq no disponible tras ${retries} intentos (${eventName})`);
-    }
+    if (attempts < retries) setTimeout(trySend, intervalMs);
+    else console.warn(`[Pixel] fbq no disponible tras ${retries} intentos (${eventName})`);
   };
   trySend();
 }
 
-// Atribución básica para CAPI
+// Atribución básica p/ CAPI (sin PII, sin salud)
 function collectAttribution(base: Record<string, string> = {}) {
   const meta: Record<string, string> = { ...base };
   try {
@@ -74,7 +79,6 @@ function collectAttribution(base: Record<string, string> = {}) {
     const fbp = /(?:^|;\s*)_fbp=([^;]+)/.exec(cs)?.[1];
     if (fbc) meta.fbc = fbc;
     if (fbp) meta.fbp = fbp;
-
     meta.url = window.location.href;
     if (document.referrer) meta.referrer = document.referrer;
   } catch {
@@ -83,11 +87,11 @@ function collectAttribution(base: Record<string, string> = {}) {
   return meta;
 }
 
-// Envío por API a tu backend (Conversions API)
-async function sendInitiateCheckoutToAPI(payload: {
+// Envío por API (Conversions API) — evento neutro "Schedule"
+async function sendScheduleToAPI(payload: {
   event_id: string;
-  value: number;
-  currency: string;
+  value?: number;
+  currency?: string;
   content_ids?: string[];
   content_type?: string;
   source?: string;
@@ -100,7 +104,7 @@ async function sendInitiateCheckoutToAPI(payload: {
       headers: { "Content-Type": "application/json" },
       keepalive: true,
       body: JSON.stringify({
-        event_name: "InitiateCheckout",
+        event_name: "Schedule",
         event_id: payload.event_id,
         value: payload.value,
         currency: payload.currency,
@@ -109,26 +113,28 @@ async function sendInitiateCheckoutToAPI(payload: {
         source: payload.source,
         meta: payload.meta,
         client_ts: Date.now(),
-        // ← se envía al backend para que pegue a Graph en modo "Test Events"
         test_event_code: payload.test_event_code,
       }),
     });
-
     const j = await res.json().catch(() => ({}));
-    if (!res.ok) {
-      console.warn("[API] /api/meta/track respondió error", j);
-    } else {
-      console.log("[API] InitiateCheckout enviado a /api/meta/track", j);
-    }
+    if (!res.ok) console.warn("[API] /api/meta/track respondió error", j);
+    else console.log("[API] Schedule enviado a /api/meta/track", j);
   } catch (e) {
-    console.warn("[API] Error enviando InitiateCheckout", e);
+    console.warn("[API] Error enviando Schedule", e);
   }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Tipos y datos
-// ─────────────────────────────────────────────────────────────────────────────
-type Dias = "Lunes" | "Martes" | "Miércoles" | "Jueves" | "Viernes" | "Sábado" | "Domingo";
+/* ────────────────────────────────────────────────────────────────────────────
+   Tipos y datos (texto neutro, sin lenguaje clínico)
+   ──────────────────────────────────────────────────────────────────────────── */
+type Dias =
+  | "Lunes"
+  | "Martes"
+  | "Miércoles"
+  | "Jueves"
+  | "Viernes"
+  | "Sábado"
+  | "Domingo";
 type HorariosSeleccionados = Record<Dias, string[]>;
 
 interface ProfileData {
@@ -160,15 +166,21 @@ const Profile: React.FC = () => {
 
   const profileData: ProfileData = {
     name: "Gonzalo Pedrosa",
-    profession: "Psicólogo Clínico",
+    profession: "Psicólogo",
     professionalDescription:
-      "Con más de 7 años de experiencia ayudando a pacientes a encontrar el equilibrio emocional, ofrezco un enfoque integrador basado en evidencia y técnicas modernas de psicoterapia.",
-    specializations: ["Terapia Cognitiva", "Mindfulness", "Depresión", "Ansiedad", "Estrés", "Autoestima"],
+      "Orientación psicológica online con enfoque práctico y cercano. Sesiones privadas de 50 minutos y un proceso claro para avanzar paso a paso.",
+    specializations: [
+      "Bienestar emocional",
+      "Manejo del estrés",
+      "Hábitos y productividad",
+      "Autoestima y límites",
+      "Mindfulness",
+    ],
     photo: "/yo.png",
     services: [
       {
         id: "service2",
-        name: "Sesión Psicológica",
+        name: "Sesión online",
         price_ars: 30000,
         duration: 50,
         selected_slots: {
@@ -190,23 +202,22 @@ const Profile: React.FC = () => {
   const reviewCount = 281;
   const isRatingLoading = false;
 
-  // ViewContent al montar (Pixel front)
+  // ViewContent al montar (neutro, sin textos sensibles)
   React.useEffect(() => {
     if (!mounted) return;
     const vcEventId = makeEventId("vc-profile");
-    trackWithRetry(
-      "ViewContent",
-      {
-        content_name: profileData.name || "Profile",
-        content_category: "professional_profile",
-        content_ids: primaryService?.id ? [primaryService.id] : undefined,
-        content_type: "service",
-        value: primaryService?.price_ars ?? 0,
-        currency,
-      },
-      vcEventId
-    );
-  }, [mounted, currency, primaryService?.id, primaryService?.price_ars, profileData.name]);
+    // Params mínimos mientras esté en revisión
+    const params: Record<string, unknown> = {
+      content_type: "service",
+    };
+    if (!REVIEW_MODE) {
+      // Solo si no estás en modo revisión, agrega valor/IDs
+      if (primaryService?.id) params.content_ids = [primaryService.id];
+      params.value = primaryService?.price_ars ?? 0;
+      params.currency = currency;
+    }
+    trackWithRetry("ViewContent", params, vcEventId);
+  }, [mounted, currency, primaryService?.id, primaryService?.price_ars]);
 
   const renderStars = (rating: number) => {
     const roundedRating = Math.round(rating);
@@ -219,43 +230,42 @@ const Profile: React.FC = () => {
     );
   };
 
-  // Clic en CTA -> InitiateCheckout (Pixel + API). Sin redirección.
+  // CTA -> Schedule (Pixel + CAPI). Sin redirigir.
   const handleAgendarClick = (source: "inline" | "sticky" = "inline") => {
-    const price = primaryService?.price_ars ?? 0;
-    const icEventId = makeEventId("ic-profile");
+    const eventId = makeEventId("schedule-profile");
 
-    // 1) Pixel (front)
-    trackWithRetry(
-      "InitiateCheckout",
-      {
-        value: price,
-        currency,
-        content_ids: primaryService?.id ? [primaryService.id] : undefined,
-        content_type: "service",
-        source,
-      },
-      icEventId
-    );
+    // 1) Pixel (front) — parámetros mínimos en revisión
+    const pixelParams: Record<string, unknown> = {
+      content_type: "service",
+      source,
+    };
+    if (!REVIEW_MODE) {
+      if (primaryService?.id) pixelParams.content_ids = [primaryService.id];
+      pixelParams.value = primaryService?.price_ars ?? 0;
+      pixelParams.currency = currency;
+    }
+    trackWithRetry("Schedule", pixelParams, eventId);
 
-    // 2) API (CAPI) — con test_event_code si está definido
+    // 2) CAPI (backend)
     const meta = collectAttribution({ page: "profile", source });
-    void sendInitiateCheckoutToAPI({
-      event_id: icEventId,
-      value: price,
-      currency,
-      content_ids: primaryService?.id ? [primaryService.id] : undefined,
+    void sendScheduleToAPI({
+      event_id: eventId,
+      value: !REVIEW_MODE ? primaryService?.price_ars ?? 0 : undefined,
+      currency: !REVIEW_MODE ? currency : undefined,
+      content_ids: !REVIEW_MODE && primaryService?.id ? [primaryService.id] : undefined,
       content_type: "service",
       source,
       meta,
       test_event_code: FRONT_TEST_EVENT_CODE,
     });
 
-    console.log("[Profile] InitiateCheckout (Pixel + API)", {
+    console.log("[Profile] Schedule (Pixel + API)", {
       source,
-      price,
-      currency,
-      event_id: icEventId,
+      currency: !REVIEW_MODE ? currency : undefined,
+      value: !REVIEW_MODE ? primaryService?.price_ars ?? 0 : undefined,
+      event_id: eventId,
       test_event_code: FRONT_TEST_EVENT_CODE,
+      review_mode: REVIEW_MODE,
     });
   };
 
@@ -264,7 +274,7 @@ const Profile: React.FC = () => {
       <div className="w-full bg-white rounded-lg shadow-lg p-10 md:p-16">
         <div className="mb-4">
           <span className="inline-block bg-green-500 text-white text-sm font-medium px-3 py-1 rounded-full">
-            Profesional Recomendado
+            Profesional recomendado
           </span>
         </div>
 
@@ -285,7 +295,9 @@ const Profile: React.FC = () => {
               <div className="w-24 h-6 bg-gray-300 animate-pulse rounded" />
             ) : (
               <div className="flex items-center space-x-2">
-                <p className="text-gray-800 text-2xl md:text-3xl font-semibold">{averageRating.toFixed(1)}</p>
+                <p className="text-gray-800 text-2xl md:text-3xl font-semibold">
+                  {averageRating.toFixed(1)}
+                </p>
                 {renderStars(averageRating)}
               </div>
             )}
@@ -300,22 +312,27 @@ const Profile: React.FC = () => {
         <div className="flex items-center p-4 bg-[#023047] rounded-lg text-gray-800 mt-8 max-w-lg mx-auto">
           <AiOutlineCheckCircle className="text-white mr-2" size={24} />
           <span className="text-white">
-            Atiende solo en <strong className="font-semibold">modalidad online</strong>.
+            Atiende en <strong className="font-semibold">modalidad online</strong>.
           </span>
         </div>
 
         <div className="mt-12">
-          <h3 className="text-2xl md:text-3xl font-semibold mb-6">Sobre mi</h3>
-          <p className="text-gray-700 text-lg">{profileData.professionalDescription || "No hay descripción disponible."}</p>
+          <h3 className="text-2xl md:text-3xl font-semibold mb-6">Sobre mí</h3>
+          <p className="text-gray-700 text-lg">
+            {profileData.professionalDescription || "No hay descripción disponible."}
+          </p>
         </div>
 
         <div className="mt-12">
           <hr className="my-6 border-gray-300" />
-          <h3 className="text-xl md:text-3xl font-semibold mb-4 text-left">Me especializo en:</h3>
+          <h3 className="text-xl md:text-3xl font-semibold mb-4 text-left">Me enfoco en:</h3>
           <div className="flex flex-wrap gap-3 justify-center">
             {profileData.specializations ? (
               profileData.specializations.map((specialization, index) => (
-                <span key={index} className="bg-[#023047] text-white text-sm md:text-xl font-medium px-3 py-1 rounded-full">
+                <span
+                  key={index}
+                  className="bg-[#023047] text-white text-sm md:text-xl font-medium px-3 py-1 rounded-full"
+                >
                   {specialization}
                 </span>
               ))
@@ -327,7 +344,7 @@ const Profile: React.FC = () => {
         </div>
 
         <div className="mt-12">
-          <h3 className="text-2xl md:text-3xl font-semibold mb-6">Servicios ofrecidos</h3>
+          <h3 className="text-2xl md:text-3xl font-semibold mb-6">Servicios</h3>
           {profileData.services ? (
             profileData.services.map((service) => (
               <div
@@ -339,15 +356,37 @@ const Profile: React.FC = () => {
 
                   <div className="flex flex-row justify-between items-center bg-gray-50 p-3 rounded-lg">
                     <div className="flex items-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 text-gray-500 mr-2"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
                       </svg>
                       <span className="font-medium">{service.duration} minutos</span>
                     </div>
 
                     <div className="flex items-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 text-gray-500 mr-2"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
                       </svg>
                       <span className="font-bold text-lg text-[#023047]">
                         {formatMoney(service.price_ars)} {currency}
@@ -361,8 +400,19 @@ const Profile: React.FC = () => {
                     className="flex w-full bg-[#023047] text-white font-semibold py-3 px-4 rounded-lg hover:bg-[#03506f] active:scale-95 transition-all duration-200 justify-center items-center space-x-2"
                     data-cta="agendar-inline"
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
                     </svg>
                     <span>Agendar sesión</span>
                   </button>
@@ -382,7 +432,7 @@ const Profile: React.FC = () => {
       <hr className="w-full border-gray-300 mt-12 mb-8" />
 
       <div className="w-full bg-white p-6 text-center text-gray-600">
-        <p>© 2025 Ansiosamente. Todos los derechos reservados.</p>
+        <p>© 2025 Gonzalo Pedrosa. Todos los derechos reservados.</p>
       </div>
 
       {primaryService && (
@@ -400,8 +450,19 @@ const Profile: React.FC = () => {
               className="ml-auto inline-flex items-center justify-center rounded-xl bg-[#023047] text-white px-5 py-3 font-semibold shadow-sm hover:bg-[#03506f] active:scale-95 transition"
               data-cta="agendar-sticky"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                />
               </svg>
               Agendar sesión
             </button>
