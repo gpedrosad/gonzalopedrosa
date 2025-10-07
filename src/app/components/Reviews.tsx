@@ -1,4 +1,4 @@
-// src/components/Reviews.tsx
+// src/app/components/Reviews.tsx
 "use client";
 
 import React from "react";
@@ -46,7 +46,7 @@ function isLikelyBotUA(ua: string) {
 function useHumanInteraction(delayMs = 420) {
   const [interacted, setInteracted] = React.useState(false);
   React.useEffect(() => {
-    let timer = setTimeout(() => setInteracted(true), delayMs);
+    const timer = window.setTimeout(() => setInteracted(true), delayMs);
     const mark = () => {
       setInteracted(true);
       clearTimeout(timer);

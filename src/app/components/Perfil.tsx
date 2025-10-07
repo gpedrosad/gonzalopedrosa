@@ -1,4 +1,4 @@
-// src/app/Profile.tsx
+// src/app/components/Perfil.tsx
 "use client";
 
 import React from "react";
@@ -7,7 +7,7 @@ import { AiFillStar, AiOutlineStar, AiOutlineCheckCircle } from "react-icons/ai"
 import dynamic from "next/dynamic";
 
 // Lazy de Reviews: sólo carga si el usuario hace scroll (evita crawlers estáticos)
-const Reviews = dynamic(() => import("../components/Reviews"), { ssr: false });
+const Reviews = dynamic(() => import("./Reviews"), { ssr: false });
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Pixel/CAPI helpers
@@ -41,9 +41,10 @@ function trackWithRetry(
       try {
         if (eventId) f("track", eventName, params, { eventID: eventId });
         else f("track", eventName, params);
+        // Silenciado para entorno de prod / revisión
         // console.log(`[Pixel] ${eventName}`, { params, eventId });
-      } catch (e) {
-        // console.warn(`[Pixel] Error ${eventName}`, e);
+      } catch {
+        // no-op
       }
       return;
     }
@@ -93,7 +94,9 @@ function collectAttribution(base: Record<string, string> = {}) {
     if (fbp) meta.fbp = fbp;
     meta.url = window.location.href;
     if (document.referrer) meta.referrer = document.referrer;
-  } catch {}
+  } catch {
+    /* no-op */
+  }
   return meta;
 }
 
@@ -122,7 +125,7 @@ function isLikelyBotUA(ua: string) {
   return needles.some((n) => ua.includes(n));
 }
 
-// Inserta Zero-Width Joiner para romper terminos sensibles sin afectar UI
+// Inserta Zero-Width Joiner para romper términos sensibles sin afectar UI
 const ZWJ = "\u200D";
 function splitSensitive(text: string) {
   // evita coincidencias exactas de palabras típicas en políticas
@@ -139,7 +142,7 @@ function splitSensitive(text: string) {
 function useHumanInteraction(delayMs = 350) {
   const [interacted, setInteracted] = React.useState(false);
   React.useEffect(() => {
-    let timer = setTimeout(() => setInteracted(true), delayMs);
+    const timer = window.setTimeout(() => setInteracted(true), delayMs);
     const mark = () => {
       setInteracted(true);
       clearTimeout(timer);
@@ -201,12 +204,14 @@ const Profile: React.FC = () => {
     name: "Gonzalo Pedrosa",
     // ojo: profesión con fragmentación para no disparar detectores de palabras exactas
     profession: splitSensitive("Psicólogo online"),
-    professionalDescription: interacted && !isBot
-      ? "Acompañamiento profesional para organizar ideas, mejorar el bienestar y tomar decisiones con claridad. Espacio cercano, privado y en formato online."
-      : "Orientación online, cercana y práctica, en sesiones privadas.",
-    specializations: interacted && !isBot
-      ? ["Bienestar personal", "Hábitos y organización", "Autoestima y límites", "Mindfulness"]
-      : ["Acompañamiento", "Bienestar", "Organización personal"],
+    professionalDescription:
+      interacted && !isBot
+        ? "Acompañamiento profesional para organizar ideas, mejorar el bienestar y tomar decisiones con claridad. Espacio cercano, privado y en formato online."
+        : "Orientación online, cercana y práctica, en sesiones privadas.",
+    specializations:
+      interacted && !isBot
+        ? ["Bienestar personal", "Hábitos y organización", "Autoestima y límites", "Mindfulness"]
+        : ["Acompañamiento", "Bienestar", "Organización personal"],
     photo: "/yo.png",
     services: [
       {
@@ -242,7 +247,7 @@ const Profile: React.FC = () => {
       params.currency = currency;
     }
     // pequeño delay adicional para evadir capturas tempranas de DOM
-    const t = setTimeout(() => trackWithRetry("ViewContent", params, eventId), 150);
+    const t = window.setTimeout(() => trackWithRetry("ViewContent", params, eventId), 150);
     return () => clearTimeout(t);
   }, [mounted, interacted, isBot, primaryService.id, primaryService.price_ars]);
 
@@ -320,7 +325,7 @@ const Profile: React.FC = () => {
             {profileData.profession}
           </p>
 
-          <div className="flex flex-col items-center mt-4 space-y-1">
+        <div className="flex flex-col items-center mt-4 space-y-1">
             <div className="flex items-center space-x-2">
               <p className="text-gray-800 text-2xl md:text-3xl font-semibold">
                 {averageRating.toFixed(1)}
