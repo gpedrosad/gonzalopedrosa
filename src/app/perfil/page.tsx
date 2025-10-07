@@ -163,7 +163,7 @@ const Profile: React.FC = () => {
     profession: "Psicólogo Clínico",
     professionalDescription:
       "Con más de 7 años de experiencia ayudando a pacientes a encontrar el equilibrio emocional, ofrezco un enfoque integrador basado en evidencia y técnicas modernas de psicoterapia.",
-    specializations: ["Terapia Cognitiva", "Mindfulness", "Depresión", "Ansiedad", "Estrés", "Autoestima"],
+    specializations: ["Terapia Cognitiva", "Mindfulness", "Autoestima"],
     photo: "/yo.png",
     services: [
       {
