@@ -19,54 +19,7 @@ interface Review {
   user_full_name: string;
 }
 
-/* ────────────────────────────────────────────────────────────────────────────
-   Anti-scraper helpers
-   ──────────────────────────────────────────────────────────────────────────── */
-function isLikelyBotUA(ua: string) {
-  const needles = [
-    "facebookexternalhit",
-    "facebot",
-    "instagram",
-    "meta",
-    "whatsapp",
-    "slackbot",
-    "discordbot",
-    "linkedinbot",
-    "pinterest",
-    "crawler",
-    "spider",
-    "bot",
-    "preview",
-  ];
-  ua = ua.toLowerCase();
-  return needles.some((n) => ua.includes(n));
-}
-
-// Espera interacción humana o un pequeño delay
-function useHumanInteraction(delayMs = 420) {
-  const [interacted, setInteracted] = React.useState(false);
-  React.useEffect(() => {
-    const timer = window.setTimeout(() => setInteracted(true), delayMs);
-    const mark = () => {
-      setInteracted(true);
-      clearTimeout(timer);
-    };
-    window.addEventListener("mousemove", mark, { once: true, passive: true });
-    window.addEventListener("touchstart", mark, { once: true, passive: true });
-    window.addEventListener("keydown", mark, { once: true, passive: true });
-    window.addEventListener("scroll", mark, { once: true, passive: true });
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener("mousemove", mark);
-      window.removeEventListener("touchstart", mark);
-      window.removeEventListener("keydown", mark);
-      window.removeEventListener("scroll", mark);
-    };
-  }, [delayMs]);
-  return interacted;
-}
-
-/** Formatea a dd/mm/aa local (mantengo tu formato original) */
+/** Formatea fecha local sencilla */
 function formatDate(iso: string) {
   try {
     const d = new Date(iso);
@@ -77,7 +30,7 @@ function formatDate(iso: string) {
 }
 
 const Reviews: React.FC = () => {
-  // === DATA ORIGINAL (no modificada) ===
+  // DATA ORIGINAL
   const reviews: Review[] = [
     {
       id: "14",
@@ -122,8 +75,7 @@ const Reviews: React.FC = () => {
     {
       id: "9",
       review_date: "2025-03-20T13:45:00Z",
-      review_description:
-        "Muy buen profesional. Empático. Lo recomiendo",
+      review_description: "Muy buen profesional. Empático. Lo recomiendo",
       review_stars: 5,
       user_full_name: "Emiliana Vera",
     },
@@ -185,7 +137,6 @@ const Reviews: React.FC = () => {
     },
   ];
 
-  // === Cálculo promedio (mantengo tu lógica) ===
   const averageRating =
     reviews.length > 0
       ? (
@@ -194,47 +145,19 @@ const Reviews: React.FC = () => {
         ).toFixed(1)
       : "0.0";
 
-  // === Render de estrellas del summary (mantengo tu estilo) ===
   const renderStars = (rating: number) => {
-    const roundedRating = Math.round(rating);
+    const rounded = Math.round(rating);
     return (
       <div className="flex text-[#FFB703]">
-        {Array.from({ length: 5 }, (_, i) =>
-          i < roundedRating ? (
-            <AiFillStar key={i} size={26} />
-          ) : (
-            <AiFillStar key={i} size={26} className="opacity-50" />
-          )
-        )}
+        {Array.from({ length: 5 }, (_, i) => (
+          <AiFillStar key={i} size={26} className={i < rounded ? "" : "opacity-40"} />
+        ))}
       </div>
     );
   };
 
-  // ── Anti-scraper states
-  const [isBot, setIsBot] = React.useState(false);
-  const [scrolled, setScrolled] = React.useState(false);
-  const interacted = useHumanInteraction(420);
+  // Animación suave (sin condicionar contenido a UA/interacción)
   const reduceMotion = useReducedMotion();
-
-  React.useEffect(() => {
-    if (typeof navigator !== "undefined") {
-      setIsBot(isLikelyBotUA(navigator.userAgent || ""));
-    }
-  }, []);
-
-  React.useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY > 360) setScrolled(true);
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll(); // por si ya está abajo
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  const showReal = interacted && scrolled && !isBot;
-  const showSkeleton = !showReal;
-
-  // ── Variants SOLO para la lista (no para el texto superior)
   const listVariants: Variants = {
     hidden: { opacity: 0, y: reduceMotion ? 0 : 24 },
     visible: {
@@ -243,19 +166,14 @@ const Reviews: React.FC = () => {
       transition: { staggerChildren: 0.12, delayChildren: 0.12 },
     },
   };
-
   const itemVariants: Variants = {
     hidden: { opacity: 0, y: reduceMotion ? 0 : 18 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.32, ease: "easeOut" as const },
-    },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.32, ease: "easeOut" as const } },
   };
 
   return (
     <div className="mx-auto p-4 m-8">
-      {/* ───────── Header / Summary (SIN animación) ───────── */}
+      {/* Header / Summary */}
       <h2 className="text-xl font-bold mb-4 text-center">Evaluaciones</h2>
       <div className="flex flex-col items-center space-y-2 mb-6">
         <div className="flex flex-col items-center">
@@ -273,57 +191,27 @@ const Reviews: React.FC = () => {
         </span>
       </div>
 
-      {/* ───────── Lista de reviews (CON animación y protecciones) ───────── */}
+      {/* Lista de reviews */}
       <AnimatePresence initial={false}>
-        <motion.div
-          className="space-y-8"
-          variants={listVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {showSkeleton
-            ? Array.from({ length: 6 }).map((_, idx) => (
-                <motion.div
-                  key={`s-${idx}`}
-                  className="border-b border-gray-200 pb-4"
-                  variants={itemVariants}
-                >
-                  <div className="animate-pulse">
-                    <div className="h-4 w-40 bg-gray-200 rounded mb-2" />
-                    <div className="h-3 w-24 bg-gray-200 rounded mb-3" />
-                    <div className="h-3 w-full bg-gray-200 rounded mb-2" />
-                    <div className="h-3 w-5/6 bg-gray-200 rounded" />
+        <motion.div className="space-y-8" variants={listVariants} initial="hidden" animate="visible">
+          {reviews.map((review) => (
+            <motion.div key={review.id} className="border-b border-gray-200 pb-4" variants={itemVariants}>
+              <div className="flex flex-col items-start space-y-1">
+                <span className="font-semibold flex-1 text-lg">{review.user_full_name}</span>
+                <div className="flex items-center justify-between w-full">
+                  <div className="flex items-center text-[#FFB703] space-x-1">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <AiFillStar key={i} size={20} className={i < review.review_stars ? "" : "opacity-40"} />
+                    ))}
+                    <span className="text-gray-500 text-sm ml-2">・{formatDate(review.review_date)}</span>
                   </div>
-                </motion.div>
-              ))
-            : reviews.map((review) => (
-                <motion.div
-                  key={review.id}
-                  className="border-b border-gray-200 pb-4"
-                  variants={itemVariants}
-                >
-                  <div className="flex flex-col items-start space-y-1">
-                    <span className="font-semibold flex-1 text-lg">
-                      {review.user_full_name}
-                    </span>
-                    <div className="flex items-center justify-between w-full">
-                      <div className="flex items-center text-[#FFB703] space-x-1">
-                        {Array.from({ length: 5 }).map((_, i) => (
-                          <AiFillStar key={i} size={20} />
-                        ))}
-                        <span className="text-gray-500 text-sm ml-2">
-                          ・{formatDate(review.review_date)}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  {review.review_description && (
-                    <p className="text-gray-600 mt-2 whitespace-pre-line">
-                      {review.review_description}
-                    </p>
-                  )}
-                </motion.div>
-              ))}
+                </div>
+              </div>
+              {review.review_description && (
+                <p className="text-gray-600 mt-2 whitespace-pre-line">{review.review_description}</p>
+              )}
+            </motion.div>
+          ))}
         </motion.div>
       </AnimatePresence>
     </div>

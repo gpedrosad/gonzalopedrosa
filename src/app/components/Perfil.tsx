@@ -6,12 +6,12 @@ import Image from "next/image";
 import { AiFillStar, AiOutlineStar, AiOutlineCheckCircle } from "react-icons/ai";
 import dynamic from "next/dynamic";
 
-// Lazy de Reviews: sólo carga si el usuario hace scroll (evita crawlers estáticos)
+// Lazy de Reviews (performance)
 const Reviews = dynamic(() => import("./Reviews"), { ssr: false });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Pixel/CAPI helpers
-// ─────────────────────────────────────────────────────────────────────────────
+/* ────────────────────────────────────────────────────────────────────────────
+   Pixel/CAPI helpers
+   ──────────────────────────────────────────────────────────────────────────── */
 type FBQ = (event: "track" | "trackCustom" | string, ...args: unknown[]) => void;
 const getFbq = () => (globalThis as unknown as { fbq?: FBQ }).fbq;
 
@@ -25,7 +25,7 @@ const REVIEW_MODE =
 const FRONT_TEST_EVENT_CODE: string | undefined =
   process.env.NEXT_PUBLIC_META_TEST_EVENT_CODE || undefined;
 
-// Retraso + reintento para fbq
+// Retraso + reintento para fbq (carga perezosa definida en layout.tsx)
 function trackWithRetry(
   eventName: "ViewContent" | "Schedule" | string,
   params: Record<string, unknown>,
@@ -41,10 +41,8 @@ function trackWithRetry(
       try {
         if (eventId) f("track", eventName, params, { eventID: eventId });
         else f("track", eventName, params);
-        // Silenciado para entorno de prod / revisión
-        // console.log(`[Pixel] ${eventName}`, { params, eventId });
       } catch {
-        // no-op
+        /* no-op */
       }
       return;
     }
@@ -83,7 +81,15 @@ function collectAttribution(base: Record<string, string> = {}) {
   const meta: Record<string, string> = { ...base };
   try {
     const usp = new URLSearchParams(window.location.search);
-    for (const k of ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "fbclid"]) {
+    for (const k of [
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "utm_term",
+      "utm_content",
+      "gclid",
+      "fbclid",
+    ]) {
       const v = usp.get(k);
       if (v) meta[k] = v;
     }
@@ -100,45 +106,7 @@ function collectAttribution(base: Record<string, string> = {}) {
   return meta;
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Anti-scraper utils
-// ─────────────────────────────────────────────────────────────────────────────
-
-// Heurística simple de bot por UA (client-side). En SSR los bots ya ven copy neutro.
-function isLikelyBotUA(ua: string) {
-  const needles = [
-    "facebookexternalhit",
-    "facebot",
-    "instagram",
-    "metaInspector",
-    "crawler",
-    "spider",
-    "bot",
-    "preview",
-    "whatsapp",
-    "slackbot",
-    "discordbot",
-    "linkedinbot",
-    "pinterest",
-  ];
-  ua = ua.toLowerCase();
-  return needles.some((n) => ua.includes(n));
-}
-
-// Inserta Zero-Width Joiner para romper términos sensibles sin afectar UI
-const ZWJ = "\u200D";
-function splitSensitive(text: string) {
-  // evita coincidencias exactas de palabras típicas en políticas
-  return text
-    .replace(/psicolog/gi, (m) => m.slice(0, 6) + ZWJ + m.slice(6)) // psico​log-
-    .replace(/psic[oó]logo/gi, (m) => m.slice(0, 5) + ZWJ + m.slice(5)) // psicó​logo
-    .replace(/terapia/gi, (m) => m.slice(0, 4) + ZWJ + m.slice(4)) // tera​pia
-    .replace(/cl[ií]nico/gi, (m) => m.slice(0, 3) + ZWJ + m.slice(3)) // clí​nico
-    .replace(/ansiedad/gi, (m) => m.slice(0, 3) + ZWJ + m.slice(3)) // ansi​edad
-    .replace(/depresi[óo]n/gi, (m) => m.slice(0, 6) + ZWJ + m.slice(6)); // depres​ión
-}
-
-// Hook: espera interacción humana o pequeño delay
+// Hook: marca interacción humana (sólo para habilitar métricas/UX; no cambia el copy)
 function useHumanInteraction(delayMs = 350) {
   const [interacted, setInteracted] = React.useState(false);
   React.useEffect(() => {
@@ -147,14 +115,12 @@ function useHumanInteraction(delayMs = 350) {
       setInteracted(true);
       clearTimeout(timer);
     };
-    window.addEventListener("mousemove", mark, { once: true, passive: true });
-    window.addEventListener("touchstart", mark, { once: true, passive: true });
+    window.addEventListener("pointerdown", mark, { once: true, passive: true });
     window.addEventListener("keydown", mark, { once: true, passive: true });
     window.addEventListener("scroll", mark, { once: true, passive: true });
     return () => {
       clearTimeout(timer);
-      window.removeEventListener("mousemove", mark);
-      window.removeEventListener("touchstart", mark);
+      window.removeEventListener("pointerdown", mark);
       window.removeEventListener("keydown", mark);
       window.removeEventListener("scroll", mark);
     };
@@ -162,10 +128,17 @@ function useHumanInteraction(delayMs = 350) {
   return interacted;
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Tipos y datos
-// ─────────────────────────────────────────────────────────────────────────────
-type Dias = "Lunes" | "Martes" | "Miércoles" | "Jueves" | "Viernes" | "Sábado" | "Domingo";
+/* ────────────────────────────────────────────────────────────────────────────
+   Tipos y datos
+   ──────────────────────────────────────────────────────────────────────────── */
+type Dias =
+  | "Lunes"
+  | "Martes"
+  | "Miércoles"
+  | "Jueves"
+  | "Viernes"
+  | "Sábado"
+  | "Domingo";
 type HorariosSeleccionados = Record<Dias, string[]>;
 
 interface ProfileData {
@@ -185,33 +158,26 @@ interface ProfileData {
 
 const Profile: React.FC = () => {
   const [mounted, setMounted] = React.useState(false);
-  const [isBot, setIsBot] = React.useState(false);
-  const interacted = useHumanInteraction(400); // desbloquea UI y eventos tras interacción o 400ms
+  const interacted = useHumanInteraction(400); // habilita ciertas acciones tras interacción
 
   React.useEffect(() => setMounted(true), []);
-  React.useEffect(() => {
-    if (typeof navigator !== "undefined") {
-      setIsBot(isLikelyBotUA(navigator.userAgent || ""));
-    }
-  }, []);
 
   const currency = "CLP" as const;
   const moneyLocale = "es-CL";
   const formatMoney = (n: number) => n.toLocaleString(moneyLocale);
 
-  // Contenido neutro (visible ssr) + versión “rica” tras interacción
+  // Contenido SEMÁNTICAMENTE FIJO (sin ofuscación ni versiones para bots)
   const profileData: ProfileData = {
     name: "Gonzalo Pedrosa",
-    // ojo: profesión con fragmentación para no disparar detectores de palabras exactas
-    profession: splitSensitive("Psicólogo online"),
+    profession: "Psicólogo online",
     professionalDescription:
-      interacted && !isBot
-        ? "Acompañamiento profesional para organizar ideas, mejorar el bienestar y tomar decisiones con claridad. Espacio cercano, privado y en formato online."
-        : "Orientación online, cercana y práctica, en sesiones privadas.",
-    specializations:
-      interacted && !isBot
-        ? ["Bienestar personal", "Hábitos y organización", "Autoestima y límites", "Mindfulness"]
-        : ["Acompañamiento", "Bienestar", "Organización personal"],
+      "Acompañamiento profesional para organizar ideas, mejorar el bienestar y tomar decisiones con claridad. Espacio cercano, privado y en formato online.",
+    specializations: [
+      "Bienestar personal",
+      "Hábitos y organización",
+      "Autoestima y límites",
+      "Mindfulness",
+    ],
     photo: "/yo.png",
     services: [
       {
@@ -236,9 +202,9 @@ const Profile: React.FC = () => {
   const averageRating = 4.8;
   const reviewCount = 281;
 
-  // ViewContent solo tras interacción humana y si no parece bot
+  // ViewContent sólo tras interacción humana (no en SSR/primera pintura)
   React.useEffect(() => {
-    if (!mounted || !interacted || isBot) return;
+    if (!mounted || !interacted) return;
     const eventId = makeEventId("vc-profile");
     const params: Record<string, unknown> = { content_type: "service" };
     if (!REVIEW_MODE) {
@@ -246,10 +212,12 @@ const Profile: React.FC = () => {
       params.value = primaryService.price_ars;
       params.currency = currency;
     }
-    // pequeño delay adicional para evadir capturas tempranas de DOM
-    const t = window.setTimeout(() => trackWithRetry("ViewContent", params, eventId), 150);
+    const t = window.setTimeout(
+      () => trackWithRetry("ViewContent", params, eventId),
+      150
+    );
     return () => clearTimeout(t);
-  }, [mounted, interacted, isBot, primaryService.id, primaryService.price_ars]);
+  }, [mounted, interacted, primaryService.id, primaryService.price_ars]);
 
   const renderStars = (rating: number) => {
     const rounded = Math.round(rating);
@@ -262,9 +230,8 @@ const Profile: React.FC = () => {
     );
   };
 
-  // CTA -> Schedule (Pixel + CAPI) solo si humano
+  // CTA -> Schedule (Pixel + CAPI) tras click (siempre humano)
   const handleAgendarClick = (source: "inline" | "sticky" = "inline") => {
-    if (isBot) return; // no eventos a crawlers
     const eventId = makeEventId("schedule-profile");
 
     const pixelParams: Record<string, unknown> = { content_type: "service", source };
@@ -288,10 +255,10 @@ const Profile: React.FC = () => {
     });
   };
 
-  // Carga perezosa de Reviews: solo si el usuario scrollea
+  // Carga perezosa de Reviews: tras scroll (por performance)
   const [showReviews, setShowReviews] = React.useState(false);
   React.useEffect(() => {
-    if (!interacted || isBot) return;
+    if (!interacted) return;
     const onScroll = () => {
       if (window.scrollY > 480) {
         setShowReviews(true);
@@ -300,7 +267,7 @@ const Profile: React.FC = () => {
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [interacted, isBot]);
+  }, [interacted]);
 
   return (
     <div className="flex flex-col items-center h-full w-full">
@@ -325,7 +292,7 @@ const Profile: React.FC = () => {
             {profileData.profession}
           </p>
 
-        <div className="flex flex-col items-center mt-4 space-y-1">
+          <div className="flex flex-col items-center mt-4 space-y-1">
             <div className="flex items-center space-x-2">
               <p className="text-gray-800 text-2xl md:text-3xl font-semibold">
                 {averageRating.toFixed(1)}
@@ -450,7 +417,7 @@ const Profile: React.FC = () => {
 
       <div className="h-24 md:hidden" aria-hidden />
 
-      {/* Reviews: sólo aparecen tras scroll e interacción humana */}
+      {/* Reviews: carga perezosa tras scroll */}
       {showReviews && <Reviews />}
 
       <hr className="w-full border-gray-300 mt-12 mb-8" />
