@@ -2,12 +2,12 @@
 
 import React from "react";
 import Image from "next/image";
-import { AiFillStar, AiOutlineStar, AiOutlineCheckCircle } from "react-icons/ai";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import dynamic from "next/dynamic";
 import SobreMi from "./SobreMi";
 
 // Lazy de Reviews (performance)
-const Reviews = dynamic(() => import("./Reviews"), { ssr: false });
+const Reviews = dynamic(() => import("./Feed"), { ssr: false });
 
 /* ────────────────────────────────────────────────────────────────────────────
    Pixel/CAPI helpers
@@ -143,14 +143,14 @@ type HorariosSeleccionados = Record<Dias, string[]>;
 
 interface ProfileData {
   name: string;
-  profession: string;
-  professionalDescription: string;
+  activity: string;
+  description: string;
   specializations: string[];
   photo: string;
   services: Array<{
     id: string;
     name: string;
-    price_ars: number;
+    priceCLP: number;
     duration: number;
     selected_slots: HorariosSeleccionados;
   }>;
@@ -169,8 +169,8 @@ const Profile: React.FC = () => {
   // Contenido SEMÁNTICAMENTE FIJO (sin ofuscación ni versiones para bots)
   const profileData: ProfileData = {
     name: "Gonzalo Pedrosa",
-    profession: "Psicólogo online",
-    professionalDescription:
+    activity: "Psicólogo online",
+    description:
       "Acompañamiento profesional para organizar ideas, mejorar el bienestar y tomar decisiones con claridad. Espacio cercano, privado y en formato online.",
     specializations: [
       "Bienestar personal",
@@ -183,7 +183,7 @@ const Profile: React.FC = () => {
       {
         id: "service1",
         name: "Sesión online",
-        price_ars: 30000,
+        priceCLP: 30000,
         duration: 50,
         selected_slots: {
           Lunes: ["11:00 - 11:45"],
@@ -209,7 +209,7 @@ const Profile: React.FC = () => {
     const params: Record<string, unknown> = { content_type: "service" };
     if (!REVIEW_MODE) {
       params.content_ids = [primaryService.id];
-      params.value = primaryService.price_ars;
+      params.value = primaryService.priceCLP;
       params.currency = currency;
     }
     const t = window.setTimeout(
@@ -217,7 +217,7 @@ const Profile: React.FC = () => {
       150
     );
     return () => clearTimeout(t);
-  }, [mounted, interacted, primaryService.id, primaryService.price_ars]);
+  }, [mounted, interacted, primaryService.id, primaryService.priceCLP]);
 
   const renderStars = (rating: number) => {
     const rounded = Math.round(rating);
@@ -237,7 +237,7 @@ const Profile: React.FC = () => {
     const pixelParams: Record<string, unknown> = { content_type: "service", source };
     if (!REVIEW_MODE) {
       pixelParams.content_ids = [primaryService.id];
-      pixelParams.value = primaryService.price_ars;
+      pixelParams.value = primaryService.priceCLP;
       pixelParams.currency = currency;
     }
     trackWithRetry("Schedule", pixelParams, eventId);
@@ -245,7 +245,7 @@ const Profile: React.FC = () => {
     const meta = collectAttribution({ page: "profile", source });
     void sendScheduleToAPI({
       event_id: eventId,
-      value: !REVIEW_MODE ? primaryService.price_ars : undefined,
+      value: !REVIEW_MODE ? primaryService.priceCLP : undefined,
       currency: !REVIEW_MODE ? currency : undefined,
       content_ids: !REVIEW_MODE ? [primaryService.id] : undefined,
       content_type: "service",
@@ -289,7 +289,7 @@ const Profile: React.FC = () => {
           />
           <h2 className="text-2xl md:text-4xl font-bold">{profileData.name}</h2>
           <p className="text-gray-500 text-xl md:text-2xl">
-            {profileData.profession}
+            {profileData.activity}
           </p>
 
         <div className="flex flex-col items-center mt-4 space-y-1">
@@ -306,7 +306,7 @@ const Profile: React.FC = () => {
         </div>
 
         {/* Sección “Sobre mí” (componente separado) */}
-        <SobreMi content={profileData.professionalDescription} />
+        <SobreMi content={profileData.description} />
 
         <div className="mt-12">
           <hr className="my-6 border-gray-300" />
@@ -371,7 +371,7 @@ const Profile: React.FC = () => {
                       />
                     </svg>
                     <span className="font-bold text-lg text-[#023047]">
-                      {formatMoney(service.price_ars)} {currency}
+                      {formatMoney(service.priceCLP)} {currency}
                     </span>
                   </div>
                 </div>
@@ -421,7 +421,7 @@ const Profile: React.FC = () => {
             <div className="flex flex-col">
               <span className="text-xs text-gray-500">{primaryService.name}</span>
               <span className="text-base font-semibold text-[#023047]">
-                {formatMoney(primaryService.price_ars)} {currency}
+                {formatMoney(primaryService.priceCLP)} {currency}
               </span>
             </div>
             <button
