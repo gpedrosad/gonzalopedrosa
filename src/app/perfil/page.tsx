@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: "Gonzalo Pedrosa | Orientación profesional y bienestar",
       description:
-        "Más de 7 años de experiencia ofreciendo acompañamiento online para el bienestar y la organización personal.",
+        "Más de 7 años de experiencia ofreciendo acompañamiento online",
       images: ["/yo.png"],
     },
     robots: {

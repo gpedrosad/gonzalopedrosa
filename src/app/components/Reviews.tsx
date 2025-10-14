@@ -108,7 +108,7 @@ const Reviews: React.FC = () => {
       review_date: "2025-02-25T15:30:00Z",
       review_description:
         "Siempre sentí una genuina preocupación por parte de Gonzalo en cuanto a mi estado y avances. Fue un guía y un adecuado apoyo. ¡Totalmente recomendado!",
-      review_stars: 4,
+      review_stars: 5,
       user_full_name: "Nicolás Gresve P.",
     },
     {
@@ -116,7 +116,7 @@ const Reviews: React.FC = () => {
       review_date: "2025-02-20T12:15:00Z",
       review_description:
         "Gonzalo es súper profesional, abierto con los pensamientos y sentimientos de uno. No juzga (como me pasó con otros profesionales). Me ayuda a descubrir mi rumbo cuando he estado desorientada y a seguir mis instintos pero marcando límites, porque eso me faltaba. Desde que inicié las sesiones me siento más tranquila y he vuelto a sentirme feliz, como no me había sentido hace mucho tiempo.\nGonzalo da tareas, no sólo escucha, ayuda a construir la propia sanación y eso es más significativo, ya que me ha dado herramientas para enfrentarme a mi realidad.\nRecomendado al 1000% 😊",
-      review_stars: 4,
+      review_stars: 5,
       user_full_name: "Giovanna",
     },
     {

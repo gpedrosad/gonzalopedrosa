@@ -1,10 +1,10 @@
-// src/app/components/Perfil.tsx
 "use client";
 
 import React from "react";
 import Image from "next/image";
 import { AiFillStar, AiOutlineStar, AiOutlineCheckCircle } from "react-icons/ai";
 import dynamic from "next/dynamic";
+import SobreMi from "./SobreMi";
 
 // Lazy de Reviews (performance)
 const Reviews = dynamic(() => import("./Reviews"), { ssr: false });
@@ -274,7 +274,7 @@ const Profile: React.FC = () => {
       <div className="w-full bg-white rounded-lg shadow-lg p-10 md:p-16">
         <div className="mb-4">
           <span className="inline-block bg-green-500 text-white text-sm font-medium px-3 py-1 rounded-full">
-            Profesional recomendado
+            Bien valorado por clientes
           </span>
         </div>
 
@@ -292,7 +292,7 @@ const Profile: React.FC = () => {
             {profileData.profession}
           </p>
 
-          <div className="flex flex-col items-center mt-4 space-y-1">
+        <div className="flex flex-col items-center mt-4 space-y-1">
             <div className="flex items-center space-x-2">
               <p className="text-gray-800 text-2xl md:text-3xl font-semibold">
                 {averageRating.toFixed(1)}
@@ -305,19 +305,8 @@ const Profile: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-center p-4 bg-[#023047] rounded-lg text-gray-800 mt-8 max-w-lg mx-auto">
-          <AiOutlineCheckCircle className="text-white mr-2" size={24} />
-          <span className="text-white">
-            Atención en <strong className="font-semibold">modalidad online</strong>.
-          </span>
-        </div>
-
-        <div className="mt-12">
-          <h3 className="text-2xl md:text-3xl font-semibold mb-6">Sobre mí</h3>
-          <p className="text-gray-700 text-lg">
-            {profileData.professionalDescription}
-          </p>
-        </div>
+        {/* Sección “Sobre mí” (componente separado) */}
+        <SobreMi content={profileData.professionalDescription} />
 
         <div className="mt-12">
           <hr className="my-6 border-gray-300" />
