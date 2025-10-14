@@ -2,28 +2,28 @@
 import type { Metadata } from "next";
 import Profile from "../components/Perfil";
 
-// Mantén o quita esta línea según tu necesidad de revalidación.
-// No afecta al tema de Safe Browsing.
 export const dynamic = "force-dynamic";
 
-/**
- * Metadatos CONSISTENTES (sin detección por user-agent ni variantes para bots).
- * Evita cualquier señal de "cloaking" ante Google/Chrome.
- */
-export const metadata: Metadata = {
-  title: "Perfil | Gonzalo Pedrosa",
-  description:
-    "Orientación profesional y bienestar en formato online. Sesiones privadas con enfoque claro y cercano.",
-  openGraph: {
-    title: "Perfil | Gonzalo Pedrosa",
+/** Metadatos (versión única) */
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Orientación profesional y bienestar | Gonzalo Pedrosa",
     description:
-      "Orientación profesional y bienestar en formato online. Sesiones privadas con enfoque claro y cercano.",
-    images: ["/yo.png"],
-    type: "website",
-  },
-  robots: { index: true, follow: true },
-};
+      "Espacio online de acompañamiento para reflexionar, mejorar el bienestar personal y tomar decisiones con claridad. Modalidad 100% online.",
+    openGraph: {
+      title: "Gonzalo Pedrosa | Orientación profesional y bienestar",
+      description:
+        "Más de 7 años de experiencia ofreciendo acompañamiento online para el bienestar y la organización personal.",
+      images: ["/yo.png"],
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
 
+/** Render del componente principal (client-side) */
 export default function ProfilePage() {
   return <Profile />;
 }
