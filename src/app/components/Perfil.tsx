@@ -6,7 +6,7 @@ import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import dynamic from "next/dynamic";
 import SobreMi from "./SobreMi";
 
-// Lazy de Reviews (performance)
+// Lazy de Feed (performance)
 const Feed = dynamic(() => import("./Feed"), { ssr: false });
 
 /* ────────────────────────────────────────────────────────────────────────────
@@ -17,10 +17,6 @@ const getFbq = () => (globalThis as unknown as { fbq?: FBQ }).fbq;
 
 const makeEventId = (prefix: string) =>
   `${prefix}-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
-
-const REVIEW_MODE =
-  typeof process !== "undefined" &&
-  process.env.NEXT_PUBLIC_META_REVIEW_MODE === "1";
 
 const FRONT_TEST_EVENT_CODE: string | undefined =
   process.env.NEXT_PUBLIC_META_TEST_EVENT_CODE || undefined;
@@ -165,15 +161,12 @@ const Profile: React.FC = () => {
   const moneyLocale = "es-CL";
   const formatMoney = (n: number) => n.toLocaleString(moneyLocale);
 
-  // Contenido SEMÁNTICAMENTE FIJO (sin ofuscación ni versiones para bots)
+  // Contenido estático
   const profileData: ProfileData = {
     name: "Gonzalo Pedrosa",
     description:
       "Acompañamiento para organizar ideas y tomar decisiones con claridad. Espacio cercano, privado y en formato online.",
-    topics: [
-      "Hábitos y organización",
-      "Límites",
-    ],
+    topics: ["Hábitos y organización", "Límites"],
     photo: "/yo.png",
     services: [
       {
@@ -198,22 +191,22 @@ const Profile: React.FC = () => {
   const averageRating = 4.8;
   const NumerodeExperiencias = 281;
 
-  // ViewContent sólo tras interacción humana (no en SSR/primera pintura)
+  // ViewContent sólo tras interacción humana
   React.useEffect(() => {
     if (!mounted || !interacted) return;
     const eventId = makeEventId("vc-profile");
-    const params: Record<string, unknown> = { content_type: "service" };
-    if (!REVIEW_MODE) {
-      params.content_ids = [primaryService.id];
-      params.value = primaryService.priceCLP;
-      params.currency = currency;
-    }
+    const params: Record<string, unknown> = {
+      content_type: "service",
+      content_ids: [primaryService.id],
+      value: primaryService.priceCLP,
+      currency,
+    };
     const t = window.setTimeout(
       () => trackWithRetry("ViewContent", params, eventId),
       150
     );
     return () => clearTimeout(t);
-  }, [mounted, interacted, primaryService.id, primaryService.priceCLP]);
+  }, [mounted, interacted, primaryService.id, primaryService.priceCLP, currency]);
 
   const renderStars = (rating: number) => {
     const rounded = Math.round(rating);
@@ -230,16 +223,18 @@ const Profile: React.FC = () => {
   const handleAgendarClick = (source: "inline" | "sticky" = "inline") => {
     const eventId = makeEventId("schedule-profile");
 
-    const pixelParams: Record<string, unknown> = { content_type: "service", source };
-
+    const pixelParams: Record<string, unknown> = {
+      content_type: "service",
+      source,
+    };
     trackWithRetry("Schedule", pixelParams, eventId);
 
     const meta = collectAttribution({ page: "profile", source });
     void sendScheduleToAPI({
       event_id: eventId,
-      value: !REVIEW_MODE ? primaryService.priceCLP : undefined,
-      currency: !REVIEW_MODE ? currency : undefined,
-      content_ids: !REVIEW_MODE ? [primaryService.id] : undefined,
+      value: primaryService.priceCLP,
+      currency,
+      content_ids: [primaryService.id],
       content_type: "service",
       source,
       meta,
@@ -247,7 +242,7 @@ const Profile: React.FC = () => {
     });
   };
 
-    // Carga perezosa de Feed: tras scroll (por performance)
+  // Carga perezosa de Feed: tras scroll (por performance)
   const [showFeed, setShowFeed] = React.useState(false);
   React.useEffect(() => {
     if (!interacted) return;
@@ -280,9 +275,8 @@ const Profile: React.FC = () => {
             className="rounded-lg mb-4 object-cover"
           />
           <h2 className="text-2xl md:text-4xl font-bold">{profileData.name}</h2>
-       
 
-        <div className="flex flex-col items-center mt-4 space-y-1">
+          <div className="flex flex-col items-center mt-4 space-y-1">
             <div className="flex items-center space-x-2">
               <p className="text-gray-800 text-2xl md:text-3xl font-semibold">
                 {averageRating.toFixed(1)}
@@ -392,7 +386,7 @@ const Profile: React.FC = () => {
             </div>
           ))}
         </div>
-      </div>  
+      </div>
 
       <div className="h-24 md:hidden" aria-hidden />
 
