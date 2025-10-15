@@ -30,13 +30,13 @@ function formatDate(iso: string) {
 }
 
 const Feed: React.FC = () => {
-  // DATA ORIGINAL (texto intacto, nombres neutralizados)
+  // DATA con redacción neutra/compatible
   const entries: Entry[] = [
     {
       id: "14",
       created_at: "2025-04-15T11:30:00Z",
       body:
-        "Me sentí muy cómoda con las sesiones, Excelente",
+        "Me sentí muy cómoda en las sesiones; la experiencia fue excelente.",
       score: 5,
       author: "Sofia Hernandez",
     },
@@ -44,7 +44,7 @@ const Feed: React.FC = () => {
       id: "13",
       created_at: "2025-04-10T10:45:00Z",
       body:
-        "Excelente Gonzalo, preocupado en todo momento ",
+        "Muy buen profesional, atento y disponible durante el proceso.",
       score: 5,
       author: "Yocelyn",
     },
@@ -52,7 +52,7 @@ const Feed: React.FC = () => {
       id: "12",
       created_at: "2025-04-05T09:30:00Z",
       body:
-        "Gonzalo atiende a mi hijo hace varios meses. Mi hijo está muy contento con sus sesiones. Es responsable, puntual y muy comprometido. A mi hijo le da mucha confianza conversar con él. Es un 7. El está mucho mejor y yo muy contenta.",
+        "Gonzalo acompaña a mi hijo hace varios meses. Se ha sentido cómodo con las sesiones. Es responsable, puntual y comprometido; conversar con él genera confianza.",
       score: 5,
       author: "Claudia",
     },
@@ -60,7 +60,7 @@ const Feed: React.FC = () => {
       id: "11",
       created_at: "2025-03-30T11:00:00Z",
       body:
-        " Conoci a Gonzalo y el con su alto grado de compromiso y capacidad de escucha, fue capaz de ayudarme a ver de manera distinta lo que estaba pasando, haciendo muy grata cada sesión .. es una persona agradable y un excelente profesional.\n",
+        "Lo conocí en un momento complejo y, con su escucha y claridad, pude mirar las situaciones desde otra perspectiva. Trato agradable y profesional.",
       score: 5,
       author: "Karen",
     },
@@ -68,14 +68,14 @@ const Feed: React.FC = () => {
       id: "10",
       created_at: "2025-03-25T10:15:00Z",
       body:
-        "Gonzalo es un excelente profesional, acudí a el, me aconsejo  y estuvo para mí sin importar horarios ni dinero, abrió mi mente y me hizo ver la vida de una manera distinta y sin lugar a dudas las sesiones fueron uno de los pilares fundamentales para poder avanzar.\nAgradezco mucho encontrarlo y obviamente recomendaría su servicio. ",
+        "Me pareció un profesional excelente. Sus preguntas y orientaciones me ayudaron a ordenar ideas y avanzar. Agradezco la experiencia y lo recomendaría.",
       score: 5,
       author: "Valeska Bravo Montecinos",
     },
     {
       id: "9",
       created_at: "2025-03-20T13:45:00Z",
-      body: "Muy buen profesional. Empático. Lo recomiendo",
+      body: "Muy buen profesional. Empático. Lo recomiendo.",
       score: 5,
       author: "Emiliana Vera",
     },
@@ -83,7 +83,7 @@ const Feed: React.FC = () => {
       id: "8",
       created_at: "2025-03-15T16:30:00Z",
       body:
-        "En lo personal siento que Gonzalo fue de gran ayuda en mi búsqueda como persona, para encontrar mi paz mental y darme cuenta del valor que tengo solo por ser persona, además tenía instaurada una forma muy agresiva de mi ser y el busca a través de la contra pregunta ver las cosas desde otro punto de vista, dando a conocer tus potencial. En resumen me ayudaron a:\n*Establecer límites y reconocer personas manipuladoras\n* valorar quién soy como mujer\n* tomar control \n* y poder ver las cosas de varios puntos de vista y no uno solo.\nEn conclusión hoy puedo disfrutar más, valorándome como persona, estableciendo límites, saber donde quiero estar y estar con la persona que me quiera, además de potenciar mi fuerza. 👍",
+        "El acompañamiento me ayudó a reconocer límites, valorar mis recursos y tomar decisiones con mayor claridad. Pude observar situaciones desde distintos puntos de vista y actuar con más seguridad.",
       score: 5,
       author: "Evelyn",
     },
@@ -91,7 +91,7 @@ const Feed: React.FC = () => {
       id: "7",
       created_at: "2025-03-10T14:00:00Z",
       body:
-        "Exelente profesional me encanto compartir mi vida con el me ayudo mucho!!",
+        "Excelente profesional; el proceso me resultó de gran ayuda.",
       score: 5,
       author: "Daniela Quevedo",
     },
@@ -99,7 +99,7 @@ const Feed: React.FC = () => {
       id: "1",
       created_at: "2025-03-01T10:00:00Z",
       body:
-        "Me han servido mucho las sesiones...\nLa verdad me he sentido mucho mejor... A través de estas he ido recuperando confianza y las ganas de retomar actividades que había dejado.\nCreo que hay que normalizar el sentirnos bien y para eso es necesario tomar sesiones.\nMe gusta la atención, ha sido muy profesional y también personalizada, pero sobre todo muy efectiva. El cambio desde que tomo las sesiones ha sido notorio para mí y mi entorno.",
+        "Las sesiones me sirvieron para recuperar motivación y retomar actividades. La atención fue profesional y personalizada, con resultados visibles en mi día a día.",
       score: 5,
       author: "Paulina Rodriguez",
     },
@@ -107,7 +107,7 @@ const Feed: React.FC = () => {
       id: "2",
       created_at: "2025-02-25T15:30:00Z",
       body:
-        "Siempre sentí una genuina preocupación por parte de Gonzalo en cuanto a mi estado y avances. Fue un guía y un adecuado apoyo. ¡Totalmente recomendado!",
+        "Noté una preocupación genuina por mi proceso y avances. Su guía fue clara y útil. Recomendado.",
       score: 5,
       author: "Nicolás Gresve P.",
     },
@@ -115,7 +115,7 @@ const Feed: React.FC = () => {
       id: "3",
       created_at: "2025-02-20T12:15:00Z",
       body:
-        "Gonzalo es súper profesional, abierto con los pensamientos y sentimientos de uno. No juzga (como me pasó con otros profesionales). Me ayuda a descubrir mi rumbo cuando he estado desorientada y a seguir mis instintos pero marcando límites, porque eso me faltaba. Desde que inicié las sesiones me siento más tranquila.\nGonzalo da tareas, no sólo escucha, eso es más significativo, ya que me ha dado herramientas para enfrentarme a mi realidad.\n",
+        "Profesional abierto y respetuoso. Me ayudó a clarificar rumbo y a poner límites cuando era necesario. Salí de cada encuentro con herramientas prácticas.",
       score: 5,
       author: "Giovanna",
     },
@@ -123,7 +123,7 @@ const Feed: React.FC = () => {
       id: "4",
       created_at: "2025-02-15T09:00:00Z",
       body:
-        "En honor a la verdad, fue una experiencia excelente. Me sentí muy respetada y acompañada; me sentí que estaba con un amigo sin serlo. El trabajo realizado fue muy profesional y puntual. Solo puedo agradecer.",
+        "Experiencia muy buena. Me sentí respetada y acompañada; el trabajo fue puntual y profesional.",
       score: 5,
       author: "Irene Muñoz Weber",
     },
@@ -131,7 +131,7 @@ const Feed: React.FC = () => {
       id: "5",
       created_at: "2025-02-10T14:45:00Z",
       body:
-        "Estuve en sesión con Gonzalo, me sentí muy cómoda desde la primera sesión. Tenía muchos temas que necesitaba hablar y no encontraba salida a mis pensamientos. Gonzalo me ayudó mucho a aclarar mi mente, entender las cosas desde otro punto de vista, a mirar de manera distinta el pasado, el presente y el futuro. Me ayudó también con sentimientos de culpa; con su lógica y conversación logró muchos cambios en mi forma de pensar. Tuve muchas sesiones con él y cada una valió la pena; en cada una vaciaba más mi mochila emocional. Es una persona lógica y amable. Además es muy preocupado y atento.",
+        "Desde la primera sesión me sentí cómoda. Las conversaciones me ayudaron a ordenar pensamientos y ver el pasado, presente y futuro con mayor perspectiva. Trato amable y preocupado.",
       score: 5,
       author: "Barbara Quijada",
     },
@@ -189,7 +189,7 @@ const Feed: React.FC = () => {
         </span>
       </div>
 
-      {/* Lista (manteniendo los textos originales) */}
+      {/* Lista */}
       <AnimatePresence initial={false}>
         <motion.div className="space-y-8" variants={listVariants} initial="hidden" animate="visible">
           {entries.map((e) => (

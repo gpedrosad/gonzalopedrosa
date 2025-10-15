@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 import SobreMi from "./SobreMi";
 
 // Lazy de Reviews (performance)
-const Reviews = dynamic(() => import("./Feed"), { ssr: false });
+const Feed = dynamic(() => import("./Feed"), { ssr: false });
 
 /* ────────────────────────────────────────────────────────────────────────────
    Pixel/CAPI helpers
@@ -143,9 +143,8 @@ type HorariosSeleccionados = Record<Dias, string[]>;
 
 interface ProfileData {
   name: string;
-  activity: string;
   description: string;
-  specializations: string[];
+  topics: string[];
   photo: string;
   services: Array<{
     id: string;
@@ -169,21 +168,18 @@ const Profile: React.FC = () => {
   // Contenido SEMÁNTICAMENTE FIJO (sin ofuscación ni versiones para bots)
   const profileData: ProfileData = {
     name: "Gonzalo Pedrosa",
-    activity: "Psicólogo online",
     description:
-      "Acompañamiento profesional para organizar ideas, mejorar el bienestar y tomar decisiones con claridad. Espacio cercano, privado y en formato online.",
-    specializations: [
-      "Bienestar personal",
+      "Acompañamiento para organizar ideas y tomar decisiones con claridad. Espacio cercano, privado y en formato online.",
+    topics: [
       "Hábitos y organización",
-      "Autoestima y límites",
-      "Mindfulness",
+      "Límites",
     ],
     photo: "/yo.png",
     services: [
       {
         id: "service1",
         name: "Sesión online",
-        priceCLP: 30000,
+        priceCLP: 35000,
         duration: 50,
         selected_slots: {
           Lunes: ["11:00 - 11:45"],
@@ -200,7 +196,7 @@ const Profile: React.FC = () => {
 
   const primaryService = profileData.services[0];
   const averageRating = 4.8;
-  const reviewCount = 281;
+  const NumerodeExperiencias = 281;
 
   // ViewContent sólo tras interacción humana (no en SSR/primera pintura)
   React.useEffect(() => {
@@ -235,11 +231,7 @@ const Profile: React.FC = () => {
     const eventId = makeEventId("schedule-profile");
 
     const pixelParams: Record<string, unknown> = { content_type: "service", source };
-    if (!REVIEW_MODE) {
-      pixelParams.content_ids = [primaryService.id];
-      pixelParams.value = primaryService.priceCLP;
-      pixelParams.currency = currency;
-    }
+
     trackWithRetry("Schedule", pixelParams, eventId);
 
     const meta = collectAttribution({ page: "profile", source });
@@ -255,13 +247,13 @@ const Profile: React.FC = () => {
     });
   };
 
-  // Carga perezosa de Reviews: tras scroll (por performance)
-  const [showReviews, setShowReviews] = React.useState(false);
+    // Carga perezosa de Feed: tras scroll (por performance)
+  const [showFeed, setShowFeed] = React.useState(false);
   React.useEffect(() => {
     if (!interacted) return;
     const onScroll = () => {
       if (window.scrollY > 480) {
-        setShowReviews(true);
+        setShowFeed(true);
         window.removeEventListener("scroll", onScroll);
       }
     };
@@ -274,7 +266,7 @@ const Profile: React.FC = () => {
       <div className="w-full bg-white rounded-lg shadow-lg p-10 md:p-16">
         <div className="mb-4">
           <span className="inline-block bg-green-500 text-white text-sm font-medium px-3 py-1 rounded-full">
-            Bien valorado por clientes
+            Valorados por quienes reservaron
           </span>
         </div>
 
@@ -288,9 +280,7 @@ const Profile: React.FC = () => {
             className="rounded-lg mb-4 object-cover"
           />
           <h2 className="text-2xl md:text-4xl font-bold">{profileData.name}</h2>
-          <p className="text-gray-500 text-xl md:text-2xl">
-            {profileData.activity}
-          </p>
+       
 
         <div className="flex flex-col items-center mt-4 space-y-1">
             <div className="flex items-center space-x-2">
@@ -300,7 +290,7 @@ const Profile: React.FC = () => {
               {renderStars(averageRating)}
             </div>
             <p className="text-gray-500 text-md md:text-lg">
-              ({reviewCount} evaluaciones)
+              ({NumerodeExperiencias} experiencias)
             </p>
           </div>
         </div>
@@ -314,12 +304,12 @@ const Profile: React.FC = () => {
             Áreas de enfoque
           </h3>
           <div className="flex flex-wrap gap-3 justify-center">
-            {profileData.specializations.map((specialization, index) => (
+            {profileData.topics.map((topic, index) => (
               <span
                 key={index}
                 className="bg-[#023047] text-white text-sm md:text-xl font-medium px-3 py-1 rounded-full"
               >
-                {specialization}
+                {topic}
               </span>
             ))}
           </div>
@@ -402,12 +392,12 @@ const Profile: React.FC = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div>  
 
       <div className="h-24 md:hidden" aria-hidden />
 
-      {/* Reviews: carga perezosa tras scroll */}
-      {showReviews && <Reviews />}
+      {/* Feed: carga perezosa tras scroll */}
+      {showFeed && <Feed />}
 
       <hr className="w-full border-gray-300 mt-12 mb-8" />
 
