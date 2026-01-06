@@ -93,7 +93,7 @@ export default function AgendarPage() {
           }}
         >
           <a
-            href="https://wa.me/56912345678"
+            href="https://wa.me/56968257817"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -114,7 +114,7 @@ export default function AgendarPage() {
                 WhatsApp
               </strong>
               <span style={{ fontSize: "0.875rem", color: "#666" }}>
-                +56 9 1234 5678
+                +56 9 6825 7817
               </span>
             </span>
           </a>
