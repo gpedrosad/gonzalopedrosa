@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-sentimiento-culpa-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Sentimiento de Culpa en Chillán | Gonzalo Pedrosa",
+    description: "Psicólogo para trabajar sentimientos de culpa en Chillán. Terapia para liberarte de la culpa excesiva y vivir con más paz interior.",
+    url: "https://gonzalopedrosa.cl/psicologo-sentimiento-culpa-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Sentimiento de Culpa en Chillán",
+    description: "Psicólogo para trabajar sentimientos de culpa en Chillán. Terapia para liberarte de la culpa excesiva y vivir con más paz interior.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿La culpa siempre es mala?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. La culpa sana nos ayuda a reconocer cuando herimos a otros y a reparar. El problema es la culpa excesiva, que te paraliza o te hace sentir mal sin razón real."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puede estar relacionada con depresión?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. La culpa excesiva es un síntoma común de{\" \"} depresión . Si sientes culpa constante junto con tristeza, vale la pena explorarlo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo puedo perdonarme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El autoperdón es un proceso que trabajamos en terapia. Implica aceptar tu humanidad, aprender del error y soltar la autocastigo."
+      }
+    }
+  ]
 };
 
 export default function PsicologoSentimientoCulpaChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -142,6 +194,7 @@ export default function PsicologoSentimientoCulpaChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

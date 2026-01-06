@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-obesidad-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Obesidad en Chillán | Gonzalo Pedrosa",
+    description: "Psicólogo especializado en obesidad en Chillán. Tratamiento psicológico para pérdida de peso, alimentación emocional y cambio de hábitos.",
+    url: "https://gonzalopedrosa.cl/psicologo-obesidad-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Obesidad en Chillán",
+    description: "Psicólogo especializado en obesidad en Chillán. Tratamiento psicológico para pérdida de peso, alimentación emocional y cambio de hábitos.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Por qué no puedo mantener las dietas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Probablemente porque no has trabajado los aspectos emocionales. Si comes por razones emocionales, necesitas otras herramientas además de una dieta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Trabajas junto con nutricionistas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, cuando es necesario me coordino con nutricionistas para un abordaje integral. La combinación es más efectiva."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La terapia me hará bajar de peso?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La terapia trabaja los factores psicológicos que dificultan mantener cambios. Combinada con alimentación y actividad física adecuadas, facilita resultados duraderos."
+      }
+    }
+  ]
 };
 
 export default function PsicologoObesidadChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -148,6 +200,7 @@ export default function PsicologoObesidadChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

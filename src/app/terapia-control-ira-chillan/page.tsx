@@ -9,6 +9,18 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/terapia-control-ira-chillan",
   },
+  openGraph: {
+    title: "Terapia Control de Ira en Chillán | Gonzalo Pedrosa",
+    description: "Aprende a manejar la rabia y la impulsividad de forma efectiva con terapia profesional.",
+    url: "https://gonzalopedrosa.cl/terapia-control-ira-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Control de Ira en Chillán",
+    description: "Maneja la rabia y las reacciones explosivas con terapia.",
+  },
 };
 
 export default function TerapiaControlIraChillanPage() {

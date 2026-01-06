@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/tratamiento-agorafobia-chillan",
   },
+  openGraph: {
+    title: "Tratamiento Agorafobia en Chillán | Psicólogo Gonzalo Pedrosa",
+    description: "Tratamiento para agorafobia en Chillán. Terapia especializada para superar el miedo a salir, lugares públicos y situaciones donde escapar es difícil.",
+    url: "https://gonzalopedrosa.cl/tratamiento-agorafobia-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tratamiento Agorafobia en Chillán | Psicólogo Gonzalo Pedrosa",
+    description: "Tratamiento para agorafobia en Chillán. Terapia especializada para superar el miedo a salir, lugares públicos y situaciones donde escapar es difícil.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Me van a obligar a enfrentar mis miedos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La exposición es gradual y siempre con tu acuerdo. Avanzamos a tu ritmo, nunca te forzaré a hacer algo para lo que no estés preparado/a."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo superar la agorafobia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. La agorafobia tiene muy buena respuesta al tratamiento. Muchas personas recuperan su vida completamente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito medicación?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No siempre. La terapia sola puede ser suficiente. En casos severos, la medicación puede ayudar inicialmente y se va reduciendo con el tiempo."
+      }
+    }
+  ]
 };
 
 export default function TratamientoAgorafobiaChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -158,6 +210,7 @@ export default function TratamientoAgorafobiaChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,70 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-particular-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Particular en Chillán, Chile | Gonzalo Pedrosa",
+    description: "Psicólogo particular en Chillán con atención personalizada. Sin esperas, horarios flexibles y confidencialidad total. Sesiones presenciales y online.",
+    url: "https://gonzalopedrosa.cl/psicologo-particular-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Particular en Chillán, Chile",
+    description: "Psicólogo particular en Chillán con atención personalizada. Sin esperas, horarios flexibles y confidencialidad total. Sesiones presenciales y online.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto dura cada sesión?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cada sesión tiene una duración de 50 minutos, tiempo completo dedicado a tu proceso sin interrupciones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cada cuánto son las sesiones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generalmente comenzamos con sesiones semanales. A medida que avanzas, podemos espaciarlas según tu evolución y necesidades."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo elegir entre presencial y online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, tienes flexibilidad total. Puedes optar por sesiones presenciales en Chillán,{\" \"} sesiones online , o combinar ambas modalidades según te acomode."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo agendo mi primera sesión?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Escríbeme por{\" \"} WhatsApp {\" \"} o correo. Coordinaremos un horario que te acomode y te confirmo la cita. El proceso es simple y directo."
+      }
+    }
+  ]
 };
 
 export default function PsicologoParticularChillanPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -412,6 +472,7 @@ export default function PsicologoParticularChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

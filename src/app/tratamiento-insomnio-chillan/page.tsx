@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/tratamiento-insomnio-chillan",
   },
+  openGraph: {
+    title: "Tratamiento Insomnio en Chillán | Psicólogo Gonzalo Pedrosa",
+    description: "Tratamiento psicológico para insomnio en Chillán. Terapia cognitivo-conductual para el insomnio (TCC-I), el tratamiento más efectivo sin medicación.",
+    url: "https://gonzalopedrosa.cl/tratamiento-insomnio-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tratamiento Insomnio en Chillán | Psicólogo Gonzalo Pedrosa",
+    description: "Tratamiento psicológico para insomnio en Chillán. Terapia cognitivo-conductual para el insomnio (TCC-I), el tratamiento más efectivo sin medicación.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto dura el tratamiento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generalmente 6-8 sesiones para un protocolo completo de TCC-I. Muchas personas notan mejoras desde las primeras semanas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Tendré que dejar mis medicamentos para dormir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eso se evalúa con tu médico. La TCC-I puede ayudarte a reducir o eliminar la dependencia gradualmente, siempre con supervisión médica."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Y si mi insomnio es por ansiedad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es muy común. Trabajamos tanto el insomnio como la{\" \"} ansiedad{\" \"} subyacente, ya que suelen alimentarse mutuamente."
+      }
+    }
+  ]
 };
 
 export default function TratamientoInsomnioChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -145,6 +197,7 @@ export default function TratamientoInsomnioChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

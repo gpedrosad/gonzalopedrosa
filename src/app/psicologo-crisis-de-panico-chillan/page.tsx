@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../components/Button";
@@ -10,11 +11,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-crisis-de-panico-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Crisis de Pánico en Chillán, Chile | Gonzalo Pedrosa",
+    description: "Psicólogo especializado en crisis de pánico en Chillán, Chile. Tratamiento basado en evidencia para ataques de pánico. Atención presencial y online.",
+    url: "https://gonzalopedrosa.cl/psicologo-crisis-de-panico-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Crisis de Pánico en Chillán, Chile",
+    description: "Psicólogo especializado en crisis de pánico en Chillán, Chile. Tratamiento basado en evidencia para ataques de pánico. Atención presencial y online.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Las crisis de pánico son peligrosas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aunque los síntomas son muy intensos, las crisis no son peligrosas en sí mismas. Es importante descartar causas médicas con un profesional de salud."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo tener terapia online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, la{\" \"} terapia online {\" \"} puede ser efectiva para el tratamiento del pánico. Evaluamos juntos la modalidad más adecuada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo toma el tratamiento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La duración depende de cada caso. Muchas personas experimentan mejoría significativa en 8-16 sesiones."
+      }
+    }
+  ]
 };
 
 export default function PsicologoCrisisPanicoChillanPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -437,5 +489,6 @@ export default function PsicologoCrisisPanicoChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }

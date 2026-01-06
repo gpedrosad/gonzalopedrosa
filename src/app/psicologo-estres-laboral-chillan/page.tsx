@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-estres-laboral-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Estrés Laboral en Chillán, Chile | Gonzalo Pedrosa",
+    description: "Psicólogo especializado en estrés laboral y burnout en Chillán, Chile. Tratamiento para agotamiento profesional. Sesiones presenciales y online.",
+    url: "https://gonzalopedrosa.cl/psicologo-estres-laboral-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Estrés Laboral en Chillán, Chile",
+    description: "Psicólogo especializado en estrés laboral y burnout en Chillán, Chile. Tratamiento para agotamiento profesional. Sesiones presenciales y online.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Debería renunciar a mi trabajo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No necesariamente. En terapia trabajamos para que puedas tomar decisiones informadas sobre tu carrera, desarrollando herramientas que pueden ayudarte en tu trabajo actual o prepararte para un cambio si es lo mejor para ti."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuántas sesiones necesito?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de la severidad del cuadro y tus objetivos. Muchas personas notan mejoría significativa en 8-12 sesiones, aunque el proceso puede ser más breve o extenso según cada caso."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo tener sesiones fuera del horario de oficina?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, tengo horarios flexibles. La{\" \"} terapia online {\" \"} ofrece aún más flexibilidad para adaptarse a tu agenda."
+      }
+    }
+  ]
 };
 
 export default function PsicologoEstresLaboralChillanPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -407,6 +459,7 @@ export default function PsicologoEstresLaboralChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

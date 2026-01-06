@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-fobia-social-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Fobia Social en Chillán, Chile | Gonzalo Pedrosa",
+    description: "Psicólogo especializado en fobia social y ansiedad social en Chillán, Chile. Tratamiento con terapia cognitivo-conductual. Sesiones presenciales y online.",
+    url: "https://gonzalopedrosa.cl/psicologo-fobia-social-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Fobia Social en Chillán, Chile",
+    description: "Psicólogo especializado en fobia social y ansiedad social en Chillán, Chile. Tratamiento con terapia cognitivo-conductual. Sesiones presenciales y onl",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Es lo mismo que ser tímido?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No exactamente. La timidez es un rasgo de personalidad, mientras que la fobia social es un trastorno de ansiedad que causa malestar significativo e interfiere con la vida cotidiana."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La fobia social se cura?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Con tratamiento adecuado, muchas personas logran superar la fobia social o reducir significativamente sus síntomas. La TCC tiene alta efectividad para este problema."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Me sirve la terapia online si tengo fobia social?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, la{\" \"} terapia online {\" \"} puede ser especialmente útil al inicio, ya que es menos intimidante. A medida que avanza el tratamiento, podemos incorporar sesiones presenciales si es apropiado."
+      }
+    }
+  ]
 };
 
 export default function PsicologoFobiaSocialChillanPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -404,6 +456,7 @@ export default function PsicologoFobiaSocialChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

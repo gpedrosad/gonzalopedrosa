@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-duelo-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Duelo en Chillán, Chile | Gonzalo Pedrosa",
+    description: "Psicólogo especializado en duelo y pérdidas en Chillán, Chile. Acompañamiento profesional para procesar el dolor. Sesiones presenciales y online.",
+    url: "https://gonzalopedrosa.cl/psicologo-duelo-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Duelo en Chillán, Chile",
+    description: "Psicólogo especializado en duelo y pérdidas en Chillán, Chile. Acompañamiento profesional para procesar el dolor. Sesiones presenciales y online.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto dura el duelo normalmente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No hay un tiempo establecido. Puede durar meses o años, y su intensidad varía. Lo importante no es &quot;superarlo&quot; sino aprender a vivir con la pérdida de una manera que te permita seguir adelante."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es normal sentir rabia durante el duelo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, la rabia es una reacción común y válida. Puede dirigirse hacia la persona fallecida, hacia otros, hacia uno mismo o hacia la situación en general. En terapia trabajamos para procesar estas emociones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué enfoque utilizas para trabajar el duelo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trabajo desde la{\" \"} terapia cognitivo-conductual , integrando técnicas específicas para el procesamiento del duelo. También puedo complementar con{\" \"} EMDR {\" \"} si es apropiado."
+      }
+    }
+  ]
 };
 
 export default function PsicologoDueloChillanPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -416,6 +468,7 @@ export default function PsicologoDueloChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

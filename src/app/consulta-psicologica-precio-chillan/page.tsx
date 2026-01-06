@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,78 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/consulta-psicologica-precio-chillan",
   },
+  openGraph: {
+    title: "Precio Consulta Psicológica en Chillán | Gonzalo Pedrosa",
+    description: "Precios de consulta psicológica en Chillán. Valor de sesión, formas de pago y opciones de reembolso Isapre. Información clara y transparente.",
+    url: "https://gonzalopedrosa.cl/consulta-psicologica-precio-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Precio Consulta Psicológica en Chillán",
+    description: "Precios de consulta psicológica en Chillán. Valor de sesión, formas de pago y opciones de reembolso Isapre. Información clara y transparente.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿La primera sesión tiene otro valor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Todas las sesiones tienen el mismo valor, incluyendo la primera. No hay cargos adicionales por evaluación inicial."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuántas sesiones necesitaré?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de cada caso y tus objetivos. Algunas personas ven mejorías en 8-12 sesiones, otras prefieren un proceso más largo. Lo definimos juntos según tu evolución."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hay descuento por pack de sesiones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Por el momento no ofrezco packs. Prefiero que avancemos sesión a sesión, sin compromisos de largo plazo que puedan generar presión."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuándo se paga?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El pago se realiza antes de cada sesión, idealmente el mismo día o el día anterior por transferencia. También puedes pagar al inicio de la sesión presencial."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hay política de cancelación?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Si necesitas cancelar, avísame con al menos 24 horas de anticipación para reagendar sin costo. Cancelaciones con menos de 24 horas se cobran el 50% del valor."
+      }
+    }
+  ]
 };
 
 export default function ConsultaPsicologicaPrecioChillanPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -448,6 +516,7 @@ export default function ConsultaPsicologicaPrecioChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

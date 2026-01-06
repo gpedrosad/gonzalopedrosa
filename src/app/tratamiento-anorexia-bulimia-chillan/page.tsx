@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/tratamiento-anorexia-bulimia-chillan",
   },
+  openGraph: {
+    title: "Tratamiento Anorexia y Bulimia en Chillán | Psicólogo Gonzalo Pedrosa",
+    description: "Tratamiento psicológico para anorexia y bulimia en Chillán. Terapia especializada para recuperar tu salud y tu relación con la comida.",
+    url: "https://gonzalopedrosa.cl/tratamiento-anorexia-bulimia-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tratamiento Anorexia y Bulimia en Chillán | Psicólogo Gonzalo Pedrosa",
+    description: "Tratamiento psicológico para anorexia y bulimia en Chillán. Terapia especializada para recuperar tu salud y tu relación con la comida.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto dura el tratamiento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es un proceso largo, generalmente de meses a años. La recuperación no es lineal pero es posible. Vamos a tu ritmo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito otros profesionales?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generalmente sí: psiquiatra (para medicación si es necesaria) y nutricionista especializado. Puedo ayudarte a armar tu equipo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa si recaigo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las recaídas son parte del proceso, no un fracaso. Lo importante es retomar el tratamiento y aprender de lo que pasó."
+      }
+    }
+  ]
 };
 
 export default function TratamientoAnorexiaBulimiaChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -147,6 +199,7 @@ export default function TratamientoAnorexiaBulimiaChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

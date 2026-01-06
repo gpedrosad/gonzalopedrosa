@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-timidez-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Timidez en Chillán | Gonzalo Pedrosa",
+    description: "Psicólogo para superar la timidez en Chillán. Terapia para ganar confianza social, expresarte mejor y conectar con otros sin ansiedad.",
+    url: "https://gonzalopedrosa.cl/psicologo-timidez-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Timidez en Chillán",
+    description: "Psicólogo para superar la timidez en Chillán. Terapia para ganar confianza social, expresarte mejor y conectar con otros sin ansiedad.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Se puede dejar de ser tímido/a?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No se trata de cambiar tu personalidad, sino de que la timidez no te limite. Puedes seguir siendo introvertido/a pero desenvolverte con más soltura."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Me va a obligar a hacer cosas incómodas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trabajamos gradualmente y respetando tu ritmo. La exposición es necesaria pero siempre de forma progresiva y con tu acuerdo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Funciona la terapia online para timidez?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, e incluso puede ser más cómoda al principio. La{\" \"} terapia online{\" \"} es igual de efectiva y luego puedes pasar a presencial si quieres."
+      }
+    }
+  ]
 };
 
 export default function PsicologoTimidezChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -149,6 +201,7 @@ export default function PsicologoTimidezChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,70 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-ansiedad-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Ansiedad en Chillán, Chile | Gonzalo Pedrosa",
+    description: "Psicólogo especializado en ansiedad en Chillán, Chile. Tratamiento con enfoque cognitivo-conductual basado en evidencia. Sesiones presenciales y online.",
+    url: "https://gonzalopedrosa.cl/psicologo-ansiedad-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Ansiedad en Chillán, Chile",
+    description: "Psicólogo especializado en ansiedad en Chillán, Chile. Tratamiento con enfoque cognitivo-conductual basado en evidencia. Sesiones presenciales y onlin",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto dura un tratamiento para ansiedad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generalmente entre 8-16 sesiones para casos de ansiedad moderada. Algunos notan cambios en pocas semanas, mientras otros requieren un proceso más extenso. Lo evaluamos juntos durante el tratamiento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La ansiedad puede derivar en crisis de pánico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En algunos casos, la ansiedad sostenida puede manifestarse en{\" \"} crisis de pánico . Identificarla tempranamente puede ayudar a prevenir su escalada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es confidencial la terapia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Todo lo conversado está protegido por secreto profesional, salvo excepciones legales que se explican al inicio del proceso."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito medicación para tratar la ansiedad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No necesariamente. La TCC por sí sola es muy efectiva. En casos severos, puede combinarse con medicación (derivación a psiquiatra). Lo evaluamos según tu situación."
+      }
+    }
+  ]
 };
 
 export default function PsicologoAnsiedadChillanPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -571,5 +631,6 @@ export default function PsicologoAnsiedadChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }

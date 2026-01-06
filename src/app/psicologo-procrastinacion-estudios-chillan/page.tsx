@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-procrastinacion-estudios-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Procrastinación y Estudios en Chillán | Gonzalo Pedrosa",
+    description: "Psicólogo para superar la procrastinación en Chillán. Terapia para dejar de postergar, mejorar hábitos de estudio y vencer la pereza crónica.",
+    url: "https://gonzalopedrosa.cl/psicologo-procrastinacion-estudios-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Procrastinación y Estudios en Chillán",
+    description: "Psicólogo para superar la procrastinación en Chillán. Terapia para dejar de postergar, mejorar hábitos de estudio y vencer la pereza crónica.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Por qué no puedo simplemente &quot;hacerlo&quot;?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Porque la procrastinación es un hábito automático que protege de emociones incómodas. Cambiarlo requiere trabajar a nivel más profundo que solo &quot;fuerza de voluntad&quot;."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puede ser TDAH?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es posible. La procrastinación crónica puede ser síntoma de{\" \"} TDAH. En terapia exploramos si hay algo más que explique el patrón."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo toma ver cambios?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Con trabajo consistente, muchas personas notan cambios en 4-8 semanas. Cambiar hábitos arraigados toma tiempo, pero es posible."
+      }
+    }
+  ]
 };
 
 export default function PsicologoProcrastinacionChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -147,6 +199,7 @@ export default function PsicologoProcrastinacionChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

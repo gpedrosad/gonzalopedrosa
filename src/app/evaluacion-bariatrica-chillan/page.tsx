@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/evaluacion-bariatrica-chillan",
   },
+  openGraph: {
+    title: "Evaluación Bariátrica en Chillán | Psicólogo Gonzalo Pedrosa",
+    description: "Evaluación psicológica para cirugía bariátrica en Chillán. Informe psicológico requerido para operación de manga gástrica y bypass.",
+    url: "https://gonzalopedrosa.cl/evaluacion-bariatrica-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Evaluación Bariátrica en Chillán | Psicólogo Gonzalo Pedrosa",
+    description: "Evaluación psicológica para cirugía bariátrica en Chillán. Informe psicológico requerido para operación de manga gástrica y bypass.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo toma?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generalmente 1-2 sesiones de evaluación. El informe se entrega dentro de la semana siguiente a completar la evaluación."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Me pueden rechazar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La evaluación es para determinar si estás preparado/a actualmente. Si hay contraindicaciones, trabajamos en ellas para que puedas optar más adelante."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El informe lo acepta cualquier clínica?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, el informe cumple estándares profesionales. Si tu equipo requiere un formato específico, me adapto a sus requerimientos."
+      }
+    }
+  ]
 };
 
 export default function EvaluacionBariatricaChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -147,6 +199,7 @@ export default function EvaluacionBariatricaChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

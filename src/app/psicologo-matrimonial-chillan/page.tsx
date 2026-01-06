@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,70 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-matrimonial-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Matrimonial en Chillán, Chile | Gonzalo Pedrosa",
+    description: "Psicólogo matrimonial en Chillán. Terapia para matrimonios en crisis, problemas de comunicación y fortalecimiento del vínculo. Sesiones presenciales y online.",
+    url: "https://gonzalopedrosa.cl/psicologo-matrimonial-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Matrimonial en Chillán, Chile",
+    description: "Psicólogo matrimonial en Chillán. Terapia para matrimonios en crisis, problemas de comunicación y fortalecimiento del vínculo. Sesiones presenciales y",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuántos años de matrimonio atienden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Atiendo matrimonios en cualquier etapa: recién casados, con varios años, o con décadas de convivencia. Los desafíos varían, pero el proceso terapéutico se adapta a cada situación."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué diferencia hay con terapia de pareja?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En esencia es similar. La{\" \"} terapia de pareja {\" \"} incluye a novios y convivientes, mientras que la matrimonial se enfoca específicamente en parejas casadas y sus dinámicas particulares."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Pueden venir los hijos a algunas sesiones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generalmente la terapia matrimonial es solo para los cónyuges. Si hay temas que involucran directamente a los hijos, evaluamos la mejor forma de abordarlos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Funciona si uno de los dos no está convencido?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puede funcionar si ambos están dispuestos a intentarlo, aunque uno tenga más dudas que el otro. Lo importante es la apertura a participar del proceso."
+      }
+    }
+  ]
 };
 
 export default function PsicologoMatrimonialChillanPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -186,7 +246,7 @@ export default function PsicologoMatrimonialChillanPage() {
           ⚠️ Importante
         </p>
         <p style={{ color: "#78350f", fontSize: "0.875rem", lineHeight: 1.6 }}>
-          La terapia matrimonial no siempre significa "salvar" el matrimonio.
+          La terapia matrimonial no siempre significa &ldquo;salvar&rdquo; el matrimonio.
           También puede ayudar a tomar la decisión de separarse de forma sana y
           respetuosa si es lo mejor para ambos.
         </p>
@@ -398,6 +458,7 @@ export default function PsicologoMatrimonialChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-dependencia-emocional-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Dependencia Emocional en Chillán | Gonzalo Pedrosa",
+    description: "Psicólogo especializado en dependencia emocional en Chillán. Terapia para superar relaciones de dependencia y construir vínculos más sanos.",
+    url: "https://gonzalopedrosa.cl/psicologo-dependencia-emocional-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Dependencia Emocional en Chillán",
+    description: "Psicólogo especializado en dependencia emocional en Chillán. Terapia para superar relaciones de dependencia y construir vínculos más sanos.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Se puede superar la dependencia emocional?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, con trabajo terapéutico es posible cambiar estos patrones. Requiere compromiso pero los cambios son profundos y duraderos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Tengo que terminar mi relación?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No necesariamente. El objetivo es que puedas relacionarte de forma más sana. A veces la relación mejora, otras veces decides que no te conviene. Lo trabajamos juntos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué me pasa esto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La dependencia suele tener raíces en experiencias tempranas y estilos de{\" \"} apego . En terapia exploramos tu historia para entender y cambiar estos patrones."
+      }
+    }
+  ]
 };
 
 export default function PsicologoDependenciaEmocionalChillanPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -170,6 +222,7 @@ export default function PsicologoDependenciaEmocionalChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

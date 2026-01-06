@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-toma-decisiones-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Toma de Decisiones en Chillán | Gonzalo Pedrosa",
+    description: "Psicólogo para ayudarte a tomar decisiones difíciles en Chillán. Terapia para clarificar opciones, superar la parálisis y decidir con confianza.",
+    url: "https://gonzalopedrosa.cl/psicologo-toma-decisiones-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Toma de Decisiones en Chillán",
+    description: "Psicólogo para ayudarte a tomar decisiones difíciles en Chillán. Terapia para clarificar opciones, superar la parálisis y decidir con confianza.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Por qué no puedo simplemente decidir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las decisiones difíciles suelen involucrar emociones intensas, miedos al error, conflictos de valores o presiones externas. Todo eso dificulta la claridad mental."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuántas sesiones necesito?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de la complejidad. A veces basta con pocas sesiones para ganar claridad. Otras veces hay que trabajar más a fondo lo que subyace."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Y si después me arrepiento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El miedo al arrepentimiento es uno de los bloqueos más comunes. Trabajamos eso: tomar buenas decisiones con la información disponible y aceptar la incertidumbre."
+      }
+    }
+  ]
 };
 
 export default function PsicologoTomaDecisionesChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -147,6 +199,7 @@ export default function PsicologoTomaDecisionesChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

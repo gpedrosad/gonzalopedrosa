@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-ruptura-amorosa-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Ruptura Amorosa en Chillán | Gonzalo Pedrosa",
+    description: "Psicólogo especializado en rupturas amorosas en Chillán. Supera el dolor de una separación con terapia profesional. Sesiones presenciales y online.",
+    url: "https://gonzalopedrosa.cl/psicologo-ruptura-amorosa-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Ruptura Amorosa en Chillán",
+    description: "Psicólogo especializado en rupturas amorosas en Chillán. Supera el dolor de una separación con terapia profesional. Sesiones presenciales y online.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo toma superar una ruptura?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No hay un tiempo fijo. Depende de la duración de la relación, cómo terminó y tus recursos emocionales. La terapia puede acelerar el proceso al trabajarlo activamente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es normal seguir pensando en mi ex?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, es parte del proceso de duelo. El problema es cuando estos pensamientos te impiden funcionar o avanzar. Trabajamos técnicas para manejarlos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Sirve si la ruptura fue hace mucho?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. A veces el dolor se estanca y no se procesa correctamente. La terapia ayuda a cerrar ese capítulo aunque haya pasado tiempo."
+      }
+    }
+  ]
 };
 
 export default function PsicologoRupturaAmorosaChillanPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -290,6 +342,7 @@ export default function PsicologoRupturaAmorosaChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

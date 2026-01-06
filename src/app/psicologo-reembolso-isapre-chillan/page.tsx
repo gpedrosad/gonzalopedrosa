@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,70 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-reembolso-isapre-chillan",
   },
+  openGraph: {
+    title: "Psicólogo con Reembolso Isapre en Chillán | Gonzalo Pedrosa",
+    description: "Psicólogo en Chillán con boleta para reembolso Isapre. Atención particular con documentación válida para todas las Isapres. Sesiones presenciales y online.",
+    url: "https://gonzalopedrosa.cl/psicologo-reembolso-isapre-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo con Reembolso Isapre en Chillán",
+    description: "Psicólogo en Chillán con boleta para reembolso Isapre. Atención particular con documentación válida para todas las Isapres. Sesiones presenciales y on",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto me reembolsa la Isapre?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de tu plan. Generalmente las Isapres reembolsan entre el 50% y 80% del valor de la sesión, con un tope UF definido por tu cobertura. Consulta el detalle en tu cartola o portal web."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuándo recibo la boleta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La boleta electrónica se emite el mismo día de la sesión y la recibes en tu correo. Puedes usarla inmediatamente para solicitar el reembolso."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Funciona para sesiones online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, las Isapres aceptan reembolso tanto para sesiones presenciales como para{\" \"} terapia online . La boleta indica el servicio correctamente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito orden médica?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Para atención psicológica particular no necesitas orden médica ni derivación. Puedes agendar directamente."
+      }
+    }
+  ]
 };
 
 export default function PsicologoReembolsoIsapreChillanPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -407,6 +467,7 @@ export default function PsicologoReembolsoIsapreChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/certificado-salud-mental-chillan",
   },
+  openGraph: {
+    title: "Certificado de Salud Mental en Chillán | Psicólogo Gonzalo Pedrosa",
+    description: "Certificado de salud mental en Chillán. Documento profesional para trámites laborales, licencias, permisos y otros requerimientos.",
+    url: "https://gonzalopedrosa.cl/certificado-salud-mental-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Certificado de Salud Mental en Chillán | Psicólogo Gonzalo Pedrosa",
+    description: "Certificado de salud mental en Chillán. Documento profesional para trámites laborales, licencias, permisos y otros requerimientos.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto demora?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generalmente se entrega el mismo día de la evaluación o al día siguiente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es lo mismo que un informe psicológico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. El certificado es más breve y general. El{\" \"} informe{\" \"} es más detallado y requiere más sesiones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Me pueden rechazar el certificado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Si la evaluación muestra condiciones que contraindican lo que necesitas (ej: porte de armas), el certificado lo reflejará. No puedo emitir un documento falso."
+      }
+    }
+  ]
 };
 
 export default function CertificadoSaludMentalChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -144,6 +196,7 @@ export default function CertificadoSaludMentalChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

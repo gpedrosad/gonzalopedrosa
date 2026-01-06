@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/estres-postraumatico-chillan",
   },
+  openGraph: {
+    title: "Estrés Postraumático (TEPT) en Chillán | Psicólogo Gonzalo Pedrosa",
+    description: "Tratamiento para estrés postraumático (TEPT) en Chillán. Terapia especializada para superar traumas y recuperar tu vida.",
+    url: "https://gonzalopedrosa.cl/estres-postraumatico-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Estrés Postraumático (TEPT) en Chillán | Psicólogo Gonzalo Pedrosa",
+    description: "Tratamiento para estrés postraumático (TEPT) en Chillán. Terapia especializada para superar traumas y recuperar tu vida.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo después del evento puede aparecer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puede aparecer semanas, meses o incluso años después del evento. A veces se gatilla por otro evento estresante que reactiva el trauma original."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito medicación?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No siempre. La terapia sola puede ser suficiente. En casos severos, la medicación puede ayudar y se coordina con psiquiatría."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se puede superar completamente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Muchas personas se recuperan completamente del TEPT con el tratamiento adecuado. Los síntomas pueden reducirse significativamente o desaparecer."
+      }
+    }
+  ]
 };
 
 export default function EstresPostraumaticoChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -163,6 +215,7 @@ export default function EstresPostraumaticoChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

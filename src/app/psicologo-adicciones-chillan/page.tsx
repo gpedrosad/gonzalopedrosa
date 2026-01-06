@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../components/Button";
@@ -10,11 +11,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-adicciones-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Adicciones en Chillán, Chile | Gonzalo Pedrosa",
+    description: "Psicólogo especializado en adicciones en Chillán, Chile. Tratamiento para conductas adictivas con enfoque cognitivo-conductual. Atención presencial y online.",
+    url: "https://gonzalopedrosa.cl/psicologo-adicciones-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Adicciones en Chillán, Chile",
+    description: "Psicólogo especializado en adicciones en Chillán, Chile. Tratamiento para conductas adictivas con enfoque cognitivo-conductual. Atención presencial y ",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Se puede tratar solo con terapia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de la severidad. En dependencias físicas severas puede ser necesario apoyo médico. La terapia psicológica es un componente fundamental."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Y si la persona no quiere tratamiento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La motivación puede trabajarse en terapia. Si un familiar está preocupado, puede ser útil una orientación inicial."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es posible la terapia online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La{\" \"} terapia online {\" \"} puede ser una opción válida, especialmente para el seguimiento."
+      }
+    }
+  ]
 };
 
 export default function PsicologoAdiccionesChillanPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -405,5 +457,6 @@ export default function PsicologoAdiccionesChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }

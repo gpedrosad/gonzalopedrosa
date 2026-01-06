@@ -73,18 +73,62 @@ export default function RootLayout({
         <meta name="referrer" content="strict-origin-when-cross-origin" />
 
         {/* ─────────────────────────────────────────────────────────────
-           JSON-LD neutral (ProfessionalService) — consistente para todos
+           JSON-LD estructurado: Person + ProfessionalService + Offer
            ───────────────────────────────────────────────────────────── */}
         <Script id="ld-professional" type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProfessionalService",
-            name: "Gonzalo Pedrosa",
-            areaServed: ["Online"],
-            url: "https://gonzalopedrosa.cl/",
-            image: "https://gonzalopedrosa.cl/yo.png",
-            description:
-              "Orientación online y acompañamiento profesional con enfoque práctico y cercano. Sesiones privadas en formato digital.",
+            "@graph": [
+              {
+                "@type": "Person",
+                "@id": "https://gonzalopedrosa.cl/#persona",
+                name: "Gonzalo Pedrosa",
+                jobTitle: "Psicólogo Clínico",
+                description: "Psicólogo con más de 7 años de experiencia en atención clínica. Especialista en terapia cognitivo-conductual.",
+                image: "https://gonzalopedrosa.cl/yo.png",
+                url: "https://gonzalopedrosa.cl/",
+                sameAs: ["https://wa.me/56968257817"],
+                knowsAbout: ["Ansiedad", "Depresión", "Terapia Cognitivo-Conductual", "Crisis de pánico", "Estrés"],
+              },
+              {
+                "@type": "ProfessionalService",
+                "@id": "https://gonzalopedrosa.cl/#servicio",
+                name: "Gonzalo Pedrosa - Psicólogo",
+                provider: { "@id": "https://gonzalopedrosa.cl/#persona" },
+                areaServed: [
+                  { "@type": "City", name: "Chillán", "@id": "https://www.wikidata.org/wiki/Q203727" },
+                  { "@type": "Country", name: "Chile" },
+                ],
+                serviceType: ["Psicoterapia individual", "Terapia online", "Terapia cognitivo-conductual"],
+                url: "https://gonzalopedrosa.cl/",
+                image: "https://gonzalopedrosa.cl/yo.png",
+                description: "Atención psicológica profesional para ansiedad, depresión, estrés y más. Sesiones online y presenciales en Chillán.",
+                priceRange: "$35.000 CLP",
+                telephone: "+56968257817",
+                hasOfferCatalog: {
+                  "@type": "OfferCatalog",
+                  name: "Servicios de Psicología",
+                  itemListElement: [
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Sesión individual",
+                        description: "Sesión de psicoterapia de 50 minutos, online o presencial",
+                      },
+                      price: "35000",
+                      priceCurrency: "CLP",
+                    },
+                  ],
+                },
+                aggregateRating: {
+                  "@type": "AggregateRating",
+                  ratingValue: "4.8",
+                  reviewCount: "280",
+                  bestRating: "5",
+                },
+              },
+            ],
           })}
         </Script>
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/superar-relacion-toxica-chillan",
   },
+  openGraph: {
+    title: "Superar Relación Tóxica en Chillán | Psicólogo Gonzalo Pedrosa",
+    description: "Psicólogo en Chillán para superar relaciones tóxicas. Recupera tu bienestar, autoestima y aprende a construir vínculos saludables.",
+    url: "https://gonzalopedrosa.cl/superar-relacion-toxica-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Superar Relación Tóxica en Chillán | Psicólogo Gonzalo Pedrosa",
+    description: "Psicólogo en Chillán para superar relaciones tóxicas. Recupera tu bienestar, autoestima y aprende a construir vínculos saludables.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Por qué me cuesta tanto salir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las relaciones tóxicas generan un vínculo traumático difícil de romper. El ciclo de maltrato y reconciliación crea una adicción emocional. Es más común de lo que crees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Voy a volver a confiar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, pero lleva tiempo. La terapia te ayuda a distinguir señales de alerta y a confiar gradualmente en personas que lo merecen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué me atraen este tipo de personas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Suele estar relacionado con patrones de{\" \"} apego y experiencias tempranas. En terapia trabajamos para cambiar estos patrones."
+      }
+    }
+  ]
 };
 
 export default function SuperarRelacionToxicaChillanPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -152,6 +204,7 @@ export default function SuperarRelacionToxicaChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

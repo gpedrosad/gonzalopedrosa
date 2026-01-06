@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-hombres-chillan",
   },
+  openGraph: {
+    title: "Psicólogo para Hombres en Chillán | Gonzalo Pedrosa",
+    description: "Psicólogo especializado en terapia para hombres en Chillán. Espacio seguro para hablar de emociones, relaciones, estrés y salud mental masculina.",
+    url: "https://gonzalopedrosa.cl/psicologo-hombres-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo para Hombres en Chillán",
+    description: "Psicólogo especializado en terapia para hombres en Chillán. Espacio seguro para hablar de emociones, relaciones, estrés y salud mental masculina.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Por qué un psicólogo &quot;para hombres&quot;?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No es que necesites algo diferente, sino que muchos hombres se sienten más cómodos sabiendo que el espacio entiende sus dificultades particulares para hablar de emociones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa en la primera sesión?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Conversamos sobre qué te trae, qué esperas del proceso y definimos objetivos. No hay presión. Vas a tu ritmo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es confidencial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "100%. Todo lo que conversamos está protegido por secreto profesional. Nadie se enterará de que vienes ni de lo que hablamos."
+      }
+    }
+  ]
 };
 
 export default function PsicologoHombresChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -146,6 +198,7 @@ export default function PsicologoHombresChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-acoso-laboral-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Acoso Laboral en Chillán | Gonzalo Pedrosa",
+    description: "Psicólogo para víctimas de acoso laboral (mobbing) en Chillán. Apoyo psicológico para superar el trauma y recuperar tu bienestar.",
+    url: "https://gonzalopedrosa.cl/psicologo-acoso-laboral-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Acoso Laboral en Chillán",
+    description: "Psicólogo para víctimas de acoso laboral (mobbing) en Chillán. Apoyo psicológico para superar el trauma y recuperar tu bienestar.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cómo sé si es acoso o solo un mal jefe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El acoso es sistemático, sostenido en el tiempo y dirigido a dañarte. Un mal jefe puede ser difícil pero no necesariamente busca destruirte. En terapia lo exploramos juntos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Debería renunciar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es una decisión personal compleja. En terapia te ayudo a evaluar opciones (quedarte, denunciar, irte) y sus consecuencias, sin presionarte en ninguna dirección."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo superar esto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. El acoso laboral deja secuelas, pero con tratamiento adecuado puedes recuperarte y volver a confiar en ti y en ambientes laborales."
+      }
+    }
+  ]
 };
 
 export default function PsicologoAcosoLaboralChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -174,6 +226,7 @@ export default function PsicologoAcosoLaboralChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

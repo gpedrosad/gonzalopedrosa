@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-baja-autoestima-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Baja Autoestima en Chillán, Chile | Gonzalo Pedrosa",
+    description: "Psicólogo especializado en autoestima en Chillán, Chile. Tratamiento para baja autoestima e inseguridad. Terapia cognitivo-conductual. Sesiones presenciales y online.",
+    url: "https://gonzalopedrosa.cl/psicologo-baja-autoestima-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Baja Autoestima en Chillán, Chile",
+    description: "Psicólogo especializado en autoestima en Chillán, Chile. Tratamiento para baja autoestima e inseguridad. Terapia cognitivo-conductual. Sesiones presen",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Se puede mejorar la autoestima?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, definitivamente. La autoestima no es algo fijo, puede trabajarse y mejorarse con el abordaje adecuado. Es un proceso que requiere tiempo y compromiso, pero los cambios son posibles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿De dónde viene la baja autoestima?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puede tener múltiples orígenes: experiencias de la infancia, mensajes recibidos de figuras significativas, experiencias de fracaso o rechazo, comparaciones sociales, entre otros. En terapia exploramos tu historia personal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo toma el proceso?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de cada persona y la profundidad del trabajo necesario. Generalmente se comienzan a notar cambios entre las 8-12 sesiones, aunque el proceso puede ser más extenso para consolidar los avances."
+      }
+    }
+  ]
 };
 
 export default function PsicologoBajaAutoestimaChillanPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -398,6 +450,7 @@ export default function PsicologoBajaAutoestimaChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

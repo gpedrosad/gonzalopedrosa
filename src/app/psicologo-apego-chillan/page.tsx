@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-apego-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Apego en Chillán | Gonzalo Pedrosa",
+    description: "Psicólogo especializado en estilos de apego en Chillán. Terapia para entender tus patrones relacionales y construir vínculos más seguros.",
+    url: "https://gonzalopedrosa.cl/psicologo-apego-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Apego en Chillán",
+    description: "Psicólogo especializado en estilos de apego en Chillán. Terapia para entender tus patrones relacionales y construir vínculos más seguros.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Se puede cambiar el estilo de apego?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Aunque se forma en la infancia, el apego es modificable con experiencias correctivas y trabajo terapéutico. Puedes desarrollar un apego más seguro."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué siempre elijo parejas que me hacen mal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tendemos a buscar lo familiar, aunque sea dañino. Si creciste con vínculos inseguros, inconscientemente puedes buscar lo mismo en adultos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto dura este proceso?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Modificar patrones de apego es un trabajo profundo que toma tiempo. Generalmente varios meses, pero los cambios son significativos para toda tu vida."
+      }
+    }
+  ]
 };
 
 export default function PsicologoApegoChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={56} height={56} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -134,6 +186,7 @@ export default function PsicologoApegoChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

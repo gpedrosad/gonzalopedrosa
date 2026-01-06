@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-identidad-genero-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Identidad de Género en Chillán | Gonzalo Pedrosa",
+    description: "Psicólogo afirmativo para identidad de género en Chillán. Acompañamiento profesional y respetuoso en tu proceso de exploración o transición.",
+    url: "https://gonzalopedrosa.cl/psicologo-identidad-genero-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Identidad de Género en Chillán",
+    description: "Psicólogo afirmativo para identidad de género en Chillán. Acompañamiento profesional y respetuoso en tu proceso de exploración o transición.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Me vas a tratar de convencer de algo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Mi rol es acompañarte en tu proceso de exploración. Las decisiones sobre tu identidad y tu cuerpo son tuyas. No tengo una agenda."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedes emitir informes para tratamiento hormonal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Si estás en proceso de transición y necesitas un{\" \"} informe psicológico {\" \"} para tratamiento hormonal o cirugía, puedo evaluarte y emitirlo si corresponde."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Atiendes a menores de edad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mi trabajo es con adultos. Si tienes un hijo/a menor que necesita apoyo, puedo derivarte a un colega especialista en infanto-juvenil."
+      }
+    }
+  ]
 };
 
 export default function PsicologoIdentidadGeneroChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -129,6 +181,7 @@ export default function PsicologoIdentidadGeneroChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

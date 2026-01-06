@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-falta-deseo-sexual-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Falta de Deseo Sexual en Chillán | Gonzalo Pedrosa",
+    description: "Psicólogo para problemas de deseo sexual en Chillán. Terapia confidencial para abordar la disminución del deseo y mejorar tu vida íntima.",
+    url: "https://gonzalopedrosa.cl/psicologo-falta-deseo-sexual-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Falta de Deseo Sexual en Chillán",
+    description: "Psicólogo para problemas de deseo sexual en Chillán. Terapia confidencial para abordar la disminución del deseo y mejorar tu vida íntima.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Debería descartar causas médicas primero?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es recomendable. Factores hormonales o medicamentos pueden influir. Si ya lo descartaste o quieres explorar lo psicológico, podemos comenzar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Tiene que venir mi pareja?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No necesariamente. Puedes trabajarlo de forma individual. Si más adelante tiene sentido incluir a tu pareja, lo evaluamos. También ofrezco{\" \"} terapia de pareja ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es normal que esto pase?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, es muy común en distintas etapas de la vida. No significa que algo esté mal contigo. Con trabajo adecuado, muchas personas recuperan una vida sexual satisfactoria."
+      }
+    }
+  ]
 };
 
 export default function PsicologoFaltaDeseoSexualChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -151,6 +203,7 @@ export default function PsicologoFaltaDeseoSexualChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

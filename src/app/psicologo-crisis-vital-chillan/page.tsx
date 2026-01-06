@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-crisis-vital-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Crisis Vital en Chillán | Gonzalo Pedrosa",
+    description: "Psicólogo especializado en crisis vitales en Chillán. Acompañamiento en momentos de cambio, pérdida o transiciones difíciles de la vida.",
+    url: "https://gonzalopedrosa.cl/psicologo-crisis-vital-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Crisis Vital en Chillán",
+    description: "Psicólogo especializado en crisis vitales en Chillán. Acompañamiento en momentos de cambio, pérdida o transiciones difíciles de la vida.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Es normal tener crisis a cierta edad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, las transiciones de una etapa a otra suelen generar crisis. Es parte del desarrollo humano. Lo importante es cómo las atraviesas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es diferente a la depresión?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pueden coexistir. La crisis vital es un momento de cuestionamiento; la{\" \"} depresión {\" \"} es un cuadro clínico. Si hay síntomas depresivos, también los trabajamos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto dura una crisis vital?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Varía mucho. Algunas personas la resuelven en meses, otras tardan más. La terapia puede acelerar el proceso y hacerlo menos doloroso."
+      }
+    }
+  ]
 };
 
 export default function PsicologoCrisisVitalChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={56} height={56} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -164,6 +216,7 @@ export default function PsicologoCrisisVitalChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

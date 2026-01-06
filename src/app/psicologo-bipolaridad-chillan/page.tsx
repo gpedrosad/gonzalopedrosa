@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-bipolaridad-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Bipolaridad en Chillán | Gonzalo Pedrosa",
+    description: "Psicólogo de apoyo para trastorno bipolar en Chillán. Terapia complementaria para manejar episodios, mejorar adherencia y calidad de vida.",
+    url: "https://gonzalopedrosa.cl/psicologo-bipolaridad-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Bipolaridad en Chillán",
+    description: "Psicólogo de apoyo para trastorno bipolar en Chillán. Terapia complementaria para manejar episodios, mejorar adherencia y calidad de vida.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿La terapia reemplaza la medicación?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. La medicación es fundamental en el trastorno bipolar. La terapia es un complemento que mejora los resultados, pero no sustituye el tratamiento farmacológico."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Trabajan con mi psiquiatra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, cuando es necesario y con tu consentimiento, me coordino con tu psiquiatra para un tratamiento integral."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo ir aunque esté estabilizado/a?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, de hecho es el mejor momento para trabajar prevención. Aprender a identificar señales tempranas puede evitar futuras crisis."
+      }
+    }
+  ]
 };
 
 export default function PsicologoBipolaridadChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -150,6 +202,7 @@ export default function PsicologoBipolaridadChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

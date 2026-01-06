@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../components/Button";
@@ -10,11 +11,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-cognitivo-conductual-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Cognitivo Conductual en Chillán, Chile | Gonzalo Pedrosa",
+    description: "Psicólogo con enfoque cognitivo-conductual (TCC) en Chillán, Chile. Terapia basada en evidencia para ansiedad, depresión y más. Sesiones presenciales y online.",
+    url: "https://gonzalopedrosa.cl/psicologo-cognitivo-conductual-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Cognitivo Conductual en Chillán, Chile",
+    description: "Psicólogo con enfoque cognitivo-conductual (TCC) en Chillán, Chile. Terapia basada en evidencia para ansiedad, depresión y más. Sesiones presenciales ",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿En qué se diferencia de otros enfoques?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La TCC se caracteriza por su enfoque en el presente y en soluciones prácticas. Cuando es relevante, también se trabajan experiencias pasadas que influyen en patrones actuales."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuántas sesiones se necesitan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende del motivo de consulta. Para problemas focalizados pueden bastar pocas sesiones. Para cuadros más complejos, el proceso puede extenderse."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La TCC funciona en formato online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, la{\" \"} terapia online {\" \"} con enfoque cognitivo-conductual ha mostrado efectividad comparable a la presencial."
+      }
+    }
+  ]
 };
 
 export default function PsicologoCognitivoConductualChillanPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -479,5 +531,6 @@ export default function PsicologoCognitivoConductualChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }

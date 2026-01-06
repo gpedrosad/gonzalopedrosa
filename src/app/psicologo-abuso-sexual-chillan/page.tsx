@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-abuso-sexual-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Abuso Sexual en Chillán | Gonzalo Pedrosa",
+    description: "Psicólogo especializado en trauma por abuso sexual en Chillán. Espacio seguro y confidencial para procesar y sanar experiencias traumáticas.",
+    url: "https://gonzalopedrosa.cl/psicologo-abuso-sexual-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Abuso Sexual en Chillán",
+    description: "Psicólogo especializado en trauma por abuso sexual en Chillán. Espacio seguro y confidencial para procesar y sanar experiencias traumáticas.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Tengo que contar todo lo que pasó?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Trabajamos a tu ritmo. Puedes compartir lo que te sientas cómodo/a compartiendo. El proceso respeta tus límites."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Aunque haya pasado hace muchos años?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. El trauma puede afectar durante décadas si no se procesa. Nunca es tarde para buscar ayuda y sanar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es realmente confidencial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "100%. Todo está protegido por secreto profesional. La única excepción es si hay riesgo vital o se trata de un menor en peligro actual."
+      }
+    }
+  ]
 };
 
 export default function PsicologoAbusoSexualChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -150,6 +202,7 @@ export default function PsicologoAbusoSexualChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-chillan-viejo",
   },
+  openGraph: {
+    title: "Psicólogo en Chillán Viejo | Gonzalo Pedrosa - Atención Cercana",
+    description: "Psicólogo en Chillán Viejo y alrededores. Atención presencial cercana y terapia online. Ansiedad, depresión, estrés y más. Agenda tu hora.",
+    url: "https://gonzalopedrosa.cl/psicologo-chillan-viejo",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo en Chillán Viejo | Gonzalo Pedrosa - Atención Cercana",
+    description: "Psicólogo en Chillán Viejo y alrededores. Atención presencial cercana y terapia online. Ansiedad, depresión, estrés y más. Agenda tu hora.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Atiende directamente en Chillán Viejo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La consulta presencial está en Chillán centro. Si el traslado es un inconveniente, la terapia online es una alternativa cómoda y efectiva."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué horarios tiene disponibles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tengo horarios de mañana y tarde. Consulta disponibilidad por{\" \"} WhatsApp {\" \"} y buscamos el que mejor te acomode."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito hora para hoy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Si necesitas atención urgente, revisa mi{\" \"} disponibilidad para hoy ."
+      }
+    }
+  ]
 };
 
 export default function PsicologoChillanViejoPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -420,6 +472,7 @@ export default function PsicologoChillanViejoPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

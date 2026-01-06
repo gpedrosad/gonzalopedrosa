@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-fibromialgia-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Fibromialgia en Chillán | Gonzalo Pedrosa",
+    description: "Psicólogo especializado en fibromialgia en Chillán. Terapia para manejo del dolor crónico, fatiga y aspectos emocionales de la enfermedad.",
+    url: "https://gonzalopedrosa.cl/psicologo-fibromialgia-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Fibromialgia en Chillán",
+    description: "Psicólogo especializado en fibromialgia en Chillán. Terapia para manejo del dolor crónico, fatiga y aspectos emocionales de la enfermedad.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿La fibromialgia es psicológica?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, es una condición médica real. Pero los factores psicológicos influyen en cómo experimentas el dolor. Por eso el tratamiento psicológico ayuda tanto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puede reducir mi dolor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Estudios muestran que la TCC puede reducir la percepción de dolor y mejorar significativamente el funcionamiento diario."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es compatible con mi tratamiento médico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutamente. La terapia es complementaria a la medicación y otros tratamientos. No reemplaza la atención médica."
+      }
+    }
+  ]
 };
 
 export default function PsicologoFibromialgiaChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -144,6 +196,7 @@ export default function PsicologoFibromialgiaChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

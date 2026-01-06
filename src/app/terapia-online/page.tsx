@@ -10,6 +10,18 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/terapia-online",
   },
+  openGraph: {
+    title: "Terapia Online | Psicólogo en Chillán, Chile",
+    description: "Sesiones de psicoterapia online. Atención profesional por videollamada, cómoda, confidencial y flexible.",
+    url: "https://gonzalopedrosa.cl/terapia-online",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terapia Online | Psicólogo en Chillán",
+    description: "Psicoterapia online profesional. Flexible, cómoda y confidencial.",
+  },
 };
 
 export default function TerapiaOnlinePage() {

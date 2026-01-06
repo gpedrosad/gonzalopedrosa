@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-sindrome-impostor-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Síndrome del Impostor en Chillán | Gonzalo Pedrosa",
+    description: "Psicólogo especializado en síndrome del impostor en Chillán. Supera la sensación de no merecer tus logros y reconoce tu verdadero valor.",
+    url: "https://gonzalopedrosa.cl/psicologo-sindrome-impostor-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Síndrome del Impostor en Chillán",
+    description: "Psicólogo especializado en síndrome del impostor en Chillán. Supera la sensación de no merecer tus logros y reconoce tu verdadero valor.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Es muy común el síndrome del impostor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, estudios sugieren que hasta el 70% de las personas lo experimentan en algún momento. Es especialmente común en personas exitosas y en transiciones profesionales."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Tiene relación con la autoestima?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, están conectados. El síndrome del impostor suele coexistir con{\" \"} baja autoestima {\" \"} y{\" \"} perfeccionismo . Trabajamos todo en conjunto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo toma superarlo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Varía según cada persona. Algunos notan cambios significativos en pocas sesiones, otros necesitan un trabajo más profundo. Lo importante es que es tratable."
+      }
+    }
+  ]
 };
 
 export default function PsicologoSindromeImpostorChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={56} height={56} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -144,6 +196,7 @@ export default function PsicologoSindromeImpostorChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

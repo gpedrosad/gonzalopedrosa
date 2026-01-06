@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/tratamiento-toc-chillan",
   },
+  openGraph: {
+    title: "Tratamiento TOC en Chillán, Chile | Gonzalo Pedrosa - Psicólogo",
+    description: "Tratamiento para TOC (Trastorno Obsesivo Compulsivo) en Chillán, Chile. Terapia cognitivo-conductual con exposición y prevención de respuesta. Presencial y online.",
+    url: "https://gonzalopedrosa.cl/tratamiento-toc-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tratamiento TOC en Chillán, Chile | Gonzalo Pedrosa - Psicólogo",
+    description: "Tratamiento para TOC (Trastorno Obsesivo Compulsivo) en Chillán, Chile. Terapia cognitivo-conductual con exposición y prevención de respuesta. Presenc",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿El TOC tiene cura?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El TOC es una condición crónica, pero con tratamiento adecuado muchas personas logran reducir significativamente sus síntomas y llevar una vida normal. La EPR tiene tasas de éxito entre 60-80%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito medicación?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No siempre. La terapia EPR puede ser muy efectiva por sí sola. En casos moderados a severos, la combinación con medicación (antidepresivos ISRS) puede ser más efectiva. Si es necesario, te derivo a psiquiatra."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto dura el tratamiento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Típicamente entre 12-20 sesiones para casos de severidad leve a moderada. Casos más severos pueden requerir tratamiento más extenso. Se pueden notar mejorías desde las primeras semanas."
+      }
+    }
+  ]
 };
 
 export default function TratamientoTocChillanPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -399,6 +451,7 @@ export default function TratamientoTocChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

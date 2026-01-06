@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/hora-psicologo-chillan-hoy",
   },
+  openGraph: {
+    title: "Hora Psicólogo Chillán Hoy | Disponibilidad Inmediata",
+    description: "¿Necesitas hora con psicólogo en Chillán hoy? Consulta disponibilidad inmediata. Atención presencial y online. Respuesta rápida por WhatsApp.",
+    url: "https://gonzalopedrosa.cl/hora-psicologo-chillan-hoy",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hora Psicólogo Chillán Hoy | Disponibilidad Inmediata",
+    description: "¿Necesitas hora con psicólogo en Chillán hoy? Consulta disponibilidad inmediata. Atención presencial y online. Respuesta rápida por WhatsApp.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Tienen hora disponible para hoy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La disponibilidad varía cada día. Escríbeme por{\" \"} WhatsApp {\" \"} y te confirmo en minutos si tengo espacio hoy o cuál es el horario más próximo disponible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo tener sesión online ahora?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La{\" \"} terapia online {\" \"} permite mayor flexibilidad horaria. Consulta disponibilidad y podemos coordinar una sesión en el día si hay espacio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué hago mientras espero la sesión?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Si sientes ansiedad intensa, intenta respirar lento y profundo. Busca un lugar tranquilo. Habla con alguien de confianza. Recuerda que lo que sientes es temporal y hay ayuda disponible."
+      }
+    }
+  ]
 };
 
 export default function HoraPsicologoChillanHoyPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -454,6 +506,7 @@ export default function HoraPsicologoChillanHoyPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

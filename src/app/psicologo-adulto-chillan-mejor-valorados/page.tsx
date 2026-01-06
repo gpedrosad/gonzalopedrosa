@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../components/Button";
@@ -11,11 +12,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-adulto-chillan-mejor-valorados",
   },
+  openGraph: {
+    title: "Cómo Elegir un Psicólogo Bien Valorado en Chillán, Chile | Guía Práctica",
+    description: "Guía para elegir un psicólogo bien valorado en Chillán, Chile. Qué considerar al buscar un profesional de salud mental: formación, enfoque, experiencia y más.",
+    url: "https://gonzalopedrosa.cl/psicologo-adulto-chillan-mejor-valorados",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cómo Elegir un Psicólogo Bien Valorado en Chillán, Chile | Guía Práctica",
+    description: "Guía para elegir un psicólogo bien valorado en Chillán, Chile. Qué considerar al buscar un profesional de salud mental: formación, enfoque, experienci",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Los rankings de &quot;mejores psicólogos&quot; son confiables?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ten precaución con rankings sin metodología clara. Las reseñas pueden ser útiles como referencia, pero tu propia experiencia con el profesional es lo más importante."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué hago si no me siento cómodo con mi psicólogo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es válido cambiar de profesional si no sientes conexión. Un buen psicólogo entenderá y puede ayudarte a buscar un colega más adecuado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Debería elegir según precio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El precio no refleja necesariamente la calidad. Lo importante es encontrar un profesional competente con quien puedas trabajar bien."
+      }
+    }
+  ]
 };
 
 export default function PsicologoMejorValoradosChillanPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -491,5 +543,6 @@ export default function PsicologoMejorValoradosChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }

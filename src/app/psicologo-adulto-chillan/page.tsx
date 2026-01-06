@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../components/Button";
@@ -10,11 +11,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-adulto-chillan",
   },
+  openGraph: {
+    title: "Psicólogo para Adultos en Chillán, Chile | Gonzalo Pedrosa",
+    description: "Psicólogo para adultos en Chillán, Chile. Atención profesional para ansiedad, depresión, estrés y desarrollo personal. Sesiones presenciales y online.",
+    url: "https://gonzalopedrosa.cl/psicologo-adulto-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo para Adultos en Chillán, Chile",
+    description: "Psicólogo para adultos en Chillán, Chile. Atención profesional para ansiedad, depresión, estrés y desarrollo personal. Sesiones presenciales y online.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Con qué frecuencia son las sesiones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generalmente comenzamos con sesiones semanales. A medida que avanza el proceso, la frecuencia puede espaciarse según tus avances."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo elegir entre presencial y online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, ofrezco ambas modalidades. Puedes elegir la que mejor se adapte e incluso alternarlas. Más info en{\" \"} terapia online ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo elegir un buen psicólogo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es importante sentirte cómodo con tu terapeuta. Lee sobre{\" \"} cómo elegir un psicólogo {\" \"} para orientarte."
+      }
+    }
+  ]
 };
 
 export default function PsicologoAdultoChillanPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -475,5 +527,6 @@ export default function PsicologoAdultoChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-isapre-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Isapre Chillán | Reembolso y Bonos - Gonzalo Pedrosa",
+    description: "Psicólogo en Chillán con boleta para reembolso Isapre. Consulta cobertura con tu plan de salud. Atención presencial y online. Ansiedad, depresión, estrés.",
+    url: "https://gonzalopedrosa.cl/psicologo-isapre-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Isapre Chillán | Reembolso y Bonos - Gonzalo Pedrosa",
+    description: "Psicólogo en Chillán con boleta para reembolso Isapre. Consulta cobertura con tu plan de salud. Atención presencial y online. Ansiedad, depresión, est",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto reembolsa la Isapre?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El monto varía según tu plan y la Isapre. Generalmente cubren entre un 50% y 80% del valor, con un tope por sesión. Te recomiendo consultar directamente con tu Isapre para conocer tu cobertura exacta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Tiene convenio directo con Isapres?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No tengo convenio directo, pero emito boleta de honorarios que permite reembolso. Esto te da flexibilidad para elegir sin depender de convenios específicos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La terapia online también se puede reembolsar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, la{\" \"} terapia online {\" \"} genera la misma boleta y puede reembolsarse igual que la presencial."
+      }
+    }
+  ]
 };
 
 export default function PsicologoIsapreChillanPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -471,6 +523,7 @@ export default function PsicologoIsapreChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

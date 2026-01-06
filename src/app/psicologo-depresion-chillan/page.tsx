@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-depresion-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Depresión en Chillán, Chile | Gonzalo Pedrosa",
+    description: "Psicólogo especializado en depresión en Chillán, Chile. Tratamiento con enfoque cognitivo-conductual basado en evidencia. Sesiones presenciales y online.",
+    url: "https://gonzalopedrosa.cl/psicologo-depresion-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Depresión en Chillán, Chile",
+    description: "Psicólogo especializado en depresión en Chillán, Chile. Tratamiento con enfoque cognitivo-conductual basado en evidencia. Sesiones presenciales y onli",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto dura el tratamiento para depresión?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La duración varía según cada persona y la severidad del cuadro. Generalmente, se comienzan a notar mejorías entre las 8-12 sesiones, aunque algunos casos requieren tratamiento más prolongado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito medicación además de terapia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de cada caso. Para depresiones moderadas a severas, la combinación de terapia y medicación suele ser más efectiva. Si es necesario, te derivo a psiquiatra para evaluación."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo tener terapia online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, la{\" \"} terapia online {\" \"} es efectiva para el tratamiento de la depresión. Evaluamos juntos la modalidad más adecuada para ti."
+      }
+    }
+  ]
 };
 
 export default function PsicologoDepresionChillanPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -385,6 +437,7 @@ export default function PsicologoDepresionChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/tratamiento-burnout-chillan",
   },
+  openGraph: {
+    title: "Tratamiento Burnout en Chillán | Psicólogo Gonzalo Pedrosa",
+    description: "Tratamiento para burnout y agotamiento laboral en Chillán. Recupera tu energía, establece límites y vuelve a disfrutar tu trabajo.",
+    url: "https://gonzalopedrosa.cl/tratamiento-burnout-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tratamiento Burnout en Chillán | Psicólogo Gonzalo Pedrosa",
+    description: "Tratamiento para burnout y agotamiento laboral en Chillán. Recupera tu energía, establece límites y vuelve a disfrutar tu trabajo.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Tengo que renunciar a mi trabajo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No necesariamente. A veces con cambios en cómo trabajas y en límites es suficiente. Otras veces sí es necesario un cambio mayor. Lo evaluamos juntos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es lo mismo que estrés laboral?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El{\" \"} estrés laboral{\" \"} puede llevar al burnout si es crónico. El burnout es un estado más severo de agotamiento total."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo toma recuperarse?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de la severidad. Algunos notan mejoras en semanas, pero una recuperación completa puede tomar meses. Lo importante es no volver al mismo patrón."
+      }
+    }
+  ]
 };
 
 export default function TratamientoBurnoutChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={56} height={56} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -147,6 +199,7 @@ export default function TratamientoBurnoutChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

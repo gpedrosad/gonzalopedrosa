@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-soledad-aislamiento-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Soledad y Aislamiento en Chillán | Gonzalo Pedrosa",
+    description: "Psicólogo para soledad y aislamiento social en Chillán. Terapia para reconectar contigo mismo y con otros, superando el aislamiento.",
+    url: "https://gonzalopedrosa.cl/psicologo-soledad-aislamiento-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Soledad y Aislamiento en Chillán",
+    description: "Psicólogo para soledad y aislamiento social en Chillán. Terapia para reconectar contigo mismo y con otros, superando el aislamiento.",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Por qué me siento solo/a si tengo gente alrededor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La soledad no es cuestión de cantidad de personas, sino de calidad de conexión. Puedes estar rodeado y sentirte profundamente solo/a si no hay conexión real."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es malo querer estar solo/a?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. La soledad elegida (tiempo para ti) es sana. El problema es cuando el aislamiento es por miedo, evitación o te hace sufrir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puede estar relacionado con depresión?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, el aislamiento social es síntoma y factor de riesgo de{\" \"} depresión . Si además sientes tristeza persistente, lo exploramos juntos."
+      }
+    }
+  ]
 };
 
 export default function PsicologoSoledadAislamientoChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -139,6 +191,7 @@ export default function PsicologoSoledadAislamientoChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

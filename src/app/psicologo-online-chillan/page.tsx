@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,70 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/psicologo-online-chillan",
   },
+  openGraph: {
+    title: "Psicólogo Online en Chillán, Chile | Gonzalo Pedrosa",
+    description: "Psicólogo online desde Chillán para todo Chile. Sesiones por videollamada con la misma efectividad que presencial. Horarios flexibles y comodidad desde tu hogar.",
+    url: "https://gonzalopedrosa.cl/psicologo-online-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo Online en Chillán, Chile",
+    description: "Psicólogo online desde Chillán para todo Chile. Sesiones por videollamada con la misma efectividad que presencial. Horarios flexibles y comodidad desd",
+  },
+};
+
+
+// FAQPage Schema para rich snippets en Google
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Es tan efectiva como presencial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Múltiples estudios demuestran que la terapia online tiene la misma efectividad que la presencial para la mayoría de las condiciones, especialmente con{\" \"} enfoque cognitivo-conductual ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa si falla internet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Si hay problemas técnicos, nos reconectamos o reprogramamos sin costo adicional. La flexibilidad es parte del servicio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo tener reembolso Isapre?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, las Isapres aceptan reembolso por sesiones online. Emito boleta electrónica el mismo día. Más detalles en{\" \"} reembolso Isapre ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo combinar online y presencial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutamente. Muchos pacientes combinan ambas modalidades según su disponibilidad de cada semana. Tienes total flexibilidad."
+      }
+    }
+  ]
 };
 
 export default function PsicologoOnlineChillanPage() {
   return (
-    <main
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -497,6 +557,7 @@ export default function PsicologoOnlineChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

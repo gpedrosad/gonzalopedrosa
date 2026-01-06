@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,6 +9,18 @@ export const metadata: Metadata = {
     "Ayuda psicológica urgente en Chillán. Si estás en crisis emocional y necesitas hablar con un profesional, contáctame.",
   alternates: {
     canonical: "/ayuda-psicologica-urgente-chillan",
+  },
+  openGraph: {
+    title: "Ayuda Psicológica Urgente en Chillán | Psicólogo Gonzalo Pedrosa",
+    description: "Ayuda psicológica urgente en Chillán. Si estás en crisis emocional y necesitas hablar con un profesional, contáctame.",
+    url: "https://gonzalopedrosa.cl/ayuda-psicologica-urgente-chillan",
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ayuda Psicológica Urgente en Chillán | Psicólogo Gonzalo Pedrosa",
+    description: "Ayuda psicológica urgente en Chillán. Si estás en crisis emocional y necesitas hablar con un profesional, contáctame.",
   },
 };
 
