@@ -67,7 +67,7 @@ export default function PsicologoDueloChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo para Duelo
+        Psicólogo Duelo en Chillán
       </h1>
 
       <p

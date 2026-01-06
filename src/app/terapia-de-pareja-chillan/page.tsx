@@ -67,7 +67,7 @@ export default function TerapiaParejaChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Terapia de Pareja
+        Terapia de Pareja en Chillán
       </h1>
 
       <p

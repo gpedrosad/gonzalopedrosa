@@ -67,7 +67,7 @@ export default function TratamientoTocChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Tratamiento para TOC
+        Tratamiento TOC en Chillán
       </h1>
 
       <p

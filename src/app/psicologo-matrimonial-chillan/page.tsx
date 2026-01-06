@@ -67,7 +67,7 @@ export default function PsicologoMatrimonialChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo Matrimonial
+        Psicólogo Matrimonial en Chillán
       </h1>
 
       <p

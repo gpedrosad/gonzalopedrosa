@@ -67,7 +67,7 @@ export default function ConsultaPsicologicaPrecioChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Precio Consulta Psicológica
+        Consulta Psicológica Precio en Chillán
       </h1>
 
       <p

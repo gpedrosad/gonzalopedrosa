@@ -67,7 +67,7 @@ export default function PsicologoEspecialistaAnsiedadChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo Especialista en Ansiedad
+        Psicólogo Especialista Ansiedad en Chillán
       </h1>
 
       <p

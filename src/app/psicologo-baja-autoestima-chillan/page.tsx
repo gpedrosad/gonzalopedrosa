@@ -67,7 +67,7 @@ export default function PsicologoBajaAutoestimaChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo para Baja Autoestima
+        Psicólogo Baja Autoestima en Chillán
       </h1>
 
       <p

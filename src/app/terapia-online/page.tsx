@@ -59,7 +59,7 @@ export default function TerapiaOnlinePage() {
           lineHeight: 1.1,
         }}
       >
-        Terapia Online
+        Terapia Online en Chillán
       </h1>
 
       <p

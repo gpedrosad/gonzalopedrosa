@@ -67,7 +67,7 @@ export default function PsicologoParticularChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo Particular
+        Psicólogo Particular en Chillán
       </h1>
 
       <p

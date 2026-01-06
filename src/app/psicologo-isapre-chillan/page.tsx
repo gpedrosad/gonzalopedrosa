@@ -67,7 +67,7 @@ export default function PsicologoIsapreChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo con Reembolso Isapre
+        Psicólogo Isapre en Chillán
       </h1>
 
       <p

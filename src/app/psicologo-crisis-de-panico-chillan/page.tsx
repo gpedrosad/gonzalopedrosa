@@ -72,7 +72,7 @@ export default function PsicologoCrisisPanicoChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo para Crisis de Pánico
+        Psicólogo Crisis de Pánico en Chillán
       </h1>
 
       <p

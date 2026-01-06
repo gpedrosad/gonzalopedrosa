@@ -67,7 +67,7 @@ export default function PsicologoOnlineChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo Online
+        Psicólogo Online en Chillán
       </h1>
 
       <p

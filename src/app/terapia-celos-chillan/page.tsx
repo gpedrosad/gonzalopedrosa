@@ -67,7 +67,7 @@ export default function TerapiaCelosChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Terapia para Celos
+        Terapia Celos en Chillán
       </h1>
 
       <p

@@ -67,7 +67,7 @@ export default function PsicologoEstresLaboralChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo para Estrés Laboral
+        Psicólogo Estrés Laboral en Chillán
       </h1>
 
       <p

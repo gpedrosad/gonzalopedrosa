@@ -72,7 +72,7 @@ export default function PsicologoCognitivoConductualChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Terapia Cognitivo-Conductual
+        Psicólogo Cognitivo Conductual en Chillán
       </h1>
 
       <p

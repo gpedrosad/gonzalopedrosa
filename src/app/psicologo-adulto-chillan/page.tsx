@@ -68,7 +68,7 @@ export default function PsicologoAdultoChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo para Adultos
+        Psicólogo Adulto en Chillán
       </h1>
 
       <p

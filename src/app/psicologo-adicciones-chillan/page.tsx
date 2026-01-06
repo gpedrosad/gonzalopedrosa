@@ -72,7 +72,7 @@ export default function PsicologoAdiccionesChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo para Adicciones
+        Psicólogo Adicciones en Chillán
       </h1>
 
       <p

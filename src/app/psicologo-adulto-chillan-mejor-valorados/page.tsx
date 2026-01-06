@@ -73,7 +73,7 @@ export default function PsicologoMejorValoradosChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Cómo Elegir un Psicólogo Bien Valorado
+        Psicólogo Adulto Mejor Valorado en Chillán
       </h1>
 
       <p

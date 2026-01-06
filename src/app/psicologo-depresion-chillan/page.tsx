@@ -67,7 +67,7 @@ export default function PsicologoDepresionChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo para Depresión
+        Psicólogo Depresión en Chillán
       </h1>
 
       <p

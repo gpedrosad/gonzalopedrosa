@@ -67,7 +67,7 @@ export default function PsicologoFobiaSocialChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo para Fobia Social
+        Psicólogo Fobia Social en Chillán
       </h1>
 
       <p
