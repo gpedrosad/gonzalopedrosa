@@ -48,7 +48,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "¿Es normal sentirse así en la universidad?",
+      "name": "¿Es normal sentirse así?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Es más común de lo que crees. Muchos estudiantes pasan por momentos difíciles. Que sea común no significa que tengas que aguantarlo solo/a."
@@ -97,7 +97,7 @@ export default function PsicologoEstudiantesChillanPage() {
             "Estrés académico y burnout estudiantil",
             "Dudas vocacionales o de carrera",
             "Presión familiar por el rendimiento",
-            "Problemas de adaptación (cambio de ciudad, universidad)",
+            "Problemas de adaptación (cambio de ciudad, de entorno)",
             "Relaciones, identidad y autoestima",
             "Síndrome del impostor académico",
           ].map((item, i) => (
@@ -163,7 +163,7 @@ export default function PsicologoEstudiantesChillanPage() {
           </details>
 
           <details style={{ padding: "1rem", border: "1px solid #eaeaea", borderRadius: "12px" }}>
-            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>¿Es normal sentirse así en la universidad?</summary>
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>¿Es normal sentirse así?</summary>
             <p style={{ marginTop: "0.75rem", color: "#666", lineHeight: 1.6, fontSize: "0.9375rem" }}>
               Es más común de lo que crees. Muchos estudiantes pasan por momentos
               difíciles. Que sea común no significa que tengas que aguantarlo solo/a.
@@ -203,4 +203,5 @@ export default function PsicologoEstudiantesChillanPage() {
     </>
   );
 }
+
 

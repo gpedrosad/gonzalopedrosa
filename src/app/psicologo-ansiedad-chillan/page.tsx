@@ -174,7 +174,7 @@ export default function PsicologoAnsiedadChillanPage() {
         </h2>
         <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.625rem" }}>
           {[
-            "Psicólogo titulado, Universidad de Chile",
+            "Psicólogo titulado",
             "Especialización en Terapia Cognitivo-Conductual",
             "Más de 7 años tratando trastornos de ansiedad",
             "Formación continua en técnicas basadas en evidencia",

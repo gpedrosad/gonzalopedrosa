@@ -107,3 +107,4 @@ Responde SOLO con un JSON válido en este formato exacto, sin texto adicional:
   }
 }
 
+
