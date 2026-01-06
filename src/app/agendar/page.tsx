@@ -120,7 +120,7 @@ export default function AgendarPage() {
           </a>
 
           <a
-            href="mailto:contacto@gonzalopedrosa.cl"
+            href="mailto:gpedrosadom@gmail.com"
             style={{
               display: "flex",
               alignItems: "center",
@@ -139,7 +139,7 @@ export default function AgendarPage() {
                 Email
               </strong>
               <span style={{ fontSize: "0.875rem", color: "#666" }}>
-                contacto@gonzalopedrosa.cl
+                gpedrosadom@gmail.com
               </span>
             </span>
           </a>

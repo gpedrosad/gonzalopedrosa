@@ -15,15 +15,17 @@ const geistMono = Geist_Mono({
 });
 
 /**
- * Metadata consistente (sin cloaking) y neutral.
- * - Sin lenguaje clínico/diagnóstico ni promesas terapéuticas.
- * - Mismo contenido para bots y humanos.
+ * Metadata base del sitio.
+ * Las páginas individuales pueden sobrescribir estos valores.
  */
 export const metadata: Metadata = {
   metadataBase: new URL("https://gonzalopedrosa.cl"),
-  title: "Gonzalo Pedrosa | Orientación online",
+  title: {
+    default: "Gonzalo Pedrosa | Psicólogo",
+    template: "%s | Gonzalo Pedrosa",
+  },
   description:
-    "Acompañamiento profesional para tu bienestar personal. Sesiones privadas en formato online, con un enfoque práctico y cercano.",
+    "Psicólogo con más de 7 años de experiencia. Atención profesional para ansiedad, depresión, estrés y más. Terapia cognitivo-conductual. Sesiones online y presenciales.",
   alternates: {
     canonical: "/",
     languages: { "es-CL": "/" },
@@ -31,25 +33,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://gonzalopedrosa.cl/",
-    title: "Gonzalo Pedrosa | Orientación online",
+    title: "Gonzalo Pedrosa | Psicólogo",
     description:
-      "Sesiones privadas con enfoque claro y cercano. Reserva en minutos y avanza a tu ritmo.",
-    siteName: "Gonzalo Pedrosa",
+      "Psicólogo con enfoque cognitivo-conductual. Ansiedad, depresión, estrés. Sesiones online y presenciales.",
+    siteName: "Gonzalo Pedrosa - Psicólogo",
     locale: "es_CL",
     images: [
       {
         url: "/yo.png",
         width: 1200,
         height: 630,
-        alt: "Orientación online con Gonzalo Pedrosa",
+        alt: "Gonzalo Pedrosa - Psicólogo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gonzalo Pedrosa | Orientación online",
+    title: "Gonzalo Pedrosa | Psicólogo",
     description:
-      "Acompañamiento profesional en formato online. Agenda rápida y sesiones privadas.",
+      "Psicólogo. Ansiedad, depresión, estrés. TCC. Online y presencial.",
     images: ["/yo.png"],
   },
   robots: { index: true, follow: true, "max-image-preview": "large" },
