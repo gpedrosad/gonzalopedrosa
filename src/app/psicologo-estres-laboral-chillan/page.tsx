@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "../components/Button";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Adicciones en Chillán, Chile | Gonzalo Pedrosa",
+  title: "Psicólogo Estrés Laboral en Chillán, Chile | Gonzalo Pedrosa",
   description:
-    "Psicólogo especializado en adicciones en Chillán, Chile. Tratamiento para conductas adictivas con enfoque cognitivo-conductual. Atención presencial y online.",
+    "Psicólogo especializado en estrés laboral y burnout en Chillán, Chile. Tratamiento para agotamiento profesional. Sesiones presenciales y online.",
   alternates: {
-    canonical: "/psicologo-adicciones-chillan",
+    canonical: "/psicologo-estres-laboral-chillan",
   },
 };
 
-export default function PsicologoAdiccionesChillanPage() {
+export default function PsicologoEstresLaboralChillanPage() {
   return (
     <main
       style={{
@@ -28,14 +27,14 @@ export default function PsicologoAdiccionesChillanPage() {
           display: "flex",
           alignItems: "center",
           gap: "1rem",
-          marginBottom: "2rem",
+          marginBottom: "1.5rem",
         }}
       >
         <Image
           src="/yo.png"
           alt="Gonzalo Pedrosa - Psicólogo"
-          width={64}
-          height={64}
+          width={56}
+          height={56}
           priority
           style={{
             borderRadius: "9999px",
@@ -43,25 +42,21 @@ export default function PsicologoAdiccionesChillanPage() {
           }}
         />
         <div>
-          <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>
-            Gonzalo Pedrosa
+          <p
+            style={{
+              fontSize: "0.75rem",
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              color: "#999",
+              marginBottom: "0.125rem",
+            }}
+          >
+            Chillán, Chile
           </p>
-          <p style={{ fontSize: "0.875rem", color: "#666" }}>Psicólogo</p>
+          <p style={{ fontWeight: 500, color: "#000" }}>Gonzalo Pedrosa</p>
         </div>
       </div>
-
-      <p
-        style={{
-          fontSize: "0.75rem",
-          fontWeight: 600,
-          textTransform: "uppercase",
-          letterSpacing: "0.1em",
-          color: "#999",
-          marginBottom: "0.75rem",
-        }}
-      >
-        Chillán, Chile
-      </p>
 
       <h1
         style={{
@@ -72,7 +67,7 @@ export default function PsicologoAdiccionesChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo para Adicciones
+        Psicólogo para Estrés Laboral
       </h1>
 
       <p
@@ -83,9 +78,9 @@ export default function PsicologoAdiccionesChillanPage() {
           lineHeight: 1.6,
         }}
       >
-        Las conductas adictivas impactan la vida personal, familiar y laboral.
-        El acompañamiento profesional puede ser un primer paso importante hacia
-        la recuperación.
+        El estrés laboral crónico puede afectar seriamente tu salud física y
+        mental. Si sientes que el trabajo te está sobrepasando, es momento de
+        buscar ayuda profesional.
       </p>
 
       <section style={{ marginBottom: "3rem" }}>
@@ -99,7 +94,7 @@ export default function PsicologoAdiccionesChillanPage() {
             marginBottom: "1rem",
           }}
         >
-          Tipos de adicciones
+          Señales de estrés laboral
         </h2>
         <div
           style={{
@@ -109,12 +104,14 @@ export default function PsicologoAdiccionesChillanPage() {
           }}
         >
           {[
-            "Alcohol",
-            "Tabaco",
-            "Cannabis",
-            "Otras sustancias",
-            "Videojuegos",
-            "Ludopatía",
+            "Agotamiento constante",
+            "Irritabilidad",
+            "Dificultad para desconectar",
+            "Insomnio",
+            "Dolores de cabeza",
+            "Falta de motivación",
+            "Problemas de concentración",
+            "Cinismo hacia el trabajo",
           ].map((item, i) => (
             <div
               key={i}
@@ -143,39 +140,50 @@ export default function PsicologoAdiccionesChillanPage() {
             marginBottom: "1rem",
           }}
         >
-          Señales de alerta
+          ¿Qué es el burnout?
         </h2>
-        <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem" }}>
-          {[
-            "Necesidad creciente de consumir más",
-            "Malestar al intentar dejar la conducta",
-            "Tiempo excesivo dedicado a la conducta",
-            "Abandono de actividades importantes",
-            "Continuar a pesar de problemas evidentes",
-          ].map((item, i) => (
-            <li
-              key={i}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "0.75rem",
-                color: "#444",
-                fontSize: "0.9375rem",
-              }}
-            >
-              <span
+        <div
+          style={{
+            padding: "1.25rem",
+            backgroundColor: "#fafafa",
+            borderRadius: "12px",
+          }}
+        >
+          <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
+            El síndrome de burnout o &quot;estar quemado&quot; es un estado de
+            agotamiento físico, emocional y mental causado por estrés laboral
+            crónico. Se caracteriza por:
+          </p>
+          <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem" }}>
+            {[
+              "Agotamiento extremo que no mejora con descanso",
+              "Distanciamiento mental del trabajo (cinismo)",
+              "Reducción de la eficacia profesional",
+            ].map((item, i) => (
+              <li
+                key={i}
                 style={{
-                  width: "6px",
-                  height: "6px",
-                  backgroundColor: "#000",
-                  borderRadius: "9999px",
-                  flexShrink: 0,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.75rem",
+                  color: "#444",
+                  fontSize: "0.9375rem",
                 }}
-              />
-              {item}
-            </li>
-          ))}
-        </ul>
+              >
+                <span
+                  style={{
+                    width: "6px",
+                    height: "6px",
+                    backgroundColor: "#000",
+                    borderRadius: "9999px",
+                    flexShrink: 0,
+                  }}
+                />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       <section style={{ marginBottom: "3rem" }}>
@@ -189,25 +197,16 @@ export default function PsicologoAdiccionesChillanPage() {
             marginBottom: "1rem",
           }}
         >
-          Enfoque de tratamiento
+          Cómo puedo ayudarte
         </h2>
-        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
-          El abordaje desde la{" "}
-          <Link
-            href="/psicologo-cognitivo-conductual-chillan"
-            style={{ color: "#000", textDecoration: "underline" }}
-          >
-            terapia cognitivo-conductual
-          </Link>{" "}
-          se centra en:
-        </p>
         <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem" }}>
           {[
-            "Comprender los factores que mantienen la conducta",
-            "Identificar situaciones de riesgo",
-            "Trabajar la motivación para el cambio",
-            "Abordar ansiedad o síntomas depresivos asociados",
-            "Prevención de recaídas",
+            "Identificar fuentes de estrés y patrones disfuncionales",
+            "Desarrollar estrategias de afrontamiento efectivas",
+            "Establecer límites saludables en el trabajo",
+            "Técnicas de manejo del tiempo y priorización",
+            "Recuperar el equilibrio vida-trabajo",
+            "Trabajar la ansiedad asociada",
           ].map((item, i) => (
             <li
               key={i}
@@ -248,7 +247,7 @@ export default function PsicologoAdiccionesChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Se puede tratar solo con terapia?
+              ¿Debería renunciar a mi trabajo?
             </summary>
             <p
               style={{
@@ -258,9 +257,10 @@ export default function PsicologoAdiccionesChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              Depende de la severidad. En dependencias físicas severas puede ser
-              necesario apoyo médico. La terapia psicológica es un componente
-              fundamental.
+              No necesariamente. En terapia trabajamos para que puedas tomar
+              decisiones informadas sobre tu carrera, desarrollando herramientas
+              que pueden ayudarte en tu trabajo actual o prepararte para un
+              cambio si es lo mejor para ti.
             </p>
           </details>
 
@@ -272,7 +272,7 @@ export default function PsicologoAdiccionesChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Y si la persona no quiere tratamiento?
+              ¿Cuántas sesiones necesito?
             </summary>
             <p
               style={{
@@ -282,8 +282,9 @@ export default function PsicologoAdiccionesChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              La motivación puede trabajarse en terapia. Si un familiar está
-              preocupado, puede ser útil una orientación inicial.
+              Depende de la severidad del cuadro y tus objetivos. Muchas
+              personas notan mejoría significativa en 8-12 sesiones, aunque el
+              proceso puede ser más breve o extenso según cada caso.
             </p>
           </details>
 
@@ -295,7 +296,7 @@ export default function PsicologoAdiccionesChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Es posible la terapia online?
+              ¿Puedo tener sesiones fuera del horario de oficina?
             </summary>
             <p
               style={{
@@ -305,14 +306,14 @@ export default function PsicologoAdiccionesChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              La{" "}
+              Sí, tengo horarios flexibles. La{" "}
               <Link
                 href="/terapia-online"
                 style={{ color: "#000", textDecoration: "underline" }}
               >
                 terapia online
               </Link>{" "}
-              puede ser una opción válida, especialmente para el seguimiento.
+              ofrece aún más flexibilidad para adaptarse a tu agenda.
             </p>
           </details>
         </div>
@@ -335,7 +336,7 @@ export default function PsicologoAdiccionesChillanPage() {
             color: "#fff",
           }}
         >
-          Dar el primer paso
+          Recupera tu bienestar
         </h2>
         <p
           style={{
@@ -344,11 +345,12 @@ export default function PsicologoAdiccionesChillanPage() {
             fontSize: "0.9375rem",
           }}
         >
-          Reconocer que existe un problema y buscar ayuda es un acto de
-          valentía.
+          El trabajo no debería costarte la salud.
         </p>
-        <Link
-          href="/agendar"
+        <a
+          href="https://wa.me/56968257817"
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             display: "inline-flex",
             alignItems: "center",
@@ -362,8 +364,8 @@ export default function PsicologoAdiccionesChillanPage() {
             fontSize: "0.875rem",
           }}
         >
-          Agendar consulta <span aria-hidden="true">→</span>
-        </Link>
+          Agendar sesión →
+        </a>
       </section>
 
       <nav style={{ paddingTop: "2rem", borderTop: "1px solid #eaeaea" }}>
@@ -381,10 +383,10 @@ export default function PsicologoAdiccionesChillanPage() {
         </p>
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {[
-            { label: "Adultos", href: "/psicologo-adulto-chillan" },
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
+            { label: "Depresión", href: "/psicologo-depresion-chillan" },
+            { label: "Adultos", href: "/psicologo-adulto-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
-            { label: "Pánico", href: "/psicologo-crisis-de-panico-chillan" },
             { label: "Online", href: "/terapia-online" },
           ].map((item, i) => (
             <Link
@@ -407,3 +409,4 @@ export default function PsicologoAdiccionesChillanPage() {
     </main>
   );
 }
+

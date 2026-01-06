@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "../components/Button";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Adicciones en Chillán, Chile | Gonzalo Pedrosa",
+  title: "Psicólogo Baja Autoestima en Chillán, Chile | Gonzalo Pedrosa",
   description:
-    "Psicólogo especializado en adicciones en Chillán, Chile. Tratamiento para conductas adictivas con enfoque cognitivo-conductual. Atención presencial y online.",
+    "Psicólogo especializado en autoestima en Chillán, Chile. Tratamiento para baja autoestima e inseguridad. Terapia cognitivo-conductual. Sesiones presenciales y online.",
   alternates: {
-    canonical: "/psicologo-adicciones-chillan",
+    canonical: "/psicologo-baja-autoestima-chillan",
   },
 };
 
-export default function PsicologoAdiccionesChillanPage() {
+export default function PsicologoBajaAutoestimaChillanPage() {
   return (
     <main
       style={{
@@ -28,14 +27,14 @@ export default function PsicologoAdiccionesChillanPage() {
           display: "flex",
           alignItems: "center",
           gap: "1rem",
-          marginBottom: "2rem",
+          marginBottom: "1.5rem",
         }}
       >
         <Image
           src="/yo.png"
           alt="Gonzalo Pedrosa - Psicólogo"
-          width={64}
-          height={64}
+          width={56}
+          height={56}
           priority
           style={{
             borderRadius: "9999px",
@@ -43,25 +42,21 @@ export default function PsicologoAdiccionesChillanPage() {
           }}
         />
         <div>
-          <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>
-            Gonzalo Pedrosa
+          <p
+            style={{
+              fontSize: "0.75rem",
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              color: "#999",
+              marginBottom: "0.125rem",
+            }}
+          >
+            Chillán, Chile
           </p>
-          <p style={{ fontSize: "0.875rem", color: "#666" }}>Psicólogo</p>
+          <p style={{ fontWeight: 500, color: "#000" }}>Gonzalo Pedrosa</p>
         </div>
       </div>
-
-      <p
-        style={{
-          fontSize: "0.75rem",
-          fontWeight: 600,
-          textTransform: "uppercase",
-          letterSpacing: "0.1em",
-          color: "#999",
-          marginBottom: "0.75rem",
-        }}
-      >
-        Chillán, Chile
-      </p>
 
       <h1
         style={{
@@ -72,7 +67,7 @@ export default function PsicologoAdiccionesChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo para Adicciones
+        Psicólogo para Baja Autoestima
       </h1>
 
       <p
@@ -83,9 +78,9 @@ export default function PsicologoAdiccionesChillanPage() {
           lineHeight: 1.6,
         }}
       >
-        Las conductas adictivas impactan la vida personal, familiar y laboral.
-        El acompañamiento profesional puede ser un primer paso importante hacia
-        la recuperación.
+        La autoestima es la valoración que hacemos de nosotros mismos. Cuando es
+        baja, afecta todas las áreas de nuestra vida. La buena noticia es que
+        puede trabajarse y mejorarse.
       </p>
 
       <section style={{ marginBottom: "3rem" }}>
@@ -99,7 +94,51 @@ export default function PsicologoAdiccionesChillanPage() {
             marginBottom: "1rem",
           }}
         >
-          Tipos de adicciones
+          Señales de baja autoestima
+        </h2>
+        <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem" }}>
+          {[
+            "Autocrítica excesiva y constante",
+            "Dificultad para aceptar cumplidos",
+            "Miedo al rechazo o al fracaso",
+            "Compararse negativamente con los demás",
+            "Dificultad para poner límites",
+            "Dependencia de la aprobación de otros",
+            "Evitar desafíos por miedo a no ser capaz",
+            "Sensación de no ser suficiente",
+          ].map((item, i) => (
+            <li
+              key={i}
+              style={{
+                display: "flex",
+                alignItems: "flex-start",
+                gap: "0.75rem",
+                padding: "0.75rem 1rem",
+                backgroundColor: "#fafafa",
+                borderRadius: "8px",
+                fontSize: "0.9375rem",
+                color: "#444",
+              }}
+            >
+              <span style={{ color: "#000", flexShrink: 0 }}>—</span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section style={{ marginBottom: "3rem" }}>
+        <h2
+          style={{
+            fontSize: "0.75rem",
+            fontWeight: 600,
+            textTransform: "uppercase",
+            letterSpacing: "0.1em",
+            color: "#999",
+            marginBottom: "1rem",
+          }}
+        >
+          Cómo afecta la baja autoestima
         </h2>
         <div
           style={{
@@ -109,12 +148,12 @@ export default function PsicologoAdiccionesChillanPage() {
           }}
         >
           {[
-            "Alcohol",
-            "Tabaco",
-            "Cannabis",
-            "Otras sustancias",
-            "Videojuegos",
-            "Ludopatía",
+            "Relaciones",
+            "Trabajo",
+            "Toma de decisiones",
+            "Salud mental",
+            "Rendimiento",
+            "Bienestar general",
           ].map((item, i) => (
             <div
               key={i}
@@ -143,71 +182,26 @@ export default function PsicologoAdiccionesChillanPage() {
             marginBottom: "1rem",
           }}
         >
-          Señales de alerta
-        </h2>
-        <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem" }}>
-          {[
-            "Necesidad creciente de consumir más",
-            "Malestar al intentar dejar la conducta",
-            "Tiempo excesivo dedicado a la conducta",
-            "Abandono de actividades importantes",
-            "Continuar a pesar de problemas evidentes",
-          ].map((item, i) => (
-            <li
-              key={i}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "0.75rem",
-                color: "#444",
-                fontSize: "0.9375rem",
-              }}
-            >
-              <span
-                style={{
-                  width: "6px",
-                  height: "6px",
-                  backgroundColor: "#000",
-                  borderRadius: "9999px",
-                  flexShrink: 0,
-                }}
-              />
-              {item}
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section style={{ marginBottom: "3rem" }}>
-        <h2
-          style={{
-            fontSize: "0.75rem",
-            fontWeight: 600,
-            textTransform: "uppercase",
-            letterSpacing: "0.1em",
-            color: "#999",
-            marginBottom: "1rem",
-          }}
-        >
-          Enfoque de tratamiento
+          Tratamiento
         </h2>
         <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
-          El abordaje desde la{" "}
+          En la{" "}
           <Link
             href="/psicologo-cognitivo-conductual-chillan"
             style={{ color: "#000", textDecoration: "underline" }}
           >
             terapia cognitivo-conductual
           </Link>{" "}
-          se centra en:
+          trabajamos en:
         </p>
         <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem" }}>
           {[
-            "Comprender los factores que mantienen la conducta",
-            "Identificar situaciones de riesgo",
-            "Trabajar la motivación para el cambio",
-            "Abordar ansiedad o síntomas depresivos asociados",
-            "Prevención de recaídas",
+            "Identificar creencias negativas sobre ti mismo",
+            "Cuestionar el crítico interno",
+            "Desarrollar una autoimagen más realista y compasiva",
+            "Aprender a establecer límites saludables",
+            "Reconocer tus fortalezas y logros",
+            "Practicar la autocompasión",
           ].map((item, i) => (
             <li
               key={i}
@@ -248,7 +242,7 @@ export default function PsicologoAdiccionesChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Se puede tratar solo con terapia?
+              ¿Se puede mejorar la autoestima?
             </summary>
             <p
               style={{
@@ -258,9 +252,9 @@ export default function PsicologoAdiccionesChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              Depende de la severidad. En dependencias físicas severas puede ser
-              necesario apoyo médico. La terapia psicológica es un componente
-              fundamental.
+              Sí, definitivamente. La autoestima no es algo fijo, puede
+              trabajarse y mejorarse con el abordaje adecuado. Es un proceso que
+              requiere tiempo y compromiso, pero los cambios son posibles.
             </p>
           </details>
 
@@ -272,7 +266,7 @@ export default function PsicologoAdiccionesChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Y si la persona no quiere tratamiento?
+              ¿De dónde viene la baja autoestima?
             </summary>
             <p
               style={{
@@ -282,8 +276,10 @@ export default function PsicologoAdiccionesChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              La motivación puede trabajarse en terapia. Si un familiar está
-              preocupado, puede ser útil una orientación inicial.
+              Puede tener múltiples orígenes: experiencias de la infancia,
+              mensajes recibidos de figuras significativas, experiencias de
+              fracaso o rechazo, comparaciones sociales, entre otros. En terapia
+              exploramos tu historia personal.
             </p>
           </details>
 
@@ -295,7 +291,7 @@ export default function PsicologoAdiccionesChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Es posible la terapia online?
+              ¿Cuánto tiempo toma el proceso?
             </summary>
             <p
               style={{
@@ -305,14 +301,10 @@ export default function PsicologoAdiccionesChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              La{" "}
-              <Link
-                href="/terapia-online"
-                style={{ color: "#000", textDecoration: "underline" }}
-              >
-                terapia online
-              </Link>{" "}
-              puede ser una opción válida, especialmente para el seguimiento.
+              Depende de cada persona y la profundidad del trabajo necesario.
+              Generalmente se comienzan a notar cambios entre las 8-12 sesiones,
+              aunque el proceso puede ser más extenso para consolidar los
+              avances.
             </p>
           </details>
         </div>
@@ -335,7 +327,7 @@ export default function PsicologoAdiccionesChillanPage() {
             color: "#fff",
           }}
         >
-          Dar el primer paso
+          Mereces sentirte bien contigo mismo
         </h2>
         <p
           style={{
@@ -344,11 +336,12 @@ export default function PsicologoAdiccionesChillanPage() {
             fontSize: "0.9375rem",
           }}
         >
-          Reconocer que existe un problema y buscar ayuda es un acto de
-          valentía.
+          Da el primer paso hacia una mejor relación contigo.
         </p>
-        <Link
-          href="/agendar"
+        <a
+          href="https://wa.me/56968257817"
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             display: "inline-flex",
             alignItems: "center",
@@ -362,8 +355,8 @@ export default function PsicologoAdiccionesChillanPage() {
             fontSize: "0.875rem",
           }}
         >
-          Agendar consulta <span aria-hidden="true">→</span>
-        </Link>
+          Agendar sesión →
+        </a>
       </section>
 
       <nav style={{ paddingTop: "2rem", borderTop: "1px solid #eaeaea" }}>
@@ -381,10 +374,10 @@ export default function PsicologoAdiccionesChillanPage() {
         </p>
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {[
-            { label: "Adultos", href: "/psicologo-adulto-chillan" },
+            { label: "Depresión", href: "/psicologo-depresion-chillan" },
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
+            { label: "Fobia social", href: "/psicologo-fobia-social-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
-            { label: "Pánico", href: "/psicologo-crisis-de-panico-chillan" },
             { label: "Online", href: "/terapia-online" },
           ].map((item, i) => (
             <Link
@@ -407,3 +400,4 @@ export default function PsicologoAdiccionesChillanPage() {
     </main>
   );
 }
+

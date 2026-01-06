@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../components/Button";
 
@@ -22,6 +23,33 @@ export default function PsicologoAnsiedadChillanPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "1rem",
+          marginBottom: "2rem",
+        }}
+      >
+        <Image
+          src="/yo.png"
+          alt="Gonzalo Pedrosa - Psicólogo"
+          width={64}
+          height={64}
+          priority
+          style={{
+            borderRadius: "9999px",
+            objectFit: "cover",
+          }}
+        />
+        <div>
+          <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>
+            Gonzalo Pedrosa
+          </p>
+          <p style={{ fontSize: "0.875rem", color: "#666" }}>Psicólogo</p>
+        </div>
+      </div>
+
       <p
         style={{
           fontSize: "0.75rem",

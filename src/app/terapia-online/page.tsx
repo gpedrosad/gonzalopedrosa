@@ -88,11 +88,50 @@ export default function TerapiaOnlinePage() {
           Cómo funciona
         </h2>
         <ol style={{ listStyle: "none", padding: 0, counterReset: "step" }}>
+          <li
+            style={{
+              display: "flex",
+              gap: "1rem",
+              marginBottom: "1.25rem",
+              alignItems: "flex-start",
+            }}
+          >
+            <span
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "1.75rem",
+                height: "1.75rem",
+                backgroundColor: "#000",
+                color: "#fff",
+                borderRadius: "9999px",
+                fontSize: "0.75rem",
+                fontWeight: 600,
+                flexShrink: 0,
+              }}
+            >
+              1
+            </span>
+            <div>
+              <strong style={{ display: "block", marginBottom: "0.125rem" }}>
+                Contacto inicial
+              </strong>
+              <span style={{ color: "#666", fontSize: "0.9375rem" }}>
+                Me escribes por{" "}
+                <a
+                  href="https://wa.me/56968257817"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "#000", textDecoration: "underline" }}
+                >
+                  WhatsApp
+                </a>{" "}
+                o correo para coordinar un horario.
+              </span>
+            </div>
+          </li>
           {[
-            {
-              title: "Contacto inicial",
-              desc: "Me escribes por WhatsApp o correo para coordinar un horario.",
-            },
             {
               title: "Confirmación",
               desc: "Te envío el enlace de videollamada junto con instrucciones básicas.",
@@ -130,7 +169,7 @@ export default function TerapiaOnlinePage() {
                   flexShrink: 0,
                 }}
               >
-                {i + 1}
+                {i + 2}
               </span>
               <div>
                 <strong style={{ display: "block", marginBottom: "0.125rem" }}>

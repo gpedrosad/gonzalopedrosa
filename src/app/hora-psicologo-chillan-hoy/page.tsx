@@ -127,7 +127,15 @@ export default function HoraPsicologoChillanHoyPage() {
             marginTop: "0.75rem",
           }}
         >
-          Respuesta en minutos por WhatsApp
+          Respuesta en minutos por{" "}
+          <a
+            href="https://wa.me/56968257817"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "rgba(255,255,255,0.7)", textDecoration: "underline" }}
+          >
+            WhatsApp
+          </a>
         </p>
       </section>
 
@@ -294,9 +302,17 @@ export default function HoraPsicologoChillanHoyPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              La disponibilidad varía cada día. Escríbeme por WhatsApp y te
-              confirmo en minutos si tengo espacio hoy o cuál es el horario más
-              próximo disponible.
+              La disponibilidad varía cada día. Escríbeme por{" "}
+              <a
+                href="https://wa.me/56968257817"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#000", textDecoration: "underline" }}
+              >
+                WhatsApp
+              </a>{" "}
+              y te confirmo en minutos si tengo espacio hoy o cuál es el horario
+              más próximo disponible.
             </p>
           </details>
 

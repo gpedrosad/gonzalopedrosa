@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "../components/Button";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Adicciones en Chillán, Chile | Gonzalo Pedrosa",
+  title: "Terapia para Celos en Chillán, Chile | Gonzalo Pedrosa",
   description:
-    "Psicólogo especializado en adicciones en Chillán, Chile. Tratamiento para conductas adictivas con enfoque cognitivo-conductual. Atención presencial y online.",
+    "Psicólogo especializado en celos en Chillán. Tratamiento para celos patológicos, inseguridad en la pareja y celotipia. Terapia cognitivo-conductual.",
   alternates: {
-    canonical: "/psicologo-adicciones-chillan",
+    canonical: "/terapia-celos-chillan",
   },
 };
 
-export default function PsicologoAdiccionesChillanPage() {
+export default function TerapiaCelosChillanPage() {
   return (
     <main
       style={{
@@ -28,14 +27,14 @@ export default function PsicologoAdiccionesChillanPage() {
           display: "flex",
           alignItems: "center",
           gap: "1rem",
-          marginBottom: "2rem",
+          marginBottom: "1.5rem",
         }}
       >
         <Image
           src="/yo.png"
           alt="Gonzalo Pedrosa - Psicólogo"
-          width={64}
-          height={64}
+          width={56}
+          height={56}
           priority
           style={{
             borderRadius: "9999px",
@@ -43,25 +42,21 @@ export default function PsicologoAdiccionesChillanPage() {
           }}
         />
         <div>
-          <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>
-            Gonzalo Pedrosa
+          <p
+            style={{
+              fontSize: "0.75rem",
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              color: "#999",
+              marginBottom: "0.125rem",
+            }}
+          >
+            Chillán, Chile
           </p>
-          <p style={{ fontSize: "0.875rem", color: "#666" }}>Psicólogo</p>
+          <p style={{ fontWeight: 500, color: "#000" }}>Gonzalo Pedrosa</p>
         </div>
       </div>
-
-      <p
-        style={{
-          fontSize: "0.75rem",
-          fontWeight: 600,
-          textTransform: "uppercase",
-          letterSpacing: "0.1em",
-          color: "#999",
-          marginBottom: "0.75rem",
-        }}
-      >
-        Chillán, Chile
-      </p>
 
       <h1
         style={{
@@ -72,7 +67,7 @@ export default function PsicologoAdiccionesChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo para Adicciones
+        Terapia para Celos
       </h1>
 
       <p
@@ -83,9 +78,10 @@ export default function PsicologoAdiccionesChillanPage() {
           lineHeight: 1.6,
         }}
       >
-        Las conductas adictivas impactan la vida personal, familiar y laboral.
-        El acompañamiento profesional puede ser un primer paso importante hacia
-        la recuperación.
+        Los celos en cierta medida son normales, pero cuando se vuelven
+        intensos, frecuentes o infundados, pueden dañar seriamente la relación y
+        tu bienestar. La terapia te ayuda a entender y manejar estos
+        sentimientos.
       </p>
 
       <section style={{ marginBottom: "3rem" }}>
@@ -99,79 +95,33 @@ export default function PsicologoAdiccionesChillanPage() {
             marginBottom: "1rem",
           }}
         >
-          Tipos de adicciones
-        </h2>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: "0.5rem",
-          }}
-        >
-          {[
-            "Alcohol",
-            "Tabaco",
-            "Cannabis",
-            "Otras sustancias",
-            "Videojuegos",
-            "Ludopatía",
-          ].map((item, i) => (
-            <div
-              key={i}
-              style={{
-                padding: "0.75rem 1rem",
-                backgroundColor: "#fafafa",
-                borderRadius: "8px",
-                fontSize: "0.875rem",
-                color: "#444",
-              }}
-            >
-              {item}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section style={{ marginBottom: "3rem" }}>
-        <h2
-          style={{
-            fontSize: "0.75rem",
-            fontWeight: 600,
-            textTransform: "uppercase",
-            letterSpacing: "0.1em",
-            color: "#999",
-            marginBottom: "1rem",
-          }}
-        >
-          Señales de alerta
+          Señales de celos problemáticos
         </h2>
         <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem" }}>
           {[
-            "Necesidad creciente de consumir más",
-            "Malestar al intentar dejar la conducta",
-            "Tiempo excesivo dedicado a la conducta",
-            "Abandono de actividades importantes",
-            "Continuar a pesar de problemas evidentes",
+            "Revisar constantemente el celular o redes de tu pareja",
+            "Necesidad de saber dónde está en todo momento",
+            "Interpretar gestos normales como señales de infidelidad",
+            "Discusiones frecuentes por interacciones con otras personas",
+            "Prohibir o limitar contactos sociales de tu pareja",
+            "Pensamientos intrusivos sobre engaños",
+            "Ansiedad intensa cuando tu pareja no está",
+            "Buscar \"pruebas\" constantemente",
           ].map((item, i) => (
             <li
               key={i}
               style={{
                 display: "flex",
-                alignItems: "center",
+                alignItems: "flex-start",
                 gap: "0.75rem",
-                color: "#444",
+                padding: "0.75rem 1rem",
+                backgroundColor: "#fafafa",
+                borderRadius: "8px",
                 fontSize: "0.9375rem",
+                color: "#444",
               }}
             >
-              <span
-                style={{
-                  width: "6px",
-                  height: "6px",
-                  backgroundColor: "#000",
-                  borderRadius: "9999px",
-                  flexShrink: 0,
-                }}
-              />
+              <span style={{ color: "#000", flexShrink: 0 }}>—</span>
               {item}
             </li>
           ))}
@@ -189,25 +139,67 @@ export default function PsicologoAdiccionesChillanPage() {
             marginBottom: "1rem",
           }}
         >
-          Enfoque de tratamiento
+          ¿Qué hay detrás de los celos?
         </h2>
         <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
-          El abordaje desde la{" "}
+          Los celos suelen estar relacionados con:
+        </p>
+        <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem" }}>
+          {[
+            "Baja autoestima e inseguridad personal",
+            "Miedo al abandono",
+            "Experiencias pasadas de infidelidad o traición",
+            "Patrones de apego ansioso",
+            "Ansiedad generalizada",
+          ].map((item, i) => (
+            <li
+              key={i}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.75rem",
+                color: "#444",
+                fontSize: "0.9375rem",
+              }}
+            >
+              <span style={{ color: "#000" }}>•</span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section style={{ marginBottom: "3rem" }}>
+        <h2
+          style={{
+            fontSize: "0.75rem",
+            fontWeight: 600,
+            textTransform: "uppercase",
+            letterSpacing: "0.1em",
+            color: "#999",
+            marginBottom: "1rem",
+          }}
+        >
+          Tratamiento
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
+          La{" "}
           <Link
             href="/psicologo-cognitivo-conductual-chillan"
             style={{ color: "#000", textDecoration: "underline" }}
           >
             terapia cognitivo-conductual
           </Link>{" "}
-          se centra en:
+          es muy efectiva para trabajar los celos. El proceso incluye:
         </p>
         <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem" }}>
           {[
-            "Comprender los factores que mantienen la conducta",
-            "Identificar situaciones de riesgo",
-            "Trabajar la motivación para el cambio",
-            "Abordar ansiedad o síntomas depresivos asociados",
-            "Prevención de recaídas",
+            "Identificar pensamientos distorsionados sobre la pareja",
+            "Reducir conductas de control y verificación",
+            "Trabajar la autoestima y seguridad personal",
+            "Manejar la ansiedad asociada",
+            "Mejorar la comunicación con tu pareja",
+            "Desarrollar confianza en ti mismo/a y en la relación",
           ].map((item, i) => (
             <li
               key={i}
@@ -248,7 +240,7 @@ export default function PsicologoAdiccionesChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Se puede tratar solo con terapia?
+              ¿Debo venir solo/a o con mi pareja?
             </summary>
             <p
               style={{
@@ -258,9 +250,9 @@ export default function PsicologoAdiccionesChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              Depende de la severidad. En dependencias físicas severas puede ser
-              necesario apoyo médico. La terapia psicológica es un componente
-              fundamental.
+              Generalmente el trabajo de celos es individual, ya que implica
+              cambios personales profundos. Pero en algunos momentos puede ser
+              útil incluir a tu pareja. Evaluamos caso a caso.
             </p>
           </details>
 
@@ -272,7 +264,7 @@ export default function PsicologoAdiccionesChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Y si la persona no quiere tratamiento?
+              ¿Los celos se pueden superar completamente?
             </summary>
             <p
               style={{
@@ -282,8 +274,9 @@ export default function PsicologoAdiccionesChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              La motivación puede trabajarse en terapia. Si un familiar está
-              preocupado, puede ser útil una orientación inicial.
+              El objetivo no es eliminar los celos por completo (son una emoción
+              humana), sino que dejen de controlar tu vida y tu relación. Con
+              trabajo, es posible tener una relación de confianza.
             </p>
           </details>
 
@@ -295,7 +288,7 @@ export default function PsicologoAdiccionesChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Es posible la terapia online?
+              ¿Cuánto tiempo toma ver resultados?
             </summary>
             <p
               style={{
@@ -305,14 +298,33 @@ export default function PsicologoAdiccionesChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              La{" "}
-              <Link
-                href="/terapia-online"
-                style={{ color: "#000", textDecoration: "underline" }}
-              >
-                terapia online
-              </Link>{" "}
-              puede ser una opción válida, especialmente para el seguimiento.
+              Algunos cambios pueden notarse en pocas semanas, pero un trabajo
+              más profundo suele tomar varios meses. Depende de la intensidad de
+              los celos y tu compromiso con el proceso.
+            </p>
+          </details>
+
+          <details
+            style={{
+              padding: "1rem",
+              border: "1px solid #eaeaea",
+              borderRadius: "12px",
+            }}
+          >
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
+              ¿Y si mis celos tienen fundamento?
+            </summary>
+            <p
+              style={{
+                marginTop: "0.75rem",
+                color: "#666",
+                lineHeight: 1.6,
+                fontSize: "0.9375rem",
+              }}
+            >
+              Si hay razones reales de desconfianza, también lo trabajamos. La
+              terapia te ayuda a distinguir entre celos infundados y situaciones
+              que ameritan una conversación seria con tu pareja.
             </p>
           </details>
         </div>
@@ -335,7 +347,7 @@ export default function PsicologoAdiccionesChillanPage() {
             color: "#fff",
           }}
         >
-          Dar el primer paso
+          Recupera tu tranquilidad
         </h2>
         <p
           style={{
@@ -344,11 +356,12 @@ export default function PsicologoAdiccionesChillanPage() {
             fontSize: "0.9375rem",
           }}
         >
-          Reconocer que existe un problema y buscar ayuda es un acto de
-          valentía.
+          Los celos no tienen que dominar tu vida ni tu relación.
         </p>
-        <Link
-          href="/agendar"
+        <a
+          href="https://wa.me/56968257817"
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             display: "inline-flex",
             alignItems: "center",
@@ -362,8 +375,8 @@ export default function PsicologoAdiccionesChillanPage() {
             fontSize: "0.875rem",
           }}
         >
-          Agendar consulta <span aria-hidden="true">→</span>
-        </Link>
+          Agendar sesión →
+        </a>
       </section>
 
       <nav style={{ paddingTop: "2rem", borderTop: "1px solid #eaeaea" }}>
@@ -381,10 +394,10 @@ export default function PsicologoAdiccionesChillanPage() {
         </p>
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {[
-            { label: "Adultos", href: "/psicologo-adulto-chillan" },
+            { label: "Terapia de pareja", href: "/terapia-de-pareja-chillan" },
+            { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
-            { label: "Pánico", href: "/psicologo-crisis-de-panico-chillan" },
             { label: "Online", href: "/terapia-online" },
           ].map((item, i) => (
             <Link
@@ -407,3 +420,4 @@ export default function PsicologoAdiccionesChillanPage() {
     </main>
   );
 }
+

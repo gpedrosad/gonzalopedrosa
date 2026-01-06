@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "../components/Button";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Adicciones en Chillán, Chile | Gonzalo Pedrosa",
+  title: "Precio Consulta Psicológica en Chillán | Gonzalo Pedrosa",
   description:
-    "Psicólogo especializado en adicciones en Chillán, Chile. Tratamiento para conductas adictivas con enfoque cognitivo-conductual. Atención presencial y online.",
+    "Precios de consulta psicológica en Chillán. Valor de sesión, formas de pago y opciones de reembolso Isapre. Información clara y transparente.",
   alternates: {
-    canonical: "/psicologo-adicciones-chillan",
+    canonical: "/consulta-psicologica-precio-chillan",
   },
 };
 
-export default function PsicologoAdiccionesChillanPage() {
+export default function ConsultaPsicologicaPrecioChillanPage() {
   return (
     <main
       style={{
@@ -28,14 +27,14 @@ export default function PsicologoAdiccionesChillanPage() {
           display: "flex",
           alignItems: "center",
           gap: "1rem",
-          marginBottom: "2rem",
+          marginBottom: "1.5rem",
         }}
       >
         <Image
           src="/yo.png"
           alt="Gonzalo Pedrosa - Psicólogo"
-          width={64}
-          height={64}
+          width={56}
+          height={56}
           priority
           style={{
             borderRadius: "9999px",
@@ -43,25 +42,21 @@ export default function PsicologoAdiccionesChillanPage() {
           }}
         />
         <div>
-          <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>
-            Gonzalo Pedrosa
+          <p
+            style={{
+              fontSize: "0.75rem",
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              color: "#999",
+              marginBottom: "0.125rem",
+            }}
+          >
+            Chillán, Chile
           </p>
-          <p style={{ fontSize: "0.875rem", color: "#666" }}>Psicólogo</p>
+          <p style={{ fontWeight: 500, color: "#000" }}>Gonzalo Pedrosa</p>
         </div>
       </div>
-
-      <p
-        style={{
-          fontSize: "0.75rem",
-          fontWeight: 600,
-          textTransform: "uppercase",
-          letterSpacing: "0.1em",
-          color: "#999",
-          marginBottom: "0.75rem",
-        }}
-      >
-        Chillán, Chile
-      </p>
 
       <h1
         style={{
@@ -72,7 +67,7 @@ export default function PsicologoAdiccionesChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo para Adicciones
+        Precio Consulta Psicológica
       </h1>
 
       <p
@@ -83,131 +78,66 @@ export default function PsicologoAdiccionesChillanPage() {
           lineHeight: 1.6,
         }}
       >
-        Las conductas adictivas impactan la vida personal, familiar y laboral.
-        El acompañamiento profesional puede ser un primer paso importante hacia
-        la recuperación.
+        Información clara sobre valores y formas de pago. Sin sorpresas ni
+        costos ocultos. Tu bienestar mental es una inversión que vale la pena.
       </p>
 
-      <section style={{ marginBottom: "3rem" }}>
-        <h2
+      <section
+        style={{
+          padding: "1.5rem",
+          backgroundColor: "#fafafa",
+          borderRadius: "16px",
+          marginBottom: "2.5rem",
+          textAlign: "center",
+        }}
+      >
+        <p
           style={{
             fontSize: "0.75rem",
             fontWeight: 600,
             textTransform: "uppercase",
             letterSpacing: "0.1em",
             color: "#999",
-            marginBottom: "1rem",
+            marginBottom: "0.5rem",
           }}
         >
-          Tipos de adicciones
-        </h2>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: "0.5rem",
-          }}
-        >
-          {[
-            "Alcohol",
-            "Tabaco",
-            "Cannabis",
-            "Otras sustancias",
-            "Videojuegos",
-            "Ludopatía",
-          ].map((item, i) => (
-            <div
-              key={i}
-              style={{
-                padding: "0.75rem 1rem",
-                backgroundColor: "#fafafa",
-                borderRadius: "8px",
-                fontSize: "0.875rem",
-                color: "#444",
-              }}
-            >
-              {item}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section style={{ marginBottom: "3rem" }}>
-        <h2
-          style={{
-            fontSize: "0.75rem",
-            fontWeight: 600,
-            textTransform: "uppercase",
-            letterSpacing: "0.1em",
-            color: "#999",
-            marginBottom: "1rem",
-          }}
-        >
-          Señales de alerta
-        </h2>
-        <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem" }}>
-          {[
-            "Necesidad creciente de consumir más",
-            "Malestar al intentar dejar la conducta",
-            "Tiempo excesivo dedicado a la conducta",
-            "Abandono de actividades importantes",
-            "Continuar a pesar de problemas evidentes",
-          ].map((item, i) => (
-            <li
-              key={i}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "0.75rem",
-                color: "#444",
-                fontSize: "0.9375rem",
-              }}
-            >
-              <span
-                style={{
-                  width: "6px",
-                  height: "6px",
-                  backgroundColor: "#000",
-                  borderRadius: "9999px",
-                  flexShrink: 0,
-                }}
-              />
-              {item}
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section style={{ marginBottom: "3rem" }}>
-        <h2
-          style={{
-            fontSize: "0.75rem",
-            fontWeight: 600,
-            textTransform: "uppercase",
-            letterSpacing: "0.1em",
-            color: "#999",
-            marginBottom: "1rem",
-          }}
-        >
-          Enfoque de tratamiento
-        </h2>
-        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
-          El abordaje desde la{" "}
-          <Link
-            href="/psicologo-cognitivo-conductual-chillan"
-            style={{ color: "#000", textDecoration: "underline" }}
-          >
-            terapia cognitivo-conductual
-          </Link>{" "}
-          se centra en:
+          Sesión individual (50 min)
         </p>
+        <p
+          style={{
+            fontSize: "2.5rem",
+            fontWeight: 700,
+            color: "#000",
+            marginBottom: "0.5rem",
+          }}
+        >
+          $35.000
+        </p>
+        <p style={{ color: "#666", fontSize: "0.875rem" }}>
+          Presencial u online · Mismo valor
+        </p>
+      </section>
+
+      <section style={{ marginBottom: "3rem" }}>
+        <h2
+          style={{
+            fontSize: "0.75rem",
+            fontWeight: 600,
+            textTransform: "uppercase",
+            letterSpacing: "0.1em",
+            color: "#999",
+            marginBottom: "1rem",
+          }}
+        >
+          ¿Qué incluye?
+        </h2>
         <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem" }}>
           {[
-            "Comprender los factores que mantienen la conducta",
-            "Identificar situaciones de riesgo",
-            "Trabajar la motivación para el cambio",
-            "Abordar ansiedad o síntomas depresivos asociados",
-            "Prevención de recaídas",
+            "Sesión completa de 50 minutos",
+            "Espacio privado y confidencial",
+            "Boleta electrónica para reembolso Isapre",
+            "Seguimiento y material cuando corresponda",
+            "Comunicación entre sesiones para dudas puntuales",
           ].map((item, i) => (
             <li
               key={i}
@@ -237,6 +167,77 @@ export default function PsicologoAdiccionesChillanPage() {
             marginBottom: "1rem",
           }}
         >
+          Formas de pago
+        </h2>
+        <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem" }}>
+          {[
+            "Transferencia bancaria",
+            "Efectivo (en sesiones presenciales)",
+            "Tarjeta de débito o crédito",
+          ].map((item, i) => (
+            <li
+              key={i}
+              style={{
+                display: "flex",
+                alignItems: "flex-start",
+                gap: "0.75rem",
+                padding: "0.75rem 1rem",
+                backgroundColor: "#fafafa",
+                borderRadius: "8px",
+                fontSize: "0.9375rem",
+                color: "#444",
+              }}
+            >
+              <span style={{ color: "#000", flexShrink: 0 }}>—</span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section
+        style={{
+          padding: "1.25rem",
+          backgroundColor: "#f0fdf4",
+          borderRadius: "12px",
+          marginBottom: "2.5rem",
+          border: "1px solid #bbf7d0",
+        }}
+      >
+        <p
+          style={{
+            fontWeight: 600,
+            color: "#166534",
+            marginBottom: "0.5rem",
+            fontSize: "0.9375rem",
+          }}
+        >
+          💰 Reembolso Isapre
+        </p>
+        <p style={{ color: "#15803d", fontSize: "0.875rem", lineHeight: 1.6 }}>
+          Si tienes Isapre, puedes recuperar entre el 50-80% del valor según tu
+          plan. Emito boleta el mismo día. Más detalles en{" "}
+          <Link
+            href="/psicologo-reembolso-isapre-chillan"
+            style={{ color: "#166534", textDecoration: "underline" }}
+          >
+            reembolso Isapre
+          </Link>
+          .
+        </p>
+      </section>
+
+      <section style={{ marginBottom: "3rem" }}>
+        <h2
+          style={{
+            fontSize: "0.75rem",
+            fontWeight: 600,
+            textTransform: "uppercase",
+            letterSpacing: "0.1em",
+            color: "#999",
+            marginBottom: "1rem",
+          }}
+        >
           Preguntas frecuentes
         </h2>
         <div style={{ display: "grid", gap: "0.5rem" }}>
@@ -248,7 +249,7 @@ export default function PsicologoAdiccionesChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Se puede tratar solo con terapia?
+              ¿La primera sesión tiene otro valor?
             </summary>
             <p
               style={{
@@ -258,9 +259,8 @@ export default function PsicologoAdiccionesChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              Depende de la severidad. En dependencias físicas severas puede ser
-              necesario apoyo médico. La terapia psicológica es un componente
-              fundamental.
+              No. Todas las sesiones tienen el mismo valor, incluyendo la
+              primera. No hay cargos adicionales por evaluación inicial.
             </p>
           </details>
 
@@ -272,7 +272,7 @@ export default function PsicologoAdiccionesChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Y si la persona no quiere tratamiento?
+              ¿Cuántas sesiones necesitaré?
             </summary>
             <p
               style={{
@@ -282,8 +282,9 @@ export default function PsicologoAdiccionesChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              La motivación puede trabajarse en terapia. Si un familiar está
-              preocupado, puede ser útil una orientación inicial.
+              Depende de cada caso y tus objetivos. Algunas personas ven
+              mejorías en 8-12 sesiones, otras prefieren un proceso más largo.
+              Lo definimos juntos según tu evolución.
             </p>
           </details>
 
@@ -295,7 +296,7 @@ export default function PsicologoAdiccionesChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Es posible la terapia online?
+              ¿Hay descuento por pack de sesiones?
             </summary>
             <p
               style={{
@@ -305,14 +306,56 @@ export default function PsicologoAdiccionesChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              La{" "}
-              <Link
-                href="/terapia-online"
-                style={{ color: "#000", textDecoration: "underline" }}
-              >
-                terapia online
-              </Link>{" "}
-              puede ser una opción válida, especialmente para el seguimiento.
+              Por el momento no ofrezco packs. Prefiero que avancemos sesión a
+              sesión, sin compromisos de largo plazo que puedan generar presión.
+            </p>
+          </details>
+
+          <details
+            style={{
+              padding: "1rem",
+              border: "1px solid #eaeaea",
+              borderRadius: "12px",
+            }}
+          >
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
+              ¿Cuándo se paga?
+            </summary>
+            <p
+              style={{
+                marginTop: "0.75rem",
+                color: "#666",
+                lineHeight: 1.6,
+                fontSize: "0.9375rem",
+              }}
+            >
+              El pago se realiza antes de cada sesión, idealmente el mismo día o
+              el día anterior por transferencia. También puedes pagar al inicio
+              de la sesión presencial.
+            </p>
+          </details>
+
+          <details
+            style={{
+              padding: "1rem",
+              border: "1px solid #eaeaea",
+              borderRadius: "12px",
+            }}
+          >
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
+              ¿Hay política de cancelación?
+            </summary>
+            <p
+              style={{
+                marginTop: "0.75rem",
+                color: "#666",
+                lineHeight: 1.6,
+                fontSize: "0.9375rem",
+              }}
+            >
+              Si necesitas cancelar, avísame con al menos 24 horas de
+              anticipación para reagendar sin costo. Cancelaciones con menos de
+              24 horas se cobran el 50% del valor.
             </p>
           </details>
         </div>
@@ -335,7 +378,7 @@ export default function PsicologoAdiccionesChillanPage() {
             color: "#fff",
           }}
         >
-          Dar el primer paso
+          ¿Tienes más preguntas?
         </h2>
         <p
           style={{
@@ -344,11 +387,12 @@ export default function PsicologoAdiccionesChillanPage() {
             fontSize: "0.9375rem",
           }}
         >
-          Reconocer que existe un problema y buscar ayuda es un acto de
-          valentía.
+          Escríbeme y te respondo personalmente. Sin compromiso.
         </p>
-        <Link
-          href="/agendar"
+        <a
+          href="https://wa.me/56968257817"
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             display: "inline-flex",
             alignItems: "center",
@@ -362,8 +406,8 @@ export default function PsicologoAdiccionesChillanPage() {
             fontSize: "0.875rem",
           }}
         >
-          Agendar consulta <span aria-hidden="true">→</span>
-        </Link>
+          Consultar por WhatsApp →
+        </a>
       </section>
 
       <nav style={{ paddingTop: "2rem", borderTop: "1px solid #eaeaea" }}>
@@ -377,15 +421,14 @@ export default function PsicologoAdiccionesChillanPage() {
             marginBottom: "0.75rem",
           }}
         >
-          Servicios relacionados
+          Más información
         </p>
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {[
-            { label: "Adultos", href: "/psicologo-adulto-chillan" },
-            { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
-            { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
-            { label: "Pánico", href: "/psicologo-crisis-de-panico-chillan" },
-            { label: "Online", href: "/terapia-online" },
+            { label: "Reembolso Isapre", href: "/psicologo-reembolso-isapre-chillan" },
+            { label: "Particular", href: "/psicologo-particular-chillan" },
+            { label: "Online", href: "/psicologo-online-chillan" },
+            { label: "Agendar", href: "/agendar" },
           ].map((item, i) => (
             <Link
               key={i}
@@ -407,3 +450,4 @@ export default function PsicologoAdiccionesChillanPage() {
     </main>
   );
 }
+

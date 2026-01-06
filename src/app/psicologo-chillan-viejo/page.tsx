@@ -288,8 +288,16 @@ export default function PsicologoChillanViejoPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              Tengo horarios de mañana y tarde. Consulta disponibilidad por
-              WhatsApp y buscamos el que mejor te acomode.
+              Tengo horarios de mañana y tarde. Consulta disponibilidad por{" "}
+              <a
+                href="https://wa.me/56968257817"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#000", textDecoration: "underline" }}
+              >
+                WhatsApp
+              </a>{" "}
+              y buscamos el que mejor te acomode.
             </p>
           </details>
 

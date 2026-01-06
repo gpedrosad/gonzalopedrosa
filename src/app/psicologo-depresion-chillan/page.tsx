@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "../components/Button";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Adicciones en Chillán, Chile | Gonzalo Pedrosa",
+  title: "Psicólogo Depresión en Chillán, Chile | Gonzalo Pedrosa",
   description:
-    "Psicólogo especializado en adicciones en Chillán, Chile. Tratamiento para conductas adictivas con enfoque cognitivo-conductual. Atención presencial y online.",
+    "Psicólogo especializado en depresión en Chillán, Chile. Tratamiento con enfoque cognitivo-conductual basado en evidencia. Sesiones presenciales y online.",
   alternates: {
-    canonical: "/psicologo-adicciones-chillan",
+    canonical: "/psicologo-depresion-chillan",
   },
 };
 
-export default function PsicologoAdiccionesChillanPage() {
+export default function PsicologoDepresionChillanPage() {
   return (
     <main
       style={{
@@ -28,14 +27,14 @@ export default function PsicologoAdiccionesChillanPage() {
           display: "flex",
           alignItems: "center",
           gap: "1rem",
-          marginBottom: "2rem",
+          marginBottom: "1.5rem",
         }}
       >
         <Image
           src="/yo.png"
           alt="Gonzalo Pedrosa - Psicólogo"
-          width={64}
-          height={64}
+          width={56}
+          height={56}
           priority
           style={{
             borderRadius: "9999px",
@@ -43,25 +42,21 @@ export default function PsicologoAdiccionesChillanPage() {
           }}
         />
         <div>
-          <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>
-            Gonzalo Pedrosa
+          <p
+            style={{
+              fontSize: "0.75rem",
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              color: "#999",
+              marginBottom: "0.125rem",
+            }}
+          >
+            Chillán, Chile
           </p>
-          <p style={{ fontSize: "0.875rem", color: "#666" }}>Psicólogo</p>
+          <p style={{ fontWeight: 500, color: "#000" }}>Gonzalo Pedrosa</p>
         </div>
       </div>
-
-      <p
-        style={{
-          fontSize: "0.75rem",
-          fontWeight: 600,
-          textTransform: "uppercase",
-          letterSpacing: "0.1em",
-          color: "#999",
-          marginBottom: "0.75rem",
-        }}
-      >
-        Chillán, Chile
-      </p>
 
       <h1
         style={{
@@ -72,7 +67,7 @@ export default function PsicologoAdiccionesChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo para Adicciones
+        Psicólogo para Depresión
       </h1>
 
       <p
@@ -83,9 +78,9 @@ export default function PsicologoAdiccionesChillanPage() {
           lineHeight: 1.6,
         }}
       >
-        Las conductas adictivas impactan la vida personal, familiar y laboral.
-        El acompañamiento profesional puede ser un primer paso importante hacia
-        la recuperación.
+        La depresión es más que tristeza pasajera. Es una condición que afecta
+        cómo te sientes, piensas y manejas las actividades diarias. Con el
+        tratamiento adecuado, es posible recuperar el bienestar.
       </p>
 
       <section style={{ marginBottom: "3rem" }}>
@@ -99,85 +94,65 @@ export default function PsicologoAdiccionesChillanPage() {
             marginBottom: "1rem",
           }}
         >
-          Tipos de adicciones
-        </h2>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: "0.5rem",
-          }}
-        >
-          {[
-            "Alcohol",
-            "Tabaco",
-            "Cannabis",
-            "Otras sustancias",
-            "Videojuegos",
-            "Ludopatía",
-          ].map((item, i) => (
-            <div
-              key={i}
-              style={{
-                padding: "0.75rem 1rem",
-                backgroundColor: "#fafafa",
-                borderRadius: "8px",
-                fontSize: "0.875rem",
-                color: "#444",
-              }}
-            >
-              {item}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section style={{ marginBottom: "3rem" }}>
-        <h2
-          style={{
-            fontSize: "0.75rem",
-            fontWeight: 600,
-            textTransform: "uppercase",
-            letterSpacing: "0.1em",
-            color: "#999",
-            marginBottom: "1rem",
-          }}
-        >
-          Señales de alerta
+          Señales de depresión
         </h2>
         <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem" }}>
           {[
-            "Necesidad creciente de consumir más",
-            "Malestar al intentar dejar la conducta",
-            "Tiempo excesivo dedicado a la conducta",
-            "Abandono de actividades importantes",
-            "Continuar a pesar de problemas evidentes",
+            "Tristeza persistente o vacío emocional",
+            "Pérdida de interés en actividades que antes disfrutabas",
+            "Cambios en el apetito o peso",
+            "Problemas de sueño (insomnio o dormir demasiado)",
+            "Fatiga y falta de energía",
+            "Dificultad para concentrarse o tomar decisiones",
+            "Sentimientos de inutilidad o culpa excesiva",
+            "Pensamientos de muerte o suicidio",
           ].map((item, i) => (
             <li
               key={i}
               style={{
                 display: "flex",
-                alignItems: "center",
+                alignItems: "flex-start",
                 gap: "0.75rem",
-                color: "#444",
+                padding: "0.75rem 1rem",
+                backgroundColor: "#fafafa",
+                borderRadius: "8px",
                 fontSize: "0.9375rem",
+                color: "#444",
               }}
             >
-              <span
-                style={{
-                  width: "6px",
-                  height: "6px",
-                  backgroundColor: "#000",
-                  borderRadius: "9999px",
-                  flexShrink: 0,
-                }}
-              />
+              <span style={{ color: "#000", flexShrink: 0 }}>—</span>
               {item}
             </li>
           ))}
         </ul>
       </section>
 
+      <section
+        style={{
+          padding: "1.25rem",
+          backgroundColor: "#fef3c7",
+          borderRadius: "12px",
+          marginBottom: "2.5rem",
+          border: "1px solid #fcd34d",
+        }}
+      >
+        <p
+          style={{
+            fontWeight: 600,
+            color: "#92400e",
+            marginBottom: "0.5rem",
+            fontSize: "0.9375rem",
+          }}
+        >
+          ⚠️ Importante
+        </p>
+        <p style={{ color: "#78350f", fontSize: "0.875rem", lineHeight: 1.6 }}>
+          Si tienes pensamientos de hacerte daño, busca ayuda inmediata.
+          Contacta a <strong>Salud Responde (600 360 7777)</strong> o acude a
+          urgencias. Están disponibles 24/7.
+        </p>
+      </section>
+
       <section style={{ marginBottom: "3rem" }}>
         <h2
           style={{
@@ -189,25 +164,26 @@ export default function PsicologoAdiccionesChillanPage() {
             marginBottom: "1rem",
           }}
         >
-          Enfoque de tratamiento
+          Tratamiento
         </h2>
         <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
-          El abordaje desde la{" "}
+          La{" "}
           <Link
             href="/psicologo-cognitivo-conductual-chillan"
             style={{ color: "#000", textDecoration: "underline" }}
           >
             terapia cognitivo-conductual
           </Link>{" "}
-          se centra en:
+          es uno de los tratamientos más efectivos para la depresión. Trabajamos
+          en:
         </p>
         <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem" }}>
           {[
-            "Comprender los factores que mantienen la conducta",
-            "Identificar situaciones de riesgo",
-            "Trabajar la motivación para el cambio",
-            "Abordar ansiedad o síntomas depresivos asociados",
-            "Prevención de recaídas",
+            "Identificar y modificar patrones de pensamiento negativos",
+            "Activación conductual (retomar actividades gradualmente)",
+            "Desarrollar habilidades de afrontamiento",
+            "Mejorar relaciones interpersonales",
+            "Prevenir recaídas",
           ].map((item, i) => (
             <li
               key={i}
@@ -248,7 +224,7 @@ export default function PsicologoAdiccionesChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Se puede tratar solo con terapia?
+              ¿Cuánto dura el tratamiento para depresión?
             </summary>
             <p
               style={{
@@ -258,9 +234,10 @@ export default function PsicologoAdiccionesChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              Depende de la severidad. En dependencias físicas severas puede ser
-              necesario apoyo médico. La terapia psicológica es un componente
-              fundamental.
+              La duración varía según cada persona y la severidad del cuadro.
+              Generalmente, se comienzan a notar mejorías entre las 8-12
+              sesiones, aunque algunos casos requieren tratamiento más
+              prolongado.
             </p>
           </details>
 
@@ -272,7 +249,7 @@ export default function PsicologoAdiccionesChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Y si la persona no quiere tratamiento?
+              ¿Necesito medicación además de terapia?
             </summary>
             <p
               style={{
@@ -282,8 +259,9 @@ export default function PsicologoAdiccionesChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              La motivación puede trabajarse en terapia. Si un familiar está
-              preocupado, puede ser útil una orientación inicial.
+              Depende de cada caso. Para depresiones moderadas a severas, la
+              combinación de terapia y medicación suele ser más efectiva. Si es
+              necesario, te derivo a psiquiatra para evaluación.
             </p>
           </details>
 
@@ -295,7 +273,7 @@ export default function PsicologoAdiccionesChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Es posible la terapia online?
+              ¿Puedo tener terapia online?
             </summary>
             <p
               style={{
@@ -305,14 +283,15 @@ export default function PsicologoAdiccionesChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              La{" "}
+              Sí, la{" "}
               <Link
                 href="/terapia-online"
                 style={{ color: "#000", textDecoration: "underline" }}
               >
                 terapia online
               </Link>{" "}
-              puede ser una opción válida, especialmente para el seguimiento.
+              es efectiva para el tratamiento de la depresión. Evaluamos juntos
+              la modalidad más adecuada para ti.
             </p>
           </details>
         </div>
@@ -335,7 +314,7 @@ export default function PsicologoAdiccionesChillanPage() {
             color: "#fff",
           }}
         >
-          Dar el primer paso
+          No tienes que enfrentarlo solo
         </h2>
         <p
           style={{
@@ -344,11 +323,12 @@ export default function PsicologoAdiccionesChillanPage() {
             fontSize: "0.9375rem",
           }}
         >
-          Reconocer que existe un problema y buscar ayuda es un acto de
-          valentía.
+          La depresión tiene tratamiento. Da el primer paso hoy.
         </p>
-        <Link
-          href="/agendar"
+        <a
+          href="https://wa.me/56968257817"
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             display: "inline-flex",
             alignItems: "center",
@@ -362,8 +342,8 @@ export default function PsicologoAdiccionesChillanPage() {
             fontSize: "0.875rem",
           }}
         >
-          Agendar consulta <span aria-hidden="true">→</span>
-        </Link>
+          Agendar sesión →
+        </a>
       </section>
 
       <nav style={{ paddingTop: "2rem", borderTop: "1px solid #eaeaea" }}>
@@ -381,10 +361,10 @@ export default function PsicologoAdiccionesChillanPage() {
         </p>
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {[
-            { label: "Adultos", href: "/psicologo-adulto-chillan" },
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
+            { label: "Duelo", href: "/psicologo-duelo-chillan" },
+            { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
-            { label: "Pánico", href: "/psicologo-crisis-de-panico-chillan" },
             { label: "Online", href: "/terapia-online" },
           ].map((item, i) => (
             <Link
@@ -407,3 +387,4 @@ export default function PsicologoAdiccionesChillanPage() {
     </main>
   );
 }
+
