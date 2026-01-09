@@ -137,6 +137,22 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
         {/* ─────────────────────────────────────────────────────────────
+           Google tag (gtag.js) - Google Ads
+           ───────────────────────────────────────────────────────────── */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17861931009"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17861931009');
+          `}
+        </Script>
+
+        {/* ─────────────────────────────────────────────────────────────
            Pixel de Meta con carga perezosa y sin PageView automático.
            - No se carga la librería hasta que ALGUIEN llame fbq(...)
            - En la primera llamada, se encola automáticamente fbq('init', PIXEL_ID)
