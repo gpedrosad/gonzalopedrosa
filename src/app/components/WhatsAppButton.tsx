@@ -1,11 +1,5 @@
 "use client";
 
-declare global {
-  interface Window {
-    dataLayer?: object[];
-  }
-}
-
 type WhatsAppButtonProps = {
   href: string;
   children: React.ReactNode;
@@ -26,8 +20,9 @@ export function WhatsAppButton({
 
     // Enviar evento al dataLayer para que GTM lo procese
     if (typeof window !== "undefined") {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
+      const w = window as typeof window & { dataLayer?: Record<string, unknown>[] };
+      w.dataLayer = w.dataLayer || [];
+      w.dataLayer.push({
         event: "whatsapp_lead",
         label: href,
       });
