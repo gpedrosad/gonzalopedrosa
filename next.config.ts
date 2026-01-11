@@ -11,8 +11,8 @@ const nextConfig: NextConfig = {
     const cspDirectives = [
       "default-src 'self'",
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net",
-      "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://*.facebook.com",
-      "img-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://www.facebook.com data: blob:",
+      "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.google.com https://*.facebook.com",
+      "img-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://www.google.com https://www.facebook.com data: blob:",
       "frame-src 'self' https://www.googletagmanager.com",
       "style-src 'self' 'unsafe-inline'",
       "font-src 'self' data:",
