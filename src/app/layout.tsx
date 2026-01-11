@@ -1,6 +1,5 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import { Geist, Geist_Mono } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
@@ -59,13 +58,9 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, "max-image-preview": "large" },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  // Obtener el nonce del middleware para CSP
-  const headersList = await headers();
-  const nonce = headersList.get("x-nonce") ?? "";
-
   // ID del Pixel (si no existe, el stub no hace nada)
   const PIXEL_ID =
     process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID ??
@@ -81,7 +76,7 @@ export default async function RootLayout({
         {/* ─────────────────────────────────────────────────────────────
            JSON-LD estructurado: Person + ProfessionalService + Offer
            ───────────────────────────────────────────────────────────── */}
-        <Script id="ld-professional" type="application/ld+json" nonce={nonce}>
+        <Script id="ld-professional" type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
@@ -157,7 +152,7 @@ export default async function RootLayout({
            - Sin <noscript> (evita disparos en crawlers/headless)
            Esto reduce señales a bots y mantiene consistencia de contenido.
            ───────────────────────────────────────────────────────────── */}
-        <Script id="fbq-lazy" strategy="afterInteractive" nonce={nonce}>
+        <Script id="fbq-lazy" strategy="afterInteractive">
           {`
             (function (w, d, pid) {
               if (!pid) return;
@@ -199,7 +194,7 @@ export default async function RootLayout({
 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
-        <GoogleTagManager gtmId="GTM-N3DXMKTR" nonce={nonce} />
+        <GoogleTagManager gtmId="GTM-N3DXMKTR" />
       </body>
     </html>
   );
