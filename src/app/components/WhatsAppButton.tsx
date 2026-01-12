@@ -2,12 +2,6 @@
 
 import { IoLogoWhatsapp } from "react-icons/io5";
 
-declare global {
-  interface Window {
-    dataLayer?: Object[];
-  }
-}
-
 type WhatsAppButtonProps = {
   href: string;
   children: React.ReactNode;
