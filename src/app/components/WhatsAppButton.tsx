@@ -14,6 +14,10 @@ type WhatsAppButtonProps = {
   className?: string;
 };
 
+/**
+ * Botón que dispara evento "whatsapp_lead" al dataLayer de GTM y luego redirige.
+ * GTM captura este evento para disparar conversiones de Google Ads u otras etiquetas.
+ */
 export function WhatsAppButton({
   href,
   children,
