@@ -16,6 +16,8 @@ export function middleware(request: NextRequest) {
     "default-src 'self'",
     // Scripts: unsafe-inline + unsafe-eval para GTM y sus tags dinámicos
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.google.com https://googleads.g.doubleclick.net https://*.doubleclick.net https://connect.facebook.net https://*.googleadservices.com",
+    // script-src-elem: requerido por algunos navegadores para <script> elements (GTM + Ads)
+    "script-src-elem 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.googleadservices.com https://www.google-analytics.com",
     // Conexiones: APIs de tracking + subdominios anidados de doubleclick (stats.g, googleads.g)
     "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.google.com https://*.doubleclick.net https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://*.googleadservices.com https://*.facebook.com https://connect.facebook.net",
     // Imágenes: píxeles de tracking + googleads.g.doubleclick.net (subdominio anidado)
