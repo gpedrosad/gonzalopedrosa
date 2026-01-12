@@ -3,7 +3,8 @@ import Image from "next/image";
 import { WhatsAppButton } from "../../components/WhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Terapia Ataques de Pánico Online | Psicólogo TCC",
+  title: "Psicólogo Ataques de Pánico Online | Terapia TCC",
+  description: "Psicólogo online especializado en ataques de pánico. Terapia Cognitivo-Conductual 100% por videollamada. Herramientas prácticas desde la primera sesión.",
   robots: {
     index: false,
     follow: false,
@@ -17,277 +18,98 @@ export default function PsicologoAtaquesDePanicoOnlinePage() {
   return (
     <main className="min-h-screen bg-white">
       {/* ─────────────────────────────────────────────────────────────────────────
-          HERO - Above the fold (MOBILE-FIRST)
+          HERO - Above the fold (OPTIMIZADO)
           ───────────────────────────────────────────────────────────────────────── */}
-      <section className="px-4 pt-8 pb-6 md:pt-16 md:pb-12 max-w-3xl mx-auto">
-        {/* Trust badge + Disponibilidad */}
-        <div className="flex items-center justify-between mb-4">
-          <span className="inline-flex items-center gap-1.5 bg-green-50 text-green-700 text-xs font-medium px-2.5 py-1 rounded-full border border-green-200">
+      <section className="px-4 pt-6 pb-5 md:pt-14 md:pb-10 max-w-3xl mx-auto">
+        {/* Micro-header con disponibilidad */}
+        <div className="flex items-center gap-2 mb-3">
+          <span className="inline-flex items-center gap-1.5 bg-green-50 text-green-700 text-xs font-medium px-2 py-0.5 rounded-full border border-green-200">
             <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-            Cupos esta semana
+            Disponible
           </span>
-          <span className="text-xs text-gray-500">100% Online</span>
+          <span className="text-xs text-gray-400">|</span>
+          <span className="text-xs text-gray-500">Terapia 100% online</span>
         </div>
 
-        {/* H1 directo */}
-        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-3 leading-tight">
-          Ataques de pánico: terapia 100% online
+        {/* H1 - Keyword optimizada + empático */}
+        <h1 className="text-[1.65rem] md:text-4xl font-bold text-gray-900 tracking-tight mb-2 leading-[1.2]">
+          Psicólogo online para ataques de pánico
         </h1>
 
-        {/* Subtítulo empático */}
-        <p className="text-base text-gray-600 mb-4 leading-relaxed">
-          Si sientes que el corazón se acelera, te falta el aire y aparece un
-          miedo intenso sin razón aparente, puedo ayudarte. Trabajo con
-          herramientas prácticas para que recuperes el control.
+        {/* Subtítulo corto y directo */}
+        <p className="text-base text-gray-600 mb-4">
+          Si vives con miedo al próximo ataque, puedo ayudarte con herramientas 
+          concretas para recuperar el control.
         </p>
 
-        {/* Beneficios clave - formato ultra escaneable */}
-        <div className="flex flex-wrap gap-2 mb-5">
-          <span className="inline-flex items-center gap-1.5 text-sm text-gray-700 bg-gray-100 px-3 py-1.5 rounded-full">
-            ✓ Herramientas desde sesión 1
-          </span>
-          <span className="inline-flex items-center gap-1.5 text-sm text-gray-700 bg-gray-100 px-3 py-1.5 rounded-full">
-            ✓ Enfoque TCC (basado en evidencia)
-          </span>
-          <span className="inline-flex items-center gap-1.5 text-sm text-gray-700 bg-gray-100 px-3 py-1.5 rounded-full">
-            ✓ Videollamada cómoda
-          </span>
-          <span className="inline-flex items-center gap-1.5 text-sm text-gray-700 bg-gray-100 px-3 py-1.5 rounded-full">
-            ✓ Confidencial
-          </span>
-        </div>
-
-        {/* CTA Principal con precio visible */}
-        <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-2xl p-4 mb-4">
-          <div className="flex items-center justify-between mb-3">
-            <div>
-              <p className="text-sm text-gray-600">Sesión online 50 min</p>
-              <p className="text-2xl font-bold text-gray-900">
-                $35.000 <span className="text-sm font-normal text-gray-500">CLP</span>
-              </p>
-            </div>
+        {/* Card CTA principal - Todo en uno */}
+        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4 mb-3">
+          <div className="flex items-center gap-3 mb-3">
             <Image
               src="/yo.png"
               alt="Gonzalo Pedrosa - Psicólogo"
-              width={56}
-              height={56}
-              className="rounded-full object-cover border-2 border-white shadow-md"
+              width={52}
+              height={52}
+              className="rounded-full object-cover border-2 border-white shadow-sm"
             />
+            <div className="flex-1">
+              <p className="font-semibold text-gray-900 text-sm">Gonzalo Pedrosa</p>
+              <p className="text-xs text-gray-500">Psicólogo · Terapia Cognitivo-Conductual</p>
+            </div>
+            <div className="text-right">
+              <p className="text-lg font-bold text-gray-900">$35.000</p>
+              <p className="text-xs text-gray-400">50 min</p>
+            </div>
           </div>
+          
           <WhatsAppButton
             href={WHATSAPP_HREF}
             className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
           >
-            Agendar mi sesión
+            Agendar sesión online
           </WhatsAppButton>
-          <p className="text-xs text-gray-500 text-center mt-2">
-            Respuesta en menos de 2 horas · Sin compromiso
-          </p>
+        </div>
+
+        {/* Trust signals compactos */}
+        <div className="flex items-center justify-center gap-4 text-xs text-gray-500">
+          <span className="flex items-center gap-1">
+            <span className="text-green-500">✓</span> +280 pacientes
+          </span>
+          <span className="flex items-center gap-1">
+            <span className="text-green-500">✓</span> Respuesta rápida
+          </span>
         </div>
       </section>
 
       {/* ─────────────────────────────────────────────────────────────────────────
-          ¿ESTO TE PASA? - Experiencias comunes
+          SOCIAL PROOF - Subido para generar confianza temprana
           ───────────────────────────────────────────────────────────────────────── */}
-      <section className="px-4 py-8 md:py-12 bg-gray-50">
+      <section className="px-4 py-5 bg-gray-50 border-y border-gray-100">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-5 text-center">
-            ¿Esto te pasa?
-          </h2>
-
-          <div className="grid gap-2">
-            {[
-              "Siento que me falta el aire de repente",
-              "El corazón se acelera sin razón",
-              "Miedo a desmayarme o perder el control",
-              "Sensación de que algo terrible va a pasar",
-              "Evito lugares o situaciones por miedo a otra crisis",
-              "Vivo pendiente de cuándo vendrá el próximo ataque",
-              "A veces pienso que me estoy volviendo loco/a",
-              "El miedo a que vuelva es casi peor que el ataque mismo",
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-3 p-3 bg-amber-50 rounded-lg border-l-4 border-amber-400"
-              >
-                <p className="text-gray-800 text-sm">{item}</p>
-              </div>
-            ))}
-          </div>
-
-          <p className="mt-6 text-center text-gray-600 text-sm">
-            Si te identificas con alguna de estas experiencias,{" "}
-            <span className="font-semibold text-gray-900">
-              la terapia puede ayudarte a recuperar el control
-            </span>
-            .
-          </p>
-        </div>
-      </section>
-
-      {/* ─────────────────────────────────────────────────────────────────────────
-          QUÉ HAREMOS EN TERAPIA (TCC)
-          ───────────────────────────────────────────────────────────────────────── */}
-      <section className="px-4 py-8 md:py-12 max-w-3xl mx-auto">
-        <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2 text-center">
-          Qué haremos en terapia (TCC)
-        </h2>
-        <p className="text-gray-500 text-sm mb-6 text-center">
-          Un proceso estructurado para resultados concretos
-        </p>
-
-        <div className="grid gap-3">
-          {[
-            {
-              step: "1",
-              title: "Entender qué dispara y mantiene el pánico",
-              desc: "Identificamos patrones y situaciones específicas",
-            },
-            {
-              step: "2",
-              title: "Entrenar regulación fisiológica",
-              desc: "Técnicas de respiración y manejo de síntomas físicos",
-            },
-            {
-              step: "3",
-              title: "Trabajar interpretaciones catastróficas",
-              desc: 'Cambiar el "me voy a morir" por pensamientos más realistas',
-            },
-            {
-              step: "4",
-              title: "Exposición gradual y segura",
-              desc: "Recuperar confianza en situaciones que hoy evitas",
-            },
-          ].map((item) => (
-            <div
-              key={item.step}
-              className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl"
-            >
-              <div className="flex-shrink-0 w-10 h-10 bg-gray-900 text-white rounded-full flex items-center justify-center font-bold text-sm">
-                {item.step}
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-900 text-sm">
-                  {item.title}
-                </h3>
-                <p className="text-gray-500 text-xs">{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <p className="mt-4 text-xs text-gray-400 text-center italic">
-          Cada proceso es único. Los tiempos varían según cada caso.
-        </p>
-      </section>
-
-      {/* ─────────────────────────────────────────────────────────────────────────
-          CTA INTERMEDIO
-          ───────────────────────────────────────────────────────────────────────── */}
-      <section className="px-4 py-8 md:py-10 bg-gray-900">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-white text-lg font-medium mb-4">
-            ¿Listo/a para dar el primer paso?
-          </p>
-          <WhatsAppButton
-            href={WHATSAPP_HREF}
-            className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-lg"
-          >
-            Agendar mi sesión
-          </WhatsAppButton>
-          <p className="text-gray-400 text-sm mt-3">
-            Sin compromiso · Respuesta rápida
-          </p>
-        </div>
-      </section>
-
-      {/* ─────────────────────────────────────────────────────────────────────────
-          RESULTADOS ESPERABLES
-          ───────────────────────────────────────────────────────────────────────── */}
-      <section className="px-4 py-8 md:py-12">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 text-center">
-            Resultados que puedes esperar
-          </h2>
-
-          <div className="grid grid-cols-2 gap-3">
+          <div className="flex gap-3 overflow-x-auto pb-1 snap-x snap-mandatory scrollbar-hide -mx-4 px-4">
             {[
               {
-                icon: "🧘",
-                title: "Menos miedo",
-                desc: "A que vuelva el ataque",
-              },
-              {
-                icon: "💪",
-                title: "Más control",
-                desc: "Durante los síntomas",
-              },
-              {
-                icon: "🚶",
-                title: "Volver a hacer",
-                desc: "Lo que evitabas",
-              },
-              {
-                icon: "😌",
-                title: "Mayor calma",
-                desc: "En el día a día",
-              },
-            ].map((item, i) => (
-              <div key={i} className="p-4 bg-gray-50 rounded-xl text-center">
-                <span className="text-2xl mb-2 block">{item.icon}</span>
-                <h3 className="font-semibold text-gray-900 text-sm mb-1">
-                  {item.title}
-                </h3>
-                <p className="text-gray-500 text-xs">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <p className="mt-4 text-xs text-gray-400 text-center italic">
-            Los tiempos varían según cada caso. No hacemos promesas de resultados
-            específicos.
-          </p>
-        </div>
-      </section>
-
-      {/* ─────────────────────────────────────────────────────────────────────────
-          PRUEBA SOCIAL / CONFIANZA
-          ───────────────────────────────────────────────────────────────────────── */}
-      <section className="px-4 py-6 bg-gray-50 overflow-hidden">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-xs uppercase tracking-wider text-gray-500 font-medium mb-4 text-center">
-            Experiencias de otras personas
-          </p>
-
-          <div className="flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory scrollbar-hide -mx-4 px-4">
-            {[
-              {
-                text: "Llevaba meses con crisis constantes. Ahora entiendo qué las dispara y tengo herramientas para manejarlas.",
+                text: "Llevaba meses con crisis. Ahora tengo herramientas para manejarlas.",
                 initials: "LP",
-                time: "Hace 3 semanas",
               },
               {
-                text: "Pensé que nunca podría volver a subirme al metro. Hoy lo hago sin miedo. El proceso fue gradual pero funcionó.",
+                text: "Pensé que nunca volvería al metro. Hoy lo hago sin miedo.",
                 initials: "MR",
-                time: "Hace 1 mes",
               },
               {
-                text: "Lo más valioso fue entender que no me estaba volviendo loco. Las técnicas de respiración me cambiaron la vida.",
+                text: "Las técnicas de respiración me cambiaron la vida.",
                 initials: "AC",
-                time: "Hace 2 semanas",
               },
             ].map((testimonial, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 w-[280px] snap-start bg-white p-4 rounded-xl shadow-sm border border-gray-100"
+                className="flex-shrink-0 w-[260px] snap-start bg-white p-3 rounded-xl border border-gray-100"
               >
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center text-white text-xs font-medium">
+                  <div className="w-7 h-7 bg-gray-800 rounded-full flex items-center justify-center text-white text-xs font-medium">
                     {testimonial.initials}
                   </div>
-                  <span className="text-xs text-gray-400">
-                    {testimonial.time}
-                  </span>
+                  <div className="flex text-amber-400 text-xs">★★★★★</div>
                 </div>
                 <p className="text-sm text-gray-700 leading-relaxed">
                   &ldquo;{testimonial.text}&rdquo;
@@ -295,102 +117,173 @@ export default function PsicologoAtaquesDePanicoOnlinePage() {
               </div>
             ))}
           </div>
-
-          {/* Chips de confianza */}
-          <div className="flex flex-wrap justify-center gap-2 mt-6">
-            <span className="inline-flex items-center gap-1 text-xs bg-white px-3 py-1.5 rounded-full border border-gray-200">
-              <span className="text-green-500">✓</span> 100% online
-            </span>
-            <span className="inline-flex items-center gap-1 text-xs bg-white px-3 py-1.5 rounded-full border border-gray-200">
-              <span className="text-green-500">✓</span> Enfoque TCC
-            </span>
-            <span className="inline-flex items-center gap-1 text-xs bg-white px-3 py-1.5 rounded-full border border-gray-200">
-              <span className="text-green-500">✓</span> Confidencial
-            </span>
-            <span className="inline-flex items-center gap-1 text-xs bg-white px-3 py-1.5 rounded-full border border-gray-200">
-              <span className="text-green-500">✓</span> +280 personas atendidas
-            </span>
-          </div>
         </div>
       </section>
 
       {/* ─────────────────────────────────────────────────────────────────────────
-          CÓMO ES LA SESIÓN ONLINE
+          SÍNTOMAS - Reducido y más visual
           ───────────────────────────────────────────────────────────────────────── */}
-      <section className="px-4 py-8 md:py-12">
+      <section className="px-4 py-8 md:py-10">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 text-center">
-            Cómo es la sesión online
+          <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-4">
+            ¿Te pasa esto?
           </h2>
 
-          <div className="grid grid-cols-2 gap-3">
-            <div className="p-4 bg-gray-50 rounded-xl text-center">
-              <span className="text-2xl mb-2 block">📹</span>
-              <p className="text-sm font-medium text-gray-900">Videollamada</p>
-              <p className="text-xs text-gray-500">Sin descargar nada</p>
-            </div>
-            <div className="p-4 bg-gray-50 rounded-xl text-center">
-              <span className="text-2xl mb-2 block">⏱️</span>
-              <p className="text-sm font-medium text-gray-900">50 minutos</p>
-              <p className="text-xs text-gray-500">Sesión completa</p>
-            </div>
-            <div className="p-4 bg-gray-50 rounded-xl text-center">
-              <span className="text-2xl mb-2 block">🎧</span>
-              <p className="text-sm font-medium text-gray-900">Auriculares</p>
-              <p className="text-xs text-gray-500">Mayor privacidad</p>
-            </div>
-            <div className="p-4 bg-gray-50 rounded-xl text-center">
-              <span className="text-2xl mb-2 block">🏠</span>
-              <p className="text-sm font-medium text-gray-900">Lugar tranquilo</p>
-              <p className="text-xs text-gray-500">Desde tu casa</p>
+          <div className="space-y-2">
+            {[
+              "El corazón se acelera y sientes que te falta el aire",
+              "Miedo intenso a perder el control o desmayarte",
+              "Evitas lugares por miedo a que pase de nuevo",
+              "Vives pendiente de cuándo vendrá el próximo ataque",
+              "El miedo anticipatorio es casi peor que la crisis",
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="flex items-start gap-2.5 p-2.5 bg-amber-50/70 rounded-lg"
+              >
+                <span className="text-amber-500 mt-0.5">•</span>
+                <p className="text-gray-800 text-sm">{item}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-5 text-center text-gray-600 text-sm">
+            Si te identificas, <strong>la terapia puede ayudarte</strong>.
+          </p>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────────────────
+          QUÉ HAREMOS - Proceso simplificado
+          ───────────────────────────────────────────────────────────────────────── */}
+      <section className="px-4 py-8 md:py-10 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-1">
+            Cómo te puedo ayudar
+          </h2>
+          <p className="text-gray-500 text-sm mb-5">
+            Terapia Cognitivo-Conductual enfocada en resultados
+          </p>
+
+          <div className="space-y-3">
+            {[
+              {
+                num: "1",
+                title: "Entender qué dispara el pánico",
+                desc: "Identificamos patrones y situaciones específicas de tu caso",
+              },
+              {
+                num: "2",
+                title: "Técnicas de regulación",
+                desc: "Herramientas para manejar los síntomas físicos en el momento",
+              },
+              {
+                num: "3",
+                title: "Cambiar pensamientos catastróficos",
+                desc: "Trabajar las interpretaciones que alimentan el miedo",
+              },
+              {
+                num: "4",
+                title: "Recuperar tu vida",
+                desc: "Volver gradualmente a hacer lo que hoy evitas",
+              },
+            ].map((item) => (
+              <div
+                key={item.num}
+                className="flex items-start gap-3 p-3 bg-white rounded-xl border border-gray-100"
+              >
+                <div className="flex-shrink-0 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center font-semibold text-sm">
+                  {item.num}
+                </div>
+                <div>
+                  <h3 className="font-medium text-gray-900 text-sm">{item.title}</h3>
+                  <p className="text-gray-500 text-xs mt-0.5">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────────────────
+          RESULTADOS + SESIÓN - Combinado para reducir secciones
+          ───────────────────────────────────────────────────────────────────────── */}
+      <section className="px-4 py-8 md:py-10">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-4 text-center">
+            Lo que puedes lograr
+          </h2>
+
+          <div className="grid grid-cols-2 gap-2 mb-6">
+            {[
+              { icon: "🧘", text: "Menos miedo anticipatorio" },
+              { icon: "💪", text: "Control durante los síntomas" },
+              { icon: "🚶", text: "Volver a lugares que evitabas" },
+              { icon: "😌", text: "Mayor calma en el día a día" },
+            ].map((item, i) => (
+              <div key={i} className="p-3 bg-gray-50 rounded-xl text-center">
+                <span className="text-xl block mb-1">{item.icon}</span>
+                <p className="text-gray-700 text-xs font-medium">{item.text}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Info sesión inline */}
+          <div className="bg-gray-900 rounded-xl p-4 text-center">
+            <p className="text-gray-400 text-xs uppercase tracking-wide mb-2">Tu sesión online</p>
+            <div className="flex justify-center gap-6 text-white">
+              <div>
+                <p className="text-lg font-bold">📹</p>
+                <p className="text-xs text-gray-400">Videollamada</p>
+              </div>
+              <div>
+                <p className="text-lg font-bold">50&apos;</p>
+                <p className="text-xs text-gray-400">Duración</p>
+              </div>
+              <div>
+                <p className="text-lg font-bold">🔒</p>
+                <p className="text-xs text-gray-400">Confidencial</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ─────────────────────────────────────────────────────────────────────────
-          FAQ
+          FAQ - Reducido a 4 preguntas clave
           ───────────────────────────────────────────────────────────────────────── */}
-      <section className="px-4 py-8 md:py-12 bg-gray-50">
+      <section className="px-4 py-8 md:py-10 bg-gray-50">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 text-center">
+          <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-4">
             Preguntas frecuentes
           </h2>
 
           <div className="space-y-2">
             {[
               {
+                q: "¿Funciona la terapia online para ataques de pánico?",
+                a: "Sí. Estudios demuestran que la TCC online es igual de efectiva que presencial para trastorno de pánico.",
+              },
+              {
                 q: "¿Qué hago si me da un ataque antes de la sesión?",
-                a: "Puedes escribirme por WhatsApp y te doy una técnica rápida para ese momento. Si necesitas reprogramar, lo hacemos sin problema.",
+                a: "Puedes escribirme por WhatsApp y te doy una técnica rápida. Si necesitas reprogramar, lo hacemos sin problema.",
               },
               {
-                q: "¿Funciona la terapia online para esto?",
-                a: "Sí. La TCC online ha demostrado efectividad comparable a la presencial para trastorno de pánico. Lo importante es el trabajo que hacemos juntos.",
+                q: "¿Cuántas sesiones necesito?",
+                a: "Varía según cada caso. Algunos notan cambios en las primeras sesiones, otros necesitan más tiempo. Lo evaluamos juntos.",
               },
               {
-                q: "¿Cuántas sesiones suelen ser?",
-                a: "Varía según cada persona. Algunos notan cambios desde las primeras sesiones, otros necesitan un proceso más largo. Lo vamos evaluando juntos.",
-              },
-              {
-                q: "¿Cómo agendamos?",
-                a: "Me escribes por WhatsApp, coordinamos día y hora que te acomode, y te envío el enlace de videollamada antes de la sesión.",
-              },
-              {
-                q: "¿Formas de pago?",
-                a: "Transferencia bancaria antes de la sesión. Te envío los datos al momento de coordinar.",
-              },
-              {
-                q: "¿Es confidencial?",
-                a: "Absolutamente. Todo lo que conversamos queda entre nosotros. La confidencialidad es un principio ético fundamental.",
+                q: "¿Cómo pago?",
+                a: "Transferencia bancaria antes de la sesión. Te envío los datos al coordinar la hora.",
               },
             ].map((item, i) => (
               <details
                 key={i}
                 className="p-3 bg-white rounded-xl group border border-gray-100"
               >
-                <summary className="cursor-pointer font-medium text-gray-900 text-sm flex justify-between items-center">
-                  {item.q}
-                  <span className="text-gray-400 group-open:rotate-180 transition-transform text-xs">
+                <summary className="cursor-pointer font-medium text-gray-900 text-sm flex justify-between items-center gap-2">
+                  <span>{item.q}</span>
+                  <span className="text-gray-400 group-open:rotate-180 transition-transform text-xs flex-shrink-0">
                     ▼
                   </span>
                 </summary>
@@ -404,28 +297,24 @@ export default function PsicologoAtaquesDePanicoOnlinePage() {
       </section>
 
       {/* ─────────────────────────────────────────────────────────────────────────
-          CTA FINAL
+          CTA FINAL - Simplificado
           ───────────────────────────────────────────────────────────────────────── */}
-      <section className="px-4 py-10 md:py-14 bg-gradient-to-b from-gray-900 to-gray-950">
+      <section className="px-4 py-10 md:py-12 bg-gray-900">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-green-400 text-sm font-medium mb-2">
-            ✓ Cupos disponibles esta semana
-          </p>
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-            Recupera el control de tu vida
+          <h2 className="text-xl md:text-2xl font-bold text-white mb-2">
+            ¿Listo/a para recuperar el control?
           </h2>
-          <p className="text-gray-400 mb-6 text-sm max-w-md mx-auto">
-            Escríbeme ahora y te respondo en menos de 2 horas. Podemos empezar
-            esta misma semana.
+          <p className="text-gray-400 mb-5 text-sm">
+            Escríbeme y coordinamos tu primera sesión esta semana.
           </p>
 
-          <div className="bg-gray-800/50 rounded-2xl p-5 max-w-sm mx-auto">
-            <div className="flex items-center justify-center gap-3 mb-4">
+          <div className="bg-gray-800/60 rounded-2xl p-4 max-w-xs mx-auto">
+            <div className="flex items-center justify-center gap-3 mb-3">
               <Image
                 src="/yo.png"
                 alt="Gonzalo Pedrosa"
-                width={48}
-                height={48}
+                width={44}
+                height={44}
                 className="rounded-full border-2 border-green-500"
               />
               <div className="text-left">
@@ -438,33 +327,33 @@ export default function PsicologoAtaquesDePanicoOnlinePage() {
               href={WHATSAPP_HREF}
               className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-lg justify-center"
             >
-              Agendar mi sesión · $35.000
+              Agendar · $35.000
             </WhatsAppButton>
 
-            <p className="text-gray-500 text-xs mt-3">
-              Sin compromiso · Confidencial
+            <p className="text-gray-500 text-xs mt-2">
+              Sin compromiso · Respuesta en menos de 2h
             </p>
           </div>
         </div>
       </section>
 
       {/* Footer spacer for sticky CTA on mobile */}
-      <div className="h-20 md:hidden" aria-hidden="true" />
+      <div className="h-[72px] md:hidden" aria-hidden="true" />
 
       {/* ─────────────────────────────────────────────────────────────────────────
-          STICKY CTA MOBILE
+          STICKY CTA MOBILE - Más compacto
           ───────────────────────────────────────────────────────────────────────── */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-[0_-2px_10px_rgba(0,0,0,0.08)] px-4 py-2.5 pb-[calc(0.625rem+env(safe-area-inset-bottom))]">
         <div className="flex items-center gap-3">
-          <div className="flex-1">
-            <p className="text-xs text-gray-500">Sesión online</p>
-            <p className="text-lg font-bold text-gray-900">$35.000</p>
+          <div className="flex-1 min-w-0">
+            <p className="text-xs text-gray-500 truncate">Sesión online · 50 min</p>
+            <p className="text-base font-bold text-gray-900">$35.000</p>
           </div>
           <WhatsAppButton
             href={WHATSAPP_HREF}
-            className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md px-6"
+            className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md px-5 text-sm"
           >
-            Agendar ahora
+            Agendar
           </WhatsAppButton>
         </div>
       </div>
