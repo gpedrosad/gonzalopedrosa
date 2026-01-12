@@ -17,13 +17,20 @@ export function WhatsAppButton({
   children,
   className = "",
 }: WhatsAppButtonProps) {
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+
     // Tracking GTM
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       event: "whatsapp_lead",
       label: href,
     });
+
+    // Timeout para que GTM alcance a disparar antes de redirigir
+    setTimeout(() => {
+      window.open(href, "_blank", "noopener,noreferrer");
+    }, 300);
   };
 
   return (
