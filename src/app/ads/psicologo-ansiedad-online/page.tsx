@@ -113,7 +113,7 @@ export default function PsicologoAnsiedadOnlinePage() {
                   </div>
                   <span className="text-xs text-gray-400">{testimonial.time}</span>
                 </div>
-                <p className="text-sm text-gray-700 leading-relaxed">"{testimonial.text}"</p>
+                <p className="text-sm text-gray-700 leading-relaxed">&ldquo;{testimonial.text}&rdquo;</p>
               </div>
             ))}
           </div>
