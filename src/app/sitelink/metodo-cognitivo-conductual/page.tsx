@@ -64,7 +64,7 @@ export default function MetodoCognitivoConductualPage() {
 
           <p className="text-gray-700 leading-relaxed">
             Cuando entendemos esta relación, podemos trabajar en modificar los pensamientos 
-            y conductas que mantienen el problema. No se trata de "pensar positivo", sino de 
+            y conductas que mantienen el problema. No se trata de &ldquo;pensar positivo&rdquo;, sino de 
             aprender a pensar de forma más realista y útil.
           </p>
         </div>
@@ -123,7 +123,7 @@ export default function MetodoCognitivoConductualPage() {
 
           <p className="text-gray-700 leading-relaxed mb-4">
             Una de las cosas que más valoran las personas que trabajan conmigo es que la TCC 
-            no es solo "hablar de lo que te pasa". Es un proceso activo donde aprendes 
+            no es solo &ldquo;hablar de lo que te pasa&rdquo;. Es un proceso activo donde aprendes 
             herramientas concretas que puedes usar en tu día a día.
           </p>
 
