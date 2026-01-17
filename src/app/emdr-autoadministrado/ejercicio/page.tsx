@@ -42,7 +42,7 @@ export default function EjercicioEmdrPage() {
           <ol className="space-y-2 text-gray-700 text-sm">
             <li><strong>1.</strong> Identifica la situación o emoción que deseas procesar.</li>
             <li><strong>2.</strong> Ajusta la velocidad y duración del set según tu preferencia.</li>
-            <li><strong>3.</strong> Presiona "Iniciar" y sigue el punto con tus ojos.</li>
+            <li><strong>3.</strong> Presiona &quot;Iniciar&quot; y sigue el punto con tus ojos.</li>
             <li><strong>4.</strong> Al terminar cada set, toma una pausa y observa qué pensamientos o emociones surgen.</li>
             <li><strong>5.</strong> Continúa con el siguiente set cuando estés listo.</li>
             <li><strong>6.</strong> Realiza entre 3-6 sets por sesión, o hasta que sientas alivio.</li>
