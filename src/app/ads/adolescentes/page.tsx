@@ -101,7 +101,7 @@ export default function Page() {
             Sesiones de 50 minutos por videollamada.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 mb-4">
+          <div className="flex flex-col sm:flex-row gap-3 mb-3">
             <WhatsAppButton
               href={WHATSAPP_HREF}
               className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md"
@@ -109,6 +109,10 @@ export default function Page() {
               Consultar disponibilidad
             </WhatsAppButton>
           </div>
+
+          <p className="text-sm text-green-700 font-medium mb-2">
+            ✓ Agenda inicial en menos de 24 horas
+          </p>
 
           <p className="text-sm text-gray-500 flex items-center gap-2">
             <span className="inline-block w-2 h-2 bg-green-500 rounded-full"></span>
@@ -292,6 +296,9 @@ export default function Page() {
         {/* CTA intermedio */}
         <section className="px-4 py-8 md:py-10 bg-gray-900">
           <div className="max-w-2xl mx-auto text-center">
+            <p className="text-green-400 text-xs font-medium uppercase tracking-wider mb-2">
+              Cupos limitados
+            </p>
             <p className="text-white text-lg font-medium mb-4">
               ¿Buscás ayuda profesional para tu hijo/a?
             </p>
@@ -302,7 +309,7 @@ export default function Page() {
               Consultá disponibilidad por WhatsApp
             </WhatsAppButton>
             <p className="text-gray-400 text-sm mt-3">
-              Respuesta rápida · Sin compromiso
+              Sin lista de espera · Sin compromiso
             </p>
           </div>
         </section>
@@ -403,6 +410,9 @@ export default function Page() {
 
         {/* CTA Final */}
         <section className="px-4 py-12 md:py-16 max-w-2xl mx-auto text-center">
+          <p className="text-green-600 text-sm font-medium mb-3">
+            Horarios disponibles para esta semana
+          </p>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             Consultá disponibilidad por WhatsApp
           </h2>
@@ -419,7 +429,7 @@ export default function Page() {
           </WhatsAppButton>
 
           <p className="text-sm text-gray-500 mt-4">
-            Psicólogo online para adolescentes · Respuesta rápida · Horarios flexibles
+            Agenda inicial en menos de 24 horas · Sin lista de espera
           </p>
         </section>
 
@@ -428,6 +438,10 @@ export default function Page() {
 
         {/* Sticky CTA Mobile */}
         <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-t border-gray-200 p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
+          <div className="flex items-center justify-between mb-2">
+            <p className="text-xs text-green-600 font-medium">Cupos limitados</p>
+            <p className="text-xs text-gray-500">Sin lista de espera</p>
+          </div>
           <WhatsAppButton
             href={WHATSAPP_HREF}
             className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
