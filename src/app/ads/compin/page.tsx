@@ -6,7 +6,7 @@ import { StickyWhatsAppCTA } from "./StickyWhatsAppCTA";
 export const metadata: Metadata = {
   title: "Informe Psicológico COMPIN | Evaluación Online",
   description:
-    "Evaluación clínica e informe psicológico firmado para COMPIN por salud mental laboral. Consultá por WhatsApp.",
+    "Evaluación clínica e informe psicológico firmado para COMPIN por salud mental laboral. Consulta por WhatsApp.",
   robots: {
     index: false,
     follow: false,
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Informe Psicológico COMPIN | Evaluación Online",
     description:
-      "Evaluación clínica e informe psicológico firmado para COMPIN por salud mental laboral. Consultá por WhatsApp.",
+      "Evaluación clínica e informe psicológico firmado para COMPIN por salud mental laboral. Consulta por WhatsApp.",
     url: "https://gonzalopedrosa.cl/ads/compin",
     type: "website",
     images: [
@@ -133,7 +133,7 @@ const INCLUYE = [
 const PASOS = [
   {
     step: "1",
-    title: "WhatsApp: describís tu caso",
+    title: "WhatsApp: describes tu caso",
     desc: "Cuéntame brevemente tu situación por WhatsApp. Te respondo rápido.",
   },
   {
@@ -304,7 +304,7 @@ export default function CompinPage() {
         <section className="px-4 py-8 bg-gray-900">
           <div className="max-w-2xl mx-auto text-center">
             <p className="text-white text-base font-medium mb-4">
-              ¿Necesitás un informe psicológico para COMPIN?
+              ¿Necesitas un informe psicológico para COMPIN?
             </p>
             <ServerWhatsAppButton
               href={WHATSAPP_HREF}
