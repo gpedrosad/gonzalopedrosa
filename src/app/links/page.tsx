@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import sitemapFn from "../sitemap";
 
 interface Evaluation {
@@ -23,6 +23,17 @@ export default function LinksPage() {
   const [loadingPath, setLoadingPath] = useState<string | null>(null);
   const [evaluatingPath, setEvaluatingPath] = useState<string | null>(null);
   const [evaluations, setEvaluations] = useState<Record<string, Evaluation>>({});
+  const [isLocalhost, setIsLocalhost] = useState(false);
+
+  // Detectar si estamos en localhost
+  useEffect(() => {
+    setIsLocalhost(
+      typeof window !== "undefined" && 
+      (window.location.hostname === "localhost" || 
+       window.location.hostname === "127.0.0.1" ||
+       window.location.hostname.includes("local"))
+    );
+  }, []);
 
   const handleClick = (path: string) => {
     setClicks((prev) => ({
@@ -155,6 +166,12 @@ export default function LinksPage() {
     e.preventDefault();
     e.stopPropagation();
 
+    // Verificar si estamos en localhost
+    if (!isLocalhost) {
+      alert("⚠️ La evaluación con GPT solo está disponible en desarrollo local");
+      return;
+    }
+
     setEvaluatingPath(path);
 
     try {
@@ -281,19 +298,19 @@ export default function LinksPage() {
 
             <button
               onClick={(e) => handleEvaluate(path, e)}
-              disabled={isEvaluating}
-              title="Evaluar con GPT"
+              disabled={isEvaluating || !isLocalhost}
+              title={isLocalhost ? "Evaluar con GPT" : "Solo disponible en local"}
               style={{
                 padding: "0.375rem 0.5rem",
-                backgroundColor: isEvaluating ? "#8b5cf6" : "#7c3aed",
-                color: "#fff",
+                backgroundColor: isEvaluating ? "#8b5cf6" : !isLocalhost ? "#d1d5db" : "#7c3aed",
+                color: !isLocalhost ? "#6b7280" : "#fff",
                 borderRadius: "6px",
                 fontSize: "0.75rem",
                 fontWeight: 500,
                 border: "none",
-                cursor: isEvaluating ? "wait" : "pointer",
+                cursor: isEvaluating ? "wait" : !isLocalhost ? "not-allowed" : "pointer",
                 transition: "all 150ms",
-                opacity: isEvaluating ? 0.7 : 1,
+                opacity: isEvaluating ? 0.7 : !isLocalhost ? 0.5 : 1,
               }}
             >
               {isEvaluating ? "..." : "🤖"}
@@ -419,7 +436,7 @@ export default function LinksPage() {
               Panel de Links
             </h1>
             <p style={{ color: "#666", fontSize: "0.875rem" }}>
-              {links.length} páginas · 📄 copiar · 🤖 evaluar SEO con GPT
+              {links.length} páginas · 📄 copiar · 🤖 evaluar SEO con GPT{!isLocalhost && " (solo local)"}
             </p>
           </div>
           <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>
