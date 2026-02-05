@@ -2,22 +2,24 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Image from "next/image";
 import { WhatsAppButton } from "../../components/WhatsAppButton";
+import { StickyWhatsAppAfterFirstCta } from "./StickyWhatsAppAfterFirstCta";
 
 export const metadata: Metadata = {
-  title: "Terapia de Pareja Online | Psicólogo para Relaciones",
+  title: "Terapia de Pareja Online | Si todo termina en pelea",
   description:
     "Terapia de pareja online para mejorar comunicación, recuperar acuerdos y abordar conflictos sin ataques. Sesiones por videollamada en un espacio confidencial.",
-  alternates: {
-    canonical: "/ads/terapia-pareja",
-  },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
   },
   openGraph: {
-    title: "Terapia de Pareja Online | Psicólogo para Relaciones",
+    title: "Terapia de Pareja Online | Si todo termina en pelea",
     description:
-      "Acompañamiento profesional para parejas que quieren ordenar conflictos, mejorar la comunicación y tomar decisiones con más claridad.",
+      "Acompañamiento profesional para parejas que buscan ordenar conflictos, mejorar su comunicación y tomar decisiones con más claridad.",
     url: "https://gonzalopedrosa.cl/ads/terapia-pareja",
     type: "website",
     images: [
@@ -33,6 +35,7 @@ export const metadata: Metadata = {
 
 const WHATSAPP_HREF =
   "https://wa.me/56968257817?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20de%20terapia%20de%20pareja%20online";
+const FIRST_CTA_ID = "ads-terapia-pareja-first-cta";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -40,26 +43,34 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "¿Cómo funciona la terapia de pareja online?",
+      name: "¿Cuánto dura y cuál es el valor de la sesión de pareja online?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Las sesiones son por videollamada en un espacio confidencial. En la primera sesión revisamos el motivo de consulta, objetivos y acuerdos iniciales de trabajo.",
+        text: "La sesión de pareja dura 50 minutos y tiene un valor de $45.000 CLP. Se realiza por videollamada en un espacio confidencial.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Debemos estar juntos en el mismo lugar para la sesión?",
+      name: "¿Se puede hacer una sesión individual primero?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No necesariamente. Pueden conectarse desde el mismo lugar o desde ubicaciones distintas, siempre que ambos tengan buena conexión y privacidad.",
+        text: "Sí. Si la pareja lo necesita, podemos coordinar una sesión individual previa para aclarar motivo de consulta y objetivos antes de la sesión de pareja.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Qué temas se trabajan en terapia de pareja?",
+      name: "¿Y si uno habla mucho y el otro poco?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Comunicación, discusiones frecuentes, distancia emocional, celos, confianza, acuerdos de convivencia y toma de decisiones en etapas difíciles de la relación.",
+        text: "La sesión se estructura para dar espacio a ambos. Trabajo con turnos de intervención y foco en objetivos para que las dos voces puedan participar.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Y si estamos al borde de separarnos?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "También se puede trabajar en ese escenario. El foco es ordenar el conflicto, entender patrones y tomar decisiones con mayor claridad y menos impulsividad.",
       },
     },
     {
@@ -82,8 +93,8 @@ export default function TerapiaParejaAdsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <main className="min-h-screen bg-white">
-        <section className="px-4 pt-10 pb-8 md:pt-16 md:pb-12 max-w-3xl mx-auto">
+      <main className="min-h-screen bg-white pb-24 md:pb-0">
+        <section className="px-4 pt-7 pb-8 md:pt-14 md:pb-12 max-w-3xl mx-auto">
           <div className="flex items-center gap-3 mb-5">
             <Image
               src="/yo.png"
@@ -99,44 +110,60 @@ export default function TerapiaParejaAdsPage() {
             </div>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-4 leading-tight">
-            Terapia de pareja online para recuperar diálogo y claridad
-          </h1>
-
-          <p className="text-lg text-gray-600 mb-5 leading-relaxed">
-            Si sienten que cada conversación termina en pelea, hay distancia
-            emocional o no logran ponerse de acuerdo, este espacio puede ayudar.
-            Trabajamos para bajar la tensión, ordenar el conflicto y construir
-            conversaciones más útiles.
+          <p className="text-xs font-medium text-gray-500 uppercase tracking-wider mb-3">
+            Terapia de pareja online · Enfoque TCC
           </p>
 
-          <div className="flex flex-wrap gap-2 mb-5">
-            {[
-              "Videollamada confidencial",
-              "Sesiones estructuradas",
-              "Enfoque práctico",
-              "Horarios flexibles",
-            ].map((item, index) => (
-              <span
-                key={index}
-                className="inline-flex items-center text-sm text-gray-700 bg-gray-100 px-3 py-1.5 rounded-full"
-              >
-                {item}
-              </span>
-            ))}
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-3 leading-[1.15]">
+            Si cada conversación termina en pelea
+          </h1>
+
+          <p className="text-base md:text-lg text-gray-600 mb-5 leading-relaxed">
+            Esta terapia de pareja online les ayuda a bajar la tensión, hablar
+            mejor y tomar decisiones con más claridad, sin seguir en el mismo
+            ciclo de discusiones.
+          </p>
+
+          <div className="mb-5 space-y-1.5">
+            <p className="text-base md:text-lg font-semibold text-gray-900">
+              50 min · Online · $45.000 CLP (pareja)
+            </p>
+            <p className="text-sm md:text-base text-gray-600">
+              Opción de 1 sesión individual previa si lo necesitan
+            </p>
           </div>
 
-          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4 mb-3">
-            <p className="text-sm text-gray-600 mb-3">
-              Primera conversación por WhatsApp para revisar disponibilidad y
-              resolver dudas antes de agendar.
+          <div
+            id={FIRST_CTA_ID}
+            className="bg-gray-50 border border-gray-200 rounded-2xl p-4 mb-3"
+          >
+            <p className="text-sm md:text-base text-gray-700 mb-3 leading-relaxed">
+              Escríbeme por WhatsApp para revisar disponibilidad, contarme
+              brevemente el motivo y coordinar la primera sesión (pareja o
+              individual previa).
             </p>
             <WhatsAppButton
               href={WHATSAPP_HREF}
               className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
             >
-              Agendar terapia de pareja online
+              Agendar por WhatsApp
             </WhatsAppButton>
+          </div>
+
+          <div className="flex flex-wrap gap-2 mb-5">
+            {[
+              "Videollamada privada",
+              "Sesión estructurada",
+              "Enfoque TCC",
+              "Horarios flexibles",
+            ].map((item, index) => (
+              <span
+                key={index}
+                className="inline-flex items-center text-xs sm:text-sm text-gray-700 bg-gray-100 px-3 py-1.5 rounded-full"
+              >
+                {item}
+              </span>
+            ))}
           </div>
 
           <p className="text-sm text-gray-500 flex items-center gap-2">
@@ -147,9 +174,13 @@ export default function TerapiaParejaAdsPage() {
 
         <section className="px-4 py-8 md:py-12 bg-gray-50">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-5">
-              Qué puede aportar este proceso
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-2">
+              ¿En qué les puede ayudar este proceso?
             </h2>
+            <p className="text-gray-600 mb-6">
+              El objetivo no es encontrar culpables, sino crear acuerdos que sí
+              puedan sostener en la vida real.
+            </p>
 
             <div className="grid sm:grid-cols-2 gap-3">
               {[
@@ -180,9 +211,13 @@ export default function TerapiaParejaAdsPage() {
         </section>
 
         <section className="px-4 py-8 md:py-12 max-w-3xl mx-auto">
-          <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-5">
-            Para quién es y para quién no
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-2">
+            ¿Esta terapia es para ustedes?
           </h2>
+          <p className="text-gray-600 mb-6">
+            Puede servir mucho cuando ambos quieren entender qué está pasando y
+            probar una forma distinta de conversar.
+          </p>
 
           <div className="grid md:grid-cols-2 gap-4">
             <div className="bg-green-50 border border-green-100 rounded-xl p-5">
@@ -223,9 +258,13 @@ export default function TerapiaParejaAdsPage() {
 
         <section className="px-4 py-8 md:py-12 bg-gray-50">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-5">
-              Cómo funciona la terapia online
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-2">
+              ¿Cómo funciona la terapia de pareja online?
             </h2>
+            <p className="text-gray-600 mb-6">
+              Un proceso claro, paso a paso, para bajar la tensión y avanzar con
+              objetivos concretos.
+            </p>
 
             <div className="grid gap-4">
               {[
@@ -265,9 +304,64 @@ export default function TerapiaParejaAdsPage() {
         </section>
 
         <section className="px-4 py-8 md:py-12 max-w-3xl mx-auto">
-          <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-5">
-            Refuerzo de confianza
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-2">
+            Dudas frecuentes antes de agendar
           </h2>
+          <p className="text-gray-600 mb-6">
+            Respuestas claras para tomar una decisión con tranquilidad.
+          </p>
+
+          <div className="grid gap-3">
+            {[
+              {
+                question: "¿Y si uno habla mucho y el otro poco?",
+                answer:
+                  "La sesión se ordena con turnos y objetivos concretos. Así ambas voces tienen espacio y la conversación no queda tomada por una sola parte.",
+              },
+              {
+                question: "¿Y si estamos al borde de separarnos?",
+                answer:
+                  "También se puede trabajar en ese punto. El objetivo es bajar la intensidad del conflicto y tomar decisiones con más claridad.",
+              },
+              {
+                question: "¿Qué pasa si discutimos en sesión?",
+                answer:
+                  "Es algo que puede ocurrir. Se interviene para ordenar la conversación y transformar la discusión en trabajo útil para la pareja.",
+              },
+              {
+                question: "¿Se puede hacer una sesión individual primero?",
+                answer:
+                  "Sí. Si lo necesitan, podemos iniciar con 1 sesión individual para clarificar motivo y objetivos antes de la sesión de pareja.",
+              },
+              {
+                question: "¿Esto garantiza seguir juntos?",
+                answer:
+                  "No. No se prometen resultados. Se ofrece un proceso profesional para ordenar el conflicto, construir acuerdos y decidir con mayor claridad.",
+              },
+            ].map((item) => (
+              <article
+                key={item.question}
+                className="bg-white border border-gray-200 rounded-xl p-4"
+              >
+                <h3 className="font-semibold text-gray-900 mb-1.5">
+                  {item.question}
+                </h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {item.answer}
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="px-4 py-8 md:py-12 max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-2">
+            Quién les va a acompañar
+          </h2>
+          <p className="text-gray-600 mb-6">
+            Trabajo con enfoque cognitivo-conductual para transformar discusiones
+            repetidas en acuerdos más claros y sostenibles.
+          </p>
 
           <div className="bg-white border border-gray-200 rounded-2xl p-5 mb-5">
             <div className="flex items-start gap-4">
@@ -295,9 +389,9 @@ export default function TerapiaParejaAdsPage() {
           </div>
 
           <div className="bg-gray-900 rounded-2xl p-6 text-center">
-            <h2 className="text-xl font-semibold text-white mb-3">
+            <h3 className="text-xl font-semibold text-white mb-3">
               Si quieren empezar a ordenar la relación, conversemos
-            </h2>
+            </h3>
             <p className="text-gray-300 text-sm mb-5 max-w-xl mx-auto">
               El primer paso puede ser simple: un mensaje para revisar su caso y
               coordinar la primera sesión.
@@ -312,6 +406,11 @@ export default function TerapiaParejaAdsPage() {
           </div>
         </section>
       </main>
+
+      <StickyWhatsAppAfterFirstCta
+        href={WHATSAPP_HREF}
+        firstCtaId={FIRST_CTA_ID}
+      />
     </>
   );
 }
