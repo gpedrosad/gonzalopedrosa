@@ -8,7 +8,7 @@ import type { NextRequest } from "next/server";
  * NOTA CSP: Los wildcards como *.doubleclick.net NO cubren subdominios anidados
  * (ej: googleads.g.doubleclick.net). Por eso se agregan explícitamente.
  */
-export function middleware(request: NextRequest) {
+export function middleware(_request: NextRequest) {
   const isDev = process.env.NODE_ENV === "development";
 
   // CSP relajada: permite scripts inline para compatibilidad con GTM
@@ -44,6 +44,6 @@ export function middleware(request: NextRequest) {
  */
 export const config = {
   matcher: [
-    "/((?!_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|.*\\.png$|.*\\.jpg$|.*\\.svg$|.*\\.ico$).*)",
+    "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|.*\\.(?:png|jpg|jpeg|svg|ico|webp|avif|gif|xml|txt)$).*)",
   ],
 };

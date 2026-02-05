@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { toCanonicalUrl } from "@/lib/site-config";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://gonzalopedrosa.cl/sitemap.xml",
+    sitemap: toCanonicalUrl("/sitemap.xml"),
   };
 }

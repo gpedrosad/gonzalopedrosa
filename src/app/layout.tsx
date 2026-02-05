@@ -5,6 +5,7 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import { CANONICAL_ORIGIN } from "@/lib/site-config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,20 +22,13 @@ const geistMono = Geist_Mono({
  * Las páginas individuales pueden sobrescribir estos valores.
  */
 export const metadata: Metadata = {
-  metadataBase: new URL("https://gonzalopedrosa.cl"),
-  title: {
-    default: "Gonzalo Pedrosa | Psicólogo",
-    template: "%s | Gonzalo Pedrosa",
-  },
+  metadataBase: new URL(CANONICAL_ORIGIN),
+  title: "Gonzalo Pedrosa | Psicólogo",
   description:
     "Psicólogo con más de 7 años de experiencia. Atención profesional para ansiedad, depresión, estrés y más. Terapia cognitivo-conductual. Sesiones online y presenciales.",
-  alternates: {
-    canonical: "/",
-    languages: { "es-CL": "/" },
-  },
   openGraph: {
     type: "website",
-    url: "https://gonzalopedrosa.cl/",
+    url: `${CANONICAL_ORIGIN}/`,
     title: "Gonzalo Pedrosa | Psicólogo",
     description:
       "Psicólogo con enfoque cognitivo-conductual. Ansiedad, depresión, estrés. Sesiones online y presenciales.",

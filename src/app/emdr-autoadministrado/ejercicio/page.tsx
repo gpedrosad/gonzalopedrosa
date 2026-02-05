@@ -5,6 +5,9 @@ import EmdrBilateralPlayer from './EmdrBilateralPlayer';
 export const metadata: Metadata = {
   title: 'Ejercicio EMDR autoadministrado | Estimulación bilateral visual',
   description: 'Ejercicio práctico de EMDR con estimulación bilateral visual. Configura velocidad y duración de sets para tu sesión de procesamiento emocional.',
+  alternates: {
+    canonical: "/emdr-autoadministrado/ejercicio",
+  },
 };
 
 export default function EjercicioEmdrPage() {

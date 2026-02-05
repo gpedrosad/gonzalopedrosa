@@ -1,9 +1,34 @@
 import type { NextConfig } from "next";
+import {
+  CANONICAL_HOST,
+  TRAILING_SLASH,
+} from "./src/lib/site-config";
 
 const nextConfig: NextConfig = {
+  trailingSlash: TRAILING_SLASH,
   // Formatos modernos de imagen para mejor performance
   images: {
     formats: ["image/avif", "image/webp"],
+  },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: `www.${CANONICAL_HOST}` }],
+        destination: `https://${CANONICAL_HOST}/:path*`,
+        permanent: true,
+      },
+      {
+        source: "/index",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/index.html",
+        destination: "/",
+        permanent: true,
+      },
+    ];
   },
   // Headers de seguridad (CSP se maneja en middleware.ts con nonce)
   async headers() {

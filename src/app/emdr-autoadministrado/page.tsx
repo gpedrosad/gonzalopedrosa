@@ -4,6 +4,9 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'EMDR autoadministrado online | Estimulación bilateral visual',
   description: 'Herramienta de EMDR autoadministrado con estimulación bilateral visual. Ejercicio guiado para procesar emociones de forma segura. No reemplaza terapia profesional. Uso responsable y consciente.',
+  alternates: {
+    canonical: "/emdr-autoadministrado",
+  },
 };
 
 export default function EmdrAutoadministradoPage() {
