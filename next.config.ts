@@ -1,6 +1,5 @@
 import type { NextConfig } from "next";
 import {
-  CANONICAL_HOST,
   TRAILING_SLASH,
 } from "./src/lib/site-config";
 
@@ -12,12 +11,6 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: `www.${CANONICAL_HOST}` }],
-        destination: `https://${CANONICAL_HOST}/:path*`,
-        permanent: true,
-      },
       {
         source: "/index",
         destination: "/",
