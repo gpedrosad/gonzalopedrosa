@@ -1,0 +1,8 @@
+.ads-lcp-root main > section:not(:first-of-type) {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 920px;
+}
+
+.ads-lcp-root .animate-pulse {
+  animation: none;
+}

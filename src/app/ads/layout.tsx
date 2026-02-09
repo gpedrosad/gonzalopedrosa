@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import "./styles.css";
 
 /**
  * Layout específico para landing pages de Google Ads.
@@ -23,13 +24,13 @@ export default function AdsLayout({
 }) {
   return (
     <>
-      {children}
+      <div className="ads-lcp-root">{children}</div>
 
       {/*
         Delegación global para tracking de clics WhatsApp en /ads.
         Evita hidratar cada botón individualmente y conserva eventCallback/eventTimeout.
       */}
-      <Script id="ads-whatsapp-tracking" strategy="afterInteractive">
+      <Script id="ads-whatsapp-tracking" strategy="lazyOnload">
         {`
           (function () {
             if (window.__adsWhatsappTrackingInit) return;
