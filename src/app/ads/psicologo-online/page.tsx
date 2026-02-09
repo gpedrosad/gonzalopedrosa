@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import Script from "next/script";
-import Image from "next/image";
-import { WhatsAppButton } from "../../components/WhatsAppButton";
+import { AdsProfileImage } from "../components/AdsProfileImage";
+import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
 
 export const metadata: Metadata = {
   title: "Psicólogo Online Chile | Terapia por Videollamada | Gonzalo Pedrosa",
@@ -75,7 +74,7 @@ const faqSchema = {
 export default function Page() {
   return (
     <>
-      <Script
+      <script
         id="faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -85,8 +84,7 @@ export default function Page() {
         {/* Hero Section */}
         <section className="px-4 pt-12 pb-10 md:pt-20 md:pb-16 max-w-2xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
-            <Image
-              src="/yo.png"
+            <AdsProfileImage
               alt="Gonzalo Pedrosa - Psicólogo Online Chile"
               width={56}
               height={56}
@@ -110,12 +108,12 @@ export default function Page() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 mb-4">
-            <WhatsAppButton
+            <AdsWhatsAppButton
               href={WHATSAPP_HREF}
               className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md"
             >
               Agendar sesión online
-            </WhatsAppButton>
+            </AdsWhatsAppButton>
           </div>
 
           <p className="text-sm text-gray-500 flex items-center gap-2">
@@ -175,8 +173,7 @@ export default function Page() {
           </h2>
 
           <div className="flex flex-col sm:flex-row gap-6 items-start">
-            <Image
-              src="/yo.png"
+            <AdsProfileImage
               alt="Gonzalo Pedrosa - Psicólogo por Videollamada"
               width={120}
               height={120}
@@ -302,12 +299,12 @@ export default function Page() {
             <p className="text-white text-lg font-medium mb-4">
               ¿Buscas un psicólogo online en Chile?
             </p>
-            <WhatsAppButton
+            <AdsWhatsAppButton
               href={WHATSAPP_HREF}
               className="bg-white hover:bg-gray-100 text-gray-900 font-semibold"
             >
               Reservar mi sesión online
-            </WhatsAppButton>
+            </AdsWhatsAppButton>
             <p className="text-gray-400 text-sm mt-3">
               Respuesta rápida · Sin compromiso
             </p>
@@ -432,12 +429,12 @@ export default function Page() {
             coordinamos tu primera sesión de terapia online. Sin presión, sin compromiso.
           </p>
 
-          <WhatsAppButton
+          <AdsWhatsAppButton
             href={WHATSAPP_HREF}
             className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-lg text-base"
           >
             Agendar mi primera sesión online
-          </WhatsAppButton>
+          </AdsWhatsAppButton>
 
           <p className="text-sm text-gray-500 mt-4">
             Psicólogo online Chile · Respuesta rápida · Horarios flexibles
@@ -449,12 +446,12 @@ export default function Page() {
 
         {/* Sticky CTA Mobile */}
         <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-t border-gray-200 p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
-          <WhatsAppButton
+          <AdsWhatsAppButton
             href={WHATSAPP_HREF}
             className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
           >
             Agendar sesión online
-          </WhatsAppButton>
+          </AdsWhatsAppButton>
         </div>
       </main>
     </>

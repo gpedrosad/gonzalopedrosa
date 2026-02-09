@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import { WhatsAppButton } from "../../components/WhatsAppButton";
+import { AdsProfileImage } from "../components/AdsProfileImage";
+import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
 
 export const metadata: Metadata = {
   title: "Psicólogo Ataques de Pánico Online | Terapia TCC",
@@ -45,11 +45,11 @@ export default function PsicologoAtaquesDePanicoOnlinePage() {
         {/* Card CTA principal - Todo en uno */}
         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4 mb-3">
           <div className="flex items-center gap-3 mb-3">
-            <Image
-              src="/yo.png"
+            <AdsProfileImage
               alt="Gonzalo Pedrosa - Psicólogo"
               width={52}
               height={52}
+              priority
               className="rounded-full object-cover border-2 border-white shadow-sm"
             />
             <div className="flex-1">
@@ -62,12 +62,12 @@ export default function PsicologoAtaquesDePanicoOnlinePage() {
             </div>
           </div>
           
-          <WhatsAppButton
+          <AdsWhatsAppButton
             href={WHATSAPP_HREF}
             className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
           >
             Agendar sesión online
-          </WhatsAppButton>
+          </AdsWhatsAppButton>
         </div>
 
         {/* Trust signals compactos */}
@@ -310,8 +310,7 @@ export default function PsicologoAtaquesDePanicoOnlinePage() {
 
           <div className="bg-gray-800/60 rounded-2xl p-4 max-w-xs mx-auto">
             <div className="flex items-center justify-center gap-3 mb-3">
-              <Image
-                src="/yo.png"
+              <AdsProfileImage
                 alt="Gonzalo Pedrosa"
                 width={44}
                 height={44}
@@ -323,12 +322,12 @@ export default function PsicologoAtaquesDePanicoOnlinePage() {
               </div>
             </div>
 
-            <WhatsAppButton
+            <AdsWhatsAppButton
               href={WHATSAPP_HREF}
               className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-lg justify-center"
             >
               Agendar · $35.000
-            </WhatsAppButton>
+            </AdsWhatsAppButton>
 
             <p className="text-gray-500 text-xs mt-2">
               Sin compromiso · Respuesta en menos de 2h
@@ -349,12 +348,12 @@ export default function PsicologoAtaquesDePanicoOnlinePage() {
             <p className="text-xs text-gray-500 truncate">Sesión online · 50 min</p>
             <p className="text-base font-bold text-gray-900">$35.000</p>
           </div>
-          <WhatsAppButton
+          <AdsWhatsAppButton
             href={WHATSAPP_HREF}
             className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md px-5 text-sm"
           >
             Agendar
-          </WhatsAppButton>
+          </AdsWhatsAppButton>
         </div>
       </div>
     </main>

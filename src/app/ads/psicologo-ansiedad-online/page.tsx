@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import { WhatsAppButton } from "../../components/WhatsAppButton";
+import { AdsProfileImage } from "../components/AdsProfileImage";
+import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
 
 export const metadata: Metadata = {
   title: "Psicólogo Online para Ansiedad | Terapia Cognitivo-Conductual",
@@ -29,7 +29,9 @@ export default function PsicologoAnsiedadOnlinePage() {
         </div>
 
         {/* Headline principal - más corto y directo */}
-        Trabajo con Terapia Cognitivo-Conductual para ansiedad, 100% online
+        <h1 className="text-2xl md:text-4xl font-bold text-gray-900 tracking-tight mb-3 leading-tight">
+          Trabajo con Terapia Cognitivo-Conductual para ansiedad, 100% online
+        </h1>
 
         <p className="text-base text-gray-600 mb-4 leading-relaxed">
           Soy psicólogo centrado en ansiedad. Te ayudo con herramientas 
@@ -56,20 +58,20 @@ export default function PsicologoAnsiedadOnlinePage() {
               <p className="text-sm text-gray-600">Sesión online 50 min</p>
               <p className="text-2xl font-bold text-gray-900">$35.000 <span className="text-sm font-normal text-gray-500">CLP</span></p>
             </div>
-            <Image
-              src="/yo.png"
+            <AdsProfileImage
               alt="Gonzalo Pedrosa - Psicólogo"
               width={56}
               height={56}
+              priority
               className="rounded-full object-cover border-2 border-white shadow-md"
             />
           </div>
-          <WhatsAppButton
+          <AdsWhatsAppButton
             href={WHATSAPP_HREF}
             className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
           >
             Agendar mi sesión
-          </WhatsAppButton>
+          </AdsWhatsAppButton>
           <p className="text-xs text-gray-500 text-center mt-2">
             Respuesta en menos de 2 horas · Sin compromiso
           </p>
@@ -160,8 +162,7 @@ export default function PsicologoAnsiedadOnlinePage() {
       <section className="px-4 py-8 md:py-12 bg-gray-50">
         <div className="max-w-3xl mx-auto">
           <div className="flex flex-col items-center text-center">
-            <Image
-              src="/yo.png"
+            <AdsProfileImage
               alt="Gonzalo Pedrosa - Psicólogo"
               width={120}
               height={120}
@@ -372,8 +373,7 @@ export default function PsicologoAnsiedadOnlinePage() {
 
           <div className="bg-gray-800/50 rounded-2xl p-5 max-w-sm mx-auto">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <Image
-                src="/yo.png"
+              <AdsProfileImage
                 alt="Gonzalo Pedrosa"
                 width={48}
                 height={48}
@@ -385,12 +385,12 @@ export default function PsicologoAnsiedadOnlinePage() {
               </div>
             </div>
             
-            <WhatsAppButton
+            <AdsWhatsAppButton
               href={WHATSAPP_HREF}
               className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-lg justify-center"
             >
               Agendar mi sesión · $35.000
-            </WhatsAppButton>
+            </AdsWhatsAppButton>
             
             <p className="text-gray-500 text-xs mt-3">
               Sin compromiso · Confidencial
@@ -411,12 +411,12 @@ export default function PsicologoAnsiedadOnlinePage() {
             <p className="text-xs text-gray-500">Sesión online</p>
             <p className="text-lg font-bold text-gray-900">$35.000</p>
           </div>
-          <WhatsAppButton
+          <AdsWhatsAppButton
             href={WHATSAPP_HREF}
             className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md px-6"
           >
             Agendar ahora
-          </WhatsAppButton>
+          </AdsWhatsAppButton>
         </div>
       </div>
     </main>

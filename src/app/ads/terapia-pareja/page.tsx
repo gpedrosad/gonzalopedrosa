@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import Script from "next/script";
-import Image from "next/image";
-import { WhatsAppButton } from "../../components/WhatsAppButton";
-import { StickyWhatsAppAfterFirstCta } from "./StickyWhatsAppAfterFirstCta";
+import { AdsProfileImage } from "../components/AdsProfileImage";
+import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
+import { LazyStickyWhatsAppAfterFirstCta } from "./LazyStickyWhatsAppAfterFirstCta";
 
 export const metadata: Metadata = {
   title: "Terapia de Pareja Online | Si todo termina en pelea",
@@ -87,7 +86,7 @@ const faqSchema = {
 export default function TerapiaParejaAdsPage() {
   return (
     <>
-      <Script
+      <script
         id="faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -96,8 +95,7 @@ export default function TerapiaParejaAdsPage() {
       <main className="min-h-screen bg-white pb-24 md:pb-0">
         <section className="px-4 pt-7 pb-8 md:pt-14 md:pb-12 max-w-3xl mx-auto">
           <div className="flex items-center gap-3 mb-5">
-            <Image
-              src="/yo.png"
+            <AdsProfileImage
               alt="Gonzalo Pedrosa - Psicólogo"
               width={56}
               height={56}
@@ -142,12 +140,12 @@ export default function TerapiaParejaAdsPage() {
               brevemente el motivo y coordinar la primera sesión (pareja o
               individual previa).
             </p>
-            <WhatsAppButton
+            <AdsWhatsAppButton
               href={WHATSAPP_HREF}
               className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
             >
               Agendar por WhatsApp
-            </WhatsAppButton>
+            </AdsWhatsAppButton>
           </div>
 
           <div className="flex flex-wrap gap-2 mb-5">
@@ -365,8 +363,7 @@ export default function TerapiaParejaAdsPage() {
 
           <div className="bg-white border border-gray-200 rounded-2xl p-5 mb-5">
             <div className="flex items-start gap-4">
-              <Image
-                src="/yo.png"
+              <AdsProfileImage
                 alt="Gonzalo Pedrosa - Psicólogo"
                 width={72}
                 height={72}
@@ -396,18 +393,18 @@ export default function TerapiaParejaAdsPage() {
               El primer paso puede ser simple: un mensaje para revisar su caso y
               coordinar la primera sesión.
             </p>
-            <WhatsAppButton
+            <AdsWhatsAppButton
               href={WHATSAPP_HREF}
               className="bg-white hover:bg-gray-100 text-gray-900 font-semibold"
             >
               Escribir por WhatsApp
-            </WhatsAppButton>
+            </AdsWhatsAppButton>
             <p className="text-gray-400 text-xs mt-3">Atención online · Respuesta rápida</p>
           </div>
         </section>
       </main>
 
-      <StickyWhatsAppAfterFirstCta
+      <LazyStickyWhatsAppAfterFirstCta
         href={WHATSAPP_HREF}
         firstCtaId={FIRST_CTA_ID}
       />

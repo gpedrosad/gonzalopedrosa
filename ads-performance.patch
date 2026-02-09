@@ -1,0 +1,1320 @@
+diff --git a/src/app/ads/adolescentes/page.tsx b/src/app/ads/adolescentes/page.tsx
+index 23c94d1..99c2f3a 100644
+--- a/src/app/ads/adolescentes/page.tsx
++++ b/src/app/ads/adolescentes/page.tsx
+@@ -1,7 +1,6 @@
+ import type { Metadata } from "next";
+-import Script from "next/script";
+-import Image from "next/image";
+-import { WhatsAppButton } from "../../components/WhatsAppButton";
++import { AdsProfileImage } from "../components/AdsProfileImage";
++import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
+ 
+ export const metadata: Metadata = {
+   title: "Psicólogo Online para Adolescentes | Terapia Online",
+@@ -67,7 +66,7 @@ const faqSchema = {
+ export default function Page() {
+   return (
+     <>
+-      <Script
++      <script
+         id="faq-schema"
+         type="application/ld+json"
+         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+@@ -77,8 +76,7 @@ export default function Page() {
+         {/* Hero Section */}
+         <section className="px-4 pt-12 pb-10 md:pt-20 md:pb-16 max-w-2xl mx-auto">
+           <div className="flex items-center gap-3 mb-6">
+-            <Image
+-              src="/yo.png"
++            <AdsProfileImage
+               alt="Gonzalo Pedrosa - Psicólogo Online para Adolescentes"
+               width={56}
+               height={56}
+@@ -102,12 +100,12 @@ export default function Page() {
+           </p>
+ 
+           <div className="flex flex-col sm:flex-row gap-3 mb-3">
+-            <WhatsAppButton
++            <AdsWhatsAppButton
+               href={WHATSAPP_HREF}
+               className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md"
+             >
+               Consultar disponibilidad
+-            </WhatsAppButton>
++            </AdsWhatsAppButton>
+           </div>
+ 
+           <p className="text-sm text-green-700 font-medium mb-2">
+@@ -204,8 +202,7 @@ export default function Page() {
+             </h2>
+ 
+             <div className="flex flex-col sm:flex-row gap-6 items-start">
+-              <Image
+-                src="/yo.png"
++              <AdsProfileImage
+                 alt="Gonzalo Pedrosa - Psicólogo para Adolescentes Online"
+                 width={120}
+                 height={120}
+@@ -302,12 +299,12 @@ export default function Page() {
+             <p className="text-white text-lg font-medium mb-4">
+               ¿Buscás ayuda profesional para tu hijo/a?
+             </p>
+-            <WhatsAppButton
++            <AdsWhatsAppButton
+               href={WHATSAPP_HREF}
+               className="bg-white hover:bg-gray-100 text-gray-900 font-semibold"
+             >
+               Consultá disponibilidad por WhatsApp
+-            </WhatsAppButton>
++            </AdsWhatsAppButton>
+             <p className="text-gray-400 text-sm mt-3">
+               Sin lista de espera · Sin compromiso
+             </p>
+@@ -421,12 +418,12 @@ export default function Page() {
+             conducta, la terapia puede ayudar. Escribime y coordinamos una primera sesión.
+           </p>
+ 
+-          <WhatsAppButton
++          <AdsWhatsAppButton
+             href={WHATSAPP_HREF}
+             className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-lg text-base"
+           >
+             Agendar primera sesión
+-          </WhatsAppButton>
++          </AdsWhatsAppButton>
+ 
+           <p className="text-sm text-gray-500 mt-4">
+             Agenda inicial en menos de 24 horas · Sin lista de espera
+@@ -442,12 +439,12 @@ export default function Page() {
+             <p className="text-xs text-green-600 font-medium">Cupos limitados</p>
+             <p className="text-xs text-gray-500">Sin lista de espera</p>
+           </div>
+-          <WhatsAppButton
++          <AdsWhatsAppButton
+             href={WHATSAPP_HREF}
+             className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
+           >
+             Consultar disponibilidad
+-          </WhatsAppButton>
++          </AdsWhatsAppButton>
+         </div>
+       </main>
+     </>
+diff --git a/src/app/ads/agendar-psicologo-online/page.tsx b/src/app/ads/agendar-psicologo-online/page.tsx
+index d4295ed..0828863 100644
+--- a/src/app/ads/agendar-psicologo-online/page.tsx
++++ b/src/app/ads/agendar-psicologo-online/page.tsx
+@@ -1,7 +1,6 @@
+ import type { Metadata } from "next";
+-import Script from "next/script";
+-import Image from "next/image";
+-import { WhatsAppButton } from "../../components/WhatsAppButton";
++import { AdsProfileImage } from "../components/AdsProfileImage";
++import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
+ 
+ export const metadata: Metadata = {
+   title: "Agendar Psicólogo Online | Sesión hoy o mañana",
+@@ -67,7 +66,7 @@ const faqSchema = {
+ export default function AdsAgendarPsicologoOnlinePage() {
+   return (
+     <>
+-      <Script
++      <script
+         id="faq-schema"
+         type="application/ld+json"
+         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+@@ -77,8 +76,7 @@ export default function AdsAgendarPsicologoOnlinePage() {
+         {/* Hero Section - Enfocado en agendar rápido */}
+         <section className="px-4 pt-12 pb-10 md:pt-20 md:pb-16 max-w-2xl mx-auto">
+           <div className="flex items-center gap-3 mb-6">
+-            <Image
+-              src="/yo.png"
++            <AdsProfileImage
+               alt="Gonzalo Pedrosa - Psicólogo"
+               width={56}
+               height={56}
+@@ -102,12 +100,12 @@ export default function AdsAgendarPsicologoOnlinePage() {
+           </p>
+ 
+           <div className="flex flex-col sm:flex-row gap-3 mb-4">
+-            <WhatsAppButton
++            <AdsWhatsAppButton
+               href={WHATSAPP_HREF}
+               className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md"
+             >
+               Agendar ahora
+-            </WhatsAppButton>
++            </AdsWhatsAppButton>
+           </div>
+ 
+           <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-500">
+@@ -199,12 +197,12 @@ export default function AdsAgendarPsicologoOnlinePage() {
+             <p className="text-white text-lg font-medium mb-4">
+               ¿Listo para agendar?
+             </p>
+-            <WhatsAppButton
++            <AdsWhatsAppButton
+               href={WHATSAPP_HREF}
+               className="bg-white hover:bg-gray-100 text-gray-900 font-semibold"
+             >
+               Agendar mi hora
+-            </WhatsAppButton>
++            </AdsWhatsAppButton>
+             <p className="text-gray-400 text-sm mt-3">
+               Te respondo en minutos
+             </p>
+@@ -354,12 +352,12 @@ export default function AdsAgendarPsicologoOnlinePage() {
+             Simple, rápido y sin complicaciones.
+           </p>
+ 
+-          <WhatsAppButton
++          <AdsWhatsAppButton
+             href={WHATSAPP_HREF}
+             className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-lg text-base"
+           >
+             Agendar mi sesión
+-          </WhatsAppButton>
++          </AdsWhatsAppButton>
+ 
+           <p className="text-sm text-gray-500 mt-4">
+             Respuesta inmediata · Horarios flexibles · $35.000 CLP
+@@ -371,12 +369,12 @@ export default function AdsAgendarPsicologoOnlinePage() {
+ 
+         {/* Sticky CTA Mobile */}
+         <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-t border-gray-200 p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
+-          <WhatsAppButton
++          <AdsWhatsAppButton
+             href={WHATSAPP_HREF}
+             className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
+           >
+             Agendar ahora
+-          </WhatsAppButton>
++          </AdsWhatsAppButton>
+         </div>
+       </main>
+     </>
+diff --git a/src/app/ads/compin/StickyWhatsAppCTA.tsx b/src/app/ads/compin/StickyWhatsAppCTA.tsx
+index 2ab1821..25ecec8 100644
+--- a/src/app/ads/compin/StickyWhatsAppCTA.tsx
++++ b/src/app/ads/compin/StickyWhatsAppCTA.tsx
+@@ -1,49 +1,11 @@
+ "use client";
+ 
+-import { useCallback, useEffect, useState } from "react";
++import { useEffect, useState } from "react";
+ 
+ /* ─────────────────────────────────────────────────────────────────────────────
+-   Typing para eventos GTM
+-   ───────────────────────────────────────────────────────────────────────────── */
+-interface GTMEvent {
+-  event: string;
+-  label?: string;
+-  event_id?: string;
+-  eventCallback?: () => void;
+-  eventTimeout?: number;
+-  [key: string]: unknown;
+-}
+-
+-function generateEventId(): string {
+-  const timestamp = Date.now();
+-  const random = Math.random().toString(36).substring(2, 10);
+-  return `${timestamp}-${random}`;
+-}
+-
+-function openWhatsApp(href: string): void {
+-  window.open(href, "_blank", "noopener,noreferrer");
+-}
+-
+-/* ─────────────────────────────────────────────────────────────────────────────
+-   Ícono WhatsApp SVG
+-   ───────────────────────────────────────────────────────────────────────────── */
+-function WhatsAppIcon({ className = "w-5 h-5" }: { className?: string }) {
+-  return (
+-    <svg
+-      className={className}
+-      viewBox="0 0 24 24"
+-      fill="currentColor"
+-      aria-hidden="true"
+-    >
+-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+-    </svg>
+-  );
+-}
+-
+-/* ─────────────────────────────────────────────────────────────────────────────
+-   Sticky WhatsApp CTA con tracking GTM
++   Sticky WhatsApp CTA
+    - Se muestra después de scroll (300px)
+-   - Tracking de conversiones antes de abrir WhatsApp
++   - Tracking se delega en /ads/layout.tsx vía data attributes
+    ───────────────────────────────────────────────────────────────────────────── */
+ export function StickyWhatsAppCTA({ href }: { href: string }) {
+   const [isVisible, setIsVisible] = useState(false);
+@@ -53,44 +15,12 @@ export function StickyWhatsAppCTA({ href }: { href: string }) {
+       setIsVisible(window.scrollY > 300);
+     };
+ 
+-    // Check initial position
+     handleScroll();
+-
+     window.addEventListener("scroll", handleScroll, { passive: true });
++
+     return () => window.removeEventListener("scroll", handleScroll);
+   }, []);
+ 
+-  const handleClick = useCallback(
+-    (e: React.MouseEvent<HTMLAnchorElement>) => {
+-      e.preventDefault();
+-
+-      let hasOpened = false;
+-
+-      const openOnce = () => {
+-        if (hasOpened) return;
+-        hasOpened = true;
+-        openWhatsApp(href);
+-      };
+-
+-      if (typeof window !== "undefined") {
+-        const dataLayer = (window.dataLayer = window.dataLayer || []);
+-
+-        const gtmEvent: GTMEvent = {
+-          event: "whatsapp_lead",
+-          label: href,
+-          event_id: generateEventId(),
+-          eventCallback: openOnce,
+-          eventTimeout: 1500,
+-        };
+-
+-        dataLayer.push(gtmEvent as Record<string, unknown>);
+-      } else {
+-        openWhatsApp(href);
+-      }
+-    },
+-    [href]
+-  );
+-
+   return (
+     <div
+       className={`fixed bottom-0 left-0 right-0 z-50 transition-transform duration-300 ${
+@@ -102,10 +32,18 @@ export function StickyWhatsAppCTA({ href }: { href: string }) {
+           href={href}
+           target="_blank"
+           rel="noopener noreferrer"
+-          onClick={handleClick}
++          data-wa-track="1"
++          data-wa-label={href}
+           className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20bd5a] active:bg-[#1da851] text-white font-semibold rounded-full py-3.5 px-6 shadow-md transition-colors"
+         >
+-          <WhatsAppIcon className="w-5 h-5" />
++          <svg
++            className="w-5 h-5"
++            viewBox="0 0 24 24"
++            fill="currentColor"
++            aria-hidden="true"
++          >
++            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
++          </svg>
+           <span>Enviar caso por WhatsApp</span>
+         </a>
+         <p className="text-center text-xs text-gray-500 mt-2">
+diff --git a/src/app/ads/compin/page.tsx b/src/app/ads/compin/page.tsx
+index 16dda9a..3573b19 100644
+--- a/src/app/ads/compin/page.tsx
++++ b/src/app/ads/compin/page.tsx
+@@ -1,7 +1,7 @@
+ import type { Metadata } from "next";
+-import Script from "next/script";
+-import Image from "next/image";
+-import { StickyWhatsAppCTA } from "./StickyWhatsAppCTA";
++import { AdsProfileImage } from "../components/AdsProfileImage";
++import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
++import { LazyStickyWhatsAppCTA } from "./LazyStickyWhatsAppCTA";
+ 
+ export const metadata: Metadata = {
+   title: "Informe Psicológico COMPIN | Evaluación Online",
+@@ -64,47 +64,6 @@ const faqSchema = {
+   ],
+ };
+ 
+-/* ─────────────────────────────────────────────────────────────────────────────
+-   Server Component - Ícono WhatsApp SVG inline (sin dependencias cliente)
+-   ───────────────────────────────────────────────────────────────────────────── */
+-function WhatsAppIcon({ className = "w-5 h-5" }: { className?: string }) {
+-  return (
+-    <svg
+-      className={className}
+-      viewBox="0 0 24 24"
+-      fill="currentColor"
+-      aria-hidden="true"
+-    >
+-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+-    </svg>
+-  );
+-}
+-
+-/* ─────────────────────────────────────────────────────────────────────────────
+-   Server Component - Botón WhatsApp estático (sin JS)
+-   ───────────────────────────────────────────────────────────────────────────── */
+-function ServerWhatsAppButton({
+-  href,
+-  children,
+-  className = "",
+-}: {
+-  href: string;
+-  children: React.ReactNode;
+-  className?: string;
+-}) {
+-  return (
+-    <a
+-      href={href}
+-      target="_blank"
+-      rel="noopener noreferrer"
+-      className={`inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold rounded-full transition-colors ${className}`}
+-    >
+-      <WhatsAppIcon className="w-5 h-5" />
+-      {children}
+-    </a>
+-  );
+-}
+-
+ /* ─────────────────────────────────────────────────────────────────────────────
+    Datos estáticos para renderizado server
+    ───────────────────────────────────────────────────────────────────────────── */
+@@ -173,7 +132,7 @@ const FAQS = [
+ export default function CompinPage() {
+   return (
+     <>
+-      <Script
++      <script
+         id="faq-schema"
+         type="application/ld+json"
+         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+@@ -184,8 +143,7 @@ export default function CompinPage() {
+         <section className="px-4 pt-8 pb-8 max-w-2xl mx-auto">
+           {/* Perfil */}
+           <div className="flex items-center gap-3 mb-5">
+-            <Image
+-              src="/yo.png"
++            <AdsProfileImage
+               alt="Gonzalo Pedrosa - Psicólogo"
+               width={52}
+               height={52}
+@@ -219,12 +177,12 @@ export default function CompinPage() {
+           </ul>
+ 
+           {/* CTA Principal */}
+-          <ServerWhatsAppButton
++          <AdsWhatsAppButton
+             href={WHATSAPP_HREF}
+             className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-md mb-3"
+           >
+             Enviar caso por WhatsApp
+-          </ServerWhatsAppButton>
++          </AdsWhatsAppButton>
+ 
+           {/* Trust signal */}
+           <p className="text-sm text-gray-500 flex items-center justify-center gap-2">
+@@ -306,12 +264,12 @@ export default function CompinPage() {
+             <p className="text-white text-base font-medium mb-4">
+               ¿Necesitas un informe psicológico para COMPIN?
+             </p>
+-            <ServerWhatsAppButton
++            <AdsWhatsAppButton
+               href={WHATSAPP_HREF}
+               className="bg-white hover:bg-gray-100 text-gray-900"
+             >
+               Consultar por WhatsApp
+-            </ServerWhatsAppButton>
++            </AdsWhatsAppButton>
+             <p className="text-gray-400 text-sm mt-3">
+               Respuesta rápida · Sin compromiso
+             </p>
+@@ -364,12 +322,12 @@ export default function CompinPage() {
+ 
+         {/* Cierre */}
+         <section className="px-4 py-8 text-center">
+-          <ServerWhatsAppButton
++          <AdsWhatsAppButton
+             href={WHATSAPP_HREF}
+             className="bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-lg"
+           >
+             Solicitar evaluación por WhatsApp
+-          </ServerWhatsAppButton>
++          </AdsWhatsAppButton>
+           <p className="text-sm text-gray-500 mt-3">
+             Cupos limitados esta semana
+           </p>
+@@ -377,7 +335,7 @@ export default function CompinPage() {
+       </main>
+ 
+       {/* Sticky CTA - Client Component con tracking GTM */}
+-      <StickyWhatsAppCTA href={WHATSAPP_HREF} />
++      <LazyStickyWhatsAppCTA href={WHATSAPP_HREF} />
+     </>
+   );
+ }
+diff --git a/src/app/ads/layout.tsx b/src/app/ads/layout.tsx
+index 95dad0c..fa97994 100644
+--- a/src/app/ads/layout.tsx
++++ b/src/app/ads/layout.tsx
+@@ -1,4 +1,5 @@
+ import type { Metadata } from "next";
++import Script from "next/script";
+ 
+ /**
+  * Layout específico para landing pages de Google Ads.
+@@ -12,10 +13,82 @@ export const metadata: Metadata = {
+   },
+ };
+ 
++// Todas las landings de /ads se generan estáticamente en build time.
++export const dynamic = "force-static";
++
+ export default function AdsLayout({
+   children,
+ }: {
+   children: React.ReactNode;
+ }) {
+-  return <>{children}</>;
++  return (
++    <>
++      {children}
++
++      {/*
++        Delegación global para tracking de clics WhatsApp en /ads.
++        Evita hidratar cada botón individualmente y conserva eventCallback/eventTimeout.
++      */}
++      <Script id="ads-whatsapp-tracking" strategy="afterInteractive">
++        {`
++          (function () {
++            if (window.__adsWhatsappTrackingInit) return;
++            window.__adsWhatsappTrackingInit = true;
++
++            function generateEventId() {
++              return Date.now() + '-' + Math.random().toString(36).slice(2, 10);
++            }
++
++            function shouldBypassTracking(event) {
++              return (
++                event.defaultPrevented ||
++                event.button !== 0 ||
++                event.metaKey ||
++                event.ctrlKey ||
++                event.shiftKey ||
++                event.altKey
++              );
++            }
++
++            document.addEventListener(
++              'click',
++              function (event) {
++                var target = event.target;
++                if (!(target instanceof Element)) return;
++
++                var anchor = target.closest('a[data-wa-track="1"]');
++                if (!(anchor instanceof HTMLAnchorElement)) return;
++                if (shouldBypassTracking(event)) return;
++
++                var href = anchor.href || anchor.getAttribute('href');
++                if (!href) return;
++
++                event.preventDefault();
++
++                var opened = false;
++                var openOnce = function () {
++                  if (opened) return;
++                  opened = true;
++                  window.open(href, '_blank', 'noopener,noreferrer');
++                };
++
++                var dataLayer = (window.dataLayer = window.dataLayer || []);
++                dataLayer.push({
++                  event: 'whatsapp_lead',
++                  label: anchor.dataset.waLabel || href,
++                  event_id: generateEventId(),
++                  eventCallback: openOnce,
++                  eventTimeout: 1500,
++                });
++
++                // Fallback adicional si GTM no ejecuta eventCallback.
++                window.setTimeout(openOnce, 1600);
++              },
++              true
++            );
++          })();
++        `}
++      </Script>
++    </>
++  );
+ }
+diff --git a/src/app/ads/psicologo-ansiedad-online/page.tsx b/src/app/ads/psicologo-ansiedad-online/page.tsx
+index 2a5fa9e..303c25c 100644
+--- a/src/app/ads/psicologo-ansiedad-online/page.tsx
++++ b/src/app/ads/psicologo-ansiedad-online/page.tsx
+@@ -1,6 +1,6 @@
+ import type { Metadata } from "next";
+-import Image from "next/image";
+-import { WhatsAppButton } from "../../components/WhatsAppButton";
++import { AdsProfileImage } from "../components/AdsProfileImage";
++import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
+ 
+ export const metadata: Metadata = {
+   title: "Psicólogo Online para Ansiedad | Terapia Cognitivo-Conductual",
+@@ -29,7 +29,9 @@ export default function PsicologoAnsiedadOnlinePage() {
+         </div>
+ 
+         {/* Headline principal - más corto y directo */}
+-        Trabajo con Terapia Cognitivo-Conductual para ansiedad, 100% online
++        <h1 className="text-2xl md:text-4xl font-bold text-gray-900 tracking-tight mb-3 leading-tight">
++          Trabajo con Terapia Cognitivo-Conductual para ansiedad, 100% online
++        </h1>
+ 
+         <p className="text-base text-gray-600 mb-4 leading-relaxed">
+           Soy psicólogo centrado en ansiedad. Te ayudo con herramientas 
+@@ -56,20 +58,20 @@ export default function PsicologoAnsiedadOnlinePage() {
+               <p className="text-sm text-gray-600">Sesión online 50 min</p>
+               <p className="text-2xl font-bold text-gray-900">$35.000 <span className="text-sm font-normal text-gray-500">CLP</span></p>
+             </div>
+-            <Image
+-              src="/yo.png"
++            <AdsProfileImage
+               alt="Gonzalo Pedrosa - Psicólogo"
+               width={56}
+               height={56}
++              priority
+               className="rounded-full object-cover border-2 border-white shadow-md"
+             />
+           </div>
+-          <WhatsAppButton
++          <AdsWhatsAppButton
+             href={WHATSAPP_HREF}
+             className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
+           >
+             Agendar mi sesión
+-          </WhatsAppButton>
++          </AdsWhatsAppButton>
+           <p className="text-xs text-gray-500 text-center mt-2">
+             Respuesta en menos de 2 horas · Sin compromiso
+           </p>
+@@ -160,8 +162,7 @@ export default function PsicologoAnsiedadOnlinePage() {
+       <section className="px-4 py-8 md:py-12 bg-gray-50">
+         <div className="max-w-3xl mx-auto">
+           <div className="flex flex-col items-center text-center">
+-            <Image
+-              src="/yo.png"
++            <AdsProfileImage
+               alt="Gonzalo Pedrosa - Psicólogo"
+               width={120}
+               height={120}
+@@ -372,8 +373,7 @@ export default function PsicologoAnsiedadOnlinePage() {
+ 
+           <div className="bg-gray-800/50 rounded-2xl p-5 max-w-sm mx-auto">
+             <div className="flex items-center justify-center gap-3 mb-4">
+-              <Image
+-                src="/yo.png"
++              <AdsProfileImage
+                 alt="Gonzalo Pedrosa"
+                 width={48}
+                 height={48}
+@@ -385,12 +385,12 @@ export default function PsicologoAnsiedadOnlinePage() {
+               </div>
+             </div>
+             
+-            <WhatsAppButton
++            <AdsWhatsAppButton
+               href={WHATSAPP_HREF}
+               className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-lg justify-center"
+             >
+               Agendar mi sesión · $35.000
+-            </WhatsAppButton>
++            </AdsWhatsAppButton>
+             
+             <p className="text-gray-500 text-xs mt-3">
+               Sin compromiso · Confidencial
+@@ -411,12 +411,12 @@ export default function PsicologoAnsiedadOnlinePage() {
+             <p className="text-xs text-gray-500">Sesión online</p>
+             <p className="text-lg font-bold text-gray-900">$35.000</p>
+           </div>
+-          <WhatsAppButton
++          <AdsWhatsAppButton
+             href={WHATSAPP_HREF}
+             className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md px-6"
+           >
+             Agendar ahora
+-          </WhatsAppButton>
++          </AdsWhatsAppButton>
+         </div>
+       </div>
+     </main>
+diff --git a/src/app/ads/psicologo-ataques-de-panico-online/page.tsx b/src/app/ads/psicologo-ataques-de-panico-online/page.tsx
+index c77ba61..adf0efa 100644
+--- a/src/app/ads/psicologo-ataques-de-panico-online/page.tsx
++++ b/src/app/ads/psicologo-ataques-de-panico-online/page.tsx
+@@ -1,6 +1,6 @@
+ import type { Metadata } from "next";
+-import Image from "next/image";
+-import { WhatsAppButton } from "../../components/WhatsAppButton";
++import { AdsProfileImage } from "../components/AdsProfileImage";
++import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
+ 
+ export const metadata: Metadata = {
+   title: "Psicólogo Ataques de Pánico Online | Terapia TCC",
+@@ -45,11 +45,11 @@ export default function PsicologoAtaquesDePanicoOnlinePage() {
+         {/* Card CTA principal - Todo en uno */}
+         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4 mb-3">
+           <div className="flex items-center gap-3 mb-3">
+-            <Image
+-              src="/yo.png"
++            <AdsProfileImage
+               alt="Gonzalo Pedrosa - Psicólogo"
+               width={52}
+               height={52}
++              priority
+               className="rounded-full object-cover border-2 border-white shadow-sm"
+             />
+             <div className="flex-1">
+@@ -62,12 +62,12 @@ export default function PsicologoAtaquesDePanicoOnlinePage() {
+             </div>
+           </div>
+           
+-          <WhatsAppButton
++          <AdsWhatsAppButton
+             href={WHATSAPP_HREF}
+             className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
+           >
+             Agendar sesión online
+-          </WhatsAppButton>
++          </AdsWhatsAppButton>
+         </div>
+ 
+         {/* Trust signals compactos */}
+@@ -310,8 +310,7 @@ export default function PsicologoAtaquesDePanicoOnlinePage() {
+ 
+           <div className="bg-gray-800/60 rounded-2xl p-4 max-w-xs mx-auto">
+             <div className="flex items-center justify-center gap-3 mb-3">
+-              <Image
+-                src="/yo.png"
++              <AdsProfileImage
+                 alt="Gonzalo Pedrosa"
+                 width={44}
+                 height={44}
+@@ -323,12 +322,12 @@ export default function PsicologoAtaquesDePanicoOnlinePage() {
+               </div>
+             </div>
+ 
+-            <WhatsAppButton
++            <AdsWhatsAppButton
+               href={WHATSAPP_HREF}
+               className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-lg justify-center"
+             >
+               Agendar · $35.000
+-            </WhatsAppButton>
++            </AdsWhatsAppButton>
+ 
+             <p className="text-gray-500 text-xs mt-2">
+               Sin compromiso · Respuesta en menos de 2h
+@@ -349,12 +348,12 @@ export default function PsicologoAtaquesDePanicoOnlinePage() {
+             <p className="text-xs text-gray-500 truncate">Sesión online · 50 min</p>
+             <p className="text-base font-bold text-gray-900">$35.000</p>
+           </div>
+-          <WhatsAppButton
++          <AdsWhatsAppButton
+             href={WHATSAPP_HREF}
+             className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md px-5 text-sm"
+           >
+             Agendar
+-          </WhatsAppButton>
++          </AdsWhatsAppButton>
+         </div>
+       </div>
+     </main>
+diff --git a/src/app/ads/psicologo-cognitivo-conductual-online/page.tsx b/src/app/ads/psicologo-cognitivo-conductual-online/page.tsx
+index 94f8786..0ca15f6 100644
+--- a/src/app/ads/psicologo-cognitivo-conductual-online/page.tsx
++++ b/src/app/ads/psicologo-cognitivo-conductual-online/page.tsx
+@@ -1,7 +1,6 @@
+ import type { Metadata } from "next";
+-import Script from "next/script";
+-import Image from "next/image";
+-import { WhatsAppButton } from "../../components/WhatsAppButton";
++import { AdsProfileImage } from "../components/AdsProfileImage";
++import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
+ 
+ export const metadata: Metadata = {
+   title: "Psicólogo Cognitivo Conductual Online | Gonzalo Pedrosa",
+@@ -67,7 +66,7 @@ const faqSchema = {
+ export default function AdsPsicologoCognitivoConductualOnlinePage() {
+   return (
+     <>
+-      <Script
++      <script
+         id="faq-schema"
+         type="application/ld+json"
+         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+@@ -77,8 +76,7 @@ export default function AdsPsicologoCognitivoConductualOnlinePage() {
+         {/* Hero Section */}
+         <section className="px-4 pt-12 pb-10 md:pt-20 md:pb-16 max-w-2xl mx-auto">
+           <div className="flex items-center gap-3 mb-6">
+-            <Image
+-              src="/yo.png"
++            <AdsProfileImage
+               alt="Gonzalo Pedrosa - Psicólogo"
+               width={56}
+               height={56}
+@@ -103,12 +101,12 @@ export default function AdsPsicologoCognitivoConductualOnlinePage() {
+           </p>
+ 
+           <div className="flex flex-col sm:flex-row gap-3 mb-4">
+-            <WhatsAppButton
++            <AdsWhatsAppButton
+               href={WHATSAPP_HREF}
+               className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md"
+             >
+               Agendar sesión online
+-            </WhatsAppButton>
++            </AdsWhatsAppButton>
+           </div>
+ 
+           <p className="text-sm text-gray-500 flex items-center gap-2">
+@@ -194,12 +192,12 @@ export default function AdsPsicologoCognitivoConductualOnlinePage() {
+             <p className="text-white text-lg font-medium mb-4">
+               ¿Listo para dar el primer paso?
+             </p>
+-            <WhatsAppButton
++            <AdsWhatsAppButton
+               href={WHATSAPP_HREF}
+               className="bg-white hover:bg-gray-100 text-gray-900 font-semibold"
+             >
+               Escribir por WhatsApp
+-            </WhatsAppButton>
++            </AdsWhatsAppButton>
+             <p className="text-gray-400 text-sm mt-3">
+               Sin compromiso · Conversemos primero
+             </p>
+@@ -351,12 +349,12 @@ export default function AdsPsicologoCognitivoConductualOnlinePage() {
+             es el más importante.
+           </p>
+ 
+-          <WhatsAppButton
++          <AdsWhatsAppButton
+             href={WHATSAPP_HREF}
+             className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-lg text-base"
+           >
+             Agendar mi primera sesión
+-          </WhatsAppButton>
++          </AdsWhatsAppButton>
+ 
+           <p className="text-sm text-gray-500 mt-4">
+             Respuesta rápida · Confidencial · Horarios flexibles
+@@ -368,12 +366,12 @@ export default function AdsPsicologoCognitivoConductualOnlinePage() {
+ 
+         {/* Sticky CTA Mobile */}
+         <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-t border-gray-200 p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
+-          <WhatsAppButton
++          <AdsWhatsAppButton
+             href={WHATSAPP_HREF}
+             className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
+           >
+             Agendar sesión online
+-          </WhatsAppButton>
++          </AdsWhatsAppButton>
+         </div>
+       </main>
+     </>
+diff --git a/src/app/ads/psicologo-online/page.tsx b/src/app/ads/psicologo-online/page.tsx
+index f5bf445..c32fd47 100644
+--- a/src/app/ads/psicologo-online/page.tsx
++++ b/src/app/ads/psicologo-online/page.tsx
+@@ -1,7 +1,6 @@
+ import type { Metadata } from "next";
+-import Script from "next/script";
+-import Image from "next/image";
+-import { WhatsAppButton } from "../../components/WhatsAppButton";
++import { AdsProfileImage } from "../components/AdsProfileImage";
++import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
+ 
+ export const metadata: Metadata = {
+   title: "Psicólogo Online Chile | Terapia por Videollamada | Gonzalo Pedrosa",
+@@ -75,7 +74,7 @@ const faqSchema = {
+ export default function Page() {
+   return (
+     <>
+-      <Script
++      <script
+         id="faq-schema"
+         type="application/ld+json"
+         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+@@ -85,8 +84,7 @@ export default function Page() {
+         {/* Hero Section */}
+         <section className="px-4 pt-12 pb-10 md:pt-20 md:pb-16 max-w-2xl mx-auto">
+           <div className="flex items-center gap-3 mb-6">
+-            <Image
+-              src="/yo.png"
++            <AdsProfileImage
+               alt="Gonzalo Pedrosa - Psicólogo Online Chile"
+               width={56}
+               height={56}
+@@ -110,12 +108,12 @@ export default function Page() {
+           </p>
+ 
+           <div className="flex flex-col sm:flex-row gap-3 mb-4">
+-            <WhatsAppButton
++            <AdsWhatsAppButton
+               href={WHATSAPP_HREF}
+               className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md"
+             >
+               Agendar sesión online
+-            </WhatsAppButton>
++            </AdsWhatsAppButton>
+           </div>
+ 
+           <p className="text-sm text-gray-500 flex items-center gap-2">
+@@ -175,8 +173,7 @@ export default function Page() {
+           </h2>
+ 
+           <div className="flex flex-col sm:flex-row gap-6 items-start">
+-            <Image
+-              src="/yo.png"
++            <AdsProfileImage
+               alt="Gonzalo Pedrosa - Psicólogo por Videollamada"
+               width={120}
+               height={120}
+@@ -302,12 +299,12 @@ export default function Page() {
+             <p className="text-white text-lg font-medium mb-4">
+               ¿Buscas un psicólogo online en Chile?
+             </p>
+-            <WhatsAppButton
++            <AdsWhatsAppButton
+               href={WHATSAPP_HREF}
+               className="bg-white hover:bg-gray-100 text-gray-900 font-semibold"
+             >
+               Reservar mi sesión online
+-            </WhatsAppButton>
++            </AdsWhatsAppButton>
+             <p className="text-gray-400 text-sm mt-3">
+               Respuesta rápida · Sin compromiso
+             </p>
+@@ -432,12 +429,12 @@ export default function Page() {
+             coordinamos tu primera sesión de terapia online. Sin presión, sin compromiso.
+           </p>
+ 
+-          <WhatsAppButton
++          <AdsWhatsAppButton
+             href={WHATSAPP_HREF}
+             className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-lg text-base"
+           >
+             Agendar mi primera sesión online
+-          </WhatsAppButton>
++          </AdsWhatsAppButton>
+ 
+           <p className="text-sm text-gray-500 mt-4">
+             Psicólogo online Chile · Respuesta rápida · Horarios flexibles
+@@ -449,12 +446,12 @@ export default function Page() {
+ 
+         {/* Sticky CTA Mobile */}
+         <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-t border-gray-200 p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
+-          <WhatsAppButton
++          <AdsWhatsAppButton
+             href={WHATSAPP_HREF}
+             className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
+           >
+             Agendar sesión online
+-          </WhatsAppButton>
++          </AdsWhatsAppButton>
+         </div>
+       </main>
+     </>
+diff --git a/src/app/ads/terapia-online/page.tsx b/src/app/ads/terapia-online/page.tsx
+index efd96ab..d2f3981 100644
+--- a/src/app/ads/terapia-online/page.tsx
++++ b/src/app/ads/terapia-online/page.tsx
+@@ -1,7 +1,6 @@
+ import type { Metadata } from "next";
+-import Script from "next/script";
+-import Image from "next/image";
+-import { WhatsAppButton } from "../../components/WhatsAppButton";
++import { AdsProfileImage } from "../components/AdsProfileImage";
++import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
+ 
+ export const metadata: Metadata = {
+   title: "Psicólogo Cognitivo Conductual Online | Gonzalo Pedrosa",
+@@ -67,7 +66,7 @@ const faqSchema = {
+ export default function AdsTerapiaOnlinePage() {
+   return (
+     <>
+-      <Script
++      <script
+         id="faq-schema"
+         type="application/ld+json"
+         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+@@ -77,8 +76,7 @@ export default function AdsTerapiaOnlinePage() {
+         {/* Hero Section */}
+         <section className="px-4 pt-12 pb-10 md:pt-20 md:pb-16 max-w-2xl mx-auto">
+           <div className="flex items-center gap-3 mb-6">
+-            <Image
+-              src="/yo.png"
++            <AdsProfileImage
+               alt="Gonzalo Pedrosa - Psicólogo"
+               width={56}
+               height={56}
+@@ -103,12 +101,12 @@ export default function AdsTerapiaOnlinePage() {
+           </p>
+ 
+           <div className="flex flex-col sm:flex-row gap-3 mb-4">
+-            <WhatsAppButton
++            <AdsWhatsAppButton
+               href={WHATSAPP_HREF}
+               className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md"
+             >
+               Agendar sesión online
+-            </WhatsAppButton>
++            </AdsWhatsAppButton>
+           </div>
+ 
+           <p className="text-sm text-gray-500 flex items-center gap-2">
+@@ -194,12 +192,12 @@ export default function AdsTerapiaOnlinePage() {
+             <p className="text-white text-lg font-medium mb-4">
+               ¿Listo para dar el primer paso?
+             </p>
+-            <WhatsAppButton
++            <AdsWhatsAppButton
+               href={WHATSAPP_HREF}
+               className="bg-white hover:bg-gray-100 text-gray-900 font-semibold"
+             >
+               Escribir por WhatsApp
+-            </WhatsAppButton>
++            </AdsWhatsAppButton>
+             <p className="text-gray-400 text-sm mt-3">
+               Sin compromiso · Conversemos primero
+             </p>
+@@ -351,12 +349,12 @@ export default function AdsTerapiaOnlinePage() {
+             es el más importante.
+           </p>
+ 
+-          <WhatsAppButton
++          <AdsWhatsAppButton
+             href={WHATSAPP_HREF}
+             className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-lg text-base"
+           >
+             Agendar mi primera sesión
+-          </WhatsAppButton>
++          </AdsWhatsAppButton>
+ 
+           <p className="text-sm text-gray-500 mt-4">
+             Respuesta rápida · Confidencial · Horarios flexibles
+@@ -368,12 +366,12 @@ export default function AdsTerapiaOnlinePage() {
+ 
+         {/* Sticky CTA Mobile */}
+         <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-t border-gray-200 p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
+-          <WhatsAppButton
++          <AdsWhatsAppButton
+             href={WHATSAPP_HREF}
+             className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
+           >
+             Agendar sesión online
+-          </WhatsAppButton>
++          </AdsWhatsAppButton>
+         </div>
+       </main>
+     </>
+diff --git a/src/app/ads/terapia-pareja/StickyWhatsAppAfterFirstCta.tsx b/src/app/ads/terapia-pareja/StickyWhatsAppAfterFirstCta.tsx
+index 012605d..b13044f 100644
+--- a/src/app/ads/terapia-pareja/StickyWhatsAppAfterFirstCta.tsx
++++ b/src/app/ads/terapia-pareja/StickyWhatsAppAfterFirstCta.tsx
+@@ -1,7 +1,6 @@
+ "use client";
+ 
+ import { useEffect, useState } from "react";
+-import { WhatsAppButton } from "../../components/WhatsAppButton";
+ 
+ type StickyWhatsAppAfterFirstCtaProps = {
+   href: string;
+@@ -40,12 +39,24 @@ export function StickyWhatsAppAfterFirstCta({
+       }`}
+     >
+       <div className="bg-white/95 backdrop-blur-sm border-t border-gray-200 px-4 py-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
+-        <WhatsAppButton
++        <a
+           href={href}
+-          className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
++          target="_blank"
++          rel="noopener noreferrer"
++          data-wa-track="1"
++          data-wa-label={href}
++          className="inline-flex items-center justify-center gap-2 w-full px-6 py-3 text-sm font-medium rounded-full cursor-pointer transition-all duration-150 bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-md"
+         >
++          <svg
++            className="w-5 h-5"
++            viewBox="0 0 24 24"
++            fill="currentColor"
++            aria-hidden="true"
++          >
++            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
++          </svg>
+           Agendar por WhatsApp
+-        </WhatsAppButton>
++        </a>
+       </div>
+     </div>
+   );
+diff --git a/src/app/ads/terapia-pareja/page.tsx b/src/app/ads/terapia-pareja/page.tsx
+index aa9a8d3..79f5ffa 100644
+--- a/src/app/ads/terapia-pareja/page.tsx
++++ b/src/app/ads/terapia-pareja/page.tsx
+@@ -1,8 +1,7 @@
+ import type { Metadata } from "next";
+-import Script from "next/script";
+-import Image from "next/image";
+-import { WhatsAppButton } from "../../components/WhatsAppButton";
+-import { StickyWhatsAppAfterFirstCta } from "./StickyWhatsAppAfterFirstCta";
++import { AdsProfileImage } from "../components/AdsProfileImage";
++import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
++import { LazyStickyWhatsAppAfterFirstCta } from "./LazyStickyWhatsAppAfterFirstCta";
+ 
+ export const metadata: Metadata = {
+   title: "Terapia de Pareja Online | Si todo termina en pelea",
+@@ -87,7 +86,7 @@ const faqSchema = {
+ export default function TerapiaParejaAdsPage() {
+   return (
+     <>
+-      <Script
++      <script
+         id="faq-schema"
+         type="application/ld+json"
+         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+@@ -96,8 +95,7 @@ export default function TerapiaParejaAdsPage() {
+       <main className="min-h-screen bg-white pb-24 md:pb-0">
+         <section className="px-4 pt-7 pb-8 md:pt-14 md:pb-12 max-w-3xl mx-auto">
+           <div className="flex items-center gap-3 mb-5">
+-            <Image
+-              src="/yo.png"
++            <AdsProfileImage
+               alt="Gonzalo Pedrosa - Psicólogo"
+               width={56}
+               height={56}
+@@ -142,12 +140,12 @@ export default function TerapiaParejaAdsPage() {
+               brevemente el motivo y coordinar la primera sesión (pareja o
+               individual previa).
+             </p>
+-            <WhatsAppButton
++            <AdsWhatsAppButton
+               href={WHATSAPP_HREF}
+               className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
+             >
+               Agendar por WhatsApp
+-            </WhatsAppButton>
++            </AdsWhatsAppButton>
+           </div>
+ 
+           <div className="flex flex-wrap gap-2 mb-5">
+@@ -365,8 +363,7 @@ export default function TerapiaParejaAdsPage() {
+ 
+           <div className="bg-white border border-gray-200 rounded-2xl p-5 mb-5">
+             <div className="flex items-start gap-4">
+-              <Image
+-                src="/yo.png"
++              <AdsProfileImage
+                 alt="Gonzalo Pedrosa - Psicólogo"
+                 width={72}
+                 height={72}
+@@ -396,18 +393,18 @@ export default function TerapiaParejaAdsPage() {
+               El primer paso puede ser simple: un mensaje para revisar su caso y
+               coordinar la primera sesión.
+             </p>
+-            <WhatsAppButton
++            <AdsWhatsAppButton
+               href={WHATSAPP_HREF}
+               className="bg-white hover:bg-gray-100 text-gray-900 font-semibold"
+             >
+               Escribir por WhatsApp
+-            </WhatsAppButton>
++            </AdsWhatsAppButton>
+             <p className="text-gray-400 text-xs mt-3">Atención online · Respuesta rápida</p>
+           </div>
+         </section>
+       </main>
+ 
+-      <StickyWhatsAppAfterFirstCta
++      <LazyStickyWhatsAppAfterFirstCta
+         href={WHATSAPP_HREF}
+         firstCtaId={FIRST_CTA_ID}
+       />
+diff --git a/src/app/globals.css b/src/app/globals.css
+index a2dc41e..5c2b1b4 100644
+--- a/src/app/globals.css
++++ b/src/app/globals.css
+@@ -9,7 +9,6 @@
+   --color-background: var(--background);
+   --color-foreground: var(--foreground);
+   --font-sans: var(--font-geist-sans);
+-  --font-mono: var(--font-geist-mono);
+ }
+ 
+ @media (prefers-color-scheme: dark) {
+@@ -22,5 +21,5 @@
+ body {
+   background: var(--background);
+   color: var(--foreground);
+-  font-family: Arial, Helvetica, sans-serif;
++  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+ }
+diff --git a/src/app/layout.tsx b/src/app/layout.tsx
+index 0b94d1d..0c6044d 100644
+--- a/src/app/layout.tsx
++++ b/src/app/layout.tsx
+@@ -1,6 +1,6 @@
+ // src/app/layout.tsx
+ import type { Metadata } from "next";
+-import { Geist, Geist_Mono } from "next/font/google";
++import { Geist } from "next/font/google";
+ import { GoogleTagManager } from "@next/third-parties/google";
+ import Script from "next/script";
+ import "./globals.css";
+@@ -12,11 +12,6 @@ const geistSans = Geist({
+   subsets: ["latin"],
+ });
+ 
+-const geistMono = Geist_Mono({
+-  variable: "--font-geist-mono",
+-  subsets: ["latin"],
+-});
+-
+ /**
+  * Metadata base del sitio.
+  * Las páginas individuales pueden sobrescribir estos valores.
+@@ -187,7 +182,7 @@ export default function RootLayout({
+         </Script>
+       </head>
+ 
+-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
++      <body className={`${geistSans.variable} antialiased`}>
+         {children}
+         <GoogleTagManager gtmId="GTM-N3DXMKTR" />
+         <Analytics />
+diff --git a/src/app/ads/compin/LazyStickyWhatsAppCTA.tsx b/src/app/ads/compin/LazyStickyWhatsAppCTA.tsx
+new file mode 100644
+index 0000000..298e02a
+--- /dev/null
++++ b/src/app/ads/compin/LazyStickyWhatsAppCTA.tsx
+@@ -0,0 +1,12 @@
++"use client";
++
++import dynamic from "next/dynamic";
++
++const StickyWhatsAppCTA = dynamic(
++  () => import("./StickyWhatsAppCTA").then((mod) => mod.StickyWhatsAppCTA),
++  { ssr: false }
++);
++
++export function LazyStickyWhatsAppCTA({ href }: { href: string }) {
++  return <StickyWhatsAppCTA href={href} />;
++}
+diff --git a/src/app/ads/components/AdsProfileImage.tsx b/src/app/ads/components/AdsProfileImage.tsx
+new file mode 100644
+index 0000000..7e50156
+--- /dev/null
++++ b/src/app/ads/components/AdsProfileImage.tsx
+@@ -0,0 +1,33 @@
++import Image from "next/image";
++
++type AdsProfileImageProps = {
++  alt: string;
++  width: number;
++  height: number;
++  className?: string;
++  priority?: boolean;
++  sizes?: string;
++};
++
++export function AdsProfileImage({
++  alt,
++  width,
++  height,
++  className,
++  priority = false,
++  sizes,
++}: AdsProfileImageProps) {
++  return (
++    <Image
++      src="/yo.png"
++      alt={alt}
++      width={width}
++      height={height}
++      className={className}
++      priority={priority}
++      loading={priority ? undefined : "lazy"}
++      fetchPriority={priority ? "high" : undefined}
++      sizes={sizes ?? `${width}px`}
++    />
++  );
++}
+diff --git a/src/app/ads/components/AdsWhatsAppButton.tsx b/src/app/ads/components/AdsWhatsAppButton.tsx
+new file mode 100644
+index 0000000..d1e195d
+--- /dev/null
++++ b/src/app/ads/components/AdsWhatsAppButton.tsx
+@@ -0,0 +1,34 @@
++type AdsWhatsAppButtonProps = {
++  href: string;
++  children: React.ReactNode;
++  className?: string;
++  label?: string;
++};
++
++export function AdsWhatsAppButton({
++  href,
++  children,
++  className = "",
++  label,
++}: AdsWhatsAppButtonProps) {
++  return (
++    <a
++      href={href}
++      target="_blank"
++      rel="noopener noreferrer"
++      data-wa-track="1"
++      data-wa-label={label ?? href}
++      className={`inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium rounded-full cursor-pointer transition-all duration-150 ${className}`}
++    >
++      <svg
++        className="w-5 h-5"
++        viewBox="0 0 24 24"
++        fill="currentColor"
++        aria-hidden="true"
++      >
++        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
++      </svg>
++      {children}
++    </a>
++  );
++}
+diff --git a/src/app/ads/terapia-pareja/LazyStickyWhatsAppAfterFirstCta.tsx b/src/app/ads/terapia-pareja/LazyStickyWhatsAppAfterFirstCta.tsx
+new file mode 100644
+index 0000000..6ba00e2
+--- /dev/null
++++ b/src/app/ads/terapia-pareja/LazyStickyWhatsAppAfterFirstCta.tsx
+@@ -0,0 +1,23 @@
++"use client";
++
++import dynamic from "next/dynamic";
++
++const StickyWhatsAppAfterFirstCta = dynamic(
++  () =>
++    import("./StickyWhatsAppAfterFirstCta").then(
++      (mod) => mod.StickyWhatsAppAfterFirstCta
++    ),
++  { ssr: false }
++);
++
++type LazyStickyWhatsAppAfterFirstCtaProps = {
++  href: string;
++  firstCtaId: string;
++};
++
++export function LazyStickyWhatsAppAfterFirstCta({
++  href,
++  firstCtaId,
++}: LazyStickyWhatsAppAfterFirstCtaProps) {
++  return <StickyWhatsAppAfterFirstCta href={href} firstCtaId={firstCtaId} />;
++}

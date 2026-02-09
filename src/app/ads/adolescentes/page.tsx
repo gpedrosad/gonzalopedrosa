@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import Script from "next/script";
-import Image from "next/image";
-import { WhatsAppButton } from "../../components/WhatsAppButton";
+import { AdsProfileImage } from "../components/AdsProfileImage";
+import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
 
 export const metadata: Metadata = {
   title: "Psicólogo Online para Adolescentes | Terapia Online",
@@ -67,7 +66,7 @@ const faqSchema = {
 export default function Page() {
   return (
     <>
-      <Script
+      <script
         id="faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -77,8 +76,7 @@ export default function Page() {
         {/* Hero Section */}
         <section className="px-4 pt-12 pb-10 md:pt-20 md:pb-16 max-w-2xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
-            <Image
-              src="/yo.png"
+            <AdsProfileImage
               alt="Gonzalo Pedrosa - Psicólogo Online para Adolescentes"
               width={56}
               height={56}
@@ -102,12 +100,12 @@ export default function Page() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 mb-3">
-            <WhatsAppButton
+            <AdsWhatsAppButton
               href={WHATSAPP_HREF}
               className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md"
             >
               Consultar disponibilidad
-            </WhatsAppButton>
+            </AdsWhatsAppButton>
           </div>
 
           <p className="text-sm text-green-700 font-medium mb-2">
@@ -204,8 +202,7 @@ export default function Page() {
             </h2>
 
             <div className="flex flex-col sm:flex-row gap-6 items-start">
-              <Image
-                src="/yo.png"
+              <AdsProfileImage
                 alt="Gonzalo Pedrosa - Psicólogo para Adolescentes Online"
                 width={120}
                 height={120}
@@ -302,12 +299,12 @@ export default function Page() {
             <p className="text-white text-lg font-medium mb-4">
               ¿Buscás ayuda profesional para tu hijo/a?
             </p>
-            <WhatsAppButton
+            <AdsWhatsAppButton
               href={WHATSAPP_HREF}
               className="bg-white hover:bg-gray-100 text-gray-900 font-semibold"
             >
               Consultá disponibilidad por WhatsApp
-            </WhatsAppButton>
+            </AdsWhatsAppButton>
             <p className="text-gray-400 text-sm mt-3">
               Sin lista de espera · Sin compromiso
             </p>
@@ -421,12 +418,12 @@ export default function Page() {
             conducta, la terapia puede ayudar. Escribime y coordinamos una primera sesión.
           </p>
 
-          <WhatsAppButton
+          <AdsWhatsAppButton
             href={WHATSAPP_HREF}
             className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-lg text-base"
           >
             Agendar primera sesión
-          </WhatsAppButton>
+          </AdsWhatsAppButton>
 
           <p className="text-sm text-gray-500 mt-4">
             Agenda inicial en menos de 24 horas · Sin lista de espera
@@ -442,12 +439,12 @@ export default function Page() {
             <p className="text-xs text-green-600 font-medium">Cupos limitados</p>
             <p className="text-xs text-gray-500">Sin lista de espera</p>
           </div>
-          <WhatsAppButton
+          <AdsWhatsAppButton
             href={WHATSAPP_HREF}
             className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
           >
             Consultar disponibilidad
-          </WhatsAppButton>
+          </AdsWhatsAppButton>
         </div>
       </main>
     </>
