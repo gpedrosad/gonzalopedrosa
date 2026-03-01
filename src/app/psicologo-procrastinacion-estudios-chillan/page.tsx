@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Procrastinación y Estudios en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo para superar la procrastinación en Chillán. Terapia para dejar de postergar, mejorar hábitos de estudio y vencer la pereza crónica.",
-    url: "https://gonzalopedrosa.cl/psicologo-procrastinacion-estudios-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-procrastinacion-estudios-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

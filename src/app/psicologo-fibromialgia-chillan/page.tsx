@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Fibromialgia en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo especializado en fibromialgia en Chillán. Terapia para manejo del dolor crónico, fatiga y aspectos emocionales de la enfermedad.",
-    url: "https://gonzalopedrosa.cl/psicologo-fibromialgia-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-fibromialgia-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

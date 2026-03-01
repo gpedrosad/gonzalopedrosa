@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tratamiento Insomnio en Chillán | Psicólogo Gonzalo Pedrosa",
     description: "Tratamiento psicológico para insomnio en Chillán. Terapia cognitivo-conductual para el insomnio (TCC-I), el tratamiento más efectivo sin medicación.",
-    url: "https://gonzalopedrosa.cl/tratamiento-insomnio-chillan",
+    url: "https://www.gonzalopedrosa.cl/tratamiento-insomnio-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Superar Relación Tóxica en Chillán | Psicólogo Gonzalo Pedrosa",
     description: "Psicólogo en Chillán para superar relaciones tóxicas. Recupera tu bienestar, autoestima y aprende a construir vínculos saludables.",
-    url: "https://gonzalopedrosa.cl/superar-relacion-toxica-chillan",
+    url: "https://www.gonzalopedrosa.cl/superar-relacion-toxica-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

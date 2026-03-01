@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Estrés Laboral en Chillán, Chile | Gonzalo Pedrosa",
     description: "Psicólogo especializado en estrés laboral y burnout en Chillán, Chile. Tratamiento para agotamiento profesional. Sesiones presenciales y online.",
-    url: "https://gonzalopedrosa.cl/psicologo-estres-laboral-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-estres-laboral-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

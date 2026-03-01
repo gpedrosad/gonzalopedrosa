@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Apego en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo especializado en estilos de apego en Chillán. Terapia para entender tus patrones relacionales y construir vínculos más seguros.",
-    url: "https://gonzalopedrosa.cl/psicologo-apego-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-apego-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

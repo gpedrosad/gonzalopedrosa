@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Matrimonial en Chillán, Chile | Gonzalo Pedrosa",
     description: "Psicólogo matrimonial en Chillán. Terapia para matrimonios en crisis, problemas de comunicación y fortalecimiento del vínculo. Sesiones presenciales y online.",
-    url: "https://gonzalopedrosa.cl/psicologo-matrimonial-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-matrimonial-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

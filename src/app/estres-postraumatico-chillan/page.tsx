@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Estrés Postraumático (TEPT) en Chillán | Psicólogo Gonzalo Pedrosa",
     description: "Tratamiento para estrés postraumático (TEPT) en Chillán. Terapia especializada para superar traumas y recuperar tu vida.",
-    url: "https://gonzalopedrosa.cl/estres-postraumatico-chillan",
+    url: "https://www.gonzalopedrosa.cl/estres-postraumatico-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

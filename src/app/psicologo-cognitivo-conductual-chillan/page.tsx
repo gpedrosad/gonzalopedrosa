@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Cognitivo Conductual en Chillán, Chile | Gonzalo Pedrosa",
     description: "Psicólogo con enfoque cognitivo-conductual (TCC) en Chillán, Chile. Terapia basada en evidencia para ansiedad, depresión y más. Sesiones presenciales y online.",
-    url: "https://gonzalopedrosa.cl/psicologo-cognitivo-conductual-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-cognitivo-conductual-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

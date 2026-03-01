@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Baja Autoestima en Chillán, Chile | Gonzalo Pedrosa",
     description: "Psicólogo especializado en autoestima en Chillán, Chile. Tratamiento para baja autoestima e inseguridad. Terapia cognitivo-conductual. Sesiones presenciales y online.",
-    url: "https://gonzalopedrosa.cl/psicologo-baja-autoestima-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-baja-autoestima-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

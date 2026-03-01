@@ -1,7 +1,7 @@
 // src/lib/schemas.ts
 // Schemas reutilizables para SEO programático
 
-export const SITE_URL = "https://gonzalopedrosa.cl";
+export const SITE_URL = "https://www.gonzalopedrosa.cl";
 
 /**
  * LocalBusiness Schema para páginas de Chillán

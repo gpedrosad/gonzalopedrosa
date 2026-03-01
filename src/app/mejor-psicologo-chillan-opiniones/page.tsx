@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mejor Psicólogo en Chillán Opiniones | Gonzalo Pedrosa",
     description: "Busca el mejor psicólogo en Chillán? Conoce mi enfoque, formación y lo que dicen mis pacientes. Terapia profesional con enfoque en resultados.",
-    url: "https://gonzalopedrosa.cl/mejor-psicologo-chillan-opiniones",
+    url: "https://www.gonzalopedrosa.cl/mejor-psicologo-chillan-opiniones",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

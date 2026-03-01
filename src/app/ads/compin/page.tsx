@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Informe Psicológico COMPIN | Evaluación Online",
     description:
       "Evaluación clínica e informe psicológico firmado para COMPIN por salud mental laboral. Consulta por WhatsApp.",
-    url: "https://gonzalopedrosa.cl/ads/compin",
+    url: "https://www.gonzalopedrosa.cl/ads/compin",
     type: "website",
     images: [
       { url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" },

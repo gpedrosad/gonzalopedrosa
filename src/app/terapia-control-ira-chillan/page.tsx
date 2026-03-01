@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Terapia Control de Ira en Chillán | Gonzalo Pedrosa",
     description: "Aprende a manejar la rabia y la impulsividad de forma efectiva con terapia profesional.",
-    url: "https://gonzalopedrosa.cl/terapia-control-ira-chillan",
+    url: "https://www.gonzalopedrosa.cl/terapia-control-ira-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

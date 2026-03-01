@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Acoso Laboral en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo para víctimas de acoso laboral (mobbing) en Chillán. Apoyo psicológico para superar el trauma y recuperar tu bienestar.",
-    url: "https://gonzalopedrosa.cl/psicologo-acoso-laboral-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-acoso-laboral-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

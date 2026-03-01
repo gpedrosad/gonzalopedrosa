@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Terapia de Pareja en Chillán | Gonzalo Pedrosa",
     description: "Terapia de pareja con psicólogo especializado. Mejora la comunicación y resuelve conflictos.",
-    url: "https://gonzalopedrosa.cl/terapia-de-pareja-chillan",
+    url: "https://www.gonzalopedrosa.cl/terapia-de-pareja-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

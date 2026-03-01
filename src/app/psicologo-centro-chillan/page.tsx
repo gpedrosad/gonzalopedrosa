@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Centro Chillán | Gonzalo Pedrosa",
     description: "Psicólogo en el centro de Chillán. Ubicación céntrica de fácil acceso. Atención presencial y online. Agenda tu hora.",
-    url: "https://gonzalopedrosa.cl/psicologo-centro-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-centro-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

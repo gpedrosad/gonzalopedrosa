@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "Terapia de Pareja Online | Si todo termina en pelea",
     description:
       "Acompañamiento profesional para parejas que buscan ordenar conflictos, mejorar su comunicación y tomar decisiones con más claridad.",
-    url: "https://gonzalopedrosa.cl/ads/terapia-pareja",
+    url: "https://www.gonzalopedrosa.cl/ads/terapia-pareja",
     type: "website",
     images: [
       {

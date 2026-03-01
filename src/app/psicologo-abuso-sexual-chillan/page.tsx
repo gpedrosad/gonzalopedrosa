@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Abuso Sexual en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo especializado en trauma por abuso sexual en Chillán. Espacio seguro y confidencial para procesar y sanar experiencias traumáticas.",
-    url: "https://gonzalopedrosa.cl/psicologo-abuso-sexual-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-abuso-sexual-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

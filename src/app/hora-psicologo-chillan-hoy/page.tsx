@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hora Psicólogo Chillán Hoy | Disponibilidad Inmediata",
     description: "¿Necesitas hora con psicólogo en Chillán hoy? Consulta disponibilidad inmediata. Atención presencial y online. Respuesta rápida por WhatsApp.",
-    url: "https://gonzalopedrosa.cl/hora-psicologo-chillan-hoy",
+    url: "https://www.gonzalopedrosa.cl/hora-psicologo-chillan-hoy",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

@@ -1,15 +1,29 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { CANONICAL_HOST } from "@/lib/site-config";
 
 /**
- * Middleware que setea CSP relajada para permitir GTM/GA/Ads.
- * Usa 'unsafe-inline' para scripts (menos seguro pero compatible con GTM).
+ * Middleware que:
+ * 1. Redirige a www si la petición viene sin www
+ * 2. Setea CSP relajada para permitir GTM/GA/Ads.
  *
  * NOTA CSP: Los wildcards como *.doubleclick.net NO cubren subdominios anidados
  * (ej: googleads.g.doubleclick.net). Por eso se agregan explícitamente.
  */
-export function middleware(_request: NextRequest) {
+export function middleware(request: NextRequest) {
   const isDev = process.env.NODE_ENV === "development";
+  
+  // Redirigir a www si no está presente (solo en producción)
+  if (!isDev) {
+    const hostname = request.headers.get("host") || "";
+    
+    // Si la petición viene de gonzalopedrosa.cl (sin www), redirigir a www
+    if (hostname === "gonzalopedrosa.cl" && CANONICAL_HOST === "www.gonzalopedrosa.cl") {
+      const url = request.nextUrl.clone();
+      url.host = CANONICAL_HOST;
+      return NextResponse.redirect(url, { status: 301 });
+    }
+  }
 
   // CSP relajada: permite scripts inline para compatibilidad con GTM
   const cspDirectives = [

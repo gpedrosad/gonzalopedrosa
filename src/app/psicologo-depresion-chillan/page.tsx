@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Depresión en Chillán, Chile | Gonzalo Pedrosa",
     description,
-    url: "https://gonzalopedrosa.cl/psicologo-depresion-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-depresion-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Superar Trauma de Infancia en Chillán | Psicólogo Gonzalo Pedrosa",
     description: "Psicólogo para superar traumas de infancia en Chillán. Terapia para sanar heridas del pasado que afectan tu presente.",
-    url: "https://gonzalopedrosa.cl/superar-trauma-infancia-chillan",
+    url: "https://www.gonzalopedrosa.cl/superar-trauma-infancia-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

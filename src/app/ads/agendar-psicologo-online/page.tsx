@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Agendar Psicólogo Online | Gonzalo Pedrosa",
     description:
       "Agenda tu sesión con psicólogo online. Horarios disponibles hoy. Respuesta inmediata.",
-    url: "https://gonzalopedrosa.cl/ads/agendar-psicologo-online",
+    url: "https://www.gonzalopedrosa.cl/ads/agendar-psicologo-online",
     type: "website",
     images: [
       { url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" },

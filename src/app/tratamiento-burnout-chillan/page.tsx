@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tratamiento Burnout en Chillán | Psicólogo Gonzalo Pedrosa",
     description: "Tratamiento para burnout y agotamiento laboral en Chillán. Recupera tu energía, establece límites y vuelve a disfrutar tu trabajo.",
-    url: "https://gonzalopedrosa.cl/tratamiento-burnout-chillan",
+    url: "https://www.gonzalopedrosa.cl/tratamiento-burnout-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

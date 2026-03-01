@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Obesidad en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo especializado en obesidad en Chillán. Tratamiento psicológico para pérdida de peso, alimentación emocional y cambio de hábitos.",
-    url: "https://gonzalopedrosa.cl/psicologo-obesidad-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-obesidad-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

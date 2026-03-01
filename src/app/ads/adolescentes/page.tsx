@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Psicólogo Online para Adolescentes | Terapia Online",
     description:
       "Terapia online para adolescentes con ansiedad, depresión, pánico o dificultades de conducta. Psicólogo online especializado.",
-    url: "https://gonzalopedrosa.cl/ads/adolescentes",
+    url: "https://www.gonzalopedrosa.cl/ads/adolescentes",
     type: "website",
     images: [
       { url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo Online para Adolescentes" },

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Sentimiento de Culpa en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo para trabajar sentimientos de culpa en Chillán. Terapia para liberarte de la culpa excesiva y vivir con más paz interior.",
-    url: "https://gonzalopedrosa.cl/psicologo-sentimiento-culpa-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-sentimiento-culpa-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

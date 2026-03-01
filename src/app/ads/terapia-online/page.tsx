@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Psicólogo Cognitivo Conductual Online | Gonzalo Pedrosa",
     description:
       "Terapia cognitivo conductual online con psicólogo. Sesiones de 50 min por videollamada. Horarios flexibles, espacio privado.",
-    url: "https://gonzalopedrosa.cl/ads/terapia-online",
+    url: "https://www.gonzalopedrosa.cl/ads/terapia-online",
     type: "website",
     images: [
       { url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" },

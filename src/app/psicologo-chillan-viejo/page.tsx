@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo en Chillán Viejo | Gonzalo Pedrosa - Atención Cercana",
     description: "Psicólogo en Chillán Viejo y alrededores. Atención presencial cercana y terapia online. Ansiedad, depresión, estrés y más. Agenda tu hora.",
-    url: "https://gonzalopedrosa.cl/psicologo-chillan-viejo",
+    url: "https://www.gonzalopedrosa.cl/psicologo-chillan-viejo",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

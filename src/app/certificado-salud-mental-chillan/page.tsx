@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Certificado de Salud Mental en Chillán | Psicólogo Gonzalo Pedrosa",
     description: "Certificado de salud mental en Chillán. Documento profesional para trámites laborales, licencias, permisos y otros requerimientos.",
-    url: "https://gonzalopedrosa.cl/certificado-salud-mental-chillan",
+    url: "https://www.gonzalopedrosa.cl/certificado-salud-mental-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

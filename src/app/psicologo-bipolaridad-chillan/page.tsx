@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Bipolaridad en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo de apoyo para trastorno bipolar en Chillán. Terapia complementaria para manejar episodios, mejorar adherencia y calidad de vida.",
-    url: "https://gonzalopedrosa.cl/psicologo-bipolaridad-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-bipolaridad-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

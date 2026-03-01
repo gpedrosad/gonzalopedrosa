@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo para Hombres en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo especializado en terapia para hombres en Chillán. Espacio seguro para hablar de emociones, relaciones, estrés y salud mental masculina.",
-    url: "https://gonzalopedrosa.cl/psicologo-hombres-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-hombres-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

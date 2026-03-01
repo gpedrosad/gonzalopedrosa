@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Falta de Deseo Sexual en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo para problemas de deseo sexual en Chillán. Terapia confidencial para abordar la disminución del deseo y mejorar tu vida íntima.",
-    url: "https://gonzalopedrosa.cl/psicologo-falta-deseo-sexual-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-falta-deseo-sexual-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Psicólogo Online Chile | Terapia por Videollamada | Gonzalo Pedrosa",
     description:
       "Psicólogo online en Chile. Sesiones de psicoterapia por videollamada de 50 min. Atención psicológica online con horarios flexibles.",
-    url: "https://gonzalopedrosa.cl/ads/psicologo-online",
+    url: "https://www.gonzalopedrosa.cl/ads/psicologo-online",
     type: "website",
     images: [
       { url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo Online Chile" },

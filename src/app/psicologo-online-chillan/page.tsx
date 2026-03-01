@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Online en Chillán, Chile | Gonzalo Pedrosa",
     description: "Psicólogo online desde Chillán para todo Chile. Sesiones por videollamada con la misma efectividad que presencial. Horarios flexibles y comodidad desde tu hogar.",
-    url: "https://gonzalopedrosa.cl/psicologo-online-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-online-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Timidez en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo para superar la timidez en Chillán. Terapia para ganar confianza social, expresarte mejor y conectar con otros sin ansiedad.",
-    url: "https://gonzalopedrosa.cl/psicologo-timidez-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-timidez-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

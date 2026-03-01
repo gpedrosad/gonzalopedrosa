@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Crisis de Pánico en Chillán, Chile | Gonzalo Pedrosa",
     description: "Psicólogo especializado en crisis de pánico en Chillán, Chile. Tratamiento basado en evidencia para ataques de pánico. Atención presencial y online.",
-    url: "https://gonzalopedrosa.cl/psicologo-crisis-de-panico-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-crisis-de-panico-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

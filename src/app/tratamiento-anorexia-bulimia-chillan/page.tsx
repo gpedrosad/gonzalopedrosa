@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tratamiento Anorexia y Bulimia en Chillán | Psicólogo Gonzalo Pedrosa",
     description: "Tratamiento psicológico para anorexia y bulimia en Chillán. Terapia especializada para recuperar tu salud y tu relación con la comida.",
-    url: "https://gonzalopedrosa.cl/tratamiento-anorexia-bulimia-chillan",
+    url: "https://www.gonzalopedrosa.cl/tratamiento-anorexia-bulimia-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

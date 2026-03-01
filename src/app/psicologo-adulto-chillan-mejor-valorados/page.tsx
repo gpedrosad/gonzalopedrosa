@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Cómo Elegir un Psicólogo Bien Valorado en Chillán, Chile | Guía Práctica",
     description: "Guía para elegir un psicólogo bien valorado en Chillán, Chile. Qué considerar al buscar un profesional de salud mental: formación, enfoque, experiencia y más.",
-    url: "https://gonzalopedrosa.cl/psicologo-adulto-chillan-mejor-valorados",
+    url: "https://www.gonzalopedrosa.cl/psicologo-adulto-chillan-mejor-valorados",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

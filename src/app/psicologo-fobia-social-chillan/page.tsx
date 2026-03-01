@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Fobia Social en Chillán, Chile | Gonzalo Pedrosa",
     description: "Psicólogo especializado en fobia social y ansiedad social en Chillán, Chile. Tratamiento con terapia cognitivo-conductual. Sesiones presenciales y online.",
-    url: "https://gonzalopedrosa.cl/psicologo-fobia-social-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-fobia-social-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

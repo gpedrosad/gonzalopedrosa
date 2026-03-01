@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Terapia EMDR en Chillán | Gonzalo Pedrosa",
     description: "Tratamiento para trauma y estrés postraumático con EMDR. Terapia efectiva y basada en evidencia.",
-    url: "https://gonzalopedrosa.cl/terapia-emdr-chillan",
+    url: "https://www.gonzalopedrosa.cl/terapia-emdr-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

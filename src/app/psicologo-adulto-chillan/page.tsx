@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo para Adultos en Chillán, Chile | Gonzalo Pedrosa",
     description: "Psicólogo para adultos en Chillán, Chile. Atención profesional para ansiedad, depresión, estrés y desarrollo personal. Sesiones presenciales y online.",
-    url: "https://gonzalopedrosa.cl/psicologo-adulto-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-adulto-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

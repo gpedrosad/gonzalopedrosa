@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Trastornos Alimenticios en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo especializado en trastornos alimenticios en Chillán. Tratamiento para anorexia, bulimia, atracones y relación problemática con la comida.",
-    url: "https://gonzalopedrosa.cl/psicologo-trastornos-alimenticios-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-trastornos-alimenticios-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Adicciones en Chillán, Chile | Gonzalo Pedrosa",
     description: "Psicólogo especializado en adicciones en Chillán, Chile. Tratamiento para conductas adictivas con enfoque cognitivo-conductual. Atención presencial y online.",
-    url: "https://gonzalopedrosa.cl/psicologo-adicciones-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-adicciones-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

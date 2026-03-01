@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Especialista en Ansiedad Chillán | Gonzalo Pedrosa",
     description: "Psicólogo especialista en ansiedad en Chillán, Chile. Tratamiento especializado con terapia cognitivo-conductual. Experiencia en trastornos de ansiedad. Sesiones presenciales y online.",
-    url: "https://gonzalopedrosa.cl/psicologo-especialista-ansiedad-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-especialista-ansiedad-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

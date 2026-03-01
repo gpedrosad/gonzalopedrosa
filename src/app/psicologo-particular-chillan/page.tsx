@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Particular en Chillán, Chile | Gonzalo Pedrosa",
     description: "Psicólogo particular en Chillán con atención personalizada. Sin esperas, horarios flexibles y confidencialidad total. Sesiones presenciales y online.",
-    url: "https://gonzalopedrosa.cl/psicologo-particular-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-particular-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

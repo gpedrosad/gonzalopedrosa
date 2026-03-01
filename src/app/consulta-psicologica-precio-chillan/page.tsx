@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Precio Consulta Psicológica en Chillán | Gonzalo Pedrosa",
     description: "Precios de consulta psicológica en Chillán. Valor de sesión, formas de pago y opciones de reembolso Isapre. Información clara y transparente.",
-    url: "https://gonzalopedrosa.cl/consulta-psicologica-precio-chillan",
+    url: "https://www.gonzalopedrosa.cl/consulta-psicologica-precio-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

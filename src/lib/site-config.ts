@@ -1,4 +1,4 @@
-export const CANONICAL_ORIGIN = "https://gonzalopedrosa.cl";
+export const CANONICAL_ORIGIN = "https://www.gonzalopedrosa.cl";
 export const CANONICAL_HOST = new URL(CANONICAL_ORIGIN).host;
 export const TRAILING_SLASH = false;
 

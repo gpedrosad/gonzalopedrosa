@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo para Estudiantes en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo para estudiantes universitarios y de enseñanza media en Chillán. Apoyo en ansiedad, estrés académico, procrastinación y orientación vocacional.",
-    url: "https://gonzalopedrosa.cl/psicologo-estudiantes-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-estudiantes-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

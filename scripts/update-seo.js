@@ -112,7 +112,7 @@ function updatePage(filePath) {
   openGraph: {
     title: "${metadata.title}",
     description: "${shortDesc.replace(/"/g, '\\"')}",
-    url: "https://gonzalopedrosa.cl${metadata.canonical}",
+    url: "https://www.gonzalopedrosa.cl${metadata.canonical}",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

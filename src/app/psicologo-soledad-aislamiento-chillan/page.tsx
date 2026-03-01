@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Soledad y Aislamiento en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo para soledad y aislamiento social en Chillán. Terapia para reconectar contigo mismo y con otros, superando el aislamiento.",
-    url: "https://gonzalopedrosa.cl/psicologo-soledad-aislamiento-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-soledad-aislamiento-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

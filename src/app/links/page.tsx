@@ -15,7 +15,7 @@ interface Evaluation {
 
 export default function LinksPage() {
   const pages = sitemapFn();
-  const baseUrl = "https://gonzalopedrosa.cl";
+  const baseUrl = "https://www.gonzalopedrosa.cl";
 
   const [clicks, setClicks] = useState<Record<string, number>>({});
   const [copied, setCopied] = useState(false);

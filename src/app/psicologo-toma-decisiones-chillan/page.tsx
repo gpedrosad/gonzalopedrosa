@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Psicólogo Toma de Decisiones en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo para ayudarte a tomar decisiones difíciles en Chillán. Terapia para clarificar opciones, superar la parálisis y decidir con confianza.",
-    url: "https://gonzalopedrosa.cl/psicologo-toma-decisiones-chillan",
+    url: "https://www.gonzalopedrosa.cl/psicologo-toma-decisiones-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tratamiento TOC en Chillán, Chile | Gonzalo Pedrosa - Psicólogo",
     description: "Tratamiento para TOC (Trastorno Obsesivo Compulsivo) en Chillán, Chile. Terapia cognitivo-conductual con exposición y prevención de respuesta. Presencial y online.",
-    url: "https://gonzalopedrosa.cl/tratamiento-toc-chillan",
+    url: "https://www.gonzalopedrosa.cl/tratamiento-toc-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },

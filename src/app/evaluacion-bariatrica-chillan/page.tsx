@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Evaluación Bariátrica en Chillán | Psicólogo Gonzalo Pedrosa",
     description: "Evaluación psicológica para cirugía bariátrica en Chillán. Informe psicológico requerido para operación de manga gástrica y bypass.",
-    url: "https://gonzalopedrosa.cl/evaluacion-bariatrica-chillan",
+    url: "https://www.gonzalopedrosa.cl/evaluacion-bariatrica-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
