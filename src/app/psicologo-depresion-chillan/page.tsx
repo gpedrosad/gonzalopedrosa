@@ -2,64 +2,99 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import {
+  localBusinessSchema,
+  getBreadcrumbSchema,
+  getServiceSchema,
+  getFAQSchema,
+  getTwitterDescription,
+} from "@/lib/schemas";
+
+const description =
+  "Psicólogo especializado en depresión en Chillán, Chile. Tratamiento con enfoque cognitivo-conductual basado en evidencia. Sesiones presenciales y online.";
 
 export const metadata: Metadata = {
   title: "Psicólogo Depresión en Chillán, Chile | Gonzalo Pedrosa",
-  description:
-    "Psicólogo especializado en depresión en Chillán, Chile. Tratamiento con enfoque cognitivo-conductual basado en evidencia. Sesiones presenciales y online.",
+  description,
   alternates: {
     canonical: "/psicologo-depresion-chillan",
   },
   openGraph: {
     title: "Psicólogo Depresión en Chillán, Chile | Gonzalo Pedrosa",
-    description: "Psicólogo especializado en depresión en Chillán, Chile. Tratamiento con enfoque cognitivo-conductual basado en evidencia. Sesiones presenciales y online.",
+    description,
     url: "https://gonzalopedrosa.cl/psicologo-depresion-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo Depresión en Chillán, Chile",
-    description: "Psicólogo especializado en depresión en Chillán, Chile. Tratamiento con enfoque cognitivo-conductual basado en evidencia. Sesiones presenciales y onli",
+    title: "Psicólogo Depresión en Chillán",
+    description: getTwitterDescription(
+      "Tratamiento profesional para depresión con TCC. Sesiones online y presenciales. +7 años de experiencia en Chillán."
+    ),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cuánto dura el tratamiento para depresión?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La duración varía según cada persona y la severidad del cuadro. Generalmente, se comienzan a notar mejorías entre las 8-12 sesiones, aunque algunos casos requieren tratamiento más prolongado."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Necesito medicación además de terapia?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Depende de cada caso. Para depresiones moderadas a severas, la combinación de terapia y medicación suele ser más efectiva. Si es necesario, te derivo a psiquiatra para evaluación."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Puedo tener terapia online?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, la{\" \"} terapia online {\" \"} es efectiva para el tratamiento de la depresión. Evaluamos juntos la modalidad más adecuada para ti."
-      }
-    }
-  ]
-};
+// Breadcrumb items
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Depresión Chillán" },
+];
+
+// FAQs específicas de depresión
+const depresionFAQs = [
+  {
+    question: "¿Cuánto dura el tratamiento para depresión?",
+    answer:
+      "La duración varía según cada persona y la severidad del cuadro. Generalmente, se comienzan a notar mejorías entre las 8-12 sesiones, aunque algunos casos requieren tratamiento más prolongado.",
+  },
+  {
+    question: "¿Necesito medicación además de terapia?",
+    answer:
+      "Depende de cada caso. Para depresiones moderadas a severas, la combinación de terapia y medicación suele ser más efectiva. Si es necesario, te derivo a psiquiatra para evaluación.",
+  },
+  {
+    question: "¿Puedo tener terapia online?",
+    answer:
+      "Sí, la terapia online es efectiva para el tratamiento de la depresión. Evaluamos juntos la modalidad más adecuada para ti.",
+  },
+  {
+    question: "¿Cómo sé si tengo depresión o solo tristeza?",
+    answer:
+      "La depresión se diferencia de la tristeza por su duración (más de 2 semanas), intensidad y el impacto en tu vida diaria. Si afecta tu trabajo, relaciones o autocuidado, es importante buscar ayuda.",
+  },
+];
+
+// Schemas
+const faqSchema = getFAQSchema(depresionFAQs);
+const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
+const serviceSchema = getServiceSchema({
+  serviceType: "Tratamiento de Depresión",
+  description:
+    "Tratamiento profesional para depresión con enfoque cognitivo-conductual. Sesiones presenciales y online.",
+  areaServed: "Chillán",
+});
 
 export default function PsicologoDepresionChillanPage() {
   return (
     <>
+      <Script
+        id="local-business"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <Script
+        id="breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Script
+        id="service"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Script
         id="faq-schema"
         type="application/ld+json"
@@ -74,6 +109,7 @@ export default function PsicologoDepresionChillanPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <Breadcrumb items={breadcrumbItems} />
       <div
         style={{
           display: "flex",
@@ -268,84 +304,33 @@ export default function PsicologoDepresionChillanPage() {
           Preguntas frecuentes
         </h2>
         <div style={{ display: "grid", gap: "0.5rem" }}>
-          <details
-            style={{
-              padding: "1rem",
-              border: "1px solid #eaeaea",
-              borderRadius: "12px",
-            }}
-          >
-            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Cuánto dura el tratamiento para depresión?
-            </summary>
-            <p
+          {[...depresionFAQs, ...faqSchema.mainEntity.slice(4, 10).map((faq) => ({
+            question: faq.name,
+            answer: faq.acceptedAnswer.text,
+          }))].map((faq, index) => (
+            <details
+              key={index}
               style={{
-                marginTop: "0.75rem",
-                color: "#666",
-                lineHeight: 1.6,
-                fontSize: "0.9375rem",
+                padding: "1rem",
+                border: "1px solid #eaeaea",
+                borderRadius: "12px",
               }}
             >
-              La duración varía según cada persona y la severidad del cuadro.
-              Generalmente, se comienzan a notar mejorías entre las 8-12
-              sesiones, aunque algunos casos requieren tratamiento más
-              prolongado.
-            </p>
-          </details>
-
-          <details
-            style={{
-              padding: "1rem",
-              border: "1px solid #eaeaea",
-              borderRadius: "12px",
-            }}
-          >
-            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Necesito medicación además de terapia?
-            </summary>
-            <p
-              style={{
-                marginTop: "0.75rem",
-                color: "#666",
-                lineHeight: 1.6,
-                fontSize: "0.9375rem",
-              }}
-            >
-              Depende de cada caso. Para depresiones moderadas a severas, la
-              combinación de terapia y medicación suele ser más efectiva. Si es
-              necesario, te derivo a psiquiatra para evaluación.
-            </p>
-          </details>
-
-          <details
-            style={{
-              padding: "1rem",
-              border: "1px solid #eaeaea",
-              borderRadius: "12px",
-            }}
-          >
-            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Puedo tener terapia online?
-            </summary>
-            <p
-              style={{
-                marginTop: "0.75rem",
-                color: "#666",
-                lineHeight: 1.6,
-                fontSize: "0.9375rem",
-              }}
-            >
-              Sí, la{" "}
-              <Link
-                href="/terapia-online"
-                style={{ color: "#000", textDecoration: "underline" }}
+              <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
+                {faq.question}
+              </summary>
+              <p
+                style={{
+                  marginTop: "0.75rem",
+                  color: "#666",
+                  lineHeight: 1.6,
+                  fontSize: "0.9375rem",
+                }}
               >
-                terapia online
-              </Link>{" "}
-              es efectiva para el tratamiento de la depresión. Evaluamos juntos
-              la modalidad más adecuada para ti.
-            </p>
-          </details>
+                {faq.answer}
+              </p>
+            </details>
+          ))}
         </div>
       </section>
 

@@ -2,72 +2,99 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import {
+  localBusinessSchema,
+  getBreadcrumbSchema,
+  getServiceSchema,
+  getFAQSchema,
+  getTwitterDescription,
+} from "@/lib/schemas";
+
+const description =
+  "Psicólogo especializado en ansiedad en Chillán, Chile. Tratamiento con enfoque cognitivo-conductual basado en evidencia. Sesiones presenciales y online.";
 
 export const metadata: Metadata = {
   title: "Psicólogo Ansiedad en Chillán, Chile | Gonzalo Pedrosa",
-  description:
-    "Psicólogo especializado en ansiedad en Chillán, Chile. Tratamiento con enfoque cognitivo-conductual basado en evidencia. Sesiones presenciales y online.",
+  description,
   alternates: {
     canonical: "/psicologo-ansiedad-chillan",
   },
   openGraph: {
     title: "Psicólogo Ansiedad en Chillán, Chile | Gonzalo Pedrosa",
-    description: "Psicólogo especializado en ansiedad en Chillán, Chile. Tratamiento con enfoque cognitivo-conductual basado en evidencia. Sesiones presenciales y online.",
+    description,
     url: "https://gonzalopedrosa.cl/psicologo-ansiedad-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo Ansiedad en Chillán, Chile",
-    description: "Psicólogo especializado en ansiedad en Chillán, Chile. Tratamiento con enfoque cognitivo-conductual basado en evidencia. Sesiones presenciales y onlin",
+    title: "Psicólogo Ansiedad en Chillán",
+    description: getTwitterDescription(
+      "Tratamiento profesional para ansiedad con TCC. Sesiones online y presenciales en Chillán. +7 años de experiencia."
+    ),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cuánto dura un tratamiento para ansiedad?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Generalmente entre 8-16 sesiones para casos de ansiedad moderada. Algunos notan cambios en pocas semanas, mientras otros requieren un proceso más extenso. Lo evaluamos juntos durante el tratamiento."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿La ansiedad puede derivar en crisis de pánico?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "En algunos casos, la ansiedad sostenida puede manifestarse en{\" \"} crisis de pánico . Identificarla tempranamente puede ayudar a prevenir su escalada."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Es confidencial la terapia?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí. Todo lo conversado está protegido por secreto profesional, salvo excepciones legales que se explican al inicio del proceso."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Necesito medicación para tratar la ansiedad?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No necesariamente. La TCC por sí sola es muy efectiva. En casos severos, puede combinarse con medicación (derivación a psiquiatra). Lo evaluamos según tu situación."
-      }
-    }
-  ]
-};
+// Breadcrumb items
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Ansiedad Chillán" },
+];
+
+// FAQs específicas de ansiedad
+const ansiedadFAQs = [
+  {
+    question: "¿Cuánto dura un tratamiento para ansiedad?",
+    answer:
+      "Generalmente entre 8-16 sesiones para casos de ansiedad moderada. Algunos notan cambios en pocas semanas, mientras otros requieren un proceso más extenso. Lo evaluamos juntos durante el tratamiento.",
+  },
+  {
+    question: "¿La ansiedad puede derivar en crisis de pánico?",
+    answer:
+      "En algunos casos, la ansiedad sostenida puede manifestarse en crisis de pánico. Identificarla tempranamente puede ayudar a prevenir su escalada.",
+  },
+  {
+    question: "¿Necesito medicación para tratar la ansiedad?",
+    answer:
+      "No necesariamente. La TCC por sí sola es muy efectiva. En casos severos, puede combinarse con medicación (derivación a psiquiatra). Lo evaluamos según tu situación.",
+  },
+  {
+    question: "¿Qué técnicas se usan en el tratamiento de ansiedad?",
+    answer:
+      "Uso técnicas de respiración, reestructuración cognitiva, exposición gradual, mindfulness y activación conductual. Cada tratamiento se personaliza según tus necesidades.",
+  },
+];
+
+// Schemas
+const faqSchema = getFAQSchema(ansiedadFAQs);
+const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
+const serviceSchema = getServiceSchema({
+  serviceType: "Tratamiento de Ansiedad",
+  description:
+    "Tratamiento profesional para trastornos de ansiedad con enfoque cognitivo-conductual. Sesiones presenciales y online.",
+  areaServed: "Chillán",
+});
 
 export default function PsicologoAnsiedadChillanPage() {
   return (
     <>
+      <Script
+        id="local-business"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <Script
+        id="breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Script
+        id="service"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Script
         id="faq-schema"
         type="application/ld+json"
@@ -82,6 +109,7 @@ export default function PsicologoAnsiedadChillanPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <Breadcrumb items={breadcrumbItems} />
       {/* Header con credenciales */}
       <div
         style={{
@@ -428,113 +456,35 @@ export default function PsicologoAnsiedadChillanPage() {
         </h2>
 
         <div style={{ display: "grid", gap: "0.5rem" }}>
-          <details
-            style={{
-              padding: "1rem",
-              border: "1px solid #eaeaea",
-              borderRadius: "12px",
-            }}
-          >
-            <summary
-              style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}
-            >
-              ¿Cuánto dura un tratamiento para ansiedad?
-            </summary>
-            <p
+          {[...ansiedadFAQs, ...faqSchema.mainEntity.slice(4, 10).map((faq) => ({
+            question: faq.name,
+            answer: faq.acceptedAnswer.text,
+          }))].map((faq, index) => (
+            <details
+              key={index}
               style={{
-                marginTop: "0.75rem",
-                color: "#666",
-                lineHeight: 1.6,
-                fontSize: "0.9375rem",
+                padding: "1rem",
+                border: "1px solid #eaeaea",
+                borderRadius: "12px",
               }}
             >
-              Generalmente entre 8-16 sesiones para casos de ansiedad moderada.
-              Algunos notan cambios en pocas semanas, mientras otros requieren
-              un proceso más extenso. Lo evaluamos juntos durante el tratamiento.
-            </p>
-          </details>
-
-          <details
-            style={{
-              padding: "1rem",
-              border: "1px solid #eaeaea",
-              borderRadius: "12px",
-            }}
-          >
-            <summary
-              style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}
-            >
-              ¿La ansiedad puede derivar en crisis de pánico?
-            </summary>
-            <p
-              style={{
-                marginTop: "0.75rem",
-                color: "#666",
-                lineHeight: 1.6,
-                fontSize: "0.9375rem",
-              }}
-            >
-              En algunos casos, la ansiedad sostenida puede manifestarse en{" "}
-              <Link
-                href="/psicologo-crisis-de-panico-chillan"
-                style={{ color: "#000", textDecoration: "underline" }}
+              <summary
+                style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}
               >
-                crisis de pánico
-              </Link>
-              . Identificarla tempranamente puede ayudar a prevenir su escalada.
-            </p>
-          </details>
-
-          <details
-            style={{
-              padding: "1rem",
-              border: "1px solid #eaeaea",
-              borderRadius: "12px",
-            }}
-          >
-            <summary
-              style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}
-            >
-              ¿Es confidencial la terapia?
-            </summary>
-            <p
-              style={{
-                marginTop: "0.75rem",
-                color: "#666",
-                lineHeight: 1.6,
-                fontSize: "0.9375rem",
-              }}
-            >
-              Sí. Todo lo conversado está protegido por secreto profesional,
-              salvo excepciones legales que se explican al inicio del proceso.
-            </p>
-          </details>
-
-          <details
-            style={{
-              padding: "1rem",
-              border: "1px solid #eaeaea",
-              borderRadius: "12px",
-            }}
-          >
-            <summary
-              style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}
-            >
-              ¿Necesito medicación para tratar la ansiedad?
-            </summary>
-            <p
-              style={{
-                marginTop: "0.75rem",
-                color: "#666",
-                lineHeight: 1.6,
-                fontSize: "0.9375rem",
-              }}
-            >
-              No necesariamente. La TCC por sí sola es muy efectiva. En casos
-              severos, puede combinarse con medicación (derivación a
-              psiquiatra). Lo evaluamos según tu situación.
-            </p>
-          </details>
+                {faq.question}
+              </summary>
+              <p
+                style={{
+                  marginTop: "0.75rem",
+                  color: "#666",
+                  lineHeight: 1.6,
+                  fontSize: "0.9375rem",
+                }}
+              >
+                {faq.answer}
+              </p>
+            </details>
+          ))}
         </div>
       </section>
 
