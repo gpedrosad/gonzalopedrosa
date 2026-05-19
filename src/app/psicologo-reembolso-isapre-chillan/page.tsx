@@ -51,7 +51,7 @@ const faqSchema = {
       "name": "¿Funciona para sesiones online?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, las Isapres aceptan reembolso tanto para sesiones presenciales como para{\" \"} terapia online . La boleta indica el servicio correctamente."
+        "text": "Sí, las Isapres aceptan reembolso tanto para sesiones presenciales como para terapia online. La boleta indica el servicio correctamente."
       }
     },
     {

@@ -43,7 +43,7 @@ const faqSchema = {
       "name": "¿Tiene que venir mi pareja?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No necesariamente. Puedes trabajarlo de forma individual. Si más adelante tiene sentido incluir a tu pareja, lo evaluamos. También ofrezco{\" \"} terapia de pareja ."
+        "text": "No necesariamente. Puedes trabajarlo de forma individual. Si más adelante tiene sentido incluir a tu pareja, lo evaluamos. También ofrezco terapia de pareja."
       }
     },
     {

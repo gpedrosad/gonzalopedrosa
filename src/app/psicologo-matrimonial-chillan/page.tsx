@@ -43,7 +43,7 @@ const faqSchema = {
       "name": "¿Qué diferencia hay con terapia de pareja?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "En esencia es similar. La{\" \"} terapia de pareja {\" \"} incluye a novios y convivientes, mientras que la matrimonial se enfoca específicamente en parejas casadas y sus dinámicas particulares."
+        "text": "En esencia es similar. La terapia de pareja incluye a novios y convivientes, mientras que la matrimonial se enfoca específicamente en parejas casadas y sus dinámicas particulares."
       }
     },
     {

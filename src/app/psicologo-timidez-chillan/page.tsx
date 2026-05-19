@@ -51,7 +51,7 @@ const faqSchema = {
       "name": "¿Funciona la terapia online para timidez?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, e incluso puede ser más cómoda al principio. La{\" \"} terapia online{\" \"} es igual de efectiva y luego puedes pasar a presencial si quieres."
+        "text": "Sí, e incluso puede ser más cómoda al principio. La terapia online es igual de efectiva y luego puedes pasar a presencial si quieres."
       }
     }
   ]

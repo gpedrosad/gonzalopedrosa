@@ -52,7 +52,7 @@ const faqSchema = {
       "name": "¿Es posible la terapia online?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La{\" \"} terapia online {\" \"} puede ser una opción válida, especialmente para el seguimiento."
+        "text": "La terapia online puede ser una opción válida, especialmente para el seguimiento."
       }
     }
   ]

@@ -35,7 +35,7 @@ const faqSchema = {
       "name": "¿Tienen hora disponible para hoy?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La disponibilidad varía cada día. Escríbeme por{\" \"} WhatsApp {\" \"} y te confirmo en minutos si tengo espacio hoy o cuál es el horario más próximo disponible."
+        "text": "La disponibilidad varía cada día. Escríbeme por WhatsApp y te confirmo en minutos si tengo espacio hoy o cuál es el horario más próximo disponible."
       }
     },
     {
@@ -43,7 +43,7 @@ const faqSchema = {
       "name": "¿Puedo tener sesión online ahora?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La{\" \"} terapia online {\" \"} permite mayor flexibilidad horaria. Consulta disponibilidad y podemos coordinar una sesión en el día si hay espacio."
+        "text": "La terapia online permite mayor flexibilidad horaria. Consulta disponibilidad y podemos coordinar una sesión en el día si hay espacio."
       }
     },
     {

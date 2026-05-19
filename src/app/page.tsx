@@ -258,6 +258,49 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Servicios en Chillán */}
+      <section style={{ marginBottom: "3rem" }}>
+        <h2
+          style={{
+            fontSize: "0.75rem",
+            fontWeight: 600,
+            textTransform: "uppercase",
+            letterSpacing: "0.1em",
+            color: "#999",
+            marginBottom: "1rem",
+          }}
+        >
+          Servicios en Chillán
+        </h2>
+        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+          {[
+            { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
+            { label: "Psicólogo online", href: "/psicologo-online-chillan" },
+            { label: "Terapia de pareja", href: "/terapia-de-pareja-chillan" },
+            { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
+            { label: "Primera consulta", href: "/primera-consulta-psicologo-chillan" },
+            { label: "Precio consulta", href: "/consulta-psicologica-precio-chillan" },
+            { label: "Psicólogo para hombres", href: "/psicologo-hombres-chillan" },
+            { label: "Agendar sesión", href: "/agendar" },
+          ].map((item, i) => (
+            <Link
+              key={i}
+              href={item.href}
+              style={{
+                color: "#666",
+                fontSize: "0.875rem",
+                textDecoration: "none",
+                padding: "0.5rem 1rem",
+                backgroundColor: "#fafafa",
+                borderRadius: "9999px",
+              }}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* Sobre mí */}
       <section style={{ marginBottom: "3rem" }}>
         <h2

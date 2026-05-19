@@ -43,7 +43,7 @@ const faqSchema = {
       "name": "¿Es diferente a la depresión?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Pueden coexistir. La crisis vital es un momento de cuestionamiento; la{\" \"} depresión {\" \"} es un cuadro clínico. Si hay síntomas depresivos, también los trabajamos."
+        "text": "Pueden coexistir. La crisis vital es un momento de cuestionamiento; la depresión es un cuadro clínico. Si hay síntomas depresivos, también los trabajamos."
       }
     },
     {

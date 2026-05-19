@@ -52,7 +52,7 @@ const faqSchema = {
       "name": "¿La TCC funciona en formato online?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, la{\" \"} terapia online {\" \"} con enfoque cognitivo-conductual ha mostrado efectividad comparable a la presencial."
+        "text": "Sí, la terapia online con enfoque cognitivo-conductual ha mostrado efectividad comparable a la presencial."
       }
     }
   ]

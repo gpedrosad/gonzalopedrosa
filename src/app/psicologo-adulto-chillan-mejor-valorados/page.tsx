@@ -34,7 +34,7 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "¿Los rankings de &quot;mejores psicólogos&quot; son confiables?",
+      "name": "¿Los rankings de \"mejores psicólogos\" son confiables?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Ten precaución con rankings sin metodología clara. Las reseñas pueden ser útiles como referencia, pero tu propia experiencia con el profesional es lo más importante."

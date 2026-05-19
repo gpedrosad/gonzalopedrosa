@@ -43,7 +43,7 @@ const faqSchema = {
       "name": "¿Qué horarios tiene disponibles?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Tengo horarios de mañana y tarde. Consulta disponibilidad por{\" \"} WhatsApp {\" \"} y buscamos el que mejor te acomode."
+        "text": "Tengo horarios de mañana y tarde. Consulta disponibilidad por WhatsApp y buscamos el que mejor te acomode."
       }
     },
     {
@@ -51,7 +51,7 @@ const faqSchema = {
       "name": "¿Necesito hora para hoy?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Si necesitas atención urgente, revisa mi{\" \"} disponibilidad para hoy ."
+        "text": "Si necesitas atención urgente, revisa mi disponibilidad para hoy."
       }
     }
   ]

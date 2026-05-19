@@ -43,7 +43,7 @@ const faqSchema = {
       "name": "¿Es lo mismo que un informe psicológico?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. El certificado es más breve y general. El{\" \"} informe{\" \"} es más detallado y requiere más sesiones."
+        "text": "No. El certificado es más breve y general. El informe es más detallado y requiere más sesiones."
       }
     },
     {

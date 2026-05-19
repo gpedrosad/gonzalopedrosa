@@ -44,7 +44,7 @@ const faqSchema = {
       "name": "¿Puedo tener terapia online?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, la{\" \"} terapia online {\" \"} puede ser efectiva para el tratamiento del pánico. Evaluamos juntos la modalidad más adecuada."
+        "text": "Sí, la terapia online puede ser efectiva para el tratamiento del pánico. Evaluamos juntos la modalidad más adecuada."
       }
     },
     {

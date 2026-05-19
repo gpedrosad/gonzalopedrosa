@@ -43,7 +43,7 @@ const faqSchema = {
       "name": "¿Es lo mismo que el control de la ira?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Están relacionados. La frustración puede llevar a la ira. Si tu problema principal es la ira explosiva, también trabajo{\" \"} control de ira."
+        "text": "Están relacionados. La frustración puede llevar a la ira. Si tu problema principal es la ira explosiva, también trabajo control de ira."
       }
     },
     {

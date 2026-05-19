@@ -43,7 +43,7 @@ const faqSchema = {
       "name": "¿El perfeccionismo tiene que ver con la ansiedad?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, están muy relacionados. El perfeccionismo suele ser una estrategia para controlar la{\" \"} ansiedad. Trabajamos ambos en terapia."
+        "text": "Sí, están muy relacionados. El perfeccionismo suele ser una estrategia para controlar la ansiedad. Trabajamos ambos en terapia."
       }
     },
     {

@@ -51,7 +51,7 @@ const faqSchema = {
       "name": "¿Y si mi insomnio es por ansiedad?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Es muy común. Trabajamos tanto el insomnio como la{\" \"} ansiedad{\" \"} subyacente, ya que suelen alimentarse mutuamente."
+        "text": "Es muy común. Trabajamos tanto el insomnio como la ansiedad subyacente, ya que suelen alimentarse mutuamente."
       }
     }
   ]

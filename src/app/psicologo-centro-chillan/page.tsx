@@ -35,7 +35,7 @@ const faqSchema = {
       "name": "¿Qué horarios tienen disponibles?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Atiendo de lunes a viernes en horarios de mañana y tarde. Escríbeme por{\" \"} WhatsApp {\" \"} para coordinar."
+        "text": "Atiendo de lunes a viernes en horarios de mañana y tarde. Escríbeme por WhatsApp para coordinar."
       }
     },
     {
@@ -43,7 +43,7 @@ const faqSchema = {
       "name": "¿Puedo elegir entre presencial y online?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, tienes flexibilidad total. Puedes combinar sesiones presenciales en el centro con{\" \"} sesiones online {\" \"} según te acomode cada semana."
+        "text": "Sí, tienes flexibilidad total. Puedes combinar sesiones presenciales en el centro con sesiones online según te acomode cada semana."
       }
     },
     {
@@ -51,7 +51,7 @@ const faqSchema = {
       "name": "¿Aceptan Isapre?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Emito boleta para{\" \"} reembolso Isapre . Recuperas entre el 50-80% según tu plan."
+        "text": "Emito boleta para reembolso Isapre. Recuperas entre el 50-80% según tu plan."
       }
     }
   ]

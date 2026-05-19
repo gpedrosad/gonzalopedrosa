@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Psicólogo especialista en ansiedad en Chillán, Chile. Tratamiento especializado con terapia cognitivo-conductual. Experiencia en trastornos de ansiedad. Sesiones presenciales y online.",
   alternates: {
-    canonical: "/psicologo-especialista-ansiedad-chillan",
+    canonical: "/psicologo-ansiedad-chillan",
   },
   openGraph: {
     title: "Psicólogo Especialista en Ansiedad Chillán | Gonzalo Pedrosa",
@@ -51,7 +51,7 @@ const faqSchema = {
       "name": "¿Atiende online?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, la{\" \"} terapia online {\" \"} es efectiva para el tratamiento de la ansiedad y ofrece mayor flexibilidad."
+        "text": "Sí, la terapia online es efectiva para el tratamiento de la ansiedad y ofrece mayor flexibilidad."
       }
     }
   ]
@@ -444,6 +444,7 @@ export default function PsicologoEspecialistaAnsiedadChillanPage() {
           {[
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             { label: "Crisis de pánico", href: "/psicologo-crisis-de-panico-chillan" },
+            { label: "Psicólogo para hombres", href: "/psicologo-hombres-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
             { label: "EMDR", href: "/terapia-emdr-chillan" },
             { label: "Online", href: "/terapia-online" },

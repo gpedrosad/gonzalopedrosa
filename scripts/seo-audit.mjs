@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const DEFAULT_BASE_URL = "https://gonzalopedrosa.cl";
+const DEFAULT_BASE_URL = "https://www.gonzalopedrosa.cl";
 const REDIRECT_CODES = new Set([301, 302, 307, 308]);
 const MAX_REDIRECT_HOPS = 5;
 

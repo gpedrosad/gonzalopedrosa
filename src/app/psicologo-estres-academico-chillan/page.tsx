@@ -51,7 +51,7 @@ const faqSchema = {
       "name": "¿Tienen horarios para estudiantes?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, tengo horarios flexibles. También ofrezco{\" \"} terapia online{\" \"} para mayor comodidad."
+        "text": "Sí, tengo horarios flexibles. También ofrezco terapia online para mayor comodidad."
       }
     }
   ]

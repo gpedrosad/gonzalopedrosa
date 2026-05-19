@@ -4,23 +4,25 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Tratamiento Burnout en Chillán | Psicólogo Gonzalo Pedrosa",
+  title: "Tratamiento Burnout en Chillán | Síndrome de Agotamiento Crónico",
   description:
-    "Tratamiento para burnout y agotamiento laboral en Chillán. Recupera tu energía, establece límites y vuelve a disfrutar tu trabajo.",
+    "Tratamiento para síndrome de burnout en Chillán. Agotamiento crónico, estar quemado, cinismo y sensación de ineficacia. Recupera energía y límites.",
   alternates: {
     canonical: "/tratamiento-burnout-chillan",
   },
   openGraph: {
-    title: "Tratamiento Burnout en Chillán | Psicólogo Gonzalo Pedrosa",
-    description: "Tratamiento para burnout y agotamiento laboral en Chillán. Recupera tu energía, establece límites y vuelve a disfrutar tu trabajo.",
+    title: "Tratamiento Burnout en Chillán | Síndrome de Agotamiento Crónico",
+    description:
+      "Tratamiento para síndrome de burnout en Chillán. Agotamiento crónico, estar quemado, cinismo y sensación de ineficacia. Recupera energía y límites.",
     url: "https://www.gonzalopedrosa.cl/tratamiento-burnout-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tratamiento Burnout en Chillán | Psicólogo Gonzalo Pedrosa",
-    description: "Tratamiento para burnout y agotamiento laboral en Chillán. Recupera tu energía, establece límites y vuelve a disfrutar tu trabajo.",
+    title: "Tratamiento Burnout en Chillán | Síndrome de Agotamiento Crónico",
+    description:
+      "Tratamiento para síndrome de burnout en Chillán. Agotamiento crónico, estar quemado, cinismo y sensación de ineficacia. Recupera energía y límites.",
   },
 };
 
@@ -43,7 +45,7 @@ const faqSchema = {
       "name": "¿Es lo mismo que estrés laboral?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "El{\" \"} estrés laboral{\" \"} puede llevar al burnout si es crónico. El burnout es un estado más severo de agotamiento total."
+        "text": "El estrés laboral puede llevar al burnout si es crónico. El burnout es un estado más severo de agotamiento total."
       }
     },
     {
@@ -78,10 +80,23 @@ export default function TratamientoBurnoutChillanPage() {
         Tratamiento Burnout en Chillán
       </h1>
 
-      <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "3rem", lineHeight: 1.6 }}>
+      <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "1rem", lineHeight: 1.6 }}>
         El burnout es un agotamiento físico, emocional y mental causado por el
         estrés laboral crónico. No es debilidad: es una señal de que algo tiene
         que cambiar.
+      </p>
+
+      <p style={{ fontSize: "0.9375rem", color: "#666", marginBottom: "3rem", lineHeight: 1.6 }}>
+        Esta página es para el síndrome de estar quemado, no para la presión
+        habitual del trabajo: si aún te pesa más la carga y las exigencias del
+        día a día, mira el apoyo por{" "}
+        <Link
+          href="/psicologo-estres-laboral-chillan"
+          style={{ color: "#000", textDecoration: "underline" }}
+        >
+          estrés laboral en Chillán
+        </Link>
+        .
       </p>
 
       <section style={{ marginBottom: "3rem" }}>
@@ -187,7 +202,7 @@ export default function TratamientoBurnoutChillanPage() {
         <p style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.75rem" }}>Servicios relacionados</p>
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {[
-            { label: "Estrés laboral", href: "/psicologo-estres-laboral-chillan" },
+            { label: "Psicólogo estrés laboral", href: "/psicologo-estres-laboral-chillan" },
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             { label: "Depresión", href: "/psicologo-depresion-chillan" },
             { label: "Perfeccionismo", href: "/psicologo-perfeccionismo-autoexigencia-chillan" },

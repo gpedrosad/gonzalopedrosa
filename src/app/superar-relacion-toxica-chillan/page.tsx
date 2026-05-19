@@ -51,7 +51,7 @@ const faqSchema = {
       "name": "¿Por qué me atraen este tipo de personas?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Suele estar relacionado con patrones de{\" \"} apego y experiencias tempranas. En terapia trabajamos para cambiar estos patrones."
+        "text": "Suele estar relacionado con patrones de apego y experiencias tempranas. En terapia trabajamos para cambiar estos patrones."
       }
     }
   ]

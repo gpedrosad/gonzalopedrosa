@@ -43,7 +43,7 @@ const faqSchema = {
       "name": "¿Puede estar relacionada con depresión?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí. La culpa excesiva es un síntoma común de{\" \"} depresión . Si sientes culpa constante junto con tristeza, vale la pena explorarlo."
+        "text": "Sí. La culpa excesiva es un síntoma común de depresión. Si sientes culpa constante junto con tristeza, vale la pena explorarlo."
       }
     },
     {

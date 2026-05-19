@@ -44,7 +44,7 @@ const faqSchema = {
       "name": "¿Puedo elegir entre presencial y online?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, ofrezco ambas modalidades. Puedes elegir la que mejor se adapte e incluso alternarlas. Más info en{\" \"} terapia online ."
+        "text": "Sí, ofrezco ambas modalidades. Puedes elegir la que mejor se adapte e incluso alternarlas. Más info en terapia online."
       }
     },
     {
@@ -52,7 +52,7 @@ const faqSchema = {
       "name": "¿Cómo elegir un buen psicólogo?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Es importante sentirte cómodo con tu terapeuta. Lee sobre{\" \"} cómo elegir un psicólogo {\" \"} para orientarte."
+        "text": "Es importante sentirte cómodo con tu terapeuta. Lee sobre cómo elegir un psicólogo para orientarte."
       }
     }
   ]
@@ -497,6 +497,19 @@ export default function PsicologoAdultoChillanPage() {
             }}
           >
             Adicciones
+          </Link>
+          <Link
+            href="/psicologo-hombres-chillan"
+            style={{
+              color: "#666",
+              fontSize: "0.875rem",
+              textDecoration: "none",
+              padding: "0.375rem 0.75rem",
+              border: "1px solid #eaeaea",
+              borderRadius: "9999px",
+            }}
+          >
+            Hombres
           </Link>
           <Link
             href="/psicologo-cognitivo-conductual-chillan"

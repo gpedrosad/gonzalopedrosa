@@ -4,23 +4,25 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Estrés Laboral en Chillán, Chile | Gonzalo Pedrosa",
+  title: "Psicólogo Estrés Laboral en Chillán | Presión y Agotamiento Laboral",
   description:
-    "Psicólogo especializado en estrés laboral y burnout en Chillán, Chile. Tratamiento para agotamiento profesional. Sesiones presenciales y online.",
+    "Psicólogo para estrés laboral en Chillán. Presión del trabajo, exigencias constantes y agotamiento por la carga laboral. Sesiones presenciales y online.",
   alternates: {
     canonical: "/psicologo-estres-laboral-chillan",
   },
   openGraph: {
-    title: "Psicólogo Estrés Laboral en Chillán, Chile | Gonzalo Pedrosa",
-    description: "Psicólogo especializado en estrés laboral y burnout en Chillán, Chile. Tratamiento para agotamiento profesional. Sesiones presenciales y online.",
+    title: "Psicólogo Estrés Laboral en Chillán | Presión y Agotamiento Laboral",
+    description:
+      "Psicólogo para estrés laboral en Chillán. Presión del trabajo, exigencias constantes y agotamiento por la carga laboral. Sesiones presenciales y online.",
     url: "https://www.gonzalopedrosa.cl/psicologo-estres-laboral-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo Estrés Laboral en Chillán, Chile",
-    description: "Psicólogo especializado en estrés laboral y burnout en Chillán, Chile. Tratamiento para agotamiento profesional. Sesiones presenciales y online.",
+    title: "Psicólogo Estrés Laboral en Chillán | Presión y Agotamiento Laboral",
+    description:
+      "Psicólogo para estrés laboral en Chillán. Presión del trabajo, exigencias constantes y agotamiento por la carga laboral. Sesiones presenciales y online.",
   },
 };
 
@@ -51,7 +53,7 @@ const faqSchema = {
       "name": "¿Puedo tener sesiones fuera del horario de oficina?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, tengo horarios flexibles. La{\" \"} terapia online {\" \"} ofrece aún más flexibilidad para adaptarse a tu agenda."
+        "text": "Sí, tengo horarios flexibles. La terapia online ofrece aún más flexibilidad para adaptarse a tu agenda."
       }
     }
   ]
@@ -126,13 +128,33 @@ export default function PsicologoEstresLaboralChillanPage() {
         style={{
           fontSize: "1.125rem",
           color: "#666",
-          marginBottom: "3rem",
+          marginBottom: "1rem",
           lineHeight: 1.6,
         }}
       >
         El estrés laboral crónico puede afectar seriamente tu salud física y
         mental. Si sientes que el trabajo te está sobrepasando, es momento de
         buscar ayuda profesional.
+      </p>
+
+      <p
+        style={{
+          fontSize: "0.9375rem",
+          color: "#666",
+          marginBottom: "3rem",
+          lineHeight: 1.6,
+        }}
+      >
+        Aquí trabajamos la presión y el agotamiento ligados al trabajo, no el
+        síndrome de estar quemado: si llevas meses con agotamiento crónico,
+        cinismo y sensación de ineficacia, revisa el{" "}
+        <Link
+          href="/tratamiento-burnout-chillan"
+          style={{ color: "#000", textDecoration: "underline" }}
+        >
+          tratamiento para burnout en Chillán
+        </Link>
+        .
       </p>
 
       <section style={{ marginBottom: "3rem" }}>
@@ -437,6 +459,8 @@ export default function PsicologoEstresLaboralChillanPage() {
           {[
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             { label: "Depresión", href: "/psicologo-depresion-chillan" },
+            { label: "Tratamiento de burnout", href: "/tratamiento-burnout-chillan" },
+            { label: "Hombres", href: "/psicologo-hombres-chillan" },
             { label: "Adultos", href: "/psicologo-adulto-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
             { label: "Online", href: "/terapia-online" },

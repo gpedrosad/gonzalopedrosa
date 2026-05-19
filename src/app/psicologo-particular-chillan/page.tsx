@@ -51,7 +51,7 @@ const faqSchema = {
       "name": "¿Puedo elegir entre presencial y online?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, tienes flexibilidad total. Puedes optar por sesiones presenciales en Chillán,{\" \"} sesiones online , o combinar ambas modalidades según te acomode."
+        "text": "Sí, tienes flexibilidad total. Puedes optar por sesiones presenciales en Chillán, sesiones online, o combinar ambas modalidades según te acomode."
       }
     },
     {
@@ -59,7 +59,7 @@ const faqSchema = {
       "name": "¿Cómo agendo mi primera sesión?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Escríbeme por{\" \"} WhatsApp {\" \"} o correo. Coordinaremos un horario que te acomode y te confirmo la cita. El proceso es simple y directo."
+        "text": "Escríbeme por WhatsApp o correo. Coordinaremos un horario que te acomode y te confirmo la cita. El proceso es simple y directo."
       }
     }
   ]

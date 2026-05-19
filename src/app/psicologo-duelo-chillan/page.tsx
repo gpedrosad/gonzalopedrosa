@@ -35,7 +35,7 @@ const faqSchema = {
       "name": "¿Cuánto dura el duelo normalmente?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No hay un tiempo establecido. Puede durar meses o años, y su intensidad varía. Lo importante no es &quot;superarlo&quot; sino aprender a vivir con la pérdida de una manera que te permita seguir adelante."
+        "text": "No hay un tiempo establecido. Puede durar meses o años, y su intensidad varía. Lo importante no es \"superarlo\" sino aprender a vivir con la pérdida de una manera que te permita seguir adelante."
       }
     },
     {
@@ -51,7 +51,7 @@ const faqSchema = {
       "name": "¿Qué enfoque utilizas para trabajar el duelo?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Trabajo desde la{\" \"} terapia cognitivo-conductual , integrando técnicas específicas para el procesamiento del duelo. También puedo complementar con{\" \"} EMDR {\" \"} si es apropiado."
+        "text": "Trabajo desde la terapia cognitivo-conductual, integrando técnicas específicas para el procesamiento del duelo. También puedo complementar con EMDR si es apropiado."
       }
     }
   ]

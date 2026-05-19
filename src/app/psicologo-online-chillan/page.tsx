@@ -35,7 +35,7 @@ const faqSchema = {
       "name": "¿Es tan efectiva como presencial?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí. Múltiples estudios demuestran que la terapia online tiene la misma efectividad que la presencial para la mayoría de las condiciones, especialmente con{\" \"} enfoque cognitivo-conductual ."
+        "text": "Sí. Múltiples estudios demuestran que la terapia online tiene la misma efectividad que la presencial para la mayoría de las condiciones, especialmente con enfoque cognitivo-conductual."
       }
     },
     {
@@ -51,7 +51,7 @@ const faqSchema = {
       "name": "¿Puedo tener reembolso Isapre?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, las Isapres aceptan reembolso por sesiones online. Emito boleta electrónica el mismo día. Más detalles en{\" \"} reembolso Isapre ."
+        "text": "Sí, las Isapres aceptan reembolso por sesiones online. Emito boleta electrónica el mismo día. Más detalles en reembolso Isapre."
       }
     },
     {

@@ -32,10 +32,10 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "¿Por qué no puedo simplemente &quot;hacerlo&quot;?",
+      "name": "¿Por qué no puedo simplemente \"hacerlo\"?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Porque la procrastinación es un hábito automático que protege de emociones incómodas. Cambiarlo requiere trabajar a nivel más profundo que solo &quot;fuerza de voluntad&quot;."
+        "text": "Porque la procrastinación es un hábito automático que protege de emociones incómodas. Cambiarlo requiere trabajar a nivel más profundo que solo \"fuerza de voluntad\"."
       }
     },
     {
@@ -43,7 +43,7 @@ const faqSchema = {
       "name": "¿Puede ser TDAH?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Es posible. La procrastinación crónica puede ser síntoma de{\" \"} TDAH. En terapia exploramos si hay algo más que explique el patrón."
+        "text": "Es posible. La procrastinación crónica puede ser síntoma de TDAH. En terapia exploramos si hay algo más que explique el patrón."
       }
     },
     {

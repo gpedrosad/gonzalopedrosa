@@ -51,7 +51,7 @@ const faqSchema = {
       "name": "¿Me sirve la terapia online si tengo fobia social?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, la{\" \"} terapia online {\" \"} puede ser especialmente útil al inicio, ya que es menos intimidante. A medida que avanza el tratamiento, podemos incorporar sesiones presenciales si es apropiado."
+        "text": "Sí, la terapia online puede ser especialmente útil al inicio, ya que es menos intimidante. A medida que avanza el tratamiento, podemos incorporar sesiones presenciales si es apropiado."
       }
     }
   ]

@@ -43,7 +43,7 @@ const faqSchema = {
       "name": "¿Tiene relación con la autoestima?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, están conectados. El síndrome del impostor suele coexistir con{\" \"} baja autoestima {\" \"} y{\" \"} perfeccionismo . Trabajamos todo en conjunto."
+        "text": "Sí, están conectados. El síndrome del impostor suele coexistir con baja autoestima y perfeccionismo. Trabajamos todo en conjunto."
       }
     },
     {

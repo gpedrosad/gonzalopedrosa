@@ -51,7 +51,7 @@ const faqSchema = {
       "name": "¿Por qué me pasa esto?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La dependencia suele tener raíces en experiencias tempranas y estilos de{\" \"} apego . En terapia exploramos tu historia para entender y cambiar estos patrones."
+        "text": "La dependencia suele tener raíces en experiencias tempranas y estilos de apego. En terapia exploramos tu historia para entender y cambiar estos patrones."
       }
     }
   ]

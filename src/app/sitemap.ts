@@ -103,12 +103,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/psicologo-especialista-ansiedad-chillan`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
       url: `${baseUrl}/terapia-emdr-chillan`,
       lastModified,
       changeFrequency: "monthly",

@@ -43,7 +43,7 @@ const faqSchema = {
       "name": "¿Cómo pago si no tengo ingresos propios?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Muchos estudiantes vienen con apoyo de sus familias. También emito boleta para{\" \"} reembolso Isapre{\" \"} si tienes cobertura."
+        "text": "Muchos estudiantes vienen con apoyo de sus familias. También emito boleta para reembolso Isapre si tienes cobertura."
       }
     },
     {

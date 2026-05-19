@@ -43,7 +43,7 @@ const faqSchema = {
       "name": "¿Puedes emitir informes para tratamiento hormonal?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí. Si estás en proceso de transición y necesitas un{\" \"} informe psicológico {\" \"} para tratamiento hormonal o cirugía, puedo evaluarte y emitirlo si corresponde."
+        "text": "Sí. Si estás en proceso de transición y necesitas un informe psicológico para tratamiento hormonal o cirugía, puedo evaluarte y emitirlo si corresponde."
       }
     },
     {

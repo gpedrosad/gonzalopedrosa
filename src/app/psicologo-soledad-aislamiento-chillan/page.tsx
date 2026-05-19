@@ -51,7 +51,7 @@ const faqSchema = {
       "name": "¿Puede estar relacionado con depresión?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, el aislamiento social es síntoma y factor de riesgo de{\" \"} depresión . Si además sientes tristeza persistente, lo exploramos juntos."
+        "text": "Sí, el aislamiento social es síntoma y factor de riesgo de depresión. Si además sientes tristeza persistente, lo exploramos juntos."
       }
     }
   ]

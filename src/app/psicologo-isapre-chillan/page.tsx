@@ -51,7 +51,7 @@ const faqSchema = {
       "name": "¿La terapia online también se puede reembolsar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, la{\" \"} terapia online {\" \"} genera la misma boleta y puede reembolsarse igual que la presencial."
+        "text": "Sí, la terapia online genera la misma boleta y puede reembolsarse igual que la presencial."
       }
     }
   ]
