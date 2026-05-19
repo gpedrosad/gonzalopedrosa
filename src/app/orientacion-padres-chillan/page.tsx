@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Orientación a Padres en Chillán | Psicólogo Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Orientación a Padres en Chillán | Psicólogo Gonzalo Pedrosa",
-    description: "Orientación psicológica para padres en Chillán. Apoyo profesional para crianza, conducta de hijos, comunicación familiar y desafíos parentales.",
+    description: getTwitterDescription("Orientación psicológica para padres en Chillán. Apoyo profesional para crianza, conducta de hijos, comunicación familiar y desafíos parentales."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Tienen que venir ambos padres?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Lo ideal es que vengan ambos, pero si no es posible, puede venir uno. Lo importante es que haya consistencia en casa."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Sirve si estamos separados?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí. De hecho, la co-parentalidad después de una separación es uno de los temas que más trabajamos. Pueden venir juntos o por separado."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Es culpa nuestra el problema de nuestro hijo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No se trata de culpas. Todos los padres hacemos lo mejor que podemos. El objetivo es entender qué está pasando y encontrar mejores formas de responder."
-      }
-    }
-  ]
-};
+
+const orientacion_padres_chillanFAQs = [
+  {
+    question: "¿Tienen que venir ambos padres?",
+    answer:
+      "Lo ideal es que vengan ambos, pero si no es posible, puede venir uno. Lo importante es que haya consistencia en casa.",
+  },
+  {
+    question: "¿Sirve si estamos separados?",
+    answer:
+      "Sí. De hecho, la co-parentalidad después de una separación es uno de los temas que más trabajamos. Pueden venir juntos o por separado.",
+  },
+  {
+    question: "¿Es culpa nuestra el problema de nuestro hijo?",
+    answer:
+      "No se trata de culpas. Todos los padres hacemos lo mejor que podemos. El objetivo es entender qué está pasando y encontrar mejores formas de responder.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Orientacion Padres Chillán" },
+];
 
 export default function OrientacionPadresChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={orientacion_padres_chillanFAQs}
+        serviceType="Orientacion Padres"
+        serviceDescription={"Orientación psicológica para padres en Chillán. Apoyo profesional para crianza, conducta de hijos, comunicación familiar y desafíos parentales."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

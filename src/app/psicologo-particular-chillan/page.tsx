@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo Particular en Chillán, Chile | Gonzalo Pedrosa",
@@ -20,58 +22,48 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Particular en Chillán, Chile",
-    description: "Psicólogo particular en Chillán con atención personalizada. Sin esperas, horarios flexibles y confidencialidad total. Sesiones presenciales y online.",
+    description: getTwitterDescription("Psicólogo particular en Chillán con atención personalizada. Sin esperas, horarios flexibles y confidencialidad total. Sesiones presenciales y online."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cuánto dura cada sesión?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Cada sesión tiene una duración de 50 minutos, tiempo completo dedicado a tu proceso sin interrupciones."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cada cuánto son las sesiones?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Generalmente comenzamos con sesiones semanales. A medida que avanzas, podemos espaciarlas según tu evolución y necesidades."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Puedo elegir entre presencial y online?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, tienes flexibilidad total. Puedes optar por sesiones presenciales en Chillán, sesiones online, o combinar ambas modalidades según te acomode."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cómo agendo mi primera sesión?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Escríbeme por WhatsApp o correo. Coordinaremos un horario que te acomode y te confirmo la cita. El proceso es simple y directo."
-      }
-    }
-  ]
-};
+
+const psicologo_particular_chillanFAQs = [
+  {
+    question: "¿Cuánto dura cada sesión?",
+    answer:
+      "Cada sesión tiene una duración de 50 minutos, tiempo completo dedicado a tu proceso sin interrupciones.",
+  },
+  {
+    question: "¿Cada cuánto son las sesiones?",
+    answer:
+      "Generalmente comenzamos con sesiones semanales. A medida que avanzas, podemos espaciarlas según tu evolución y necesidades.",
+  },
+  {
+    question: "¿Puedo elegir entre presencial y online?",
+    answer:
+      "Sí, tienes flexibilidad total. Puedes optar por sesiones presenciales en Chillán, sesiones online, o combinar ambas modalidades según te acomode.",
+  },
+  {
+    question: "¿Cómo agendo mi primera sesión?",
+    answer:
+      "Escríbeme por WhatsApp o correo. Coordinaremos un horario que te acomode y te confirmo la cita. El proceso es simple y directo.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Particular Chillán" },
+];
 
 export default function PsicologoParticularChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_particular_chillanFAQs}
+        serviceType="Psicología Particular"
+        serviceDescription={"Psicólogo particular en Chillán con atención personalizada. Sin esperas, horarios flexibles y confidencialidad total. Sesiones presenciales y online."}
       />
       <main
       style={{
@@ -82,6 +74,7 @@ export default function PsicologoParticularChillanPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <Breadcrumb items={breadcrumbItems} />
       <div
         style={{
           display: "flex",

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo Estrés Laboral en Chillán | Presión y Agotamiento Laboral",
@@ -21,51 +23,43 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Estrés Laboral en Chillán | Presión y Agotamiento Laboral",
-    description:
-      "Psicólogo para estrés laboral en Chillán. Presión del trabajo, exigencias constantes y agotamiento por la carga laboral. Sesiones presenciales y online.",
+    description: getTwitterDescription("Psicólogo para estrés laboral en Chillán. Presión del trabajo, exigencias constantes y agotamiento por la carga laboral. Sesiones presenciales y online."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Debería renunciar a mi trabajo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No necesariamente. En terapia trabajamos para que puedas tomar decisiones informadas sobre tu carrera, desarrollando herramientas que pueden ayudarte en tu trabajo actual o prepararte para un cambio si es lo mejor para ti."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuántas sesiones necesito?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Depende de la severidad del cuadro y tus objetivos. Muchas personas notan mejoría significativa en 8-12 sesiones, aunque el proceso puede ser más breve o extenso según cada caso."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Puedo tener sesiones fuera del horario de oficina?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, tengo horarios flexibles. La terapia online ofrece aún más flexibilidad para adaptarse a tu agenda."
-      }
-    }
-  ]
-};
+
+const psicologo_estres_laboral_chillanFAQs = [
+  {
+    question: "¿Debería renunciar a mi trabajo?",
+    answer:
+      "No necesariamente. En terapia trabajamos para que puedas tomar decisiones informadas sobre tu carrera, desarrollando herramientas que pueden ayudarte en tu trabajo actual o prepararte para un cambio si es lo mejor para ti.",
+  },
+  {
+    question: "¿Cuántas sesiones necesito?",
+    answer:
+      "Depende de la severidad del cuadro y tus objetivos. Muchas personas notan mejoría significativa en 8-12 sesiones, aunque el proceso puede ser más breve o extenso según cada caso.",
+  },
+  {
+    question: "¿Puedo tener sesiones fuera del horario de oficina?",
+    answer:
+      "Sí, tengo horarios flexibles. La terapia online ofrece aún más flexibilidad para adaptarse a tu agenda.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Estres Laboral Chillán" },
+];
 
 export default function PsicologoEstresLaboralChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_estres_laboral_chillanFAQs}
+        serviceType="Psicología Estres Laboral"
+        serviceDescription={"Psicólogo para estrés laboral en Chillán. Presión del trabajo, exigencias constantes y agotamiento por la carga laboral. Sesiones presenciales y online."}
       />
       <main
       style={{
@@ -76,6 +70,7 @@ export default function PsicologoEstresLaboralChillanPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <Breadcrumb items={breadcrumbItems} />
       <div
         style={{
           display: "flex",
@@ -463,7 +458,7 @@ export default function PsicologoEstresLaboralChillanPage() {
             { label: "Hombres", href: "/psicologo-hombres-chillan" },
             { label: "Adultos", href: "/psicologo-adulto-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
-            { label: "Online", href: "/terapia-online" },
+            { label: "Psicólogo online", href: "/psicologo-online-chillan" },
           ].map((item, i) => (
             <Link
               key={i}

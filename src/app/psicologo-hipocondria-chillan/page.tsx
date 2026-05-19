@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo Hipocondría en Chillán | Gonzalo Pedrosa",
@@ -20,51 +22,45 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Hipocondría en Chillán",
-    description: "Tratamiento efectivo para ansiedad por la salud con TCC.",
+    description: getTwitterDescription("Tratamiento efectivo para ansiedad por la salud con TCC."),
   },
 };
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "¿Y si realmente tengo algo?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Es importante que un médico descarte cosas primero. Pero si ya te han dicho que estás bien y sigues preocupado/a, es señal de que el problema es la ansiedad, no tu salud.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿No es normal preocuparse por la salud?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Sí, pero hay un límite. Cuando la preocupación es constante, desproporcionada y afecta tu vida, ya no es normal, es un trastorno de ansiedad.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Tiene cura la hipocondría?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Con tratamiento adecuado, la mayoría de las personas mejoran significativamente. Aprenden a manejar la ansiedad y recuperan su tranquilidad.",
-      },
-    },
-  ],
-};
+
+const psicologo_hipocondria_chillanFAQs = [
+  {
+    question: "¿Y si realmente tengo algo?",
+    answer:
+      "Es importante que un médico descarte cosas primero. Pero si ya te han dicho que estás bien y sigues preocupado/a, es señal de que el problema es la ansiedad, no tu salud.",
+  },
+  {
+    question: "¿No es normal preocuparse por la salud?",
+    answer:
+      "Sí, pero hay un límite. Cuando la preocupación es constante, desproporcionada y afecta tu vida, ya no es normal, es un trastorno de ansiedad.",
+  },
+  {
+    question: "¿Tiene cura la hipocondría?",
+    answer:
+      "Con tratamiento adecuado, la mayoría de las personas mejoran significativamente. Aprenden a manejar la ansiedad y recuperan su tranquilidad.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Hipocondria Chillán" },
+];
 
 export default function PsicologoHipocondriaChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_hipocondria_chillanFAQs}
+        serviceType="Psicología Hipocondria"
+        serviceDescription={"Psicólogo para hipocondría y ansiedad por la salud en Chillán. Tratamiento para dejar de preocuparte constantemente por enfermedades."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

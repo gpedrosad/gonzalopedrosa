@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo Baja Autoestima en Chillán, Chile | Gonzalo Pedrosa",
@@ -20,50 +22,43 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Baja Autoestima en Chillán, Chile",
-    description: "Psicólogo especializado en autoestima en Chillán, Chile. Tratamiento para baja autoestima e inseguridad. Terapia cognitivo-conductual. Sesiones presen",
+    description: getTwitterDescription("Psicólogo especializado en autoestima en Chillán, Chile. Tratamiento para baja autoestima e inseguridad. Terapia cognitivo-conductual. Sesiones presen"),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Se puede mejorar la autoestima?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, definitivamente. La autoestima no es algo fijo, puede trabajarse y mejorarse con el abordaje adecuado. Es un proceso que requiere tiempo y compromiso, pero los cambios son posibles."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿De dónde viene la baja autoestima?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Puede tener múltiples orígenes: experiencias de la infancia, mensajes recibidos de figuras significativas, experiencias de fracaso o rechazo, comparaciones sociales, entre otros. En terapia exploramos tu historia personal."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuánto tiempo toma el proceso?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Depende de cada persona y la profundidad del trabajo necesario. Generalmente se comienzan a notar cambios entre las 8-12 sesiones, aunque el proceso puede ser más extenso para consolidar los avances."
-      }
-    }
-  ]
-};
+
+const psicologo_baja_autoestima_chillanFAQs = [
+  {
+    question: "¿Se puede mejorar la autoestima?",
+    answer:
+      "Sí, definitivamente. La autoestima no es algo fijo, puede trabajarse y mejorarse con el abordaje adecuado. Es un proceso que requiere tiempo y compromiso, pero los cambios son posibles.",
+  },
+  {
+    question: "¿De dónde viene la baja autoestima?",
+    answer:
+      "Puede tener múltiples orígenes: experiencias de la infancia, mensajes recibidos de figuras significativas, experiencias de fracaso o rechazo, comparaciones sociales, entre otros. En terapia exploramos tu historia personal.",
+  },
+  {
+    question: "¿Cuánto tiempo toma el proceso?",
+    answer:
+      "Depende de cada persona y la profundidad del trabajo necesario. Generalmente se comienzan a notar cambios entre las 8-12 sesiones, aunque el proceso puede ser más extenso para consolidar los avances.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Baja Autoestima Chillán" },
+];
 
 export default function PsicologoBajaAutoestimaChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_baja_autoestima_chillanFAQs}
+        serviceType="Psicología Baja Autoestima"
+        serviceDescription={"Psicólogo especializado en autoestima en Chillán, Chile. Tratamiento para baja autoestima e inseguridad. Terapia cognitivo-conductual. Sesiones presenciales y online."}
       />
       <main
       style={{
@@ -74,6 +69,7 @@ export default function PsicologoBajaAutoestimaChillanPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <Breadcrumb items={breadcrumbItems} />
       <div
         style={{
           display: "flex",
@@ -430,7 +426,7 @@ export default function PsicologoBajaAutoestimaChillanPage() {
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             { label: "Fobia social", href: "/psicologo-fobia-social-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
-            { label: "Online", href: "/terapia-online" },
+            { label: "Psicólogo online", href: "/psicologo-online-chillan" },
           ].map((item, i) => (
             <Link
               key={i}

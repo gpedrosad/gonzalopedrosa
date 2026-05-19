@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Ayuda Psicológica Urgente en Chillán | Psicólogo Gonzalo Pedrosa",
@@ -20,13 +22,45 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Ayuda Psicológica Urgente en Chillán | Psicólogo Gonzalo Pedrosa",
-    description: "Ayuda psicológica urgente en Chillán. Si estás en crisis emocional y necesitas hablar con un profesional, contáctame.",
+    description: getTwitterDescription("Ayuda psicológica urgente en Chillán. Si estás en crisis emocional y necesitas hablar con un profesional, contáctame."),
   },
 };
 
+
+const ayuda_psicologica_urgente_chillanFAQs = [
+  {
+    question: "¿Atienden crisis psicológicas el mismo día?",
+    answer:
+      "Intento priorizar casos urgentes según disponibilidad. Escríbeme por WhatsApp con una breve descripción y te indico el primer horario posible.",
+  },
+  {
+    question: "¿Qué hago si hay riesgo de autolesión?",
+    answer:
+      "Si hay riesgo vital, llama a Salud Responde (600 360 7777), Fono de la Esperanza (717 200 200) o urgencias (131). La terapia complementa, no reemplaza, atención de emergencia.",
+  },
+  {
+    question: "¿La sesión puede ser online?",
+    answer:
+      "Sí. En crisis emocional la videollamada suele ser más rápida de coordinar que el desplazamiento presencial.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Ayuda Psicológica Urgente Chillán" },
+];
+
 export default function AyudaPsicologicaUrgenteChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={ayuda_psicologica_urgente_chillanFAQs}
+        serviceType="Ayuda Psicológica Urgente"
+        serviceDescription="Ayuda psicológica urgente en Chillán. Atención prioritaria en crisis emocional, presencial u online."
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -133,6 +167,7 @@ export default function AyudaPsicologicaUrgenteChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

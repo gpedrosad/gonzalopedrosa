@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo Timidez en Chillán | Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Timidez en Chillán",
-    description: "Psicólogo para superar la timidez en Chillán. Terapia para ganar confianza social, expresarte mejor y conectar con otros sin ansiedad.",
+    description: getTwitterDescription("Psicólogo para superar la timidez en Chillán. Terapia para ganar confianza social, expresarte mejor y conectar con otros sin ansiedad."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Se puede dejar de ser tímido/a?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No se trata de cambiar tu personalidad, sino de que la timidez no te limite. Puedes seguir siendo introvertido/a pero desenvolverte con más soltura."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Me va a obligar a hacer cosas incómodas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Trabajamos gradualmente y respetando tu ritmo. La exposición es necesaria pero siempre de forma progresiva y con tu acuerdo."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Funciona la terapia online para timidez?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, e incluso puede ser más cómoda al principio. La terapia online es igual de efectiva y luego puedes pasar a presencial si quieres."
-      }
-    }
-  ]
-};
+
+const psicologo_timidez_chillanFAQs = [
+  {
+    question: "¿Se puede dejar de ser tímido/a?",
+    answer:
+      "No se trata de cambiar tu personalidad, sino de que la timidez no te limite. Puedes seguir siendo introvertido/a pero desenvolverte con más soltura.",
+  },
+  {
+    question: "¿Me va a obligar a hacer cosas incómodas?",
+    answer:
+      "Trabajamos gradualmente y respetando tu ritmo. La exposición es necesaria pero siempre de forma progresiva y con tu acuerdo.",
+  },
+  {
+    question: "¿Funciona la terapia online para timidez?",
+    answer:
+      "Sí, e incluso puede ser más cómoda al principio. La terapia online es igual de efectiva y luego puedes pasar a presencial si quieres.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Timidez Chillán" },
+];
 
 export default function PsicologoTimidezChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_timidez_chillanFAQs}
+        serviceType="Psicología Timidez"
+        serviceDescription={"Psicólogo para superar la timidez en Chillán. Terapia para ganar confianza social, expresarte mejor y conectar con otros sin ansiedad."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -192,7 +188,7 @@ export default function PsicologoTimidezChillanPage() {
             { label: "Fobia social", href: "/psicologo-fobia-social-chillan" },
             { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
-            { label: "Online", href: "/terapia-online" },
+            { label: "Psicólogo online", href: "/psicologo-online-chillan" },
           ].map((item, i) => (
             <Link key={i} href={item.href} style={{ color: "#666", fontSize: "0.875rem", textDecoration: "none", padding: "0.375rem 0.75rem", border: "1px solid #eaeaea", borderRadius: "9999px" }}>
               {item.label}

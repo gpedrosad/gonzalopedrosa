@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 import { Button } from "../components/Button";
 
 export const metadata: Metadata = {
@@ -21,50 +23,43 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Crisis de Pánico en Chillán, Chile",
-    description: "Psicólogo especializado en crisis de pánico en Chillán, Chile. Tratamiento basado en evidencia para ataques de pánico. Atención presencial y online.",
+    description: getTwitterDescription("Psicólogo especializado en crisis de pánico en Chillán, Chile. Tratamiento basado en evidencia para ataques de pánico. Atención presencial y online."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Las crisis de pánico son peligrosas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Aunque los síntomas son muy intensos, las crisis no son peligrosas en sí mismas. Es importante descartar causas médicas con un profesional de salud."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Puedo tener terapia online?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, la terapia online puede ser efectiva para el tratamiento del pánico. Evaluamos juntos la modalidad más adecuada."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuánto tiempo toma el tratamiento?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La duración depende de cada caso. Muchas personas experimentan mejoría significativa en 8-16 sesiones."
-      }
-    }
-  ]
-};
+
+const psicologo_crisis_de_panico_chillanFAQs = [
+  {
+    question: "¿Las crisis de pánico son peligrosas?",
+    answer:
+      "Aunque los síntomas son muy intensos, las crisis no son peligrosas en sí mismas. Es importante descartar causas médicas con un profesional de salud.",
+  },
+  {
+    question: "¿Puedo tener terapia online?",
+    answer:
+      "Sí, la terapia online puede ser efectiva para el tratamiento del pánico. Evaluamos juntos la modalidad más adecuada.",
+  },
+  {
+    question: "¿Cuánto tiempo toma el tratamiento?",
+    answer:
+      "La duración depende de cada caso. Muchas personas experimentan mejoría significativa en 8-16 sesiones.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Crisis De Panico Chillán" },
+];
 
 export default function PsicologoCrisisPanicoChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_crisis_de_panico_chillanFAQs}
+        serviceType="Psicología Crisis De Panico"
+        serviceDescription={"Psicólogo especializado en crisis de pánico en Chillán, Chile. Tratamiento basado en evidencia para ataques de pánico. Atención presencial y online."}
       />
       <main
       style={{
@@ -75,6 +70,7 @@ export default function PsicologoCrisisPanicoChillanPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <Breadcrumb items={breadcrumbItems} />
       <div
         style={{
           display: "flex",
@@ -330,7 +326,7 @@ export default function PsicologoCrisisPanicoChillanPage() {
             >
               Sí, la{" "}
               <Link
-                href="/terapia-online"
+                href="/psicologo-online-chillan"
                 style={{ color: "#000", textDecoration: "underline" }}
               >
                 terapia online
@@ -483,9 +479,7 @@ export default function PsicologoCrisisPanicoChillanPage() {
               border: "1px solid #eaeaea",
               borderRadius: "9999px",
             }}
-          >
-            Online
-          </Link>
+          >Psicólogo online</Link>
         </div>
       </nav>
     </main>

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo Especialista en Ansiedad Chillán | Gonzalo Pedrosa",
@@ -20,50 +22,43 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Especialista en Ansiedad Chillán",
-    description: "Psicólogo especialista en ansiedad en Chillán, Chile. Tratamiento especializado con terapia cognitivo-conductual. Experiencia en trastornos de ansieda",
+    description: getTwitterDescription("Psicólogo especialista en ansiedad en Chillán, Chile. Tratamiento especializado con terapia cognitivo-conductual. Experiencia en trastornos de ansieda"),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cuánto dura el tratamiento especializado?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Depende del tipo y severidad de la ansiedad. Muchos pacientes notan mejoría significativa entre 8-16 sesiones, aunque algunos cuadros pueden requerir más tiempo."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Puedo combinar con medicación?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, la terapia puede complementarse con tratamiento farmacológico indicado por psiquiatra. En algunos casos, la combinación es la opción más efectiva."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Atiende online?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, la terapia online es efectiva para el tratamiento de la ansiedad y ofrece mayor flexibilidad."
-      }
-    }
-  ]
-};
+
+const psicologo_especialista_ansiedad_chillanFAQs = [
+  {
+    question: "¿Cuánto dura el tratamiento especializado?",
+    answer:
+      "Depende del tipo y severidad de la ansiedad. Muchos pacientes notan mejoría significativa entre 8-16 sesiones, aunque algunos cuadros pueden requerir más tiempo.",
+  },
+  {
+    question: "¿Puedo combinar con medicación?",
+    answer:
+      "Sí, la terapia puede complementarse con tratamiento farmacológico indicado por psiquiatra. En algunos casos, la combinación es la opción más efectiva.",
+  },
+  {
+    question: "¿Atiende online?",
+    answer:
+      "Sí, la terapia online es efectiva para el tratamiento de la ansiedad y ofrece mayor flexibilidad.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Especialista Ansiedad Chillán" },
+];
 
 export default function PsicologoEspecialistaAnsiedadChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_especialista_ansiedad_chillanFAQs}
+        serviceType="Psicología Especialista Ansiedad"
+        serviceDescription={"Psicólogo especialista en ansiedad en Chillán, Chile. Tratamiento especializado con terapia cognitivo-conductual. Experiencia en trastornos de ansiedad. Sesiones presenciales y online."}
       />
       <main
       style={{
@@ -74,6 +69,7 @@ export default function PsicologoEspecialistaAnsiedadChillanPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <Breadcrumb items={breadcrumbItems} />
       <div
         style={{
           display: "flex",
@@ -447,7 +443,7 @@ export default function PsicologoEspecialistaAnsiedadChillanPage() {
             { label: "Psicólogo para hombres", href: "/psicologo-hombres-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
             { label: "EMDR", href: "/terapia-emdr-chillan" },
-            { label: "Online", href: "/terapia-online" },
+            { label: "Psicólogo online", href: "/psicologo-online-chillan" },
           ].map((item, i) => (
             <Link
               key={i}

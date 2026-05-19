@@ -1,5 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { Breadcrumb } from '@/app/components/Breadcrumb';
+import { OrganicSeoScripts } from '@/app/components/OrganicSeoScripts';
+import { getTwitterDescription } from '@/lib/schemas';
 
 export const metadata: Metadata = {
   title: 'EMDR autoadministrado online | Estimulación bilateral visual',
@@ -7,29 +10,54 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/emdr-autoadministrado",
   },
+  openGraph: {
+    title: 'EMDR autoadministrado online | Estimulación bilateral visual',
+    description: 'Herramienta de EMDR autoadministrado con estimulación bilateral visual. Ejercicio guiado para procesar emociones de forma segura.',
+    url: 'https://www.gonzalopedrosa.cl/emdr-autoadministrado',
+    type: 'website',
+    images: [{ url: '/yo.png', width: 1200, height: 630, alt: 'EMDR autoadministrado' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'EMDR autoadministrado online',
+    description: getTwitterDescription(
+      'Ejercicio guiado de estimulación bilateral visual. Complemento educativo; no reemplaza terapia EMDR profesional.'
+    ),
+  },
 };
 
-export default function EmdrAutoadministradoPage() {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'EMDR autoadministrado online',
-    description: 'Plataforma de EMDR autoadministrado con estimulación bilateral visual para procesamiento emocional responsable',
-    about: {
-      '@type': 'Thing',
-      name: 'EMDR autoadministrado',
-      description: 'Técnica de estimulación bilateral visual para autoaplicación consciente',
-    },
-  };
 
+const emdr_autoadministradoFAQs = [
+  {
+    question: "¿Reemplaza la terapia EMDR presencial?",
+    answer:
+      "No. Es un recurso educativo complementario. Para trauma complejo o TEPT se recomienda EMDR con psicólogo certificado.",
+  },
+  {
+    question: "¿Es seguro hacerlo solo?",
+    answer:
+      "Solo para malestar leve y con buena estabilidad emocional. Si aparecen recuerdos abrumadores, detente y busca apoyo profesional.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "EMDR Autoadministrado Chillán" },
+];
+
+export default function EmdrAutoadministradoPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={emdr_autoadministradoFAQs}
+        serviceType="EMDR Autoadministrado"
+        serviceDescription="Herramienta educativa de EMDR autoadministrado con estimulación bilateral visual. No reemplaza terapia profesional."
+        areaServed="Chile"
       />
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-12 px-4">
         <div className="max-w-4xl mx-auto">
+          <Breadcrumb items={breadcrumbItems} />
           <header className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               EMDR autoadministrado online

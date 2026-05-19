@@ -1,15 +1,60 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  SITE_URL,
+  localBusinessSchema,
+  getServiceSchema,
+  getFAQSchema,
+  getTwitterDescription,
+} from "@/lib/schemas";
+
+const description =
+  "Psicólogo en Chillán con más de 7 años de experiencia. Terapia cognitivo-conductual presencial y online. Ansiedad, depresión y estrés. Agenda tu primera sesión por web o WhatsApp.";
 
 export const metadata: Metadata = {
-  title: "Gonzalo Pedrosa | Psicólogo",
-  description:
-    "Psicólogo con más de 7 años de experiencia. Atención profesional para ansiedad, depresión, estrés y más. Terapia cognitivo-conductual. Sesiones online y presenciales.",
+  title: "Psicólogo en Chillán | Online y presencial | Gonzalo Pedrosa",
+  description,
   alternates: {
     canonical: "/",
   },
+  openGraph: {
+    title: "Psicólogo en Chillán | Gonzalo Pedrosa",
+    description,
+    url: SITE_URL,
+    type: "website",
+    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psicólogo en Chillán | Gonzalo Pedrosa",
+    description: getTwitterDescription(
+      "TCC presencial y online en Chillán. +7 años de experiencia. Agenda tu sesión por web o WhatsApp."
+    ),
+  },
 };
+
+const homeFAQs = [
+  {
+    question: "¿Atiendes solo en Chillán?",
+    answer:
+      "Tengo consulta presencial en Chillán y también sesiones por videollamada para personas de otras comunas o regiones de Chile.",
+  },
+  {
+    question: "¿Cuánto cuesta una sesión?",
+    answer:
+      "Cada sesión de 50 minutos tiene un valor de $35.000. Emito boleta para reembolso Isapre según tu plan.",
+  },
+];
+
+const faqSchema = getFAQSchema(homeFAQs);
+const serviceSchema = getServiceSchema({
+  serviceType: "Psicoterapia individual",
+  description:
+    "Atención psicológica con enfoque cognitivo-conductual en Chillán, presencial y online.",
+  areaServed: "Chillán",
+});
 
 const testimonios = [
   {
@@ -36,70 +81,103 @@ const testimonios = [
 
 export default function HomePage() {
   return (
-    <main
-      style={{
-        maxWidth: 640,
-        margin: "0 auto",
-        padding: "4rem 1.5rem",
-        fontFamily:
-          'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
-      }}
-    >
-      {/* Hero */}
-      <section style={{ textAlign: "center", marginBottom: "4rem" }}>
-        <Image
-          src="/yo.png"
-          alt="Gonzalo Pedrosa - Psicólogo"
-          width={120}
-          height={120}
-          priority
-          style={{
-            borderRadius: "9999px",
-            objectFit: "cover",
-            marginBottom: "1.5rem",
-            display: "block",
-            marginLeft: "auto",
-            marginRight: "auto",
-          }}
-        />
+    <>
+      <Script
+        id="local-business"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <Script
+        id="service"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main
+        style={{
+          maxWidth: 640,
+          margin: "0 auto",
+          padding: "4rem 1.5rem",
+          fontFamily:
+            'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+        }}
+      >
+        {/* Hero */}
+        <section style={{ textAlign: "center", marginBottom: "2rem" }}>
+          <Image
+            src="/yo.png"
+            alt="Gonzalo Pedrosa - Psicólogo"
+            width={120}
+            height={120}
+            priority
+            style={{
+              borderRadius: "9999px",
+              objectFit: "cover",
+              marginBottom: "1.5rem",
+              display: "block",
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          />
 
-        <h1
+          <h1
+            style={{
+              fontSize: "2.5rem",
+              fontWeight: 700,
+              letterSpacing: "-0.03em",
+              marginBottom: "0.5rem",
+              lineHeight: 1.1,
+            }}
+          >
+            Psicólogo en Chillán
+          </h1>
+
+          <p
+            style={{
+              fontSize: "1.125rem",
+              color: "#666",
+              marginBottom: "0.5rem",
+            }}
+          >
+            Gonzalo Pedrosa · Terapia cognitivo-conductual
+          </p>
+
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "0.5rem",
+              marginBottom: "1.5rem",
+            }}
+          >
+            <span style={{ color: "#fbbf24", fontSize: "1.125rem" }}>★</span>
+            <span style={{ fontWeight: 600 }}>4.8</span>
+            <span style={{ color: "#999", fontSize: "0.875rem" }}>
+              · 280+ experiencias
+            </span>
+          </div>
+        </section>
+        <section
           style={{
-            fontSize: "2.5rem",
-            fontWeight: 700,
-            letterSpacing: "-0.03em",
-            marginBottom: "0.5rem",
-            lineHeight: 1.1,
+            marginBottom: "2rem",
+            padding: "1rem 1.25rem",
+            backgroundColor: "#fafafa",
+            borderRadius: "12px",
+            textAlign: "center",
           }}
         >
-          Gonzalo Pedrosa
-        </h1>
-
-        <p
-          style={{
-            fontSize: "1.125rem",
-            color: "#666",
-            marginBottom: "0.5rem",
-          }}
-        >
-          Psicólogo
-        </p>
-
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "0.5rem",
-            marginBottom: "1.5rem",
-          }}
-        >
-          <span style={{ color: "#fbbf24", fontSize: "1.125rem" }}>★</span>
-          <span style={{ fontWeight: 600 }}>4.8</span>
-          <span style={{ color: "#999", fontSize: "0.875rem" }}>
-            · 280+ experiencias
-          </span>
-        </div>
+          <p style={{ fontSize: "0.8125rem", color: "#444", lineHeight: 1.6, margin: 0 }}>
+            TCC con respaldo científico · Boleta Isapre · Confidencial · Presencial y{" "}
+            <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+              online
+            </Link>
+          </p>
+        </section>
 
         <p
           style={{
@@ -107,10 +185,11 @@ export default function HomePage() {
             color: "#444",
             lineHeight: 1.7,
             maxWidth: 480,
-            margin: "0 auto 2rem",
+            margin: "0 auto 1.5rem",
+            textAlign: "center",
           }}
         >
-          Acompañamiento profesional para tu bienestar. Espacio seguro,
+          Acompañamiento profesional para ansiedad, depresión y estrés. Espacio seguro,
           confidencial y con enfoque práctico basado en evidencia.
         </p>
 
@@ -120,12 +199,11 @@ export default function HomePage() {
             gap: "0.75rem",
             justifyContent: "center",
             flexWrap: "wrap",
+            marginBottom: "4rem",
           }}
         >
-          <a
-            href="https://wa.me/56968257817"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/agendar"
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -140,9 +218,9 @@ export default function HomePage() {
             }}
           >
             Agendar sesión →
-          </a>
+          </Link>
           <Link
-            href="/terapia-online"
+            href="/psicologo-online-chillan"
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -156,279 +234,286 @@ export default function HomePage() {
               fontSize: "0.9375rem",
             }}
           >
-            Terapia online
+            Psicólogo online
           </Link>
         </div>
-      </section>
 
-      {/* Servicio principal */}
-      <section
-        style={{
-          padding: "1.5rem",
-          backgroundColor: "#fafafa",
-          borderRadius: "16px",
-          marginBottom: "3rem",
-        }}
-      >
-        <div
+        {/* Servicio principal */}
+        <section
           style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-start",
-            marginBottom: "1rem",
+            padding: "1.5rem",
+            backgroundColor: "#fafafa",
+            borderRadius: "16px",
+            marginBottom: "3rem",
           }}
         >
-          <div>
-            <h2 style={{ fontSize: "1.125rem", fontWeight: 600, marginBottom: "0.25rem" }}>
-              Sesión individual
-            </h2>
-            <p style={{ color: "#666", fontSize: "0.875rem" }}>50 minutos · Online o presencial</p>
-          </div>
-          <div style={{ textAlign: "right" }}>
-            <p style={{ fontSize: "1.25rem", fontWeight: 700 }}>$35.000</p>
-            <p style={{ color: "#666", fontSize: "0.75rem" }}>CLP</p>
-          </div>
-        </div>
-        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-          <span
+          <div
             style={{
-              padding: "0.375rem 0.75rem",
-              backgroundColor: "#fff",
-              border: "1px solid #e5e5e5",
-              borderRadius: "9999px",
-              fontSize: "0.8125rem",
-              color: "#666",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "flex-start",
+              marginBottom: "1rem",
             }}
           >
-            Presencial
-          </span>
-          <span
-            style={{
-              padding: "0.375rem 0.75rem",
-              backgroundColor: "#fff",
-              border: "1px solid #e5e5e5",
-              borderRadius: "9999px",
-              fontSize: "0.8125rem",
-              color: "#666",
-            }}
-          >
-            Online
-          </span>
-        </div>
-      </section>
-
-      {/* Áreas de trabajo */}
-      <section style={{ marginBottom: "3rem" }}>
-        <h2
-          style={{
-            fontSize: "0.75rem",
-            fontWeight: 600,
-            textTransform: "uppercase",
-            letterSpacing: "0.1em",
-            color: "#999",
-            marginBottom: "1rem",
-          }}
-        >
-          Áreas de trabajo
-        </h2>
-        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-          {[
-            "Ansiedad",
-            "Crisis de pánico",
-            "Depresión",
-            "Estrés",
-            "Autoestima",
-            "Duelo",
-            "Relaciones",
-            "Hábitos",
-          ].map((item, i) => (
+            <div>
+              <h2 style={{ fontSize: "1.125rem", fontWeight: 600, marginBottom: "0.25rem" }}>
+                Sesión individual
+              </h2>
+              <p style={{ color: "#666", fontSize: "0.875rem" }}>
+                50 minutos ·{" "}
+                <Link href="/terapia-online" style={{ color: "#666", textDecoration: "underline" }}>
+                  Cómo funciona la terapia online
+                </Link>
+              </p>
+            </div>
+            <div style={{ textAlign: "right" }}>
+              <p style={{ fontSize: "1.25rem", fontWeight: 700 }}>$35.000</p>
+              <p style={{ color: "#666", fontSize: "0.75rem" }}>CLP</p>
+            </div>
+          </div>
+          <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
             <span
-              key={i}
               style={{
-                padding: "0.5rem 1rem",
-                backgroundColor: "#fafafa",
+                padding: "0.375rem 0.75rem",
+                backgroundColor: "#fff",
+                border: "1px solid #e5e5e5",
                 borderRadius: "9999px",
-                fontSize: "0.875rem",
-                color: "#444",
-              }}
-            >
-              {item}
-            </span>
-          ))}
-        </div>
-      </section>
-
-      {/* Servicios en Chillán */}
-      <section style={{ marginBottom: "3rem" }}>
-        <h2
-          style={{
-            fontSize: "0.75rem",
-            fontWeight: 600,
-            textTransform: "uppercase",
-            letterSpacing: "0.1em",
-            color: "#999",
-            marginBottom: "1rem",
-          }}
-        >
-          Servicios en Chillán
-        </h2>
-        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-          {[
-            { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
-            { label: "Psicólogo online", href: "/psicologo-online-chillan" },
-            { label: "Terapia de pareja", href: "/terapia-de-pareja-chillan" },
-            { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
-            { label: "Primera consulta", href: "/primera-consulta-psicologo-chillan" },
-            { label: "Precio consulta", href: "/consulta-psicologica-precio-chillan" },
-            { label: "Psicólogo para hombres", href: "/psicologo-hombres-chillan" },
-            { label: "Agendar sesión", href: "/agendar" },
-          ].map((item, i) => (
-            <Link
-              key={i}
-              href={item.href}
-              style={{
+                fontSize: "0.8125rem",
                 color: "#666",
-                fontSize: "0.875rem",
-                textDecoration: "none",
-                padding: "0.5rem 1rem",
-                backgroundColor: "#fafafa",
-                borderRadius: "9999px",
               }}
             >
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* Sobre mí */}
-      <section style={{ marginBottom: "3rem" }}>
-        <h2
-          style={{
-            fontSize: "0.75rem",
-            fontWeight: 600,
-            textTransform: "uppercase",
-            letterSpacing: "0.1em",
-            color: "#999",
-            marginBottom: "1rem",
-          }}
-        >
-          Sobre mí
-        </h2>
-        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
-          Soy psicólogo con más de 7 años de experiencia en atención clínica.
-          Trabajo principalmente con terapia cognitivo-conductual, un enfoque
-          práctico y basado en evidencia.
-        </p>
-        <p style={{ color: "#444", lineHeight: 1.7 }}>
-          Creo en una terapia cercana, sin juicios, donde puedas sentirte
-          cómodo para explorar lo que necesitas trabajar. Cada proceso es
-          único y lo adaptamos a tus necesidades y ritmo.
-        </p>
-      </section>
-
-      {/* Testimonios */}
-      <section style={{ marginBottom: "3rem" }}>
-        <h2
-          style={{
-            fontSize: "0.75rem",
-            fontWeight: 600,
-            textTransform: "uppercase",
-            letterSpacing: "0.1em",
-            color: "#999",
-            marginBottom: "1rem",
-          }}
-        >
-          Lo que dicen quienes han consultado
-        </h2>
-        <div style={{ display: "grid", gap: "0.75rem" }}>
-          {testimonios.map((t, i) => (
-            <div
-              key={i}
+              Presencial Chillán
+            </span>
+            <Link
+              href="/psicologo-online-chillan"
               style={{
-                padding: "1.25rem",
-                backgroundColor: "#fafafa",
-                borderRadius: "12px",
+                padding: "0.375rem 0.75rem",
+                backgroundColor: "#fff",
+                border: "1px solid #e5e5e5",
+                borderRadius: "9999px",
+                fontSize: "0.8125rem",
+                color: "#666",
+                textDecoration: "none",
               }}
             >
-              <p
+              Online
+            </Link>
+          </div>
+        </section>
+
+        {/* Áreas de trabajo */}
+        <section style={{ marginBottom: "3rem" }}>
+          <h2
+            style={{
+              fontSize: "0.75rem",
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              color: "#999",
+              marginBottom: "1rem",
+            }}
+          >
+            Áreas de trabajo
+          </h2>
+          <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+            {[
+              "Ansiedad",
+              "Crisis de pánico",
+              "Depresión",
+              "Estrés",
+              "Autoestima",
+              "Duelo",
+              "Relaciones",
+              "Hábitos",
+            ].map((item, i) => (
+              <span
+                key={i}
                 style={{
+                  padding: "0.5rem 1rem",
+                  backgroundColor: "#fafafa",
+                  borderRadius: "9999px",
+                  fontSize: "0.875rem",
                   color: "#444",
-                  lineHeight: 1.6,
-                  marginBottom: "0.75rem",
-                  fontSize: "0.9375rem",
                 }}
               >
-                &ldquo;{t.texto}&rdquo;
-              </p>
-              <p style={{ color: "#999", fontSize: "0.8125rem" }}>— {t.autor}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+                {item}
+              </span>
+            ))}
+          </div>
+        </section>
 
-      {/* CTA Final */}
-      <section
-        style={{
-          padding: "2rem",
-          backgroundColor: "#000",
-          borderRadius: "16px",
-          marginBottom: "3rem",
-          textAlign: "center",
-        }}
-      >
-        <h2
-          style={{
-            fontSize: "1.25rem",
-            fontWeight: 600,
-            marginBottom: "0.75rem",
-            color: "#fff",
-          }}
-        >
-          ¿Listo para dar el primer paso?
-        </h2>
-        <p
-          style={{
-            color: "rgba(255,255,255,0.7)",
-            marginBottom: "1.5rem",
-            fontSize: "0.9375rem",
-          }}
-        >
-          Escríbeme y coordinamos tu primera sesión.
-        </p>
-        <a
-          href="https://wa.me/56968257817"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "0.5rem",
-            padding: "0.875rem 1.75rem",
-            backgroundColor: "#fff",
-            color: "#000",
-            borderRadius: "9999px",
-            textDecoration: "none",
-            fontWeight: 500,
-            fontSize: "0.9375rem",
-          }}
-        >
-          Contactar por WhatsApp →
-        </a>
-      </section>
+        {/* Servicios en Chillán */}
+        <section style={{ marginBottom: "3rem" }}>
+          <h2
+            style={{
+              fontSize: "0.75rem",
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              color: "#999",
+              marginBottom: "1rem",
+            }}
+          >
+            Servicios en Chillán
+          </h2>
+          <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+            {[
+              { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
+              { label: "Psicólogo online", href: "/psicologo-online-chillan" },
+              { label: "Terapia de pareja", href: "/terapia-de-pareja-chillan" },
+              { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
+              { label: "Primera consulta", href: "/primera-consulta-psicologo-chillan" },
+              { label: "Precio consulta", href: "/consulta-psicologica-precio-chillan" },
+              { label: "Psicólogo para hombres", href: "/psicologo-hombres-chillan" },
+              { label: "Agendar sesión", href: "/agendar" },
+            ].map((item, i) => (
+              <Link
+                key={i}
+                href={item.href}
+                style={{
+                  color: "#666",
+                  fontSize: "0.875rem",
+                  textDecoration: "none",
+                  padding: "0.5rem 1rem",
+                  backgroundColor: "#fafafa",
+                  borderRadius: "9999px",
+                }}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </section>
 
-      {/* Footer */}
-      <footer
-        style={{
-          paddingTop: "2rem",
-          borderTop: "1px solid #eaeaea",
-          textAlign: "center",
-        }}
-      >
-        <p style={{ color: "#999", fontSize: "0.8125rem" }}>
-          © 2025 Gonzalo Pedrosa · Psicólogo
-        </p>
-      </footer>
-    </main>
+        {/* Sobre mí */}
+        <section style={{ marginBottom: "3rem" }}>
+          <h2
+            style={{
+              fontSize: "0.75rem",
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              color: "#999",
+              marginBottom: "1rem",
+            }}
+          >
+            Sobre mí
+          </h2>
+          <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
+            Soy psicólogo con más de 7 años de experiencia en atención clínica.
+            Trabajo principalmente con terapia cognitivo-conductual, un enfoque
+            práctico y basado en evidencia.
+          </p>
+          <p style={{ color: "#444", lineHeight: 1.7 }}>
+            Creo en una terapia cercana, sin juicios, donde puedas sentirte
+            cómodo para explorar lo que necesitas trabajar. Conoce más en{" "}
+            <Link href="/perfil" style={{ color: "#000", textDecoration: "underline" }}>
+              mi perfil profesional
+            </Link>
+            .
+          </p>
+        </section>
+
+        {/* Testimonios */}
+        <section style={{ marginBottom: "3rem" }}>
+          <h2
+            style={{
+              fontSize: "0.75rem",
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              color: "#999",
+              marginBottom: "1rem",
+            }}
+          >
+            Lo que dicen quienes han consultado
+          </h2>
+          <div style={{ display: "grid", gap: "0.75rem" }}>
+            {testimonios.map((t, i) => (
+              <div
+                key={i}
+                style={{
+                  padding: "1.25rem",
+                  backgroundColor: "#fafafa",
+                  borderRadius: "12px",
+                }}
+              >
+                <p
+                  style={{
+                    color: "#444",
+                    lineHeight: 1.6,
+                    marginBottom: "0.75rem",
+                    fontSize: "0.9375rem",
+                  }}
+                >
+                  &ldquo;{t.texto}&rdquo;
+                </p>
+                <p style={{ color: "#999", fontSize: "0.8125rem" }}>— {t.autor}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA Final */}
+        <section
+          style={{
+            padding: "2rem",
+            backgroundColor: "#000",
+            borderRadius: "16px",
+            marginBottom: "3rem",
+            textAlign: "center",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "1.25rem",
+              fontWeight: 600,
+              marginBottom: "0.75rem",
+              color: "#fff",
+            }}
+          >
+            ¿Listo para dar el primer paso?
+          </h2>
+          <p
+            style={{
+              color: "rgba(255,255,255,0.7)",
+              marginBottom: "1.5rem",
+              fontSize: "0.9375rem",
+            }}
+          >
+            Reserva tu primera sesión presencial u online.
+          </p>
+          <Link
+            href="/agendar"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              padding: "0.875rem 1.75rem",
+              backgroundColor: "#fff",
+              color: "#000",
+              borderRadius: "9999px",
+              textDecoration: "none",
+              fontWeight: 500,
+              fontSize: "0.9375rem",
+            }}
+          >
+            Ir a agendar →
+          </Link>
+        </section>
+
+        <footer
+          style={{
+            paddingTop: "2rem",
+            borderTop: "1px solid #eaeaea",
+            textAlign: "center",
+          }}
+        >
+          <p style={{ color: "#999", fontSize: "0.8125rem" }}>
+            © 2025 Gonzalo Pedrosa · Psicólogo
+          </p>
+        </footer>
+      </main>
+    </>
   );
 }

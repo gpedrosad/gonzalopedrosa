@@ -1,9 +1,14 @@
 import type { NextConfig } from "next";
+import path from "path";
+import { fileURLToPath } from "url";
 import {
   TRAILING_SLASH,
 } from "./src/lib/site-config";
 
+const projectRoot = path.dirname(fileURLToPath(import.meta.url));
+
 const nextConfig: NextConfig = {
+  outputFileTracingRoot: projectRoot,
   trailingSlash: TRAILING_SLASH,
   // Formatos modernos de imagen para mejor performance
   images: {

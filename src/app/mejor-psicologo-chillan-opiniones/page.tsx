@@ -2,31 +2,91 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import {
+  localBusinessSchema,
+  getBreadcrumbSchema,
+  getServiceSchema,
+  getFAQSchema,
+  getTwitterDescription,
+} from "@/lib/schemas";
+
+const description =
+  "¿Buscas el mejor psicólogo en Chillán? Opiniones, enfoque TCC, precios y cómo elegir con criterio —sin promesas vacías. Conoce mi perfil y agenda una primera sesión.";
 
 export const metadata: Metadata = {
-  title: "Mejor Psicólogo en Chillán Opiniones | Gonzalo Pedrosa",
-  description:
-    "Busca el mejor psicólogo en Chillán? Conoce mi enfoque, formación y lo que dicen mis pacientes. Terapia profesional con enfoque en resultados.",
+  title: "Mejor psicólogo Chillán opiniones | Cómo elegir | Gonzalo Pedrosa",
+  description,
   alternates: {
     canonical: "/mejor-psicologo-chillan-opiniones",
   },
   openGraph: {
-    title: "Mejor Psicólogo en Chillán Opiniones | Gonzalo Pedrosa",
-    description: "Busca el mejor psicólogo en Chillán? Conoce mi enfoque, formación y lo que dicen mis pacientes. Terapia profesional con enfoque en resultados.",
+    title: "Mejor psicólogo Chillán opiniones | Gonzalo Pedrosa",
+    description,
     url: "https://www.gonzalopedrosa.cl/mejor-psicologo-chillan-opiniones",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mejor Psicólogo en Chillán Opiniones",
-    description: "Busca el mejor psicólogo en Chillán? Conoce mi enfoque, formación y lo que dicen mis pacientes. Terapia profesional con enfoque en resultados.",
+    title: "Mejor psicólogo Chillán opiniones",
+    description: getTwitterDescription(
+      "Cómo elegir psicólogo en Chillán: formación, TCC y experiencia real. Agenda primera sesión $35.000."
+    ),
   },
 };
 
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Mejor psicólogo Chillán opiniones" },
+];
+
+const opinionesFAQs = [
+  {
+    question: "¿Cómo sé si un psicólogo es confiable?",
+    answer:
+      "Revisa formación, registro profesional, enfoque terapéutico con evidencia y si te explica el proceso con claridad. La primera sesión sirve para evaluar encaje.",
+  },
+  {
+    question: "¿Las opiniones en internet son suficientes?",
+    answer:
+      "Ayudan, pero conviene contrastar con una consulta directa. Cada persona valora aspectos distintos: cercanía, método, horarios o modalidad online.",
+  },
+];
+
+const faqSchema = getFAQSchema(opinionesFAQs);
+const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
+const serviceSchema = getServiceSchema({
+  serviceType: "Consulta psicológica",
+  description: "Atención psicológica en Chillán con enfoque cognitivo-conductual y más de 7 años de experiencia clínica.",
+  areaServed: "Chillán",
+});
+
 export default function MejorPsicologoChillanOpinionesPage() {
   return (
+    <>
+      <Script
+        id="local-business"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <Script
+        id="breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Script
+        id="service"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
     <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+        <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={56} height={56} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -39,11 +99,32 @@ export default function MejorPsicologoChillanOpinionesPage() {
         Mejor Psicólogo en Chillán Opiniones
       </h1>
 
-      <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "3rem", lineHeight: 1.6 }}>
-        Elegir un psicólogo es una decisión importante. Aquí puedes conocer mi
-        enfoque, formación y lo que mis pacientes valoran de la terapia
-        conmigo.
+      <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "1.5rem", lineHeight: 1.6 }}>
+        Si buscas el mejor psicólogo en Chillán según opiniones, conviene mirar formación, enfoque
+        (trabajo con TCC), años de experiencia y encaje en la primera sesión —no solo estrellas en
+        Google. Acá resumo cómo elijo trabajar y qué dicen quienes consultan.
       </p>
+
+      <div style={{ marginBottom: "2.5rem", display: "flex", flexWrap: "wrap", gap: "0.75rem", alignItems: "center" }}>
+        <Link
+          href="/agendar"
+          style={{
+            display: "inline-flex",
+            padding: "0.75rem 1.25rem",
+            backgroundColor: "#000",
+            color: "#fff",
+            borderRadius: "9999px",
+            textDecoration: "none",
+            fontWeight: 500,
+            fontSize: "0.875rem",
+          }}
+        >
+          Agendar primera sesión →
+        </Link>
+        <Link href="/perfil" style={{ fontSize: "0.875rem", color: "#666", textDecoration: "underline" }}>
+          Ver perfil completo
+        </Link>
+      </div>
 
       <section style={{ marginBottom: "3rem" }}>
         <h2 style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "1rem" }}>
@@ -133,9 +214,14 @@ export default function MejorPsicologoChillanOpinionesPage() {
         <p style={{ color: "rgba(255,255,255,0.7)", marginBottom: "1.5rem", fontSize: "0.9375rem" }}>
           Agenda una primera sesión y ve si hacemos match.
         </p>
-        <a href="https://wa.me/56968257817" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", padding: "0.75rem 1.5rem", backgroundColor: "#fff", color: "#000", borderRadius: "9999px", textDecoration: "none", fontWeight: 500, fontSize: "0.875rem" }}>
-          Agendar sesión →
-        </a>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", alignItems: "center" }}>
+          <Link href="/agendar" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", padding: "0.75rem 1.5rem", backgroundColor: "#fff", color: "#000", borderRadius: "9999px", textDecoration: "none", fontWeight: 500, fontSize: "0.875rem" }}>
+            Agendar en el sitio →
+          </Link>
+          <a href="https://wa.me/56968257817" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,255,255,0.9)", fontSize: "0.875rem", textDecoration: "underline" }}>
+            O escribir por WhatsApp
+          </a>
+        </div>
       </section>
 
       <nav style={{ paddingTop: "2rem", borderTop: "1px solid #eaeaea" }}>
@@ -154,6 +240,7 @@ export default function MejorPsicologoChillanOpinionesPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

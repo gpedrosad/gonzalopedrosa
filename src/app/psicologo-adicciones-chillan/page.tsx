@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 import { Button } from "../components/Button";
 
 export const metadata: Metadata = {
@@ -21,50 +23,43 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Adicciones en Chillán, Chile",
-    description: "Psicólogo especializado en adicciones en Chillán, Chile. Tratamiento para conductas adictivas con enfoque cognitivo-conductual. Atención presencial y ",
+    description: getTwitterDescription("Psicólogo especializado en adicciones en Chillán, Chile. Tratamiento para conductas adictivas con enfoque cognitivo-conductual. Atención presencial y "),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Se puede tratar solo con terapia?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Depende de la severidad. En dependencias físicas severas puede ser necesario apoyo médico. La terapia psicológica es un componente fundamental."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Y si la persona no quiere tratamiento?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La motivación puede trabajarse en terapia. Si un familiar está preocupado, puede ser útil una orientación inicial."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Es posible la terapia online?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La terapia online puede ser una opción válida, especialmente para el seguimiento."
-      }
-    }
-  ]
-};
+
+const psicologo_adicciones_chillanFAQs = [
+  {
+    question: "¿Se puede tratar solo con terapia?",
+    answer:
+      "Depende de la severidad. En dependencias físicas severas puede ser necesario apoyo médico. La terapia psicológica es un componente fundamental.",
+  },
+  {
+    question: "¿Y si la persona no quiere tratamiento?",
+    answer:
+      "La motivación puede trabajarse en terapia. Si un familiar está preocupado, puede ser útil una orientación inicial.",
+  },
+  {
+    question: "¿Es posible la terapia online?",
+    answer:
+      "La terapia online puede ser una opción válida, especialmente para el seguimiento.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Adicciones Chillán" },
+];
 
 export default function PsicologoAdiccionesChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_adicciones_chillanFAQs}
+        serviceType="Psicología Adicciones"
+        serviceDescription={"Psicólogo especializado en adicciones en Chillán, Chile. Tratamiento para conductas adictivas con enfoque cognitivo-conductual. Atención presencial y online."}
       />
       <main
       style={{
@@ -75,6 +70,7 @@ export default function PsicologoAdiccionesChillanPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <Breadcrumb items={breadcrumbItems} />
       <div
         style={{
           display: "flex",
@@ -437,7 +433,7 @@ export default function PsicologoAdiccionesChillanPage() {
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
             { label: "Pánico", href: "/psicologo-crisis-de-panico-chillan" },
-            { label: "Online", href: "/terapia-online" },
+            { label: "Psicólogo online", href: "/psicologo-online-chillan" },
           ].map((item, i) => (
             <Link
               key={i}

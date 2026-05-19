@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Superar Trauma de Infancia en Chillán | Psicólogo Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Superar Trauma de Infancia en Chillán | Psicólogo Gonzalo Pedrosa",
-    description: "Psicólogo para superar traumas de infancia en Chillán. Terapia para sanar heridas del pasado que afectan tu presente.",
+    description: getTwitterDescription("Psicólogo para superar traumas de infancia en Chillán. Terapia para sanar heridas del pasado que afectan tu presente."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Es posible superar un trauma de la infancia?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí. No significa olvidar, sino integrar la experiencia de forma que deje de controlar tu vida. Muchas personas logran cambios profundos con terapia."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Tengo que recordar todo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Trabajamos con lo que está presente ahora. No es necesario recuperar recuerdos perdidos. Respetamos tu proceso."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuánto tiempo toma?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Depende de la complejidad del trauma. Es un proceso más largo que otros, pero los cambios son profundos y duraderos."
-      }
-    }
-  ]
-};
+
+const superar_trauma_infancia_chillanFAQs = [
+  {
+    question: "¿Es posible superar un trauma de la infancia?",
+    answer:
+      "Sí. No significa olvidar, sino integrar la experiencia de forma que deje de controlar tu vida. Muchas personas logran cambios profundos con terapia.",
+  },
+  {
+    question: "¿Tengo que recordar todo?",
+    answer:
+      "No. Trabajamos con lo que está presente ahora. No es necesario recuperar recuerdos perdidos. Respetamos tu proceso.",
+  },
+  {
+    question: "¿Cuánto tiempo toma?",
+    answer:
+      "Depende de la complejidad del trauma. Es un proceso más largo que otros, pero los cambios son profundos y duraderos.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Superar Trauma Infancia Chillán" },
+];
 
 export default function SuperarTraumaInfanciaChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={superar_trauma_infancia_chillanFAQs}
+        serviceType="Superar Trauma Infancia"
+        serviceDescription={"Psicólogo para superar traumas de infancia en Chillán. Terapia para sanar heridas del pasado que afectan tu presente."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

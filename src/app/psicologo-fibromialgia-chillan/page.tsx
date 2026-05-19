@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo Fibromialgia en Chillán | Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Fibromialgia en Chillán",
-    description: "Psicólogo especializado en fibromialgia en Chillán. Terapia para manejo del dolor crónico, fatiga y aspectos emocionales de la enfermedad.",
+    description: getTwitterDescription("Psicólogo especializado en fibromialgia en Chillán. Terapia para manejo del dolor crónico, fatiga y aspectos emocionales de la enfermedad."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿La fibromialgia es psicológica?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No, es una condición médica real. Pero los factores psicológicos influyen en cómo experimentas el dolor. Por eso el tratamiento psicológico ayuda tanto."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Puede reducir mi dolor?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí. Estudios muestran que la TCC puede reducir la percepción de dolor y mejorar significativamente el funcionamiento diario."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Es compatible con mi tratamiento médico?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Absolutamente. La terapia es complementaria a la medicación y otros tratamientos. No reemplaza la atención médica."
-      }
-    }
-  ]
-};
+
+const psicologo_fibromialgia_chillanFAQs = [
+  {
+    question: "¿La fibromialgia es psicológica?",
+    answer:
+      "No, es una condición médica real. Pero los factores psicológicos influyen en cómo experimentas el dolor. Por eso el tratamiento psicológico ayuda tanto.",
+  },
+  {
+    question: "¿Puede reducir mi dolor?",
+    answer:
+      "Sí. Estudios muestran que la TCC puede reducir la percepción de dolor y mejorar significativamente el funcionamiento diario.",
+  },
+  {
+    question: "¿Es compatible con mi tratamiento médico?",
+    answer:
+      "Absolutamente. La terapia es complementaria a la medicación y otros tratamientos. No reemplaza la atención médica.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Fibromialgia Chillán" },
+];
 
 export default function PsicologoFibromialgiaChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_fibromialgia_chillanFAQs}
+        serviceType="Psicología Fibromialgia"
+        serviceDescription={"Psicólogo especializado en fibromialgia en Chillán. Terapia para manejo del dolor crónico, fatiga y aspectos emocionales de la enfermedad."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

@@ -2,86 +2,135 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import {
+  localBusinessSchema,
+  getBreadcrumbSchema,
+  getServiceSchema,
+  getFAQSchema,
+  getTwitterDescription,
+} from "@/lib/schemas";
+
+const description =
+  "Psicólogo en el centro de Chillán: consulta presencial de fácil acceso o sesión online el mismo día. Horarios flexibles, boleta Isapre desde $35.000. Agenda en línea.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Centro Chillán | Gonzalo Pedrosa",
-  description:
-    "Psicólogo en el centro de Chillán. Ubicación céntrica de fácil acceso. Atención presencial y online. Agenda tu hora.",
+  title: "Psicólogo centro Chillán | Presencial y online | Gonzalo Pedrosa",
+  description,
   alternates: {
     canonical: "/psicologo-centro-chillan",
   },
   openGraph: {
-    title: "Psicólogo Centro Chillán | Gonzalo Pedrosa",
-    description: "Psicólogo en el centro de Chillán. Ubicación céntrica de fácil acceso. Atención presencial y online. Agenda tu hora.",
+    title: "Psicólogo centro Chillán | Gonzalo Pedrosa",
+    description,
     url: "https://www.gonzalopedrosa.cl/psicologo-centro-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo Centro Chillán",
-    description: "Psicólogo en el centro de Chillán. Ubicación céntrica de fácil acceso. Atención presencial y online. Agenda tu hora.",
+    title: "Psicólogo centro Chillán",
+    description: getTwitterDescription(
+      "Consulta en el centro de Chillán u online. $35.000, boleta Isapre. Reserva en /agendar."
+    ),
   },
 };
 
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo centro Chillán" },
+];
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Qué horarios tienen disponibles?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Atiendo de lunes a viernes en horarios de mañana y tarde. Escríbeme por WhatsApp para coordinar."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Puedo elegir entre presencial y online?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, tienes flexibilidad total. Puedes combinar sesiones presenciales en el centro con sesiones online según te acomode cada semana."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Aceptan Isapre?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Emito boleta para reembolso Isapre. Recuperas entre el 50-80% según tu plan."
-      }
-    }
-  ]
-};
+const centroFAQs = [
+  {
+    question: "¿Qué horarios tienen disponibles?",
+    answer:
+      "Atiendo de lunes a viernes en horarios de mañana y tarde. Puedes reservar en el sitio o escribir por WhatsApp para coordinar.",
+  },
+  {
+    question: "¿Puedo elegir entre presencial y online?",
+    answer:
+      "Sí, tienes flexibilidad total. Puedes combinar sesiones presenciales en el centro con sesiones online según te acomode cada semana.",
+  },
+  {
+    question: "¿Aceptan Isapre?",
+    answer:
+      "Emito boleta para reembolso Isapre. Recuperas entre el 50-80% según tu plan.",
+  },
+];
+
+const faqSchema = getFAQSchema(centroFAQs);
+const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
+const serviceSchema = getServiceSchema({
+  serviceType: "Consulta psicológica en Chillán centro",
+  description:
+    "Atención psicológica presencial en el centro de Chillán o por videollamada, con enfoque cognitivo-conductual.",
+  areaServed: "Chillán",
+});
 
 export default function PsicologoCentroChillanPage() {
   return (
     <>
+      <Script
+        id="local-business"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <Script
+        id="breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Script
+        id="service"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Script
         id="faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
-      <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem" }}>
-        <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={56} height={56} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
+        <Breadcrumb items={breadcrumbItems} />
+      <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
+        <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
-          <p style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.125rem" }}>Chillán, Chile</p>
-          <p style={{ fontWeight: 500, color: "#000" }}>Gonzalo Pedrosa</p>
+          <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>Gonzalo Pedrosa</p>
+          <p style={{ fontSize: "0.875rem", color: "#666" }}>Psicólogo Clínico · +7 años · Centro Chillán</p>
         </div>
       </div>
 
       <h1 style={{ fontSize: "2.5rem", fontWeight: 700, letterSpacing: "-0.03em", marginBottom: "1rem", lineHeight: 1.1 }}>
-        Psicólogo Centro Chillán
+        Psicólogo en el centro de Chillán
       </h1>
 
-      <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "3rem", lineHeight: 1.6 }}>
-        Atención psicológica en el centro de Chillán. Ubicación de fácil acceso
-        para quienes trabajan o viven en el centro de la ciudad.
+      <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "1.5rem", lineHeight: 1.6 }}>
+        Si buscas psicólogo en el centro de Chillán, atiendo presencial en ubicación céntrica y también por{" "}
+        <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>videollamada</Link>
+        . Sesiones de 50 min desde $35.000 con boleta Isapre; puedes reservar en línea.
       </p>
+
+      <div style={{ marginBottom: "2.5rem", display: "flex", flexWrap: "wrap", gap: "0.75rem", alignItems: "center" }}>
+        <Link
+          href="/agendar"
+          style={{
+            display: "inline-flex",
+            padding: "0.75rem 1.25rem",
+            backgroundColor: "#000",
+            color: "#fff",
+            borderRadius: "9999px",
+            textDecoration: "none",
+            fontWeight: 500,
+            fontSize: "0.875rem",
+          }}
+        >
+          Agendar en el centro →
+        </Link>
+        <Link href="/consulta-psicologica-precio-chillan" style={{ fontSize: "0.875rem", color: "#666", textDecoration: "underline" }}>
+          Ver precio
+        </Link>
+      </div>
 
       <section style={{ marginBottom: "3rem" }}>
         <h2 style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "1rem" }}>
@@ -183,9 +232,14 @@ export default function PsicologoCentroChillanPage() {
         <p style={{ color: "rgba(255,255,255,0.7)", marginBottom: "1.5rem", fontSize: "0.9375rem" }}>
           Atención en el centro de Chillán o desde donde estés.
         </p>
-        <a href="https://wa.me/56968257817" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", padding: "0.75rem 1.5rem", backgroundColor: "#fff", color: "#000", borderRadius: "9999px", textDecoration: "none", fontWeight: 500, fontSize: "0.875rem" }}>
-          Agendar por WhatsApp →
-        </a>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", alignItems: "center" }}>
+          <Link href="/agendar" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", padding: "0.75rem 1.5rem", backgroundColor: "#fff", color: "#000", borderRadius: "9999px", textDecoration: "none", fontWeight: 500, fontSize: "0.875rem" }}>
+            Agendar en el sitio →
+          </Link>
+          <a href="https://wa.me/56968257817" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,255,255,0.9)", fontSize: "0.875rem", textDecoration: "underline" }}>
+            O escribir por WhatsApp
+          </a>
+        </div>
       </section>
 
       <nav style={{ paddingTop: "2rem", borderTop: "1px solid #eaeaea" }}>

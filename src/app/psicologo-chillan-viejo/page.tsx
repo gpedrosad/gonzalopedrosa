@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo en Chillán Viejo | Gonzalo Pedrosa - Atención Cercana",
@@ -20,50 +22,43 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo en Chillán Viejo | Gonzalo Pedrosa - Atención Cercana",
-    description: "Psicólogo en Chillán Viejo y alrededores. Atención presencial cercana y terapia online. Ansiedad, depresión, estrés y más. Agenda tu hora.",
+    description: getTwitterDescription("Psicólogo en Chillán Viejo y alrededores. Atención presencial cercana y terapia online. Ansiedad, depresión, estrés y más. Agenda tu hora."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Atiende directamente en Chillán Viejo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La consulta presencial está en Chillán centro. Si el traslado es un inconveniente, la terapia online es una alternativa cómoda y efectiva."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Qué horarios tiene disponibles?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Tengo horarios de mañana y tarde. Consulta disponibilidad por WhatsApp y buscamos el que mejor te acomode."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Necesito hora para hoy?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Si necesitas atención urgente, revisa mi disponibilidad para hoy."
-      }
-    }
-  ]
-};
+
+const psicologo_chillan_viejoFAQs = [
+  {
+    question: "¿Atiende directamente en Chillán Viejo?",
+    answer:
+      "La consulta presencial está en Chillán centro. Si el traslado es un inconveniente, la terapia online es una alternativa cómoda y efectiva.",
+  },
+  {
+    question: "¿Qué horarios tiene disponibles?",
+    answer:
+      "Tengo horarios de mañana y tarde. Consulta disponibilidad por WhatsApp y buscamos el que mejor te acomode.",
+  },
+  {
+    question: "¿Necesito hora para hoy?",
+    answer:
+      "Si necesitas atención urgente, revisa mi disponibilidad para hoy.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Chillan Viejo Chillán" },
+];
 
 export default function PsicologoChillanViejoPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_chillan_viejoFAQs}
+        serviceType="Psicología Chillan Viejo"
+        serviceDescription={"Psicólogo en Chillán Viejo y alrededores. Atención presencial cercana y terapia online. Ansiedad, depresión, estrés y más. Agenda tu hora."}
       />
       <main
       style={{
@@ -74,6 +69,7 @@ export default function PsicologoChillanViejoPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <Breadcrumb items={breadcrumbItems} />
       <div
         style={{
           display: "flex",
@@ -451,7 +447,7 @@ export default function PsicologoChillanViejoPage() {
             { label: "Adultos", href: "/psicologo-adulto-chillan" },
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
-            { label: "Online", href: "/terapia-online" },
+            { label: "Psicólogo online", href: "/psicologo-online-chillan" },
             { label: "Hora hoy", href: "/hora-psicologo-chillan-hoy" },
           ].map((item, i) => (
             <Link

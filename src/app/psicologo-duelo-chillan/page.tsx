@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo Duelo en Chillán, Chile | Gonzalo Pedrosa",
@@ -20,50 +22,43 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Duelo en Chillán, Chile",
-    description: "Psicólogo especializado en duelo y pérdidas en Chillán, Chile. Acompañamiento profesional para procesar el dolor. Sesiones presenciales y online.",
+    description: getTwitterDescription("Psicólogo especializado en duelo y pérdidas en Chillán, Chile. Acompañamiento profesional para procesar el dolor. Sesiones presenciales y online."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cuánto dura el duelo normalmente?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No hay un tiempo establecido. Puede durar meses o años, y su intensidad varía. Lo importante no es \"superarlo\" sino aprender a vivir con la pérdida de una manera que te permita seguir adelante."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Es normal sentir rabia durante el duelo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, la rabia es una reacción común y válida. Puede dirigirse hacia la persona fallecida, hacia otros, hacia uno mismo o hacia la situación en general. En terapia trabajamos para procesar estas emociones."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Qué enfoque utilizas para trabajar el duelo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Trabajo desde la terapia cognitivo-conductual, integrando técnicas específicas para el procesamiento del duelo. También puedo complementar con EMDR si es apropiado."
-      }
-    }
-  ]
-};
+
+const psicologo_duelo_chillanFAQs = [
+  {
+    question: "¿Cuánto dura el duelo normalmente?",
+    answer:
+      "No hay un tiempo establecido. Puede durar meses o años, y su intensidad varía. Lo importante no es \"superarlo\" sino aprender a vivir con la pérdida de una manera que te permita seguir adelante.",
+  },
+  {
+    question: "¿Es normal sentir rabia durante el duelo?",
+    answer:
+      "Sí, la rabia es una reacción común y válida. Puede dirigirse hacia la persona fallecida, hacia otros, hacia uno mismo o hacia la situación en general. En terapia trabajamos para procesar estas emociones.",
+  },
+  {
+    question: "¿Qué enfoque utilizas para trabajar el duelo?",
+    answer:
+      "Trabajo desde la terapia cognitivo-conductual, integrando técnicas específicas para el procesamiento del duelo. También puedo complementar con EMDR si es apropiado.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Duelo Chillán" },
+];
 
 export default function PsicologoDueloChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_duelo_chillanFAQs}
+        serviceType="Psicología Duelo"
+        serviceDescription={"Psicólogo especializado en duelo y pérdidas en Chillán, Chile. Acompañamiento profesional para procesar el dolor. Sesiones presenciales y online."}
       />
       <main
       style={{
@@ -74,6 +69,7 @@ export default function PsicologoDueloChillanPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <Breadcrumb items={breadcrumbItems} />
       <div
         style={{
           display: "flex",
@@ -448,7 +444,7 @@ export default function PsicologoDueloChillanPage() {
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             { label: "EMDR", href: "/terapia-emdr-chillan" },
             { label: "Adultos", href: "/psicologo-adulto-chillan" },
-            { label: "Online", href: "/terapia-online" },
+            { label: "Psicólogo online", href: "/psicologo-online-chillan" },
           ].map((item, i) => (
             <Link
               key={i}

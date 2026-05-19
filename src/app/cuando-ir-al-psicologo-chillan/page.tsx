@@ -134,6 +134,22 @@ export default function CuandoIrAlPsicologoChillanPage() {
           </div>
         </div>
 
+        <section
+          style={{
+            marginBottom: "1.5rem",
+            padding: "1rem 1.25rem",
+            backgroundColor: "#fafafa",
+            borderRadius: "12px",
+          }}
+        >
+          <p style={{ fontSize: "0.8125rem", color: "#444", lineHeight: 1.6, margin: 0 }}>
+            ★ 4,8 · TCC · Confidencial · Presencial Chillán o{" "}
+            <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+              online
+            </Link>
+          </p>
+        </section>
+
         <p
           style={{
             fontSize: "0.75rem",
@@ -171,6 +187,48 @@ export default function CuandoIrAlPsicologoChillanPage() {
           llegan antes suelen recuperar rutinas y relaciones con menos desgaste. Esta página resume
           señales frecuentes —no un diagnóstico— para que decidas con información.
         </p>
+
+        <div
+          style={{
+            display: "flex",
+            gap: "0.75rem",
+            flexWrap: "wrap",
+            marginBottom: "3rem",
+          }}
+        >
+          <Link
+            href="/agendar"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              padding: "0.875rem 1.5rem",
+              backgroundColor: "#000",
+              color: "#fff",
+              borderRadius: "9999px",
+              textDecoration: "none",
+              fontWeight: 500,
+              fontSize: "0.9375rem",
+            }}
+          >
+            Agendar sesión →
+          </Link>
+          <Link
+            href="/psicologo-online-chillan"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              padding: "0.875rem 1.5rem",
+              border: "1px solid #e5e5e5",
+              borderRadius: "9999px",
+              textDecoration: "none",
+              fontWeight: 500,
+              fontSize: "0.9375rem",
+              color: "#000",
+            }}
+          >
+            Psicólogo online
+          </Link>
+        </div>
 
         <section style={{ marginBottom: "3rem" }}>
           <h2
@@ -375,8 +433,9 @@ export default function CuandoIrAlPsicologoChillanPage() {
           <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
             {[
               { label: "Primera consulta", href: "/primera-consulta-psicologo-chillan" },
+              { label: "Psicólogo online", href: "/psicologo-online-chillan" },
               { label: "Online vs presencial", href: "/terapia-online-vs-presencial-chillan" },
-              { label: "Terapia online", href: "/terapia-online" },
+              { label: "Cómo funciona terapia online", href: "/terapia-online" },
               { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             ].map((item, i) => (
               <Link

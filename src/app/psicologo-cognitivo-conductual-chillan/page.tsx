@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 import { Button } from "../components/Button";
 
 export const metadata: Metadata = {
@@ -21,50 +23,43 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Cognitivo Conductual en Chillán, Chile",
-    description: "Psicólogo con enfoque cognitivo-conductual (TCC) en Chillán, Chile. Terapia basada en evidencia para ansiedad, depresión y más. Sesiones presenciales ",
+    description: getTwitterDescription("Psicólogo con enfoque cognitivo-conductual (TCC) en Chillán, Chile. Terapia basada en evidencia para ansiedad, depresión y más. Sesiones presenciales "),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿En qué se diferencia de otros enfoques?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La TCC se caracteriza por su enfoque en el presente y en soluciones prácticas. Cuando es relevante, también se trabajan experiencias pasadas que influyen en patrones actuales."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuántas sesiones se necesitan?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Depende del motivo de consulta. Para problemas focalizados pueden bastar pocas sesiones. Para cuadros más complejos, el proceso puede extenderse."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿La TCC funciona en formato online?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, la terapia online con enfoque cognitivo-conductual ha mostrado efectividad comparable a la presencial."
-      }
-    }
-  ]
-};
+
+const psicologo_cognitivo_conductual_chillanFAQs = [
+  {
+    question: "¿En qué se diferencia de otros enfoques?",
+    answer:
+      "La TCC se caracteriza por su enfoque en el presente y en soluciones prácticas. Cuando es relevante, también se trabajan experiencias pasadas que influyen en patrones actuales.",
+  },
+  {
+    question: "¿Cuántas sesiones se necesitan?",
+    answer:
+      "Depende del motivo de consulta. Para problemas focalizados pueden bastar pocas sesiones. Para cuadros más complejos, el proceso puede extenderse.",
+  },
+  {
+    question: "¿La TCC funciona en formato online?",
+    answer:
+      "Sí, la terapia online con enfoque cognitivo-conductual ha mostrado efectividad comparable a la presencial.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Cognitivo Conductual Chillán" },
+];
 
 export default function PsicologoCognitivoConductualChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_cognitivo_conductual_chillanFAQs}
+        serviceType="Psicología Cognitivo Conductual"
+        serviceDescription={"Psicólogo con enfoque cognitivo-conductual (TCC) en Chillán, Chile. Terapia basada en evidencia para ansiedad, depresión y más. Sesiones presenciales y online."}
       />
       <main
       style={{
@@ -75,6 +70,7 @@ export default function PsicologoCognitivoConductualChillanPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <Breadcrumb items={breadcrumbItems} />
       <div
         style={{
           display: "flex",
@@ -385,7 +381,7 @@ export default function PsicologoCognitivoConductualChillanPage() {
             >
               Sí, la{" "}
               <Link
-                href="/terapia-online"
+                href="/psicologo-online-chillan"
                 style={{ color: "#000", textDecoration: "underline" }}
               >
                 terapia online
@@ -525,9 +521,7 @@ export default function PsicologoCognitivoConductualChillanPage() {
               border: "1px solid #eaeaea",
               borderRadius: "9999px",
             }}
-          >
-            Online
-          </Link>
+          >Psicólogo online</Link>
         </div>
       </nav>
     </main>

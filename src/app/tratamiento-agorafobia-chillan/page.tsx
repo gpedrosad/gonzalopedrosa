@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Tratamiento Agorafobia en Chillán | Psicólogo Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Tratamiento Agorafobia en Chillán | Psicólogo Gonzalo Pedrosa",
-    description: "Tratamiento para agorafobia en Chillán. Terapia especializada para superar el miedo a salir, lugares públicos y situaciones donde escapar es difícil.",
+    description: getTwitterDescription("Tratamiento para agorafobia en Chillán. Terapia especializada para superar el miedo a salir, lugares públicos y situaciones donde escapar es difícil."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Me van a obligar a enfrentar mis miedos?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La exposición es gradual y siempre con tu acuerdo. Avanzamos a tu ritmo, nunca te forzaré a hacer algo para lo que no estés preparado/a."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Puedo superar la agorafobia?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí. La agorafobia tiene muy buena respuesta al tratamiento. Muchas personas recuperan su vida completamente."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Necesito medicación?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No siempre. La terapia sola puede ser suficiente. En casos severos, la medicación puede ayudar inicialmente y se va reduciendo con el tiempo."
-      }
-    }
-  ]
-};
+
+const tratamiento_agorafobia_chillanFAQs = [
+  {
+    question: "¿Me van a obligar a enfrentar mis miedos?",
+    answer:
+      "La exposición es gradual y siempre con tu acuerdo. Avanzamos a tu ritmo, nunca te forzaré a hacer algo para lo que no estés preparado/a.",
+  },
+  {
+    question: "¿Puedo superar la agorafobia?",
+    answer:
+      "Sí. La agorafobia tiene muy buena respuesta al tratamiento. Muchas personas recuperan su vida completamente.",
+  },
+  {
+    question: "¿Necesito medicación?",
+    answer:
+      "No siempre. La terapia sola puede ser suficiente. En casos severos, la medicación puede ayudar inicialmente y se va reduciendo con el tiempo.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Tratamiento Agorafobia Chillán" },
+];
 
 export default function TratamientoAgorafobiaChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={tratamiento_agorafobia_chillanFAQs}
+        serviceType="Tratamiento Agorafobia"
+        serviceDescription={"Tratamiento para agorafobia en Chillán. Terapia especializada para superar el miedo a salir, lugares públicos y situaciones donde escapar es difícil."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -200,7 +196,7 @@ export default function TratamientoAgorafobiaChillanPage() {
           {[
             { label: "Crisis de pánico", href: "/psicologo-crisis-de-panico-chillan" },
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
-            { label: "Online", href: "/terapia-online" },
+            { label: "Psicólogo online", href: "/psicologo-online-chillan" },
             { label: "Fobia social", href: "/psicologo-fobia-social-chillan" },
           ].map((item, i) => (
             <Link key={i} href={item.href} style={{ color: "#666", fontSize: "0.875rem", textDecoration: "none", padding: "0.375rem 0.75rem", border: "1px solid #eaeaea", borderRadius: "9999px" }}>

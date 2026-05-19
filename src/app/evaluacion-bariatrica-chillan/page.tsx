@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Evaluación Bariátrica en Chillán | Psicólogo Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Evaluación Bariátrica en Chillán | Psicólogo Gonzalo Pedrosa",
-    description: "Evaluación psicológica para cirugía bariátrica en Chillán. Informe psicológico requerido para operación de manga gástrica y bypass.",
+    description: getTwitterDescription("Evaluación psicológica para cirugía bariátrica en Chillán. Informe psicológico requerido para operación de manga gástrica y bypass."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cuánto tiempo toma?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Generalmente 1-2 sesiones de evaluación. El informe se entrega dentro de la semana siguiente a completar la evaluación."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Me pueden rechazar?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La evaluación es para determinar si estás preparado/a actualmente. Si hay contraindicaciones, trabajamos en ellas para que puedas optar más adelante."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿El informe lo acepta cualquier clínica?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, el informe cumple estándares profesionales. Si tu equipo requiere un formato específico, me adapto a sus requerimientos."
-      }
-    }
-  ]
-};
+
+const evaluacion_bariatrica_chillanFAQs = [
+  {
+    question: "¿Cuánto tiempo toma?",
+    answer:
+      "Generalmente 1-2 sesiones de evaluación. El informe se entrega dentro de la semana siguiente a completar la evaluación.",
+  },
+  {
+    question: "¿Me pueden rechazar?",
+    answer:
+      "La evaluación es para determinar si estás preparado/a actualmente. Si hay contraindicaciones, trabajamos en ellas para que puedas optar más adelante.",
+  },
+  {
+    question: "¿El informe lo acepta cualquier clínica?",
+    answer:
+      "Sí, el informe cumple estándares profesionales. Si tu equipo requiere un formato específico, me adapto a sus requerimientos.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Evaluacion Bariatrica Chillán" },
+];
 
 export default function EvaluacionBariatricaChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={evaluacion_bariatrica_chillanFAQs}
+        serviceType="Evaluacion Bariatrica"
+        serviceDescription={"Evaluación psicológica para cirugía bariátrica en Chillán. Informe psicológico requerido para operación de manga gástrica y bypass."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

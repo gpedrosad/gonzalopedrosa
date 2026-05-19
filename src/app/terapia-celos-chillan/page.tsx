@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Terapia para Celos en Chillán, Chile | Gonzalo Pedrosa",
@@ -19,13 +22,44 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Terapia para Celos en Chillán",
-    description: "Supera los celos y la inseguridad con terapia profesional.",
+    description: getTwitterDescription("Supera los celos y la inseguridad con terapia profesional."),
   },
 };
 
+
+const terapia_celos_chillanFAQs = [
+  {
+    question: "¿Los celos siempre indican inseguridad?",
+    answer:
+      "No siempre. A veces reflejan experiencias previas de traición o patrones aprendidos. En terapia distinguimos qué es señal real y qué es interpretación ansiosa.",
+  },
+  {
+    question: "¿Pueden ir en pareja?",
+    answer:
+      "Sí. Trabajo con parejas y también con personas que consultan por celos recurrentes en distintas relaciones.",
+  },
+  {
+    question: "¿Cuánto dura el proceso?",
+    answer:
+      "Depende de la historia y objetivos. Muchas parejas notan cambios en comunicación entre 8 y 16 sesiones.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Terapia Celos Chillán" },
+];
+
 export default function TerapiaCelosChillanPage() {
   return (
-    <main
+    <>
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={terapia_celos_chillanFAQs}
+        serviceType="Terapia para Celos"
+        serviceDescription="Tratamiento para celos patológicos e inseguridad en la pareja en Chillán. Terapia cognitivo-conductual, presencial y online."
+      />
+      <main
       style={{
         maxWidth: 640,
         margin: "0 auto",
@@ -34,6 +68,7 @@ export default function TerapiaCelosChillanPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <Breadcrumb items={breadcrumbItems} />
       <div
         style={{
           display: "flex",
@@ -410,7 +445,7 @@ export default function TerapiaCelosChillanPage() {
             { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
-            { label: "Online", href: "/terapia-online" },
+            { label: "Psicólogo online", href: "/psicologo-online-chillan" },
           ].map((item, i) => (
             <Link
               key={i}
@@ -430,6 +465,7 @@ export default function TerapiaCelosChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

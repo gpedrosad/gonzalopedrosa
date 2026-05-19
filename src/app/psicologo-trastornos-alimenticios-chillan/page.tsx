@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo Trastornos Alimenticios en Chillán | Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Trastornos Alimenticios en Chillán",
-    description: "Psicólogo especializado en trastornos alimenticios en Chillán. Tratamiento para anorexia, bulimia, atracones y relación problemática con la comida.",
+    description: getTwitterDescription("Psicólogo especializado en trastornos alimenticios en Chillán. Tratamiento para anorexia, bulimia, atracones y relación problemática con la comida."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Solo atiendes casos graves?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. También trabajo con personas que tienen una relación problemática con la comida sin llegar a un diagnóstico completo. La prevención es importante."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Necesito ver también a un nutricionista?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Generalmente sí, especialmente en casos más severos. El trabajo conjunto psicólogo-nutricionista es lo más efectivo."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Se puede recuperar completamente?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí. Muchas personas se recuperan completamente y desarrollan una relación sana con la comida y su cuerpo. Requiere compromiso pero es posible."
-      }
-    }
-  ]
-};
+
+const psicologo_trastornos_alimenticios_chillanFAQs = [
+  {
+    question: "¿Solo atiendes casos graves?",
+    answer:
+      "No. También trabajo con personas que tienen una relación problemática con la comida sin llegar a un diagnóstico completo. La prevención es importante.",
+  },
+  {
+    question: "¿Necesito ver también a un nutricionista?",
+    answer:
+      "Generalmente sí, especialmente en casos más severos. El trabajo conjunto psicólogo-nutricionista es lo más efectivo.",
+  },
+  {
+    question: "¿Se puede recuperar completamente?",
+    answer:
+      "Sí. Muchas personas se recuperan completamente y desarrollan una relación sana con la comida y su cuerpo. Requiere compromiso pero es posible.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Trastornos Alimenticios Chillán" },
+];
 
 export default function PsicologoTrastornosAlimenticiosChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_trastornos_alimenticios_chillanFAQs}
+        serviceType="Psicología Trastornos Alimenticios"
+        serviceDescription={"Psicólogo especializado en trastornos alimenticios en Chillán. Tratamiento para anorexia, bulimia, atracones y relación problemática con la comida."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

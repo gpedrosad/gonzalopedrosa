@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Superar Relación Tóxica en Chillán | Psicólogo Gonzalo Pedrosa",
@@ -20,50 +22,43 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Superar Relación Tóxica en Chillán | Psicólogo Gonzalo Pedrosa",
-    description: "Psicólogo en Chillán para superar relaciones tóxicas. Recupera tu bienestar, autoestima y aprende a construir vínculos saludables.",
+    description: getTwitterDescription("Psicólogo en Chillán para superar relaciones tóxicas. Recupera tu bienestar, autoestima y aprende a construir vínculos saludables."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Por qué me cuesta tanto salir?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Las relaciones tóxicas generan un vínculo traumático difícil de romper. El ciclo de maltrato y reconciliación crea una adicción emocional. Es más común de lo que crees."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Voy a volver a confiar?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, pero lleva tiempo. La terapia te ayuda a distinguir señales de alerta y a confiar gradualmente en personas que lo merecen."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Por qué me atraen este tipo de personas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Suele estar relacionado con patrones de apego y experiencias tempranas. En terapia trabajamos para cambiar estos patrones."
-      }
-    }
-  ]
-};
+
+const superar_relacion_toxica_chillanFAQs = [
+  {
+    question: "¿Por qué me cuesta tanto salir?",
+    answer:
+      "Las relaciones tóxicas generan un vínculo traumático difícil de romper. El ciclo de maltrato y reconciliación crea una adicción emocional. Es más común de lo que crees.",
+  },
+  {
+    question: "¿Voy a volver a confiar?",
+    answer:
+      "Sí, pero lleva tiempo. La terapia te ayuda a distinguir señales de alerta y a confiar gradualmente en personas que lo merecen.",
+  },
+  {
+    question: "¿Por qué me atraen este tipo de personas?",
+    answer:
+      "Suele estar relacionado con patrones de apego y experiencias tempranas. En terapia trabajamos para cambiar estos patrones.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Superar Relacion Toxica Chillán" },
+];
 
 export default function SuperarRelacionToxicaChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={superar_relacion_toxica_chillanFAQs}
+        serviceType="Superar Relacion Toxica"
+        serviceDescription={"Psicólogo en Chillán para superar relaciones tóxicas. Recupera tu bienestar, autoestima y aprende a construir vínculos saludables."}
       />
       <main
       style={{
@@ -73,6 +68,7 @@ export default function SuperarRelacionToxicaChillanPage() {
         fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={56} height={56} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

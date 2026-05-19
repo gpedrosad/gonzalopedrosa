@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Tratamiento Burnout en Chillán | Síndrome de Agotamiento Crónico",
@@ -21,53 +23,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Tratamiento Burnout en Chillán | Síndrome de Agotamiento Crónico",
-    description:
-      "Tratamiento para síndrome de burnout en Chillán. Agotamiento crónico, estar quemado, cinismo y sensación de ineficacia. Recupera energía y límites.",
+    description: getTwitterDescription("Tratamiento para síndrome de burnout en Chillán. Agotamiento crónico, estar quemado, cinismo y sensación de ineficacia. Recupera energía y límites."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Tengo que renunciar a mi trabajo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No necesariamente. A veces con cambios en cómo trabajas y en límites es suficiente. Otras veces sí es necesario un cambio mayor. Lo evaluamos juntos."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Es lo mismo que estrés laboral?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "El estrés laboral puede llevar al burnout si es crónico. El burnout es un estado más severo de agotamiento total."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuánto tiempo toma recuperarse?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Depende de la severidad. Algunos notan mejoras en semanas, pero una recuperación completa puede tomar meses. Lo importante es no volver al mismo patrón."
-      }
-    }
-  ]
-};
+
+const tratamiento_burnout_chillanFAQs = [
+  {
+    question: "¿Tengo que renunciar a mi trabajo?",
+    answer:
+      "No necesariamente. A veces con cambios en cómo trabajas y en límites es suficiente. Otras veces sí es necesario un cambio mayor. Lo evaluamos juntos.",
+  },
+  {
+    question: "¿Es lo mismo que estrés laboral?",
+    answer:
+      "El estrés laboral puede llevar al burnout si es crónico. El burnout es un estado más severo de agotamiento total.",
+  },
+  {
+    question: "¿Cuánto tiempo toma recuperarse?",
+    answer:
+      "Depende de la severidad. Algunos notan mejoras en semanas, pero una recuperación completa puede tomar meses. Lo importante es no volver al mismo patrón.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Tratamiento Burnout Chillán" },
+];
 
 export default function TratamientoBurnoutChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={tratamiento_burnout_chillanFAQs}
+        serviceType="Tratamiento Burnout"
+        serviceDescription={"Tratamiento para síndrome de burnout en Chillán. Agotamiento crónico, estar quemado, cinismo y sensación de ineficacia. Recupera energía y límites."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={56} height={56} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

@@ -7,6 +7,9 @@ export const alcoholClusterOrder = [
 
 export type AlcoholismPageKey = (typeof alcoholClusterOrder)[number];
 
+/** Página hub del cluster; el resto enlazan aquí en breadcrumb y navegación. */
+export const alcoholClusterHubKey: AlcoholismPageKey = "alcoholismo-chillan";
+
 type QuickFact = {
   title: string;
   description: string;
@@ -55,7 +58,7 @@ export const alcoholismPages: Record<AlcoholismPageKey, AlcoholismPage> = {
     slug: "/alcoholismo-chillan",
     metaTitle: "Alcoholismo en Chillán | Ayuda Psicológica | Gonzalo Pedrosa",
     description:
-      "Señales de alcoholismo en Chillán, opciones de ayuda profesional y terapia online para empezar a cambiar tu relación con el alcohol.",
+      "Alcoholismo en Chillán: señales, ayuda psicológica y terapia online. Orientación inicial y plan de tratamiento con Gonzalo Pedrosa, psicólogo clínico.",
     h1: "Alcoholismo en Chillán: señales, ayuda y primeros pasos para tratarlo",
     shortTitle: "Alcoholismo en Chillán",
     cardDescription:
@@ -189,7 +192,7 @@ export const alcoholismPages: Record<AlcoholismPageKey, AlcoholismPage> = {
     metaTitle:
       "Psicólogo para Alcoholismo en Chillán | Gonzalo Pedrosa",
     description:
-      "Psicólogo para alcoholismo en Chillán. Evaluación clínica, terapia online y acompañamiento para cambiar tu relación con el alcohol.",
+      "Psicólogo para alcoholismo en Chillán: evaluación clínica, terapia cognitivo-conductual y sesiones online. Agenda primera sesión con Gonzalo Pedrosa.",
     h1:
       "Psicólogo para alcoholismo en Chillán: apoyo profesional para cambiar tu relación con el alcohol",
     shortTitle: "Psicólogo alcoholismo Chillán",
@@ -321,7 +324,7 @@ export const alcoholismPages: Record<AlcoholismPageKey, AlcoholismPage> = {
     metaTitle:
       "Tratamiento del Alcoholismo en Chillán | Gonzalo Pedrosa",
     description:
-      "Tratamiento del alcoholismo en Chillán con evaluación, objetivos claros y prevención de recaídas. Agenda terapia online con Gonzalo Pedrosa.",
+      "Tratamiento del alcoholismo en Chillán: evaluación, fases claras y prevención de recaídas. Terapia online con psicólogo clínico Gonzalo Pedrosa.",
     h1:
       "Tratamiento del alcoholismo en Chillán: en qué consiste y cómo se organiza el proceso",
     shortTitle: "Tratamiento alcoholismo Chillán",
@@ -458,7 +461,7 @@ export const alcoholismPages: Record<AlcoholismPageKey, AlcoholismPage> = {
     metaTitle:
       "Terapia para Dejar de Beber en Chillán | Gonzalo Pedrosa",
     description:
-      "Terapia para dejar de beber en Chillán. Ayuda psicológica online para cortar el consumo y sostener cambios reales en el tiempo.",
+      "Terapia para dejar de beber en Chillán: ayuda psicológica online, manejo de craving y plan seguro. Agenda tu primera sesión con Gonzalo Pedrosa.",
     h1:
       "Terapia para dejar de beber en Chillán: ayuda concreta para empezar hoy",
     shortTitle: "Dejar de beber Chillán",

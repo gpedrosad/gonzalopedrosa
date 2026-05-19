@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 import { Button } from "../components/Button";
 
 export const metadata: Metadata = {
@@ -21,50 +23,43 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo para Adultos en Chillán, Chile",
-    description: "Psicólogo para adultos en Chillán, Chile. Atención profesional para ansiedad, depresión, estrés y desarrollo personal. Sesiones presenciales y online.",
+    description: getTwitterDescription("Psicólogo para adultos en Chillán, Chile. Atención profesional para ansiedad, depresión, estrés y desarrollo personal. Sesiones presenciales y online."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Con qué frecuencia son las sesiones?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Generalmente comenzamos con sesiones semanales. A medida que avanza el proceso, la frecuencia puede espaciarse según tus avances."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Puedo elegir entre presencial y online?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, ofrezco ambas modalidades. Puedes elegir la que mejor se adapte e incluso alternarlas. Más info en terapia online."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cómo elegir un buen psicólogo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Es importante sentirte cómodo con tu terapeuta. Lee sobre cómo elegir un psicólogo para orientarte."
-      }
-    }
-  ]
-};
+
+const psicologo_adulto_chillanFAQs = [
+  {
+    question: "¿Con qué frecuencia son las sesiones?",
+    answer:
+      "Generalmente comenzamos con sesiones semanales. A medida que avanza el proceso, la frecuencia puede espaciarse según tus avances.",
+  },
+  {
+    question: "¿Puedo elegir entre presencial y online?",
+    answer:
+      "Sí, ofrezco ambas modalidades. Puedes elegir la que mejor se adapte e incluso alternarlas. Más info en terapia online.",
+  },
+  {
+    question: "¿Cómo elegir un buen psicólogo?",
+    answer:
+      "Es importante sentirte cómodo con tu terapeuta. Lee sobre cómo elegir un psicólogo para orientarte.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Adulto Chillán" },
+];
 
 export default function PsicologoAdultoChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_adulto_chillanFAQs}
+        serviceType="Psicología Adulto"
+        serviceDescription={"Psicólogo para adultos en Chillán, Chile. Atención profesional para ansiedad, depresión, estrés y desarrollo personal. Sesiones presenciales y online."}
       />
       <main
       style={{
@@ -75,6 +70,7 @@ export default function PsicologoAdultoChillanPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <Breadcrumb items={breadcrumbItems} />
       <div
         style={{
           display: "flex",
@@ -350,7 +346,7 @@ export default function PsicologoAdultoChillanPage() {
               Sí, ofrezco ambas modalidades. Puedes elegir la que mejor se
               adapte e incluso alternarlas. Más info en{" "}
               <Link
-                href="/terapia-online"
+                href="/psicologo-online-chillan"
                 style={{ color: "#000", textDecoration: "underline" }}
               >
                 terapia online
@@ -534,9 +530,7 @@ export default function PsicologoAdultoChillanPage() {
               border: "1px solid #eaeaea",
               borderRadius: "9999px",
             }}
-          >
-            Online
-          </Link>
+          >Psicólogo online</Link>
         </div>
       </nav>
     </main>

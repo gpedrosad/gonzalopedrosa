@@ -183,3 +183,4 @@ vite.config.ts.timestamp-*
 .next
 .env
 .env.local
+.secrets/

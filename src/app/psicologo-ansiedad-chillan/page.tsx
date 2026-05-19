@@ -12,16 +12,16 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Psicólogo especializado en ansiedad en Chillán, Chile. Tratamiento con enfoque cognitivo-conductual basado en evidencia. Sesiones presenciales y online.";
+  "Psicólogo por ansiedad en Chillán con TCC: exposición gradual, reestructuración cognitiva y regulación emocional. Presencial u online desde $35.000. Agendá hoy.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Ansiedad en Chillán, Chile | Gonzalo Pedrosa",
+  title: "Psicólogo ansiedad Chillán | TCC presencial y online | Gonzalo Pedrosa",
   description,
   alternates: {
     canonical: "/psicologo-ansiedad-chillan",
   },
   openGraph: {
-    title: "Psicólogo Ansiedad en Chillán, Chile | Gonzalo Pedrosa",
+    title: "Psicólogo ansiedad Chillán | Gonzalo Pedrosa",
     description,
     url: "https://www.gonzalopedrosa.cl/psicologo-ansiedad-chillan",
     type: "website",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo Ansiedad en Chillán",
+    title: "Psicólogo ansiedad Chillán",
     description: getTwitterDescription(
-      "Tratamiento profesional para ansiedad con TCC. Sesiones online y presenciales en Chillán. +7 años de experiencia."
+      "TCC para ansiedad en Chillán u online. Primera sesión $35.000 con boleta Isapre. Reserva en el sitio."
     ),
   },
 };
@@ -162,21 +162,57 @@ export default function PsicologoAnsiedadChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo Ansiedad en Chillán
+        Psicólogo ansiedad en Chillán
       </h1>
 
       <p
         style={{
           fontSize: "1.125rem",
           color: "#666",
-          marginBottom: "3rem",
+          marginBottom: "1.5rem",
           lineHeight: 1.6,
         }}
       >
-        La ansiedad es una respuesta natural, pero cuando se vuelve persistente
-        puede afectar tu calidad de vida. El acompañamiento profesional te ayuda
-        a recuperar el equilibrio.
+        Si buscas psicólogo por ansiedad en Chillán, ofrezco TCC en sesiones de 50 minutos,
+        presencial o{" "}
+        <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+          online
+        </Link>
+        , desde $35.000 con boleta Isapre. Trabajamos exposición gradual y herramientas para el
+        día a día.
       </p>
+
+      <div
+        style={{
+          marginBottom: "2.5rem",
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "0.75rem",
+          alignItems: "center",
+        }}
+      >
+        <Link
+          href="/agendar"
+          style={{
+            display: "inline-flex",
+            padding: "0.75rem 1.25rem",
+            backgroundColor: "#000",
+            color: "#fff",
+            borderRadius: "9999px",
+            textDecoration: "none",
+            fontWeight: 500,
+            fontSize: "0.875rem",
+          }}
+        >
+          Agendar consulta →
+        </Link>
+        <Link
+          href="/psicologo-crisis-de-panico-chillan"
+          style={{ fontSize: "0.875rem", color: "#666", textDecoration: "underline" }}
+        >
+          Crisis de pánico
+        </Link>
+      </div>
 
       {/* Credenciales y experiencia - EEAT */}
       <section
@@ -403,7 +439,7 @@ export default function PsicologoAnsiedadChillanPage() {
             <p style={{ fontWeight: 600, marginBottom: "0.25rem", color: "#000" }}>📍 Presencial en Chillán</p>
             <p style={{ fontSize: "0.875rem", color: "#666" }}>Consulta ubicada en el centro de la ciudad. Ambiente privado y cómodo.</p>
           </div>
-          <Link href="/terapia-online" style={{ textDecoration: "none" }}>
+          <Link href="/psicologo-online-chillan" style={{ textDecoration: "none" }}>
             <div style={{ padding: "1rem", backgroundColor: "#fafafa", borderRadius: "8px", border: "1px solid #eaeaea" }}>
               <p style={{ fontWeight: 600, marginBottom: "0.25rem", color: "#000" }}>💻 Terapia online →</p>
               <p style={{ fontSize: "0.875rem", color: "#666" }}>Por videollamada desde donde estés. Misma efectividad que presencial.</p>
@@ -516,25 +552,39 @@ export default function PsicologoAnsiedadChillanPage() {
         >
           Si la ansiedad está afectando tu día a día, conversemos.
         </p>
-        <a
-          href="https://wa.me/56968257817"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "0.5rem",
-            padding: "0.75rem 1.5rem",
-            backgroundColor: "#fff",
-            color: "#000",
-            borderRadius: "9999px",
-            textDecoration: "none",
-            fontWeight: 500,
-            fontSize: "0.875rem",
-          }}
+        <div
+          style={{ display: "flex", flexDirection: "column", gap: "0.75rem", alignItems: "center" }}
         >
-          Agendar por WhatsApp →
-        </a>
+          <Link
+            href="/agendar"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              padding: "0.75rem 1.5rem",
+              backgroundColor: "#fff",
+              color: "#000",
+              borderRadius: "9999px",
+              textDecoration: "none",
+              fontWeight: 500,
+              fontSize: "0.875rem",
+            }}
+          >
+            Agendar en el sitio →
+          </Link>
+          <a
+            href="https://wa.me/56968257817"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "rgba(255,255,255,0.9)",
+              fontSize: "0.875rem",
+              textDecoration: "underline",
+            }}
+          >
+            O escribir por WhatsApp
+          </a>
+        </div>
       </section>
 
       <nav
@@ -561,7 +611,7 @@ export default function PsicologoAnsiedadChillanPage() {
             { label: "Estrés laboral", href: "/psicologo-estres-laboral-chillan" },
             { label: "Fobia social", href: "/psicologo-fobia-social-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
-            { label: "Online", href: "/terapia-online" },
+            { label: "Online", href: "/psicologo-online-chillan" },
           ].map((item, i) => (
             <Link
               key={i}

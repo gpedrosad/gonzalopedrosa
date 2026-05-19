@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo Perfeccionismo y Autoexigencia en Chillán | Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Perfeccionismo y Autoexigencia en Chillán",
-    description: "Psicólogo especializado en perfeccionismo y autoexigencia en Chillán. Terapia para soltar el control excesivo y vivir con más flexibilidad.",
+    description: getTwitterDescription("Psicólogo especializado en perfeccionismo y autoexigencia en Chillán. Terapia para soltar el control excesivo y vivir con más flexibilidad."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Voy a dejar de ser exigente?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No se trata de conformarte con menos, sino de exigirte de forma realista. Puedes mantener altos estándares sin que te destruyan."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿El perfeccionismo tiene que ver con la ansiedad?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, están muy relacionados. El perfeccionismo suele ser una estrategia para controlar la ansiedad. Trabajamos ambos en terapia."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Por qué me cuesta tanto cometer errores?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Generalmente hay un miedo profundo al rechazo o a no ser suficiente. Exploramos de dónde viene y trabajamos para cambiar esa relación con el error."
-      }
-    }
-  ]
-};
+
+const psicologo_perfeccionismo_autoexigencia_chillanFAQs = [
+  {
+    question: "¿Voy a dejar de ser exigente?",
+    answer:
+      "No se trata de conformarte con menos, sino de exigirte de forma realista. Puedes mantener altos estándares sin que te destruyan.",
+  },
+  {
+    question: "¿El perfeccionismo tiene que ver con la ansiedad?",
+    answer:
+      "Sí, están muy relacionados. El perfeccionismo suele ser una estrategia para controlar la ansiedad. Trabajamos ambos en terapia.",
+  },
+  {
+    question: "¿Por qué me cuesta tanto cometer errores?",
+    answer:
+      "Generalmente hay un miedo profundo al rechazo o a no ser suficiente. Exploramos de dónde viene y trabajamos para cambiar esa relación con el error.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Perfeccionismo Autoexigencia Chillán" },
+];
 
 export default function PsicologoPerfeccionismoChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_perfeccionismo_autoexigencia_chillanFAQs}
+        serviceType="Psicología Perfeccionismo Autoexigencia"
+        serviceDescription={"Psicólogo especializado en perfeccionismo y autoexigencia en Chillán. Terapia para soltar el control excesivo y vivir con más flexibilidad."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={56} height={56} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

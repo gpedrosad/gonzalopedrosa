@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo para Estudiantes en Chillán | Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo para Estudiantes en Chillán",
-    description: "Psicólogo para estudiantes universitarios y de enseñanza media en Chillán. Apoyo en ansiedad, estrés académico, procrastinación y orientación vocacion",
+    description: getTwitterDescription("Psicólogo para estudiantes universitarios y de enseñanza media en Chillán. Apoyo en ansiedad, estrés académico, procrastinación y orientación vocacion"),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Mis papás se van a enterar de lo que hablo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Si eres mayor de edad, todo es confidencial. Si eres menor, hablamos sobre qué información compartir con tus padres."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cómo pago si no tengo ingresos propios?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Muchos estudiantes vienen con apoyo de sus familias. También emito boleta para reembolso Isapre si tienes cobertura."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Es normal sentirse así?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Es más común de lo que crees. Muchos estudiantes pasan por momentos difíciles. Que sea común no significa que tengas que aguantarlo solo/a."
-      }
-    }
-  ]
-};
+
+const psicologo_estudiantes_chillanFAQs = [
+  {
+    question: "¿Mis papás se van a enterar de lo que hablo?",
+    answer:
+      "No. Si eres mayor de edad, todo es confidencial. Si eres menor, hablamos sobre qué información compartir con tus padres.",
+  },
+  {
+    question: "¿Cómo pago si no tengo ingresos propios?",
+    answer:
+      "Muchos estudiantes vienen con apoyo de sus familias. También emito boleta para reembolso Isapre si tienes cobertura.",
+  },
+  {
+    question: "¿Es normal sentirse así?",
+    answer:
+      "Es más común de lo que crees. Muchos estudiantes pasan por momentos difíciles. Que sea común no significa que tengas que aguantarlo solo/a.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Estudiantes Chillán" },
+];
 
 export default function PsicologoEstudiantesChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_estudiantes_chillanFAQs}
+        serviceType="Psicología Estudiantes"
+        serviceDescription={"Psicólogo para estudiantes universitarios y de enseñanza media en Chillán. Apoyo en ansiedad, estrés académico, procrastinación y orientación vocacional."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

@@ -1,20 +1,50 @@
 #!/usr/bin/env node
 
+import { readFileSync } from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
 const DEFAULT_BASE_URL = "https://www.gonzalopedrosa.cl";
 const REDIRECT_CODES = new Set([301, 302, 307, 308]);
 const MAX_REDIRECT_HOPS = 5;
+
+const projectRoot = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+const organicRoutesPath = path.join(projectRoot, "src/lib/organic-routes.ts");
+
+const loadOrganicRoutes = () => {
+  const source = readFileSync(organicRoutesPath, "utf8");
+  const routes = [...source.matchAll(/route:\s*"([^"]+)"/g)].map((match) => match[1]);
+
+  if (routes.length === 0) {
+    throw new Error(`No se encontraron rutas en ${organicRoutesPath}`);
+  }
+
+  return routes;
+};
+
+const loadExcludedPrefixes = () => {
+  const source = readFileSync(organicRoutesPath, "utf8");
+  const blockMatch = source.match(
+    /ORGANIC_EXCLUDED_PREFIXES\s*=\s*\[([\s\S]*?)\]\s*as const/,
+  );
+
+  if (!blockMatch?.[1]) {
+    return ["/ads/", "/interno/", "/links/", "/sitelink/"];
+  }
+
+  return [...blockMatch[1].matchAll(/"([^"]+)"/g)].map((match) => match[1]);
+};
 
 const baseUrl = new URL(process.env.SEO_AUDIT_BASE_URL ?? DEFAULT_BASE_URL);
 const expectedHost = baseUrl.host;
 
 const routes = (
-  process.env.SEO_AUDIT_ROUTES ??
-  "/,/agendar,/psicologo-ansiedad-chillan,/emdr-autoadministrado,/emdr-autoadministrado/ejercicio"
-)
-  .split(",")
-  .map((route) => route.trim())
-  .filter(Boolean);
+  process.env.SEO_AUDIT_ROUTES?.split(",")
+    .map((route) => route.trim())
+    .filter(Boolean) ?? loadOrganicRoutes()
+);
 
+const excludedPrefixes = loadExcludedPrefixes();
 const errors = [];
 
 const normalizeCanonicalPath = (pathname) => {
@@ -71,6 +101,10 @@ const ensureCanonicalForRoute = async (route) => {
 
   if (result.hops.length > 1) {
     errors.push(`✗ ${route}: más de 1 salto (${result.hops.length})`);
+  }
+
+  if (finalUrl.host !== expectedHost) {
+    errors.push(`✗ ${route}: host final inválido (${finalUrl.host})`);
   }
 
   if (result.response.status !== 200) {
@@ -146,23 +180,82 @@ const checkSitemap = async () => {
   const invalidLoc = locMatches.find((loc) => {
     const url = new URL(loc);
     const normalizedPath = normalizeCanonicalPath(url.pathname);
+    const excluded = excludedPrefixes.some((prefix) => {
+      const segment = prefix.endsWith("/") ? prefix.slice(0, -1) : prefix;
+      return (
+        normalizedPath === segment ||
+        normalizedPath.startsWith(prefix) ||
+        normalizedPath.startsWith(`${segment}/`)
+      );
+    });
     return (
       url.protocol !== "https:" ||
       url.host !== expectedHost ||
-      normalizedPath !== url.pathname
+      normalizedPath !== url.pathname ||
+      excluded
     );
   });
 
   if (invalidLoc) {
-    errors.push(`✗ sitemap.xml contiene URL no canónica: ${invalidLoc}`);
+    errors.push(`✗ sitemap.xml contiene URL no canónica o excluida: ${invalidLoc}`);
     return;
   }
 
-  console.log(`✓ sitemap.xml: status 200 y ${locMatches.length} URLs canónicas`);
+  const sitemapPaths = locMatches.map((loc) => normalizeCanonicalPath(new URL(loc).pathname));
+  const expectedPaths = routes.map((route) => normalizeCanonicalPath(route));
+
+  for (const excludedPrefix of excludedPrefixes) {
+    const segment = excludedPrefix.endsWith("/")
+      ? excludedPrefix.slice(0, -1)
+      : excludedPrefix;
+    const excludedUrl = sitemapPaths.find(
+      (pathname) =>
+        pathname === segment ||
+        pathname.startsWith(excludedPrefix) ||
+        pathname.startsWith(`${segment}/`),
+    );
+    if (excludedUrl) {
+      errors.push(`✗ sitemap.xml incluye ruta excluida ${excludedUrl}`);
+    }
+  }
+
+  const missingFromSitemap = expectedPaths.filter((route) => !sitemapPaths.includes(route));
+  if (missingFromSitemap.length > 0) {
+    errors.push(
+      `✗ sitemap.xml no incluye ${missingFromSitemap.length} rutas orgánicas: ${missingFromSitemap.slice(0, 5).join(", ")}${missingFromSitemap.length > 5 ? "…" : ""}`,
+    );
+  }
+
+  const extraInSitemap = sitemapPaths.filter((route) => !expectedPaths.includes(route));
+  if (extraInSitemap.length > 0) {
+    errors.push(
+      `✗ sitemap.xml incluye ${extraInSitemap.length} rutas fuera del inventario orgánico: ${extraInSitemap.slice(0, 5).join(", ")}${extraInSitemap.length > 5 ? "…" : ""}`,
+    );
+  }
+
+  if (
+    !invalidLoc &&
+    missingFromSitemap.length === 0 &&
+    extraInSitemap.length === 0 &&
+    !excludedPrefixes.some((prefix) => {
+      const segment = prefix.endsWith("/") ? prefix.slice(0, -1) : prefix;
+      return sitemapPaths.some(
+        (route) =>
+          route === segment ||
+          route.startsWith(prefix) ||
+          route.startsWith(`${segment}/`),
+      );
+    })
+  ) {
+    console.log(
+      `✓ sitemap.xml: status 200, ${locMatches.length} URLs canónicas y alineadas con inventario orgánico`,
+    );
+  }
 };
 
 const main = async () => {
   console.log(`Auditando SEO técnico en ${baseUrl.toString()}`);
+  console.log(`Inventario orgánico: ${routes.length} rutas`);
 
   for (const route of routes) {
     await ensureCanonicalForRoute(route);
@@ -180,8 +273,15 @@ const main = async () => {
     return;
   }
 
-  console.log("\nTodo bien: redirects, canonical, robots y sitemap están consistentes.");
+  console.log(
+    `\nTodo bien: ${routes.length} rutas orgánicas, redirects, canonical, robots y sitemap están consistentes.`,
+  );
 };
+
+if (process.argv.includes("--print-routes")) {
+  console.log(routes.join(","));
+  process.exit(0);
+}
 
 main().catch((error) => {
   console.error(`Error ejecutando auditoría: ${error instanceof Error ? error.message : String(error)}`);

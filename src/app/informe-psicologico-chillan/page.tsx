@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Informe Psicológico en Chillán | Psicólogo Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Informe Psicológico en Chillán | Psicólogo Gonzalo Pedrosa",
-    description: "Informes psicológicos profesionales en Chillán. Evaluación para cirugías, trámites legales, laborales y otros fines. Entrega rápida.",
+    description: getTwitterDescription("Informes psicológicos profesionales en Chillán. Evaluación para cirugías, trámites legales, laborales y otros fines. Entrega rápida."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cuánto cuesta un informe?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Depende del tipo y complejidad. Contáctame con los detalles de lo que necesitas y te doy un presupuesto exacto."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Lo puedo hacer online?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Algunas evaluaciones sí, otras requieren presencialidad. Depende del propósito del informe y sus requerimientos."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿El informe tiene validez legal?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, es un documento profesional formal con firma y timbre de psicólogo titulado. Válido para los fines que lo requieras."
-      }
-    }
-  ]
-};
+
+const informe_psicologico_chillanFAQs = [
+  {
+    question: "¿Cuánto cuesta un informe?",
+    answer:
+      "Depende del tipo y complejidad. Contáctame con los detalles de lo que necesitas y te doy un presupuesto exacto.",
+  },
+  {
+    question: "¿Lo puedo hacer online?",
+    answer:
+      "Algunas evaluaciones sí, otras requieren presencialidad. Depende del propósito del informe y sus requerimientos.",
+  },
+  {
+    question: "¿El informe tiene validez legal?",
+    answer:
+      "Sí, es un documento profesional formal con firma y timbre de psicólogo titulado. Válido para los fines que lo requieras.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Informe Psicologico Chillán" },
+];
 
 export default function InformePsicologicoChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={informe_psicologico_chillanFAQs}
+        serviceType="Informe Psicologico"
+        serviceDescription={"Informes psicológicos profesionales en Chillán. Evaluación para cirugías, trámites legales, laborales y otros fines. Entrega rápida."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

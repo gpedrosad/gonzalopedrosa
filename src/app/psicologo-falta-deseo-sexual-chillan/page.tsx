@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo Falta de Deseo Sexual en Chillán | Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Falta de Deseo Sexual en Chillán",
-    description: "Psicólogo para problemas de deseo sexual en Chillán. Terapia confidencial para abordar la disminución del deseo y mejorar tu vida íntima.",
+    description: getTwitterDescription("Psicólogo para problemas de deseo sexual en Chillán. Terapia confidencial para abordar la disminución del deseo y mejorar tu vida íntima."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Debería descartar causas médicas primero?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Es recomendable. Factores hormonales o medicamentos pueden influir. Si ya lo descartaste o quieres explorar lo psicológico, podemos comenzar."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Tiene que venir mi pareja?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No necesariamente. Puedes trabajarlo de forma individual. Si más adelante tiene sentido incluir a tu pareja, lo evaluamos. También ofrezco terapia de pareja."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Es normal que esto pase?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, es muy común en distintas etapas de la vida. No significa que algo esté mal contigo. Con trabajo adecuado, muchas personas recuperan una vida sexual satisfactoria."
-      }
-    }
-  ]
-};
+
+const psicologo_falta_deseo_sexual_chillanFAQs = [
+  {
+    question: "¿Debería descartar causas médicas primero?",
+    answer:
+      "Es recomendable. Factores hormonales o medicamentos pueden influir. Si ya lo descartaste o quieres explorar lo psicológico, podemos comenzar.",
+  },
+  {
+    question: "¿Tiene que venir mi pareja?",
+    answer:
+      "No necesariamente. Puedes trabajarlo de forma individual. Si más adelante tiene sentido incluir a tu pareja, lo evaluamos. También ofrezco terapia de pareja.",
+  },
+  {
+    question: "¿Es normal que esto pase?",
+    answer:
+      "Sí, es muy común en distintas etapas de la vida. No significa que algo esté mal contigo. Con trabajo adecuado, muchas personas recuperan una vida sexual satisfactoria.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Falta Deseo Sexual Chillán" },
+];
 
 export default function PsicologoFaltaDeseoSexualChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_falta_deseo_sexual_chillanFAQs}
+        serviceType="Psicología Falta Deseo Sexual"
+        serviceDescription={"Psicólogo para problemas de deseo sexual en Chillán. Terapia confidencial para abordar la disminución del deseo y mejorar tu vida íntima."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

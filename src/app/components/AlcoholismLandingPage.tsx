@@ -3,139 +3,72 @@ import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 
+import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { WhatsAppButton } from "@/app/components/WhatsAppButton";
 import {
   alcoholismPages,
   alcoholClusterOrder,
+  alcoholClusterHubKey,
   type AlcoholismPageKey,
 } from "@/lib/alcoholism-pages";
-import { getTwitterDescription } from "@/lib/schemas";
-import { CANONICAL_ORIGIN } from "@/lib/site-config";
+import {
+  localBusinessSchema,
+  getBreadcrumbSchema,
+  getServiceSchema,
+  getFAQSchema,
+  getTwitterDescription,
+} from "@/lib/schemas";
+import { toCanonicalUrl } from "@/lib/site-config";
 
-const BUSINESS_NAME = "Gonzalo Pedrosa - Psicólogo";
-const BUSINESS_PHONE = "+56968257817";
-const BUSINESS_IMAGE = `${CANONICAL_ORIGIN}/yo.png`;
+const TRUST_ITEMS = [
+  "Psicólogo titulado con enfoque cognitivo-conductual",
+  "Terapia online para adultos desde Chillán y todo Chile",
+  "$35.000 por sesión de 50 minutos · Boleta para reembolso Isapre",
+  "Respuesta por WhatsApp en menos de 24 horas",
+] as const;
 
 const buildWhatsAppHref = (message: string) =>
   `https://wa.me/56968257817?text=${encodeURIComponent(message)}`;
 
-const buildFaqSchema = (
-  faqs: Array<{ question: string; answer: string }>
-) => ({
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-});
-
-const buildBreadcrumbSchema = (pageKey: AlcoholismPageKey) => {
+const getBreadcrumbItems = (pageKey: AlcoholismPageKey) => {
   const page = alcoholismPages[pageKey];
+  const hub = alcoholismPages[alcoholClusterHubKey];
 
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Inicio",
-        item: CANONICAL_ORIGIN,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: page.shortTitle,
-        item: `${CANONICAL_ORIGIN}${page.slug}`,
-      },
-    ],
-  };
+  if (pageKey === alcoholClusterHubKey) {
+    return [
+      { label: "Inicio", href: "/" },
+      { label: page.shortTitle },
+    ];
+  }
+
+  return [
+    { label: "Inicio", href: "/" },
+    { label: hub.shortTitle, href: hub.slug },
+    { label: page.shortTitle },
+  ];
 };
 
-const buildMedicalBusinessSchema = (pageKey: AlcoholismPageKey) => {
-  const page = alcoholismPages[pageKey];
-  const pageUrl = `${CANONICAL_ORIGIN}${page.slug}`;
+const getClusterNavPages = (pageKey: AlcoholismPageKey) => {
+  const hub = alcoholismPages[alcoholClusterHubKey];
+  const siblings = alcoholClusterOrder
+    .filter((key) => key !== pageKey)
+    .map((key) => alcoholismPages[key]);
 
-  return {
-    "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    "@id": `${pageUrl}#medical-business`,
-    name: BUSINESS_NAME,
-    url: pageUrl,
-    image: BUSINESS_IMAGE,
-    description: page.description,
-    telephone: BUSINESS_PHONE,
-    priceRange: "$35.000 CLP",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Chillán",
-      addressRegion: "Región de Ñuble",
-      addressCountry: "CL",
-    },
-    areaServed: {
-      "@type": "City",
-      name: "Chillán",
-    },
-    availableService: {
-      "@type": "Service",
-      name: page.serviceType,
-      description: page.description,
-      areaServed: {
-        "@type": "City",
-        name: "Chillán",
-      },
-    },
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "09:00",
-        closes: "19:00",
-      },
-    ],
-    sameAs: ["https://wa.me/56968257817"],
-  };
-};
+  if (pageKey === alcoholClusterHubKey) {
+    return siblings;
+  }
 
-const buildServiceSchema = (pageKey: AlcoholismPageKey) => {
-  const page = alcoholismPages[pageKey];
-
-  return {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: page.serviceType,
-    serviceType: page.serviceType,
-    description: page.description,
-    areaServed: {
-      "@type": "City",
-      name: "Chillán",
-    },
-    provider: {
-      "@type": "Person",
-      name: "Gonzalo Pedrosa",
-      jobTitle: "Psicólogo Clínico",
-      url: CANONICAL_ORIGIN,
-    },
-    offers: {
-      "@type": "Offer",
-      price: "35000",
-      priceCurrency: "CLP",
-      availability: "https://schema.org/InStock",
-      url: `${CANONICAL_ORIGIN}${page.slug}`,
-    },
-  };
+  return [
+    hub,
+    ...siblings.filter((item) => item.slug !== hub.slug),
+  ];
 };
 
 export function getAlcoholismPageMetadata(
   pageKey: AlcoholismPageKey
 ): Metadata {
   const page = alcoholismPages[pageKey];
-  const pageUrl = `${CANONICAL_ORIGIN}${page.slug}`;
+  const pageUrl = toCanonicalUrl(page.slug);
 
   return {
     title: page.metaTitle,
@@ -173,22 +106,25 @@ export function AlcoholismLandingPage({
   pageKey: AlcoholismPageKey;
 }) {
   const page = alcoholismPages[pageKey];
-  const relatedPages = alcoholClusterOrder
-    .filter((candidateKey) => candidateKey !== pageKey)
-    .map((candidateKey) => alcoholismPages[candidateKey]);
-  const faqSchema = buildFaqSchema(page.faqs);
-  const breadcrumbSchema = buildBreadcrumbSchema(pageKey);
-  const medicalBusinessSchema = buildMedicalBusinessSchema(pageKey);
-  const serviceSchema = buildServiceSchema(pageKey);
+  const breadcrumbItems = getBreadcrumbItems(pageKey);
+  const clusterNavPages = getClusterNavPages(pageKey);
+  const faqSchema = getFAQSchema(page.faqs);
+  const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
+  const serviceSchema = getServiceSchema({
+    serviceType: page.serviceType,
+    description: page.description,
+    areaServed: "Chillán",
+  });
   const whatsappHref = buildWhatsAppHref(page.whatsappMessage);
+  const isHub = pageKey === alcoholClusterHubKey;
 
   return (
     <>
       <Script
-        id={`${pageKey}-medical-business`}
+        id={`${pageKey}-local-business`}
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(medicalBusinessSchema),
+          __html: JSON.stringify(localBusinessSchema),
         }}
       />
       <Script
@@ -210,18 +146,9 @@ export function AlcoholismLandingPage({
       <main className="min-h-screen bg-white">
         <section className="border-b border-stone-200 bg-[radial-gradient(circle_at_top,_rgba(245,245,244,0.95),_white_60%)]">
           <div className="mx-auto max-w-4xl px-4 pb-10 pt-8 md:pb-14 md:pt-14">
-            <nav
-              aria-label="Breadcrumb"
-              className="mb-6 flex flex-wrap items-center gap-2 text-sm text-stone-500"
-            >
-              <Link href="/" className="transition hover:text-stone-900">
-                Inicio
-              </Link>
-              <span aria-hidden="true">/</span>
-              <span className="font-medium text-stone-900">{page.shortTitle}</span>
-            </nav>
+            <Breadcrumb items={breadcrumbItems} />
 
-            <div className="mb-8 flex items-center gap-4 rounded-2xl border border-stone-200 bg-white/90 p-4 shadow-sm">
+            <div className="mb-6 flex items-center gap-4 rounded-2xl border border-stone-200 bg-white/90 p-4 shadow-sm">
               <Image
                 src="/yo.png"
                 alt="Gonzalo Pedrosa - Psicólogo"
@@ -262,6 +189,33 @@ export function AlcoholismLandingPage({
                 </span>
               ))}
             </div>
+
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/agendar"
+                className="inline-flex items-center justify-center rounded-full bg-stone-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-stone-800"
+              >
+                Agendar primera sesión
+              </Link>
+              <WhatsAppButton
+                href={whatsappHref}
+                className="bg-[#25D366] font-semibold text-white shadow-md hover:bg-[#20bd5a]"
+              >
+                Escribir por WhatsApp
+              </WhatsAppButton>
+            </div>
+
+            <ul className="mt-8 grid gap-2 rounded-2xl border border-stone-200 bg-white/90 p-5 md:grid-cols-2">
+              {TRUST_ITEMS.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-2 text-sm leading-6 text-stone-700"
+                >
+                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-emerald-600" />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
@@ -287,7 +241,9 @@ export function AlcoholismLandingPage({
           <section
             key={section.title}
             className={
-              index % 2 === 0 ? "bg-white px-4 py-8 md:py-12" : "bg-stone-50 px-4 py-8 md:py-12"
+              index % 2 === 0
+                ? "bg-white px-4 py-8 md:py-12"
+                : "bg-stone-50 px-4 py-8 md:py-12"
             }
           >
             <div className="mx-auto max-w-3xl">
@@ -324,7 +280,13 @@ export function AlcoholismLandingPage({
               {page.processTitle}
             </h2>
 
-            <div className="grid gap-4 md:grid-cols-3">
+            <div
+              className={`grid gap-4 ${
+                page.processSteps.length === 4
+                  ? "md:grid-cols-2 lg:grid-cols-4"
+                  : "md:grid-cols-3"
+              }`}
+            >
               {page.processSteps.map((step, index) => (
                 <article
                   key={step.title}
@@ -350,26 +312,26 @@ export function AlcoholismLandingPage({
             <div className="mb-6 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
               <div>
                 <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
-                  Enlaces internos
+                  {isHub ? "Profundiza por intención" : "Guía del cluster"}
                 </p>
                 <h2 className="text-2xl font-bold tracking-tight text-stone-900">
-                  Otras páginas sobre alcoholismo en Chillán
+                  {isHub
+                    ? "Páginas del cluster alcoholismo en Chillán"
+                    : "Más información sobre alcoholismo en Chillán"}
                 </h2>
               </div>
-              <Link
-                href="/terapia-online"
-                className="text-sm font-medium text-stone-700 underline decoration-stone-300 underline-offset-4 transition hover:text-stone-900"
-              >
-                Ver terapia online
-              </Link>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-3">
-              {relatedPages.map((relatedPage) => (
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {clusterNavPages.map((relatedPage) => (
                 <Link
                   key={relatedPage.slug}
                   href={relatedPage.slug}
-                  className="rounded-2xl border border-stone-200 bg-white p-5 transition hover:-translate-y-0.5 hover:border-stone-300 hover:shadow-sm"
+                  className={`rounded-2xl border bg-white p-5 transition hover:-translate-y-0.5 hover:border-stone-300 hover:shadow-sm ${
+                    relatedPage.slug === alcoholismPages[alcoholClusterHubKey].slug
+                      ? "border-emerald-200 ring-1 ring-emerald-100"
+                      : "border-stone-200"
+                  }`}
                 >
                   <h3 className="mb-2 text-lg font-semibold text-stone-900">
                     {relatedPage.shortTitle}
@@ -379,6 +341,33 @@ export function AlcoholismLandingPage({
                   </p>
                 </Link>
               ))}
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-4 border-t border-stone-200 pt-6 text-sm">
+              <Link
+                href="/psicologo-online-chillan"
+                className="font-medium text-stone-800 underline decoration-stone-300 underline-offset-4 transition hover:text-stone-950"
+              >
+                Psicólogo online en Chillán
+              </Link>
+              <Link
+                href="/terapia-online"
+                className="font-medium text-stone-700 underline decoration-stone-300 underline-offset-4 transition hover:text-stone-900"
+              >
+                Cómo funciona la terapia online
+              </Link>
+              <Link
+                href="/agendar"
+                className="font-medium text-stone-700 underline decoration-stone-300 underline-offset-4 transition hover:text-stone-900"
+              >
+                Agendar sesión
+              </Link>
+              <Link
+                href="/perfil"
+                className="font-medium text-stone-700 underline decoration-stone-300 underline-offset-4 transition hover:text-stone-900"
+              >
+                Sobre el psicólogo
+              </Link>
             </div>
           </div>
         </section>
@@ -410,7 +399,7 @@ export function AlcoholismLandingPage({
         <section className="bg-stone-950 px-4 py-12 md:py-16">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-300">
-              Llamado a la acción
+              Próximo paso
             </p>
             <h2 className="mb-4 text-2xl font-bold tracking-tight text-white md:text-3xl">
               {page.ctaTitle}
@@ -420,18 +409,18 @@ export function AlcoholismLandingPage({
             </p>
 
             <div className="flex flex-col justify-center gap-3 sm:flex-row">
+              <Link
+                href="/agendar"
+                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-stone-900 transition hover:bg-stone-100"
+              >
+                Agendar primera sesión
+              </Link>
               <WhatsAppButton
                 href={whatsappHref}
                 className="bg-[#25D366] font-semibold text-white shadow-lg hover:bg-[#20bd5a]"
               >
-                Agendar terapia online
+                Escribir por WhatsApp
               </WhatsAppButton>
-              <Link
-                href="/agendar"
-                className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-white transition hover:border-white/30 hover:bg-white/5"
-              >
-                Ir a agenda online
-              </Link>
             </div>
 
             <p className="mt-4 text-sm text-stone-500">

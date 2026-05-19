@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo Identidad de Género en Chillán | Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Identidad de Género en Chillán",
-    description: "Psicólogo afirmativo para identidad de género en Chillán. Acompañamiento profesional y respetuoso en tu proceso de exploración o transición.",
+    description: getTwitterDescription("Psicólogo afirmativo para identidad de género en Chillán. Acompañamiento profesional y respetuoso en tu proceso de exploración o transición."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Me vas a tratar de convencer de algo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Mi rol es acompañarte en tu proceso de exploración. Las decisiones sobre tu identidad y tu cuerpo son tuyas. No tengo una agenda."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Puedes emitir informes para tratamiento hormonal?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí. Si estás en proceso de transición y necesitas un informe psicológico para tratamiento hormonal o cirugía, puedo evaluarte y emitirlo si corresponde."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Atiendes a menores de edad?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Mi trabajo es con adultos. Si tienes un hijo/a menor que necesita apoyo, puedo derivarte a un colega especialista en infanto-juvenil."
-      }
-    }
-  ]
-};
+
+const psicologo_identidad_genero_chillanFAQs = [
+  {
+    question: "¿Me vas a tratar de convencer de algo?",
+    answer:
+      "No. Mi rol es acompañarte en tu proceso de exploración. Las decisiones sobre tu identidad y tu cuerpo son tuyas. No tengo una agenda.",
+  },
+  {
+    question: "¿Puedes emitir informes para tratamiento hormonal?",
+    answer:
+      "Sí. Si estás en proceso de transición y necesitas un informe psicológico para tratamiento hormonal o cirugía, puedo evaluarte y emitirlo si corresponde.",
+  },
+  {
+    question: "¿Atiendes a menores de edad?",
+    answer:
+      "Mi trabajo es con adultos. Si tienes un hijo/a menor que necesita apoyo, puedo derivarte a un colega especialista en infanto-juvenil.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Identidad Genero Chillán" },
+];
 
 export default function PsicologoIdentidadGeneroChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_identidad_genero_chillanFAQs}
+        serviceType="Psicología Identidad Genero"
+        serviceDescription={"Psicólogo afirmativo para identidad de género en Chillán. Acompañamiento profesional y respetuoso en tu proceso de exploración o transición."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

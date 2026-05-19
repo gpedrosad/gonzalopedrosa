@@ -1,30 +1,101 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import {
+  localBusinessSchema,
+  getBreadcrumbSchema,
+  getServiceSchema,
+  getFAQSchema,
+  getTwitterDescription,
+} from "@/lib/schemas";
+
+const description =
+  "Terapia de pareja en Chillán: espacio neutral para mejorar comunicación, celos y crisis. Presencial o videollamada con psicólogo clínico. Agendá tu primera sesión hoy.";
 
 export const metadata: Metadata = {
-  title: "Terapia de Pareja en Chillán, Chile | Gonzalo Pedrosa",
-  description:
-    "Terapia de pareja en Chillán con psicólogo especializado. Mejora la comunicación, resuelve conflictos y fortalece tu relación. Sesiones presenciales y online.",
+  title: "Terapia de pareja Chillán | Comunicación y conflictos | Gonzalo Pedrosa",
+  description,
   alternates: {
     canonical: "/terapia-de-pareja-chillan",
   },
   openGraph: {
-    title: "Terapia de Pareja en Chillán | Gonzalo Pedrosa",
-    description: "Terapia de pareja con psicólogo especializado. Mejora la comunicación y resuelve conflictos.",
+    title: "Terapia de pareja Chillán | Gonzalo Pedrosa",
+    description,
     url: "https://www.gonzalopedrosa.cl/terapia-de-pareja-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terapia de Pareja en Chillán",
-    description: "Mejora la comunicación y fortalece tu relación con terapia de pareja.",
+    title: "Terapia de pareja Chillán",
+    description: getTwitterDescription(
+      "Mejorá la comunicación en pareja en Chillán u online. Primera sesión con psicólogo clínico. Reserva en el sitio."
+    ),
   },
 };
 
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Terapia de pareja Chillán" },
+];
+
+const parejaFAQs = [
+  {
+    question: "¿Deben asistir ambos siempre?",
+    answer:
+      "Lo ideal es que asistan juntos, pero en algunas sesiones puede ser útil trabajar individualmente con cada uno. Lo definimos según las necesidades del proceso.",
+  },
+  {
+    question: "¿Cuánto dura el proceso?",
+    answer:
+      "Depende de la situación de cada pareja. Algunos temas se trabajan en 8-12 sesiones, otros requieren más tiempo. Evaluamos el avance continuamente.",
+  },
+  {
+    question: "¿Puede ser online?",
+    answer:
+      "Sí, la terapia de pareja online funciona bien si están en el mismo lugar con conexión estable. También ofrezco sesiones presenciales en Chillán.",
+  },
+  {
+    question: "¿Y si mi pareja no quiere venir?",
+    answer:
+      "Puedes comenzar solo/a. A veces trabajar individualmente sobre la relación genera cambios que motivan a la otra persona a sumarse después.",
+  },
+];
+
+const faqSchema = getFAQSchema(parejaFAQs);
+const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
+const serviceSchema = getServiceSchema({
+  serviceType: "Terapia de pareja",
+  description:
+    "Acompañamiento psicológico para parejas en Chillán o por videollamada, con foco en comunicación y resolución de conflictos.",
+  areaServed: "Chillán",
+});
+
 export default function TerapiaParejaChillanPage() {
   return (
+    <>
+      <Script
+        id="local-business"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <Script
+        id="breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Script
+        id="service"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
     <main
       style={{
         maxWidth: 640,
@@ -34,19 +105,21 @@ export default function TerapiaParejaChillanPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+        <Breadcrumb items={breadcrumbItems} />
+
       <div
         style={{
           display: "flex",
           alignItems: "center",
           gap: "1rem",
-          marginBottom: "1.5rem",
+          marginBottom: "2rem",
         }}
       >
         <Image
           src="/yo.png"
           alt="Gonzalo Pedrosa - Psicólogo"
-          width={56}
-          height={56}
+          width={64}
+          height={64}
           priority
           style={{
             borderRadius: "9999px",
@@ -66,7 +139,10 @@ export default function TerapiaParejaChillanPage() {
           >
             Chillán, Chile
           </p>
-          <p style={{ fontWeight: 500, color: "#000" }}>Gonzalo Pedrosa</p>
+          <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>Gonzalo Pedrosa</p>
+          <p style={{ fontSize: "0.875rem", color: "#666" }}>
+            Psicólogo Clínico · +7 años · Parejas y familias
+          </p>
         </div>
       </div>
 
@@ -79,21 +155,57 @@ export default function TerapiaParejaChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Terapia de Pareja en Chillán
+        Terapia de pareja en Chillán
       </h1>
 
       <p
         style={{
           fontSize: "1.125rem",
           color: "#666",
-          marginBottom: "3rem",
+          marginBottom: "1.5rem",
           lineHeight: 1.6,
         }}
       >
-        Las relaciones de pareja atraviesan momentos difíciles. La terapia de
-        pareja ofrece un espacio neutral para mejorar la comunicación, resolver
-        conflictos y tomar decisiones juntos sobre el futuro de la relación.
+        La terapia de pareja en Chillán es un espacio neutral con psicólogo clínico para
+        mejorar comunicación, celos y crisis —presencial o{" "}
+        <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+          online
+        </Link>
+        — sin tomar bandos. Si buscan «terapia de pareja Chillán», el primer paso es una
+        sesión de evaluación conjunta.
       </p>
+
+      <div
+        style={{
+          marginBottom: "2.5rem",
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "0.75rem",
+          alignItems: "center",
+        }}
+      >
+        <Link
+          href="/agendar"
+          style={{
+            display: "inline-flex",
+            padding: "0.75rem 1.25rem",
+            backgroundColor: "#000",
+            color: "#fff",
+            borderRadius: "9999px",
+            textDecoration: "none",
+            fontWeight: 500,
+            fontSize: "0.875rem",
+          }}
+        >
+          Agendar terapia de pareja →
+        </Link>
+        <Link
+          href="/consulta-psicologica-precio-chillan"
+          style={{ fontSize: "0.875rem", color: "#666", textDecoration: "underline" }}
+        >
+          Ver precio de sesión
+        </Link>
+      </div>
 
       <section style={{ marginBottom: "3rem" }}>
         <h2
@@ -284,7 +396,7 @@ export default function TerapiaParejaChillanPage() {
             >
               Sí, la{" "}
               <Link
-                href="/terapia-online"
+                href="/psicologo-online-chillan"
                 style={{ color: "#000", textDecoration: "underline" }}
               >
                 terapia online
@@ -348,25 +460,37 @@ export default function TerapiaParejaChillanPage() {
         >
           Agenda una primera sesión para evaluar su situación.
         </p>
-        <a
-          href="https://wa.me/56968257817"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "0.5rem",
-            padding: "0.75rem 1.5rem",
-            backgroundColor: "#fff",
-            color: "#000",
-            borderRadius: "9999px",
-            textDecoration: "none",
-            fontWeight: 500,
-            fontSize: "0.875rem",
-          }}
-        >
-          Agendar sesión →
-        </a>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", alignItems: "center" }}>
+          <Link
+            href="/agendar"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              padding: "0.75rem 1.5rem",
+              backgroundColor: "#fff",
+              color: "#000",
+              borderRadius: "9999px",
+              textDecoration: "none",
+              fontWeight: 500,
+              fontSize: "0.875rem",
+            }}
+          >
+            Agendar en el sitio →
+          </Link>
+          <a
+            href="https://wa.me/56968257817"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "rgba(255,255,255,0.9)",
+              fontSize: "0.875rem",
+              textDecoration: "underline",
+            }}
+          >
+            O escribir por WhatsApp
+          </a>
+        </div>
       </section>
 
       <nav style={{ paddingTop: "2rem", borderTop: "1px solid #eaeaea" }}>
@@ -387,7 +511,7 @@ export default function TerapiaParejaChillanPage() {
             { label: "Celos", href: "/terapia-celos-chillan" },
             { label: "Matrimonial", href: "/psicologo-matrimonial-chillan" },
             { label: "Dependencia emocional", href: "/psicologo-ansiedad-chillan" },
-            { label: "Online", href: "/terapia-online" },
+            { label: "Online", href: "/psicologo-online-chillan" },
             { label: "Precios", href: "/consulta-psicologica-precio-chillan" },
           ].map((item, i) => (
             <Link
@@ -408,6 +532,7 @@ export default function TerapiaParejaChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

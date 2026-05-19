@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Hora Psicólogo Chillán Hoy | Disponibilidad Inmediata",
@@ -20,50 +22,43 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hora Psicólogo Chillán Hoy | Disponibilidad Inmediata",
-    description: "¿Necesitas hora con psicólogo en Chillán hoy? Consulta disponibilidad inmediata. Atención presencial y online. Respuesta rápida por WhatsApp.",
+    description: getTwitterDescription("¿Necesitas hora con psicólogo en Chillán hoy? Consulta disponibilidad inmediata. Atención presencial y online. Respuesta rápida por WhatsApp."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Tienen hora disponible para hoy?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La disponibilidad varía cada día. Escríbeme por WhatsApp y te confirmo en minutos si tengo espacio hoy o cuál es el horario más próximo disponible."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Puedo tener sesión online ahora?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La terapia online permite mayor flexibilidad horaria. Consulta disponibilidad y podemos coordinar una sesión en el día si hay espacio."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Qué hago mientras espero la sesión?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Si sientes ansiedad intensa, intenta respirar lento y profundo. Busca un lugar tranquilo. Habla con alguien de confianza. Recuerda que lo que sientes es temporal y hay ayuda disponible."
-      }
-    }
-  ]
-};
+
+const hora_psicologo_chillan_hoyFAQs = [
+  {
+    question: "¿Tienen hora disponible para hoy?",
+    answer:
+      "La disponibilidad varía cada día. Escríbeme por WhatsApp y te confirmo en minutos si tengo espacio hoy o cuál es el horario más próximo disponible.",
+  },
+  {
+    question: "¿Puedo tener sesión online ahora?",
+    answer:
+      "La terapia online permite mayor flexibilidad horaria. Consulta disponibilidad y podemos coordinar una sesión en el día si hay espacio.",
+  },
+  {
+    question: "¿Qué hago mientras espero la sesión?",
+    answer:
+      "Si sientes ansiedad intensa, intenta respirar lento y profundo. Busca un lugar tranquilo. Habla con alguien de confianza. Recuerda que lo que sientes es temporal y hay ayuda disponible.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Hora Psicólogo Chillan Hoy Chillán" },
+];
 
 export default function HoraPsicologoChillanHoyPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={hora_psicologo_chillan_hoyFAQs}
+        serviceType="Hora Psicólogo Chillan Hoy"
+        serviceDescription={"¿Necesitas hora con psicólogo en Chillán hoy? Consulta disponibilidad inmediata. Atención presencial y online. Respuesta rápida por WhatsApp."}
       />
       <main
       style={{
@@ -74,6 +69,7 @@ export default function HoraPsicologoChillanHoyPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <Breadcrumb items={breadcrumbItems} />
       <div
         style={{
           display: "inline-block",
@@ -486,7 +482,7 @@ export default function HoraPsicologoChillanHoyPage() {
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             { label: "Crisis de pánico", href: "/psicologo-crisis-de-panico-chillan" },
             { label: "Adultos", href: "/psicologo-adulto-chillan" },
-            { label: "Online", href: "/terapia-online" },
+            { label: "Psicólogo online", href: "/psicologo-online-chillan" },
           ].map((item, i) => (
             <Link
               key={i}

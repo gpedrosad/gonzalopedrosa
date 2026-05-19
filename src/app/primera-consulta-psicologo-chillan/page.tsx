@@ -15,7 +15,7 @@ const description =
   "Qué esperar en la primera consulta con psicólogo en Chillán: duración, confidencialidad, qué llevar y cómo agendar. TCC con Gonzalo Pedrosa. Presencial u online.";
 
 export const metadata: Metadata = {
-  title: "Primera consulta con psicólogo en Chillán | Qué esperar | Gonzalo Pedrosa",
+  title: "Primera consulta psicólogo Chillán | Qué esperar | Gonzalo Pedrosa",
   description,
   alternates: {
     canonical: "/primera-consulta-psicologo-chillan",
@@ -175,6 +175,38 @@ export default function PrimeraConsultaPsicologoChillanPage() {
           </Link>
           .
         </p>
+
+        <div
+          style={{
+            marginBottom: "2.5rem",
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "0.75rem",
+            alignItems: "center",
+          }}
+        >
+          <Link
+            href="/agendar"
+            style={{
+              display: "inline-flex",
+              padding: "0.75rem 1.25rem",
+              backgroundColor: "#000",
+              color: "#fff",
+              borderRadius: "9999px",
+              textDecoration: "none",
+              fontWeight: 500,
+              fontSize: "0.875rem",
+            }}
+          >
+            Agendar primera consulta →
+          </Link>
+          <Link
+            href="/consulta-psicologica-precio-chillan"
+            style={{ fontSize: "0.875rem", color: "#666", textDecoration: "underline" }}
+          >
+            Ver precio ($35.000)
+          </Link>
+        </div>
 
         <section style={{ marginBottom: "3rem" }}>
           <h2

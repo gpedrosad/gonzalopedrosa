@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo TDAH Adulto en Chillán | Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo TDAH Adulto en Chillán",
-    description: "Psicólogo especializado en TDAH adulto en Chillán. Evaluación y estrategias para manejar la desatención, impulsividad y mejorar tu productividad.",
+    description: getTwitterDescription("Psicólogo especializado en TDAH adulto en Chillán. Evaluación y estrategias para manejar la desatención, impulsividad y mejorar tu productividad."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Puedo tener TDAH si no me lo diagnosticaron de niño?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí. Muchos adultos descubren su TDAH tarde, especialmente quienes compensaron bien o tienen el tipo predominantemente inatento (sin hiperactividad visible)."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Necesito medicación?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Depende del caso. La medicación la evalúa un psiquiatra. La terapia es complementaria y trabaja estrategias conductuales que son fundamentales con o sin medicación."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Es lo mismo que ser distraído?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. El TDAH es un trastorno neurobiológico que afecta funciones ejecutivas. Todos nos distraemos, pero en el TDAH es un patrón persistente que impacta significativamente la vida."
-      }
-    }
-  ]
-};
+
+const psicologo_tdah_adulto_chillanFAQs = [
+  {
+    question: "¿Puedo tener TDAH si no me lo diagnosticaron de niño?",
+    answer:
+      "Sí. Muchos adultos descubren su TDAH tarde, especialmente quienes compensaron bien o tienen el tipo predominantemente inatento (sin hiperactividad visible).",
+  },
+  {
+    question: "¿Necesito medicación?",
+    answer:
+      "Depende del caso. La medicación la evalúa un psiquiatra. La terapia es complementaria y trabaja estrategias conductuales que son fundamentales con o sin medicación.",
+  },
+  {
+    question: "¿Es lo mismo que ser distraído?",
+    answer:
+      "No. El TDAH es un trastorno neurobiológico que afecta funciones ejecutivas. Todos nos distraemos, pero en el TDAH es un patrón persistente que impacta significativamente la vida.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo TDAH Adulto Chillán" },
+];
 
 export default function PsicologoTdahAdultoChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_tdah_adulto_chillanFAQs}
+        serviceType="Psicología TDAH Adulto"
+        serviceDescription={"Psicólogo especializado en TDAH adulto en Chillán. Evaluación y estrategias para manejar la desatención, impulsividad y mejorar tu productividad."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={56} height={56} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

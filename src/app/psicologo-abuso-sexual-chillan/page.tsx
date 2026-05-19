@@ -2,70 +2,97 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import {
+  localBusinessSchema,
+  getBreadcrumbSchema,
+  getServiceSchema,
+  getFAQSchema,
+  getTwitterDescription,
+} from "@/lib/schemas";
+
+const description =
+  "Psicólogo por trauma de abuso sexual en Chillán: espacio confidencial, a tu ritmo, con EMDR y TCC. Presencial u online. Contacto discreto; agenda en el sitio.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Abuso Sexual en Chillán | Gonzalo Pedrosa",
-  description:
-    "Psicólogo especializado en trauma por abuso sexual en Chillán. Espacio seguro y confidencial para procesar y sanar experiencias traumáticas.",
+  title: "Psicólogo abuso sexual Chillán | Espacio seguro | Gonzalo Pedrosa",
+  description,
   alternates: {
     canonical: "/psicologo-abuso-sexual-chillan",
   },
   openGraph: {
-    title: "Psicólogo Abuso Sexual en Chillán | Gonzalo Pedrosa",
-    description: "Psicólogo especializado en trauma por abuso sexual en Chillán. Espacio seguro y confidencial para procesar y sanar experiencias traumáticas.",
+    title: "Psicólogo abuso sexual Chillán | Gonzalo Pedrosa",
+    description,
     url: "https://www.gonzalopedrosa.cl/psicologo-abuso-sexual-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo Abuso Sexual en Chillán",
-    description: "Psicólogo especializado en trauma por abuso sexual en Chillán. Espacio seguro y confidencial para procesar y sanar experiencias traumáticas.",
+    title: "Psicólogo abuso sexual Chillán",
+    description: getTwitterDescription(
+      "Acompañamiento confidencial por trauma en Chillán u online. EMDR y TCC. Reserva discreta en el sitio."
+    ),
   },
 };
 
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo abuso sexual Chillán" },
+];
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Tengo que contar todo lo que pasó?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Trabajamos a tu ritmo. Puedes compartir lo que te sientas cómodo/a compartiendo. El proceso respeta tus límites."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Aunque haya pasado hace muchos años?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí. El trauma puede afectar durante décadas si no se procesa. Nunca es tarde para buscar ayuda y sanar."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Es realmente confidencial?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "100%. Todo está protegido por secreto profesional. La única excepción es si hay riesgo vital o se trata de un menor en peligro actual."
-      }
-    }
-  ]
-};
+const abusoFAQs = [
+  {
+    question: "¿Tengo que contar todo lo que pasó?",
+    answer:
+      "No. Trabajamos a tu ritmo. Puedes compartir lo que te sientas cómodo/a compartiendo. El proceso respeta tus límites.",
+  },
+  {
+    question: "¿Aunque haya pasado hace muchos años?",
+    answer:
+      "Sí. El trauma puede afectar durante décadas si no se procesa. Nunca es tarde para buscar ayuda y sanar.",
+  },
+  {
+    question: "¿Es realmente confidencial?",
+    answer:
+      "100%. Todo está protegido por secreto profesional. La única excepción es si hay riesgo vital o se trata de un menor en peligro actual.",
+  },
+];
+
+const faqSchema = getFAQSchema(abusoFAQs);
+const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
+const serviceSchema = getServiceSchema({
+  serviceType: "Psicología trauma por abuso sexual",
+  description:
+    "Acompañamiento psicológico confidencial para procesar trauma por abuso sexual en Chillán o por videollamada.",
+  areaServed: "Chillán",
+});
 
 export default function PsicologoAbusoSexualChillanPage() {
   return (
     <>
+      <Script
+        id="local-business"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <Script
+        id="breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Script
+        id="service"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Script
         id="faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+        <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -80,10 +107,36 @@ export default function PsicologoAbusoSexualChillanPage() {
         Psicólogo Abuso Sexual en Chillán
       </h1>
 
-      <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "3rem", lineHeight: 1.6 }}>
-        Sobrevivir a un abuso sexual deja heridas profundas. Sanar es posible,
-        pero requiere un espacio seguro, a tu ritmo, sin presiones ni juicios.
+      <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "1.5rem", lineHeight: 1.6 }}>
+        Si buscas psicólogo por abuso sexual en Chillán, ofrezco un espacio confidencial para procesar
+        el trauma a tu ritmo, con{" "}
+        <Link href="/terapia-emdr-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+          EMDR
+        </Link>{" "}
+        y TCC, presencial u{" "}
+        <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+          online
+        </Link>
+        . No fue tu culpa; no tienes que cargarlo solo/a.
       </p>
+
+      <div style={{ marginBottom: "2.5rem", display: "flex", flexWrap: "wrap", gap: "0.75rem", alignItems: "center" }}>
+        <Link
+          href="/agendar"
+          style={{
+            display: "inline-flex",
+            padding: "0.75rem 1.25rem",
+            backgroundColor: "#000",
+            color: "#fff",
+            borderRadius: "9999px",
+            textDecoration: "none",
+            fontWeight: 500,
+            fontSize: "0.875rem",
+          }}
+        >
+          Agendar consulta confidencial →
+        </Link>
+      </div>
 
       <section style={{ padding: "1.25rem", backgroundColor: "#fef3c7", borderRadius: "12px", marginBottom: "2.5rem", border: "1px solid #fcd34d" }}>
         <p style={{ fontWeight: 600, color: "#92400e", marginBottom: "0.5rem", fontSize: "0.9375rem" }}>⚠️ Si estás en crisis</p>
@@ -181,9 +234,14 @@ export default function PsicologoAbusoSexualChillanPage() {
         <p style={{ color: "rgba(255,255,255,0.7)", marginBottom: "1.5rem", fontSize: "0.9375rem" }}>
           No fue tu culpa. Y no tienes que cargar esto solo/a.
         </p>
-        <a href="https://wa.me/56968257817" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", padding: "0.75rem 1.5rem", backgroundColor: "#fff", color: "#000", borderRadius: "9999px", textDecoration: "none", fontWeight: 500, fontSize: "0.875rem" }}>
-          Contactar →
-        </a>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", alignItems: "center" }}>
+          <Link href="/agendar" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", padding: "0.75rem 1.5rem", backgroundColor: "#fff", color: "#000", borderRadius: "9999px", textDecoration: "none", fontWeight: 500, fontSize: "0.875rem" }}>
+            Agendar en el sitio →
+          </Link>
+          <a href="https://wa.me/56968257817" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,255,255,0.9)", fontSize: "0.875rem", textDecoration: "underline" }}>
+            O escribir por WhatsApp
+          </a>
+        </div>
       </section>
 
       <nav style={{ paddingTop: "2rem", borderTop: "1px solid #eaeaea" }}>

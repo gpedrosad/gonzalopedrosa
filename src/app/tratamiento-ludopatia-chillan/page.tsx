@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Tratamiento Ludopatía en Chillán | Psicólogo Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Tratamiento Ludopatía en Chillán | Psicólogo Gonzalo Pedrosa",
-    description: "Tratamiento para ludopatía y adicción al juego en Chillán. Terapia especializada para recuperar el control y tu bienestar.",
+    description: getTwitterDescription("Tratamiento para ludopatía y adicción al juego en Chillán. Terapia especializada para recuperar el control y tu bienestar."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Es realmente una adicción?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí. La ludopatía está reconocida como un trastorno adictivo. El cerebro responde al juego de forma similar a como lo hace con sustancias adictivas."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Incluye apuestas online y casinos?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí. La ludopatía puede manifestarse en casinos, apuestas deportivas online, tragamonedas, póker, o cualquier forma de juego con dinero."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Puede participar mi familia?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, en muchos casos es útil. La ludopatía afecta a todo el entorno y el apoyo familiar puede ser clave en la recuperación."
-      }
-    }
-  ]
-};
+
+const tratamiento_ludopatia_chillanFAQs = [
+  {
+    question: "¿Es realmente una adicción?",
+    answer:
+      "Sí. La ludopatía está reconocida como un trastorno adictivo. El cerebro responde al juego de forma similar a como lo hace con sustancias adictivas.",
+  },
+  {
+    question: "¿Incluye apuestas online y casinos?",
+    answer:
+      "Sí. La ludopatía puede manifestarse en casinos, apuestas deportivas online, tragamonedas, póker, o cualquier forma de juego con dinero.",
+  },
+  {
+    question: "¿Puede participar mi familia?",
+    answer:
+      "Sí, en muchos casos es útil. La ludopatía afecta a todo el entorno y el apoyo familiar puede ser clave en la recuperación.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Tratamiento Ludopatia Chillán" },
+];
 
 export default function TratamientoLudopatiaChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={tratamiento_ludopatia_chillanFAQs}
+        serviceType="Tratamiento Ludopatia"
+        serviceDescription={"Tratamiento para ludopatía y adicción al juego en Chillán. Terapia especializada para recuperar el control y tu bienestar."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={56} height={56} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

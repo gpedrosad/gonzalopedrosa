@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Tratamiento Insomnio en Chillán | Psicólogo Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Tratamiento Insomnio en Chillán | Psicólogo Gonzalo Pedrosa",
-    description: "Tratamiento psicológico para insomnio en Chillán. Terapia cognitivo-conductual para el insomnio (TCC-I), el tratamiento más efectivo sin medicación.",
+    description: getTwitterDescription("Tratamiento psicológico para insomnio en Chillán. Terapia cognitivo-conductual para el insomnio (TCC-I), el tratamiento más efectivo sin medicación."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cuánto dura el tratamiento?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Generalmente 6-8 sesiones para un protocolo completo de TCC-I. Muchas personas notan mejoras desde las primeras semanas."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Tendré que dejar mis medicamentos para dormir?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Eso se evalúa con tu médico. La TCC-I puede ayudarte a reducir o eliminar la dependencia gradualmente, siempre con supervisión médica."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Y si mi insomnio es por ansiedad?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Es muy común. Trabajamos tanto el insomnio como la ansiedad subyacente, ya que suelen alimentarse mutuamente."
-      }
-    }
-  ]
-};
+
+const tratamiento_insomnio_chillanFAQs = [
+  {
+    question: "¿Cuánto dura el tratamiento?",
+    answer:
+      "Generalmente 6-8 sesiones para un protocolo completo de TCC-I. Muchas personas notan mejoras desde las primeras semanas.",
+  },
+  {
+    question: "¿Tendré que dejar mis medicamentos para dormir?",
+    answer:
+      "Eso se evalúa con tu médico. La TCC-I puede ayudarte a reducir o eliminar la dependencia gradualmente, siempre con supervisión médica.",
+  },
+  {
+    question: "¿Y si mi insomnio es por ansiedad?",
+    answer:
+      "Es muy común. Trabajamos tanto el insomnio como la ansiedad subyacente, ya que suelen alimentarse mutuamente.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Tratamiento Insomnio Chillán" },
+];
 
 export default function TratamientoInsomnioChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={tratamiento_insomnio_chillanFAQs}
+        serviceType="Tratamiento Insomnio"
+        serviceDescription={"Tratamiento psicológico para insomnio en Chillán. Terapia cognitivo-conductual para el insomnio (TCC-I), el tratamiento más efectivo sin medicación."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

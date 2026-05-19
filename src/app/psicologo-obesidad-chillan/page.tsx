@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo Obesidad en Chillán | Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Obesidad en Chillán",
-    description: "Psicólogo especializado en obesidad en Chillán. Tratamiento psicológico para pérdida de peso, alimentación emocional y cambio de hábitos.",
+    description: getTwitterDescription("Psicólogo especializado en obesidad en Chillán. Tratamiento psicológico para pérdida de peso, alimentación emocional y cambio de hábitos."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Por qué no puedo mantener las dietas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Probablemente porque no has trabajado los aspectos emocionales. Si comes por razones emocionales, necesitas otras herramientas además de una dieta."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Trabajas junto con nutricionistas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, cuando es necesario me coordino con nutricionistas para un abordaje integral. La combinación es más efectiva."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿La terapia me hará bajar de peso?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La terapia trabaja los factores psicológicos que dificultan mantener cambios. Combinada con alimentación y actividad física adecuadas, facilita resultados duraderos."
-      }
-    }
-  ]
-};
+
+const psicologo_obesidad_chillanFAQs = [
+  {
+    question: "¿Por qué no puedo mantener las dietas?",
+    answer:
+      "Probablemente porque no has trabajado los aspectos emocionales. Si comes por razones emocionales, necesitas otras herramientas además de una dieta.",
+  },
+  {
+    question: "¿Trabajas junto con nutricionistas?",
+    answer:
+      "Sí, cuando es necesario me coordino con nutricionistas para un abordaje integral. La combinación es más efectiva.",
+  },
+  {
+    question: "¿La terapia me hará bajar de peso?",
+    answer:
+      "La terapia trabaja los factores psicológicos que dificultan mantener cambios. Combinada con alimentación y actividad física adecuadas, facilita resultados duraderos.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Obesidad Chillán" },
+];
 
 export default function PsicologoObesidadChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_obesidad_chillanFAQs}
+        serviceType="Psicología Obesidad"
+        serviceDescription={"Psicólogo especializado en obesidad en Chillán. Tratamiento psicológico para pérdida de peso, alimentación emocional y cambio de hábitos."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

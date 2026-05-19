@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo Fobia Social en Chillán, Chile | Gonzalo Pedrosa",
@@ -20,50 +22,43 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Fobia Social en Chillán, Chile",
-    description: "Psicólogo especializado en fobia social y ansiedad social en Chillán, Chile. Tratamiento con terapia cognitivo-conductual. Sesiones presenciales y onl",
+    description: getTwitterDescription("Psicólogo especializado en fobia social y ansiedad social en Chillán, Chile. Tratamiento con terapia cognitivo-conductual. Sesiones presenciales y onl"),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Es lo mismo que ser tímido?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No exactamente. La timidez es un rasgo de personalidad, mientras que la fobia social es un trastorno de ansiedad que causa malestar significativo e interfiere con la vida cotidiana."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿La fobia social se cura?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Con tratamiento adecuado, muchas personas logran superar la fobia social o reducir significativamente sus síntomas. La TCC tiene alta efectividad para este problema."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Me sirve la terapia online si tengo fobia social?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, la terapia online puede ser especialmente útil al inicio, ya que es menos intimidante. A medida que avanza el tratamiento, podemos incorporar sesiones presenciales si es apropiado."
-      }
-    }
-  ]
-};
+
+const psicologo_fobia_social_chillanFAQs = [
+  {
+    question: "¿Es lo mismo que ser tímido?",
+    answer:
+      "No exactamente. La timidez es un rasgo de personalidad, mientras que la fobia social es un trastorno de ansiedad que causa malestar significativo e interfiere con la vida cotidiana.",
+  },
+  {
+    question: "¿La fobia social se cura?",
+    answer:
+      "Con tratamiento adecuado, muchas personas logran superar la fobia social o reducir significativamente sus síntomas. La TCC tiene alta efectividad para este problema.",
+  },
+  {
+    question: "¿Me sirve la terapia online si tengo fobia social?",
+    answer:
+      "Sí, la terapia online puede ser especialmente útil al inicio, ya que es menos intimidante. A medida que avanza el tratamiento, podemos incorporar sesiones presenciales si es apropiado.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Fobia Social Chillán" },
+];
 
 export default function PsicologoFobiaSocialChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_fobia_social_chillanFAQs}
+        serviceType="Psicología Fobia Social"
+        serviceDescription={"Psicólogo especializado en fobia social y ansiedad social en Chillán, Chile. Tratamiento con terapia cognitivo-conductual. Sesiones presenciales y online."}
       />
       <main
       style={{
@@ -74,6 +69,7 @@ export default function PsicologoFobiaSocialChillanPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <Breadcrumb items={breadcrumbItems} />
       <div
         style={{
           display: "flex",
@@ -436,7 +432,7 @@ export default function PsicologoFobiaSocialChillanPage() {
             { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },
             { label: "Crisis de pánico", href: "/psicologo-crisis-de-panico-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
-            { label: "Online", href: "/terapia-online" },
+            { label: "Psicólogo online", href: "/psicologo-online-chillan" },
           ].map((item, i) => (
             <Link
               key={i}

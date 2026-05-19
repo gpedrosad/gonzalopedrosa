@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo Estrés Académico en Chillán | Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Estrés Académico en Chillán",
-    description: "Psicólogo especializado en estrés académico en Chillán. Tratamiento para burnout estudiantil, ansiedad por exámenes y presión universitaria.",
+    description: getTwitterDescription("Psicólogo especializado en estrés académico en Chillán. Tratamiento para burnout estudiantil, ansiedad por exámenes y presión universitaria."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿No debería poder manejar esto solo/a?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "El sistema educativo actual genera niveles de presión que pueden superar los recursos de cualquiera. Pedir ayuda es inteligente, no una debilidad."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Puede la terapia mejorar mi rendimiento?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí. Al reducir la ansiedad y mejorar tu organización, muchos estudiantes rinden mejor. Pero el objetivo principal es tu bienestar, no solo las notas."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Tienen horarios para estudiantes?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, tengo horarios flexibles. También ofrezco terapia online para mayor comodidad."
-      }
-    }
-  ]
-};
+
+const psicologo_estres_academico_chillanFAQs = [
+  {
+    question: "¿No debería poder manejar esto solo/a?",
+    answer:
+      "El sistema educativo actual genera niveles de presión que pueden superar los recursos de cualquiera. Pedir ayuda es inteligente, no una debilidad.",
+  },
+  {
+    question: "¿Puede la terapia mejorar mi rendimiento?",
+    answer:
+      "Sí. Al reducir la ansiedad y mejorar tu organización, muchos estudiantes rinden mejor. Pero el objetivo principal es tu bienestar, no solo las notas.",
+  },
+  {
+    question: "¿Tienen horarios para estudiantes?",
+    answer:
+      "Sí, tengo horarios flexibles. También ofrezco terapia online para mayor comodidad.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Estres Academico Chillán" },
+];
 
 export default function PsicologoEstresAcademicoChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_estres_academico_chillanFAQs}
+        serviceType="Psicología Estres Academico"
+        serviceDescription={"Psicólogo especializado en estrés académico en Chillán. Tratamiento para burnout estudiantil, ansiedad por exámenes y presión universitaria."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

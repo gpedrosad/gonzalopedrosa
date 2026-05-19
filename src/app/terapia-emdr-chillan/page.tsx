@@ -1,30 +1,96 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import {
+  localBusinessSchema,
+  getBreadcrumbSchema,
+  getServiceSchema,
+  getFAQSchema,
+  getTwitterDescription,
+} from "@/lib/schemas";
+
+const description =
+  "Terapia EMDR en Chillán para trauma, ansiedad y estrés postraumático. Técnica con respaldo internacional, sesiones presenciales u online. Reserva por web o WhatsApp.";
 
 export const metadata: Metadata = {
-  title: "Terapia EMDR en Chillán, Chile | Gonzalo Pedrosa - Psicólogo",
-  description:
-    "Terapia EMDR en Chillán, Chile. Tratamiento para trauma, ansiedad y estrés postraumático con EMDR (Desensibilización y Reprocesamiento por Movimientos Oculares).",
+  title: "Terapia EMDR Chillán | Trauma y TEPT | Gonzalo Pedrosa",
+  description,
   alternates: {
     canonical: "/terapia-emdr-chillan",
   },
   openGraph: {
-    title: "Terapia EMDR en Chillán | Gonzalo Pedrosa",
-    description: "Tratamiento para trauma y estrés postraumático con EMDR. Terapia efectiva y basada en evidencia.",
+    title: "Terapia EMDR Chillán | Gonzalo Pedrosa",
+    description,
     url: "https://www.gonzalopedrosa.cl/terapia-emdr-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terapia EMDR en Chillán",
-    description: "Tratamiento efectivo para trauma con EMDR.",
+    title: "Terapia EMDR Chillán",
+    description: getTwitterDescription(
+      "EMDR para trauma en Chillán u online. Evaluación inicial y plan a tu ritmo. Agenda en el sitio."
+    ),
   },
 };
 
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Terapia EMDR Chillán" },
+];
+
+const emdrFAQs = [
+  {
+    question: "¿Qué es EMDR?",
+    answer:
+      "EMDR (Eye Movement Desensitization and Reprocessing) es una terapia reconocida para procesar memorias traumáticas mediante estimulación bilateral, con amplio respaldo científico.",
+  },
+  {
+    question: "¿Cuántas sesiones de EMDR necesito?",
+    answer:
+      "Varía según el caso. Traumas únicos pueden procesarse en pocas sesiones; traumas complejos o múltiples requieren más tiempo. Lo evaluamos en la primera consulta.",
+  },
+  {
+    question: "¿Se puede hacer EMDR online?",
+    answer:
+      "Sí, EMDR puede adaptarse al formato online con estimulación bilateral alternativa. Evaluamos juntos la modalidad más adecuada.",
+  },
+];
+
+const faqSchema = getFAQSchema(emdrFAQs);
+const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
+const serviceSchema = getServiceSchema({
+  serviceType: "Terapia EMDR",
+  description:
+    "Tratamiento EMDR para trauma y estrés postraumático en Chillán o por videollamada.",
+  areaServed: "Chillán",
+});
+
 export default function TerapiaEmdrChillanPage() {
   return (
+    <>
+      <Script
+        id="local-business"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <Script
+        id="breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Script
+        id="service"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
     <main
       style={{
         maxWidth: 640,
@@ -34,19 +100,21 @@ export default function TerapiaEmdrChillanPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+        <Breadcrumb items={breadcrumbItems} />
+
       <div
         style={{
           display: "flex",
           alignItems: "center",
           gap: "1rem",
-          marginBottom: "1.5rem",
+          marginBottom: "2rem",
         }}
       >
         <Image
           src="/yo.png"
           alt="Gonzalo Pedrosa - Psicólogo"
-          width={56}
-          height={56}
+          width={64}
+          height={64}
           priority
           style={{
             borderRadius: "9999px",
@@ -54,19 +122,10 @@ export default function TerapiaEmdrChillanPage() {
           }}
         />
         <div>
-          <p
-            style={{
-              fontSize: "0.75rem",
-              fontWeight: 600,
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-              color: "#999",
-              marginBottom: "0.125rem",
-            }}
-          >
-            Chillán, Chile
+          <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>Gonzalo Pedrosa</p>
+          <p style={{ fontSize: "0.875rem", color: "#666" }}>
+            Psicólogo Clínico · +7 años · EMDR y trauma
           </p>
-          <p style={{ fontWeight: 500, color: "#000" }}>Gonzalo Pedrosa</p>
         </div>
       </div>
 
@@ -86,14 +145,49 @@ export default function TerapiaEmdrChillanPage() {
         style={{
           fontSize: "1.125rem",
           color: "#666",
-          marginBottom: "3rem",
+          marginBottom: "1.5rem",
           lineHeight: 1.6,
         }}
       >
-        EMDR (Eye Movement Desensitization and Reprocessing) es una terapia
-        reconocida internacionalmente para el tratamiento del trauma y otras
-        dificultades emocionales.
+        La terapia EMDR en Chillán trata trauma, ansiedad y estrés postraumático con una técnica
+        reconocida internacionalmente, en sesiones presenciales o{" "}
+        <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+          online
+        </Link>
+        . Evaluamos si EMDR encaja contigo en la primera consulta.
       </p>
+
+      <div
+        style={{
+          marginBottom: "2.5rem",
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "0.75rem",
+          alignItems: "center",
+        }}
+      >
+        <Link
+          href="/agendar"
+          style={{
+            display: "inline-flex",
+            padding: "0.75rem 1.25rem",
+            backgroundColor: "#000",
+            color: "#fff",
+            borderRadius: "9999px",
+            textDecoration: "none",
+            fontWeight: 500,
+            fontSize: "0.875rem",
+          }}
+        >
+          Agendar evaluación EMDR →
+        </Link>
+        <Link
+          href="/psicologo-abuso-sexual-chillan"
+          style={{ fontSize: "0.875rem", color: "#666", textDecoration: "underline" }}
+        >
+          Trauma y abuso sexual
+        </Link>
+      </div>
 
       <section style={{ marginBottom: "3rem" }}>
         <h2
@@ -328,7 +422,7 @@ export default function TerapiaEmdrChillanPage() {
             >
               Sí, EMDR puede adaptarse al formato{" "}
               <Link
-                href="/terapia-online"
+                href="/psicologo-online-chillan"
                 style={{ color: "#000", textDecoration: "underline" }}
               >
                 online
@@ -368,25 +462,39 @@ export default function TerapiaEmdrChillanPage() {
         >
           Consulta si EMDR puede ayudarte con lo que estás viviendo.
         </p>
-        <a
-          href="https://wa.me/56968257817"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "0.5rem",
-            padding: "0.75rem 1.5rem",
-            backgroundColor: "#fff",
-            color: "#000",
-            borderRadius: "9999px",
-            textDecoration: "none",
-            fontWeight: 500,
-            fontSize: "0.875rem",
-          }}
+        <div
+          style={{ display: "flex", flexDirection: "column", gap: "0.75rem", alignItems: "center" }}
         >
-          Consultar →
-        </a>
+          <Link
+            href="/agendar"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              padding: "0.75rem 1.5rem",
+              backgroundColor: "#fff",
+              color: "#000",
+              borderRadius: "9999px",
+              textDecoration: "none",
+              fontWeight: 500,
+              fontSize: "0.875rem",
+            }}
+          >
+            Agendar en el sitio →
+          </Link>
+          <a
+            href="https://wa.me/56968257817"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "rgba(255,255,255,0.9)",
+              fontSize: "0.875rem",
+              textDecoration: "underline",
+            }}
+          >
+            O escribir por WhatsApp
+          </a>
+        </div>
       </section>
 
       <nav style={{ paddingTop: "2rem", borderTop: "1px solid #eaeaea" }}>
@@ -408,7 +516,7 @@ export default function TerapiaEmdrChillanPage() {
             { label: "Especialista ansiedad", href: "/psicologo-especialista-ansiedad-chillan" },
             { label: "Crisis de pánico", href: "/psicologo-crisis-de-panico-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
-            { label: "Online", href: "/terapia-online" },
+            { label: "Online", href: "/psicologo-online-chillan" },
           ].map((item, i) => (
             <Link
               key={i}
@@ -428,6 +536,7 @@ export default function TerapiaEmdrChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

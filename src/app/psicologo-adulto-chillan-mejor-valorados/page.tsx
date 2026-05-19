@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 import { Button } from "../components/Button";
 
 export const metadata: Metadata = {
@@ -22,50 +24,43 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Cómo Elegir un Psicólogo Bien Valorado en Chillán, Chile | Guía Práctica",
-    description: "Guía para elegir un psicólogo bien valorado en Chillán, Chile. Qué considerar al buscar un profesional de salud mental: formación, enfoque, experienci",
+    description: getTwitterDescription("Guía para elegir un psicólogo bien valorado en Chillán, Chile. Qué considerar al buscar un profesional de salud mental: formación, enfoque, experienci"),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Los rankings de \"mejores psicólogos\" son confiables?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Ten precaución con rankings sin metodología clara. Las reseñas pueden ser útiles como referencia, pero tu propia experiencia con el profesional es lo más importante."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Qué hago si no me siento cómodo con mi psicólogo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Es válido cambiar de profesional si no sientes conexión. Un buen psicólogo entenderá y puede ayudarte a buscar un colega más adecuado."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Debería elegir según precio?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "El precio no refleja necesariamente la calidad. Lo importante es encontrar un profesional competente con quien puedas trabajar bien."
-      }
-    }
-  ]
-};
+
+const psicologo_adulto_chillan_mejor_valoradosFAQs = [
+  {
+    question: "¿Los rankings de \"mejores psicólogos\" son confiables?",
+    answer:
+      "Ten precaución con rankings sin metodología clara. Las reseñas pueden ser útiles como referencia, pero tu propia experiencia con el profesional es lo más importante.",
+  },
+  {
+    question: "¿Qué hago si no me siento cómodo con mi psicólogo?",
+    answer:
+      "Es válido cambiar de profesional si no sientes conexión. Un buen psicólogo entenderá y puede ayudarte a buscar un colega más adecuado.",
+  },
+  {
+    question: "¿Debería elegir según precio?",
+    answer:
+      "El precio no refleja necesariamente la calidad. Lo importante es encontrar un profesional competente con quien puedas trabajar bien.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Adulto Chillan Mejor Valorados Chillán" },
+];
 
 export default function PsicologoMejorValoradosChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_adulto_chillan_mejor_valoradosFAQs}
+        serviceType="Psicología Adulto Chillan Mejor Valorados"
+        serviceDescription={"Guía para elegir un psicólogo bien valorado en Chillán, Chile. Qué considerar al buscar un profesional de salud mental: formación, enfoque, experiencia y más."}
       />
       <main
       style={{
@@ -76,6 +71,7 @@ export default function PsicologoMejorValoradosChillanPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <Breadcrumb items={breadcrumbItems} />
       <div
         style={{
           display: "flex",
@@ -216,7 +212,7 @@ export default function PsicologoMejorValoradosChillanPage() {
                 <>
                   Considera si prefieres sesiones presenciales o{" "}
                   <Link
-                    href="/terapia-online"
+                    href="/psicologo-online-chillan"
                     style={{ color: "#000", textDecoration: "underline" }}
                   >
                     terapia online
@@ -537,9 +533,7 @@ export default function PsicologoMejorValoradosChillanPage() {
               border: "1px solid #eaeaea",
               borderRadius: "9999px",
             }}
-          >
-            Online
-          </Link>
+          >Psicólogo online</Link>
         </div>
       </nav>
     </main>

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo Isapre Chillán | Reembolso y Bonos - Gonzalo Pedrosa",
@@ -20,50 +22,43 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Isapre Chillán | Reembolso y Bonos - Gonzalo Pedrosa",
-    description: "Psicólogo en Chillán con boleta para reembolso Isapre. Consulta cobertura con tu plan de salud. Atención presencial y online. Ansiedad, depresión, est",
+    description: getTwitterDescription("Psicólogo en Chillán con boleta para reembolso Isapre. Consulta cobertura con tu plan de salud. Atención presencial y online. Ansiedad, depresión, est"),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cuánto reembolsa la Isapre?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "El monto varía según tu plan y la Isapre. Generalmente cubren entre un 50% y 80% del valor, con un tope por sesión. Te recomiendo consultar directamente con tu Isapre para conocer tu cobertura exacta."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Tiene convenio directo con Isapres?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No tengo convenio directo, pero emito boleta de honorarios que permite reembolso. Esto te da flexibilidad para elegir sin depender de convenios específicos."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿La terapia online también se puede reembolsar?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, la terapia online genera la misma boleta y puede reembolsarse igual que la presencial."
-      }
-    }
-  ]
-};
+
+const psicologo_isapre_chillanFAQs = [
+  {
+    question: "¿Cuánto reembolsa la Isapre?",
+    answer:
+      "El monto varía según tu plan y la Isapre. Generalmente cubren entre un 50% y 80% del valor, con un tope por sesión. Te recomiendo consultar directamente con tu Isapre para conocer tu cobertura exacta.",
+  },
+  {
+    question: "¿Tiene convenio directo con Isapres?",
+    answer:
+      "No tengo convenio directo, pero emito boleta de honorarios que permite reembolso. Esto te da flexibilidad para elegir sin depender de convenios específicos.",
+  },
+  {
+    question: "¿La terapia online también se puede reembolsar?",
+    answer:
+      "Sí, la terapia online genera la misma boleta y puede reembolsarse igual que la presencial.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Isapre Chillán" },
+];
 
 export default function PsicologoIsapreChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_isapre_chillanFAQs}
+        serviceType="Psicología Isapre"
+        serviceDescription={"Psicólogo en Chillán con boleta para reembolso Isapre. Consulta cobertura con tu plan de salud. Atención presencial y online. Ansiedad, depresión, estrés."}
       />
       <main
       style={{
@@ -74,6 +69,7 @@ export default function PsicologoIsapreChillanPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <Breadcrumb items={breadcrumbItems} />
       <div
         style={{
           display: "flex",
@@ -502,7 +498,7 @@ export default function PsicologoIsapreChillanPage() {
             { label: "Adultos", href: "/psicologo-adulto-chillan" },
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
-            { label: "Online", href: "/terapia-online" },
+            { label: "Psicólogo online", href: "/psicologo-online-chillan" },
             { label: "Agendar", href: "/agendar" },
           ].map((item, i) => (
             <Link

@@ -1,6 +1,24 @@
 {
   "version": 1,
   "skills": {
+    "conversion-optimization": {
+      "source": "kostja94/marketing-skills",
+      "sourceType": "github",
+      "skillPath": "skills/strategies/launch/conversion/SKILL.md",
+      "computedHash": "505f9e69601151e9916112b616745365dd6dba0839abf6c7f6685f6943cee929"
+    },
+    "google-search-console": {
+      "source": "kostja94/marketing-skills",
+      "sourceType": "github",
+      "skillPath": "skills/analytics/seo/google-search-console/SKILL.md",
+      "computedHash": "211104a946051497f2726df67d8ada3317542e47b720521c14dbc287aea29fc1"
+    },
+    "meta-tags-optimizer": {
+      "source": "aaron-he-zhu/seo-geo-claude-skills",
+      "sourceType": "github",
+      "skillPath": "build/meta-tags-optimizer/SKILL.md",
+      "computedHash": "a750da053a13930e6506892fd338da6a863a75da7ca0aa292ec4ae9de5784d33"
+    },
     "programmatic-seo": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",

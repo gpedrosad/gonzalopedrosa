@@ -157,6 +157,19 @@ export default function TerapiaOnlineVsPresencialChillanPage() {
           </div>
         </div>
 
+        <section
+          style={{
+            marginBottom: "1.5rem",
+            padding: "1rem 1.25rem",
+            backgroundColor: "#fafafa",
+            borderRadius: "12px",
+          }}
+        >
+          <p style={{ fontSize: "0.8125rem", color: "#444", lineHeight: 1.6, margin: 0 }}>
+            ★ 4,8 · TCC · Boleta Isapre · Misma tarifa online y presencial
+          </p>
+        </section>
+
         <p
           style={{
             fontSize: "0.75rem",
@@ -194,6 +207,48 @@ export default function TerapiaOnlineVsPresencialChillanPage() {
           te ayuda a comprometerte con el proceso. Abajo comparo criterios concretos —sin marketing
           vacío— para que elijas con lógica, no con culpa.
         </p>
+
+        <div
+          style={{
+            display: "flex",
+            gap: "0.75rem",
+            flexWrap: "wrap",
+            marginBottom: "3rem",
+          }}
+        >
+          <Link
+            href="/agendar"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              padding: "0.875rem 1.5rem",
+              backgroundColor: "#000",
+              color: "#fff",
+              borderRadius: "9999px",
+              textDecoration: "none",
+              fontWeight: 500,
+              fontSize: "0.9375rem",
+            }}
+          >
+            Agendar sesión →
+          </Link>
+          <Link
+            href="/psicologo-online-chillan"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              padding: "0.875rem 1.5rem",
+              border: "1px solid #e5e5e5",
+              borderRadius: "9999px",
+              textDecoration: "none",
+              fontWeight: 500,
+              fontSize: "0.9375rem",
+              color: "#000",
+            }}
+          >
+            Psicólogo online
+          </Link>
+        </div>
 
         <section style={{ marginBottom: "3rem", overflowX: "auto" }}>
           <h2

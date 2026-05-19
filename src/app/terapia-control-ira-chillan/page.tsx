@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Terapia Control de Ira en Chillán | Psicólogo Gonzalo Pedrosa",
@@ -19,13 +22,45 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Control de Ira en Chillán",
-    description: "Maneja la rabia y las reacciones explosivas con terapia.",
+    description: getTwitterDescription("Maneja la rabia y las reacciones explosivas con terapia."),
   },
 };
 
+
+const terapia_control_ira_chillanFAQs = [
+  {
+    question: "¿La ira se puede aprender a regular?",
+    answer:
+      "Sí. Con técnicas de regulación emocional, identificación de disparadores y comunicación asertiva se reduce la frecuencia e intensidad de los estallidos.",
+  },
+  {
+    question: "¿Necesito medicación?",
+    answer:
+      "No siempre. La TCC es el primer abordaje. Si hay impulsividad severa, evaluamos derivación a psiquiatra.",
+  },
+  {
+    question: "¿Atienden hombres con problemas de ira?",
+    answer:
+      "Sí. Es uno de los motivos frecuentes de consulta masculina en Chillán y online.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Terapia Control Ira Chillán" },
+];
+
 export default function TerapiaControlIraChillanPage() {
   return (
-    <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <>
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={terapia_control_ira_chillanFAQs}
+        serviceType="Terapia Control de Ira"
+        serviceDescription="Terapia para el control de la ira en Chillán. Manejo de rabia e impulsividad con enfoque cognitivo-conductual."
+      />
+      <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>
@@ -149,6 +184,7 @@ export default function TerapiaControlIraChillanPage() {
         </div>
       </nav>
     </main>
+    </>
   );
 }
 

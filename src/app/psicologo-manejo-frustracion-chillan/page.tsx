@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo Manejo de Frustración en Chillán | Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Manejo de Frustración en Chillán",
-    description: "Psicólogo para manejo de frustración en Chillán. Aprende a tolerar la frustración, regular emociones y responder mejor ante lo que no puedes controlar",
+    description: getTwitterDescription("Psicólogo para manejo de frustración en Chillán. Aprende a tolerar la frustración, regular emociones y responder mejor ante lo que no puedes controlar"),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Por qué me frustro tan fácilmente?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Puede tener varias causas: expectativas poco realistas, historia de vida, falta de habilidades de regulación, o creencias rígidas sobre cómo deberían ser las cosas."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Es lo mismo que el control de la ira?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Están relacionados. La frustración puede llevar a la ira. Si tu problema principal es la ira explosiva, también trabajo control de ira."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuánto tiempo toma mejorar?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Con práctica constante, muchas personas notan cambios en 8-12 sesiones. La clave es aplicar las técnicas en la vida diaria."
-      }
-    }
-  ]
-};
+
+const psicologo_manejo_frustracion_chillanFAQs = [
+  {
+    question: "¿Por qué me frustro tan fácilmente?",
+    answer:
+      "Puede tener varias causas: expectativas poco realistas, historia de vida, falta de habilidades de regulación, o creencias rígidas sobre cómo deberían ser las cosas.",
+  },
+  {
+    question: "¿Es lo mismo que el control de la ira?",
+    answer:
+      "Están relacionados. La frustración puede llevar a la ira. Si tu problema principal es la ira explosiva, también trabajo control de ira.",
+  },
+  {
+    question: "¿Cuánto tiempo toma mejorar?",
+    answer:
+      "Con práctica constante, muchas personas notan cambios en 8-12 sesiones. La clave es aplicar las técnicas en la vida diaria.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Manejo Frustracion Chillán" },
+];
 
 export default function PsicologoManejoFrustracionChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_manejo_frustracion_chillanFAQs}
+        serviceType="Psicología Manejo Frustracion"
+        serviceDescription={"Psicólogo para manejo de frustración en Chillán. Aprende a tolerar la frustración, regular emociones y responder mejor ante lo que no puedes controlar."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

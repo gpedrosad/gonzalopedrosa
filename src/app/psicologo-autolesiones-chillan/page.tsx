@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo Autolesiones en Chillán | Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Autolesiones en Chillán",
-    description: "Psicólogo para autolesiones en Chillán. Tratamiento confidencial y sin juicios para dejar de hacerte daño y encontrar otras formas de alivio.",
+    description: getTwitterDescription("Psicólogo para autolesiones en Chillán. Tratamiento confidencial y sin juicios para dejar de hacerte daño y encontrar otras formas de alivio."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Me vas a juzgar?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Entiendo que la autolesión es una forma de sobrevivir a dolor emocional. Mi trabajo es ayudarte a encontrar formas más seguras, no juzgarte."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Tengo que dejar de hacerlo inmediatamente?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No te voy a obligar. La reducción es gradual, a medida que desarrollamos otras herramientas. Ir demasiado rápido puede empeorar las cosas."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Se puede superar?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí. Muchas personas logran dejar la autolesión completamente. Es un proceso, pero es posible."
-      }
-    }
-  ]
-};
+
+const psicologo_autolesiones_chillanFAQs = [
+  {
+    question: "¿Me vas a juzgar?",
+    answer:
+      "No. Entiendo que la autolesión es una forma de sobrevivir a dolor emocional. Mi trabajo es ayudarte a encontrar formas más seguras, no juzgarte.",
+  },
+  {
+    question: "¿Tengo que dejar de hacerlo inmediatamente?",
+    answer:
+      "No te voy a obligar. La reducción es gradual, a medida que desarrollamos otras herramientas. Ir demasiado rápido puede empeorar las cosas.",
+  },
+  {
+    question: "¿Se puede superar?",
+    answer:
+      "Sí. Muchas personas logran dejar la autolesión completamente. Es un proceso, pero es posible.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Autolesiones Chillán" },
+];
 
 export default function PsicologoAutolesionesChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_autolesiones_chillanFAQs}
+        serviceType="Psicología Autolesiones"
+        serviceDescription={"Psicólogo para autolesiones en Chillán. Tratamiento confidencial y sin juicios para dejar de hacerte daño y encontrar otras formas de alivio."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <section style={{ padding: "1.25rem", backgroundColor: "#fef2f2", borderRadius: "12px", marginBottom: "2rem", border: "1px solid #fecaca" }}>
         <p style={{ fontWeight: 600, color: "#991b1b", marginBottom: "0.5rem", fontSize: "0.9375rem" }}>🚨 Si estás en peligro ahora</p>
         <p style={{ color: "#7f1d1d", fontSize: "0.875rem", lineHeight: 1.6, marginBottom: "0.75rem" }}>

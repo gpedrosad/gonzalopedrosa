@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo Síndrome del Impostor en Chillán | Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Síndrome del Impostor en Chillán",
-    description: "Psicólogo especializado en síndrome del impostor en Chillán. Supera la sensación de no merecer tus logros y reconoce tu verdadero valor.",
+    description: getTwitterDescription("Psicólogo especializado en síndrome del impostor en Chillán. Supera la sensación de no merecer tus logros y reconoce tu verdadero valor."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Es muy común el síndrome del impostor?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, estudios sugieren que hasta el 70% de las personas lo experimentan en algún momento. Es especialmente común en personas exitosas y en transiciones profesionales."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Tiene relación con la autoestima?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, están conectados. El síndrome del impostor suele coexistir con baja autoestima y perfeccionismo. Trabajamos todo en conjunto."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuánto tiempo toma superarlo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Varía según cada persona. Algunos notan cambios significativos en pocas sesiones, otros necesitan un trabajo más profundo. Lo importante es que es tratable."
-      }
-    }
-  ]
-};
+
+const psicologo_sindrome_impostor_chillanFAQs = [
+  {
+    question: "¿Es muy común el síndrome del impostor?",
+    answer:
+      "Sí, estudios sugieren que hasta el 70% de las personas lo experimentan en algún momento. Es especialmente común en personas exitosas y en transiciones profesionales.",
+  },
+  {
+    question: "¿Tiene relación con la autoestima?",
+    answer:
+      "Sí, están conectados. El síndrome del impostor suele coexistir con baja autoestima y perfeccionismo. Trabajamos todo en conjunto.",
+  },
+  {
+    question: "¿Cuánto tiempo toma superarlo?",
+    answer:
+      "Varía según cada persona. Algunos notan cambios significativos en pocas sesiones, otros necesitan un trabajo más profundo. Lo importante es que es tratable.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Sindrome Impostor Chillán" },
+];
 
 export default function PsicologoSindromeImpostorChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_sindrome_impostor_chillanFAQs}
+        serviceType="Psicología Sindrome Impostor"
+        serviceDescription={"Psicólogo especializado en síndrome del impostor en Chillán. Supera la sensación de no merecer tus logros y reconoce tu verdadero valor."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={56} height={56} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

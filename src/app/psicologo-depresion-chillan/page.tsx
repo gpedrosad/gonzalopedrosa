@@ -12,16 +12,16 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Psicólogo especializado en depresión en Chillán, Chile. Tratamiento con enfoque cognitivo-conductual basado en evidencia. Sesiones presenciales y online.";
+  "Psicólogo por depresión en Chillán con TCC basada en evidencia. Sesiones de 50 min presenciales u online desde $35.000. Boleta Isapre. Agenda tu primera consulta.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Depresión en Chillán, Chile | Gonzalo Pedrosa",
+  title: "Psicólogo depresión Chillán | TCC presencial y online | Gonzalo Pedrosa",
   description,
   alternates: {
     canonical: "/psicologo-depresion-chillan",
   },
   openGraph: {
-    title: "Psicólogo Depresión en Chillán, Chile | Gonzalo Pedrosa",
+    title: "Psicólogo depresión Chillán | Gonzalo Pedrosa",
     description,
     url: "https://www.gonzalopedrosa.cl/psicologo-depresion-chillan",
     type: "website",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo Depresión en Chillán",
+    title: "Psicólogo depresión Chillán",
     description: getTwitterDescription(
-      "Tratamiento profesional para depresión con TCC. Sesiones online y presenciales. +7 años de experiencia en Chillán."
+      "TCC para depresión en Chillán u online. $35.000 la sesión, boleta Isapre. Reserva en /agendar o WhatsApp."
     ),
   },
 };
@@ -142,7 +142,10 @@ export default function PsicologoDepresionChillanPage() {
           >
             Chillán, Chile
           </p>
-          <p style={{ fontWeight: 500, color: "#000" }}>Gonzalo Pedrosa</p>
+          <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>Gonzalo Pedrosa</p>
+          <p style={{ fontSize: "0.875rem", color: "#666" }}>
+            Psicólogo Clínico · +7 años · TCC · Boleta Isapre
+          </p>
         </div>
       </div>
 
@@ -155,21 +158,57 @@ export default function PsicologoDepresionChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo Depresión en Chillán
+        Psicólogo depresión en Chillán
       </h1>
 
       <p
         style={{
           fontSize: "1.125rem",
           color: "#666",
-          marginBottom: "3rem",
+          marginBottom: "1.5rem",
           lineHeight: 1.6,
         }}
       >
-        La depresión es más que tristeza pasajera. Es una condición que afecta
-        cómo te sientes, piensas y manejas las actividades diarias. Con el
-        tratamiento adecuado, es posible recuperar el bienestar.
+        Si buscas un psicólogo por depresión en Chillán, trabajo con TCC en sesiones de 50
+        minutos, presencial o{" "}
+        <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+          online
+        </Link>
+        , desde $35.000 con boleta Isapre. La depresión tiene tratamiento; el primer paso es
+        pedir ayuda.
       </p>
+
+      <div
+        style={{
+          marginBottom: "2.5rem",
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "0.75rem",
+          alignItems: "center",
+        }}
+      >
+        <Link
+          href="/agendar"
+          style={{
+            display: "inline-flex",
+            padding: "0.75rem 1.25rem",
+            backgroundColor: "#000",
+            color: "#fff",
+            borderRadius: "9999px",
+            textDecoration: "none",
+            fontWeight: 500,
+            fontSize: "0.875rem",
+          }}
+        >
+          Agendar consulta →
+        </Link>
+        <Link
+          href="/consulta-psicologica-precio-chillan"
+          style={{ fontSize: "0.875rem", color: "#666", textDecoration: "underline" }}
+        >
+          Ver precio de la sesión
+        </Link>
+      </div>
 
       <section style={{ marginBottom: "3rem" }}>
         <h2
@@ -362,25 +401,37 @@ export default function PsicologoDepresionChillanPage() {
         >
           La depresión tiene tratamiento. Da el primer paso hoy.
         </p>
-        <a
-          href="https://wa.me/56968257817"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "0.5rem",
-            padding: "0.75rem 1.5rem",
-            backgroundColor: "#fff",
-            color: "#000",
-            borderRadius: "9999px",
-            textDecoration: "none",
-            fontWeight: 500,
-            fontSize: "0.875rem",
-          }}
-        >
-          Agendar sesión →
-        </a>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", alignItems: "center" }}>
+          <Link
+            href="/agendar"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              padding: "0.75rem 1.5rem",
+              backgroundColor: "#fff",
+              color: "#000",
+              borderRadius: "9999px",
+              textDecoration: "none",
+              fontWeight: 500,
+              fontSize: "0.875rem",
+            }}
+          >
+            Agendar en el sitio →
+          </Link>
+          <a
+            href="https://wa.me/56968257817"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "rgba(255,255,255,0.9)",
+              fontSize: "0.875rem",
+              textDecoration: "underline",
+            }}
+          >
+            O escribir por WhatsApp
+          </a>
+        </div>
       </section>
 
       <nav style={{ paddingTop: "2rem", borderTop: "1px solid #eaeaea" }}>
@@ -402,7 +453,7 @@ export default function PsicologoDepresionChillanPage() {
             { label: "Duelo", href: "/psicologo-duelo-chillan" },
             { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
-            { label: "Online", href: "/terapia-online" },
+            { label: "Online", href: "/psicologo-online-chillan" },
           ].map((item, i) => (
             <Link
               key={i}

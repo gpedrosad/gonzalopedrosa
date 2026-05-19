@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo Dependencia Emocional en Chillán | Gonzalo Pedrosa",
@@ -20,50 +22,43 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Dependencia Emocional en Chillán",
-    description: "Psicólogo especializado en dependencia emocional en Chillán. Terapia para superar relaciones de dependencia y construir vínculos más sanos.",
+    description: getTwitterDescription("Psicólogo especializado en dependencia emocional en Chillán. Terapia para superar relaciones de dependencia y construir vínculos más sanos."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Se puede superar la dependencia emocional?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, con trabajo terapéutico es posible cambiar estos patrones. Requiere compromiso pero los cambios son profundos y duraderos."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Tengo que terminar mi relación?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No necesariamente. El objetivo es que puedas relacionarte de forma más sana. A veces la relación mejora, otras veces decides que no te conviene. Lo trabajamos juntos."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Por qué me pasa esto?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La dependencia suele tener raíces en experiencias tempranas y estilos de apego. En terapia exploramos tu historia para entender y cambiar estos patrones."
-      }
-    }
-  ]
-};
+
+const psicologo_dependencia_emocional_chillanFAQs = [
+  {
+    question: "¿Se puede superar la dependencia emocional?",
+    answer:
+      "Sí, con trabajo terapéutico es posible cambiar estos patrones. Requiere compromiso pero los cambios son profundos y duraderos.",
+  },
+  {
+    question: "¿Tengo que terminar mi relación?",
+    answer:
+      "No necesariamente. El objetivo es que puedas relacionarte de forma más sana. A veces la relación mejora, otras veces decides que no te conviene. Lo trabajamos juntos.",
+  },
+  {
+    question: "¿Por qué me pasa esto?",
+    answer:
+      "La dependencia suele tener raíces en experiencias tempranas y estilos de apego. En terapia exploramos tu historia para entender y cambiar estos patrones.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Dependencia Emocional Chillán" },
+];
 
 export default function PsicologoDependenciaEmocionalChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_dependencia_emocional_chillanFAQs}
+        serviceType="Psicología Dependencia Emocional"
+        serviceDescription={"Psicólogo especializado en dependencia emocional en Chillán. Terapia para superar relaciones de dependencia y construir vínculos más sanos."}
       />
       <main
       style={{
@@ -73,6 +68,7 @@ export default function PsicologoDependenciaEmocionalChillanPage() {
         fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem" }}>
         <Image
           src="/yo.png"

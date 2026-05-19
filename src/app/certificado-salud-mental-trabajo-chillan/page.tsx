@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Certificado Salud Mental para Trabajo en Chillán | Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Certificado Salud Mental para Trabajo en Chillán",
-    description: "Certificado de salud mental para trabajo en Chillán. Documento profesional para postulaciones laborales, licencias y otros trámites.",
+    description: getTwitterDescription("Certificado de salud mental para trabajo en Chillán. Documento profesional para postulaciones laborales, licencias y otros trámites."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cuánto cuesta?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Contáctame por WhatsApp indicando para qué lo necesitas y te doy el valor exacto."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Qué pasa si tengo un diagnóstico?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Tener un diagnóstico no necesariamente impide obtener el certificado. Depende del diagnóstico, su estado actual y los requerimientos del trámite."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Es lo mismo que un informe psicológico?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. El certificado es más breve y general. Si necesitas un informe detallado con evaluación completa, es otro proceso."
-      }
-    }
-  ]
-};
+
+const certificado_salud_mental_trabajo_chillanFAQs = [
+  {
+    question: "¿Cuánto cuesta?",
+    answer:
+      "Contáctame por WhatsApp indicando para qué lo necesitas y te doy el valor exacto.",
+  },
+  {
+    question: "¿Qué pasa si tengo un diagnóstico?",
+    answer:
+      "Tener un diagnóstico no necesariamente impide obtener el certificado. Depende del diagnóstico, su estado actual y los requerimientos del trámite.",
+  },
+  {
+    question: "¿Es lo mismo que un informe psicológico?",
+    answer:
+      "No. El certificado es más breve y general. Si necesitas un informe detallado con evaluación completa, es otro proceso.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Certificado Salud Mental Trabajo Chillán" },
+];
 
 export default function CertificadoSaludMentalTrabajoChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={certificado_salud_mental_trabajo_chillanFAQs}
+        serviceType="Certificado Salud Mental Trabajo"
+        serviceDescription={"Certificado de salud mental para trabajo en Chillán. Documento profesional para postulaciones laborales, licencias y otros trámites."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

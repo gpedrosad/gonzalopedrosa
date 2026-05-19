@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Tratamiento TOC en Chillán, Chile | Gonzalo Pedrosa - Psicólogo",
@@ -20,50 +22,43 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Tratamiento TOC en Chillán, Chile | Gonzalo Pedrosa - Psicólogo",
-    description: "Tratamiento para TOC (Trastorno Obsesivo Compulsivo) en Chillán, Chile. Terapia cognitivo-conductual con exposición y prevención de respuesta. Presenc",
+    description: getTwitterDescription("Tratamiento para TOC (Trastorno Obsesivo Compulsivo) en Chillán, Chile. Terapia cognitivo-conductual con exposición y prevención de respuesta. Presenc"),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿El TOC tiene cura?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "El TOC es una condición crónica, pero con tratamiento adecuado muchas personas logran reducir significativamente sus síntomas y llevar una vida normal. La EPR tiene tasas de éxito entre 60-80%."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Necesito medicación?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No siempre. La terapia EPR puede ser muy efectiva por sí sola. En casos moderados a severos, la combinación con medicación (antidepresivos ISRS) puede ser más efectiva. Si es necesario, te derivo a psiquiatra."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuánto dura el tratamiento?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Típicamente entre 12-20 sesiones para casos de severidad leve a moderada. Casos más severos pueden requerir tratamiento más extenso. Se pueden notar mejorías desde las primeras semanas."
-      }
-    }
-  ]
-};
+
+const tratamiento_toc_chillanFAQs = [
+  {
+    question: "¿El TOC tiene cura?",
+    answer:
+      "El TOC es una condición crónica, pero con tratamiento adecuado muchas personas logran reducir significativamente sus síntomas y llevar una vida normal. La EPR tiene tasas de éxito entre 60-80%.",
+  },
+  {
+    question: "¿Necesito medicación?",
+    answer:
+      "No siempre. La terapia EPR puede ser muy efectiva por sí sola. En casos moderados a severos, la combinación con medicación (antidepresivos ISRS) puede ser más efectiva. Si es necesario, te derivo a psiquiatra.",
+  },
+  {
+    question: "¿Cuánto dura el tratamiento?",
+    answer:
+      "Típicamente entre 12-20 sesiones para casos de severidad leve a moderada. Casos más severos pueden requerir tratamiento más extenso. Se pueden notar mejorías desde las primeras semanas.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Tratamiento TOC Chillán" },
+];
 
 export default function TratamientoTocChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={tratamiento_toc_chillanFAQs}
+        serviceType="Tratamiento TOC"
+        serviceDescription={"Tratamiento para TOC (Trastorno Obsesivo Compulsivo) en Chillán, Chile. Terapia cognitivo-conductual con exposición y prevención de respuesta. Presencial y online."}
       />
       <main
       style={{
@@ -74,6 +69,7 @@ export default function TratamientoTocChillanPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <Breadcrumb items={breadcrumbItems} />
       <div
         style={{
           display: "flex",
@@ -431,7 +427,7 @@ export default function TratamientoTocChillanPage() {
             { label: "Especialista ansiedad", href: "/psicologo-especialista-ansiedad-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
             { label: "Adultos", href: "/psicologo-adulto-chillan" },
-            { label: "Online", href: "/terapia-online" },
+            { label: "Psicólogo online", href: "/psicologo-online-chillan" },
           ].map((item, i) => (
             <Link
               key={i}

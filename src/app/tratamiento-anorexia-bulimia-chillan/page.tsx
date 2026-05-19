@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Tratamiento Anorexia y Bulimia en Chillán | Psicólogo Gonzalo Pedrosa",
@@ -20,52 +22,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Tratamiento Anorexia y Bulimia en Chillán | Psicólogo Gonzalo Pedrosa",
-    description: "Tratamiento psicológico para anorexia y bulimia en Chillán. Terapia especializada para recuperar tu salud y tu relación con la comida.",
+    description: getTwitterDescription("Tratamiento psicológico para anorexia y bulimia en Chillán. Terapia especializada para recuperar tu salud y tu relación con la comida."),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cuánto dura el tratamiento?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Es un proceso largo, generalmente de meses a años. La recuperación no es lineal pero es posible. Vamos a tu ritmo."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Necesito otros profesionales?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Generalmente sí: psiquiatra (para medicación si es necesaria) y nutricionista especializado. Puedo ayudarte a armar tu equipo."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Qué pasa si recaigo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Las recaídas son parte del proceso, no un fracaso. Lo importante es retomar el tratamiento y aprender de lo que pasó."
-      }
-    }
-  ]
-};
+
+const tratamiento_anorexia_bulimia_chillanFAQs = [
+  {
+    question: "¿Cuánto dura el tratamiento?",
+    answer:
+      "Es un proceso largo, generalmente de meses a años. La recuperación no es lineal pero es posible. Vamos a tu ritmo.",
+  },
+  {
+    question: "¿Necesito otros profesionales?",
+    answer:
+      "Generalmente sí: psiquiatra (para medicación si es necesaria) y nutricionista especializado. Puedo ayudarte a armar tu equipo.",
+  },
+  {
+    question: "¿Qué pasa si recaigo?",
+    answer:
+      "Las recaídas son parte del proceso, no un fracaso. Lo importante es retomar el tratamiento y aprender de lo que pasó.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Tratamiento Anorexia Bulimia Chillán" },
+];
 
 export default function TratamientoAnorexiaBulimiaChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={tratamiento_anorexia_bulimia_chillanFAQs}
+        serviceType="Tratamiento Anorexia Bulimia"
+        serviceDescription={"Tratamiento psicológico para anorexia y bulimia en Chillán. Terapia especializada para recuperar tu salud y tu relación con la comida."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+      <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
         <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
         <div>

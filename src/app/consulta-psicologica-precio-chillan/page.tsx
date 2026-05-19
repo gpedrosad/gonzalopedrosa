@@ -2,80 +2,100 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import {
+  localBusinessSchema,
+  getBreadcrumbSchema,
+  getServiceSchema,
+  getFAQSchema,
+  getTwitterDescription,
+} from "@/lib/schemas";
+
+const description =
+  "Consulta psicológica en Chillán: $35.000 por sesión de 50 min, mismo valor online o presencial. Boleta Isapre, formas de pago y cancelación. Agenda sin compromiso.";
 
 export const metadata: Metadata = {
-  title: "Precio Consulta Psicológica en Chillán | Gonzalo Pedrosa",
-  description:
-    "Precios de consulta psicológica en Chillán. Valor de sesión, formas de pago y opciones de reembolso Isapre. Información clara y transparente.",
+  title: "Consulta psicológica precio Chillán | $35.000 | Gonzalo Pedrosa",
+  description,
   alternates: {
     canonical: "/consulta-psicologica-precio-chillan",
   },
   openGraph: {
-    title: "Precio Consulta Psicológica en Chillán | Gonzalo Pedrosa",
-    description: "Precios de consulta psicológica en Chillán. Valor de sesión, formas de pago y opciones de reembolso Isapre. Información clara y transparente.",
+    title: "Consulta psicológica precio Chillán | Gonzalo Pedrosa",
+    description,
     url: "https://www.gonzalopedrosa.cl/consulta-psicologica-precio-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Precio Consulta Psicológica en Chillán",
-    description: "Precios de consulta psicológica en Chillán. Valor de sesión, formas de pago y opciones de reembolso Isapre. Información clara y transparente.",
+    title: "Consulta psicológica precio Chillán",
+    description: getTwitterDescription(
+      "Sesión $35.000 en Chillán u online. Boleta Isapre, pago claro y política de cancelación. Reserva en el sitio."
+    ),
   },
 };
 
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Precio consulta psicológica" },
+];
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿La primera sesión tiene otro valor?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Todas las sesiones tienen el mismo valor, incluyendo la primera. No hay cargos adicionales por evaluación inicial."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuántas sesiones necesitaré?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Depende de cada caso y tus objetivos. Algunas personas ven mejorías en 8-12 sesiones, otras prefieren un proceso más largo. Lo definimos juntos según tu evolución."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Hay descuento por pack de sesiones?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Por el momento no ofrezco packs. Prefiero que avancemos sesión a sesión, sin compromisos de largo plazo que puedan generar presión."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuándo se paga?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "El pago se realiza antes de cada sesión, idealmente el mismo día o el día anterior por transferencia. También puedes pagar al inicio de la sesión presencial."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Hay política de cancelación?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Si necesitas cancelar, avísame con al menos 24 horas de anticipación para reagendar sin costo. Cancelaciones con menos de 24 horas se cobran el 50% del valor."
-      }
-    }
-  ]
-};
+const precioFAQs = [
+  {
+    question: "¿La primera sesión tiene otro valor?",
+    answer:
+      "No. Todas las sesiones tienen el mismo valor, incluyendo la primera. No hay cargos adicionales por evaluación inicial.",
+  },
+  {
+    question: "¿Cuántas sesiones necesitaré?",
+    answer:
+      "Depende de cada caso y tus objetivos. Algunas personas ven mejorías en 8-12 sesiones, otras prefieren un proceso más largo. Lo definimos juntos según tu evolución.",
+  },
+  {
+    question: "¿Hay descuento por pack de sesiones?",
+    answer:
+      "Por el momento no ofrezco packs. Prefiero que avancemos sesión a sesión, sin compromisos de largo plazo que puedan generar presión.",
+  },
+  {
+    question: "¿Cuándo se paga?",
+    answer:
+      "El pago se realiza antes de cada sesión, idealmente el mismo día o el día anterior por transferencia. También puedes pagar al inicio de la sesión presencial.",
+  },
+  {
+    question: "¿Hay política de cancelación?",
+    answer:
+      "Si necesitas cancelar, avísame con al menos 24 horas de anticipación para reagendar sin costo. Cancelaciones con menos de 24 horas se cobran el 50% del valor.",
+  },
+];
+
+const faqSchema = getFAQSchema(precioFAQs);
+const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
+const serviceSchema = getServiceSchema({
+  serviceType: "Consulta psicológica",
+  description:
+    "Sesión individual de psicología clínica de 50 minutos en Chillán o por videollamada, con boleta para reembolso Isapre.",
+  areaServed: "Chillán",
+});
 
 export default function ConsultaPsicologicaPrecioChillanPage() {
   return (
     <>
+      <Script
+        id="local-business"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <Script
+        id="breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Script
+        id="service"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Script
         id="faq-schema"
         type="application/ld+json"
@@ -90,19 +110,21 @@ export default function ConsultaPsicologicaPrecioChillanPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+        <Breadcrumb items={breadcrumbItems} />
+
       <div
         style={{
           display: "flex",
           alignItems: "center",
           gap: "1rem",
-          marginBottom: "1.5rem",
+          marginBottom: "2rem",
         }}
       >
         <Image
           src="/yo.png"
           alt="Gonzalo Pedrosa - Psicólogo"
-          width={56}
-          height={56}
+          width={64}
+          height={64}
           priority
           style={{
             borderRadius: "9999px",
@@ -110,19 +132,10 @@ export default function ConsultaPsicologicaPrecioChillanPage() {
           }}
         />
         <div>
-          <p
-            style={{
-              fontSize: "0.75rem",
-              fontWeight: 600,
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-              color: "#999",
-              marginBottom: "0.125rem",
-            }}
-          >
-            Chillán, Chile
+          <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>Gonzalo Pedrosa</p>
+          <p style={{ fontSize: "0.875rem", color: "#666" }}>
+            Psicólogo Clínico · +7 años · Boleta Isapre
           </p>
-          <p style={{ fontWeight: 500, color: "#000" }}>Gonzalo Pedrosa</p>
         </div>
       </div>
 
@@ -135,20 +148,56 @@ export default function ConsultaPsicologicaPrecioChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Consulta Psicológica Precio en Chillán
+        Consulta psicológica precio en Chillán
       </h1>
 
       <p
         style={{
           fontSize: "1.125rem",
           color: "#666",
-          marginBottom: "3rem",
+          marginBottom: "1.5rem",
           lineHeight: 1.6,
         }}
       >
-        Información clara sobre valores y formas de pago. Sin sorpresas ni
-        costos ocultos. Tu bienestar mental es una inversión que vale la pena.
+        La consulta psicológica en Chillán cuesta <strong style={{ color: "#000" }}>$35.000</strong> por
+        sesión de 50 minutos, con el mismo valor presencial u{" "}
+        <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+          online
+        </Link>
+        . Incluye boleta para reembolso Isapre y política de cancelación transparente.
       </p>
+
+      <div
+        style={{
+          marginBottom: "2rem",
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "0.75rem",
+          alignItems: "center",
+        }}
+      >
+        <Link
+          href="/agendar"
+          style={{
+            display: "inline-flex",
+            padding: "0.75rem 1.25rem",
+            backgroundColor: "#000",
+            color: "#fff",
+            borderRadius: "9999px",
+            textDecoration: "none",
+            fontWeight: 500,
+            fontSize: "0.875rem",
+          }}
+        >
+          Agendar consulta →
+        </Link>
+        <Link
+          href="/primera-consulta-psicologo-chillan"
+          style={{ fontSize: "0.875rem", color: "#666", textDecoration: "underline" }}
+        >
+          Qué esperar en la primera sesión
+        </Link>
+      </div>
 
       <section
         style={{
@@ -457,25 +506,37 @@ export default function ConsultaPsicologicaPrecioChillanPage() {
         >
           Escríbeme y te respondo personalmente. Sin compromiso.
         </p>
-        <a
-          href="https://wa.me/56968257817"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "0.5rem",
-            padding: "0.75rem 1.5rem",
-            backgroundColor: "#fff",
-            color: "#000",
-            borderRadius: "9999px",
-            textDecoration: "none",
-            fontWeight: 500,
-            fontSize: "0.875rem",
-          }}
-        >
-          Consultar por WhatsApp →
-        </a>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", alignItems: "center" }}>
+          <Link
+            href="/agendar"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              padding: "0.75rem 1.5rem",
+              backgroundColor: "#fff",
+              color: "#000",
+              borderRadius: "9999px",
+              textDecoration: "none",
+              fontWeight: 500,
+              fontSize: "0.875rem",
+            }}
+          >
+            Agendar en el sitio →
+          </Link>
+          <a
+            href="https://wa.me/56968257817"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "rgba(255,255,255,0.9)",
+              fontSize: "0.875rem",
+              textDecoration: "underline",
+            }}
+          >
+            O escribir por WhatsApp
+          </a>
+        </div>
       </section>
 
       <nav style={{ paddingTop: "2rem", borderTop: "1px solid #eaeaea" }}>

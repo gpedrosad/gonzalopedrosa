@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Psicólogo con Reembolso Isapre en Chillán | Gonzalo Pedrosa",
@@ -20,58 +22,48 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo con Reembolso Isapre en Chillán",
-    description: "Psicólogo en Chillán con boleta para reembolso Isapre. Atención particular con documentación válida para todas las Isapres. Sesiones presenciales y on",
+    description: getTwitterDescription("Psicólogo en Chillán con boleta para reembolso Isapre. Atención particular con documentación válida para todas las Isapres. Sesiones presenciales y on"),
   },
 };
 
 
-// FAQPage Schema para rich snippets en Google
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cuánto me reembolsa la Isapre?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Depende de tu plan. Generalmente las Isapres reembolsan entre el 50% y 80% del valor de la sesión, con un tope UF definido por tu cobertura. Consulta el detalle en tu cartola o portal web."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuándo recibo la boleta?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La boleta electrónica se emite el mismo día de la sesión y la recibes en tu correo. Puedes usarla inmediatamente para solicitar el reembolso."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Funciona para sesiones online?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, las Isapres aceptan reembolso tanto para sesiones presenciales como para terapia online. La boleta indica el servicio correctamente."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Necesito orden médica?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Para atención psicológica particular no necesitas orden médica ni derivación. Puedes agendar directamente."
-      }
-    }
-  ]
-};
+
+const psicologo_reembolso_isapre_chillanFAQs = [
+  {
+    question: "¿Cuánto me reembolsa la Isapre?",
+    answer:
+      "Depende de tu plan. Generalmente las Isapres reembolsan entre el 50% y 80% del valor de la sesión, con un tope UF definido por tu cobertura. Consulta el detalle en tu cartola o portal web.",
+  },
+  {
+    question: "¿Cuándo recibo la boleta?",
+    answer:
+      "La boleta electrónica se emite el mismo día de la sesión y la recibes en tu correo. Puedes usarla inmediatamente para solicitar el reembolso.",
+  },
+  {
+    question: "¿Funciona para sesiones online?",
+    answer:
+      "Sí, las Isapres aceptan reembolso tanto para sesiones presenciales como para terapia online. La boleta indica el servicio correctamente.",
+  },
+  {
+    question: "¿Necesito orden médica?",
+    answer:
+      "No. Para atención psicológica particular no necesitas orden médica ni derivación. Puedes agendar directamente.",
+  },
+];
+
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "Psicólogo Reembolso Isapre Chillán" },
+];
 
 export default function PsicologoReembolsoIsapreChillanPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <OrganicSeoScripts
+        breadcrumbItems={breadcrumbItems}
+        faqs={psicologo_reembolso_isapre_chillanFAQs}
+        serviceType="Psicología Reembolso Isapre"
+        serviceDescription={"Psicólogo en Chillán con boleta para reembolso Isapre. Atención particular con documentación válida para todas las Isapres. Sesiones presenciales y online."}
       />
       <main
       style={{
@@ -82,6 +74,7 @@ export default function PsicologoReembolsoIsapreChillanPage() {
           'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
+      <Breadcrumb items={breadcrumbItems} />
       <div
         style={{
           display: "flex",
@@ -445,7 +438,7 @@ export default function PsicologoReembolsoIsapreChillanPage() {
           {[
             { label: "Isapre", href: "/psicologo-isapre-chillan" },
             { label: "Particular", href: "/psicologo-particular-chillan" },
-            { label: "Online", href: "/terapia-online" },
+            { label: "Psicólogo online", href: "/psicologo-online-chillan" },
             { label: "Precios", href: "/consulta-psicologica-precio-chillan" },
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
           ].map((item, i) => (
