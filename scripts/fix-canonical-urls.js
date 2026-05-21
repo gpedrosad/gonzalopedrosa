@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable @typescript-eslint/no-require-imports */
 
 /**
  * Script para actualizar todas las URLs de gonzalopedrosa.cl a www.gonzalopedrosa.cl

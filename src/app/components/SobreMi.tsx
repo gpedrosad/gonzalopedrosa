@@ -38,6 +38,7 @@ const SobreMi: React.FC<SobreMiProps> = ({
   // Bloquear scroll y manejar ESC cuando el modal está abierto.
   React.useEffect(() => {
     if (!open) return;
+    const trigger = triggerRef.current;
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
@@ -48,7 +49,7 @@ const SobreMi: React.FC<SobreMiProps> = ({
       document.body.style.overflow = prevOverflow;
       document.removeEventListener("keydown", onKey);
       // Devolver foco al trigger
-      triggerRef.current?.focus();
+      trigger?.focus();
     };
   }, [open]);
 

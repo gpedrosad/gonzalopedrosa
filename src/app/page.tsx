@@ -158,7 +158,7 @@ export default function HomePage() {
             <span style={{ color: "#fbbf24", fontSize: "1.125rem" }}>★</span>
             <span style={{ fontWeight: 600 }}>4.8</span>
             <span style={{ color: "#999", fontSize: "0.875rem" }}>
-              · 280+ experiencias
+              · 124 reseñas
             </span>
           </div>
         </section>

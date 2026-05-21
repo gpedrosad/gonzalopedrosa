@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable @typescript-eslint/no-require-imports */
 /**
  * Script para actualizar SEO en todas las páginas de servicios
  * Agrega: Open Graph, Twitter Cards, FAQPage Schema
@@ -211,7 +212,6 @@ function main() {
 }
 
 main();
-
 
 
 

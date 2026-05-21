@@ -240,11 +240,6 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
   },
   { route: "/dejar-de-beber-chillan", changeFrequency: "monthly", priority: 0.8 },
   { route: "/psicologo-hipocondria-chillan", changeFrequency: "monthly", priority: 0.8 },
-  {
-    route: "/psicologo-especialista-ansiedad-chillan",
-    changeFrequency: "monthly",
-    priority: 0.8,
-  },
 ];
 
 export const ORGANIC_INDEXABLE_ROUTES = ORGANIC_SITEMAP_ENTRIES.map(

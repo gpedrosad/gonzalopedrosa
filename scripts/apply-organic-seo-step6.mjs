@@ -170,10 +170,6 @@ function slugToServiceType(slug) {
   return label;
 }
 
-function escapeForTemplate(s) {
-  return s.replace(/\\/g, "\\\\").replace(/`/g, "\\`").replace(/\$/g, "\\$");
-}
-
 function formatFaqsArray(faqs, varName) {
   const lines = faqs.map(
     (f) =>

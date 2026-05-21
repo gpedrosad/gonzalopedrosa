@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable @typescript-eslint/no-require-imports */
 
 /**
  * Script para aplicar mejoras de SEO a todas las páginas programáticas
@@ -101,7 +102,6 @@ pagesToUpdate.forEach((pageName) => {
 
   try {
     let content = fs.readFileSync(pagePath, 'utf8');
-    let modified = false;
 
     // 1. Verificar si ya tiene los imports necesarios
     if (!content.includes('import { Breadcrumb }')) {
@@ -116,7 +116,6 @@ pagesToUpdate.forEach((pageName) => {
       console.log(`   - Necesita agregar Breadcrumb`);
       
       updatedCount++;
-      modified = true;
     } else {
       console.log(`⏭️  ${pageName} ya está actualizado`);
       skippedCount++;

@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
-import { Button } from "../components/Button";
 
 export const metadata: Metadata = {
   title: "Psicólogo Cognitivo Conductual en Chillán, Chile | Gonzalo Pedrosa",
