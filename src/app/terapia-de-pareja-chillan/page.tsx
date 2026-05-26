@@ -12,16 +12,16 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Terapia de pareja en Chillán: espacio neutral para mejorar comunicación, celos y crisis. Presencial o videollamada con psicólogo clínico. Agendá tu primera sesión hoy.";
+  "Terapia de pareja en Chillán para mejorar comunicación, celos o crisis. Sesiones online y presenciales con psicólogo clínico. Agenda tu primera sesión y recibe respuesta en 24 h.";
 
 export const metadata: Metadata = {
-  title: "Terapia de pareja Chillán | Comunicación y conflictos | Gonzalo Pedrosa",
+  title: "Terapia de pareja en Chillán | Online o presencial | Gonzalo Pedrosa",
   description,
   alternates: {
     canonical: "/terapia-de-pareja-chillan",
   },
   openGraph: {
-    title: "Terapia de pareja Chillán | Gonzalo Pedrosa",
+    title: "Terapia de pareja en Chillán | Gonzalo Pedrosa",
     description,
     url: "https://www.gonzalopedrosa.cl/terapia-de-pareja-chillan",
     type: "website",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terapia de pareja Chillán",
+    title: "Terapia de pareja en Chillán",
     description: getTwitterDescription(
-      "Mejorá la comunicación en pareja en Chillán u online. Primera sesión con psicólogo clínico. Reserva en el sitio."
+      "Terapia de pareja online o presencial en Chillán. Comunicación, celos y crisis con agenda por web o WhatsApp."
     ),
   },
 };
@@ -535,4 +535,3 @@ export default function TerapiaParejaChillanPage() {
     </>
   );
 }
-

@@ -12,16 +12,16 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Psicólogo por depresión en Chillán con TCC basada en evidencia. Sesiones de 50 min presenciales u online desde $35.000. Boleta Isapre. Agenda tu primera consulta.";
+  "Psicólogo para depresión en Chillán con enfoque TCC. Sesiones online o presenciales, boleta Isapre y respuesta en menos de 24 horas para agendar tu primera consulta.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo depresión Chillán | TCC presencial y online | Gonzalo Pedrosa",
+  title: "Psicólogo para depresión en Chillán | TCC online y presencial",
   description,
   alternates: {
     canonical: "/psicologo-depresion-chillan",
   },
   openGraph: {
-    title: "Psicólogo depresión Chillán | Gonzalo Pedrosa",
+    title: "Psicólogo para depresión en Chillán | Gonzalo Pedrosa",
     description,
     url: "https://www.gonzalopedrosa.cl/psicologo-depresion-chillan",
     type: "website",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo depresión Chillán",
+    title: "Psicólogo para depresión en Chillán",
     description: getTwitterDescription(
-      "TCC para depresión en Chillán u online. $35.000 la sesión, boleta Isapre. Reserva en /agendar o WhatsApp."
+      "Terapia para depresión en Chillán u online, con TCC y boleta Isapre. Agenda por web o WhatsApp."
     ),
   },
 };
@@ -476,4 +476,3 @@ export default function PsicologoDepresionChillanPage() {
     </>
   );
 }
-

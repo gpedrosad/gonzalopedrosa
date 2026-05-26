@@ -13,16 +13,16 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Psicólogo online en Chillán atiende por videollamada a todo Chile. TCC, sesiones de 50 min, boleta Isapre y horarios flexibles. Reserva primera sesión por web o WhatsApp hoy.";
+  "Psicólogo online desde Chillán para todo Chile. Videollamada, TCC, boleta Isapre y horarios flexibles. Agenda tu primera sesión por web o WhatsApp.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo online Chillán | Agenda videollamada | Gonzalo Pedrosa",
+  title: "Psicólogo online en Chillán | Videollamada para todo Chile",
   description,
   alternates: {
     canonical: "/psicologo-online-chillan",
   },
   openGraph: {
-    title: "Psicólogo online Chillán | Gonzalo Pedrosa",
+    title: "Psicólogo online en Chillán | Gonzalo Pedrosa",
     description,
     url: `${SITE_URL}/psicologo-online-chillan`,
     type: "website",
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo online Chillán | Agenda videollamada",
+    title: "Psicólogo online en Chillán | Videollamada",
     description: getTwitterDescription(
-      "Sesiones por videollamada con TCC desde Chillán para todo Chile. Boleta Isapre y $35.000 por sesión. Agenda hoy."
+      "Psicólogo online para todo Chile, con videollamada, TCC y boleta Isapre. Agenda tu sesión hoy."
     ),
   },
 };

@@ -317,28 +317,45 @@ export default function HomePage() {
           </h2>
           <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
             {[
-              "Ansiedad",
-              "Crisis de pánico",
-              "Depresión",
-              "Estrés",
-              "Autoestima",
-              "Duelo",
-              "Relaciones",
-              "Hábitos",
-            ].map((item, i) => (
-              <span
-                key={i}
-                style={{
-                  padding: "0.5rem 1rem",
-                  backgroundColor: "#fafafa",
-                  borderRadius: "9999px",
-                  fontSize: "0.875rem",
-                  color: "#444",
-                }}
-              >
-                {item}
-              </span>
-            ))}
+              { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
+              { label: "Crisis de pánico", href: "/psicologo-crisis-de-panico-chillan" },
+              { label: "Depresión", href: "/psicologo-depresion-chillan" },
+              { label: "Estrés" },
+              { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },
+              { label: "Duelo", href: "/psicologo-duelo-chillan" },
+              { label: "Relaciones", href: "/terapia-de-pareja-chillan" },
+              { label: "Hábitos" },
+            ].map((item, i) =>
+              item.href ? (
+                <Link
+                  key={i}
+                  href={item.href}
+                  style={{
+                    padding: "0.5rem 1rem",
+                    backgroundColor: "#fafafa",
+                    borderRadius: "9999px",
+                    fontSize: "0.875rem",
+                    color: "#444",
+                    textDecoration: "none",
+                  }}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <span
+                  key={i}
+                  style={{
+                    padding: "0.5rem 1rem",
+                    backgroundColor: "#fafafa",
+                    borderRadius: "9999px",
+                    fontSize: "0.875rem",
+                    color: "#444",
+                  }}
+                >
+                  {item.label}
+                </span>
+              ),
+            )}
           </div>
         </section>
 
@@ -359,6 +376,7 @@ export default function HomePage() {
           <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
             {[
               { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
+              { label: "Depresión", href: "/psicologo-depresion-chillan" },
               { label: "Psicólogo online", href: "/psicologo-online-chillan" },
               { label: "Terapia de pareja", href: "/terapia-de-pareja-chillan" },
               { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },

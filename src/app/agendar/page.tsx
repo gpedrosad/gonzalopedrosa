@@ -369,6 +369,47 @@ export default function AgendarPage() {
           </p>
         </section>
 
+        <section style={{ marginBottom: "3rem" }}>
+          <h2
+            style={{
+              fontSize: "0.75rem",
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              color: "#999",
+              marginBottom: "1rem",
+            }}
+          >
+            Reservas frecuentes
+          </h2>
+          <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
+            Si ya sabes el motivo de consulta, estas páginas te ayudan a llegar con más contexto a la primera sesión.
+          </p>
+          <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+            {[
+              { label: "Psicólogo online", href: "/psicologo-online-chillan" },
+              { label: "Depresión", href: "/psicologo-depresion-chillan" },
+              { label: "Terapia de pareja", href: "/terapia-de-pareja-chillan" },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                style={{
+                  display: "inline-block",
+                  padding: "0.5rem 1rem",
+                  backgroundColor: "#f5f5f5",
+                  borderRadius: "9999px",
+                  fontSize: "0.875rem",
+                  color: "#000",
+                  textDecoration: "none",
+                }}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </section>
+
         <section
           style={{
             padding: "2rem",
@@ -422,6 +463,12 @@ export default function AgendarPage() {
           </Button>
           <Button href="/psicologo-online-chillan" variant="secondary">
             Psicólogo online
+          </Button>
+          <Button href="/psicologo-depresion-chillan" variant="secondary">
+            Depresión
+          </Button>
+          <Button href="/terapia-de-pareja-chillan" variant="secondary">
+            Terapia de pareja
           </Button>
           <Button href="/psicologo-ansiedad-chillan" variant="secondary">
             Ansiedad

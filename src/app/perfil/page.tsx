@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import Link from "next/link";
 import Profile from "../components/Perfil";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import {
@@ -99,6 +100,42 @@ export default function ProfilePage() {
         }}
       >
         <Breadcrumb items={breadcrumbItems} />
+        <section
+          style={{
+            marginBottom: "1.5rem",
+            padding: "1rem 1.25rem",
+            backgroundColor: "#fafafa",
+            borderRadius: "12px",
+          }}
+        >
+          <p style={{ color: "#444", lineHeight: 1.7, margin: "0 0 0.75rem" }}>
+            Si quieres ver cómo trabajo según el motivo de consulta, aquí tienes tres páginas que hoy concentran la prioridad SEO del sitio.
+          </p>
+          <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+            {[
+              { label: "Psicólogo online", href: "/psicologo-online-chillan" },
+              { label: "Depresión", href: "/psicologo-depresion-chillan" },
+              { label: "Terapia de pareja", href: "/terapia-de-pareja-chillan" },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                style={{
+                  display: "inline-block",
+                  padding: "0.5rem 1rem",
+                  backgroundColor: "#fff",
+                  border: "1px solid #e5e5e5",
+                  borderRadius: "9999px",
+                  fontSize: "0.875rem",
+                  color: "#000",
+                  textDecoration: "none",
+                }}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </section>
       </div>
       <Profile />
     </>
