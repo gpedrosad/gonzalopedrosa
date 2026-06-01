@@ -3,26 +3,30 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
-import { getTwitterDescription } from "@/lib/schemas";
+import { SITE_URL, getTwitterDescription } from "@/lib/schemas";
+
+const description =
+  "Apoyo psicológico para trastorno bipolar en Chillán. Terapia complementaria, coordinación con psiquiatría y estrategias para prevenir recaídas. Presencial u online.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Bipolaridad en Chillán | Gonzalo Pedrosa",
-  description:
-    "Psicólogo de apoyo para trastorno bipolar en Chillán. Terapia complementaria para manejar episodios, mejorar adherencia y calidad de vida.",
+  title: "Psicólogo para bipolaridad en Chillán | Apoyo complementario",
+  description,
   alternates: {
     canonical: "/psicologo-bipolaridad-chillan",
   },
   openGraph: {
-    title: "Psicólogo Bipolaridad en Chillán | Gonzalo Pedrosa",
-    description: "Psicólogo de apoyo para trastorno bipolar en Chillán. Terapia complementaria para manejar episodios, mejorar adherencia y calidad de vida.",
-    url: "https://www.gonzalopedrosa.cl/psicologo-bipolaridad-chillan",
+    title: "Psicólogo para bipolaridad en Chillán | Gonzalo Pedrosa",
+    description,
+    url: `${SITE_URL}/psicologo-bipolaridad-chillan`,
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo Bipolaridad en Chillán",
-    description: getTwitterDescription("Psicólogo de apoyo para trastorno bipolar en Chillán. Terapia complementaria para manejar episodios, mejorar adherencia y calidad de vida."),
+    title: "Psicólogo para bipolaridad en Chillán",
+    description: getTwitterDescription(
+      "Apoyo psicológico para trastorno bipolar en Chillán, con prevención de recaídas y coordinación con psiquiatría."
+    ),
   },
 };
 
@@ -57,8 +61,8 @@ export default function PsicologoBipolaridadChillanPage() {
       <OrganicSeoScripts
         breadcrumbItems={breadcrumbItems}
         faqs={psicologo_bipolaridad_chillanFAQs}
-        serviceType="Psicología Bipolaridad"
-        serviceDescription={"Psicólogo de apoyo para trastorno bipolar en Chillán. Terapia complementaria para manejar episodios, mejorar adherencia y calidad de vida."}
+        serviceType="Terapia complementaria para trastorno bipolar"
+        serviceDescription={description}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <Breadcrumb items={breadcrumbItems} />
@@ -73,13 +77,13 @@ export default function PsicologoBipolaridadChillanPage() {
       <p style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.75rem" }}>Chillán, Chile</p>
 
       <h1 style={{ fontSize: "2.5rem", fontWeight: 700, letterSpacing: "-0.03em", marginBottom: "1rem", lineHeight: 1.1 }}>
-        Psicólogo Bipolaridad en Chillán
+        Psicólogo para bipolaridad en Chillán
       </h1>
 
       <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "3rem", lineHeight: 1.6 }}>
-        El trastorno bipolar requiere tratamiento psiquiátrico, pero la terapia
-        psicológica es un complemento fundamental para mejorar la calidad de
-        vida y prevenir recaídas.
+        Si buscas psicólogo para bipolaridad en Chillán, la terapia funciona como
+        complemento del tratamiento psiquiátrico para mejorar adherencia, detectar
+        señales tempranas y reducir el riesgo de recaídas.
       </p>
 
       <section style={{ padding: "1.25rem", backgroundColor: "#fef3c7", borderRadius: "12px", marginBottom: "2.5rem", border: "1px solid #fcd34d" }}>
@@ -201,7 +205,6 @@ export default function PsicologoBipolaridadChillanPage() {
     </>
   );
 }
-
 
 
 

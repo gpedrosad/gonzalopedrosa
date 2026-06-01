@@ -15,12 +15,12 @@ export function middleware(request: NextRequest) {
   
   // Redirigir a www si no está presente (solo en producción)
   if (!isDev) {
-    const hostname = request.headers.get("host") || "";
+    const hostname = request.nextUrl.hostname;
     
     // Si la petición viene de gonzalopedrosa.cl (sin www), redirigir a www
     if (hostname === "gonzalopedrosa.cl" && CANONICAL_HOST === "www.gonzalopedrosa.cl") {
       const url = request.nextUrl.clone();
-      url.host = CANONICAL_HOST;
+      url.hostname = CANONICAL_HOST;
       return NextResponse.redirect(url, { status: 301 });
     }
   }
@@ -58,6 +58,8 @@ export function middleware(request: NextRequest) {
  */
 export const config = {
   matcher: [
+    "/robots.txt",
+    "/sitemap.xml",
     "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|.*\\.(?:png|jpg|jpeg|svg|ico|webp|avif|gif|xml|txt)$).*)",
   ],
 };

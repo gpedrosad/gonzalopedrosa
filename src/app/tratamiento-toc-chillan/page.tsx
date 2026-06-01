@@ -3,26 +3,30 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
-import { getTwitterDescription } from "@/lib/schemas";
+import { SITE_URL, getTwitterDescription } from "@/lib/schemas";
+
+const description =
+  "Tratamiento para TOC en Chillán con exposición y prevención de respuesta (EPR). Sesiones presenciales u online para obsesiones y compulsiones. Agenda evaluación.";
 
 export const metadata: Metadata = {
-  title: "Tratamiento TOC en Chillán, Chile | Gonzalo Pedrosa - Psicólogo",
-  description:
-    "Tratamiento para TOC (Trastorno Obsesivo Compulsivo) en Chillán, Chile. Terapia cognitivo-conductual con exposición y prevención de respuesta. Presencial y online.",
+  title: "Tratamiento TOC en Chillán | EPR y terapia cognitivo-conductual",
+  description,
   alternates: {
     canonical: "/tratamiento-toc-chillan",
   },
   openGraph: {
-    title: "Tratamiento TOC en Chillán, Chile | Gonzalo Pedrosa - Psicólogo",
-    description: "Tratamiento para TOC (Trastorno Obsesivo Compulsivo) en Chillán, Chile. Terapia cognitivo-conductual con exposición y prevención de respuesta. Presencial y online.",
-    url: "https://www.gonzalopedrosa.cl/tratamiento-toc-chillan",
+    title: "Tratamiento TOC en Chillán | Gonzalo Pedrosa",
+    description,
+    url: `${SITE_URL}/tratamiento-toc-chillan`,
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tratamiento TOC en Chillán, Chile | Gonzalo Pedrosa - Psicólogo",
-    description: getTwitterDescription("Tratamiento para TOC (Trastorno Obsesivo Compulsivo) en Chillán, Chile. Terapia cognitivo-conductual con exposición y prevención de respuesta. Presenc"),
+    title: "Tratamiento TOC en Chillán | EPR y TCC",
+    description: getTwitterDescription(
+      "Tratamiento para TOC en Chillán con EPR y TCC. Sesiones online o presenciales para obsesiones y compulsiones."
+    ),
   },
 };
 
@@ -58,7 +62,7 @@ export default function TratamientoTocChillanPage() {
         breadcrumbItems={breadcrumbItems}
         faqs={tratamiento_toc_chillanFAQs}
         serviceType="Tratamiento TOC"
-        serviceDescription={"Tratamiento para TOC (Trastorno Obsesivo Compulsivo) en Chillán, Chile. Terapia cognitivo-conductual con exposición y prevención de respuesta. Presencial y online."}
+        serviceDescription={description}
       />
       <main
       style={{
@@ -126,10 +130,10 @@ export default function TratamientoTocChillanPage() {
           lineHeight: 1.6,
         }}
       >
-        El Trastorno Obsesivo Compulsivo (TOC) se caracteriza por pensamientos
-        intrusivos (obsesiones) y comportamientos repetitivos (compulsiones).
-        Con el tratamiento adecuado, es posible reducir significativamente los
-        síntomas.
+        Si buscas tratamiento para TOC en Chillán, trabajo con Terapia
+        Cognitivo-Conductual y Exposición con Prevención de Respuesta (EPR)
+        para reducir obsesiones, compulsiones y el tiempo que el TOC consume
+        en tu día.
       </p>
 
       <section style={{ marginBottom: "3rem" }}>
@@ -450,4 +454,3 @@ export default function TratamientoTocChillanPage() {
     </>
   );
 }
-

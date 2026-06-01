@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import {
+  SITE_URL,
   localBusinessSchema,
   getBreadcrumbSchema,
   getServiceSchema,
@@ -12,26 +13,26 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Psicólogo por trauma de abuso sexual en Chillán: espacio confidencial, a tu ritmo, con EMDR y TCC. Presencial u online. Contacto discreto; agenda en el sitio.";
+  "Acompañamiento psicológico confidencial para abuso sexual en Chillán u online. EMDR y TCC, a tu ritmo, con reserva discreta y espacio seguro.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo abuso sexual Chillán | Espacio seguro | Gonzalo Pedrosa",
+  title: "Psicólogo por abuso sexual en Chillán | Atención confidencial",
   description,
   alternates: {
     canonical: "/psicologo-abuso-sexual-chillan",
   },
   openGraph: {
-    title: "Psicólogo abuso sexual Chillán | Gonzalo Pedrosa",
+    title: "Psicólogo por abuso sexual en Chillán | Gonzalo Pedrosa",
     description,
-    url: "https://www.gonzalopedrosa.cl/psicologo-abuso-sexual-chillan",
+    url: `${SITE_URL}/psicologo-abuso-sexual-chillan`,
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo abuso sexual Chillán",
+    title: "Psicólogo por abuso sexual en Chillán",
     description: getTwitterDescription(
-      "Acompañamiento confidencial por trauma en Chillán u online. EMDR y TCC. Reserva discreta en el sitio."
+      "Atención psicológica confidencial por abuso sexual en Chillán u online. EMDR y TCC, a tu ritmo, con reserva discreta."
     ),
   },
 };
@@ -104,7 +105,7 @@ export default function PsicologoAbusoSexualChillanPage() {
       <p style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.75rem" }}>Chillán, Chile</p>
 
       <h1 style={{ fontSize: "2.5rem", fontWeight: 700, letterSpacing: "-0.03em", marginBottom: "1rem", lineHeight: 1.1 }}>
-        Psicólogo Abuso Sexual en Chillán
+        Psicólogo por abuso sexual en Chillán
       </h1>
 
       <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "1.5rem", lineHeight: 1.6 }}>
@@ -263,7 +264,6 @@ export default function PsicologoAbusoSexualChillanPage() {
     </>
   );
 }
-
 
 
 

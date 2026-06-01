@@ -13,10 +13,10 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Psicólogo online desde Chillán para todo Chile. Videollamada, TCC, boleta Isapre y horarios flexibles. Agenda tu primera sesión por web o WhatsApp.";
+  "Psicólogo online en Chillán y para todo Chile. Videollamada, TCC, boleta Isapre y horarios flexibles. Agenda tu primera sesión por web o WhatsApp.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo online en Chillán | Videollamada para todo Chile",
+  title: "Psicólogo online en Chillán | Videollamada y boleta Isapre",
   description,
   alternates: {
     canonical: "/psicologo-online-chillan",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Psicólogo online en Chillán | Videollamada",
     description: getTwitterDescription(
-      "Psicólogo online para todo Chile, con videollamada, TCC y boleta Isapre. Agenda tu sesión hoy."
+      "Psicólogo online en Chillán y para todo Chile, con videollamada, TCC y boleta Isapre. Agenda tu sesión hoy."
     ),
   },
 };
@@ -177,9 +177,9 @@ export default function PsicologoOnlineChillanPage() {
             lineHeight: 1.6,
           }}
         >
-          Terapia psicológica por videollamada desde donde estés. Sin traslados, con la
-          misma calidad clínica que una sesión presencial. Atiendo a personas de todo
-          Chile con horarios flexibles.
+          Si buscas psicólogo online en Chillán, atiendo por videollamada con la misma
+          calidad clínica que una sesión presencial. También acompaño a personas de todo
+          Chile, con horarios flexibles y boleta para reembolso Isapre.
         </p>
 
         <div
