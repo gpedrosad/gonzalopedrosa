@@ -9,6 +9,7 @@ import {
   alcoholismPages,
   alcoholClusterOrder,
   alcoholClusterHubKey,
+  alcoholClusterActionLeaderKey,
   type AlcoholismPageKey,
 } from "@/lib/alcoholism-pages";
 import {
@@ -328,7 +329,9 @@ export function AlcoholismLandingPage({
                   key={relatedPage.slug}
                   href={relatedPage.slug}
                   className={`rounded-2xl border bg-white p-5 transition hover:-translate-y-0.5 hover:border-stone-300 hover:shadow-sm ${
-                    relatedPage.slug === alcoholismPages[alcoholClusterHubKey].slug
+                    relatedPage.slug === alcoholismPages[alcoholClusterHubKey].slug ||
+                    relatedPage.slug ===
+                      alcoholismPages[alcoholClusterActionLeaderKey].slug
                       ? "border-emerald-200 ring-1 ring-emerald-100"
                       : "border-stone-200"
                   }`}

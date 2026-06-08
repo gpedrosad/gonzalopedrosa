@@ -25,7 +25,7 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
     changeFrequency: "monthly",
     priority: 0.6,
   },
-  { route: "/terapia-online", changeFrequency: "monthly", priority: 0.8 },
+  { route: "/terapia-online", changeFrequency: "monthly", priority: 0.85 },
   {
     route: "/cuando-ir-al-psicologo-chillan",
     changeFrequency: "monthly",
@@ -34,7 +34,7 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
   {
     route: "/terapia-online-vs-presencial-chillan",
     changeFrequency: "monthly",
-    priority: 0.85,
+    priority: 0.65,
   },
   {
     route: "/primera-consulta-psicologo-chillan",
@@ -91,15 +91,15 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
     priority: 0.8,
   },
   { route: "/psicologo-particular-chillan", changeFrequency: "monthly", priority: 0.8 },
-  { route: "/psicologo-online-chillan", changeFrequency: "monthly", priority: 0.8 },
+  { route: "/psicologo-online-chillan", changeFrequency: "monthly", priority: 0.9 },
   {
     route: "/consulta-psicologica-precio-chillan",
     changeFrequency: "monthly",
     priority: 0.8,
   },
-  { route: "/terapia-de-pareja-chillan", changeFrequency: "monthly", priority: 0.8 },
-  { route: "/psicologo-matrimonial-chillan", changeFrequency: "monthly", priority: 0.8 },
-  { route: "/terapia-celos-chillan", changeFrequency: "monthly", priority: 0.8 },
+  { route: "/terapia-de-pareja-chillan", changeFrequency: "monthly", priority: 0.9 },
+  { route: "/psicologo-matrimonial-chillan", changeFrequency: "monthly", priority: 0.65 },
+  { route: "/terapia-celos-chillan", changeFrequency: "monthly", priority: 0.65 },
   {
     route: "/psicologo-ruptura-amorosa-chillan",
     changeFrequency: "monthly",
@@ -231,14 +231,14 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
     changeFrequency: "monthly",
     priority: 0.8,
   },
-  { route: "/alcoholismo-chillan", changeFrequency: "monthly", priority: 0.8 },
-  { route: "/psicologo-alcoholismo-chillan", changeFrequency: "monthly", priority: 0.8 },
+  { route: "/alcoholismo-chillan", changeFrequency: "monthly", priority: 0.9 },
+  { route: "/psicologo-alcoholismo-chillan", changeFrequency: "monthly", priority: 0.65 },
   {
     route: "/tratamiento-alcoholismo-chillan",
     changeFrequency: "monthly",
-    priority: 0.8,
+    priority: 0.65,
   },
-  { route: "/dejar-de-beber-chillan", changeFrequency: "monthly", priority: 0.8 },
+  { route: "/dejar-de-beber-chillan", changeFrequency: "monthly", priority: 0.85 },
   { route: "/psicologo-hipocondria-chillan", changeFrequency: "monthly", priority: 0.8 },
 ];
 

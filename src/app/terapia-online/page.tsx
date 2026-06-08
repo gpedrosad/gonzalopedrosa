@@ -3,7 +3,12 @@ import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { IntentClusterSection } from "@/app/components/IntentClusterSection";
 import { Button } from "../components/Button";
+import {
+  ONLINE_CLUSTER,
+  getClusterBreadcrumb,
+} from "@/lib/intent-clusters";
 import {
   SITE_URL,
   localBusinessSchema,
@@ -38,10 +43,10 @@ export const metadata: Metadata = {
   },
 };
 
-const breadcrumbItems = [
-  { label: "Inicio", href: "/" },
-  { label: "Terapia online" },
-];
+const breadcrumbItems = getClusterBreadcrumb(
+  ONLINE_CLUSTER,
+  "/terapia-online",
+);
 
 const terapiaOnlineFAQs = [
   {
@@ -465,48 +470,13 @@ export default function TerapiaOnlinePage() {
           <Button href="/agendar">Agendar sesión</Button>
         </section>
 
-        <nav
-          style={{
-            paddingTop: "2rem",
-            borderTop: "1px solid #eaeaea",
-          }}
-        >
-          <p
-            style={{
-              fontSize: "0.75rem",
-              fontWeight: 600,
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-              color: "#999",
-              marginBottom: "0.75rem",
-            }}
-          >
-            Servicios relacionados
-          </p>
-          <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-            {[
-              { label: "Psicólogo online", href: "/psicologo-online-chillan" },
-              { label: "Online vs presencial", href: "/terapia-online-vs-presencial-chillan" },
-              { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
-              { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
-            ].map((item, i) => (
-              <Link
-                key={i}
-                href={item.href}
-                style={{
-                  color: "#666",
-                  fontSize: "0.875rem",
-                  textDecoration: "none",
-                  padding: "0.375rem 0.75rem",
-                  border: "1px solid #eaeaea",
-                  borderRadius: "9999px",
-                }}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
-        </nav>
+        <IntentClusterSection
+          currentPath="/terapia-online"
+          extraLinks={[
+            { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
+            { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
+          ]}
+        />
       </main>
     </>
   );

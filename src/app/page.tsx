@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { JsonLd } from "@/app/components/JsonLd";
 import {
   SITE_URL,
   localBusinessSchema,
@@ -82,26 +82,11 @@ const testimonios = [
 export default function HomePage() {
   return (
     <>
-      <Script
-        id="local-business"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <Script
-        id="service"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <main
         style={{
           maxWidth: 640,
           margin: "0 auto",
-          padding: "4rem 1.5rem",
+          padding: "2.5rem 1.5rem 4rem",
           fontFamily:
             'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
         }}
@@ -114,6 +99,8 @@ export default function HomePage() {
             width={120}
             height={120}
             priority
+            sizes="120px"
+            fetchPriority="high"
             style={{
               borderRadius: "9999px",
               objectFit: "cover",
@@ -532,6 +519,9 @@ export default function HomePage() {
           </p>
         </footer>
       </main>
+      <JsonLd id="local-business" data={localBusinessSchema} />
+      <JsonLd id="service" data={serviceSchema} />
+      <JsonLd id="faq-schema" data={faqSchema} />
     </>
   );
 }

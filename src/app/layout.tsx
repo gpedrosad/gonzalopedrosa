@@ -1,16 +1,91 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
-import { GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/react";
+import { DeferredAnalytics } from "@/app/components/DeferredAnalytics";
 import { CANONICAL_ORIGIN } from "@/lib/site-config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
+  preload: false,
 });
+
+const GTM_ID = "GTM-N3DXMKTR";
+
+const layoutLdGraph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.gonzalopedrosa.cl/#persona",
+      name: "Gonzalo Pedrosa",
+      jobTitle: "Psicólogo Clínico",
+      description:
+        "Psicólogo con más de 7 años de experiencia en atención clínica. Especialista en terapia cognitivo-conductual.",
+      image: "https://www.gonzalopedrosa.cl/yo.png",
+      url: "https://www.gonzalopedrosa.cl/",
+      sameAs: ["https://wa.me/56968257817"],
+      knowsAbout: [
+        "Ansiedad",
+        "Depresión",
+        "Terapia Cognitivo-Conductual",
+        "Crisis de pánico",
+        "Estrés",
+      ],
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.gonzalopedrosa.cl/#servicio",
+      name: "Gonzalo Pedrosa - Psicólogo",
+      provider: { "@id": "https://www.gonzalopedrosa.cl/#persona" },
+      areaServed: [
+        {
+          "@type": "City",
+          name: "Chillán",
+          "@id": "https://www.wikidata.org/wiki/Q203727",
+        },
+        { "@type": "Country", name: "Chile" },
+      ],
+      serviceType: [
+        "Psicoterapia individual",
+        "Terapia online",
+        "Terapia cognitivo-conductual",
+      ],
+      url: "https://www.gonzalopedrosa.cl/",
+      image: "https://www.gonzalopedrosa.cl/yo.png",
+      description:
+        "Atención psicológica profesional para ansiedad, depresión, estrés y más. Sesiones online y presenciales en Chillán.",
+      priceRange: "$35.000 CLP",
+      telephone: "+56968257817",
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Servicios de Psicología",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Sesión individual",
+              description:
+                "Sesión de psicoterapia de 50 minutos, online o presencial",
+            },
+            price: "35000",
+            priceCurrency: "CLP",
+          },
+        ],
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.8",
+        reviewCount: "124",
+        bestRating: "5",
+      },
+    },
+  ],
+};
 
 /**
  * Metadata base del sitio.
@@ -63,65 +138,12 @@ export default function RootLayout({
         {/* Referrer reducido: menos fuga de parámetros a terceros */}
         <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-        {/* ─────────────────────────────────────────────────────────────
-           JSON-LD estructurado: Person + ProfessionalService + Offer
-           ───────────────────────────────────────────────────────────── */}
-        <Script id="ld-professional" type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "Person",
-                "@id": "https://www.gonzalopedrosa.cl/#persona",
-                name: "Gonzalo Pedrosa",
-                jobTitle: "Psicólogo Clínico",
-                description: "Psicólogo con más de 7 años de experiencia en atención clínica. Especialista en terapia cognitivo-conductual.",
-                image: "https://www.gonzalopedrosa.cl/yo.png",
-                url: "https://www.gonzalopedrosa.cl/",
-                sameAs: ["https://wa.me/56968257817"],
-                knowsAbout: ["Ansiedad", "Depresión", "Terapia Cognitivo-Conductual", "Crisis de pánico", "Estrés"],
-              },
-              {
-                "@type": "ProfessionalService",
-                "@id": "https://www.gonzalopedrosa.cl/#servicio",
-                name: "Gonzalo Pedrosa - Psicólogo",
-                provider: { "@id": "https://www.gonzalopedrosa.cl/#persona" },
-                areaServed: [
-                  { "@type": "City", name: "Chillán", "@id": "https://www.wikidata.org/wiki/Q203727" },
-                  { "@type": "Country", name: "Chile" },
-                ],
-                serviceType: ["Psicoterapia individual", "Terapia online", "Terapia cognitivo-conductual"],
-                url: "https://www.gonzalopedrosa.cl/",
-                image: "https://www.gonzalopedrosa.cl/yo.png",
-                description: "Atención psicológica profesional para ansiedad, depresión, estrés y más. Sesiones online y presenciales en Chillán.",
-                priceRange: "$35.000 CLP",
-                telephone: "+56968257817",
-                hasOfferCatalog: {
-                  "@type": "OfferCatalog",
-                  name: "Servicios de Psicología",
-                  itemListElement: [
-                    {
-                      "@type": "Offer",
-                      itemOffered: {
-                        "@type": "Service",
-                        name: "Sesión individual",
-                        description: "Sesión de psicoterapia de 50 minutos, online o presencial",
-                      },
-                      price: "35000",
-                      priceCurrency: "CLP",
-                    },
-                  ],
-                },
-                aggregateRating: {
-                  "@type": "AggregateRating",
-                  ratingValue: "4.8",
-                  reviewCount: "124",
-                  bestRating: "5",
-                },
-              },
-            ],
-          })}
-        </Script>
+        {/* JSON-LD: script nativo (no bloquea render como next/script) */}
+        <script
+          id="ld-professional"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(layoutLdGraph) }}
+        />
 
         {/* Favicons */}
         <link rel="icon" href="/favicon.ico" />
@@ -142,7 +164,7 @@ export default function RootLayout({
            - Sin <noscript> (evita disparos en crawlers/headless)
            Esto reduce señales a bots y mantiene consistencia de contenido.
            ───────────────────────────────────────────────────────────── */}
-        <Script id="fbq-lazy" strategy="afterInteractive">
+        <Script id="fbq-lazy" strategy="lazyOnload">
           {`
             (function (w, d, pid) {
               if (!pid) return;
@@ -184,8 +206,15 @@ export default function RootLayout({
 
       <body className={`${geistSans.variable} antialiased`}>
         {children}
-        <GoogleTagManager gtmId="GTM-N3DXMKTR" />
-        <Analytics />
+        <Script id="gtm-init" strategy="lazyOnload">
+          {`(function(w,l){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});})(window,'dataLayer');`}
+        </Script>
+        <Script
+          id="gtm"
+          src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
+          strategy="lazyOnload"
+        />
+        <DeferredAnalytics />
       </body>
     </html>
   );

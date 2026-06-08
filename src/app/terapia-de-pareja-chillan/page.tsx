@@ -3,6 +3,11 @@ import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { IntentClusterSection } from "@/app/components/IntentClusterSection";
+import {
+  COUPLES_CLUSTER,
+  getClusterBreadcrumb,
+} from "@/lib/intent-clusters";
 import {
   SITE_URL,
   localBusinessSchema,
@@ -13,16 +18,16 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Psicólogo para terapia de pareja en Chillán. Mejoren comunicación, confianza, celos o crisis con sesiones online o presenciales. Agenda la primera evaluación.";
+  "¿Distancia o discusiones en la pareja? Terapia de pareja en Chillán con psicólogo TCC. Sesiones online o presenciales. Agenda tu primera evaluación hoy.";
 
 export const metadata: Metadata = {
-  title: "Terapia de pareja en Chillán | Psicólogo online y presencial",
+  title: "Terapia de pareja Chillán | Comunicación, celos y crisis",
   description,
   alternates: {
     canonical: "/terapia-de-pareja-chillan",
   },
   openGraph: {
-    title: "Terapia de pareja en Chillán | Gonzalo Pedrosa",
+    title: "Terapia de pareja Chillán | Comunicación, celos y crisis",
     description,
     url: `${SITE_URL}/terapia-de-pareja-chillan`,
     type: "website",
@@ -30,17 +35,17 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terapia de pareja en Chillán | Comunicación y crisis",
+    title: "Terapia de pareja Chillán | Comunicación y crisis",
     description: getTwitterDescription(
-      "Terapia de pareja en Chillán para comunicación, celos o crisis. Sesiones online o presenciales con reserva por web o WhatsApp."
+      "Terapia de pareja en Chillán: comunicación, celos o crisis. Psicólogo TCC. Online o presencial. Agenda por web o WhatsApp."
     ),
   },
 };
 
-const breadcrumbItems = [
-  { label: "Inicio", href: "/" },
-  { label: "Terapia de pareja Chillán" },
-];
+const breadcrumbItems = getClusterBreadcrumb(
+  COUPLES_CLUSTER,
+  "/terapia-de-pareja-chillan",
+);
 
 const parejaFAQs = [
   {
@@ -168,7 +173,11 @@ export default function TerapiaParejaChillanPage() {
         }}
       >
         Si están buscando terapia de pareja en Chillán, este espacio ayuda a trabajar
-        comunicación, distancia emocional, celos, confianza o crisis de convivencia,
+        comunicación, distancia emocional,{" "}
+        <Link href="/terapia-celos-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+          celos
+        </Link>
+        , confianza o crisis de convivencia,
         en formato presencial u{" "}
         <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
           online
@@ -495,44 +504,13 @@ export default function TerapiaParejaChillanPage() {
         </div>
       </section>
 
-      <nav style={{ paddingTop: "2rem", borderTop: "1px solid #eaeaea" }}>
-        <p
-          style={{
-            fontSize: "0.75rem",
-            fontWeight: 600,
-            textTransform: "uppercase",
-            letterSpacing: "0.1em",
-            color: "#999",
-            marginBottom: "0.75rem",
-          }}
-        >
-          Servicios relacionados
-        </p>
-        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-          {[
-            { label: "Celos", href: "/terapia-celos-chillan" },
-            { label: "Matrimonial", href: "/psicologo-matrimonial-chillan" },
-            { label: "Dependencia emocional", href: "/psicologo-ansiedad-chillan" },
-            { label: "Online", href: "/psicologo-online-chillan" },
-            { label: "Precios", href: "/consulta-psicologica-precio-chillan" },
-          ].map((item, i) => (
-            <Link
-              key={i}
-              href={item.href}
-              style={{
-                color: "#666",
-                fontSize: "0.875rem",
-                textDecoration: "none",
-                padding: "0.375rem 0.75rem",
-                border: "1px solid #eaeaea",
-                borderRadius: "9999px",
-              }}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      </nav>
+      <IntentClusterSection
+        currentPath="/terapia-de-pareja-chillan"
+        extraLinks={[
+          { label: "Psicólogo online", href: "/psicologo-online-chillan" },
+          { label: "Precios", href: "/consulta-psicologica-precio-chillan" },
+        ]}
+      />
     </main>
     </>
   );

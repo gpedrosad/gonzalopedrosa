@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { IntentClusterSection } from "@/app/components/IntentClusterSection";
 import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import {
+  COUPLES_CLUSTER,
+  getClusterBreadcrumb,
+} from "@/lib/intent-clusters";
 import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
@@ -51,10 +56,10 @@ const psicologo_matrimonial_chillanFAQs = [
   },
 ];
 
-const breadcrumbItems = [
-  { label: "Inicio", href: "/" },
-  { label: "Psicólogo Matrimonial Chillán" },
-];
+const breadcrumbItems = getClusterBreadcrumb(
+  COUPLES_CLUSTER,
+  "/psicologo-matrimonial-chillan",
+);
 
 export default function PsicologoMatrimonialChillanPage() {
   return (
@@ -413,43 +418,13 @@ export default function PsicologoMatrimonialChillanPage() {
         </a>
       </section>
 
-      <nav style={{ paddingTop: "2rem", borderTop: "1px solid #eaeaea" }}>
-        <p
-          style={{
-            fontSize: "0.75rem",
-            fontWeight: 600,
-            textTransform: "uppercase",
-            letterSpacing: "0.1em",
-            color: "#999",
-            marginBottom: "0.75rem",
-          }}
-        >
-          Servicios relacionados
-        </p>
-        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-          {[
-            { label: "Terapia de pareja", href: "/terapia-de-pareja-chillan" },
-            { label: "Celos", href: "/terapia-celos-chillan" },
-            { label: "Psicólogo online", href: "/psicologo-online-chillan" },
-            { label: "Precios", href: "/consulta-psicologica-precio-chillan" },
-          ].map((item, i) => (
-            <Link
-              key={i}
-              href={item.href}
-              style={{
-                color: "#666",
-                fontSize: "0.875rem",
-                textDecoration: "none",
-                padding: "0.375rem 0.75rem",
-                border: "1px solid #eaeaea",
-                borderRadius: "9999px",
-              }}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      </nav>
+      <IntentClusterSection
+        currentPath="/psicologo-matrimonial-chillan"
+        extraLinks={[
+          { label: "Psicólogo online", href: "/psicologo-online-chillan" },
+          { label: "Precios", href: "/consulta-psicologica-precio-chillan" },
+        ]}
+      />
     </main>
     </>
   );

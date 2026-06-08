@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { IntentClusterSection } from "@/app/components/IntentClusterSection";
 import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import {
+  COUPLES_CLUSTER,
+  getClusterBreadcrumb,
+} from "@/lib/intent-clusters";
 import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
@@ -45,10 +50,10 @@ const terapia_celos_chillanFAQs = [
   },
 ];
 
-const breadcrumbItems = [
-  { label: "Inicio", href: "/" },
-  { label: "Terapia Celos Chillán" },
-];
+const breadcrumbItems = getClusterBreadcrumb(
+  COUPLES_CLUSTER,
+  "/terapia-celos-chillan",
+);
 
 export default function TerapiaCelosChillanPage() {
   return (
@@ -426,44 +431,13 @@ export default function TerapiaCelosChillanPage() {
         </a>
       </section>
 
-      <nav style={{ paddingTop: "2rem", borderTop: "1px solid #eaeaea" }}>
-        <p
-          style={{
-            fontSize: "0.75rem",
-            fontWeight: 600,
-            textTransform: "uppercase",
-            letterSpacing: "0.1em",
-            color: "#999",
-            marginBottom: "0.75rem",
-          }}
-        >
-          Servicios relacionados
-        </p>
-        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-          {[
-            { label: "Terapia de pareja", href: "/terapia-de-pareja-chillan" },
-            { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },
-            { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
-            { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
-            { label: "Psicólogo online", href: "/psicologo-online-chillan" },
-          ].map((item, i) => (
-            <Link
-              key={i}
-              href={item.href}
-              style={{
-                color: "#666",
-                fontSize: "0.875rem",
-                textDecoration: "none",
-                padding: "0.375rem 0.75rem",
-                border: "1px solid #eaeaea",
-                borderRadius: "9999px",
-              }}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      </nav>
+      <IntentClusterSection
+        currentPath="/terapia-celos-chillan"
+        extraLinks={[
+          { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },
+          { label: "Psicólogo online", href: "/psicologo-online-chillan" },
+        ]}
+      />
     </main>
     </>
   );

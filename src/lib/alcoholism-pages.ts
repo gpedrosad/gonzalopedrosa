@@ -10,6 +10,10 @@ export type AlcoholismPageKey = (typeof alcoholClusterOrder)[number];
 /** Página hub del cluster; el resto enlazan aquí en breadcrumb y navegación. */
 export const alcoholClusterHubKey: AlcoholismPageKey = "alcoholismo-chillan";
 
+/** Intención transaccional fuerte (dejar de beber); destacada en el hub. */
+export const alcoholClusterActionLeaderKey: AlcoholismPageKey =
+  "dejar-de-beber-chillan";
+
 type QuickFact = {
   title: string;
   description: string;
