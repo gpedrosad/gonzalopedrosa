@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import type { GscDashboardData } from "@/lib/gsc";
 
+import { InternoNav } from "../../components/InternoNav";
+
 import { GscCtrSection } from "./GscCtrSection";
 import { GscExecutiveSummary } from "./GscExecutiveSummary";
 import { GscIndexingSection } from "./GscIndexingSection";
@@ -20,7 +22,13 @@ const shellStyle: CSSProperties = {
   fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
 };
 
-export function GscDashboard({ data }: { data: GscDashboardData }) {
+export function GscDashboard({
+  data,
+  keyParam,
+}: {
+  data: GscDashboardData;
+  keyParam?: string;
+}) {
   return (
     <main style={shellStyle}>
       <p
@@ -35,6 +43,8 @@ export function GscDashboard({ data }: { data: GscDashboardData }) {
       >
         Interno · No indexable
       </p>
+
+      <InternoNav current="gsc" keyParam={keyParam} />
 
       <h1
         style={{

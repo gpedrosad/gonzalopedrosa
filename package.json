@@ -9,17 +9,24 @@
     "lint": "eslint",
     "seo:audit": "node scripts/seo-audit.mjs",
     "gsc:auth": "node --env-file=.env.local scripts/gsc-report.mjs --auth",
-    "gsc:report": "node --env-file=.env.local scripts/gsc-report.mjs"
+    "gsc:report": "node --env-file=.env.local scripts/gsc-report.mjs",
+    "google-ads:auth": "node --env-file=.env.local scripts/google-ads-auth.mjs",
+    "google-ads:list-accounts": "node --env-file=.env.local scripts/google-ads-auth.mjs --list-accounts",
+    "google-ads:report": "node --env-file=.env.local scripts/google-ads-report.mjs",
+    "google-ads:informe": "node --env-file=.env.local scripts/google-ads-informe-ads.mjs",
+    "google-ads:negatives": "node --env-file=.env.local scripts/google-ads-negatives.mjs",
+    "google-ads:adolescentes-landing": "node --env-file=.env.local scripts/google-ads-set-adolescentes-landing.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.1.1",
     "@vercel/analytics": "^1.5.0",
     "framer-motion": "^12.23.22",
+    "google-ads-api": "^23.0.1",
+    "googleapis": "^171.4.0",
     "next": "15.5.9",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "react-icons": "^5.5.0",
-    "googleapis": "^171.4.0"
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

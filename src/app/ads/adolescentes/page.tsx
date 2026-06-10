@@ -3,17 +3,17 @@ import { AdsProfileImage } from "../components/AdsProfileImage";
 import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Online para Adolescentes | Terapia Online",
+  title: "Terapia Online para Adolescentes | Psicólogo Online",
   description:
-    "Terapia online para adolescentes con ansiedad, depresión, pánico o dificultades de conducta. Psicólogo online. Consultá por WhatsApp.",
+    "Terapia emocional online para adolescentes: ansiedad, depresión, pánico y conducta. Psicólogo online por videollamada. Desde 14 años. Agenda por WhatsApp.",
   robots: {
     index: false,
     follow: false,
   },
   openGraph: {
-    title: "Psicólogo Online para Adolescentes | Terapia Online",
+    title: "Terapia Online para Adolescentes | Psicólogo Online",
     description:
-      "Terapia online para adolescentes con ansiedad, depresión, pánico o dificultades de conducta. Psicólogo online especializado.",
+      "Terapia emocional online para adolescentes con ansiedad, depresión, pánico o cambios de conducta. Psicólogo online por videollamada.",
     url: "https://www.gonzalopedrosa.cl/ads/adolescentes",
     type: "website",
     images: [
@@ -90,26 +90,31 @@ export default function Page() {
           </div>
 
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-4 leading-tight">
-            Psicólogo Online para Adolescentes
+            Terapia Online para Adolescentes
           </h1>
 
-          <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-            Ansiedad, depresión, pánico, conducta y bullying. Terapia online 
-            especializada para adolescentes en un espacio seguro y confidencial. 
-            Sesiones de 50 minutos por videollamada.
+          <p className="text-lg text-gray-600 mb-4 leading-relaxed">
+            Terapia emocional online para adolescentes con ansiedad, depresión, pánico,
+            cambios de conducta o dificultades escolares. Videollamada privada, enfoque
+            cognitivo-conductual y espacio seguro para tu hijo/a.
+          </p>
+
+          <p className="text-sm text-gray-500 mb-6">
+            Desde 14 años · Sesiones de 50 min · $35.000 CLP
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 mb-3">
             <AdsWhatsAppButton
               href={WHATSAPP_HREF}
+              label="ads-adolescentes-hero"
               className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md"
             >
-              Consultar disponibilidad
+              Agendar sesión online
             </AdsWhatsAppButton>
           </div>
 
           <p className="text-sm text-green-700 font-medium mb-2">
-            ✓ Agenda inicial en menos de 24 horas
+            ✓ Coordinamos primera sesión por WhatsApp
           </p>
 
           <p className="text-sm text-gray-500 flex items-center gap-2">
@@ -122,7 +127,7 @@ export default function Page() {
         <section className="px-4 py-10 md:py-14 bg-gray-50">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-6">
-              ¿Esto le está pasando a tu hijo/a?
+              ¿Tu hijo/a necesita terapia emocional online?
             </h2>
 
             <div className="grid grid-cols-2 gap-2 md:gap-3">
@@ -301,9 +306,10 @@ export default function Page() {
             </p>
             <AdsWhatsAppButton
               href={WHATSAPP_HREF}
+              label="ads-adolescentes-mid"
               className="bg-white hover:bg-gray-100 text-gray-900 font-semibold"
             >
-              Consultá disponibilidad por WhatsApp
+              Agendar sesión online
             </AdsWhatsAppButton>
             <p className="text-gray-400 text-sm mt-3">
               Sin lista de espera · Sin compromiso
@@ -420,9 +426,10 @@ export default function Page() {
 
           <AdsWhatsAppButton
             href={WHATSAPP_HREF}
+            label="ads-adolescentes-final"
             className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-lg text-base"
           >
-            Agendar primera sesión
+            Agendar sesión online
           </AdsWhatsAppButton>
 
           <p className="text-sm text-gray-500 mt-4">
@@ -441,9 +448,10 @@ export default function Page() {
           </div>
           <AdsWhatsAppButton
             href={WHATSAPP_HREF}
+            label="ads-adolescentes-sticky"
             className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
           >
-            Consultar disponibilidad
+            Agendar sesión online
           </AdsWhatsAppButton>
         </div>
       </main>
