@@ -364,7 +364,7 @@ export default function HomePage() {
             {[
               { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
               { label: "Depresión", href: "/psicologo-depresion-chillan" },
-              { label: "Psicólogo online", href: "/psicologo-online-chillan" },
+              { label: "Psicólogo online Chillán", href: "/psicologo-online-chillan" },
               { label: "Terapia de pareja", href: "/terapia-de-pareja-chillan" },
               { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
               { label: "Primera consulta", href: "/primera-consulta-psicologo-chillan" },

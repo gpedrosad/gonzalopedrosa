@@ -21,7 +21,10 @@ export function middleware(request: NextRequest) {
     if (hostname === "gonzalopedrosa.cl" && CANONICAL_HOST === "www.gonzalopedrosa.cl") {
       const url = request.nextUrl.clone();
       url.hostname = CANONICAL_HOST;
-      return NextResponse.redirect(url, { status: 301 });
+      url.protocol = "https:";
+      const response = NextResponse.redirect(url, { status: 301 });
+      response.headers.set("Link", `<${url.toString()}>; rel="canonical"`);
+      return response;
     }
   }
 

@@ -78,11 +78,13 @@ export function getServiceSchema(params: {
   serviceType: string;
   description: string;
   areaServed?: string;
+  url?: string;
 }) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType: params.serviceType,
+    url: params.url,
     provider: {
       "@id": `${SITE_URL}/#persona`,
     },
@@ -159,6 +161,45 @@ export const baseFAQs = [
       "Sí, emito boleta electrónica que puedes presentar a tu Isapre para reembolso. El proceso es simple y te guío en los pasos.",
   },
 ];
+
+/**
+ * Genera FAQPage Schema solo con las FAQs visibles en la página (mejor para rich results).
+ */
+export function getPageFAQSchema(customFAQs: Array<{ question: string; answer: string }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: customFAQs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
+/**
+ * Genera WebPage Schema para páginas de servicio.
+ */
+export function getWebPageSchema(params: {
+  name: string;
+  description: string;
+  path: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${params.path}#webpage`,
+    name: params.name,
+    description: params.description,
+    url: `${SITE_URL}${params.path}`,
+    isPartOf: { "@id": `${SITE_URL}/#servicio` },
+    about: { "@id": `${SITE_URL}/#persona` },
+    inLanguage: "es-CL",
+  };
+}
 
 /**
  * Genera FAQPage Schema con FAQs personalizadas + base

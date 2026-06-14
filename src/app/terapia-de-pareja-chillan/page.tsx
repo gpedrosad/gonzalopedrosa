@@ -13,21 +13,22 @@ import {
   localBusinessSchema,
   getBreadcrumbSchema,
   getServiceSchema,
-  getFAQSchema,
+  getPageFAQSchema,
+  getWebPageSchema,
   getTwitterDescription,
 } from "@/lib/schemas";
 
 const description =
-  "¿Distancia o discusiones en la pareja? Terapia de pareja en Chillán con psicólogo TCC. Sesiones online o presenciales. Agenda tu primera evaluación hoy.";
+  "¿Problemas en la pareja? Terapia de pareja en Chillán con psicólogo TCC. Comunicación, celos y crisis. Online o presencial — agenda hoy por web o WhatsApp.";
 
 export const metadata: Metadata = {
-  title: "Terapia de pareja Chillán | Comunicación, celos y crisis",
+  title: "Terapia de pareja Chillán | Psicólogo TCC · Online o presencial",
   description,
   alternates: {
     canonical: "/terapia-de-pareja-chillan",
   },
   openGraph: {
-    title: "Terapia de pareja Chillán | Comunicación, celos y crisis",
+    title: "Terapia de pareja Chillán | Psicólogo TCC · Online o presencial",
     description,
     url: `${SITE_URL}/terapia-de-pareja-chillan`,
     type: "website",
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terapia de pareja Chillán | Comunicación y crisis",
+    title: "Terapia de pareja Chillán | Psicólogo TCC",
     description: getTwitterDescription(
       "Terapia de pareja en Chillán: comunicación, celos o crisis. Psicólogo TCC. Online o presencial. Agenda por web o WhatsApp."
     ),
@@ -70,18 +71,29 @@ const parejaFAQs = [
   },
 ];
 
-const faqSchema = getFAQSchema(parejaFAQs);
+const faqSchema = getPageFAQSchema(parejaFAQs);
 const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
+const webPageSchema = getWebPageSchema({
+  name: "Terapia de pareja Chillán",
+  description,
+  path: "/terapia-de-pareja-chillan",
+});
 const serviceSchema = getServiceSchema({
   serviceType: "Terapia de pareja",
   description:
     "Acompañamiento psicológico para parejas en Chillán o por videollamada, con foco en comunicación y resolución de conflictos.",
   areaServed: "Chillán",
+  url: `${SITE_URL}/terapia-de-pareja-chillan`,
 });
 
 export default function TerapiaParejaChillanPage() {
   return (
     <>
+      <Script
+        id="webpage"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <Script
         id="local-business"
         type="application/ld+json"

@@ -13,21 +13,22 @@ import {
   localBusinessSchema,
   getBreadcrumbSchema,
   getServiceSchema,
-  getFAQSchema,
+  getPageFAQSchema,
+  getWebPageSchema,
   getTwitterDescription,
 } from "@/lib/schemas";
 
 const description =
-  "Psicólogo online en Chillán y para todo Chile. Videollamada, TCC, boleta Isapre y horarios flexibles. Agenda tu primera sesión por web o WhatsApp.";
+  "¿Buscas psicólogo online en Chillán? Sesiones por videollamada con TCC, boleta Isapre y horarios flexibles. Atiendo Chillán y todo Chile — reserva hoy.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo online en Chillán | Videollamada y boleta Isapre",
+  title: "Psicólogo online Chillán | Videollamada · Boleta Isapre · Agenda hoy",
   description,
   alternates: {
     canonical: "/psicologo-online-chillan",
   },
   openGraph: {
-    title: "Psicólogo online en Chillán | Gonzalo Pedrosa",
+    title: "Psicólogo online Chillán | Videollamada · Boleta Isapre",
     description,
     url: `${SITE_URL}/psicologo-online-chillan`,
     type: "website",
@@ -35,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo online en Chillán | Videollamada",
+    title: "Psicólogo online Chillán | Videollamada",
     description: getTwitterDescription(
-      "Psicólogo online en Chillán y para todo Chile, con videollamada, TCC y boleta Isapre. Agenda tu sesión hoy."
+      "Psicólogo online en Chillán: videollamada, TCC y boleta Isapre. Horarios flexibles para Chillán y todo Chile. Agenda hoy."
     ),
   },
 };
@@ -70,18 +71,29 @@ const onlineFAQs = [
   },
 ];
 
-const faqSchema = getFAQSchema(onlineFAQs);
+const faqSchema = getPageFAQSchema(onlineFAQs);
 const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
+const webPageSchema = getWebPageSchema({
+  name: "Psicólogo online Chillán",
+  description,
+  path: "/psicologo-online-chillan",
+});
 const serviceSchema = getServiceSchema({
   serviceType: "Psicoterapia online",
   description:
     "Sesiones de psicología por videollamada desde Chillán para pacientes en Chile, con Terapia Cognitivo-Conductual.",
   areaServed: "Chillán",
+  url: `${SITE_URL}/psicologo-online-chillan`,
 });
 
 export default function PsicologoOnlineChillanPage() {
   return (
     <>
+      <Script
+        id="webpage"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <Script
         id="local-business"
         type="application/ld+json"
@@ -546,6 +558,8 @@ export default function PsicologoOnlineChillanPage() {
         <IntentClusterSection
           currentPath="/psicologo-online-chillan"
           extraLinks={[
+            { label: "Terapia EMDR", href: "/terapia-emdr-chillan" },
+            { label: "Terapia de pareja", href: "/terapia-de-pareja-chillan" },
             { label: "Particular", href: "/psicologo-particular-chillan" },
             { label: "Precios", href: "/consulta-psicologica-precio-chillan" },
           ]}
