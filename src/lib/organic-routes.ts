@@ -140,7 +140,6 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
     changeFrequency: "monthly",
     priority: 0.8,
   },
-  { route: "/psicologo-hombres-chillan", changeFrequency: "monthly", priority: 0.8 },
   { route: "/terapia-control-ira-chillan", changeFrequency: "monthly", priority: 0.8 },
   { route: "/tratamiento-insomnio-chillan", changeFrequency: "monthly", priority: 0.8 },
   { route: "/psicologo-estudiantes-chillan", changeFrequency: "monthly", priority: 0.8 },

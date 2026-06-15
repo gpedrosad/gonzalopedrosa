@@ -369,7 +369,7 @@ export default function HomePage() {
               { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
               { label: "Primera consulta", href: "/primera-consulta-psicologo-chillan" },
               { label: "Precio consulta", href: "/consulta-psicologica-precio-chillan" },
-              { label: "Psicólogo para hombres", href: "/psicologo-hombres-chillan" },
+              { label: "Psicólogo adultos", href: "/psicologo-adulto-chillan" },
               { label: "Agendar sesión", href: "/agendar" },
             ].map((item, i) => (
               <Link

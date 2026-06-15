@@ -51,7 +51,6 @@ const pagesToUpdate = [
   'psicologo-centro-chillan',
   'psicologo-sindrome-impostor-chillan',
   'psicologo-crisis-vital-chillan',
-  'psicologo-hombres-chillan',
   'terapia-control-ira-chillan',
   'tratamiento-insomnio-chillan',
   'psicologo-estudiantes-chillan',

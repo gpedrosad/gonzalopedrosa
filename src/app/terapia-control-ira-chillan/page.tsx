@@ -172,7 +172,7 @@ export default function TerapiaControlIraChillanPage() {
         <p style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.75rem" }}>Servicios relacionados</p>
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {[
-            { label: "Psicólogo hombres", href: "/psicologo-hombres-chillan" },
+            { label: "Psicólogo adultos", href: "/psicologo-adulto-chillan" },
             { label: "Manejo frustración", href: "/psicologo-manejo-frustracion-chillan" },
             { label: "Terapia de pareja", href: "/terapia-de-pareja-chillan" },
             { label: "Estrés laboral", href: "/psicologo-estres-laboral-chillan" },

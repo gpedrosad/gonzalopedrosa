@@ -26,6 +26,11 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
+      {
+        source: "/psicologo-hombres-chillan",
+        destination: "/psicologo-adulto-chillan",
+        permanent: true,
+      },
     ];
   },
   // Headers de seguridad (CSP se maneja en middleware.ts con nonce)

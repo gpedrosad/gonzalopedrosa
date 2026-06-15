@@ -494,19 +494,6 @@ export default function PsicologoAdultoChillanPage() {
             Adicciones
           </Link>
           <Link
-            href="/psicologo-hombres-chillan"
-            style={{
-              color: "#666",
-              fontSize: "0.875rem",
-              textDecoration: "none",
-              padding: "0.375rem 0.75rem",
-              border: "1px solid #eaeaea",
-              borderRadius: "9999px",
-            }}
-          >
-            Hombres
-          </Link>
-          <Link
             href="/psicologo-cognitivo-conductual-chillan"
             style={{
               color: "#666",

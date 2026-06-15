@@ -455,7 +455,7 @@ export default function PsicologoEstresLaboralChillanPage() {
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             { label: "Depresión", href: "/psicologo-depresion-chillan" },
             { label: "Tratamiento de burnout", href: "/tratamiento-burnout-chillan" },
-            { label: "Hombres", href: "/psicologo-hombres-chillan" },
+            { label: "Psicólogo adultos", href: "/psicologo-adulto-chillan" },
             { label: "Adultos", href: "/psicologo-adulto-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
             { label: "Psicólogo online", href: "/psicologo-online-chillan" },

@@ -440,7 +440,7 @@ export default function PsicologoEspecialistaAnsiedadChillanPage() {
           {[
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             { label: "Crisis de pánico", href: "/psicologo-crisis-de-panico-chillan" },
-            { label: "Psicólogo para hombres", href: "/psicologo-hombres-chillan" },
+            { label: "Psicólogo adultos", href: "/psicologo-adulto-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
             { label: "EMDR", href: "/terapia-emdr-chillan" },
             { label: "Psicólogo online", href: "/psicologo-online-chillan" },
