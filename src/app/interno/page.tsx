@@ -98,7 +98,8 @@ export default async function InternoPage({ searchParams }: PageProps) {
         <Link href={`/interno/ads${q}`} style={cardStyle}>
           <p style={{ fontWeight: 700, marginBottom: "0.35rem" }}>Google Ads</p>
           <p style={{ fontSize: "0.875rem", color: "#666", margin: 0, lineHeight: 1.55 }}>
-            Paid: campañas, keywords, search terms, landings /ads/* vs sitelinks, negativas y CPA.
+            Paid: campañas, keywords, search terms, landings /ads/* vs sitelinks, negativas, CPA y
+            gestión de presupuesto/pujas/creativos.
           </p>
         </Link>
       </div>

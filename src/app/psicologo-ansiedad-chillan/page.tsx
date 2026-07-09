@@ -12,16 +12,16 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Psicólogo por ansiedad en Chillán con TCC: exposición gradual, reestructuración cognitiva y regulación emocional. Presencial u online desde $35.000. Agendá hoy.";
+  "Psicólogo para ansiedad en Chillán con TCC: exposición gradual y regulación emocional. Presencial u online desde $35.000, boleta Isapre. Agenda hoy.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo ansiedad Chillán | TCC presencial y online | Gonzalo Pedrosa",
+  title: "Psicólogo Ansiedad Chillán | TCC Online y Presencial",
   description,
   alternates: {
     canonical: "/psicologo-ansiedad-chillan",
   },
   openGraph: {
-    title: "Psicólogo ansiedad Chillán | Gonzalo Pedrosa",
+    title: "Psicólogo Ansiedad Chillán | TCC Online y Presencial",
     description,
     url: "https://www.gonzalopedrosa.cl/psicologo-ansiedad-chillan",
     type: "website",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo ansiedad Chillán",
+    title: "Psicólogo Ansiedad Chillán | TCC",
     description: getTwitterDescription(
-      "TCC para ansiedad en Chillán u online. Primera sesión $35.000 con boleta Isapre. Reserva en el sitio."
+      "TCC para ansiedad en Chillán u online. $35.000 / 50 min con boleta Isapre. Agenda hoy."
     ),
   },
 };
@@ -608,9 +608,10 @@ export default function PsicologoAnsiedadChillanPage() {
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {[
             { label: "Crisis de pánico", href: "/psicologo-crisis-de-panico-chillan" },
+            { label: "EMDR", href: "/terapia-emdr-chillan" },
+            { label: "TOC / ERP", href: "/tratamiento-toc-chillan" },
             { label: "Estrés laboral", href: "/psicologo-estres-laboral-chillan" },
             { label: "Fobia social", href: "/psicologo-fobia-social-chillan" },
-            { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
             { label: "Online", href: "/psicologo-online-chillan" },
           ].map((item, i) => (
             <Link

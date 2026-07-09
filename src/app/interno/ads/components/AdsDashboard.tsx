@@ -83,16 +83,42 @@ export function AdsDashboard({
 
       <InternoNav current="ads" keyParam={keyParam} />
 
-      <h1
+      <div
         style={{
-          fontSize: "2rem",
-          fontWeight: 700,
-          letterSpacing: "-0.03em",
-          marginBottom: "0.5rem",
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "0.75rem",
+          alignItems: "center",
+          marginBottom: "0.75rem",
         }}
       >
-        Google Ads · laboratorio interno
-      </h1>
+        <h1
+          style={{
+            fontSize: "2rem",
+            fontWeight: 700,
+            letterSpacing: "-0.03em",
+            margin: 0,
+            flex: "1 1 auto",
+          }}
+        >
+          Google Ads · laboratorio interno
+        </h1>
+        <Link
+          href={keyParam ? `/interno/ads/manage?key=${encodeURIComponent(keyParam)}` : "/interno/ads/manage"}
+          style={{
+            fontSize: "0.875rem",
+            padding: "0.5rem 0.85rem",
+            borderRadius: 8,
+            border: "1px solid #ddd",
+            textDecoration: "none",
+            color: "#111",
+            fontWeight: 600,
+            background: "#fafafa",
+          }}
+        >
+          Gestionar campaña →
+        </Link>
+      </div>
 
       <p style={{ color: "#666", marginBottom: "2rem", lineHeight: 1.6 }}>
         Cuenta <strong>{data.customerId}</strong> · Moneda <strong>{data.currency}</strong>

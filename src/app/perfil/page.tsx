@@ -15,7 +15,7 @@ import {
 export const dynamic = "force-dynamic";
 
 const description =
-  "Perfil de Gonzalo Pedrosa, psicólogo en Chillán: formación, enfoque TCC, valoraciones y reserva de sesión online. Más de 7 años de experiencia clínica.";
+  "Gonzalo Pedrosa, psicólogo en Chillán: TCC, boleta Isapre y +7 años de experiencia. Perfil, valoraciones y reserva de sesión online o presencial.";
 
 const breadcrumbItems = [
   { label: "Inicio", href: "/" },
@@ -41,13 +41,13 @@ const serviceSchema = getServiceSchema({
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Gonzalo Pedrosa | Psicólogo Chillán · Perfil y reservas",
+    title: "Gonzalo Pedrosa | Psicólogo en Chillán · TCC e Isapre",
     description,
     alternates: {
       canonical: "/perfil",
     },
     openGraph: {
-      title: "Gonzalo Pedrosa | Psicólogo en Chillán",
+      title: "Gonzalo Pedrosa | Psicólogo en Chillán · TCC e Isapre",
       description,
       url: `${SITE_URL}/perfil`,
       type: "profile",
@@ -57,7 +57,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: "Gonzalo Pedrosa | Psicólogo Chillán",
       description: getTwitterDescription(
-        "Perfil profesional, valoraciones y reserva de sesión online. TCC y +7 años de experiencia clínica."
+        "Gonzalo Pedrosa, psicólogo en Chillán: TCC, boleta Isapre y +7 años de experiencia. Agenda online o presencial."
       ),
     },
     robots: {

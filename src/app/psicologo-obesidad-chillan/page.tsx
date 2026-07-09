@@ -5,24 +5,28 @@ import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
+const description =
+  "Psicólogo para obesidad en Chillán: alimentación emocional, atracones y cambio de hábitos. También evaluación bariátrica. Online o presencial — agenda hoy.";
+
 export const metadata: Metadata = {
-  title: "Psicólogo Obesidad en Chillán | Gonzalo Pedrosa",
-  description:
-    "Psicólogo especializado en obesidad en Chillán. Tratamiento psicológico para pérdida de peso, alimentación emocional y cambio de hábitos.",
+  title: "Psicólogo Obesidad Chillán | Alimentación emocional y hábitos",
+  description,
   alternates: {
     canonical: "/psicologo-obesidad-chillan",
   },
   openGraph: {
-    title: "Psicólogo Obesidad en Chillán | Gonzalo Pedrosa",
-    description: "Psicólogo especializado en obesidad en Chillán. Tratamiento psicológico para pérdida de peso, alimentación emocional y cambio de hábitos.",
+    title: "Psicólogo Obesidad Chillán | Alimentación emocional y hábitos",
+    description,
     url: "https://www.gonzalopedrosa.cl/psicologo-obesidad-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo Obesidad en Chillán",
-    description: getTwitterDescription("Psicólogo especializado en obesidad en Chillán. Tratamiento psicológico para pérdida de peso, alimentación emocional y cambio de hábitos."),
+    title: "Psicólogo Obesidad Chillán",
+    description: getTwitterDescription(
+      "Obesidad y alimentación emocional en Chillán. Hábitos, atracones y evaluación bariátrica. Online o presencial."
+    ),
   },
 };
 
@@ -58,7 +62,7 @@ export default function PsicologoObesidadChillanPage() {
         breadcrumbItems={breadcrumbItems}
         faqs={psicologo_obesidad_chillanFAQs}
         serviceType="Psicología Obesidad"
-        serviceDescription={"Psicólogo especializado en obesidad en Chillán. Tratamiento psicológico para pérdida de peso, alimentación emocional y cambio de hábitos."}
+        serviceDescription={description}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <Breadcrumb items={breadcrumbItems} />
@@ -125,8 +129,60 @@ export default function PsicologoObesidadChillanPage() {
         </ul>
       </section>
 
+      <section style={{ marginBottom: "3rem" }}>
+        <h2 style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "1rem" }}>
+          Cluster relacionado
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem", fontSize: "0.9375rem" }}>
+          Si además de peso trabajas atracones, imagen corporal o preparación
+          quirúrgica, estas páginas profundizan cada caso:
+        </p>
+        <div style={{ display: "grid", gap: "0.5rem" }}>
+          {[
+            {
+              label: "Evaluación bariátrica",
+              href: "/evaluacion-bariatrica-chillan",
+              desc: "Informe psicológico para manga o bypass",
+            },
+            {
+              label: "Trastornos alimenticios",
+              href: "/psicologo-trastornos-alimenticios-chillan",
+              desc: "Atracones, restricción y relación con la comida",
+            },
+            {
+              label: "Anorexia y bulimia",
+              href: "/tratamiento-anorexia-bulimia-chillan",
+              desc: "Tratamiento psicológico especializado",
+            },
+            {
+              label: "Ansiedad",
+              href: "/psicologo-ansiedad-chillan",
+              desc: "Cuando la ansiedad dispara la alimentación emocional",
+            },
+          ].map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              style={{
+                display: "block",
+                padding: "0.875rem 1rem",
+                backgroundColor: "#fafafa",
+                borderRadius: "8px",
+                textDecoration: "none",
+                color: "inherit",
+              }}
+            >
+              <strong style={{ display: "block", marginBottom: "0.125rem", color: "#000" }}>
+                {item.label}
+              </strong>
+              <span style={{ fontSize: "0.875rem", color: "#666" }}>{item.desc}</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <section style={{ padding: "1.25rem", backgroundColor: "#f0f9ff", borderRadius: "12px", marginBottom: "2.5rem", border: "1px solid #bae6fd" }}>
-        <p style={{ fontWeight: 600, color: "#0369a1", marginBottom: "0.5rem", fontSize: "0.9375rem" }}>💡 ¿Considerando cirugía bariátrica?</p>
+        <p style={{ fontWeight: 600, color: "#0369a1", marginBottom: "0.5rem", fontSize: "0.9375rem" }}>¿Considerando cirugía bariátrica?</p>
         <p style={{ color: "#0c4a6e", fontSize: "0.875rem", lineHeight: 1.6 }}>
           También realizo la{" "}
           <Link href="/evaluacion-bariatrica-chillan" style={{ color: "#0369a1", textDecoration: "underline" }}>evaluación psicológica requerida</Link>{" "}
@@ -186,6 +242,7 @@ export default function PsicologoObesidadChillanPage() {
           {[
             { label: "Evaluación bariátrica", href: "/evaluacion-bariatrica-chillan" },
             { label: "Trastornos alimenticios", href: "/psicologo-trastornos-alimenticios-chillan" },
+            { label: "Anorexia y bulimia", href: "/tratamiento-anorexia-bulimia-chillan" },
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },
           ].map((item, i) => (

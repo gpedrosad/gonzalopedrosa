@@ -6,16 +6,16 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { SITE_URL, getTwitterDescription } from "@/lib/schemas";
 
 const description =
-  "Tratamiento para TOC en Chillán con exposición y prevención de respuesta (EPR). Sesiones presenciales u online para obsesiones y compulsiones. Agenda evaluación.";
+  "Terapia ERP (EPR) para TOC en Chillán: exposición con prevención de respuesta, obsesiones y compulsiones. Presencial u online. Agenda evaluación.";
 
 export const metadata: Metadata = {
-  title: "Tratamiento TOC en Chillán | EPR y terapia cognitivo-conductual",
+  title: "Terapia ERP TOC Chillán | Exposición y prevención de respuesta",
   description,
   alternates: {
     canonical: "/tratamiento-toc-chillan",
   },
   openGraph: {
-    title: "Tratamiento TOC en Chillán | Gonzalo Pedrosa",
+    title: "Terapia ERP TOC Chillán | Exposición y prevención de respuesta",
     description,
     url: `${SITE_URL}/tratamiento-toc-chillan`,
     type: "website",
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tratamiento TOC en Chillán | EPR y TCC",
+    title: "Terapia ERP TOC Chillán | EPR y TCC",
     description: getTwitterDescription(
-      "Tratamiento para TOC en Chillán con EPR y TCC. Sesiones online o presenciales para obsesiones y compulsiones."
+      "Terapia ERP (EPR) para TOC en Chillán. Exposición con prevención de respuesta, online o presencial."
     ),
   },
 };
@@ -34,14 +34,19 @@ export const metadata: Metadata = {
 
 const tratamiento_toc_chillanFAQs = [
   {
+    question: "¿Qué es la terapia ERP para TOC?",
+    answer:
+      "ERP (Exposure and Response Prevention), también llamada EPR en español, es el tratamiento de primera línea para el TOC: te expones de forma gradual a lo que dispara la obsesión y aprendes a no hacer la compulsión, hasta que la ansiedad baja sola.",
+  },
+  {
     question: "¿El TOC tiene cura?",
     answer:
-      "El TOC es una condición crónica, pero con tratamiento adecuado muchas personas logran reducir significativamente sus síntomas y llevar una vida normal. La EPR tiene tasas de éxito entre 60-80%.",
+      "El TOC es una condición crónica, pero con tratamiento adecuado muchas personas logran reducir significativamente sus síntomas y llevar una vida normal. La terapia ERP/EPR tiene tasas de éxito entre 60-80%.",
   },
   {
     question: "¿Necesito medicación?",
     answer:
-      "No siempre. La terapia EPR puede ser muy efectiva por sí sola. En casos moderados a severos, la combinación con medicación (antidepresivos ISRS) puede ser más efectiva. Si es necesario, te derivo a psiquiatra.",
+      "No siempre. La terapia ERP puede ser muy efectiva por sí sola. En casos moderados a severos, la combinación con medicación (antidepresivos ISRS) puede ser más efectiva. Si es necesario, te derivo a psiquiatra.",
   },
   {
     question: "¿Cuánto dura el tratamiento?",
@@ -130,11 +135,64 @@ export default function TratamientoTocChillanPage() {
           lineHeight: 1.6,
         }}
       >
-        Si buscas tratamiento para TOC en Chillán, trabajo con Terapia
-        Cognitivo-Conductual y Exposición con Prevención de Respuesta (EPR)
+        Si buscas terapia ERP para TOC en Chillán, trabajo con Terapia
+        Cognitivo-Conductual y Exposición con Prevención de Respuesta (ERP/EPR)
         para reducir obsesiones, compulsiones y el tiempo que el TOC consume
         en tu día.
       </p>
+
+      <section style={{ marginBottom: "3rem" }}>
+        <h2
+          style={{
+            fontSize: "0.75rem",
+            fontWeight: 600,
+            textTransform: "uppercase",
+            letterSpacing: "0.1em",
+            color: "#999",
+            marginBottom: "1rem",
+          }}
+        >
+          Terapia ERP para TOC
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
+          La <strong>terapia ERP</strong> (Exposure and Response Prevention),
+          conocida en español como <strong>EPR</strong>, es el tratamiento con
+          más evidencia para el trastorno obsesivo-compulsivo. No se trata de
+          “dejar de pensar”: se trata de enfrentar el disparador y{" "}
+          <em>no</em> hacer el ritual, hasta que el cerebro aprende que la
+          amenaza baja sin compulsión.
+        </p>
+        <div style={{ display: "grid", gap: "0.75rem" }}>
+          {[
+            {
+              title: "Exposición (Exposure)",
+              desc: "Te acercas de forma gradual y planificada a pensamientos, imágenes o situaciones que activan la obsesión.",
+            },
+            {
+              title: "Prevención de respuesta",
+              desc: "Practicas no hacer la compulsión (lavar, chequear, pedir seguridad, rituales mentales) mientras la ansiedad sube y luego baja.",
+            },
+            {
+              title: "Jerarquía a tu ritmo",
+              desc: "Empezamos por ítems manejables y subimos. En Chillán u online, con tareas entre sesiones para consolidar avances.",
+            },
+          ].map((item) => (
+            <div
+              key={item.title}
+              style={{
+                padding: "1.25rem",
+                backgroundColor: "#fafafa",
+                borderRadius: "12px",
+              }}
+            >
+              <h3 style={{ fontWeight: 600, marginBottom: "0.5rem" }}>{item.title}</h3>
+              <p style={{ color: "#666", fontSize: "0.9375rem", lineHeight: 1.6, margin: 0 }}>
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <section style={{ marginBottom: "3rem" }}>
         <h2
@@ -234,12 +292,12 @@ export default function TratamientoTocChillanPage() {
             marginBottom: "1rem",
           }}
         >
-          Tratamiento: EPR
+          Cómo se aplica la ERP / EPR
         </h2>
         <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
           El tratamiento de elección para el TOC es la{" "}
-          <strong>Exposición con Prevención de Respuesta (EPR)</strong>, una
-          forma especializada de{" "}
+          <strong>terapia ERP</strong> (Exposición con Prevención de Respuesta /
+          EPR), una forma especializada de{" "}
           <Link
             href="/psicologo-cognitivo-conductual-chillan"
             style={{ color: "#000", textDecoration: "underline" }}
@@ -296,6 +354,31 @@ export default function TratamientoTocChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
+              ¿Qué es la terapia ERP para TOC?
+            </summary>
+            <p
+              style={{
+                marginTop: "0.75rem",
+                color: "#666",
+                lineHeight: 1.6,
+                fontSize: "0.9375rem",
+              }}
+            >
+              ERP (Exposure and Response Prevention), también llamada EPR en
+              español, es el tratamiento de primera línea para el TOC: te
+              expones de forma gradual a lo que dispara la obsesión y aprendes
+              a no hacer la compulsión, hasta que la ansiedad baja sola.
+            </p>
+          </details>
+
+          <details
+            style={{
+              padding: "1rem",
+              border: "1px solid #eaeaea",
+              borderRadius: "12px",
+            }}
+          >
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
               ¿El TOC tiene cura?
             </summary>
             <p
@@ -308,7 +391,8 @@ export default function TratamientoTocChillanPage() {
             >
               El TOC es una condición crónica, pero con tratamiento adecuado
               muchas personas logran reducir significativamente sus síntomas y
-              llevar una vida normal. La EPR tiene tasas de éxito entre 60-80%.
+              llevar una vida normal. La terapia ERP/EPR tiene tasas de éxito
+              entre 60-80%.
             </p>
           </details>
 
@@ -330,7 +414,7 @@ export default function TratamientoTocChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              No siempre. La terapia EPR puede ser muy efectiva por sí sola. En
+              No siempre. La terapia ERP puede ser muy efectiva por sí sola. En
               casos moderados a severos, la combinación con medicación
               (antidepresivos ISRS) puede ser más efectiva. Si es necesario, te
               derivo a psiquiatra.
@@ -428,9 +512,9 @@ export default function TratamientoTocChillanPage() {
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {[
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
-            { label: "Especialista ansiedad", href: "/psicologo-especialista-ansiedad-chillan" },
+            { label: "Crisis de pánico", href: "/psicologo-crisis-de-panico-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
-            { label: "Adultos", href: "/psicologo-adulto-chillan" },
+            { label: "EMDR", href: "/terapia-emdr-chillan" },
             { label: "Psicólogo online", href: "/psicologo-online-chillan" },
           ].map((item, i) => (
             <Link

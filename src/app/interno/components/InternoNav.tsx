@@ -4,7 +4,7 @@ export function InternoNav({
   current,
   keyParam,
 }: {
-  current: "hub" | "gsc" | "ads";
+  current: "hub" | "gsc" | "ads" | "ads-manage";
   keyParam?: string;
 }) {
   const q = keyParam ? `?key=${encodeURIComponent(keyParam)}` : "";
@@ -36,6 +36,9 @@ export function InternoNav({
       </Link>
       <Link href={`/interno/ads${q}`} style={linkStyle(current === "ads")}>
         Google Ads
+      </Link>
+      <Link href={`/interno/ads/manage${q}`} style={linkStyle(current === "ads-manage")}>
+        Gestionar Ads
       </Link>
     </nav>
   );

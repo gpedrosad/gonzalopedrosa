@@ -236,27 +236,29 @@ export default function TerapiaEmdrChillanPage() {
           }}
         >
           {[
-            "Estrés postraumático",
-            "Trauma infantil",
-            "Ansiedad",
-            "Fobias",
-            "Duelo complicado",
-            "Ataques de pánico",
-            "Experiencias difíciles",
-            "Baja autoestima",
-          ].map((item, i) => (
-            <div
-              key={i}
+            { label: "Estrés postraumático", href: "/estres-postraumatico-chillan" },
+            { label: "Trauma infantil", href: "/superar-trauma-infancia-chillan" },
+            { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
+            { label: "Abuso sexual", href: "/psicologo-abuso-sexual-chillan" },
+            { label: "Duelo complicado", href: "/psicologo-duelo-chillan" },
+            { label: "Ataques de pánico", href: "/psicologo-crisis-de-panico-chillan" },
+            { label: "Fobias", href: "/psicologo-fobia-social-chillan" },
+            { label: "Baja autoestima", href: "/psicologo-baja-autoestima-chillan" },
+          ].map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
               style={{
                 padding: "0.75rem 1rem",
                 backgroundColor: "#fafafa",
                 borderRadius: "8px",
                 fontSize: "0.875rem",
                 color: "#444",
+                textDecoration: "none",
               }}
             >
-              {item}
-            </div>
+              {item.label}
+            </Link>
           ))}
         </div>
       </section>
@@ -512,10 +514,11 @@ export default function TerapiaEmdrChillanPage() {
         </p>
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {[
+            { label: "Trauma infancia", href: "/superar-trauma-infancia-chillan" },
+            { label: "Estrés postraumático", href: "/estres-postraumatico-chillan" },
+            { label: "Abuso sexual", href: "/psicologo-abuso-sexual-chillan" },
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
-            { label: "Especialista ansiedad", href: "/psicologo-especialista-ansiedad-chillan" },
             { label: "Crisis de pánico", href: "/psicologo-crisis-de-panico-chillan" },
-            { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
             { label: "Online", href: "/psicologo-online-chillan" },
           ].map((item, i) => (
             <Link

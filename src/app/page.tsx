@@ -307,13 +307,14 @@ export default function HomePage() {
               { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
               { label: "Crisis de pánico", href: "/psicologo-crisis-de-panico-chillan" },
               { label: "Depresión", href: "/psicologo-depresion-chillan" },
-              { label: "Estrés" },
+              { label: "EMDR", href: "/terapia-emdr-chillan" },
+              { label: "TOC", href: "/tratamiento-toc-chillan" },
+              { label: "Obesidad", href: "/psicologo-obesidad-chillan" },
               { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },
               { label: "Duelo", href: "/psicologo-duelo-chillan" },
               { label: "Relaciones", href: "/terapia-de-pareja-chillan" },
-              { label: "Hábitos" },
-            ].map((item, i) =>
-              item.href ? (
+              { label: "Online", href: "/psicologo-online-chillan" },
+            ].map((item, i) => (
                 <Link
                   key={i}
                   href={item.href}
@@ -328,21 +329,7 @@ export default function HomePage() {
                 >
                   {item.label}
                 </Link>
-              ) : (
-                <span
-                  key={i}
-                  style={{
-                    padding: "0.5rem 1rem",
-                    backgroundColor: "#fafafa",
-                    borderRadius: "9999px",
-                    fontSize: "0.875rem",
-                    color: "#444",
-                  }}
-                >
-                  {item.label}
-                </span>
-              ),
-            )}
+              ))}
           </div>
         </section>
 

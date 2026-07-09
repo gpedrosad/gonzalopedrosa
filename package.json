@@ -10,12 +10,14 @@
     "seo:audit": "node scripts/seo-audit.mjs",
     "gsc:auth": "node --env-file=.env.local scripts/gsc-report.mjs --auth",
     "gsc:report": "node --env-file=.env.local scripts/gsc-report.mjs",
+    "gsc:cleanup:auth": "node --env-file=.env.local scripts/gsc-cleanup-sitemaps.mjs --auth",
     "gsc:cleanup:sitemaps": "node --env-file=.env.local scripts/gsc-cleanup-sitemaps.mjs",
     "google-ads:auth": "node --env-file=.env.local scripts/google-ads-auth.mjs",
     "google-ads:list-accounts": "node --env-file=.env.local scripts/google-ads-auth.mjs --list-accounts",
     "google-ads:report": "node --env-file=.env.local scripts/google-ads-report.mjs",
     "google-ads:informe": "node --env-file=.env.local scripts/google-ads-informe-ads.mjs",
     "google-ads:negatives": "node --env-file=.env.local scripts/google-ads-negatives.mjs",
+    "google-ads:manage": "node --env-file=.env.local scripts/google-ads-manage.mjs",
     "google-ads:adolescentes-landing": "node --env-file=.env.local scripts/google-ads-set-adolescentes-landing.mjs"
   },
   "dependencies": {

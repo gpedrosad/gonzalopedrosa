@@ -14,16 +14,16 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Agenda psicólogo en Chillán: sesión presencial u online por videollamada. Respondo en 24 h por WhatsApp o web. TCC, boleta Isapre y primera consulta sin complicaciones.";
+  "Agenda psicólogo en Chillán hoy: presencial u online por videollamada. Respuesta en 24 h, TCC, boleta Isapre y primera consulta sin complicaciones.";
 
 export const metadata: Metadata = {
-  title: "Agendar psicólogo en Chillán | Online o presencial | Gonzalo Pedrosa",
+  title: "Agenda psicólogo Chillán hoy | Online o presencial",
   description,
   alternates: {
     canonical: "/agendar",
   },
   openGraph: {
-    title: "Agendar psicólogo en Chillán | Gonzalo Pedrosa",
+    title: "Agenda psicólogo Chillán hoy | Online o presencial",
     description,
     url: `${SITE_URL}/agendar`,
     type: "website",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Agendar psicólogo en Chillán",
+    title: "Agenda psicólogo Chillán hoy",
     description: getTwitterDescription(
-      "Coordina tu primera sesión presencial u online. WhatsApp o formulario web. TCC y boleta Isapre."
+      "Coordina tu primera sesión presencial u online hoy. WhatsApp o web. TCC y boleta Isapre."
     ),
   },
 };
