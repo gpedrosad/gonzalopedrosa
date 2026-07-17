@@ -18,7 +18,8 @@
     "google-ads:informe": "node --env-file=.env.local scripts/google-ads-informe-ads.mjs",
     "google-ads:negatives": "node --env-file=.env.local scripts/google-ads-negatives.mjs",
     "google-ads:manage": "node --env-file=.env.local scripts/google-ads-manage.mjs",
-    "google-ads:adolescentes-landing": "node --env-file=.env.local scripts/google-ads-set-adolescentes-landing.mjs"
+    "google-ads:adolescentes-landing": "node --env-file=.env.local scripts/google-ads-set-adolescentes-landing.mjs",
+    "google-ads:align-landings": "node --env-file=.env.local scripts/google-ads-align-landings.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.1.1",
