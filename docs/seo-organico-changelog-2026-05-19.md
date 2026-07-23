@@ -1,5 +1,7 @@
 # Changelog SEO orgánico — 2026-05-19
 
+> **Actualización 2026-07-23:** tanda posterior (301 ansiedad, metas CTR, self-learn) en [`docs/seo-organico-changelog-2026-07-23.md`](./seo-organico-changelog-2026-07-23.md) · ops corto [`self-learn/seo/INDEX.md`](../self-learn/seo/INDEX.md).
+
 Documento de registro de los cambios aplicados según el plan [`planes/seo-web-organica.md`](../planes/seo-web-organica.md).
 
 | Campo | Valor |
@@ -258,21 +260,13 @@ src/app/ads/**          → 0 archivos modificados
 
 ## 7. Pendiente post-changelog
 
-1. **Retomar paso 8**
+> Varios ítems se cerraron o movieron el **2026-07-23** (ver changelog de esa fecha). Lo que sigue vigente:
 
-   ```bash
-   npx tsc --noEmit
-   npm run lint
-   npm run seo:audit
-   ```
-
-2. **Deploy** y volver a correr `seo:audit` contra producción (hoy prod puede tener 80 URLs en sitemap vs 81 en repo).
-
-3. **Resolver** `/psicologo-especialista-ansiedad-chillan` vs sitemap (canonical cruzado).
-
-4. **Muestreo manual** (test plan del plan): Home, Agendar, online transaccional, online explicativa, comparativa, una `psicologo-*`, una `terapia-*`, una `tratamiento-*`, una del cluster alcoholismo.
-
-5. **Monitoreo GSC** a ~28 días: hosts, filas indexadas del sitemap, CTR de `/psicologo-online-chillan` y money pages.
+1. **Retomar paso 8** (`tsc` / lint / `seo:audit`) — sigue abierto.
+2. ~~Resolver soft duplicate especialista-ansiedad~~ → **301** aplicado 23 jul (verificar en prod tras deploy).
+3. **A1 GSC** post-deploy: URL Inspection money pages + reenviar sitemap.
+4. **Monitoreo GSC** post-metas (~14–28 días): CTR online/ansiedad/adulto/pareja; imp. pareja; hosts solo `www`.
+5. Autoridad local (GBP / reseñas) — fuera de código.
 
 ---
 

@@ -80,12 +80,12 @@ Comparar informe nuevo vs baseline arriba. Rellenar:
 
 | Check | ¿OK? | Nota |
 |---|---|---|
-| Search terms ya no gastan en negativas A | | |
-| Landing agendar = `/ads/agendar-…` (no solo TCC) | | |
-| CPA campaña ≤ ~US$18 (o mejor que US$15) | | |
-| Conv. 7d no colapsaron a 0 con gasto similar | | |
-| Adolescentes CPA no empeoró mucho sin causa | | |
-| align-landings sin drifts | | |
+| Search terms ya no gastan en negativas A | ✅ 7d | Gasto A≈0 post-cambio; restos en 30d = ventana rodante pre-17 |
+| Landing agendar = `/ads/agendar-…` (no solo TCC) | ✅ | 7d: 6/10 clics → agendar; 2 conv ahí |
+| CPA campaña ≤ ~US$18 (o mejor que US$15) | ✅ | 30d US$10 · 7d US$7 |
+| Conv. 7d no colapsaron a 0 con gasto similar | ✅ | 2 conv / US$13 en 7d |
+| Adolescentes CPA no empeoró mucho sin causa | ✅ | 30d US$25→20; 7d solo 2 clics / US$1 |
+| align-landings sin drifts | ✅ | “Nada que cambiar” (2026-07-23) |
 
 ## Criterios de éxito / fallo (orientativos)
 
@@ -107,6 +107,73 @@ No mezclar con: subir presupuesto, grupo adicción al juego, reactivar pareja/co
 2. Actualizar `STATE.md` snapshot.
 3. 1 línea en `CHANGELOG.md`.
 
-## Reevaluación YYYY-MM-DD
+## Reevaluación 2026-07-23
 
-_(vacío — completar en la revisión)_
+**Ventana post-cambio:** ~6 días (casi el mínimo de 7).  
+**Veredicto:** **Éxito temprano** — mantener intervención; cierre formal ~31 jul.  
+**Fuentes:** `docs/google-ads-informe-ads-2026-07-23.md` (30d) · `docs/google-ads-informe-ads-7d-2026-07-23.md` (7d)
+
+### Comparativa 30d (baseline 17 jul → hoy)
+
+| Métrica | 17 jul | 23 jul | Δ |
+|---|---|---|---|
+| Clics | 60 | 57 | −3 |
+| Impresiones | 658 | 571 | −87 |
+| CTR | 9.12% | 9.98% | +0.86 pp |
+| Costo | US$62 | US$60 | −2 |
+| Conv | 4 | 6 | +2 |
+| CPA | US$15 | US$10 | −US$5 |
+
+### Post-intervención (últimos 7d · proxy ~17–23 jul)
+
+| Métrica | Valor |
+|---|---|
+| Clics | 10 |
+| Costo | US$13 |
+| Conv | 2 |
+| CPA | US$7 |
+| CTR | 9.90% |
+
+Landings 7d (clave para B):
+
+| Landing | Clics | Conv | CPA |
+|---|---|---|---|
+| `/ads/agendar-psicologo-online` | 6 | 2 | US$4 |
+| `/ads/adolescentes` | 2 | 0 | — |
+| `/ads/psicologo-cognitivo-conductual-online` | 2 | 0 | — |
+
+→ El tráfico de **agendar** ya no cae en la landing TCC genérica; las 2 conv. de la semana son en `/ads/agendar-…`.
+
+Grupos 7d: agendar 7 clics / 2 conv · adolescentes 2 / 0 · TCC 1 / 0.
+
+### Lectura por intervención
+
+**A · Negativas**  
+En 7d no hay gasto en betterhelp, unobravo, opción yo terapia, terapi app, red psique, emdr, dbt, adventista, 24h.  
+En 30d aún aparece `opción yo terapia` (US$1) → residual de antes del 17 (ventana rodante).  
+Impresiones residuales sin clic (p. ej. unobravo, terapi app) = OK.
+
+**B · Landings**  
+Cumple el criterio de éxito: mayoría del gasto post-cambio en landing del grupo; RSA ENABLED sin drift (`align-landings` limpio).  
+Agendar 30d: 26 clics / 5 conv (grupo) · landing agendar ya mide 6 clics / 2 conv (el resto del rolling 30d aún mezcla pre-cambio en TCC).
+
+### Riesgos / ruido
+
+- N sigue bajo (budget US$2/día).
+- `propose` sigue sugiriendo términos **no seguros** (TCC core, adolescentes, adicciones) — **no aplicar** ciego.
+- Desperdicio 7d restante: `psicoterapia online`, `psicologos online` (core/protegidos o afilables) — no negativar genéricos.
+- Sitelinks sin `www` siguen en impresiones (0 clics 7d).
+
+### Decisión
+
+| Acción | Estado |
+|---|---|
+| Mantener negativas A | Sí |
+| Mantener landings alineadas | Sí |
+| Revertir algo | No |
+| Próxima revisión formal | ~2026-07-31 |
+| Nuevas acciones ahora | Ninguna obligatoria; pendientes fuera de eval siguen en STATE |
+
+### Checklist relleno
+
+Ver tabla “Cómo reevaluar” arriba (actualizada 23 jul).

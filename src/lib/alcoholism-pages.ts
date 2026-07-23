@@ -60,9 +60,9 @@ export type AlcoholismPage = {
 export const alcoholismPages: Record<AlcoholismPageKey, AlcoholismPage> = {
   "alcoholismo-chillan": {
     slug: "/alcoholismo-chillan",
-    metaTitle: "Alcoholismo en Chillán | Ayuda Psicológica | Gonzalo Pedrosa",
+    metaTitle: "Alcoholismo en Chillán | Ayuda psicológica · Empieza hoy",
     description:
-      "Alcoholismo en Chillán: señales, ayuda psicológica y terapia online. Orientación inicial y plan de tratamiento con Gonzalo Pedrosa, psicólogo clínico.",
+      "¿El alcohol ya te está pasando la cuenta? Ayuda psicológica para alcoholismo en Chillán: señales, plan claro y terapia online. Agenda primera orientación.",
     h1: "Alcoholismo en Chillán: señales, ayuda y primeros pasos para tratarlo",
     shortTitle: "Alcoholismo en Chillán",
     cardDescription:
@@ -462,10 +462,9 @@ export const alcoholismPages: Record<AlcoholismPageKey, AlcoholismPage> = {
   },
   "dejar-de-beber-chillan": {
     slug: "/dejar-de-beber-chillan",
-    metaTitle:
-      "Terapia para Dejar de Beber en Chillán | Gonzalo Pedrosa",
+    metaTitle: "Dejar de Beber en Chillán | Terapia online · Plan concreto",
     description:
-      "Terapia para dejar de beber en Chillán: ayuda psicológica online, manejo de craving y plan seguro. Agenda tu primera sesión con Gonzalo Pedrosa.",
+      "Quieres dejar de beber y no sabes por dónde empezar. Terapia online en Chillán: craving, recaídas y un plan seguro. Agenda tu primera sesión hoy.",
     h1:
       "Terapia para dejar de beber en Chillán: ayuda concreta para empezar hoy",
     shortTitle: "Dejar de beber Chillán",

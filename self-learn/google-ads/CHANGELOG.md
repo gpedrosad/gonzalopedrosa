@@ -2,6 +2,15 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-07-23
+
+- **Revisión post-cambios (~6d):** veredicto **éxito temprano** en `EVAL.md`.
+- Informes: `docs/google-ads-informe-ads-2026-07-23.md` (30d) + `…-7d-2026-07-23.md`.
+- 30d vs baseline 17 jul: Conv 4→6 · CPA US$15→10 · CTR 9.1%→10.0%.
+- 7d: 2 conv / US$13 (CPA US$7); landings agendar reciben 6/10 clics y ambas conv.
+- `align-landings`: sin drift. Negativas A sin gasto nuevo en 7d.
+- Próximo cierre formal: ~31 jul.
+
 ## 2026-07-17
 
 - **Auth:** renovado OAuth (`invalid_grant` → `npm run google-ads:auth`).

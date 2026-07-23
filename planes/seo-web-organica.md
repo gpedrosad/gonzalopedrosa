@@ -1,5 +1,7 @@
 # Plan SEO integral para toda la web orgánica (excluyendo completamente `src/app/ads/**`)
 
+> **Estado 2026-07-23:** pasos 1–7 y 9 del plan original mayormente hechos (may-19). Tanda siguiente (301 ansiedad, metas CTR, self-learn): [`docs/seo-organico-changelog-2026-07-23.md`](../docs/seo-organico-changelog-2026-07-23.md) · pendientes vivos: [`self-learn/seo/STATE.md`](../self-learn/seo/STATE.md).
+
 ## Resumen
 Objetivo: mejorar CTR, consistencia técnica, arquitectura de intención y enlazado interno de toda la web orgánica pública, usando el informe de GSC y el estado actual del repo, **sin tocar ninguna landing dentro de `src/app/ads/**`**.
 

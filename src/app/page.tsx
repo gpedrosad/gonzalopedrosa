@@ -11,16 +11,16 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Psicólogo en Chillán con más de 7 años de experiencia. Terapia cognitivo-conductual presencial y online. Ansiedad, depresión y estrés. Agenda tu primera sesión por web o WhatsApp.";
+  "Gonzalo Pedrosa, psicólogo en Chillán. +7 años de experiencia en TCC presencial y online. Ansiedad, depresión, TOC y estrés. Agenda por web o WhatsApp.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo en Chillán | Online y presencial | Gonzalo Pedrosa",
+  title: "Gonzalo Pedrosa | Psicólogo en Chillán · Online y presencial",
   description,
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Psicólogo en Chillán | Gonzalo Pedrosa",
+    title: "Gonzalo Pedrosa | Psicólogo en Chillán · Online y presencial",
     description,
     url: SITE_URL,
     type: "website",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo en Chillán | Gonzalo Pedrosa",
+    title: "Gonzalo Pedrosa | Psicólogo en Chillán",
     description: getTwitterDescription(
       "TCC presencial y online en Chillán. +7 años de experiencia. Agenda tu sesión por web o WhatsApp."
     ),
@@ -310,6 +310,7 @@ export default function HomePage() {
               { label: "EMDR", href: "/terapia-emdr-chillan" },
               { label: "TOC", href: "/tratamiento-toc-chillan" },
               { label: "Obesidad", href: "/psicologo-obesidad-chillan" },
+              { label: "Alcoholismo", href: "/alcoholismo-chillan" },
               { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },
               { label: "Duelo", href: "/psicologo-duelo-chillan" },
               { label: "Relaciones", href: "/terapia-de-pareja-chillan" },

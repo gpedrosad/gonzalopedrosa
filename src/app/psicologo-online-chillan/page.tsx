@@ -19,16 +19,16 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Psicólogo online en Chillán por videollamada. TCC, boleta Isapre y horarios flexibles. $35.000 / 50 min. Atiendo Chillán y todo Chile — agenda hoy.";
+  "Psicólogo online en Chillán por videollamada: TCC, boleta Isapre y horarios flexibles. $35.000 / 50 min. Atiendo todo Chile — agenda tu sesión hoy.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Online Chillán | Videollamada y Reembolso Isapre",
+  title: "Psicólogo Online Chillán | $35.000 · Videollamada e Isapre",
   description,
   alternates: {
     canonical: "/psicologo-online-chillan",
   },
   openGraph: {
-    title: "Psicólogo Online Chillán | Videollamada y Reembolso Isapre",
+    title: "Psicólogo Online Chillán | $35.000 · Videollamada e Isapre",
     description,
     url: `${SITE_URL}/psicologo-online-chillan`,
     type: "website",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo Online Chillán | Videollamada e Isapre",
+    title: "Psicólogo Online Chillán | $35.000 e Isapre",
     description: getTwitterDescription(
-      "Terapia online desde Chillán: videollamada, TCC y boleta Isapre. $35.000 / 50 min. Horarios flexibles para todo Chile. Agenda hoy."
+      "Terapia online: videollamada, TCC y boleta Isapre. $35.000 / 50 min. Agenda hoy desde Chillán o todo Chile."
     ),
   },
 };

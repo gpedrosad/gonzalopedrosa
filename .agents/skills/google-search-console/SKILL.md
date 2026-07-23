@@ -9,6 +9,8 @@ metadata:
 
 Guides analysis of Google Search Console (GSC) data: performance metrics, indexing, sitemaps, Core Web Vitals, and rich results. Covers best practices for monthly monitoring and actionable insights.
 
+**Este repo:** snapshot y eval orgánicos en `self-learn/seo/` (`STATE.md`, `EVAL.md`, `COMMANDS.md`). Evitar cargar informes `docs/gsc-informe-*.md` enteros salvo que pidan cifras.
+
 **When invoking**: On **first use**, if helpful, open with 1-2 sentences on what this skill covers and why it matters, then provide the main output. On **subsequent use** or when the user asks to skip, go directly to the main output.
 
 ## Scope

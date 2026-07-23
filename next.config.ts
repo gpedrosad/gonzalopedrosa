@@ -31,6 +31,11 @@ const nextConfig: NextConfig = {
         destination: "/psicologo-adulto-chillan",
         permanent: true,
       },
+      {
+        source: "/psicologo-especialista-ansiedad-chillan",
+        destination: "/psicologo-ansiedad-chillan",
+        permanent: true,
+      },
     ];
   },
   // Headers de seguridad (CSP se maneja en middleware.ts con nonce)

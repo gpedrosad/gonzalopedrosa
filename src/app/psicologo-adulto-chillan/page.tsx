@@ -5,24 +5,26 @@ import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
+const description =
+  "Psicólogo para adultos y hombres en Chillán: ansiedad, estrés, depresión y crisis vital. TCC presencial u online, $35.000 / 50 min. Agenda hoy.";
+
 export const metadata: Metadata = {
-  title: "Psicólogo para Adultos en Chillán, Chile | Gonzalo Pedrosa",
-  description:
-    "Psicólogo para adultos en Chillán, Chile. Atención profesional para ansiedad, depresión, estrés y desarrollo personal. Sesiones presenciales y online.",
+  title: "Psicólogo para Adultos y Hombres Chillán | TCC",
+  description,
   alternates: {
     canonical: "/psicologo-adulto-chillan",
   },
   openGraph: {
-    title: "Psicólogo para Adultos en Chillán, Chile | Gonzalo Pedrosa",
-    description: "Psicólogo para adultos en Chillán, Chile. Atención profesional para ansiedad, depresión, estrés y desarrollo personal. Sesiones presenciales y online.",
+    title: "Psicólogo para Adultos y Hombres Chillán | TCC",
+    description,
     url: "https://www.gonzalopedrosa.cl/psicologo-adulto-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo para Adultos en Chillán, Chile",
-    description: getTwitterDescription("Psicólogo para adultos en Chillán, Chile. Atención profesional para ansiedad, depresión, estrés y desarrollo personal. Sesiones presenciales y online."),
+    title: "Psicólogo Adultos y Hombres Chillán | TCC",
+    description: getTwitterDescription(description),
   },
 };
 
@@ -454,69 +456,29 @@ export default function PsicologoAdultoChillanPage() {
           Servicios relacionados
         </p>
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-          <Link
-            href="/psicologo-ansiedad-chillan"
-            style={{
-              color: "#666",
-              fontSize: "0.875rem",
-              textDecoration: "none",
-              padding: "0.375rem 0.75rem",
-              border: "1px solid #eaeaea",
-              borderRadius: "9999px",
-            }}
-          >
-            Ansiedad
-          </Link>
-          <Link
-            href="/psicologo-crisis-de-panico-chillan"
-            style={{
-              color: "#666",
-              fontSize: "0.875rem",
-              textDecoration: "none",
-              padding: "0.375rem 0.75rem",
-              border: "1px solid #eaeaea",
-              borderRadius: "9999px",
-            }}
-          >
-            Crisis de pánico
-          </Link>
-          <Link
-            href="/psicologo-adicciones-chillan"
-            style={{
-              color: "#666",
-              fontSize: "0.875rem",
-              textDecoration: "none",
-              padding: "0.375rem 0.75rem",
-              border: "1px solid #eaeaea",
-              borderRadius: "9999px",
-            }}
-          >
-            Adicciones
-          </Link>
-          <Link
-            href="/psicologo-cognitivo-conductual-chillan"
-            style={{
-              color: "#666",
-              fontSize: "0.875rem",
-              textDecoration: "none",
-              padding: "0.375rem 0.75rem",
-              border: "1px solid #eaeaea",
-              borderRadius: "9999px",
-            }}
-          >
-            TCC
-          </Link>
-          <Link
-            href="/terapia-online"
-            style={{
-              color: "#666",
-              fontSize: "0.875rem",
-              textDecoration: "none",
-              padding: "0.375rem 0.75rem",
-              border: "1px solid #eaeaea",
-              borderRadius: "9999px",
-            }}
-          >Psicólogo online</Link>
+          {[
+            { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
+            { label: "TOC / ERP", href: "/tratamiento-toc-chillan" },
+            { label: "EMDR", href: "/terapia-emdr-chillan" },
+            { label: "Terapia de pareja", href: "/terapia-de-pareja-chillan" },
+            { label: "Obesidad", href: "/psicologo-obesidad-chillan" },
+            { label: "Psicólogo online", href: "/psicologo-online-chillan" },
+          ].map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              style={{
+                color: "#666",
+                fontSize: "0.875rem",
+                textDecoration: "none",
+                padding: "0.375rem 0.75rem",
+                border: "1px solid #eaeaea",
+                borderRadius: "9999px",
+              }}
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
       </nav>
     </main>
