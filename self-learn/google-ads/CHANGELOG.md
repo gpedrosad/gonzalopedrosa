@@ -2,6 +2,17 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-07-24
+
+- **Negativas campaña** (BROAD): `eurekka`, `psynder`, `redgesam`, `ifeel`, `mentulia`, `terapia online cl`.
+- **Reevaluación a día ~7:** veredicto **éxito** en `EVAL.md` (confirma 23 jul).
+- Informes: `docs/google-ads-informe-ads-2026-07-24.md` (30d) + `…-7d-2026-07-24.md`.
+- 30d vs baseline 17 jul: Conv 4→6 · CPA US$15→10 · CTR 9.1%→9.8%.
+- 7d: 2 conv / US$12 (CPA US$6); landings agendar 7/10 clics y ambas conv.
+- `align-landings`: sin drift. Negativas A sin gasto nuevo en 7d.
+- `propose` sigue sugiriendo core (TCC/adolescentes/adicciones) — no aplicar.
+- Próximo cierre formal: ~31 jul.
+
 ## 2026-07-23
 
 - **Revisión post-cambios (~6d):** veredicto **éxito temprano** en `EVAL.md`.

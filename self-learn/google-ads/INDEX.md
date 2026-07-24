@@ -13,4 +13,4 @@ Leer **solo** el archivo que corresponde. No cargar informes largos de `docs/` s
 
 Informes pesados (evitar en contexto salvo pedido):
 - `docs/google-ads-informe-ads-YYYY-MM-DD.md` ← `npm run google-ads:informe`
-- Últimos: `…-2026-07-23.md` (30d) · `…-7d-2026-07-23.md` (post-cambios)
+- Últimos: `…-2026-07-24.md` (30d) · `…-7d-2026-07-24.md` (post-cambios)
