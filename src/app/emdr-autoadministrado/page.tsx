@@ -69,44 +69,44 @@ export default function EmdrAutoadministradoPage() {
 
           <section className="bg-white rounded-2xl shadow-lg p-8 mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              ¿Qué es el EMDR autoadministrado?
+              ¿Qué es esta herramienta?
             </h2>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              El EMDR autoadministrado es una adaptación de la técnica de desensibilización y reprocesamiento por movimientos oculares que puedes realizar por tu cuenta. Esta herramienta de EMDR autoadministrado utiliza estimulación bilateral visual mediante un punto que se mueve de izquierda a derecha, activando ambos hemisferios cerebrales para facilitar el procesamiento de experiencias emocionales.
+              El EMDR autoadministrado es una adaptación de la técnica de desensibilización y reprocesamiento por movimientos oculares que puedes hacer por tu cuenta. Esta herramienta usa estimulación bilateral visual: un punto que se mueve de izquierda a derecha, para facilitar el procesamiento de experiencias emocionales.
             </p>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              El EMDR autoadministrado puede ser útil para trabajar con emociones cotidianas, estrés leve o recuerdos que generan malestar moderado. Sin embargo, es fundamental comprender que el EMDR autoadministrado no reemplaza la terapia profesional, especialmente en casos de trauma complejo, crisis agudas o trastornos diagnosticados.
+              El recurso puede servir para emociones cotidianas, estrés leve o recuerdos que generan malestar moderado. No reemplaza la terapia profesional, sobre todo si hay trauma complejo, crisis aguda o un trastorno diagnosticado.
             </p>
             <div className="bg-amber-50 border-l-4 border-amber-500 p-4 mt-6">
               <p className="text-amber-900 font-medium">
-                ⚠️ Advertencia importante: Si experimentas síntomas graves de ansiedad, depresión, trauma complejo o pensamientos de autolesión, consulta con un profesional de salud mental antes de usar esta herramienta de EMDR autoadministrado.
+                ⚠️ Advertencia importante: Si experimentas síntomas graves de ansiedad, depresión, trauma complejo o pensamientos de autolesión, consulta con un profesional de salud mental antes de usar esta herramienta.
               </p>
             </div>
           </section>
 
           <section className="bg-white rounded-2xl shadow-lg p-8 mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              Requisitos para practicar EMDR autoadministrado
+              Requisitos para practicar el ejercicio
             </h2>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              Para obtener los mejores resultados con el EMDR autoadministrado, es importante crear las condiciones adecuadas:
+              Para obtener mejores resultados, conviene crear las condiciones adecuadas:
             </p>
             <ul className="space-y-3 text-gray-700">
               <li className="flex items-start">
                 <span className="text-blue-600 font-bold mr-3">•</span>
-                <span><strong>Lugar tranquilo:</strong> Busca un espacio privado donde no seas interrumpido durante la sesión de EMDR autoadministrado.</span>
+                <span><strong>Lugar tranquilo:</strong> Busca un espacio privado donde no te interrumpan durante la sesión.</span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-600 font-bold mr-3">•</span>
-                <span><strong>Pantalla adecuada:</strong> Utiliza una pantalla de computadora, tablet o teléfono con buen tamaño para seguir el movimiento visual cómodamente.</span>
+                <span><strong>Pantalla adecuada:</strong> Usa un computador, tablet o teléfono con buen tamaño para seguir el movimiento visual con comodidad.</span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-600 font-bold mr-3">•</span>
-                <span><strong>Conexión estable:</strong> Asegúrate de tener una conexión a internet estable para que el ejercicio funcione sin interrupciones.</span>
+                <span><strong>Conexión estable:</strong> Asegúrate de tener internet estable para que el ejercicio funcione sin cortes.</span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-600 font-bold mr-3">•</span>
-                <span><strong>Estado emocional apropiado:</strong> No practiques EMDR autoadministrado si te encuentras en crisis aguda o con malestar emocional severo.</span>
+                <span><strong>Estado emocional apropiado:</strong> No uses el recurso si estás en crisis aguda o con malestar emocional severo.</span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-600 font-bold mr-3">•</span>
@@ -120,17 +120,17 @@ export default function EmdrAutoadministradoPage() {
               ¿Cómo funciona el ejercicio?
             </h2>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              La sesión de EMDR autoadministrado se estructura en sets de estimulación bilateral. Un set típico dura aproximadamente 30 segundos, aunque puedes ajustar la duración según tu comodidad (entre 10 y 120 segundos).
+              La sesión se estructura en sets de estimulación bilateral. Un set típico dura unos 30 segundos, aunque puedes ajustar la duración según te acomode (entre 10 y 120 segundos).
             </p>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              Durante cada set, sigue el punto que se mueve de izquierda a derecha con tus ojos, mientras mantienes en mente la situación o emoción que deseas procesar. Al finalizar cada set, toma una pausa breve para notar qué pensamientos, emociones o sensaciones surgen. Luego continúa con el siguiente set.
+              Durante cada set, sigue el punto que se mueve de izquierda a derecha con tus ojos, mientras mantienes en mente la situación o emoción que quieres procesar. Al terminar, toma una pausa breve para notar qué pensamientos, emociones o sensaciones aparecen. Después sigue con el siguiente set.
             </p>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              La velocidad del movimiento también es ajustable. Experimenta con diferentes velocidades hasta encontrar la que te resulte más cómoda y efectiva para tu práctica de EMDR autoadministrado.
+              La velocidad del movimiento también se puede ajustar. Prueba distintas velocidades hasta encontrar la que te resulte más cómoda.
             </p>
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mt-6">
               <p className="text-blue-900">
-                💡 <strong>Consejo:</strong> Es normal que durante el EMDR autoadministrado surjan emociones intensas. Si esto ocurre, puedes pausar el ejercicio, respirar profundamente y retomarlo cuando te sientas preparado.
+                💡 <strong>Consejo:</strong> Es normal que durante el ejercicio surjan emociones intensas. Si pasa, puedes pausar, respirar hondo y retomarlo cuando te sientas preparado.
               </p>
             </div>
           </section>

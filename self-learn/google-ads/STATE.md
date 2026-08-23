@@ -2,6 +2,8 @@
 
 - **Customer:** `5930583968` · moneda USD
 - **Campaña activa:** `psicologo-cognitivo-conductual-online` · budget ~US$2/día
+- **Campaña test:** `adiccion-al-juego-online` (`24172229213`) · **ENABLED** · budget **US$1/día** · geo **Chile + Argentina** · grupo `adiccion-al-juego` ENABLED · landing `/ads/adiccion-al-juego`
+- **Campaña pendiente:** `evaluacion-bariatrica-online` · **PAUSED** · budget **US$1/día** · landing `/ads/evaluacion-bariatrica` · no ENABLED hasta confirmación
 - **Conv:** whatsapp_lead
 - **Última revisión:** 2026-08-23 → métricas abajo · eval A+B cerrada 28 jul ([EVAL.md](./EVAL.md))
 
@@ -16,7 +18,8 @@
 | psicologo-ataques-de-panico-online | ENABLED | Sin volumen |
 | terapia-pareja | PAUSED | Landing RSA OK si se reactiva |
 | compin | PAUSED | Landing RSA OK si se reactiva |
-| adiccion-al-juego | — | Landing en repo; **sin grupo Ads aún** |
+| adiccion-al-juego | ENABLED | Campaña propia · US$1/día · RSA + 11 kws · landing `/ads/adiccion-al-juego` |
+| evaluacion-bariatrica | PAUSED | Pendiente · campaña propia · US$1/día · landing `/ads/evaluacion-bariatrica` · no ENABLED hasta confirmación |
 
 ## Snapshot métricas 2026-08-23
 
@@ -35,6 +38,7 @@ Landings 7d: `/ads/agendar-…` 7 / **1** · `/ads/adolescentes` 15 / 0.
 
 1. ~~Eval A+B~~ (cerrada 28 jul · éxito)
 2. Opcional: ciudades adolescentes (temuco, viña, concepción) si el gasto local crece (~US$3–4 en 30d)
-3. Grupo + RSA para `/ads/adiccion-al-juego`
+3. ~~Grupo + RSA adicción al juego~~ · **ENABLED 23 ago** US$1/día. Revisar ~6 sep: ≥1 conv y CPA ≤ US$18 o pausar si 0 conv con ≥US$12
 4. Sitelinks → forzar `www` (3 clics / 1 conv 30d en apex)
 5. Presupuesto solo si se quiere más volumen (CPA 30d estable ~US$10)
+6. Campaña `evaluacion-bariatrica-online` + grupo `evaluacion-bariatrica` **PAUSED** (script create, dry-run). Landing `/ads/evaluacion-bariatrica` · US$1/día. **No ENABLED hasta confirmación.**

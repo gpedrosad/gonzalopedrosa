@@ -9,6 +9,8 @@
 
 **No negativar** `adicciones` / ludopatía / juego — landing `/ads/adiccion-al-juego`.
 
+**No negativar** `bariatr*` en la campaña `evaluacion-bariatrica-online` — landing `/ads/evaluacion-bariatrica`. Las negativas `bariatrico` de la campaña **core TCC se mantienen**. Esta campaña es aparte y **no hereda** esa negativa.
+
 **Sí seguras** (competidores, otro enfoque, expectativa incorrecta): emdr, dbt, betterhelp, unobravo, apps, adventista, 24/7, sexologo, psicoanalisis, gratis/IA, etc.
 
 Negativas se aplican a **nivel campaña**, match BROAD.
@@ -26,7 +28,8 @@ Mapa canónico (www). RSA con URL incorrecta → `align-landings` (no UPDATE de 
 | psicologo-adolescentes-online | `/ads/adolescentes` |
 | terapia-pareja | `/ads/terapia-pareja` |
 | compin | `/ads/compin` |
-| *(pendiente grupo)* | `/ads/adiccion-al-juego` |
+| adiccion-al-juego | `/ads/adiccion-al-juego` |
+| evaluacion-bariatrica | `/ads/evaluacion-bariatrica` |
 
 Host: siempre `https://www.gonzalopedrosa.cl` (no apex sin www).
 

@@ -35,6 +35,8 @@ const LANDING_BY_AD_GROUP = {
   "psicologo-adolescentes-online": "https://www.gonzalopedrosa.cl/ads/adolescentes",
   "terapia-pareja": "https://www.gonzalopedrosa.cl/ads/terapia-pareja",
   compin: "https://www.gonzalopedrosa.cl/ads/compin",
+  "adiccion-al-juego": "https://www.gonzalopedrosa.cl/ads/adiccion-al-juego",
+  "evaluacion-bariatrica": "https://www.gonzalopedrosa.cl/ads/evaluacion-bariatrica",
 };
 
 const normalizeUrl = (url) => {

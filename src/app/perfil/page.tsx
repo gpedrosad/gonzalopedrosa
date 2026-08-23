@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Link from "next/link";
 import Profile from "../components/Perfil";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { JsonLd } from "@/app/components/JsonLd";
 import {
   SITE_URL,
   localBusinessSchema,
   getBreadcrumbSchema,
   getServiceSchema,
-  getFAQSchema,
+  getPageFAQSchema,
   getTwitterDescription,
 } from "@/lib/schemas";
 
@@ -30,7 +30,7 @@ const perfilFAQs = [
   },
 ];
 
-const faqSchema = getFAQSchema(perfilFAQs);
+const faqSchema = getPageFAQSchema(perfilFAQs);
 const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
 const serviceSchema = getServiceSchema({
   serviceType: "Psicoterapia online",
@@ -70,26 +70,10 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function ProfilePage() {
   return (
     <>
-      <Script
-        id="local-business"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <Script
-        id="breadcrumb"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <Script
-        id="service"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <JsonLd id="local-business" data={localBusinessSchema as Record<string, unknown>} />
+      <JsonLd id="breadcrumb" data={breadcrumbSchema as Record<string, unknown>} />
+      <JsonLd id="service" data={serviceSchema as Record<string, unknown>} />
+      <JsonLd id="faq-schema" data={faqSchema as Record<string, unknown>} />
       <div
         style={{
           maxWidth: 640,
@@ -100,6 +84,17 @@ export default function ProfilePage() {
         }}
       >
         <Breadcrumb items={breadcrumbItems} />
+        <h1
+          style={{
+            fontSize: "1.75rem",
+            fontWeight: 700,
+            lineHeight: 1.3,
+            margin: "0 0 1.25rem",
+            color: "#111",
+          }}
+        >
+          Gonzalo Pedrosa, psicólogo en Chillán
+        </h1>
         <section
           style={{
             marginBottom: "1.5rem",

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import dynamic from "next/dynamic";
 import SobreMi from "./SobreMi";
+import { CLINICAL_STATS } from "@/lib/site-config";
 
 // Lazy de Feed (performance)
 const Feed = dynamic(() => import("./Feed"), { ssr: false });
@@ -188,8 +189,8 @@ const Profile: React.FC = () => {
   };
 
   const primaryService = profileData.services[0];
-  const averageRating = 4.8;
-  const NumerodeExperiencias = 281;
+  const averageRating = Number(CLINICAL_STATS.ratingValue);
+  const NumerodeExperiencias = CLINICAL_STATS.experienceCount;
 
   // ViewContent sólo tras interacción humana
   React.useEffect(() => {
@@ -396,7 +397,7 @@ const Profile: React.FC = () => {
       <hr className="w-full border-gray-300 mt-12 mb-8" />
 
       <div className="w-full bg-white p-6 text-center text-gray-600">
-        <p>© 2025 Gonzalo Pedrosa. Todos los derechos reservados.</p>
+        <p>© 2026 Gonzalo Pedrosa. Todos los derechos reservados.</p>
       </div>
 
       {primaryService && (

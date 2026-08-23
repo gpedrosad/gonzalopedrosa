@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { JsonLd } from "@/app/components/JsonLd";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import {
   localBusinessSchema,
   getBreadcrumbSchema,
   getServiceSchema,
-  getFAQSchema,
+  getPageFAQSchema,
   getTwitterDescription,
 } from "@/lib/schemas";
 
@@ -68,7 +68,7 @@ const ansiedadFAQs = [
 ];
 
 // Schemas
-const faqSchema = getFAQSchema(ansiedadFAQs);
+const faqSchema = getPageFAQSchema(ansiedadFAQs);
 const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
 const serviceSchema = getServiceSchema({
   serviceType: "Tratamiento de Ansiedad",
@@ -80,26 +80,10 @@ const serviceSchema = getServiceSchema({
 export default function PsicologoAnsiedadChillanPage() {
   return (
     <>
-      <Script
-        id="local-business"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <Script
-        id="breadcrumb"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <Script
-        id="service"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <JsonLd id="local-business" data={localBusinessSchema as Record<string, unknown>} />
+      <JsonLd id="breadcrumb" data={breadcrumbSchema as Record<string, unknown>} />
+      <JsonLd id="service" data={serviceSchema as Record<string, unknown>} />
+      <JsonLd id="faq-schema" data={faqSchema as Record<string, unknown>} />
       <main
       style={{
         maxWidth: 640,
@@ -242,7 +226,7 @@ export default function PsicologoAnsiedadChillanPage() {
             "Especialización en Terapia Cognitivo-Conductual",
             "Más de 7 años tratando trastornos de ansiedad",
             "Formación continua en técnicas basadas en evidencia",
-            "Atención a más de 500 pacientes",
+            "Atención clínica a adultos en Chillán y online",
           ].map((item, i) => (
             <li
               key={i}
@@ -492,10 +476,7 @@ export default function PsicologoAnsiedadChillanPage() {
         </h2>
 
         <div style={{ display: "grid", gap: "0.5rem" }}>
-          {[...ansiedadFAQs, ...faqSchema.mainEntity.slice(4, 10).map((faq) => ({
-            question: faq.name,
-            answer: faq.acceptedAnswer.text,
-          }))].map((faq, index) => (
+          {ansiedadFAQs.map((faq, index) => (
             <details
               key={index}
               style={{

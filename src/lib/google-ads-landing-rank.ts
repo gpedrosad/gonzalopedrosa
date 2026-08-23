@@ -57,7 +57,6 @@ const IRRELEVANT = [
   "dbt",
   "adicion",
   "infantil",
-  "bariatric",
   "injuv",
   "conversemos",
   "linea libre",
@@ -74,6 +73,14 @@ const THEME_RULES: Array<{
   landing: string;
   match: (n: string) => boolean;
 }> = [
+  {
+    theme: "Evaluación bariátrica",
+    landing: "/ads/evaluacion-bariatrica",
+    match: (n) =>
+      /bariatr|obesidad|manga gastr|bypass|pase psicologic|informe psicologico bariatr|certificado psicologico bariatr/.test(
+        n,
+      ),
+  },
   {
     theme: "Agendar / cita online",
     landing: "/ads/agendar-psicologo-online",

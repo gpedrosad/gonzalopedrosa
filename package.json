@@ -19,7 +19,9 @@
     "google-ads:negatives": "node --env-file=.env.local scripts/google-ads-negatives.mjs",
     "google-ads:manage": "node --env-file=.env.local scripts/google-ads-manage.mjs",
     "google-ads:adolescentes-landing": "node --env-file=.env.local scripts/google-ads-set-adolescentes-landing.mjs",
-    "google-ads:align-landings": "node --env-file=.env.local scripts/google-ads-align-landings.mjs"
+    "google-ads:align-landings": "node --env-file=.env.local scripts/google-ads-align-landings.mjs",
+    "google-ads:create-adiccion-juego": "node --env-file=.env.local scripts/google-ads-create-adiccion-juego.mjs",
+    "google-ads:create-evaluacion-bariatrica": "node --env-file=.env.local scripts/google-ads-create-evaluacion-bariatrica.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.1.1",

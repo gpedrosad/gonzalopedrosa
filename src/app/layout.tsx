@@ -4,7 +4,7 @@ import { Geist } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { DeferredAnalytics } from "@/app/components/DeferredAnalytics";
-import { CANONICAL_ORIGIN } from "@/lib/site-config";
+import { CANONICAL_ORIGIN, CLINICAL_STATS } from "@/lib/site-config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,7 +24,7 @@ const layoutLdGraph = {
       name: "Gonzalo Pedrosa",
       jobTitle: "Psicólogo Clínico",
       description:
-        "Psicólogo con más de 7 años de experiencia en atención clínica. Especialista en terapia cognitivo-conductual.",
+        `Psicólogo con más de ${CLINICAL_STATS.yearsExperience} años de experiencia en atención clínica. Especialista en terapia cognitivo-conductual.`,
       image: "https://www.gonzalopedrosa.cl/yo.png",
       url: "https://www.gonzalopedrosa.cl/",
       sameAs: ["https://wa.me/56968257817"],
@@ -79,8 +79,8 @@ const layoutLdGraph = {
       },
       aggregateRating: {
         "@type": "AggregateRating",
-        ratingValue: "4.8",
-        reviewCount: "124",
+        ratingValue: CLINICAL_STATS.ratingValue,
+        reviewCount: CLINICAL_STATS.reviewCount,
         bestRating: "5",
       },
     },
@@ -106,7 +106,7 @@ export const metadata: Metadata = {
     locale: "es_CL",
     images: [
       {
-        url: "/yo.png",
+        url: "/og.png",
         width: 1200,
         height: 630,
         alt: "Gonzalo Pedrosa - Psicólogo",
@@ -118,7 +118,7 @@ export const metadata: Metadata = {
     title: "Gonzalo Pedrosa | Psicólogo",
     description:
       "Psicólogo. Ansiedad, depresión, estrés. TCC. Online y presencial.",
-    images: ["/yo.png"],
+    images: ["/og.png"],
   },
   robots: { index: true, follow: true, "max-image-preview": "large" },
 };

@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { CLINICAL_STATS } from "@/lib/site-config";
 
 interface SobreMiProps {
   /** Texto completo (sin cortar). */
@@ -13,7 +14,7 @@ interface SobreMiProps {
 }
 
 const DEFAULT_PREFIX =
-  "Hola mi nombre es Gonzalo Pedrosa y tengo más de 8 años de experiencia con";
+  `Hola mi nombre es Gonzalo Pedrosa y tengo más de ${CLINICAL_STATS.yearsExperience} años de experiencia con`;
 
 const SobreMi: React.FC<SobreMiProps> = ({
   content,

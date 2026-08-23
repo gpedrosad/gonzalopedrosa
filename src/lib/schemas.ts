@@ -1,6 +1,8 @@
 // src/lib/schemas.ts
 // Schemas reutilizables para SEO programático
 
+import { CLINICAL_STATS } from "@/lib/site-config";
+
 export const SITE_URL = "https://www.gonzalopedrosa.cl";
 
 /**
@@ -43,8 +45,8 @@ export const localBusinessSchema = {
   ],
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "4.8",
-    reviewCount: "124",
+    ratingValue: CLINICAL_STATS.ratingValue,
+    reviewCount: String(CLINICAL_STATS.reviewCount),
     bestRating: "5",
   },
   sameAs: ["https://wa.me/56968257817"],
@@ -143,7 +145,7 @@ export const baseFAQs = [
   {
     question: "¿Cuál es tu formación académica?",
     answer:
-      "Psicólogo titulado con especialización en Terapia Cognitivo-Conductual y más de 7 años de experiencia en atención clínica.",
+      `Psicólogo titulado con especialización en Terapia Cognitivo-Conductual y más de ${CLINICAL_STATS.yearsExperience} años de experiencia en atención clínica.`,
   },
   {
     question: "¿Cómo agendo una sesión?",

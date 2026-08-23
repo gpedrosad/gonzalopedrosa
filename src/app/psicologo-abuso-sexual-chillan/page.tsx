@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { JsonLd } from "@/app/components/JsonLd";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import {
   SITE_URL,
   localBusinessSchema,
   getBreadcrumbSchema,
   getServiceSchema,
-  getFAQSchema,
+  getPageFAQSchema,
   getTwitterDescription,
 } from "@/lib/schemas";
 
@@ -60,7 +60,7 @@ const abusoFAQs = [
   },
 ];
 
-const faqSchema = getFAQSchema(abusoFAQs);
+const faqSchema = getPageFAQSchema(abusoFAQs);
 const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
 const serviceSchema = getServiceSchema({
   serviceType: "Psicología trauma por abuso sexual",
@@ -72,26 +72,10 @@ const serviceSchema = getServiceSchema({
 export default function PsicologoAbusoSexualChillanPage() {
   return (
     <>
-      <Script
-        id="local-business"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <Script
-        id="breadcrumb"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <Script
-        id="service"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <JsonLd id="local-business" data={localBusinessSchema as Record<string, unknown>} />
+      <JsonLd id="breadcrumb" data={breadcrumbSchema as Record<string, unknown>} />
+      <JsonLd id="service" data={serviceSchema as Record<string, unknown>} />
+      <JsonLd id="faq-schema" data={faqSchema as Record<string, unknown>} />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
         <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>

@@ -15,4 +15,10 @@ Si un draft trae voseo, pasarlo a tuteo antes de publicar.
 - El alcance (casino, apuestas, online) se dice como **qué se trata**, no como oferta de juego. Evitar chips tipo «Apuestas online y casinos» que parecen promoción.
 - Sin escasez falsa: no mezclar «cupos limitados» con «sin lista de espera» ni «disponible esta semana» permanente.
 - Prueba del nicho (ludopatía / apuestas), no solo un número genérico de pacientes.
-- No hay grupo RSA en Ads todavía: no inventar demanda ni compartir presupuesto a ciegas.
+- Campaña Ads `adiccion-al-juego-online` **ENABLED** con budget propio US$1/día (no comparte el de TCC). Revisar ~14d.
+
+## Evaluación bariátrica (`/ads/evaluacion-bariatrica`)
+
+- Tuteo chileno (tú / te / Escríbeme). Sin voseo.
+- Pack **$180.000** (2 sesiones + informe). No $35.000. Sin «aprobado», «garantizado» ni «express 24h».
+- Campaña Ads `evaluacion-bariatrica-online` **propia y PAUSED** (US$1/día). No hereda la negativa `bariatr*` de TCC. No ENABLED hasta confirmación.

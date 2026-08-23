@@ -1,9 +1,9 @@
-import Script from "next/script";
+import { JsonLd } from "@/app/components/JsonLd";
 import {
   localBusinessSchema,
   getBreadcrumbSchema,
   getServiceSchema,
-  getFAQSchema,
+  getPageFAQSchema,
   type BreadcrumbItem,
 } from "@/lib/schemas";
 
@@ -29,30 +29,14 @@ export function OrganicSeoScripts({
     description: serviceDescription,
     areaServed,
   });
-  const faqSchema = getFAQSchema(faqs);
+  const faqSchema = getPageFAQSchema(faqs);
 
   return (
     <>
-      <Script
-        id="local-business"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <Script
-        id="breadcrumb"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <Script
-        id="service"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <JsonLd id="local-business" data={localBusinessSchema as Record<string, unknown>} />
+      <JsonLd id="breadcrumb" data={breadcrumbSchema as Record<string, unknown>} />
+      <JsonLd id="service" data={serviceSchema as Record<string, unknown>} />
+      <JsonLd id="faq-schema" data={faqSchema as Record<string, unknown>} />
     </>
   );
 }

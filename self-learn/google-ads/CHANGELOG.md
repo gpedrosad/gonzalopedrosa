@@ -4,6 +4,10 @@ Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
 ## 2026-08-23
 
+- **Landing** `/ads/evaluacion-bariatrica` + script `google-ads:create-evaluacion-bariatrica` (dry-run; campaña PAUSED US$1/día; no --apply).
+- **Campaña** `adiccion-al-juego-online` (`24172229213`) creada **PAUSED**: budget US$2/día, Chile, Search only, Maximize conv., grupo `adiccion-al-juego`, RSA 15/4 → `/ads/adiccion-al-juego`, 11 keywords (exención HEALTH), 444 negativas copiadas. Script `google-ads:create-adiccion-juego`.
+- **Activada** `adiccion-al-juego-online` + grupo: budget **US$1/día**. TCC intacta (US$2). Test 14d.
+- **Geo** juego: Chile + **Argentina** (presencia o interés). Negativa de keyword `argentina` se mantiene (bloquea queries con esa palabra, no el país).
 - **Landing** `/ads/adiccion-al-juego`: tuteo chileno (sin voseo), chip de alcance «Casino, apuestas y online», sin escasez falsa, prueba específica de ludopatía. Regla en `src/app/ads/README.md`.
 - **Snapshot** monitoreo: `docs/google-ads-informe-ads-2026-08-23.md` (30d) + `…-7d-2026-08-23.md`. 30d: 76 clics · 6 conv · US$59 · CPA **US$10**. 7d: 22 clics · 1 conv · US$16 · CPA US$16. Adolescentes lidera volumen (49/3); agendar sigue convirtiendo (7d 7/1). Landings OK. Sin acción obligatoria.
 

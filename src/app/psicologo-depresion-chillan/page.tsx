@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { JsonLd } from "@/app/components/JsonLd";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import {
   localBusinessSchema,
   getBreadcrumbSchema,
   getServiceSchema,
-  getFAQSchema,
+  getPageFAQSchema,
   getTwitterDescription,
 } from "@/lib/schemas";
 
@@ -68,7 +68,7 @@ const depresionFAQs = [
 ];
 
 // Schemas
-const faqSchema = getFAQSchema(depresionFAQs);
+const faqSchema = getPageFAQSchema(depresionFAQs);
 const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
 const serviceSchema = getServiceSchema({
   serviceType: "Tratamiento de Depresión",
@@ -80,26 +80,10 @@ const serviceSchema = getServiceSchema({
 export default function PsicologoDepresionChillanPage() {
   return (
     <>
-      <Script
-        id="local-business"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <Script
-        id="breadcrumb"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <Script
-        id="service"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <JsonLd id="local-business" data={localBusinessSchema as Record<string, unknown>} />
+      <JsonLd id="breadcrumb" data={breadcrumbSchema as Record<string, unknown>} />
+      <JsonLd id="service" data={serviceSchema as Record<string, unknown>} />
+      <JsonLd id="faq-schema" data={faqSchema as Record<string, unknown>} />
       <main
       style={{
         maxWidth: 640,
@@ -343,10 +327,7 @@ export default function PsicologoDepresionChillanPage() {
           Preguntas frecuentes
         </h2>
         <div style={{ display: "grid", gap: "0.5rem" }}>
-          {[...depresionFAQs, ...faqSchema.mainEntity.slice(4, 10).map((faq) => ({
-            question: faq.name,
-            answer: faq.acceptedAnswer.text,
-          }))].map((faq, index) => (
+          {depresionFAQs.map((faq, index) => (
             <details
               key={index}
               style={{

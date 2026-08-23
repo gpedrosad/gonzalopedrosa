@@ -6,7 +6,7 @@ import {
   SITE_URL,
   localBusinessSchema,
   getServiceSchema,
-  getFAQSchema,
+  getPageFAQSchema,
   getTwitterDescription,
 } from "@/lib/schemas";
 
@@ -48,7 +48,7 @@ const homeFAQs = [
   },
 ];
 
-const faqSchema = getFAQSchema(homeFAQs);
+const faqSchema = getPageFAQSchema(homeFAQs);
 const serviceSchema = getServiceSchema({
   serviceType: "Psicoterapia individual",
   description:
@@ -447,6 +447,50 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Preguntas frecuentes */}
+        <section style={{ marginBottom: "3rem" }}>
+          <h2
+            style={{
+              fontSize: "0.75rem",
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              color: "#999",
+              marginBottom: "1rem",
+            }}
+          >
+            Preguntas frecuentes
+          </h2>
+          <div style={{ display: "grid", gap: "0.5rem" }}>
+            {homeFAQs.map((faq) => (
+              <details
+                key={faq.question}
+                style={{
+                  padding: "1rem",
+                  border: "1px solid #eaeaea",
+                  borderRadius: "12px",
+                }}
+              >
+                <summary
+                  style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}
+                >
+                  {faq.question}
+                </summary>
+                <p
+                  style={{
+                    marginTop: "0.75rem",
+                    color: "#666",
+                    lineHeight: 1.6,
+                    fontSize: "0.9375rem",
+                  }}
+                >
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </section>
+
         {/* CTA Final */}
         <section
           style={{
@@ -503,13 +547,13 @@ export default function HomePage() {
           }}
         >
           <p style={{ color: "#999", fontSize: "0.8125rem" }}>
-            © 2025 Gonzalo Pedrosa · Psicólogo
+            © 2026 Gonzalo Pedrosa · Psicólogo
           </p>
         </footer>
       </main>
       <JsonLd id="local-business" data={localBusinessSchema} />
       <JsonLd id="service" data={serviceSchema} />
-      <JsonLd id="faq-schema" data={faqSchema} />
+      <JsonLd id="faq-schema" data={faqSchema as Record<string, unknown>} />
     </>
   );
 }

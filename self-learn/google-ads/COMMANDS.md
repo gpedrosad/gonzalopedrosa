@@ -22,6 +22,14 @@ npm run google-ads:negatives -- apply --apply --terms="a,b,c"
 # Landings RSA (final_urls inmutables → create + pause)
 npm run google-ads:align-landings
 npm run google-ads:align-landings -- --apply
+
+# Campaña adicción al juego (crear pausada; ya aplicada 23 ago)
+npm run google-ads:create-adiccion-juego
+npm run google-ads:create-adiccion-juego -- --apply
+
+# Campaña evaluación bariátrica (crear pausada; dry-run por defecto)
+npm run google-ads:create-evaluacion-bariatrica
+npm run google-ads:create-evaluacion-bariatrica -- --apply
 ```
 
 Panel web: `/interno/ads` · gestión: `/interno/ads/manage?key=…`

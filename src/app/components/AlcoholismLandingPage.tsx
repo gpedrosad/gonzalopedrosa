@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
-
 import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { JsonLd } from "@/app/components/JsonLd";
 import { WhatsAppButton } from "@/app/components/WhatsAppButton";
 import {
   alcoholismPages,
@@ -16,7 +15,7 @@ import {
   localBusinessSchema,
   getBreadcrumbSchema,
   getServiceSchema,
-  getFAQSchema,
+  getPageFAQSchema,
   getTwitterDescription,
 } from "@/lib/schemas";
 import { toCanonicalUrl } from "@/lib/site-config";
@@ -109,7 +108,7 @@ export function AlcoholismLandingPage({
   const page = alcoholismPages[pageKey];
   const breadcrumbItems = getBreadcrumbItems(pageKey);
   const clusterNavPages = getClusterNavPages(pageKey);
-  const faqSchema = getFAQSchema(page.faqs);
+  const faqSchema = getPageFAQSchema(page.faqs);
   const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
   const serviceSchema = getServiceSchema({
     serviceType: page.serviceType,
@@ -121,27 +120,21 @@ export function AlcoholismLandingPage({
 
   return (
     <>
-      <Script
+      <JsonLd
         id={`${pageKey}-local-business`}
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema),
-        }}
+        data={localBusinessSchema as Record<string, unknown>}
       />
-      <Script
+      <JsonLd
         id={`${pageKey}-service`}
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        data={serviceSchema as Record<string, unknown>}
       />
-      <Script
+      <JsonLd
         id={`${pageKey}-breadcrumb`}
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        data={breadcrumbSchema as Record<string, unknown>}
       />
-      <Script
+      <JsonLd
         id={`${pageKey}-faq`}
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        data={faqSchema as Record<string, unknown>}
       />
 
       <main className="min-h-screen bg-white">
