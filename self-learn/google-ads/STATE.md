@@ -3,7 +3,7 @@
 - **Customer:** `5930583968` · moneda USD
 - **Campaña activa:** `psicologo-cognitivo-conductual-online` · budget ~US$2/día
 - **Campaña test:** `adiccion-al-juego-online` (`24172229213`) · **ENABLED** · budget **US$1/día** · geo **Chile + Argentina** · grupo `adiccion-al-juego` ENABLED · landing `/ads/adiccion-al-juego`
-- **Campaña pendiente:** `evaluacion-bariatrica-online` · **PAUSED** · budget **US$1/día** · landing `/ads/evaluacion-bariatrica` · no ENABLED hasta confirmación
+- **Campaña test:** `evaluacion-bariatrica-online` (`24172472867`) · **ENABLED** · budget **US$1/día** · geo Chile PRESENCE · grupo `evaluacion-bariatrica` (`199819157735`) ENABLED · landing `/ads/evaluacion-bariatrica`
 - **Conv:** whatsapp_lead
 - **Última revisión:** 2026-08-23 → métricas abajo · eval A+B cerrada 28 jul ([EVAL.md](./EVAL.md))
 
@@ -19,7 +19,7 @@
 | terapia-pareja | PAUSED | Landing RSA OK si se reactiva |
 | compin | PAUSED | Landing RSA OK si se reactiva |
 | adiccion-al-juego | ENABLED | Campaña propia · US$1/día · RSA + 11 kws · landing `/ads/adiccion-al-juego` |
-| evaluacion-bariatrica | PAUSED | Pendiente · campaña propia · US$1/día · landing `/ads/evaluacion-bariatrica` · no ENABLED hasta confirmación |
+| evaluacion-bariatrica | ENABLED | Campaña propia · US$1/día · Chile PRESENCE · landing `/ads/evaluacion-bariatrica` |
 
 ## Snapshot métricas 2026-08-23
 
@@ -41,4 +41,4 @@ Landings 7d: `/ads/agendar-…` 7 / **1** · `/ads/adolescentes` 15 / 0.
 3. ~~Grupo + RSA adicción al juego~~ · **ENABLED 23 ago** US$1/día. Revisar ~6 sep: ≥1 conv y CPA ≤ US$18 o pausar si 0 conv con ≥US$12
 4. Sitelinks → forzar `www` (3 clics / 1 conv 30d en apex)
 5. Presupuesto solo si se quiere más volumen (CPA 30d estable ~US$10)
-6. Campaña `evaluacion-bariatrica-online` + grupo `evaluacion-bariatrica` **PAUSED** (script create, dry-run). Landing `/ads/evaluacion-bariatrica` · US$1/día. **No ENABLED hasta confirmación.**
+6. ~~Campaña bariátrica~~ · **ENABLED 23 ago** US$1/día. Revisar ~6 sep: ≥1 conv y CPA razonable o pausar si 0 conv con ≥US$12.

@@ -4,7 +4,8 @@ Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
 ## 2026-08-23
 
-- **Landing** `/ads/evaluacion-bariatrica` + script `google-ads:create-evaluacion-bariatrica` (dry-run; campaña PAUSED US$1/día; no --apply).
+- **Activada** `evaluacion-bariatrica-online` (`24172472867`) + grupo `evaluacion-bariatrica`: **ENABLED**, US$1/día, Chile PRESENCE, landing `/ads/evaluacion-bariatrica`.
+- **Campaña** `evaluacion-bariatrica-online` (`24172472867`) creada **PAUSED**: budget US$1/día, Chile PRESENCE, grupo `evaluacion-bariatrica` (`199819157735`) PAUSED, RSA → `/ads/evaluacion-bariatrica`, 14 kws, 26 negativas propias. No ENABLED.
 - **Campaña** `adiccion-al-juego-online` (`24172229213`) creada **PAUSED**: budget US$2/día, Chile, Search only, Maximize conv., grupo `adiccion-al-juego`, RSA 15/4 → `/ads/adiccion-al-juego`, 11 keywords (exención HEALTH), 444 negativas copiadas. Script `google-ads:create-adiccion-juego`.
 - **Activada** `adiccion-al-juego-online` + grupo: budget **US$1/día**. TCC intacta (US$2). Test 14d.
 - **Geo** juego: Chile + **Argentina** (presencia o interés). Negativa de keyword `argentina` se mantiene (bloquea queries con esa palabra, no el país).

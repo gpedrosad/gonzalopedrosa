@@ -26,7 +26,6 @@ const isApply = process.argv.includes("--apply");
 const CAMPAIGN_NAME = "evaluacion-bariatrica-online";
 const AD_GROUP_NAME = "evaluacion-bariatrica";
 const FINAL_URL = "https://www.gonzalopedrosa.cl/ads/evaluacion-bariatrica";
-const SOURCE_CAMPAIGN = "psicologo-cognitivo-conductual-online";
 const DAILY_BUDGET_MICROS = 1_000_000;
 const AD_GROUP_BID_MICROS = 10_000;
 const GEO_CHILE = "geoTargetConstants/2152";
@@ -110,19 +109,6 @@ const MATCH_ENUM = {
   BROAD: enums.KeywordMatchType.BROAD,
 };
 
-const MATCH_FROM_API = {
-  2: enums.KeywordMatchType.EXACT,
-  3: enums.KeywordMatchType.PHRASE,
-  4: enums.KeywordMatchType.BROAD,
-};
-
-const normalizeNeg = (text) =>
-  String(text ?? "")
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/\p{M}/gu, "")
-    .trim();
-
 const assertAdLimits = () => {
   for (const h of HEADLINES) {
     if (h.text.length > 30) throw new Error(`Headline >30: "${h.text}" (${h.text.length})`);
@@ -159,36 +145,11 @@ const alreadyExists = async (customer) => {
   return rows?.[0]?.campaign ?? null;
 };
 
-const fetchSourceNegatives = async (customer) => {
-  const rows = await customer.query(`
-    SELECT campaign_criterion.keyword.text, campaign_criterion.keyword.match_type
-    FROM campaign_criterion
-    WHERE campaign.name = '${SOURCE_CAMPAIGN}'
-      AND campaign_criterion.type = 'KEYWORD'
-      AND campaign_criterion.negative = TRUE
-  `);
-  return (rows ?? [])
-    .map((row) => ({
-      text: row.campaign_criterion?.keyword?.text,
-      matchType: MATCH_FROM_API[Number(row.campaign_criterion?.keyword?.match_type)],
-    }))
-    .filter((row) => row.text && row.matchType)
-    .filter((row) => !normalizeNeg(row.text).includes("bariatr"));
-};
-
-const mergeNegatives = (fromSource) => {
-  const seen = new Set(fromSource.map((n) => normalizeNeg(n.text)));
-  const extras = EXTRA_NEGATIVES.filter((text) => {
-    const key = normalizeNeg(text);
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  }).map((text) => ({
+const buildNegatives = () =>
+  EXTRA_NEGATIVES.map((text) => ({
     text,
     matchType: enums.KeywordMatchType.BROAD,
   }));
-  return { negatives: [...fromSource, ...extras], extrasCount: extras.length };
-};
 
 const buildOps = (negatives) => {
   const budgetRn = `customers/${CUSTOMER_ID}/campaignBudgets/-1`;
@@ -206,6 +167,10 @@ const buildOps = (negatives) => {
       target_google_search: true,
       target_search_network: false,
       target_content_network: false,
+    },
+    geo_target_type_setting: {
+      // Solo personas que están físicamente en Chile; no "presencia o interés".
+      positive_geo_target_type: enums.PositiveGeoTargetType.PRESENCE,
     },
   };
 
@@ -321,8 +286,9 @@ async function main() {
     process.exit(0);
   }
 
-  const fromSource = await fetchSourceNegatives(customer);
-  const { negatives, extrasCount } = mergeNegatives(fromSource);
+  // Esta campaña no hereda negativas de TCC: varias chocan con la intención
+  // bariátrica y además inflarían innecesariamente el lote de operaciones.
+  const negatives = buildNegatives();
   const ops = buildOps(negatives);
 
   console.log(`Campaña: ${CAMPAIGN_NAME} · PAUSED · budget US$1/día`);
@@ -330,7 +296,7 @@ async function main() {
   console.log(`Landing: ${FINAL_URL}`);
   console.log(`Headlines: ${HEADLINES.length} · descriptions: ${DESCRIPTIONS.length}`);
   console.log(
-    `Keywords: ${KEYWORDS.length} · negativas: ${negatives.length} (source sin bariatr: ${fromSource.length} + extras: ${extrasCount})`,
+    `Keywords: ${KEYWORDS.length} · negativas propias: ${negatives.length}`,
   );
   console.log(`Ops: ${ops.length} · ${isApply ? "APLICAR" : "DRY-RUN (validate_only)"}`);
   console.log("\nHeadlines:");

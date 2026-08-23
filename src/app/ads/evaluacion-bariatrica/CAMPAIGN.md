@@ -4,7 +4,7 @@ Fuente de verdad para RSA, keywords y negativas. Tuteo Chile. Sin voseo.
 
 Campaña: `evaluacion-bariatrica-online` · Grupo: `evaluacion-bariatrica`  
 Final URL: `https://www.gonzalopedrosa.cl/ads/evaluacion-bariatrica`  
-Paths: `evaluacion` / `bariatrica` · Geo: Chile · Conv: `whatsapp_lead`
+Paths: `evaluacion` / `bariatrica` · Geo: Chile (`PRESENCE`) · Conv: `whatsapp_lead`
 
 ## Oferta
 
