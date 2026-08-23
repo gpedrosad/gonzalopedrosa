@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Tono y copy (Chile)
+
+Sitio chileno. Todo el copy usa **español de Chile (tuteo)**: tú, Escríbeme, Recupera, tienes, puedes.
+
+**No usar voseo argentino** (Recuperá, Escríbime, tenés, podés, querés, aceptás, Recuperás). Detalle y reglas de landings paid: [`src/app/ads/README.md`](src/app/ads/README.md).
+
 ## Getting Started
 
 First, run the development server:

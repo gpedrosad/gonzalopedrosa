@@ -22,6 +22,10 @@
 | Conversión | `/agendar` |
 | Autoridad | `/perfil` |
 
+Title/H1 de `/psicologo-online-chillan` anclan **Chile** (videollamada). El slug conserva Chillán. No crear landings por ciudad.
+
+No recrear `/psicologo-hombres-chillan` (301 → `/psicologo-adulto-chillan`).
+
 No apuntar chips/CTAs «Online» transaccionales a `/terapia-online`.
 
 ## Contenido

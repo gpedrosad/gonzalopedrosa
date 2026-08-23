@@ -9,13 +9,13 @@ const description =
   "Terapia ERP (EPR) para TOC en Chillán: exposición con prevención de respuesta, obsesiones y compulsiones. Presencial u online. Agenda evaluación.";
 
 export const metadata: Metadata = {
-  title: "Terapia ERP TOC Chillán | Exposición y prevención de respuesta",
+  title: "Terapia ERP TOC Chillán | Exposición y prevención",
   description,
   alternates: {
     canonical: "/tratamiento-toc-chillan",
   },
   openGraph: {
-    title: "Terapia ERP TOC Chillán | Exposición y prevención de respuesta",
+    title: "Terapia ERP TOC Chillán | Exposición y prevención",
     description,
     url: `${SITE_URL}/tratamiento-toc-chillan`,
     type: "website",
@@ -39,6 +39,11 @@ const tratamiento_toc_chillanFAQs = [
       "ERP (Exposure and Response Prevention), también llamada EPR en español, es el tratamiento de primera línea para el TOC: te expones de forma gradual a lo que dispara la obsesión y aprendes a no hacer la compulsión, hasta que la ansiedad baja sola.",
   },
   {
+    question: "¿ERP y EPR son lo mismo?",
+    answer:
+      "Sí. ERP es el nombre en inglés. En español se dice EPR (exposición con prevención de respuesta). Es el mismo tratamiento: exposición gradual a lo que dispara la obsesión y prevención de la compulsión. Aquí uso ambos nombres porque mucha gente busca «terapia ERP TOC».",
+  },
+  {
     question: "¿El TOC tiene cura?",
     answer:
       "El TOC es una condición crónica, pero con tratamiento adecuado muchas personas logran reducir significativamente sus síntomas y llevar una vida normal. La terapia ERP/EPR tiene tasas de éxito entre 60-80%.",
@@ -57,7 +62,7 @@ const tratamiento_toc_chillanFAQs = [
 
 const breadcrumbItems = [
   { label: "Inicio", href: "/" },
-  { label: "Tratamiento TOC Chillán" },
+  { label: "Terapia ERP para TOC" },
 ];
 
 export default function TratamientoTocChillanPage() {
@@ -66,7 +71,7 @@ export default function TratamientoTocChillanPage() {
       <OrganicSeoScripts
         breadcrumbItems={breadcrumbItems}
         faqs={tratamiento_toc_chillanFAQs}
-        serviceType="Tratamiento TOC"
+        serviceType="Terapia ERP para TOC"
         serviceDescription={description}
       />
       <main
@@ -124,7 +129,7 @@ export default function TratamientoTocChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Tratamiento TOC en Chillán
+        Terapia ERP para TOC en Chillán
       </h1>
 
       <p
@@ -368,6 +373,30 @@ export default function TratamientoTocChillanPage() {
               español, es el tratamiento de primera línea para el TOC: te
               expones de forma gradual a lo que dispara la obsesión y aprendes
               a no hacer la compulsión, hasta que la ansiedad baja sola.
+            </p>
+          </details>
+
+          <details
+            style={{
+              padding: "1rem",
+              border: "1px solid #eaeaea",
+              borderRadius: "12px",
+            }}
+          >
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
+              ¿ERP y EPR son lo mismo?
+            </summary>
+            <p
+              style={{
+                marginTop: "0.75rem",
+                color: "#666",
+                lineHeight: 1.6,
+                fontSize: "0.9375rem",
+              }}
+            >
+              Sí. ERP es el nombre en inglés. En español se dice EPR (exposición
+              con prevención de respuesta). Es el mismo tratamiento. Uso ambos
+              nombres porque mucha gente busca «terapia ERP TOC».
             </p>
           </details>
 

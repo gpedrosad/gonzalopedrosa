@@ -15,13 +15,13 @@ const description =
   "¿Ansiedad, preocupación constante o miedo a crisis? Psicólogo en Chillán con TCC: presencial u online, $35.000 / 50 min, boleta Isapre. Agenda hoy.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo para Ansiedad Chillán | TCC · Online o presencial",
+  title: "Psicólogo para ansiedad en Chillán | Agenda hoy · $35.000",
   description,
   alternates: {
     canonical: "/psicologo-ansiedad-chillan",
   },
   openGraph: {
-    title: "Psicólogo para Ansiedad Chillán | TCC · Online o presencial",
+    title: "Psicólogo para ansiedad en Chillán | Agenda hoy · $35.000",
     description,
     url: "https://www.gonzalopedrosa.cl/psicologo-ansiedad-chillan",
     type: "website",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo para Ansiedad Chillán | TCC",
+    title: "Psicólogo para ansiedad Chillán | $35.000",
     description: getTwitterDescription(
       "TCC para ansiedad en Chillán u online. $35.000 / 50 min con boleta Isapre. Agenda hoy."
     ),
@@ -162,7 +162,7 @@ export default function PsicologoAnsiedadChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo ansiedad en Chillán
+        Psicólogo para ansiedad en Chillán
       </h1>
 
       <p

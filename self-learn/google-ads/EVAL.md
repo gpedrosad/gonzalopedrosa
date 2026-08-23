@@ -80,12 +80,12 @@ Comparar informe nuevo vs baseline arriba. Rellenar:
 
 | Check | ¿OK? | Nota |
 |---|---|---|
-| Search terms ya no gastan en negativas A | ✅ 7d | Gasto A≈0 post-cambio; restos en 30d = ventana rodante pre-17 |
-| Landing agendar = `/ads/agendar-…` (no solo TCC) | ✅ | 7d 24 jul: 7/10 clics → agendar; 2 conv ahí |
-| CPA campaña ≤ ~US$18 (o mejor que US$15) | ✅ | 30d US$10 · 7d US$6 |
-| Conv. 7d no colapsaron a 0 con gasto similar | ✅ | 2 conv / US$12 en 7d |
-| Adolescentes CPA no empeoró mucho sin causa | ✅ | 30d US$19; 7d 2 clics / US$1 |
-| align-landings sin drifts | ✅ | “Nada que cambiar” (2026-07-24) |
+| Search terms ya no gastan en negativas A | ✅ 7d | Gasto A≈0; restos 30d = rolling pre-17 |
+| Landing agendar = `/ads/agendar-…` (no solo TCC) | ✅ | 7d 28 jul: 8/12 clics → agendar; 1 conv ahí |
+| CPA campaña ≤ ~US$18 (o mejor que US$15) | ✅ | 30d US$10 · 7d US$13 |
+| Conv. 7d no colapsaron a 0 con gasto similar | ✅ | 1 conv / US$13 en 7d |
+| Adolescentes CPA no empeoró mucho sin causa | ✅ | 30d US$20; 7d 4 clics / US$3 / 0 conv |
+| align-landings sin drifts | ✅ | “Nada que cambiar” (2026-07-28) |
 
 ## Criterios de éxito / fallo (orientativos)
 
@@ -244,3 +244,88 @@ Mejora vs 23 jul: 7/10 clics en `/ads/agendar-…` (antes 6/10). `align-landings
 | Revertir algo | No |
 | Próxima revisión formal | ~2026-07-31 |
 | Nuevas acciones ahora | Ninguna; pendientes fuera de eval en STATE |
+
+## Reevaluación 2026-07-28
+
+**Ventana post-cambio:** ~11 días (cerca del cierre ~14d / 31 jul).  
+**Veredicto:** **Éxito sostenido** — mantener; se puede dar por cerrado el ciclo de eval A+B.  
+**Fuentes:** `docs/google-ads-informe-ads-2026-07-28.md` (30d) · `docs/google-ads-informe-ads-7d-2026-07-28.md` (7d)
+
+### Comparativa 30d (baseline 17 jul → hoy)
+
+| Métrica | 17 jul | 24 jul | 28 jul | Δ vs baseline |
+|---|---|---|---|---|
+| Clics | 60 | 57 | 54 | −6 |
+| Impresiones | 658 | 579 | 623 | −35 |
+| CTR | 9.12% | 9.84% | 8.67% | −0.45 pp |
+| Costo | US$62 | US$61 | US$59 | −3 |
+| Conv | 4 | 6 | 6 | +2 |
+| CPA | US$15 | US$10 | US$10 | −US$5 |
+
+### Post-intervención (últimos 7d)
+
+| Métrica | 24 jul | 28 jul |
+|---|---|---|
+| Clics | 10 | 12 |
+| Costo | US$12 | US$13 |
+| Conv | 2 | 1 |
+| CPA | US$6 | US$13 |
+| CTR | 8.00% | 6.90% |
+
+Landings 7d:
+
+| Landing | Clics | Conv | CPA |
+|---|---|---|---|
+| `/ads/agendar-psicologo-online` | 8 | 1 | US$10 |
+| `/ads/adolescentes` | 4 | 0 | — |
+| TCC / ansiedad | 0 | 0 | — |
+
+→ **67%** clics en landing agendar; la única conv. de la semana ahí. Criterio ≥50% OK.
+
+Grupos 7d: agendar 8/1 · adolescentes 4/0 · resto ~0.
+
+### Lectura por intervención
+
+**A · Negativas (17 jul + pack 24 jul)**  
+7d: sin gasto en betterhelp/unobravo/opción yo terapia/apps/emdr/dbt/24h ni en eurekka/psynder/ifeel/mentulia/redgesam.  
+`opción yo precios` / `eurekka` / `bamsemocional` / `psimammoliti` = impresiones sin clic (OK o candidatas futuras).  
+30d aún `opción yo terapia` US$1 = residual rolling.  
+Desperdicio 7d: solo genéricos core (`psicologo(s) online`) — **no negativar**.
+
+**B · Landings**  
+Sigue cumpliendo: tráfico agendar → `/ads/agendar-…`. `align-landings` limpio.  
+30d aún mezcla pre-cambio en TCC (16 clics / 3 conv) vs agendar (11 / 2).
+
+### Checks
+
+| Acción | Resultado |
+|---|---|
+| `align-landings` | Nada que cambiar |
+| `negatives propose` | 9 sugeridas core — **no aplicar** |
+
+### Decisión
+
+| Acción | Estado |
+|---|---|
+| Mantener negativas A + pack 24 jul | Sí |
+| Mantener landings alineadas | Sí |
+| Revertir algo | No |
+| Ciclo eval A+B | **Cerrado** (éxito sostenido ~11d) |
+| Nuevas acciones ahora | Opcional: `bamsemocional`, `psimammoliti`, `opción yo precios` si reaparecen con gasto; sitelinks www |
+| Fuera de eval | Budget / adicción juego / reactivar pareja — solo si se busca más volumen |
+
+## Snapshot 2026-08-01 (monitoreo post-cierre)
+
+**Fuentes:** `docs/google-ads-informe-ads-2026-08-01.md` · `…-7d-2026-08-01.md`  
+**Veredicto:** **Estable** — CPA 30d sigue US$10; landings alineadas; sin revertir.
+
+| Métrica | Baseline 17 jul | 28 jul | 1 ago |
+|---|---|---|---|
+| Clics 30d | 60 | 54 | 58 |
+| Conv 30d | 4 | 6 | 6 |
+| CPA 30d | US$15 | US$10 | US$10 |
+| CTR 30d | 9.12% | 8.67% | 8.94% |
+| 7d clics / conv / CPA | — | 12 / 1 / US$13 | 14 / 1 / US$13 |
+
+7d landings: agendar 10/0 · adolescentes 4/**1**.  
+`align-landings` limpio. Negativas A OK. No nuevas acciones.

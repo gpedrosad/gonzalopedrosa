@@ -58,12 +58,52 @@ curl -sI https://www.gonzalopedrosa.cl/psicologo-especialista-ansiedad-chillan |
 
 | Check | ¿OK? | Nota |
 |---|---|---|
-| Deploy vivo + 301 especialista | ⬜ | |
-| A1: money pages «En Google» (UI) | ⬜ | Manual |
-| CTR online o ansiedad > 0% (≥10 imp.) | ⬜ | |
-| Imp. pareja ≥ baseline o recuperando | ⬜ | |
-| Hosts solo www | ⬜ | |
-| seo:audit PASS | ⬜ | |
+| Deploy vivo + 301 especialista | ✅ | 308 → ansiedad (prod 28 jul) |
+| A1: money pages «En Google» (UI) | ⬜ | Sitemap no reenviado desde 8 jun |
+| CTR online o ansiedad > 0% (≥10 imp.) | ❌ aún | online 18/0% pos~42; ansiedad 12/0% |
+| Imp. pareja ≥ baseline o recuperando | ✅ | 8→21 imp · **1 clic** (CTR 4,8%) |
+| Hosts solo www | ✅ | solo www en 4 ago |
+| seo:audit PASS | ✅ | 2026-08-04 |
+
+## Reevaluación intermedia 2026-07-28
+
+**Ventana post-código:** ~5 días (antes del mínimo ~14d del plan).  
+**Veredicto:** **Neutro / temprano** — no juzgar A3 aún; mantener.  
+**Fuente:** `docs/gsc-informe-2026-07-28.md`
+
+| Métrica | Baseline 23 jul | 28 jul |
+|---|---:|---:|
+| Clics | 11 | 11 |
+| Impresiones | 103 | 126 |
+| CTR | 10,68% | 8,73% |
+| Posición | 10,3 | 11,8 |
+
+Señales positivas: pareja recupera; TOC/EMDR/home siguen motor; redirects OK.  
+Señales débiles: online más visible pero pos. ~28 y 0 CTR; obesidad sin clics; CTR sitio ↓ por más impresiones profundas.
+
+Próximo cierre formal: ~2026-08-06 / 20.
+
+## Reevaluación intermedia 2026-08-04
+
+**Ventana post-código:** ~12 días (cerca del mínimo ~14d).  
+**Veredicto:** **Neutro / parcial** — técnico OK; A3 solo pareja cumple; no cerrar aún.  
+**Fuente:** `docs/gsc-informe-2026-08-04.md` · `seo:audit` PASS
+
+| Métrica | Baseline 23 jul | 28 jul | 4 ago |
+|---|---:|---:|---:|
+| Clics | 11 | 11 | 9 |
+| Impresiones | 103 | 126 | 136 |
+| CTR | 10,68% | 8,73% | 6,62% |
+| Posición | 10,3 | 11,8 | 12,4 |
+
+**A3:** pareja ✅ (1 clic / 21 imp). Online / ansiedad / adulto / alcoholismo ❌ (0% CTR). Online empeora posición (28→42).  
+**Motores:** TOC (3 clics, pos 4,6), home, EMDR, obesidad.  
+**Decisión:** mantener metas; no nuevas landings; priorizar Inspection + copy online/ansiedad/adulto. Cierre formal ~20 ago.
+
+## Intervención 2026-08-23 (nuevo baseline on-page)
+
+GSC 90d (`docs/gsc-informe-2026-08-23.md`): 28 clics · 406 imp · CTR 6,9%. A3 23 jul **no cerrado** (ansiedad/adulto/online siguen 0% CTR).  
+**Código nuevo:** P0+P1 en [OPORTUNIDADES.md](./OPORTUNIDADES.md). Medir impacto ~2–4 sem (no antes del ~6 sep). No crear URLs.
 
 ## Criterios orientativos
 

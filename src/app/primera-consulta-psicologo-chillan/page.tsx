@@ -50,17 +50,17 @@ const primeraFAQs = [
   {
     question: "¿Debo llevar exámenes o informes previos?",
     answer:
-      "Si tenés derivación médica, informes de salud mental o estudios recientes, pueden ayudar, pero no son obligatorios para comenzar. Muchas personas llegan solo con ganas de ordenar lo que les pasa.",
+      "Si tienes derivación médica, informes de salud mental o estudios recientes, pueden ayudar, pero no son obligatorios para comenzar. Muchas personas llegan solo con ganas de ordenar lo que les pasa.",
   },
   {
     question: "¿Puedo ir acompañado a la primera consulta?",
     answer:
-      "En general trabajo uno a uno; si considerás relevante un apoyo puntual, lo conversamos antes. En adolescentes puede participar un adulto responsable en parte de la sesión según el caso.",
+      "En general trabajo uno a uno; si consideras relevante un apoyo puntual, lo conversamos antes. En adolescentes puede participar un adulto responsable en parte de la sesión según el caso.",
   },
   {
     question: "¿Cuánto demora en confirmarse un horario?",
     answer:
-      "Suelo responder por WhatsApp en menos de 24 horas hábiles. La disponibilidad varía según la semana; si tenés urgencia, indicalo en el mensaje.",
+      "Suelo responder por WhatsApp en menos de 24 horas hábiles. La disponibilidad varía según la semana; si tienes urgencia, indícalo en el mensaje.",
   },
 ];
 
@@ -224,11 +224,11 @@ export default function PrimeraConsultaPsicologoChillanPage() {
           <ol style={{ paddingLeft: "1.25rem", color: "#444", lineHeight: 1.75, fontSize: "0.9375rem" }}>
             <li style={{ marginBottom: "0.75rem" }}>
               <strong style={{ color: "#000" }}>Acuerdos básicos:</strong> confidencialidad, forma de
-              contacto entre sesiones y qué hacer si no podés asistir.
+              contacto entre sesiones y qué hacer si no puedes asistir.
             </li>
             <li style={{ marginBottom: "0.75rem" }}>
               <strong style={{ color: "#000" }}>Tu motivo de consulta:</strong> qué te trae hoy, desde
-              cuándo y qué querés que sea distinto en unas semanas.
+              cuándo y qué quieres que sea distinto en unas semanas.
             </li>
             <li style={{ marginBottom: "0.75rem" }}>
               <strong style={{ color: "#000" }}>Contexto breve:</strong> historia relevante sin necesidad

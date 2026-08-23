@@ -5,7 +5,7 @@ import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
 export const metadata: Metadata = {
   title: "Tratamiento Adicción al Juego Online | Psicólogo TCC",
   description:
-    "Terapia online para ludopatía y adicción al juego. Recuperá el control con terapia cognitivo-conductual. Sesiones por videollamada. Agenda por WhatsApp.",
+    "Terapia online para ludopatía y adicción al juego. Recupera el control con terapia cognitivo-conductual. Sesiones por videollamada. Agenda por WhatsApp.",
   robots: {
     index: false,
     follow: false,
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tratamiento Adicción al Juego Online | Psicólogo TCC",
     description:
-      "Terapia online para ludopatía y adicción al juego. Recuperá el control con terapia cognitivo-conductual.",
+      "Terapia online para ludopatía y adicción al juego. Recupera el control con terapia cognitivo-conductual.",
     url: "https://www.gonzalopedrosa.cl/ads/adiccion-al-juego",
     type: "website",
     images: [
@@ -84,7 +84,7 @@ export default function Page() {
           <div className="flex items-center justify-between mb-4">
             <span className="inline-flex items-center gap-1.5 bg-green-50 text-green-700 text-xs font-medium px-2.5 py-1 rounded-full border border-green-200">
               <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-              Disponible esta semana
+              Respuesta por WhatsApp
             </span>
             <span className="text-xs text-gray-500">100% Online</span>
           </div>
@@ -94,7 +94,7 @@ export default function Page() {
           </h1>
 
           <p className="text-base text-gray-600 mb-4 leading-relaxed">
-            Recuperá el control con terapia cognitivo-conductual. Trabajamos
+            Recupera el control con terapia cognitivo-conductual. Trabajamos
             impulsos, mentiras, deudas y el ciclo de la ludopatía — sin juicios,
             con herramientas concretas desde la primera sesión.
           </p>
@@ -104,7 +104,7 @@ export default function Page() {
               ✓ Terapia Cognitivo-Conductual
             </span>
             <span className="inline-flex items-center gap-1.5 text-sm text-gray-700 bg-gray-100 px-3 py-1.5 rounded-full">
-              ✓ Apuestas online y casinos
+              ✓ Casino, apuestas y online
             </span>
             <span className="inline-flex items-center gap-1.5 text-sm text-gray-700 bg-gray-100 px-3 py-1.5 rounded-full">
               ✓ 100% confidencial
@@ -201,7 +201,7 @@ export default function Page() {
                   <span className="text-green-500">✓</span> TCC
                 </span>
                 <span className="inline-flex items-center gap-1 text-xs bg-white px-3 py-1.5 rounded-full border border-gray-200">
-                  <span className="text-green-500">✓</span> +280 pacientes
+                  <span className="text-green-500">✓</span> Ludopatía y apuestas
                 </span>
                 <span className="inline-flex items-center gap-1 text-xs bg-white px-3 py-1.5 rounded-full border border-gray-200">
                   <span className="text-green-500">✓</span> 100% online
@@ -209,9 +209,10 @@ export default function Page() {
               </div>
 
               <p className="text-gray-600 text-sm leading-relaxed max-w-md">
-                Trabajo con personas que quieren dejar de jugar y no saben cómo.
-                Sin moralina: identificamos el ciclo de la adicción, manejamos
-                impulsos y armamos un plan realista para no recaer.
+                Trabajo con ludopatía: casino, apuestas deportivas y juego
+                online. Llegan personas que ya intentaron parar solas. Sin
+                moralina: identificamos el ciclo, manejamos impulsos y armamos
+                un plan realista para no recaer.
               </p>
             </div>
           </div>
@@ -230,13 +231,13 @@ export default function Page() {
             {[
               {
                 step: "1",
-                title: "Escríbime por WhatsApp",
+                title: "Escríbeme por WhatsApp",
                 desc: "Coordinamos día y hora que te acomode",
               },
               {
                 step: "2",
                 title: "Evaluación inicial",
-                desc: "Entendemos tu patrón de juego, triggers y consecuencias",
+                desc: "Entendemos tu patrón de juego, detonantes y consecuencias",
               },
               {
                 step: "3",
@@ -245,8 +246,8 @@ export default function Page() {
               },
               {
                 step: "4",
-                title: "Recuperás el control",
-                desc: "Reconstruís finanzas, relaciones y rutinas sin el juego al centro",
+                title: "Recuperas el control",
+                desc: "Reconstruyes finanzas, relaciones y rutinas sin el juego al centro",
               },
             ].map((item) => (
               <div
@@ -284,7 +285,7 @@ export default function Page() {
                 {
                   icon: "⚡",
                   title: "Impulsos",
-                  desc: "Frenar el urge antes de apostar",
+                  desc: "Frenar el impulso antes de apostar",
                 },
                 {
                   icon: "🛡️",
@@ -313,7 +314,7 @@ export default function Page() {
         <section className="px-4 py-8 md:py-10 bg-gray-50">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-green-700 text-xs font-medium uppercase tracking-wider mb-2">
-              Cupos limitados
+              Primera sesión por WhatsApp
             </p>
             <p className="text-gray-900 text-lg font-medium mb-4">
               El primer paso es pedir ayuda. El resto lo trabajamos juntos.
@@ -326,7 +327,7 @@ export default function Page() {
               Agendar sesión online
             </AdsWhatsAppButton>
             <p className="text-gray-500 text-sm mt-3">
-              Sin lista de espera · Sin compromiso
+              Horarios flexibles · Sin compromiso
             </p>
           </div>
         </section>
@@ -382,7 +383,7 @@ export default function Page() {
                 },
                 {
                   q: "¿Funciona la terapia online para esto?",
-                  a: "Sí. La TCC online es efectiva para adicción al juego. Lo importante es el trabajo entre sesiones: manejar triggers, impulsos y el plan de prevención de recaídas.",
+                  a: "Sí. La TCC online es efectiva para adicción al juego. Lo importante es el trabajo entre sesiones: manejar detonantes, impulsos y el plan de prevención de recaídas.",
                 },
                 {
                   q: "¿Puede participar mi familia?",
@@ -393,7 +394,7 @@ export default function Page() {
                   a: "Depende de cada caso. Algunas personas notan cambios en pocas semanas; otros procesos son más largos. Lo evaluamos juntos en la primera consulta.",
                 },
                 {
-                  q: "¿Qué formas de pago aceptás?",
+                  q: "¿Qué formas de pago aceptas?",
                   a: "Transferencia bancaria antes de la sesión. Te envío los datos al coordinar la hora.",
                 },
               ].map((item, i) => (
@@ -420,14 +421,14 @@ export default function Page() {
         <section className="px-4 py-10 md:py-14 bg-gradient-to-b from-gray-900 to-gray-950">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-green-400 text-sm font-medium mb-2">
-              ✓ Cupos disponibles esta semana
+              ✓ Coordinamos la primera sesión por WhatsApp
             </p>
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
               ¿Listo/a para recuperar el control?
             </h2>
             <p className="text-gray-400 mb-6 text-sm max-w-md mx-auto">
-              Escribime ahora y te respondo en menos de 2 horas. Podemos empezar
-              esta misma semana.
+              Escríbeme ahora y te respondo en menos de 2 horas. Podemos
+              coordinar un horario que te acomode.
             </p>
 
             <div className="bg-gray-800/50 rounded-2xl p-5 max-w-sm mx-auto">

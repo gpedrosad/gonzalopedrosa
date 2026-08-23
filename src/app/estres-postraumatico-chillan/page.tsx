@@ -6,23 +6,23 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Estrés Postraumático (TEPT) en Chillán | Psicólogo Gonzalo Pedrosa",
+  title: "TEPT y estrés postraumático Chillán | EMDR · TCC",
   description:
-    "Tratamiento para estrés postraumático (TEPT) en Chillán. Terapia especializada para superar traumas y recuperar tu vida.",
+    "Especialista en TEPT en Chillán: estrés postraumático con EMDR y TCC. Flashbacks, evitación e hiperactivación. Online o presencial. Agenda hoy.",
   alternates: {
     canonical: "/estres-postraumatico-chillan",
   },
   openGraph: {
-    title: "Estrés Postraumático (TEPT) en Chillán | Psicólogo Gonzalo Pedrosa",
-    description: "Tratamiento para estrés postraumático (TEPT) en Chillán. Terapia especializada para superar traumas y recuperar tu vida.",
+    title: "TEPT y estrés postraumático Chillán | EMDR · TCC",
+    description: "Especialista en TEPT en Chillán: estrés postraumático con EMDR y TCC. Flashbacks, evitación e hiperactivación. Online o presencial. Agenda hoy.",
     url: "https://www.gonzalopedrosa.cl/estres-postraumatico-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Estrés Postraumático (TEPT) en Chillán | Psicólogo Gonzalo Pedrosa",
-    description: getTwitterDescription("Tratamiento para estrés postraumático (TEPT) en Chillán. Terapia especializada para superar traumas y recuperar tu vida."),
+    title: "TEPT y estrés postraumático Chillán | EMDR · TCC",
+    description: getTwitterDescription("Especialista en TEPT en Chillán: EMDR y TCC para flashbacks, evitación e hiperactivación. Agenda hoy."),
   },
 };
 
@@ -73,7 +73,7 @@ export default function EstresPostraumaticoChillanPage() {
       <p style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.75rem" }}>Chillán, Chile</p>
 
       <h1 style={{ fontSize: "2.5rem", fontWeight: 700, letterSpacing: "-0.03em", marginBottom: "1rem", lineHeight: 1.1 }}>
-        Estrés Postraumático en Chillán
+        TEPT y estrés postraumático en Chillán
       </h1>
 
       <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "3rem", lineHeight: 1.6 }}>
@@ -127,11 +127,16 @@ export default function EstresPostraumaticoChillanPage() {
           Tratamiento
         </h2>
         <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
-          El tratamiento más efectivo para TEPT es la{" "}
-          <Link href="/psicologo-cognitivo-conductual-chillan" style={{ color: "#000", textDecoration: "underline" }}>
-            Terapia Cognitivo-Conductual
+          Para TEPT trabajo con{" "}
+          <Link href="/terapia-emdr-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+            terapia EMDR
           </Link>{" "}
-          enfocada en trauma:
+          y con{" "}
+          <Link href="/psicologo-cognitivo-conductual-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+            TCC
+          </Link>{" "}
+          enfocada en trauma. Si buscas un especialista en TEPT en Chillán, el
+          primer paso es evaluar si EMDR, TCC o ambas encajan contigo:
         </p>
         <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem" }}>
           {[

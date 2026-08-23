@@ -19,16 +19,16 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Terapia de pareja en Chillán: comunicación, celos, crisis o distancia emocional. Psicólogo TCC, online o presencial. Agenda hoy por web o WhatsApp.";
+  "Terapia de pareja en Chillán: comunicación, celos, crisis o distancia. Desde $35.000, TCC online o presencial. Agenda hoy por web o WhatsApp.";
 
 export const metadata: Metadata = {
-  title: "Terapia de Pareja Chillán | Psicólogo · Online o presencial",
+  title: "Terapia de pareja Chillán | $35.000 · Online o presencial",
   description,
   alternates: {
     canonical: "/terapia-de-pareja-chillan",
   },
   openGraph: {
-    title: "Terapia de Pareja Chillán | Psicólogo · Online o presencial",
+    title: "Terapia de pareja Chillán | $35.000 · Online o presencial",
     description,
     url: `${SITE_URL}/terapia-de-pareja-chillan`,
     type: "website",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terapia de Pareja Chillán | Psicólogo TCC",
+    title: "Terapia de pareja Chillán | $35.000",
     description: getTwitterDescription(
-      "Comunicación, celos o crisis de pareja en Chillán. Psicólogo TCC. Online o presencial. Agenda hoy."
+      "Comunicación, celos o crisis de pareja en Chillán. Desde $35.000, TCC online o presencial. Agenda hoy."
     ),
   },
 };

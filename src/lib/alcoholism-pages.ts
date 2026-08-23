@@ -60,10 +60,10 @@ export type AlcoholismPage = {
 export const alcoholismPages: Record<AlcoholismPageKey, AlcoholismPage> = {
   "alcoholismo-chillan": {
     slug: "/alcoholismo-chillan",
-    metaTitle: "Alcoholismo en Chillán | Ayuda psicológica · Empieza hoy",
+    metaTitle: "Alcoholismo en Chillán | Terapia online · $35.000",
     description:
-      "¿El alcohol ya te está pasando la cuenta? Ayuda psicológica para alcoholismo en Chillán: señales, plan claro y terapia online. Agenda primera orientación.",
-    h1: "Alcoholismo en Chillán: señales, ayuda y primeros pasos para tratarlo",
+      "¿El alcohol ya te está pasando la cuenta? Terapia para alcoholismo en Chillán: señales, plan claro y sesiones online. $35.000 / 50 min. Agenda primera orientación.",
+    h1: "Alcoholismo en Chillán: ayuda psicológica para empezar hoy",
     shortTitle: "Alcoholismo en Chillán",
     cardDescription:
       "Una guía clara para reconocer el problema y entender cuándo conviene pedir ayuda.",

@@ -157,6 +157,27 @@ export default function TerapiaEmdrChillanPage() {
         . Evaluamos si EMDR encaja contigo en la primera consulta.
       </p>
 
+      <section
+        style={{
+          padding: "1.25rem",
+          backgroundColor: "#fafafa",
+          borderRadius: "12px",
+          marginBottom: "2.5rem",
+          border: "1px solid #eaeaea",
+        }}
+      >
+        <p style={{ fontWeight: 600, marginBottom: "0.5rem", fontSize: "0.9375rem" }}>
+          ¿Buscas especialista en TEPT?
+        </p>
+        <p style={{ color: "#444", fontSize: "0.875rem", lineHeight: 1.6 }}>
+          EMDR es una de las técnicas que uso para trauma. Si tu consulta es
+          específicamente por trastorno de estrés postraumático, empieza por{" "}
+          <Link href="/estres-postraumatico-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+            TEPT y estrés postraumático en Chillán.
+          </Link>
+        </p>
+      </section>
+
       <div
         style={{
           marginBottom: "2.5rem",

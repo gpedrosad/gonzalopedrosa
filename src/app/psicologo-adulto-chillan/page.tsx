@@ -9,13 +9,13 @@ const description =
   "Psicólogo para adultos y hombres en Chillán: ansiedad, estrés, depresión y crisis vital. TCC presencial u online, $35.000 / 50 min. Agenda hoy.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo para Adultos y Hombres Chillán | TCC",
+  title: "Psicólogo para hombres Chillán | Adultos · TCC online",
   description,
   alternates: {
     canonical: "/psicologo-adulto-chillan",
   },
   openGraph: {
-    title: "Psicólogo para Adultos y Hombres Chillán | TCC",
+    title: "Psicólogo para hombres Chillán | Adultos · TCC online",
     description,
     url: "https://www.gonzalopedrosa.cl/psicologo-adulto-chillan",
     type: "website",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo Adultos y Hombres Chillán | TCC",
+    title: "Psicólogo para hombres Chillán | Adultos",
     description: getTwitterDescription(description),
   },
 };
@@ -50,7 +50,7 @@ const psicologo_adulto_chillanFAQs = [
 
 const breadcrumbItems = [
   { label: "Inicio", href: "/" },
-  { label: "Psicólogo Adulto Chillán" },
+  { label: "Psicólogo para adultos y hombres" },
 ];
 
 export default function PsicologoAdultoChillanPage() {
@@ -60,7 +60,7 @@ export default function PsicologoAdultoChillanPage() {
         breadcrumbItems={breadcrumbItems}
         faqs={psicologo_adulto_chillanFAQs}
         serviceType="Psicología Adulto"
-        serviceDescription={"Psicólogo para adultos en Chillán, Chile. Atención profesional para ansiedad, depresión, estrés y desarrollo personal. Sesiones presenciales y online."}
+        serviceDescription={"Psicólogo para adultos y hombres en Chillán. Ansiedad, estrés, depresión y crisis vital. Sesiones presenciales y online."}
       />
       <main
       style={{
@@ -117,7 +117,7 @@ export default function PsicologoAdultoChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo Adulto en Chillán
+        Psicólogo para adultos y hombres en Chillán
       </h1>
 
       <p
@@ -128,9 +128,10 @@ export default function PsicologoAdultoChillanPage() {
           lineHeight: 1.6,
         }}
       >
-        La vida adulta trae desafíos particulares. Cuando generan malestar
-        persistente, la terapia puede ser un espacio valioso para trabajar en tu
-        bienestar.
+        Atiendo adultos y hombres en Chillán (y online) por ansiedad, estrés,
+        depresión o una crisis vital. Si buscas psicólogo para hombres, este es
+        el espacio: TCC, sin recetas genéricas, con un plan claro desde la
+        primera sesión.
       </p>
 
       <section style={{ marginBottom: "3rem" }}>

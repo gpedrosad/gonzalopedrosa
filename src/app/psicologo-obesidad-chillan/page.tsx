@@ -182,13 +182,20 @@ export default function PsicologoObesidadChillanPage() {
       </section>
 
       <section style={{ padding: "1.25rem", backgroundColor: "#f0f9ff", borderRadius: "12px", marginBottom: "2.5rem", border: "1px solid #bae6fd" }}>
-        <p style={{ fontWeight: 600, color: "#0369a1", marginBottom: "0.5rem", fontSize: "0.9375rem" }}>¿Considerando cirugía bariátrica?</p>
-        <p style={{ color: "#0c4a6e", fontSize: "0.875rem", lineHeight: 1.6 }}>
-          También realizo la{" "}
-          <Link href="/evaluacion-bariatrica-chillan" style={{ color: "#0369a1", textDecoration: "underline" }}>evaluación psicológica requerida</Link>{" "}
-          para manga gástrica y bypass. La preparación psicológica mejora los
-          resultados.
+        <h2 style={{ fontWeight: 600, color: "#0369a1", marginBottom: "0.5rem", fontSize: "0.9375rem" }}>
+          ¿Necesitas evaluación bariátrica?
+        </h2>
+        <p style={{ color: "#0c4a6e", fontSize: "0.875rem", lineHeight: 1.6, marginBottom: "0.75rem" }}>
+          Si tu equipo pide informe psicológico para manga gástrica o bypass,
+          esa evaluación está en una página aparte. Aquí trabajo hábitos y
+          alimentación emocional; allá el informe para cirugía.
         </p>
+        <Link
+          href="/evaluacion-bariatrica-chillan"
+          style={{ color: "#0369a1", textDecoration: "underline", fontWeight: 600, fontSize: "0.875rem" }}
+        >
+          Ir a evaluación bariátrica en Chillán →
+        </Link>
       </section>
 
       <section style={{ marginBottom: "3rem" }}>

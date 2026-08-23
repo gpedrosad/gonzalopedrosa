@@ -19,16 +19,16 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Psicólogo online en Chillán por videollamada: TCC, boleta Isapre y horarios flexibles. $35.000 / 50 min. Atiendo todo Chile — agenda tu sesión hoy.";
+  "Psicólogo online en Chile por videollamada: TCC, boleta Isapre y horarios flexibles. $35.000 / 50 min. Atiendo todo el país — agenda tu sesión hoy.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Online Chillán | $35.000 · Videollamada e Isapre",
+  title: "Psicólogo online Chile | Videollamada $35.000 · Isapre",
   description,
   alternates: {
     canonical: "/psicologo-online-chillan",
   },
   openGraph: {
-    title: "Psicólogo Online Chillán | $35.000 · Videollamada e Isapre",
+    title: "Psicólogo online Chile | Videollamada $35.000 · Isapre",
     description,
     url: `${SITE_URL}/psicologo-online-chillan`,
     type: "website",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo Online Chillán | $35.000 e Isapre",
+    title: "Psicólogo online Chile | $35.000 e Isapre",
     description: getTwitterDescription(
-      "Terapia online: videollamada, TCC y boleta Isapre. $35.000 / 50 min. Agenda hoy desde Chillán o todo Chile."
+      "Terapia online: videollamada, TCC y boleta Isapre. $35.000 / 50 min. Agenda hoy desde cualquier ciudad de Chile."
     ),
   },
 };
@@ -74,15 +74,14 @@ const onlineFAQs = [
 const faqSchema = getPageFAQSchema(onlineFAQs);
 const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
 const webPageSchema = getWebPageSchema({
-  name: "Psicólogo online Chillán",
+  name: "Psicólogo online Chile",
   description,
   path: "/psicologo-online-chillan",
 });
 const serviceSchema = getServiceSchema({
   serviceType: "Psicoterapia online",
   description:
-    "Sesiones de psicología por videollamada desde Chillán para pacientes en Chile, con Terapia Cognitivo-Conductual.",
-  areaServed: "Chillán",
+    "Sesiones de psicología por videollamada para pacientes en todo Chile, con Terapia Cognitivo-Conductual.",
   url: `${SITE_URL}/psicologo-online-chillan`,
 });
 
@@ -183,7 +182,7 @@ export default function PsicologoOnlineChillanPage() {
             lineHeight: 1.1,
           }}
         >
-          Psicólogo online en Chillán
+          Psicólogo online para todo Chile
         </h1>
 
         <p
@@ -194,9 +193,9 @@ export default function PsicologoOnlineChillanPage() {
             lineHeight: 1.6,
           }}
         >
-          Si buscas psicólogo online en Chillán, atiendo por videollamada con la misma
-          calidad clínica que una sesión presencial. También acompaño a personas de todo
-          Chile, con horarios flexibles y boleta para reembolso Isapre.
+          Si buscas psicólogo online en Chile, atiendo por videollamada con la misma
+          calidad clínica que una sesión presencial. Consultorio en Chillán y agenda
+          para todo el país, con horarios flexibles y boleta para reembolso Isapre.
         </p>
 
         <div

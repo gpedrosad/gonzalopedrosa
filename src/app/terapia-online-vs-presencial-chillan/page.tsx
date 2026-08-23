@@ -81,18 +81,18 @@ const serviceSchema = getServiceSchema({
 const filasComparacion = [
   {
     criterio: "Privacidad inmediata",
-    online: "Depende de tu hogar u oficina; podés usar auriculares.",
+    online: "Depende de tu hogar u oficina; puedes usar auriculares.",
     presencial: "Consulta con espacio reservado para la sesión.",
   },
   {
     criterio: "Tiempo y desplazamiento",
-    online: "Sin traslado; útil si vivís lejos del centro o tenés jornadas largas.",
+    online: "Sin traslado; útil si vives lejos del centro o tienes jornadas largas.",
     presencial: "Incluye ida y vuelta; a veces ayuda a “cortar” con la rutina.",
   },
   {
     criterio: "Contacto no verbal",
     online: "Se ve buena parte del lenguaje corporal; el encuadre importa.",
-    presencial: "Mayor contexto ambiental (cómo entrás, cómo te sentís en la sala).",
+    presencial: "Mayor contexto ambiental (cómo entras, cómo te sientes en la sala).",
   },
   {
     criterio: "Crisis o malestar muy intenso",

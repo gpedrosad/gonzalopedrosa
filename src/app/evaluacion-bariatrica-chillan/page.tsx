@@ -5,24 +5,26 @@ import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
+const description =
+  "Evaluación psicológica bariátrica en Chillán: informe para manga gástrica o bypass. 1 o 2 sesiones, válido para clínicas. Agenda hoy por web o WhatsApp.";
+
 export const metadata: Metadata = {
-  title: "Evaluación Bariátrica en Chillán | Psicólogo Gonzalo Pedrosa",
-  description:
-    "Evaluación psicológica para cirugía bariátrica en Chillán. Informe psicológico requerido para operación de manga gástrica y bypass.",
+  title: "Evaluación bariátrica Chillán | Informe para cirugía",
+  description,
   alternates: {
     canonical: "/evaluacion-bariatrica-chillan",
   },
   openGraph: {
-    title: "Evaluación Bariátrica en Chillán | Psicólogo Gonzalo Pedrosa",
-    description: "Evaluación psicológica para cirugía bariátrica en Chillán. Informe psicológico requerido para operación de manga gástrica y bypass.",
+    title: "Evaluación bariátrica Chillán | Informe para cirugía",
+    description,
     url: "https://www.gonzalopedrosa.cl/evaluacion-bariatrica-chillan",
     type: "website",
     images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Evaluación Bariátrica en Chillán | Psicólogo Gonzalo Pedrosa",
-    description: getTwitterDescription("Evaluación psicológica para cirugía bariátrica en Chillán. Informe psicológico requerido para operación de manga gástrica y bypass."),
+    title: "Evaluación bariátrica Chillán | Informe",
+    description: getTwitterDescription(description),
   },
 };
 
@@ -88,6 +90,19 @@ export default function EvaluacionBariatricaChillanPage() {
           El informe psicológico que emito es aceptado por clínicas y equipos
           bariátricos. Cumple con los estándares requeridos para la aprobación
           quirúrgica.
+        </p>
+      </section>
+
+      <section style={{ padding: "1.25rem", backgroundColor: "#fafafa", borderRadius: "12px", marginBottom: "2.5rem", border: "1px solid #eaeaea" }}>
+        <p style={{ fontWeight: 600, marginBottom: "0.5rem", fontSize: "0.9375rem" }}>
+          ¿Buscas terapia, no el informe?
+        </p>
+        <p style={{ color: "#444", fontSize: "0.875rem", lineHeight: 1.6 }}>
+          Si el objetivo es trabajar alimentación emocional o hábitos, ve a{" "}
+          <Link href="/psicologo-obesidad-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+            psicólogo para obesidad en Chillán.
+          </Link>{" "}
+          Esta página es solo la evaluación para cirugía.
         </p>
       </section>
 
