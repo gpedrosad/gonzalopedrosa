@@ -27,6 +27,10 @@ npm run google-ads:align-landings -- --apply
 npm run google-ads:create-adiccion-juego
 npm run google-ads:create-adiccion-juego -- --apply
 
+# Geo Chile PRESENCE + negativas hotline (juego; ya aplicada 25 ago)
+node --env-file=.env.local scripts/google-ads-juego-chile-presence.mjs
+node --env-file=.env.local scripts/google-ads-juego-chile-presence.mjs --apply
+
 # Campaña evaluación bariátrica (crear pausada; dry-run por defecto)
 npm run google-ads:create-evaluacion-bariatrica
 npm run google-ads:create-evaluacion-bariatrica -- --apply

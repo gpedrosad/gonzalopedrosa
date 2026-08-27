@@ -184,3 +184,6 @@ vite.config.ts.timestamp-*
 .env
 .env.local
 .secrets/
+
+# Local / no repo
+1688-helper/

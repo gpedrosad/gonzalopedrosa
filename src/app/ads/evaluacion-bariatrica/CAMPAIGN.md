@@ -98,6 +98,7 @@ Sin tildes (Google matchea variantes). No usar BROAD en positivas.
 | curso | Quiere formarse, no evaluarse |
 | vacante | Empleo |
 | 24/7 | Expectativa de urgencia |
+| fonasa | Busca arancel/prestador Fonasa, no pack particular |
 
 ## Extensiones sugeridas
 

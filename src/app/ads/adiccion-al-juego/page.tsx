@@ -210,9 +210,9 @@ export default function Page() {
 
               <p className="text-gray-600 text-sm leading-relaxed max-w-md">
                 Trabajo con ludopatía: casino, apuestas deportivas y juego
-                online. Llegan personas que ya intentaron parar solas. Sin
-                moralina: identificamos el ciclo, manejamos impulsos y armamos
-                un plan realista para no recaer.
+                online. Llegan personas que ya intentaron parar solas.
+                Identificamos el ciclo, manejamos impulsos y armamos un plan
+                realista para no recaer.
               </p>
             </div>
           </div>

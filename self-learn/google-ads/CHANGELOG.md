@@ -2,6 +2,19 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-08-27
+
+- **Snapshot** monitoreo: `docs/google-ads-informe-ads-2026-08-27.md` (30d) + `…-7d-2026-08-27.md`. 30d: 100 clics · 8 conv · US$67 · CPA **US$8**. 7d: 39 clics · **3 conv** · US$21 · CPA **US$7**. Hoy (parcial): 4 clics · US$2.81 · 0 conv. Juego ya convierte (11/1, CPA US$4). Bariátrica 6/0, gasto US$3. Agendar 7d 9/2. Sin acción obligatoria.
+
+## 2026-08-26
+
+- **Negativa** `evaluacion-bariatrica-online` (`24172472867`): `fonasa` BROAD. RSA y precio intactos. TCC y juego no se tocaron.
+
+## 2026-08-25
+
+- **Geo** `adiccion-al-juego-online` (`24172229213`): quitada Argentina; Chile **PRESENCE**. Negativas BROAD (solo esa campaña): `anonimos`, `numero de ayuda`, `numero de telefono`, `dejar solo`, `linea de ayuda`. TCC y bariátrica intactas. Script `scripts/google-ads-juego-chile-presence.mjs`.
+- **Negativas** juego: `telefono de ayuda`, `lineas de ayuda`, `senda`, `12 pasos`, `juego responsable`, `autoexclusion`, `residencial`. Solo `24172229213`.
+
 ## 2026-08-23
 
 - **Activada** `evaluacion-bariatrica-online` (`24172472867`) + grupo `evaluacion-bariatrica`: **ENABLED**, US$1/día, Chile PRESENCE, landing `/ads/evaluacion-bariatrica`.

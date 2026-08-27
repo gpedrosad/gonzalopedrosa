@@ -101,6 +101,7 @@ const EXTRA_NEGATIVES = [
   "curso",
   "vacante",
   "24/7",
+  "fonasa",
 ];
 
 const MATCH_ENUM = {
