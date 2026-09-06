@@ -27,7 +27,6 @@ Mapa canónico (www). RSA con URL incorrecta → `align-landings` (no UPDATE de 
 | psicologo-cognitivo-conductual-online | `/ads/psicologo-cognitivo-conductual-online` |
 | psicologo-adolescentes-online | `/ads/adolescentes` |
 | terapia-pareja | `/ads/terapia-pareja` |
-| compin | `/ads/compin` |
 | adiccion-al-juego | `/ads/adiccion-al-juego` |
 | evaluacion-bariatrica | `/ads/evaluacion-bariatrica` |
 
@@ -44,4 +43,4 @@ Copy: español de Chile (tuteo). Sin voseo argentino. Ver [`src/app/ads/README.m
 
 ## Conversión
 
-`whatsapp_lead` → GTM → `AW-17861931009`. Detalle: `docs/GTM_CONVERSION_SETUP.md`.
+Solo **WhatsApp click** (`7451799330`, label `sVwoCKLepeEbEIHgncVC`) es primaria y entra en puja (`CONTACT~WEBSITE` biddable). `whatsapp_lead` → GTM → `AW-17861931009`. Detalle: `docs/GTM_CONVERSION_SETUP.md`. No reactivar como primary `Submit lead form`, `MensajeWs` ni el lead form hosted.

@@ -1,11 +1,12 @@
 # Estado cuenta (actualizar tras cambios grandes)
 
 - **Customer:** `5930583968` · moneda USD
-- **Campaña activa:** `psicologo-cognitivo-conductual-online` · budget ~US$2/día
-- **Campaña test:** `adiccion-al-juego-online` (`24172229213`) · **ENABLED** · budget **US$1/día** · geo **Chile PRESENCE** · grupo `adiccion-al-juego` ENABLED · landing `/ads/adiccion-al-juego`
-- **Campaña test:** `evaluacion-bariatrica-online` (`24172472867`) · **ENABLED** · budget **US$1/día** · geo Chile PRESENCE · grupo `evaluacion-bariatrica` (`199819157735`) ENABLED · landing `/ads/evaluacion-bariatrica`
-- **Conv:** whatsapp_lead
-- **Última revisión:** 2026-08-27 → métricas abajo · eval A+B cerrada 28 jul ([EVAL.md](./EVAL.md))
+- **Campaña principal:** `psicologo-cognitivo-conductual-online` (`23450445740`) · **ENABLED** · horario **lun–vie** · budget ~US$2/día
+- **Campaña test:** `adiccion-al-juego-online` (`24172229213`) · **ENABLED** · horario **lun–vie** · budget **US$1/día** · geo **Chile PRESENCE** · grupo `adiccion-al-juego` ENABLED · landing `/ads/adiccion-al-juego`
+- **Campaña test:** `evaluacion-bariatrica-online` (`24172472867`) · **ENABLED** · horario **lun–vie** · budget **US$1/día** · geo Chile PRESENCE · grupo `evaluacion-bariatrica` (`199819157735`) ENABLED · landing `/ads/evaluacion-bariatrica`
+- **Conv:** solo **WhatsApp click** (`7451799330`, label `sVwoCKLepeEbEIHgncVC`) primary + métrica + `CONTACT~WEBSITE` biddable. Las otras 3 acciones / goals de lead form y signup no pujan.
+- **Sitelinks:** 4 assets con `www` (agendar, sobre, TCC, cómo funciona).
+- **Última revisión:** 2026-09-06 · conv + sitelinks · eval A+B cerrada 28 jul ([EVAL.md](./EVAL.md))
 
 ## Grupos
 
@@ -17,7 +18,6 @@
 | psicologo-ansiedad-online | ENABLED | Sin volumen |
 | psicologo-ataques-de-panico-online | ENABLED | Sin volumen |
 | terapia-pareja | PAUSED | Landing RSA OK si se reactiva |
-| compin | PAUSED | Landing RSA OK si se reactiva |
 | adiccion-al-juego | ENABLED | Campaña propia · US$1/día · Chile PRESENCE · landing `/ads/adiccion-al-juego` |
 | evaluacion-bariatrica | ENABLED | Campaña propia · US$1/día · Chile PRESENCE · landing `/ads/evaluacion-bariatrica` |
 
@@ -39,6 +39,6 @@ Landings 7d: `/ads/agendar-…` 9 / **2** · `/ads/adolescentes` 13 / 0 · `/ads
 1. ~~Eval A+B~~ (cerrada 28 jul · éxito)
 2. Opcional: ciudades adolescentes (temuco, viña, concepción) si el gasto local crece (~US$3–4 en 30d)
 3. ~~Grupo + RSA adicción al juego~~ · **ENABLED 23 ago** US$1/día. **Ya convierte** (11 clics / 1 conv, CPA US$4). Seguir hasta ~6 sep; no pausar.
-4. Sitelinks → forzar `www` (3 clics / 1 conv 30d en apex)
+4. ~~Sitelinks → forzar `www`~~ (hecho 6 sep)
 5. Presupuesto solo si se quiere más volumen (CPA 30d estable ~US$10)
 6. ~~Campaña bariátrica~~ · **ENABLED 23 ago** US$1/día. 6 clics / 0 conv / US$3. Seguir hasta ~6 sep o pausar si 0 conv con ≥US$12. Negativa `fonasa` aplicada 26 ago.

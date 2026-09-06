@@ -153,7 +153,7 @@ export default function RootLayout({
            Google Ads se gestiona a través de GTM (GTM-N3DXMKTR)
            Configura la etiqueta de conversión en GTM con:
            - ID de conversión: AW-17861931009
-           - Etiqueta: BLWaCO73vt8bEIHgncVC
+           - Etiqueta: sVwoCKLepeEbEIHgncVC
            ───────────────────────────────────────────────────────────── */}
 
         {/* ─────────────────────────────────────────────────────────────

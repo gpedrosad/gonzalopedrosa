@@ -34,6 +34,10 @@ node --env-file=.env.local scripts/google-ads-juego-chile-presence.mjs --apply
 # Campaña evaluación bariátrica (crear pausada; dry-run por defecto)
 npm run google-ads:create-evaluacion-bariatrica
 npm run google-ads:create-evaluacion-bariatrica -- --apply
+
+# Reactivar + horario lun–vie (sin sáb/dom)
+node --env-file=.env.local scripts/google-ads-weekday-enable.mjs
+node --env-file=.env.local scripts/google-ads-weekday-enable.mjs --apply
 ```
 
 Panel web: `/interno/ads` · gestión: `/interno/ads/manage?key=…`

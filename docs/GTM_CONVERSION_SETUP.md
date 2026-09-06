@@ -54,7 +54,7 @@ Este documento describe la configuración correcta de Google Tag Manager para tr
 |-------|-------|
 | **Tipo de etiqueta** | Google Ads Conversion Tracking |
 | **Conversion ID** | `AW-17861931009` |
-| **Conversion Label** | `BLWaCO73vt8bEIHgncVC` |
+| **Conversion Label** | `sVwoCKLepeEbEIHgncVC` |
 | **Trigger** | Custom Event: `whatsapp_lead` |
 
 **Configuración del Trigger Custom Event:**
@@ -101,7 +101,7 @@ Si quieres capturar datos adicionales:
 2. Filtra por `google` o `ads`
 3. Al hacer click en WhatsApp, deberías ver una request a:
    - `googleads.g.doubleclick.net/pagead/conversion/...`
-   - Con parámetros `aw_id=17861931009` y `aw_label=BLWaCO73vt8bEIHgncVC`
+   - Con parámetros `aw_id=17861931009` y `aw_label=sVwoCKLepeEbEIHgncVC`
 
 ---
 
@@ -189,5 +189,31 @@ Esto usa el componente oficial de Next.js que:
 |---------|-----|
 | GTM Container | `GTM-N3DXMKTR` |
 | Google Ads Account | `AW-17861931009` |
-| Conversion Label | `BLWaCO73vt8bEIHgncVC` |
+| Conversion Label | `sVwoCKLepeEbEIHgncVC` |
 | Evento Custom | `whatsapp_lead` |
+
+## API / CLI (repo)
+
+Mismo cliente OAuth desktop que GSC (`.secrets/gcp-oauth-client.json`). Token aparte: `.secrets/gtm-oauth-token.json`.
+
+```bash
+npm run gtm:auth                 # Gmail que administra GTM
+npm run gtm:list                 # cuentas, contenedor, etiquetas y triggers
+npm run gtm:fix-init -- --apply  # Google tag → Initialization + publicar
+```
+
+Scopes: `tagmanager.readonly`, `tagmanager.edit.containers`, `tagmanager.edit.containerversions`, `tagmanager.publish`.
+
+### Snapshot vivo (2026-09-06, API · publicado v7)
+
+Cuenta `Gonzalopedrosa` · contenedor `GTM-N3DXMKTR` · workspace Default.
+
+| Etiqueta | Tipo | Trigger | IDs |
+|---|---|---|---|
+| Conversion linker | `gclidw` | Initialization – All Pages | — |
+| Etiqueta de Google AW-17861931009 | `googtag` | Initialization – All Pages | `AW-17861931009` |
+| Google Ads – Conversión – Click WhatsApp | `awct` | Custom event `whatsapp_lead` | ID `17861931009` · label `sVwoCKLepeEbEIHgncVC` |
+
+Trigger custom: `Trigger – Click – WhatsApp` · `{{_event}}` equals `whatsapp_lead`.
+
+Si Tag Manager API no está habilitada en GCP: [activar](https://console.developers.google.com/apis/api/tagmanager.googleapis.com/overview?project=proyectogonzalo-496821).

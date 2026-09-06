@@ -2,6 +2,19 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-09-06
+
+- **Conv + sitelinks:** solo **WhatsApp click** (`7451799330`, label `sVwoCKLepeEbEIHgncVC`) queda primary + en métrica + `CONTACT~WEBSITE` biddable. `Submit lead form` y `MensajeWs` → `primary_for_goal=false`. Goals `SIGNUP~WEBSITE`, `SUBMIT_LEAD_FORM~WEBSITE` y `SUBMIT_LEAD_FORM~GOOGLE_HOSTED` → `biddable=false`. Lead form hosted no admite mutate de action. 4 sitelinks apex → `www` (`322990089258`, `323778366496`, `323778366499`, `323778366502`).
+
+## 2026-09-05
+
+- **Remove** grupo `compin` (`194636445489`) en TCC: PAUSED → **REMOVED**. 0 clics históricos. Landing `/ads/compin` intacta.
+- **Reactivar post-vacaciones** las 3 campañas PAUSED → ENABLED + ad schedule **lun–vie 00–24** (sin sáb/dom): `psicologo-cognitivo-conductual-online` (`23450445740`), `adiccion-al-juego-online` (`24172229213`), `evaluacion-bariatrica-online` (`24172472867`). Script `scripts/google-ads-weekday-enable.mjs`. No sirven hasta el lunes 7.
+
+## 2026-08-28
+
+- **Pausa vacaciones** las 3 campañas ENABLED → PAUSED: `psicologo-cognitivo-conductual-online` (`23450445740`), `adiccion-al-juego-online` (`24172229213`), `evaluacion-bariatrica-online` (`24172472867`). Grupos intactos. Reactivar al volver.
+
 ## 2026-08-27
 
 - **Snapshot** monitoreo: `docs/google-ads-informe-ads-2026-08-27.md` (30d) + `…-7d-2026-08-27.md`. 30d: 100 clics · 8 conv · US$67 · CPA **US$8**. 7d: 39 clics · **3 conv** · US$21 · CPA **US$7**. Hoy (parcial): 4 clics · US$2.81 · 0 conv. Juego ya convierte (11/1, CPA US$4). Bariátrica 6/0, gasto US$3. Agendar 7d 9/2. Sin acción obligatoria.
