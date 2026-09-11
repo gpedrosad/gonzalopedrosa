@@ -8,7 +8,7 @@ Paths: `evaluacion` / `bariatrica` · Geo: Chile (`PRESENCE`) · Conv: `whatsapp
 
 ## Oferta
 
-Pack **$180.000 CLP**: 2 sesiones de 50 min + informe PDF firmado + boleta. Online en todo Chile.
+Pack **$120.000 CLP**: 2 sesiones de 50 min + informe PDF firmado + boleta. Online en todo Chile.
 
 No es un pase express. No garantiza aprobación de la cirugía. Es evaluación de aptitud para el equipo quirúrgico.
 
@@ -18,7 +18,7 @@ Pin **H1** el de precio. El resto sin pin.
 
 | # | Texto | n | Tema |
 |---|---|---|---|
-| 1 | Pack bariátrico $180.000 | 24 | PIN H1 · precio |
+| 1 | Pack bariátrico $120.000 | 24 | PIN H1 · precio |
 | 2 | Psicólogo bariátrico | 20 | psicólogo bariátrico |
 | 3 | Informe para cirugía | 20 | informe para cirugía |
 | 4 | Boleta Fonasa e Isapre | 22 | Fonasa/Isapre |
@@ -38,7 +38,7 @@ Pin **H1** el de precio. El resto sin pin.
 
 | # | Texto | n |
 |---|---|---|
-| 1 | Pack $180.000: 2 sesiones de 50 min + informe PDF firmado + boleta. Online Chile. | 81 |
+| 1 | Pack $120.000: 2 sesiones de 50 min + informe PDF firmado + boleta. Online Chile. | 81 |
 | 2 | Evaluación de aptitud. No es un pase express ni garantiza que te aprueben la cirugía. | 85 |
 | 3 | Psicólogo clínico. Informe firmado para tu equipo quirúrgico. Agenda por WhatsApp. | 82 |
 | 4 | Online en todo Chile. Confidencial. 2 sesiones de 50 min, informe PDF y boleta. | 79 |

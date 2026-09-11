@@ -6,7 +6,7 @@ import { LazyStickyWhatsAppCTA } from "./LazyStickyWhatsAppCTA";
 export const metadata: Metadata = {
   title: "Evaluación Psicológica Bariátrica | Informe Online",
   description:
-    "Pack de evaluación psicológica bariátrica: 2 sesiones online + informe firmado en PDF. $180.000. Consulta por WhatsApp.",
+    "Pack de evaluación psicológica bariátrica: 2 sesiones online + informe firmado en PDF. $120.000. Consulta por WhatsApp.",
   robots: {
     index: false,
     follow: false,
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Evaluación Psicológica Bariátrica | Informe Online",
     description:
-      "Pack de evaluación psicológica bariátrica: 2 sesiones online + informe firmado en PDF. $180.000.",
+      "Pack de evaluación psicológica bariátrica: 2 sesiones online + informe firmado en PDF. $120.000.",
     url: "https://www.gonzalopedrosa.cl/ads/evaluacion-bariatrica",
     type: "website",
     images: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 };
 
 const WHATSAPP_HREF =
-  "https://wa.me/56968257817?text=Hola%2C%20me%20interesa%20el%20pack%20de%20evaluaci%C3%B3n%20bari%C3%A1trica%20de%20%24180.000%20(2%20sesiones%20%2B%20informe).";
+  "https://wa.me/56968257817?text=Hola%2C%20me%20interesa%20el%20pack%20de%20evaluaci%C3%B3n%20bari%C3%A1trica%20de%20%24120.000%20(2%20sesiones%20%2B%20informe).";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -43,7 +43,7 @@ const faqSchema = {
       name: "¿Cuánto cuesta la evaluación psicológica bariátrica?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El pack único vale $180.000 CLP. Incluye 2 sesiones clínicas de 50 minutos por videollamada, el informe psicológico firmado en PDF y boleta electrónica. No hay precio por sesión suelta.",
+        text: "El pack único vale $120.000 CLP. Incluye 2 sesiones clínicas de 50 minutos por videollamada, el informe psicológico firmado en PDF y boleta electrónica. No hay precio por sesión suelta.",
       },
     },
     {
@@ -168,7 +168,7 @@ const PASOS = [
 const FAQS = [
   {
     q: "¿Cuánto cuesta el pack?",
-    a: "El pack único vale $180.000 CLP. Incluye 2 sesiones clínicas de 50 minutos por videollamada, el informe psicológico firmado en PDF y boleta electrónica. No hay precio por sesión suelta.",
+    a: "El pack único vale $120.000 CLP. Incluye 2 sesiones clínicas de 50 minutos por videollamada, el informe psicológico firmado en PDF y boleta electrónica. No hay precio por sesión suelta.",
   },
   {
     q: "¿Cuántas sesiones son?",
@@ -251,7 +251,7 @@ export default function EvaluacionBariatricaAdsPage() {
                   Pack: 2 sesiones + informe PDF + boleta
                 </p>
                 <p className="text-2xl font-bold text-gray-900">
-                  $180.000{" "}
+                  $120.000{" "}
                   <span className="text-sm font-normal text-gray-500">CLP</span>
                 </p>
               </div>
@@ -285,7 +285,7 @@ export default function EvaluacionBariatricaAdsPage() {
             <div className="bg-white rounded-2xl border border-gray-200 p-5">
               <p className="text-sm text-gray-500 mb-1">Precio único</p>
               <p className="text-3xl font-bold text-gray-900 mb-1">
-                $180.000{" "}
+                $120.000{" "}
                 <span className="text-base font-normal text-gray-500">CLP</span>
               </p>
               <p className="text-sm text-gray-600 mb-5">
@@ -424,7 +424,7 @@ export default function EvaluacionBariatricaAdsPage() {
               ¿Necesitas el informe para tu cirugía bariátrica?
             </p>
             <p className="text-gray-400 text-sm mb-4">
-              Pack $180.000 · 2 sesiones + informe firmado
+              Pack $120.000 · 2 sesiones + informe firmado
             </p>
             <AdsWhatsAppButton
               href={WHATSAPP_HREF}
@@ -506,7 +506,7 @@ export default function EvaluacionBariatricaAdsPage() {
               </div>
             </div>
             <p className="text-gray-700 text-[15px] mb-4">
-              Pack $180.000 · 2 sesiones + informe firmado en PDF
+              Pack $120.000 · 2 sesiones + informe firmado en PDF
             </p>
             <AdsWhatsAppButton
               href={WHATSAPP_HREF}

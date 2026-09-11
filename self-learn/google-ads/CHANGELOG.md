@@ -2,6 +2,16 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-09-11
+
+- **Precio bariátrica $120.000:** RSA nueva ENABLED `199819157735~824290569306` (H1 pin `Pack bariátrico $120.000`); RSA anterior `…~821895604719` PAUSED. Geo juego `24172229213` ya era Chile PRESENCE (2152), sin Argentina.
+
+## 2026-09-10
+
+- **Negativas aprobadas (revisión 30d):** 8 altas nuevas; verificadas las 11 propuestas en BROAD a nivel campaña (3 ya existentes): TCC `23450445740` → terapi, mammoliti, centra online, psicolaria, tolki, psiquiatras, hipnosis, holisticas, holísticas; juego `24172229213` → anónimos, ajuter. API con validate_only previo y lectura posterior; bariátrica sin cambios.
+
+- **Negativas BROAD** 14d: TCC (`23450445740`) `paginas`, `psicolaria`, `recomendaciones`, `en casa`, `terapia de grupo`. Juego (`24172229213`) `en casa`, `centros`, `ajuter`, `anónimos`, `rehabilitacion`. Bariátrica intacta.
+
 ## 2026-09-06
 
 - **Conv + sitelinks:** solo **WhatsApp click** (`7451799330`, label `sVwoCKLepeEbEIHgncVC`) queda primary + en métrica + `CONTACT~WEBSITE` biddable. `Submit lead form` y `MensajeWs` → `primary_for_goal=false`. Goals `SIGNUP~WEBSITE`, `SUBMIT_LEAD_FORM~WEBSITE` y `SUBMIT_LEAD_FORM~GOOGLE_HOSTED` → `biddable=false`. Lead form hosted no admite mutate de action. 4 sitelinks apex → `www` (`322990089258`, `323778366496`, `323778366499`, `323778366502`).

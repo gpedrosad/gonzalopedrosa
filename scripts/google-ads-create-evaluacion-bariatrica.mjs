@@ -33,7 +33,7 @@ const LANG_ES = "languageConstants/1003";
 
 // RSA = src/app/ads/evaluacion-bariatrica/CAMPAIGN.md (fuente de verdad)
 const HEADLINES = [
-  { text: "Pack bariátrico $180.000", pinned_field: enums.ServedAssetFieldType?.HEADLINE_1 ?? 1 },
+  { text: "Pack bariátrico $120.000", pinned_field: enums.ServedAssetFieldType?.HEADLINE_1 ?? 1 },
   { text: "Psicólogo bariátrico" },
   { text: "Informe para cirugía" },
   { text: "Boleta Fonasa e Isapre" },
@@ -51,7 +51,7 @@ const HEADLINES = [
 ];
 
 const DESCRIPTIONS = [
-  { text: "Pack $180.000: 2 sesiones de 50 min + informe PDF firmado + boleta. Online Chile." },
+  { text: "Pack $120.000: 2 sesiones de 50 min + informe PDF firmado + boleta. Online Chile." },
   { text: "Evaluación de aptitud. No es un pase express ni garantiza que te aprueben la cirugía." },
   { text: "Psicólogo clínico. Informe firmado para tu equipo quirúrgico. Agenda por WhatsApp." },
   { text: "Online en todo Chile. Confidencial. 2 sesiones de 50 min, informe PDF y boleta." },

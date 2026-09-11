@@ -41,6 +41,11 @@ const NEGATIVES = [
   "juego responsable",
   "autoexclusion",
   "residencial",
+  "en casa",
+  "centros",
+  "ajuter",
+  "anónimos",
+  "rehabilitacion",
 ];
 
 const loadCustomer = () => {

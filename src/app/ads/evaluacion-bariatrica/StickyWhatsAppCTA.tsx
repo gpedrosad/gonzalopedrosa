@@ -42,7 +42,7 @@ export function StickyWhatsAppCTA({ href }: { href: string }) {
           <span>Consultar pack por WhatsApp</span>
         </a>
         <p className="text-center text-xs text-gray-500 mt-2">
-          $180.000 · 2 sesiones + informe
+          $120.000 · 2 sesiones + informe
         </p>
       </div>
     </div>
