@@ -233,7 +233,7 @@ export default function CuandoIrAlPsicologoChillanPage() {
               "Lo que te pasa afecta el sueño, el apetito o la concentración de forma sostenida.",
               "Evitas situaciones importantes (trabajo, estudios, reuniones familiares) por miedo o vergüenza.",
               "Sientes que “arrastras” el ánimo o la energía la mayor parte del día.",
-              "Discutís más de lo habitual o te aislás de personas que antes te importaban.",
+              "Discutes más de lo habitual o te aíslas de personas que antes te importaban.",
               "Pensamientos angustiantes o recuerdos intrusivos aparecen varias veces al día.",
             ].map((item, i) => (
               <li

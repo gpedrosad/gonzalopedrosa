@@ -1,10 +1,18 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Tono y copy (Chile)
+## Tono y copy (toda la web)
 
-Sitio chileno. Todo el copy usa **español de Chile (tuteo)**: tú, Escríbeme, Recupera, tienes, puedes.
+Sitio chileno (`gonzalopedrosa.cl`). **Todo** el copy usa español de Chile con **tuteo**. Vale para home, SEO, sitelinks, `/ads/*`, RSA, WhatsApp, meta, schema y FAQs. No hay excepción por página.
 
-**No usar voseo argentino** (Recuperá, Escríbime, tenés, podés, querés, aceptás, Recuperás). Detalle y reglas de landings paid: [`src/app/ads/README.md`](src/app/ads/README.md).
+Usar: tú / te / Escríbeme / Recupera / tienes / puedes / quieres / aceptas / Elige / Reserva / Usa / escribe / Buscas.
+
+**No usar voseo argentino** (ni rioplatense): Recuperá, Escríbime, tenés, podés, querés, aceptás, Recuperás, Reconstruís, vivís, considerás, Buscás, Usá, escribí, Elegí, Reservá, Compará, coordiná, aislás, Discutís, indicalo.
+
+No imperativos rioplatenses: hacé, dejá, contame, decime, andá.
+
+Si un draft trae voseo, pasarlo a tuteo antes de publicar. `estás` sí es tuteo chileno.
+
+Landings paid: [`src/app/ads/README.md`](src/app/ads/README.md).
 
 ## Getting Started
 

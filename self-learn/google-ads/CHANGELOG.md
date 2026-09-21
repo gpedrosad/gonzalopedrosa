@@ -2,6 +2,10 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-09-16
+
+- **Negativas BROAD** 11 altas: TCC `23450445740` → `compin`, `peritaje`, `informe pericial`, `juzgado`, `tribunal`, `malla`. Juego `24172229213` → `hipnosis`, `psiquiatras`. Bariátrica `24172472867` → `test psicologico`, `pase`, `express`. validate_only previo.
+
 ## 2026-09-11
 
 - **Precio bariátrica $120.000:** RSA nueva ENABLED `199819157735~824290569306` (H1 pin `Pack bariátrico $120.000`); RSA anterior `…~821895604719` PAUSED. Geo juego `24172229213` ya era Chile PRESENCE (2152), sin Argentina.

@@ -1,0 +1,13 @@
+---
+description: Tuteo chileno en toda la web; prohibido el voseo argentino
+alwaysApply: true
+---
+
+# Tono: tuteo Chile, sin voseo
+
+Todo el copy del sitio (páginas, `/ads/*`, RSA, WhatsApp, meta, FAQ) es **español de Chile con tuteo**. No hay excepción.
+
+- Sí: tú, te, Escríbeme, Recupera, tienes, puedes, Elige, Reserva, Usa, escribe, Buscas. `estás` es tuteo.
+- No: Recuperá, Escríbime, tenés, podés, querés, Buscás, Usá, escribí, Elegí, Reservá, Compará, coordiná, hacé, dejá, contame, decime, andá.
+
+Si aparece voseo, corregirlo a tuteo antes de publicar. Detalle: `README.md` § Tono y copy.

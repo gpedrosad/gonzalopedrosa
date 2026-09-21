@@ -302,7 +302,7 @@ export default function Page() {
               Cupos limitados
             </p>
             <p className="text-white text-lg font-medium mb-4">
-              ¿Buscás ayuda profesional para tu hijo/a?
+              ¿Buscas ayuda profesional para tu hijo/a?
             </p>
             <AdsWhatsAppButton
               href={WHATSAPP_HREF}

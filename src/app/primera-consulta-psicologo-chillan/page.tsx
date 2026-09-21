@@ -276,14 +276,14 @@ export default function PrimeraConsultaPsicologoChillanPage() {
           <div style={{ display: "grid", gap: "0.75rem" }}>
             {[
               {
-                paso: "Elegí modalidad",
-                desc: "Presencial en Chillán o sesión por videollamada. Compará matices en terapia online vs presencial.",
+                paso: "Elige modalidad",
+                desc: "Presencial en Chillán o sesión por videollamada. Compara matices en terapia online vs presencial.",
                 link: "/terapia-online-vs-presencial-chillan",
                 linkLabel: "Ver comparación",
               },
               {
-                paso: "Reservá hora",
-                desc: "Usá la página de agendamiento o escribí por WhatsApp con días y franja horaria posibles.",
+                paso: "Reserva hora",
+                desc: "Usa la página de agendamiento o escribe por WhatsApp con días y franja horaria posibles.",
                 link: "/agendar",
                 linkLabel: "Ir a agendar",
               },
@@ -379,7 +379,7 @@ export default function PrimeraConsultaPsicologoChillanPage() {
               color: "#fff",
             }}
           >
-            Reservá tu primera sesión
+            Reserva tu primera sesión
           </h2>
           <p
             style={{

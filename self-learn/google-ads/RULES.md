@@ -32,7 +32,7 @@ Mapa canónico (www). RSA con URL incorrecta → `align-landings` (no UPDATE de 
 
 Host: siempre `https://www.gonzalopedrosa.cl` (no apex sin www).
 
-Copy: español de Chile (tuteo). Sin voseo argentino. Ver [`src/app/ads/README.md`](../../src/app/ads/README.md).
+Copy: **toda la web** en español de Chile (tuteo). Sin voseo. Fuente: [`README.md`](../../README.md) § Tono y copy. Landings paid: [`src/app/ads/README.md`](../../src/app/ads/README.md).
 
 ## Escritura
 
