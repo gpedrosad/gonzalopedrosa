@@ -2,6 +2,10 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-09-22
+
+- **Precio bariátrica $75.000:** RSA nueva ENABLED `199819157735~825514760379` (H1 pin `Pack bariátrico $75.000`); RSA $120.000 `…~824290569306` y $180.000 `…~821895604719` PAUSED.
+
 ## 2026-09-16
 
 - **Negativas BROAD** 11 altas: TCC `23450445740` → `compin`, `peritaje`, `informe pericial`, `juzgado`, `tribunal`, `malla`. Juego `24172229213` → `hipnosis`, `psiquiatras`. Bariátrica `24172472867` → `test psicologico`, `pase`, `express`. validate_only previo.

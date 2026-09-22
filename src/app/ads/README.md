@@ -16,5 +16,5 @@ Misma regla que el resto del sitio. Tú / te / Escríbeme. Sin voseo ni imperati
 ## Evaluación bariátrica (`/ads/evaluacion-bariatrica`)
 
 - Tuteo chileno (tú / te / Escríbeme). Sin voseo.
-- Pack **$120.000** (2 sesiones + informe). No $35.000. Sin «aprobado», «garantizado» ni «express 24h».
+- Pack **$75.000** (2 sesiones + informe). No $35.000. Sin «aprobado», «garantizado» ni «express 24h».
 - Campaña Ads `evaluacion-bariatrica-online` **propia y PAUSED** (US$1/día). No hereda la negativa `bariatr*` de TCC. No ENABLED hasta confirmación.
