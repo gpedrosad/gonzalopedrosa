@@ -35,6 +35,10 @@ node --env-file=.env.local scripts/google-ads-juego-chile-presence.mjs --apply
 npm run google-ads:create-evaluacion-bariatrica
 npm run google-ads:create-evaluacion-bariatrica -- --apply
 
+# Campaña informe psicológico OS10 (crear pausada; dry-run por defecto)
+npm run google-ads:create-informe-os10
+npm run google-ads:create-informe-os10 -- --apply
+
 # Reactivar + horario lun–vie (sin sáb/dom)
 node --env-file=.env.local scripts/google-ads-weekday-enable.mjs
 node --env-file=.env.local scripts/google-ads-weekday-enable.mjs --apply

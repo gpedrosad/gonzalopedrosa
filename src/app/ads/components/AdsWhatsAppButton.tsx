@@ -3,6 +3,8 @@ type AdsWhatsAppButtonProps = {
   children: React.ReactNode;
   className?: string;
   label?: string;
+  /** Evento extra en dataLayer (además de whatsapp_lead del layout /ads). */
+  adsEvent?: string;
 };
 
 export function AdsWhatsAppButton({
@@ -10,6 +12,7 @@ export function AdsWhatsAppButton({
   children,
   className = "",
   label,
+  adsEvent,
 }: AdsWhatsAppButtonProps) {
   return (
     <a
@@ -18,7 +21,8 @@ export function AdsWhatsAppButton({
       rel="noopener noreferrer"
       data-wa-track="1"
       data-wa-label={label ?? href}
-      className={`inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium rounded-full cursor-pointer transition-all duration-150 ${className}`}
+      data-ads-event={adsEvent}
+      className={`inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium rounded-full cursor-pointer transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-900 ${className}`}
     >
       <svg
         className="w-5 h-5"

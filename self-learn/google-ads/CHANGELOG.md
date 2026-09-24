@@ -2,7 +2,13 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-09-24
+
+- **Campaña OS10:** `informe-psicologico-os10-online` (`24291587680`) + grupo `informe-psicologico-os10` (`198276616297`) + RSA `…~825841016364` creados **PAUSED**. Budget US$1/día · Chile PRESENCE · landing `/ads/informe-psicologico-os10`. validate_only previo.
+
 ## 2026-09-22
+
+- **Oferta bariátrica 1 sesión $75.000:** RSA nueva ENABLED `199819157735~825713076380` (H1 pin `Sesión bariátrica $75.000`, certificado el mismo día). RSA pack 2 sesiones `…~825514760379` PAUSED.
 
 - **Precio bariátrica $75.000:** RSA nueva ENABLED `199819157735~825514760379` (H1 pin `Pack bariátrico $75.000`); RSA $120.000 `…~824290569306` y $180.000 `…~821895604719` PAUSED.
 

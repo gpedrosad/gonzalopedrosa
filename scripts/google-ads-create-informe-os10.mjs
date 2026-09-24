@@ -1,17 +1,21 @@
 #!/usr/bin/env node
 /**
- * Crea campaña Search PAUSADA para evaluación bariátrica + grupo + RSA + keywords.
+ * Crea campaña Search PAUSADA para informe psicológico OS10 + grupo + RSA + keywords.
  *
- *   npm run google-ads:create-evaluacion-bariatrica
- *   npm run google-ads:create-evaluacion-bariatrica -- --apply
+ *   npm run google-ads:create-informe-os10
+ *   npm run google-ads:create-informe-os10 -- --apply
  */
 
 import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { enums, GoogleAdsApi } from "google-ads-api";
 
-const CUSTOMER_ID = (process.env.GOOGLE_ADS_CUSTOMER_ID ?? "5930583968").replace(/-/g, "");
-const LOGIN_CUSTOMER_ID = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, "") || undefined;
+const CUSTOMER_ID = (process.env.GOOGLE_ADS_CUSTOMER_ID ?? "5930583968").replace(
+  /-/g,
+  "",
+);
+const LOGIN_CUSTOMER_ID =
+  process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, "") || undefined;
 const DEVELOPER_TOKEN = process.env.GOOGLE_ADS_DEVELOPER_TOKEN;
 const OAUTH_CLIENT_PATH = resolve(
   process.cwd(),
@@ -23,69 +27,60 @@ const OAUTH_TOKEN_PATH = resolve(
 );
 const isApply = process.argv.includes("--apply");
 
-const CAMPAIGN_NAME = "evaluacion-bariatrica-online";
-const AD_GROUP_NAME = "evaluacion-bariatrica";
-const FINAL_URL = "https://www.gonzalopedrosa.cl/ads/evaluacion-bariatrica";
+const CAMPAIGN_NAME = "informe-psicologico-os10-online";
+const AD_GROUP_NAME = "informe-psicologico-os10";
+const FINAL_URL = "https://www.gonzalopedrosa.cl/ads/informe-psicologico-os10";
 const DAILY_BUDGET_MICROS = 1_000_000;
 const AD_GROUP_BID_MICROS = 10_000;
 const GEO_CHILE = "geoTargetConstants/2152";
 const LANG_ES = "languageConstants/1003";
 
-// RSA = src/app/ads/evaluacion-bariatrica/CAMPAIGN.md (fuente de verdad)
+// RSA = src/app/ads/informe-psicologico-os10/CAMPAIGN.md
 const HEADLINES = [
-  { text: "Sesión bariátrica $75.000", pinned_field: enums.ServedAssetFieldType?.HEADLINE_1 ?? 1 },
-  { text: "Psicólogo bariátrico" },
-  { text: "Informe para cirugía" },
-  { text: "Boleta Fonasa e Isapre" },
-  { text: "1 sesión + certificado" },
-  { text: "Agenda hoy por WhatsApp" },
-  { text: "Certificado el mismo día" },
-  { text: "Evaluación confidencial" },
+  { text: "Informe OS10 por $40.000", pinned_field: enums.ServedAssetFieldType?.HEADLINE_1 ?? 1 },
+  { text: "Control de impulsos" },
+  { text: "Certificado para guardias" },
+  { text: "PDF el mismo día" },
+  { text: "Evaluación online" },
+  { text: "Agenda por WhatsApp" },
+  { text: "Boleta electrónica" },
+  { text: "Psicólogo registrado" },
   { text: "Online en todo Chile" },
   { text: "Ps. Gonzalo Pedrosa" },
-  { text: "Certificado PDF firmado" },
-  { text: "Evaluación bariátrica" },
-  { text: "Aptitud para cirugía" },
-  { text: "1 sesión de 50 min" },
+  { text: "Para curso o credencial" },
+  { text: "Operador CCTV OS10" },
+  { text: "Horarios de turno" },
+  { text: "Informe firmado en PDF" },
   { text: "Escríbeme y coordinamos" },
 ];
 
 const DESCRIPTIONS = [
-  { text: "Sesión $75.000: 50 min online + certificado PDF el mismo día + boleta. Chile." },
-  { text: "Evaluación de aptitud. No garantiza que la clínica te apruebe la cirugía." },
-  { text: "Psicólogo clínico. Certificado el mismo día para tu equipo. Agenda por WhatsApp." },
-  { text: "Online en todo Chile. 1 sesión de 50 min, certificado PDF el mismo día y boleta." },
+  { text: "Evaluación online de control de impulsos. Informe PDF incluido el mismo día, por $40.000." },
+  { text: "Para guardias, CCTV y credencial OS10. No incluye el curso ni garantiza la credencial." },
+  { text: "Psicólogo clínico. Videollamada de 20 a 45 min, boleta electrónica y envío por correo." },
+  { text: "Online en todo Chile. Agenda por WhatsApp. Entrega rápida en casos simples." },
 ];
 
 const KEYWORDS = [
-  { text: "evaluacion psicologica bariatrica", match: "EXACT" },
-  { text: "psicologo bariatrico", match: "EXACT" },
-  { text: "informe psicologico bariatrica", match: "EXACT" },
-  { text: "psicologo para cirugia bariatrica", match: "EXACT" },
-  { text: "evaluacion bariatrica online", match: "EXACT" },
-  { text: "evaluacion psicologica bariatrica", match: "PHRASE" },
-  { text: "psicologo bariatrico", match: "PHRASE" },
-  { text: "informe psicologico bariatrica", match: "PHRASE" },
-  { text: "informe para cirugia bariatrica", match: "PHRASE" },
-  { text: "evaluacion para manga gastrica", match: "PHRASE" },
-  { text: "evaluacion psicologica manga gastrica", match: "PHRASE" },
-  { text: "informe psicologico bypass", match: "PHRASE" },
-  { text: "psicologo cirugia bariatrica", match: "PHRASE" },
-  { text: "certificado psicologico bariatrica", match: "PHRASE" },
+  { text: "informe psicologico os10", match: "EXACT" },
+  { text: "certificado control de impulsos", match: "EXACT" },
+  { text: "examen psicologico guardia", match: "EXACT" },
+  { text: "evaluacion psicologica seguridad privada", match: "EXACT" },
+  { text: "certificado psicologico os10", match: "EXACT" },
+  { text: "psicologo os10", match: "EXACT" },
+  { text: "informe psicologico os10", match: "PHRASE" },
+  { text: "certificado control de impulsos", match: "PHRASE" },
+  { text: "examen psicologico guardia", match: "PHRASE" },
+  { text: "certificado psicologico cctv", match: "PHRASE" },
+  { text: "certificado psicologico os10", match: "PHRASE" },
+  { text: "informe psicologico guardia", match: "PHRASE" },
+  { text: "psicologo os10", match: "PHRASE" },
+  { text: "renovacion credencial os10", match: "PHRASE" },
+  { text: "control de impulsos os10", match: "PHRASE" },
+  { text: "examen psicologico os10", match: "PHRASE" },
 ];
 
 const EXTRA_NEGATIVES = [
-  "cirujano",
-  "operarme",
-  "precio bypass",
-  "precio manga",
-  "costo manga",
-  "costo operacion",
-  "hospital",
-  "pabellon",
-  "infantil",
-  "pediatrico",
-  "ninos",
   "gratis",
   "gratuito",
   "ia",
@@ -96,12 +91,32 @@ const EXTRA_NEGATIVES = [
   "emdr",
   "dbt",
   "psicoanalisis",
+  "24/7",
+  "infantil",
+  "pediatrico",
+  "ninos",
+  "arma",
+  "tiro",
+  "postulacion carabineros",
+  "carabineros postulacion",
+  "malla",
+  "malla curricular",
+  "curso gratis",
   "plantilla",
   "ejemplo",
-  "curso",
+  "modelo de informe",
+  "ansiedad",
+  "depresion",
+  "terapia",
+  "pareja",
+  "adolescentes",
+  "bariatrica",
+  "bariatrico",
+  "adiccion",
+  "ludopatia",
   "vacante",
-  "24/7",
-  "fonasa",
+  "sueldo",
+  "trabajo guardia",
 ];
 
 const MATCH_ENUM = {
@@ -170,7 +185,6 @@ const buildOps = (negatives) => {
       target_content_network: false,
     },
     geo_target_type_setting: {
-      // Solo personas que están físicamente en Chile; no "presencia o interés".
       positive_geo_target_type: enums.PositiveGeoTargetType.PRESENCE,
     },
   };
@@ -180,7 +194,7 @@ const buildOps = (negatives) => {
       enums.EuPoliticalAdvertisingStatus.DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING;
   }
 
-  const ops = [
+  return [
     {
       entity: "campaign_budget",
       operation: "create",
@@ -236,8 +250,8 @@ const buildOps = (negatives) => {
           responsive_search_ad: {
             headlines: HEADLINES,
             descriptions: DESCRIPTIONS,
-            path1: "evaluacion",
-            path2: "bariatrica",
+            path1: "informe",
+            path2: "os10",
           },
         },
       },
@@ -273,8 +287,6 @@ const buildOps = (negatives) => {
       },
     })),
   ];
-
-  return ops;
 };
 
 async function main() {
@@ -287,8 +299,6 @@ async function main() {
     process.exit(0);
   }
 
-  // Esta campaña no hereda negativas de TCC: varias chocan con la intención
-  // bariátrica y además inflarían innecesariamente el lote de operaciones.
   const negatives = buildNegatives();
   const ops = buildOps(negatives);
 
@@ -296,9 +306,7 @@ async function main() {
   console.log(`Grupo: ${AD_GROUP_NAME} · PAUSED`);
   console.log(`Landing: ${FINAL_URL}`);
   console.log(`Headlines: ${HEADLINES.length} · descriptions: ${DESCRIPTIONS.length}`);
-  console.log(
-    `Keywords: ${KEYWORDS.length} · negativas propias: ${negatives.length}`,
-  );
+  console.log(`Keywords: ${KEYWORDS.length} · negativas propias: ${negatives.length}`);
   console.log(`Ops: ${ops.length} · ${isApply ? "APLICAR" : "DRY-RUN (validate_only)"}`);
   console.log("\nHeadlines:");
   HEADLINES.forEach((h) => console.log(`  [${h.text.length}] ${h.text}`));

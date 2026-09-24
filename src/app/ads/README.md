@@ -16,5 +16,14 @@ Misma regla que el resto del sitio. Tú / te / Escríbeme. Sin voseo ni imperati
 ## Evaluación bariátrica (`/ads/evaluacion-bariatrica`)
 
 - Tuteo chileno (tú / te / Escríbeme). Sin voseo.
-- Pack **$75.000** (2 sesiones + informe). No $35.000. Sin «aprobado», «garantizado» ni «express 24h».
+- **$75.000**: 1 sesión de 50 min + certificado el mismo día. Sin «aprobado», «garantizado» ni «te operan seguro».
 - Campaña Ads `evaluacion-bariatrica-online` **propia y PAUSED** (US$1/día). No hereda la negativa `bariatr*` de TCC. No ENABLED hasta confirmación.
+
+## Informe psicológico OS10 (`/ads/informe-psicologico-os10`)
+
+- Tuteo chileno. Sin voseo.
+- **$40.000**: evaluación online (20–45 min) + informe/certificado PDF incluido. No incluye el curso OS10 ni la credencial.
+- No prometer «apto», «aprobado» ni «garantizado». El resultado depende de la evaluación.
+- Conversión de puja: clic WhatsApp → `whatsapp_lead` (mismo GTM que el resto de `/ads`). Eventos extra: `view_landing`, `click_whatsapp`, `click_empresas`.
+- Copy y precios: `src/app/ads/informe-psicologico-os10/content.ts`. Cómo editar: `README.md` de esa carpeta.
+- Campaña Ads `informe-psicologico-os10-online` **propia y PAUSED** (US$1/día). Chile PRESENCE. RSA: `CAMPAIGN.md`.

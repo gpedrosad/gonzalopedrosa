@@ -8,9 +8,9 @@ Paths: `evaluacion` / `bariatrica` · Geo: Chile (`PRESENCE`) · Conv: `whatsapp
 
 ## Oferta
 
-Pack **$75.000 CLP**: 2 sesiones de 50 min + informe PDF firmado + boleta. Online en todo Chile.
+**$75.000 CLP**: 1 sesión de 50 min + certificado PDF el mismo día + boleta. Online en todo Chile.
 
-No es un pase express. No garantiza aprobación de la cirugía. Es evaluación de aptitud para el equipo quirúrgico.
+No garantiza aprobación de la cirugía. Es evaluación de aptitud para el equipo quirúrgico.
 
 ## Headlines (15, ≤30)
 
@@ -18,30 +18,30 @@ Pin **H1** el de precio. El resto sin pin.
 
 | # | Texto | n | Tema |
 |---|---|---|---|
-| 1 | Pack bariátrico $75.000 | 23 | PIN H1 · precio |
+| 1 | Sesión bariátrica $75.000 | 25 | PIN H1 · precio |
 | 2 | Psicólogo bariátrico | 20 | psicólogo bariátrico |
 | 3 | Informe para cirugía | 20 | informe para cirugía |
 | 4 | Boleta Fonasa e Isapre | 22 | Fonasa/Isapre |
-| 5 | 2 sesiones + informe | 20 | 2 sesiones + informe |
+| 5 | 1 sesión + certificado | 22 | oferta |
 | 6 | Agenda hoy por WhatsApp | 23 | WhatsApp |
-| 7 | No es un pase express | 21 | no express |
+| 7 | Certificado el mismo día | 24 | entrega |
 | 8 | Evaluación confidencial | 23 | confidencial |
 | 9 | Online en todo Chile | 20 | todo Chile |
 | 10 | Ps. Gonzalo Pedrosa | 19 | Gonzalo Pedrosa |
-| 11 | Informe PDF firmado | 19 | entregable |
+| 11 | Certificado PDF firmado | 23 | entregable |
 | 12 | Evaluación bariátrica | 21 | query |
 | 13 | Aptitud para cirugía | 20 | evaluación/aptitud |
-| 14 | 2 sesiones de 50 min | 20 | formato |
+| 14 | 1 sesión de 50 min | 18 | formato |
 | 15 | Escríbeme y coordinamos | 23 | CTA tuteo |
 
 ## Descriptions (4, ≤90)
 
 | # | Texto | n |
 |---|---|---|
-| 1 | Pack $75.000: 2 sesiones de 50 min + informe PDF firmado + boleta. Online Chile. | 80 |
-| 2 | Evaluación de aptitud. No es un pase express ni garantiza que te aprueben la cirugía. | 85 |
-| 3 | Psicólogo clínico. Informe firmado para tu equipo quirúrgico. Agenda por WhatsApp. | 82 |
-| 4 | Online en todo Chile. Confidencial. 2 sesiones de 50 min, informe PDF y boleta. | 79 |
+| 1 | Sesión $75.000: 50 min online + certificado PDF el mismo día + boleta. Chile. | 77 |
+| 2 | Evaluación de aptitud. No garantiza que la clínica te apruebe la cirugía. | 73 |
+| 3 | Psicólogo clínico. Certificado el mismo día para tu equipo. Agenda por WhatsApp. | 80 |
+| 4 | Online en todo Chile. 1 sesión de 50 min, certificado PDF el mismo día y boleta. | 80 |
 
 ## Keywords
 
@@ -110,12 +110,12 @@ Sitelinks **solo www** (no apex). Misma landing + ancla. La landing debe exponer
 | Precio | `https://www.gonzalopedrosa.cl/ads/evaluacion-bariatrica#precio` |
 | WhatsApp | `https://www.gonzalopedrosa.cl/ads/evaluacion-bariatrica#whatsapp` |
 
-Callouts: `Boleta` · `Online Chile` · `Informe firmado` · `2 sesiones`
+Callouts: `Boleta` · `Online Chile` · `Certificado mismo día` · `1 sesión`
 
 ## Política
 
 Salud: copy de **evaluación / aptitud**, no de resultado quirúrgico.
 
-Prohibido: «te operan seguro», «aprobación garantizada», «pase express» como promesa (sí como rechazo: *no es un pase express*).
+Prohibido: «te operan seguro», «aprobación garantizada». El certificado el mismo día no implica que te aprueben la cirugía.
 
 Tuteo Chile (`tú`, `te`, `Escríbeme`, `Agenda`). Sin voseo (`tenés`, `Escríbime`, `coordiná`).

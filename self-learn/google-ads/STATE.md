@@ -4,6 +4,7 @@
 - **Campaña principal:** `psicologo-cognitivo-conductual-online` (`23450445740`) · **ENABLED** · horario **lun–vie** · budget ~US$2/día
 - **Campaña test:** `adiccion-al-juego-online` (`24172229213`) · **ENABLED** · horario **lun–vie** · budget **US$1/día** · geo **Chile PRESENCE** · grupo `adiccion-al-juego` ENABLED · landing `/ads/adiccion-al-juego`
 - **Campaña test:** `evaluacion-bariatrica-online` (`24172472867`) · **ENABLED** · horario **lun–vie** · budget **US$1/día** · geo Chile PRESENCE · grupo `evaluacion-bariatrica` (`199819157735`) ENABLED · landing `/ads/evaluacion-bariatrica`
+- **Campaña test:** `informe-psicologico-os10-online` (`24291587680`) · **PAUSED** · budget **US$1/día** · geo Chile PRESENCE · grupo `informe-psicologico-os10` (`198276616297`) PAUSED · landing `/ads/informe-psicologico-os10`
 - **Conv:** solo **WhatsApp click** (`7451799330`, label `sVwoCKLepeEbEIHgncVC`) primary + métrica + `CONTACT~WEBSITE` biddable. Las otras 3 acciones / goals de lead form y signup no pujan.
 - **Sitelinks:** 4 assets con `www` (agendar, sobre, TCC, cómo funciona).
 - **Última revisión:** 2026-09-06 · conv + sitelinks · eval A+B cerrada 28 jul ([EVAL.md](./EVAL.md))
@@ -20,6 +21,7 @@
 | terapia-pareja | PAUSED | Landing RSA OK si se reactiva |
 | adiccion-al-juego | ENABLED | Campaña propia · US$1/día · Chile PRESENCE · landing `/ads/adiccion-al-juego` |
 | evaluacion-bariatrica | ENABLED | Campaña propia · US$1/día · Chile PRESENCE · landing `/ads/evaluacion-bariatrica` |
+| informe-psicologico-os10 | PAUSED | Campaña propia · US$1/día · Chile PRESENCE · landing `/ads/informe-psicologico-os10` · no gasta |
 
 ## Snapshot métricas 2026-08-27
 

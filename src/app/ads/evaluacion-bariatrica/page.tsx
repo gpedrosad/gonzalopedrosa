@@ -6,7 +6,7 @@ import { LazyStickyWhatsAppCTA } from "./LazyStickyWhatsAppCTA";
 export const metadata: Metadata = {
   title: "Evaluación Psicológica Bariátrica | Informe Online",
   description:
-    "Pack de evaluación psicológica bariátrica: 2 sesiones online + informe firmado en PDF. $75.000. Consulta por WhatsApp.",
+    "Evaluación psicológica bariátrica: 1 sesión online de 50 min + certificado el mismo día. $75.000. Consulta por WhatsApp.",
   robots: {
     index: false,
     follow: false,
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Evaluación Psicológica Bariátrica | Informe Online",
     description:
-      "Pack de evaluación psicológica bariátrica: 2 sesiones online + informe firmado en PDF. $75.000.",
+      "Evaluación psicológica bariátrica: 1 sesión online + certificado el mismo día. $75.000.",
     url: "https://www.gonzalopedrosa.cl/ads/evaluacion-bariatrica",
     type: "website",
     images: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 };
 
 const WHATSAPP_HREF =
-  "https://wa.me/56968257817?text=Hola%2C%20me%20interesa%20el%20pack%20de%20evaluaci%C3%B3n%20bari%C3%A1trica%20de%20%2475.000%20(2%20sesiones%20%2B%20informe).";
+  "https://wa.me/56968257817?text=Hola%2C%20me%20interesa%20la%20evaluaci%C3%B3n%20bari%C3%A1trica%20de%20%2475.000%20(1%20sesi%C3%B3n%20%2B%20certificado%20el%20mismo%20d%C3%ADa).";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -43,23 +43,23 @@ const faqSchema = {
       name: "¿Cuánto cuesta la evaluación psicológica bariátrica?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El pack único vale $75.000 CLP. Incluye 2 sesiones clínicas de 50 minutos por videollamada, el informe psicológico firmado en PDF y boleta electrónica. No hay precio por sesión suelta.",
+        text: "La evaluación vale $75.000 CLP. Incluye 1 sesión clínica de 50 minutos por videollamada, el certificado psicológico firmado en PDF el mismo día y boleta electrónica.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Cuántas sesiones incluye el pack?",
+      name: "¿Cuántas sesiones incluye?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Dos sesiones clínicas de 50 minutos, ambas online. El consenso clínico (por ejemplo NPCO) apunta a una evaluación de al menos 2 sesiones: no es un informe express de una sola hora.",
+        text: "Una sesión de 50 minutos, online. En esa sesión se hace la evaluación y el certificado se entrega el mismo día.",
       },
     },
     {
       "@type": "Question",
-      name: "¿El informe lo acepta cualquier clínica?",
+      name: "¿El certificado lo acepta cualquier clínica?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El informe cubre el certificado de psicólogo que suelen pedir las clínicas y equipos bariátricos. Cumple estándares profesionales. Aun así, el equipo de tu clínica puede pedir su propia evaluación o un formato específico: me adapto si me lo indican.",
+        text: "El certificado cubre el documento de psicólogo que suelen pedir las clínicas y equipos bariátricos. Cumple estándares profesionales. Aun así, el equipo de tu clínica puede pedir su propia evaluación o un formato específico: me adapto si me lo indican.",
       },
     },
     {
@@ -67,15 +67,15 @@ const faqSchema = {
       name: "¿Sirve para Fonasa PAD o Isapre?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El informe es el documento psicológico que suelen pedir para manga, bypass, Fonasa PAD o Isapre. No garantizo que Fonasa, la Isapre o la clínica aprueben la cirugía: esa decisión es del equipo bariátrico y del prestador.",
+        text: "El certificado es el documento psicológico que suelen pedir para manga, bypass, Fonasa PAD o Isapre. No garantizo que Fonasa, la Isapre o la clínica aprueben la cirugía: esa decisión es del equipo bariátrico y del prestador.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Cuánto demora el informe?",
+      name: "¿Cuándo entregas el certificado?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El informe firmado en PDF se entrega al día siguiente de la última sesión.",
+        text: "El certificado firmado en PDF se entrega el mismo día de la sesión.",
       },
     },
     {
@@ -83,7 +83,7 @@ const faqSchema = {
       name: "¿Entregas boleta?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí. El pack incluye boleta electrónica por las 2 sesiones y el informe.",
+        text: "Sí. El valor incluye boleta electrónica por la sesión y el certificado.",
       },
     },
     {
@@ -91,7 +91,7 @@ const faqSchema = {
       name: "¿La evaluación es 100% online?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí. Las 2 sesiones son por videollamada, desde cualquier región de Chile. Solo necesitas conexión a internet y un lugar tranquilo.",
+        text: "Sí. La sesión es por videollamada, desde cualquier región de Chile. Solo necesitas conexión a internet y un lugar tranquilo.",
       },
     },
     {
@@ -99,24 +99,24 @@ const faqSchema = {
       name: "¿Qué pasa si hay una contraindicación?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No es un rechazo eterno. Si hay algo que trabajar ahora (por ejemplo un trastorno alimentario activo, consumo de alcohol o expectativas poco realistas), lo dejamos por escrito y se puede retomar la evaluación cuando corresponda. El informe describe tu situación actual; no es un pase express ni una aprobación automática.",
+        text: "No es un rechazo eterno. Si hay algo que trabajar ahora (por ejemplo un trastorno alimentario activo, consumo de alcohol o expectativas poco realistas), lo dejamos por escrito y se puede retomar la evaluación cuando corresponda. El certificado describe tu situación actual; no garantiza que te aprueben la cirugía.",
       },
     },
   ],
 };
 
 const HERO_BULLETS = [
-  "2 sesiones clínicas de 50 min, por videollamada",
-  "Informe psicológico firmado en PDF",
-  "Informe al día siguiente de la última sesión",
+  "1 sesión clínica de 50 min, por videollamada",
+  "Certificado psicológico firmado en PDF",
+  "Entrega el mismo día de la sesión",
   "Boleta electrónica incluida",
 ];
 
 const PACK_INCLUYE = [
-  "2 sesiones clínicas de 50 minutos (online)",
-  "Informe psicológico firmado en PDF",
+  "1 sesión clínica de 50 minutos (online)",
+  "Certificado psicológico firmado en PDF",
   "Boleta electrónica",
-  "Entrega del informe al día siguiente de la última sesión",
+  "Entrega del certificado el mismo día",
 ];
 
 const PACK_NO_INCLUYE = [
@@ -150,8 +150,8 @@ const PASOS = [
   },
   {
     step: "2",
-    title: "Agendamos 2 sesiones online",
-    desc: "Videollamada de 50 minutos cada una, en horarios que te acomoden.",
+    title: "Agendamos 1 sesión online",
+    desc: "Videollamada de 50 minutos, en un horario que te acomode.",
   },
   {
     step: "3",
@@ -160,43 +160,43 @@ const PASOS = [
   },
   {
     step: "4",
-    title: "Recibes el informe firmado",
-    desc: "PDF al día siguiente de la última sesión, con boleta.",
+    title: "Recibes el certificado",
+    desc: "PDF firmado el mismo día de la sesión, con boleta.",
   },
 ];
 
 const FAQS = [
   {
-    q: "¿Cuánto cuesta el pack?",
-    a: "El pack único vale $75.000 CLP. Incluye 2 sesiones clínicas de 50 minutos por videollamada, el informe psicológico firmado en PDF y boleta electrónica. No hay precio por sesión suelta.",
+    q: "¿Cuánto cuesta?",
+    a: "La evaluación vale $75.000 CLP. Incluye 1 sesión clínica de 50 minutos por videollamada, el certificado psicológico firmado en PDF el mismo día y boleta electrónica.",
   },
   {
     q: "¿Cuántas sesiones son?",
-    a: "Dos sesiones de 50 minutos, ambas online. El consenso clínico (por ejemplo NPCO) apunta a una evaluación de al menos 2 sesiones: no es un informe express de una sola hora.",
+    a: "Una sesión de 50 minutos, online. En esa sesión se hace la evaluación y el certificado se entrega el mismo día.",
   },
   {
     q: "¿Lo acepta cualquier clínica?",
-    a: "El informe cubre el certificado de psicólogo que suelen pedir las clínicas y equipos bariátricos. Cumple estándares profesionales. Aun así, el equipo de tu clínica puede pedir su propia evaluación o un formato específico: me adapto si me lo indican.",
+    a: "El certificado cubre el documento de psicólogo que suelen pedir las clínicas y equipos bariátricos. Cumple estándares profesionales. Aun así, el equipo de tu clínica puede pedir su propia evaluación o un formato específico: me adapto si me lo indican.",
   },
   {
     q: "¿Sirve para Fonasa PAD o Isapre?",
-    a: "El informe es el documento psicológico que suelen pedir para manga, bypass, Fonasa PAD o Isapre. No garantizo que Fonasa, la Isapre o la clínica aprueben la cirugía: esa decisión es del equipo bariátrico y del prestador.",
+    a: "El certificado es el documento psicológico que suelen pedir para manga, bypass, Fonasa PAD o Isapre. No garantizo que Fonasa, la Isapre o la clínica aprueben la cirugía: esa decisión es del equipo bariátrico y del prestador.",
   },
   {
-    q: "¿Cuánto demora el informe?",
-    a: "El informe firmado en PDF se entrega al día siguiente de la última sesión.",
+    q: "¿Cuándo entregas el certificado?",
+    a: "El certificado firmado en PDF se entrega el mismo día de la sesión.",
   },
   {
     q: "¿Entregas boleta?",
-    a: "Sí. El pack incluye boleta electrónica por las 2 sesiones y el informe.",
+    a: "Sí. El valor incluye boleta electrónica por la sesión y el certificado.",
   },
   {
     q: "¿Es 100% online?",
-    a: "Sí. Las 2 sesiones son por videollamada, desde cualquier región de Chile. Solo necesitas conexión a internet y un lugar tranquilo.",
+    a: "Sí. La sesión es por videollamada, desde cualquier región de Chile. Solo necesitas conexión a internet y un lugar tranquilo.",
   },
   {
     q: "¿Qué pasa si hay una contraindicación?",
-    a: "No es un rechazo eterno. Si hay algo que trabajar ahora (por ejemplo un TCA activo, consumo de alcohol o expectativas poco realistas), lo dejamos por escrito y se puede retomar la evaluación cuando corresponda. El informe describe tu situación actual; no es un pase express ni una aprobación automática.",
+    a: "No es un rechazo eterno. Si hay algo que trabajar ahora (por ejemplo un TCA activo, consumo de alcohol o expectativas poco realistas), lo dejamos por escrito y se puede retomar la evaluación cuando corresponda. El certificado describe tu situación actual; no garantiza que te aprueben la cirugía.",
   },
 ];
 
@@ -221,12 +221,13 @@ export default function EvaluacionBariatricaAdsPage() {
           </div>
 
           <h1 className="text-[26px] leading-tight md:text-3xl font-bold text-gray-900 tracking-tight mb-3">
-            Evaluación psicológica bariátrica: informe para tu cirugía
+            Evaluación psicológica bariátrica: certificado el mismo día
           </h1>
 
           <p className="text-base text-gray-600 mb-4 leading-relaxed">
-            Pack de 2 sesiones clínicas online + informe psicológico firmado.
-            Evaluación seria, no un pase express ni una aprobación en 24 horas.
+            Una sesión clínica online de 50 minutos + certificado psicológico
+            firmado el mismo día. $75.000. No garantiza que te aprueben la
+            cirugía.
           </p>
 
           <ul className="space-y-2 mb-5">
@@ -248,7 +249,7 @@ export default function EvaluacionBariatricaAdsPage() {
             <div className="flex items-center justify-between mb-3">
               <div>
                 <p className="text-sm text-gray-600">
-                  Pack: 2 sesiones + informe PDF + boleta
+                  1 sesión + certificado el mismo día + boleta
                 </p>
                 <p className="text-2xl font-bold text-gray-900">
                   $75.000{" "}
@@ -268,7 +269,7 @@ export default function EvaluacionBariatricaAdsPage() {
               label="ads-eval-bariatrica-hero"
               className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
             >
-              Consultar pack por WhatsApp
+              Consultar por WhatsApp
             </AdsWhatsAppButton>
             <p className="text-xs text-gray-500 text-center mt-2">
               Respuesta rápida · Sin compromiso
@@ -276,11 +277,11 @@ export default function EvaluacionBariatricaAdsPage() {
           </div>
         </section>
 
-        {/* El pack */}
+        {/* Precio */}
         <section id="precio" className="px-4 py-8 bg-gray-50">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">
-              El pack
+              La evaluación
             </h2>
             <div className="bg-white rounded-2xl border border-gray-200 p-5">
               <p className="text-sm text-gray-500 mb-1">Precio único</p>
@@ -289,8 +290,7 @@ export default function EvaluacionBariatricaAdsPage() {
                 <span className="text-base font-normal text-gray-500">CLP</span>
               </p>
               <p className="text-sm text-gray-600 mb-5">
-                2 sesiones + informe firmado + boleta. Sin precio por sesión
-                suelta.
+                1 sesión de 50 min + certificado el mismo día + boleta.
               </p>
 
               <p
@@ -421,17 +421,17 @@ export default function EvaluacionBariatricaAdsPage() {
         <section className="px-4 py-8 bg-gray-900">
           <div className="max-w-2xl mx-auto text-center">
             <p className="text-white text-base font-medium mb-1">
-              ¿Necesitas el informe para tu cirugía bariátrica?
+              ¿Necesitas el certificado para tu cirugía bariátrica?
             </p>
             <p className="text-gray-400 text-sm mb-4">
-              Pack $75.000 · 2 sesiones + informe firmado
+              $75.000 · 1 sesión + certificado el mismo día
             </p>
             <AdsWhatsAppButton
               href={WHATSAPP_HREF}
               label="ads-eval-bariatrica-mid"
               className="bg-white hover:bg-gray-100 text-gray-900"
             >
-              Consultar pack por WhatsApp
+              Consultar por WhatsApp
             </AdsWhatsAppButton>
             <p className="text-gray-400 text-sm mt-3">
               Respuesta rápida · Sin compromiso
@@ -451,9 +451,9 @@ export default function EvaluacionBariatricaAdsPage() {
                 cirugía. El equipo bariátrico puede pedir su propia evaluación.
               </p>
               <p className="text-gray-700 text-sm leading-relaxed">
-                El informe cubre el certificado de psicólogo que suelen pedir.
-                Es una evaluación clínica seria (mínimo 2 sesiones), no un pase
-                express ni una aprobación en 24 horas.
+                El certificado cubre el documento de psicólogo que suelen pedir.
+                Se entrega el mismo día. No garantiza que la clínica, Fonasa o
+                Isapre aprueben la cirugía.
               </p>
             </div>
           </div>
@@ -506,14 +506,14 @@ export default function EvaluacionBariatricaAdsPage() {
               </div>
             </div>
             <p className="text-gray-700 text-[15px] mb-4">
-              Pack $75.000 · 2 sesiones + informe firmado en PDF
+              $75.000 · 1 sesión + certificado el mismo día
             </p>
             <AdsWhatsAppButton
               href={WHATSAPP_HREF}
               label="ads-eval-bariatrica-final"
               className="bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-lg"
             >
-              Consultar pack por WhatsApp
+              Consultar por WhatsApp
             </AdsWhatsAppButton>
             <p className="text-sm text-gray-500 mt-3">
               100% online · todo Chile · Sin compromiso

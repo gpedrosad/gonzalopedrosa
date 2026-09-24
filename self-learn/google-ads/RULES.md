@@ -29,6 +29,7 @@ Mapa canónico (www). RSA con URL incorrecta → `align-landings` (no UPDATE de 
 | terapia-pareja | `/ads/terapia-pareja` |
 | adiccion-al-juego | `/ads/adiccion-al-juego` |
 | evaluacion-bariatrica | `/ads/evaluacion-bariatrica` |
+| informe-psicologico-os10 | `/ads/informe-psicologico-os10` |
 
 Host: siempre `https://www.gonzalopedrosa.cl` (no apex sin www).
 

@@ -74,6 +74,14 @@ const THEME_RULES: Array<{
   match: (n: string) => boolean;
 }> = [
   {
+    theme: "Informe psicológico OS10",
+    landing: "/ads/informe-psicologico-os10",
+    match: (n) =>
+      /os10|os-10|control de impulsos|seguridad privada|guardia de seguridad|vigilante|cctv/.test(
+        n,
+      ),
+  },
+  {
     theme: "Evaluación bariátrica",
     landing: "/ads/evaluacion-bariatrica",
     match: (n) =>
