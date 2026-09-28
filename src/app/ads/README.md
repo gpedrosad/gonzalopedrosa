@@ -26,4 +26,11 @@ Misma regla que el resto del sitio. Tú / te / Escríbeme. Sin voseo ni imperati
 - No prometer «apto», «aprobado» ni «garantizado». El resultado depende de la evaluación.
 - Conversión de puja: clic WhatsApp → `whatsapp_lead` (mismo GTM que el resto de `/ads`). Eventos extra: `view_landing`, `click_whatsapp`, `click_empresas`.
 - Copy y precios: `src/app/ads/informe-psicologico-os10/content.ts`. Cómo editar: `README.md` de esa carpeta.
-- Campaña Ads `informe-psicologico-os10-online` **propia y PAUSED** (US$1/día). Chile PRESENCE. RSA: `CAMPAIGN.md`.
+- Campaña Ads `informe-psicologico-os10-online` **propia y ENABLED** (US$1/día, lun–vie). Chile PRESENCE. RSA: `CAMPAIGN.md`.
+
+## Informe para cambio de nombre o apellido (`/ads/informe-cambio-nombre-apellido`)
+
+- **$45.990**: evaluación online + informe psicológico firmado en PDF, entregado el mismo día.
+- El informe es un antecedente psicológico. No prometer aprobación, no presentarlo como obligatorio y no sustituir asesoría legal.
+- Conversión de puja: clic WhatsApp → `whatsapp_lead`. Diagnóstico: `view_landing`, `click_whatsapp`, `scroll_depth` y `faq_open`.
+- CTA única en toda la página: «Solicitar informe por WhatsApp».

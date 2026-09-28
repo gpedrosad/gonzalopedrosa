@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Reactiva las 3 campañas y limita el horario a lun–vie (sin sáb/dom).
+ * Reactiva las 4 campañas y limita el horario a lun–vie (sin sáb/dom).
  *
  *   node --env-file=.env.local scripts/google-ads-weekday-enable.mjs
  *   node --env-file=.env.local scripts/google-ads-weekday-enable.mjs --apply
@@ -27,6 +27,7 @@ const CAMPAIGNS = [
   { id: "23450445740", name: "psicologo-cognitivo-conductual-online" },
   { id: "24172229213", name: "adiccion-al-juego-online" },
   { id: "24172472867", name: "evaluacion-bariatrica-online" },
+  { id: "24291587680", name: "informe-psicologico-os10-online" },
 ];
 
 const WEEKDAYS = [

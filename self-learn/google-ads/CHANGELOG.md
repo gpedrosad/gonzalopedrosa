@@ -2,8 +2,13 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-09-28
+
+- **Landing cambio de nombre/apellido:** nueva `/ads/informe-cambio-nombre-apellido`, $45.990, entrega el mismo día y CTA WhatsApp con `whatsapp_lead` + eventos de diagnóstico. Sin cambios en la cuenta de Google Ads.
+
 ## 2026-09-24
 
+- **Enable OS10:** `informe-psicologico-os10-online` (`24291587680`) + grupo (`198276616297`) **PAUSED → ENABLED**. Horario lun–vie 00–24. TCC `23450445740` + negativas BROAD `os10`, `control de impulsos`, `guardia de seguridad`, `vigilante privado`, `seguridad privada`, `cctv`. validate_only previo.
 - **Campaña OS10:** `informe-psicologico-os10-online` (`24291587680`) + grupo `informe-psicologico-os10` (`198276616297`) + RSA `…~825841016364` creados **PAUSED**. Budget US$1/día · Chile PRESENCE · landing `/ads/informe-psicologico-os10`. validate_only previo.
 
 ## 2026-09-22

@@ -2,11 +2,11 @@
 
 Tuteo Chile. Sin voseo.
 
-Campaña: `informe-psicologico-os10-online` (`24291587680`) · **PAUSED**  
-Grupo: `informe-psicologico-os10` (`198276616297`) · **PAUSED**  
+Campaña: `informe-psicologico-os10-online` (`24291587680`) · **ENABLED**  
+Grupo: `informe-psicologico-os10` (`198276616297`) · **ENABLED**  
 RSA: `198276616297~825841016364`  
 Final URL: `https://www.gonzalopedrosa.cl/ads/informe-psicologico-os10`  
-Paths: `informe` / `os10` · Geo: Chile (`PRESENCE`) · Conv: `whatsapp_lead` · Budget: US$1/día
+Paths: `informe` / `os10` · Geo: Chile (`PRESENCE`) · Horario: lun–vie 00–24 · Conv: `whatsapp_lead` · Budget: US$1/día
 
 ## Oferta
 
