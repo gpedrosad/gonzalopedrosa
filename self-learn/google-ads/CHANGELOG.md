@@ -4,6 +4,7 @@ Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
 ## 2026-09-28
 
+- **Campaña cambio de nombre:** `informe-cambio-nombre-apellido-online` (`24298829243`) + grupo (`203691716634`) + RSA `…~826307452948` **ENABLED**. Budget US$1/día · Chile PRESENCE · lun–vie · landing `/ads/informe-cambio-nombre-apellido`. TCC/Juego/Bari/OS10 + negativas BROAD `cambio de nombre`, `cambio de apellido`. validate_only previo en el create.
 - **Landing cambio de nombre/apellido:** nueva `/ads/informe-cambio-nombre-apellido`, $45.990, entrega el mismo día y CTA WhatsApp con `whatsapp_lead` + eventos de diagnóstico. Sin cambios en la cuenta de Google Ads.
 
 ## 2026-09-24

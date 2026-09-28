@@ -1,3 +1,4 @@
+import { HEALTH_PROVIDER_REGISTRY_LABEL } from "@/lib/site-config";
 import { LANDING_PATH, PHONE_PUBLIC, profesional, whatsappParticular } from "../content";
 
 export function Footer() {
@@ -7,7 +8,7 @@ export function Footer() {
     profesional.rol.toLowerCase(),
     profesional.rut ? `RUT ${profesional.rut}` : null,
     profesional.registroSuperintendencia
-      ? `Registro Superintendencia ${profesional.registroSuperintendencia}`
+      ? HEALTH_PROVIDER_REGISTRY_LABEL
       : "Registro Superintendencia de Salud",
     `${profesional.ciudad}, Chile`,
   ]

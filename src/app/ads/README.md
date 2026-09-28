@@ -6,6 +6,10 @@ Sitio chileno (`gonzalopedrosa.cl`). **Toda la web** (no solo `/ads/*`) va en es
 
 Misma regla que el resto del sitio. Tú / te / Escríbeme. Sin voseo ni imperativos rioplatenses. Si un draft trae voseo, pasarlo a tuteo antes de publicar.
 
+## Registro de prestador
+
+Número único: `HEALTH_PROVIDER_REGISTRY` en `src/lib/site-config.ts` (`504978`). Mostrarlo en landings de informe (OS10, bariátrica, cambio de nombre), con enlace a verificar en RNPI. No va en headlines de Ads.
+
 ## Adicción al juego (`/ads/adiccion-al-juego`)
 
 - El alcance (casino, apuestas, online) se dice como **qué se trata**, no como oferta de juego. Evitar chips tipo «Apuestas online y casinos» que parecen promoción.
@@ -34,3 +38,4 @@ Misma regla que el resto del sitio. Tú / te / Escríbeme. Sin voseo ni imperati
 - El informe es un antecedente psicológico. No prometer aprobación, no presentarlo como obligatorio y no sustituir asesoría legal.
 - Conversión de puja: clic WhatsApp → `whatsapp_lead`. Diagnóstico: `view_landing`, `click_whatsapp`, `scroll_depth` y `faq_open`.
 - CTA única en toda la página: «Solicitar informe por WhatsApp».
+- Campaña Ads `informe-cambio-nombre-apellido-online` **propia y ENABLED** (US$1/día, lun–vie). Chile PRESENCE. RSA: `CAMPAIGN.md`.

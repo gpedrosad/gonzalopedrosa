@@ -1,4 +1,8 @@
-import { CANONICAL_ORIGIN, CLINICAL_STATS } from "@/lib/site-config";
+import {
+  CANONICAL_ORIGIN,
+  CLINICAL_STATS,
+  HEALTH_PROVIDER_REGISTRY,
+} from "@/lib/site-config";
 
 export const LANDING_PATH = "/ads/informe-psicologico-os10";
 export const LANDING_URL = `${CANONICAL_ORIGIN}${LANDING_PATH}`;
@@ -47,7 +51,7 @@ export const profesional = {
    * Número del Registro Nacional de Prestadores (Superintendencia de Salud).
    * No inventar. Vacío = el footer no publica un número.
    */
-  registroSuperintendencia: "",
+  registroSuperintendencia: HEALTH_PROVIDER_REGISTRY,
   fotoSrc: "/yo.png",
   fotoAlt: "Gonzalo Pedrosa, psicólogo clínico",
   email: "gpedrosadom@gmail.com",
@@ -96,7 +100,7 @@ export const seo = {
 export const hero = {
   subtitulo: `Evaluación online con psicólogo registrado · PDF el mismo día · ${formatClp(precios.particular)}, informe incluido`,
   badges: [
-    "Registro Superintendencia de Salud",
+    `Registro N.° ${HEALTH_PROVIDER_REGISTRY}`,
     "Online en todo Chile",
     "Boleta electrónica",
     "Entrega rápida",
@@ -140,7 +144,7 @@ export const incluye = [
   "Entrevista psicológica online (20–45 min)",
   "Evaluación de control de impulsos y aptitud psíquica para seguridad",
   "Informe o certificado en PDF, firmado",
-  "Datos del profesional: nombre, RUT y registro",
+  `Datos del profesional: nombre y registro N.° ${HEALTH_PROVIDER_REGISTRY}`,
   "Boleta electrónica",
   "Envío por correo el mismo día, en casos simples",
 ] as const;
@@ -179,7 +183,7 @@ export const pasos = [
 ] as const;
 
 export const diferenciales = [
-  "El informe lo emite un psicólogo inscrito en el Registro Nacional de Prestadores de la Superintendencia de Salud.",
+  `El informe lo emite un psicólogo inscrito en el Registro Nacional de Prestadores de Salud (N.° ${HEALTH_PROVIDER_REGISTRY}).`,
   "El proceso es 100% online, por videollamada, desde cualquier región de Chile.",
   "Entrega rápida: el mismo día o en pocas horas cuando el caso es simple.",
   "Horarios que consideran turnos, también de noche.",

@@ -39,6 +39,10 @@ npm run google-ads:create-evaluacion-bariatrica -- --apply
 npm run google-ads:create-informe-os10
 npm run google-ads:create-informe-os10 -- --apply
 
+# Campaña informe cambio de nombre/apellido (crear pausada; dry-run por defecto)
+npm run google-ads:create-informe-cambio-nombre
+npm run google-ads:create-informe-cambio-nombre -- --apply
+
 # Reactivar + horario lun–vie (sin sáb/dom)
 node --env-file=.env.local scripts/google-ads-weekday-enable.mjs
 node --env-file=.env.local scripts/google-ads-weekday-enable.mjs --apply

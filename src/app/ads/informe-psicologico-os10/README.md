@@ -28,7 +28,8 @@ El mensaje prearmado está en `mensajes.particular` y `mensajes.empresas`.
 En `profesional`:
 
 - `nombre`, `rol`, `ciudad`, `email`
-- `rut` y `registroSuperintendencia`: si los dejas vacíos, el footer no inventa un número. Cuando los completes, se muestran.
+- `rut`: si lo dejas vacío, el footer no inventa un RUT.
+- `registroSuperintendencia`: sale de `HEALTH_PROVIDER_REGISTRY` en `src/lib/site-config.ts` (hoy `504978`).
 - `fotoSrc`: `/yo.png` usa la foto del sitio. Otra ruta de `public/` también sirve.
 - `anosAtencionClinica`: años de atención clínica. `null` oculta la cifra.
 - `evaluacionesOs10`: `null` oculta “+X evaluaciones”. No pongas un número que no sea real.

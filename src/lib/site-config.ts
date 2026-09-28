@@ -12,6 +12,19 @@ export const CLINICAL_STATS = {
   sessionMinutes: 50,
 } as const;
 
+/** Registro Nacional de Prestadores Individuales de Salud (Superintendencia). */
+export const HEALTH_PROVIDER_REGISTRY = "504978";
+export const HEALTH_PROVIDER_REGISTRY_NAME =
+  "Registro Nacional de Prestadores de Salud";
+export const HEALTH_PROVIDER_REGISTRY_LABEL = `${HEALTH_PROVIDER_REGISTRY_NAME} N.° ${HEALTH_PROVIDER_REGISTRY}`;
+export const HEALTH_PROVIDER_REGISTRY_URL = "https://rnpi.superdesalud.gob.cl/";
+
+export const healthProviderIdentifierSchema = {
+  "@type": "PropertyValue",
+  name: HEALTH_PROVIDER_REGISTRY_NAME,
+  value: HEALTH_PROVIDER_REGISTRY,
+} as const;
+
 export const CONTENT_LASTMOD = "2026-08-23";
 
 export const toCanonicalUrl = (path: string): string => {

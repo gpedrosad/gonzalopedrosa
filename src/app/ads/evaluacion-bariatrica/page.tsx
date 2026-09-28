@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AdsProfileImage } from "../components/AdsProfileImage";
+import { AdsProviderRegistry } from "../components/AdsProviderRegistry";
 import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
 import { LazyStickyWhatsAppCTA } from "./LazyStickyWhatsAppCTA";
 
@@ -385,6 +386,7 @@ export default function EvaluacionBariatricaAdsPage() {
                 <p className="text-sm text-gray-500">
                   Psicólogo clínico · TCC · +7 años
                 </p>
+                <AdsProviderRegistry className="text-sm text-gray-500" withVerifyLink />
                 <p className="text-sm text-gray-500">4.8 · 281 experiencias</p>
               </div>
             </div>
@@ -503,6 +505,7 @@ export default function EvaluacionBariatricaAdsPage() {
                 <p className="text-sm text-gray-500">
                   Psicólogo clínico · TCC · 4.8
                 </p>
+                <AdsProviderRegistry className="text-sm text-gray-500" />
               </div>
             </div>
             <p className="text-gray-700 text-[15px] mb-4">

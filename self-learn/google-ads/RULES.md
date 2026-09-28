@@ -11,6 +11,8 @@
 
 **No negativar** `bariatr*` en la campaña `evaluacion-bariatrica-online` — landing `/ads/evaluacion-bariatrica`. Las negativas `bariatrico` de la campaña **core TCC se mantienen**. Esta campaña es aparte y **no hereda** esa negativa.
 
+**No negativar** `cambio de nombre` / `cambio de apellido` / `rectificacion` en `informe-cambio-nombre-apellido-online`. En TCC y las otras campañas sí: aíslan el tráfico.
+
 **Sí seguras** (competidores, otro enfoque, expectativa incorrecta): emdr, dbt, betterhelp, unobravo, apps, adventista, 24/7, sexologo, psicoanalisis, gratis/IA, etc.
 
 Negativas se aplican a **nivel campaña**, match BROAD.
@@ -30,6 +32,7 @@ Mapa canónico (www). RSA con URL incorrecta → `align-landings` (no UPDATE de 
 | adiccion-al-juego | `/ads/adiccion-al-juego` |
 | evaluacion-bariatrica | `/ads/evaluacion-bariatrica` |
 | informe-psicologico-os10 | `/ads/informe-psicologico-os10` |
+| informe-cambio-nombre-apellido | `/ads/informe-cambio-nombre-apellido` |
 
 Host: siempre `https://www.gonzalopedrosa.cl` (no apex sin www).
 

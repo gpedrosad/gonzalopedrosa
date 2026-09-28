@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
-import { CLINICAL_STATS, toCanonicalUrl } from "@/lib/site-config";
+import {
+  CLINICAL_STATS,
+  healthProviderIdentifierSchema,
+  toCanonicalUrl,
+} from "@/lib/site-config";
 import { AdsProfileImage } from "../components/AdsProfileImage";
+import { AdsProviderRegistry } from "../components/AdsProviderRegistry";
 import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
 import { AdsLandingEvents } from "./AdsLandingEvents";
 import { StickyWhatsAppCTA } from "./StickyWhatsAppCTA";
@@ -138,6 +143,7 @@ const serviceSchema = {
     "@type": "Person",
     name: "Gonzalo Pedrosa",
     jobTitle: "Psicólogo clínico",
+    identifier: healthProviderIdentifierSchema,
   },
   makesOffer: {
     "@type": "Offer",
@@ -370,6 +376,7 @@ export default function InformeCambioNombreApellidoPage() {
               <div>
                 <p className="font-semibold text-gray-950">Gonzalo Pedrosa</p>
                 <p className="text-sm text-gray-600">Psicólogo clínico</p>
+                <AdsProviderRegistry className="mt-1 text-sm text-gray-500" withVerifyLink />
                 <p className="mt-1 text-sm text-gray-500">
                   {CLINICAL_STATS.yearsExperience} años de experiencia clínica ·{" "}
                   {CLINICAL_STATS.ratingValue}/5 en {CLINICAL_STATS.reviewCount}{" "}

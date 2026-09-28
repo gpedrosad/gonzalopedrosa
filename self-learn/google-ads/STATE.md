@@ -5,6 +5,7 @@
 - **Campaña test:** `adiccion-al-juego-online` (`24172229213`) · **ENABLED** · horario **lun–vie** · budget **US$1/día** · geo **Chile PRESENCE** · grupo `adiccion-al-juego` ENABLED · landing `/ads/adiccion-al-juego`
 - **Campaña test:** `evaluacion-bariatrica-online` (`24172472867`) · **ENABLED** · horario **lun–vie** · budget **US$1/día** · geo Chile PRESENCE · grupo `evaluacion-bariatrica` (`199819157735`) ENABLED · landing `/ads/evaluacion-bariatrica`
 - **Campaña test:** `informe-psicologico-os10-online` (`24291587680`) · **ENABLED** · horario **lun–vie** · budget **US$1/día** · geo Chile PRESENCE · grupo `informe-psicologico-os10` (`198276616297`) ENABLED · landing `/ads/informe-psicologico-os10`
+- **Campaña test:** `informe-cambio-nombre-apellido-online` (`24298829243`) · **ENABLED** · horario **lun–vie** · budget **US$1/día** · geo Chile PRESENCE · grupo `informe-cambio-nombre-apellido` (`203691716634`) ENABLED · landing `/ads/informe-cambio-nombre-apellido`
 - **Conv:** solo **WhatsApp click** (`7451799330`, label `sVwoCKLepeEbEIHgncVC`) primary + métrica + `CONTACT~WEBSITE` biddable. Las otras 3 acciones / goals de lead form y signup no pujan.
 - **Sitelinks:** 4 assets con `www` (agendar, sobre, TCC, cómo funciona).
 - **Última revisión:** 2026-09-06 · conv + sitelinks · eval A+B cerrada 28 jul ([EVAL.md](./EVAL.md))
@@ -22,6 +23,7 @@
 | adiccion-al-juego | ENABLED | Campaña propia · US$1/día · Chile PRESENCE · landing `/ads/adiccion-al-juego` |
 | evaluacion-bariatrica | ENABLED | Campaña propia · US$1/día · Chile PRESENCE · landing `/ads/evaluacion-bariatrica` |
 | informe-psicologico-os10 | ENABLED | Campaña propia · US$1/día · Chile PRESENCE · landing `/ads/informe-psicologico-os10` · ENABLED 24 sep |
+| informe-cambio-nombre-apellido | ENABLED | Campaña propia · US$1/día · Chile PRESENCE · landing `/ads/informe-cambio-nombre-apellido` · ENABLED 28 sep |
 
 ## Snapshot métricas 2026-08-27
 
@@ -45,3 +47,4 @@ Landings 7d: `/ads/agendar-…` 9 / **2** · `/ads/adolescentes` 13 / 0 · `/ads
 5. Presupuesto solo si se quiere más volumen (CPA 30d estable ~US$10)
 6. ~~Campaña bariátrica~~ · **ENABLED 23 ago** US$1/día. 6 clics / 0 conv / US$3. Seguir hasta ~6 sep o pausar si 0 conv con ≥US$12. Negativa `fonasa` aplicada 26 ago.
 7. Campaña OS10 · **ENABLED 24 sep** US$1/día · lun–vie. Revisar ~14d; pausar si 0 conv con ≥US$12.
+8. Campaña cambio de nombre · **ENABLED 28 sep** US$1/día · lun–vie. Revisar ~14d; pausar si 0 conv con ≥US$12.

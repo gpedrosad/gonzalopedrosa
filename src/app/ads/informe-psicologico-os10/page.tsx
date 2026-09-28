@@ -24,6 +24,7 @@ import {
   seo,
   WHATSAPP_NUMBER,
 } from "./content";
+import { healthProviderIdentifierSchema } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: seo.title,
@@ -73,6 +74,7 @@ const serviceSchema = {
     "@type": "Person",
     name: profesional.nombre,
     jobTitle: profesional.rol,
+    identifier: healthProviderIdentifierSchema,
   },
   makesOffer: {
     "@type": "Offer",

@@ -19,6 +19,7 @@ export const ADS_LANDING_INVENTORY = [
   "/ads/adiccion-al-juego",
   "/ads/evaluacion-bariatrica",
   "/ads/informe-psicologico-os10",
+  "/ads/informe-cambio-nombre-apellido",
 ] as const;
 
 export type AdsMetrics = {

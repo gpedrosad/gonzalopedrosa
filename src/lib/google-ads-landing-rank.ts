@@ -82,6 +82,14 @@ const THEME_RULES: Array<{
       ),
   },
   {
+    theme: "Informe cambio de nombre o apellido",
+    landing: "/ads/informe-cambio-nombre-apellido",
+    match: (n) =>
+      /cambio de nombre|cambio de apellido|cambiar de nombre|cambiar el apellido|rectificacion de partida/.test(
+        n,
+      ),
+  },
+  {
     theme: "Evaluación bariátrica",
     landing: "/ads/evaluacion-bariatrica",
     match: (n) =>

@@ -1,3 +1,4 @@
+import { AdsProviderRegistry } from "../../components/AdsProviderRegistry";
 import { diferenciales, profesional } from "../content";
 import { ProfesionalFoto } from "./ProfesionalFoto";
 
@@ -24,6 +25,7 @@ export function WhyUs() {
             <p className="text-sm text-gray-600">
               {profesional.rol} · {profesional.ciudad}
             </p>
+            <AdsProviderRegistry className="mt-1 text-sm text-gray-600" withVerifyLink />
             {anos ? <p className="text-sm text-gray-600 mt-1">{anos}</p> : null}
           </div>
         </div>
