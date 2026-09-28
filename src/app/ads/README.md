@@ -34,7 +34,7 @@ Número único: `HEALTH_PROVIDER_REGISTRY` en `src/lib/site-config.ts` (`504978`
 
 ## Informe para cambio de nombre o apellido (`/ads/informe-cambio-nombre-apellido`)
 
-- **$45.990**: evaluación online + informe psicológico firmado en PDF, entregado el mismo día.
+- **$45.000**: evaluación online + informe psicológico firmado en PDF, entregado el mismo día.
 - El informe es un antecedente psicológico. No prometer aprobación, no presentarlo como obligatorio y no sustituir asesoría legal.
 - Conversión de puja: clic WhatsApp → `whatsapp_lead`. Diagnóstico: `view_landing`, `click_whatsapp`, `scroll_depth` y `faq_open`.
 - CTA única en toda la página: «Solicitar informe por WhatsApp».

@@ -37,7 +37,7 @@ const GEO_CHILE = "geoTargetConstants/2152";
 const LANG_ES = "languageConstants/1003";
 
 const HEADLINES = [
-  { text: "Informe por $45.990", pinned_field: enums.ServedAssetFieldType?.HEADLINE_1 ?? 1 },
+  { text: "Informe por $45.000", pinned_field: enums.ServedAssetFieldType?.HEADLINE_1 ?? 1 },
   { text: "Cambio de nombre o apellido" },
   { text: "PDF el mismo día" },
   { text: "Evaluación online" },
@@ -55,7 +55,7 @@ const HEADLINES = [
 ];
 
 const DESCRIPTIONS = [
-  { text: "Evaluación online e informe psicológico firmado. PDF el mismo día, por $45.990." },
+  { text: "Evaluación online e informe psicológico firmado. PDF el mismo día, por $45.000." },
   { text: "Antecedente psicológico para tu trámite. No es asesoría legal ni garantiza el cambio." },
   { text: "Psicólogo clínico. Videollamada e informe en PDF. Agenda por WhatsApp." },
   { text: "Online en todo Chile. Primero revisamos si el informe corresponde a tu caso." },

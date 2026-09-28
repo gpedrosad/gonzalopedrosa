@@ -4,13 +4,13 @@ Tuteo Chile. Sin voseo.
 
 Campaña: `informe-cambio-nombre-apellido-online` (`24298829243`) · **ENABLED**  
 Grupo: `informe-cambio-nombre-apellido` (`203691716634`) · **ENABLED**  
-RSA: `203691716634~826307452948`  
+RSA: `203691716634~826307504152`  
 Final URL: `https://www.gonzalopedrosa.cl/ads/informe-cambio-nombre-apellido`  
 Paths: `informe` / `nombre` · Geo: Chile (`PRESENCE`) · Horario: lun–vie 00–24 · Conv: `whatsapp_lead` · Budget: US$1/día
 
 ## Oferta
 
-**$45.990 CLP**: evaluación online + informe psicológico firmado en PDF, el mismo día.
+**$45.000 CLP**: evaluación online + informe psicológico firmado en PDF, el mismo día.
 
 No es asesoría legal. No es obligatorio. No garantiza que aprueben el cambio.
 
@@ -20,7 +20,7 @@ Pin **H1** el de precio. El resto sin pin.
 
 | # | Texto | n | Tema |
 |---|---|---|---|
-| 1 | Informe por $45.990 | 19 | PIN H1 · precio |
+| 1 | Informe por $45.000 | 19 | PIN H1 · precio |
 | 2 | Cambio de nombre o apellido | 27 | query |
 | 3 | PDF el mismo día | 16 | entrega |
 | 4 | Evaluación online | 17 | formato |
@@ -40,7 +40,7 @@ Pin **H1** el de precio. El resto sin pin.
 
 | # | Texto | n |
 |---|---|---|
-| 1 | Evaluación online e informe psicológico firmado. PDF el mismo día, por $45.990. | 80 |
+| 1 | Evaluación online e informe psicológico firmado. PDF el mismo día, por $45.000. | 80 |
 | 2 | Antecedente psicológico para tu trámite. No es asesoría legal ni garantiza el cambio. | 85 |
 | 3 | Psicólogo clínico. Videollamada e informe en PDF. Agenda por WhatsApp. | 70 |
 | 4 | Online en todo Chile. Primero revisamos si el informe corresponde a tu caso. | 77 |

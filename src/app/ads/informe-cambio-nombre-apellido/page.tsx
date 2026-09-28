@@ -12,13 +12,13 @@ import { StickyWhatsAppCTA } from "./StickyWhatsAppCTA";
 
 const LANDING_PATH = "/ads/informe-cambio-nombre-apellido";
 const LANDING_URL = toCanonicalUrl(LANDING_PATH);
-const PRICE = 45_990;
+const PRICE = 45_000;
 const PRICE_TEXT = new Intl.NumberFormat("es-CL").format(PRICE);
 const WHATSAPP_NUMBER = (
   process.env.NEXT_PUBLIC_WHATSAPP || "56968257817"
 ).replace(/\D/g, "");
 const WHATSAPP_MESSAGE =
-  "Hola, quiero solicitar el informe psicológico para cambio de nombre o apellido por $45.990.";
+  `Hola, quiero solicitar el informe psicológico para cambio de nombre o apellido por $${PRICE_TEXT}.`;
 const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_MESSAGE,
 )}`;
@@ -454,7 +454,7 @@ export default function InformeCambioNombreApellidoPage() {
         </section>
       </main>
 
-      <StickyWhatsAppCTA href={WHATSAPP_HREF} />
+      <StickyWhatsAppCTA href={WHATSAPP_HREF} priceText={PRICE_TEXT} />
     </>
   );
 }

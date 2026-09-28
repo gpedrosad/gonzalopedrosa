@@ -3,7 +3,13 @@
 import { useEffect, useState } from "react";
 import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
 
-export function StickyWhatsAppCTA({ href }: { href: string }) {
+export function StickyWhatsAppCTA({
+  href,
+  priceText,
+}: {
+  href: string;
+  priceText: string;
+}) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -24,7 +30,7 @@ export function StickyWhatsAppCTA({ href }: { href: string }) {
         <div className="mx-auto flex max-w-2xl items-center gap-3">
           <div className="min-w-0">
             <p className="text-xs text-gray-500">Informe el mismo día</p>
-            <p className="font-bold leading-tight text-gray-900">$45.990</p>
+            <p className="font-bold leading-tight text-gray-900">${priceText}</p>
           </div>
           <AdsWhatsAppButton
             href={href}
