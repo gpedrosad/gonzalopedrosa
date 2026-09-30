@@ -2,6 +2,10 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-09-30
+
+- **Landings TCC + agendar:** rediseño CRO para tráfico Google Ads con propuesta específica por intención, precio/modalidad visibles, prueba profesional, CTA única por WhatsApp, objeciones y recorrido de 3 pasos; sin cambios de URL ni campaña.
+
 ## 2026-09-28
 
 - **Precio cambio de nombre $45.000:** landing + RSA nueva ENABLED `203691716634~826307504152` (H1 pin `Informe por $45.000`). RSA $45.990 `…~826307452948` PAUSED. validate_only previo.
