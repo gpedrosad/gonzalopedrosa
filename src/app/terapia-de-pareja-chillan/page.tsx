@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { JsonLd } from "@/app/components/JsonLd";
+import { ProfessionalCredentials } from "@/app/components/ProfessionalCredentials";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { IntentClusterSection } from "@/app/components/IntentClusterSection";
 import {
@@ -495,6 +496,8 @@ export default function TerapiaParejaChillanPage() {
           </a>
         </div>
       </section>
+
+      <ProfessionalCredentials />
 
       <IntentClusterSection
         currentPath="/terapia-de-pareja-chillan"

@@ -5,7 +5,7 @@ import { CONTENT_LASTMOD, toCanonicalUrl } from "@/lib/site-config";
 export default function sitemap(): MetadataRoute.Sitemap {
   return ORGANIC_SITEMAP_ENTRIES.map((entry) => ({
     url: toCanonicalUrl(entry.route),
-    lastModified: new Date(CONTENT_LASTMOD),
+    lastModified: new Date(entry.lastModified ?? CONTENT_LASTMOD),
     changeFrequency: entry.changeFrequency,
     priority: entry.priority,
   }));

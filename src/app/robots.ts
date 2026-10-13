@@ -17,11 +17,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/interno/"],
+        disallow: ["/interno"],
       },
       ...AI_CRAWLERS.map((userAgent) => ({
         userAgent,
         allow: "/",
+        disallow: ["/interno"],
       })),
     ],
     sitemap: toCanonicalUrl("/sitemap.xml"),

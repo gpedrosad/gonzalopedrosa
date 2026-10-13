@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { JsonLd } from "@/app/components/JsonLd";
+import { IntentClusterSection } from "@/app/components/IntentClusterSection";
+import { ANXIETY_CLUSTER, getClusterBreadcrumb } from "@/lib/intent-clusters";
+import { ProfessionalCredentials } from "@/app/components/ProfessionalCredentials";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import {
   localBusinessSchema,
@@ -38,10 +41,7 @@ export const metadata: Metadata = {
 
 
 // Breadcrumb items
-const breadcrumbItems = [
-  { label: "Inicio", href: "/" },
-  { label: "Psicólogo Ansiedad Chillán" },
-];
+const breadcrumbItems = getClusterBreadcrumb(ANXIETY_CLUSTER, "/psicologo-ansiedad-chillan");
 
 // FAQs específicas de ansiedad
 const ansiedadFAQs = [
@@ -568,50 +568,17 @@ export default function PsicologoAnsiedadChillanPage() {
         </div>
       </section>
 
-      <nav
-        style={{
-          paddingTop: "2rem",
-          borderTop: "1px solid #eaeaea",
-        }}
-      >
-        <p
-          style={{
-            fontSize: "0.75rem",
-            fontWeight: 600,
-            textTransform: "uppercase",
-            letterSpacing: "0.1em",
-            color: "#999",
-            marginBottom: "0.75rem",
-          }}
-        >
-          Servicios relacionados
-        </p>
-        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-          {[
-            { label: "Crisis de pánico", href: "/psicologo-crisis-de-panico-chillan" },
-            { label: "EMDR", href: "/terapia-emdr-chillan" },
-            { label: "TOC / ERP", href: "/tratamiento-toc-chillan" },
-            { label: "Estrés laboral", href: "/psicologo-estres-laboral-chillan" },
-            { label: "Fobia social", href: "/psicologo-fobia-social-chillan" },
-            { label: "Online", href: "/psicologo-online-chillan" },
-          ].map((item, i) => (
-            <Link
-              key={i}
-              href={item.href}
-              style={{
-                color: "#666",
-                fontSize: "0.875rem",
-                textDecoration: "none",
-                padding: "0.375rem 0.75rem",
-                border: "1px solid #eaeaea",
-                borderRadius: "9999px",
-              }}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      </nav>
+      <ProfessionalCredentials />
+
+      <IntentClusterSection
+        currentPath="/psicologo-ansiedad-chillan"
+        extraLinks={[
+          { label: "EMDR", href: "/terapia-emdr-chillan" },
+          { label: "TOC / ERP", href: "/tratamiento-toc-chillan" },
+          { label: "Estrés laboral", href: "/psicologo-estres-laboral-chillan" },
+          { label: "Online", href: "/psicologo-online-chillan" },
+        ]}
+      />
     </main>
     </>
   );

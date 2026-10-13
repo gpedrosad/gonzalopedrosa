@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { IntentClusterSection } from "@/app/components/IntentClusterSection";
+import { ANXIETY_CLUSTER, getClusterBreadcrumb } from "@/lib/intent-clusters";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
@@ -46,10 +48,7 @@ const tratamiento_agorafobia_chillanFAQs = [
   },
 ];
 
-const breadcrumbItems = [
-  { label: "Inicio", href: "/" },
-  { label: "Tratamiento Agorafobia Chillán" },
-];
+const breadcrumbItems = getClusterBreadcrumb(ANXIETY_CLUSTER, "/tratamiento-agorafobia-chillan");
 
 export default function TratamientoAgorafobiaChillanPage() {
   return (
@@ -190,21 +189,12 @@ export default function TratamientoAgorafobiaChillanPage() {
         </a>
       </section>
 
-      <nav style={{ paddingTop: "2rem", borderTop: "1px solid #eaeaea" }}>
-        <p style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.75rem" }}>Servicios relacionados</p>
-        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-          {[
-            { label: "Crisis de pánico", href: "/psicologo-crisis-de-panico-chillan" },
-            { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
-            { label: "Psicólogo online", href: "/psicologo-online-chillan" },
-            { label: "Fobia social", href: "/psicologo-fobia-social-chillan" },
-          ].map((item, i) => (
-            <Link key={i} href={item.href} style={{ color: "#666", fontSize: "0.875rem", textDecoration: "none", padding: "0.375rem 0.75rem", border: "1px solid #eaeaea", borderRadius: "9999px" }}>
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      </nav>
+      <IntentClusterSection
+        currentPath="/tratamiento-agorafobia-chillan"
+        extraLinks={[
+          { label: "Psicólogo online", href: "/psicologo-online-chillan" },
+        ]}
+      />
     </main>
     </>
   );

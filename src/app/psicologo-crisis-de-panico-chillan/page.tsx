@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { IntentClusterSection } from "@/app/components/IntentClusterSection";
+import { ANXIETY_CLUSTER, getClusterBreadcrumb } from "@/lib/intent-clusters";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
@@ -46,10 +48,7 @@ const psicologo_crisis_de_panico_chillanFAQs = [
   },
 ];
 
-const breadcrumbItems = [
-  { label: "Inicio", href: "/" },
-  { label: "Psicólogo Crisis De Panico Chillán" },
-];
+const breadcrumbItems = getClusterBreadcrumb(ANXIETY_CLUSTER, "/psicologo-crisis-de-panico-chillan");
 
 export default function PsicologoCrisisPanicoChillanPage() {
   return (
@@ -410,77 +409,14 @@ export default function PsicologoCrisisPanicoChillanPage() {
         </Link>
       </section>
 
-      <nav
-        style={{
-          paddingTop: "2rem",
-          borderTop: "1px solid #eaeaea",
-        }}
-      >
-        <p
-          style={{
-            fontSize: "0.75rem",
-            fontWeight: 600,
-            textTransform: "uppercase",
-            letterSpacing: "0.1em",
-            color: "#999",
-            marginBottom: "0.75rem",
-          }}
-        >
-          Servicios relacionados
-        </p>
-        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-          <Link
-            href="/psicologo-ansiedad-chillan"
-            style={{
-              color: "#666",
-              fontSize: "0.875rem",
-              textDecoration: "none",
-              padding: "0.375rem 0.75rem",
-              border: "1px solid #eaeaea",
-              borderRadius: "9999px",
-            }}
-          >
-            Ansiedad
-          </Link>
-          <Link
-            href="/psicologo-adulto-chillan"
-            style={{
-              color: "#666",
-              fontSize: "0.875rem",
-              textDecoration: "none",
-              padding: "0.375rem 0.75rem",
-              border: "1px solid #eaeaea",
-              borderRadius: "9999px",
-            }}
-          >
-            Adultos
-          </Link>
-          <Link
-            href="/psicologo-cognitivo-conductual-chillan"
-            style={{
-              color: "#666",
-              fontSize: "0.875rem",
-              textDecoration: "none",
-              padding: "0.375rem 0.75rem",
-              border: "1px solid #eaeaea",
-              borderRadius: "9999px",
-            }}
-          >
-            TCC
-          </Link>
-          <Link
-            href="/terapia-online"
-            style={{
-              color: "#666",
-              fontSize: "0.875rem",
-              textDecoration: "none",
-              padding: "0.375rem 0.75rem",
-              border: "1px solid #eaeaea",
-              borderRadius: "9999px",
-            }}
-          >Psicólogo online</Link>
-        </div>
-      </nav>
+      <IntentClusterSection
+        currentPath="/psicologo-crisis-de-panico-chillan"
+        extraLinks={[
+          { label: "Adultos", href: "/psicologo-adulto-chillan" },
+          { label: "Terapia cognitivo-conductual", href: "/psicologo-cognitivo-conductual-chillan" },
+          { label: "Psicólogo online", href: "/psicologo-online-chillan" },
+        ]}
+      />
     </main>
     </>
   );

@@ -13,10 +13,17 @@ export type OrganicSitemapEntry = {
   route: string;
   changeFrequency: "daily" | "weekly" | "monthly";
   priority: number;
+  /** Fecha de una actualización significativa de esta página, no del despliegue. */
+  lastModified?: string;
 };
 
 export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
-  { route: "/", changeFrequency: "weekly", priority: 1 },
+  {
+    route: "/",
+    lastModified: "2026-10-13",
+    changeFrequency: "weekly",
+    priority: 1,
+  },
   { route: "/agendar", changeFrequency: "monthly", priority: 0.9 },
   { route: "/perfil", changeFrequency: "monthly", priority: 0.6 },
   { route: "/emdr-autoadministrado", changeFrequency: "monthly", priority: 0.7 },
@@ -25,7 +32,12 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
     changeFrequency: "monthly",
     priority: 0.6,
   },
-  { route: "/terapia-online", changeFrequency: "monthly", priority: 0.85 },
+  {
+    route: "/terapia-online",
+    lastModified: "2026-10-13",
+    changeFrequency: "monthly",
+    priority: 0.85,
+  },
   {
     route: "/cuando-ir-al-psicologo-chillan",
     changeFrequency: "monthly",
@@ -33,6 +45,7 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
   },
   {
     route: "/terapia-online-vs-presencial-chillan",
+    lastModified: "2026-10-13",
     changeFrequency: "monthly",
     priority: 0.65,
   },
@@ -41,13 +54,24 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
     changeFrequency: "monthly",
     priority: 0.85,
   },
-  { route: "/psicologo-ansiedad-chillan", changeFrequency: "monthly", priority: 0.8 },
   {
-    route: "/psicologo-crisis-de-panico-chillan",
+    route: "/psicologo-ansiedad-chillan",
+    lastModified: "2026-10-13",
     changeFrequency: "monthly",
     priority: 0.8,
   },
-  { route: "/psicologo-adulto-chillan", changeFrequency: "monthly", priority: 0.8 },
+  {
+    route: "/psicologo-crisis-de-panico-chillan",
+    lastModified: "2026-10-13",
+    changeFrequency: "monthly",
+    priority: 0.8,
+  },
+  {
+    route: "/psicologo-adulto-chillan",
+    lastModified: "2026-10-13",
+    changeFrequency: "monthly",
+    priority: 0.8,
+  },
   {
     route: "/psicologo-cognitivo-conductual-chillan",
     changeFrequency: "monthly",
@@ -81,6 +105,7 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
   },
   {
     route: "/psicologo-fobia-social-chillan",
+    lastModified: "2026-10-13",
     changeFrequency: "monthly",
     priority: 0.8,
   },
@@ -91,15 +116,35 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
     priority: 0.8,
   },
   { route: "/psicologo-particular-chillan", changeFrequency: "monthly", priority: 0.8 },
-  { route: "/psicologo-online-chillan", changeFrequency: "monthly", priority: 0.9 },
+  {
+    route: "/psicologo-online-chillan",
+    lastModified: "2026-10-13",
+    changeFrequency: "monthly",
+    priority: 0.9,
+  },
   {
     route: "/consulta-psicologica-precio-chillan",
     changeFrequency: "monthly",
     priority: 0.8,
   },
-  { route: "/terapia-de-pareja-chillan", changeFrequency: "monthly", priority: 0.9 },
-  { route: "/psicologo-matrimonial-chillan", changeFrequency: "monthly", priority: 0.65 },
-  { route: "/terapia-celos-chillan", changeFrequency: "monthly", priority: 0.65 },
+  {
+    route: "/terapia-de-pareja-chillan",
+    lastModified: "2026-10-13",
+    changeFrequency: "monthly",
+    priority: 0.9,
+  },
+  {
+    route: "/psicologo-matrimonial-chillan",
+    lastModified: "2026-10-13",
+    changeFrequency: "monthly",
+    priority: 0.65,
+  },
+  {
+    route: "/terapia-celos-chillan",
+    lastModified: "2026-10-13",
+    changeFrequency: "monthly",
+    priority: 0.65,
+  },
   {
     route: "/psicologo-ruptura-amorosa-chillan",
     changeFrequency: "monthly",
@@ -191,7 +236,12 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
   },
   { route: "/psicologo-obesidad-chillan", changeFrequency: "monthly", priority: 0.8 },
   { route: "/psicologo-fibromialgia-chillan", changeFrequency: "monthly", priority: 0.8 },
-  { route: "/tratamiento-agorafobia-chillan", changeFrequency: "monthly", priority: 0.8 },
+  {
+    route: "/tratamiento-agorafobia-chillan",
+    lastModified: "2026-10-13",
+    changeFrequency: "monthly",
+    priority: 0.8,
+  },
   { route: "/psicologo-acoso-laboral-chillan", changeFrequency: "monthly", priority: 0.8 },
   {
     route: "/psicologo-falta-deseo-sexual-chillan",
@@ -238,7 +288,12 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
     priority: 0.65,
   },
   { route: "/dejar-de-beber-chillan", changeFrequency: "monthly", priority: 0.85 },
-  { route: "/psicologo-hipocondria-chillan", changeFrequency: "monthly", priority: 0.8 },
+  {
+    route: "/psicologo-hipocondria-chillan",
+    lastModified: "2026-10-13",
+    changeFrequency: "monthly",
+    priority: 0.8,
+  },
 ];
 
 export const ORGANIC_INDEXABLE_ROUTES = ORGANIC_SITEMAP_ENTRIES.map(

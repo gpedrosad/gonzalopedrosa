@@ -4,6 +4,12 @@
 # Auditoría técnica prod (canonical, robots, sitemap = inventario)
 npm run seo:audit
 
+# Navegación orgánica: canónicos, H1, noindex y rutas a un máximo de 3 clics
+node scripts/seo-navigation-audit.mjs
+
+# Vista previa local (mantiene canónicos de producción)
+node scripts/seo-navigation-audit.mjs http://127.0.0.1:3108
+
 # Inventario CSV
 node scripts/seo-audit.mjs --print-routes
 

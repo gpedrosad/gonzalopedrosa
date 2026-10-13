@@ -26,8 +26,8 @@ export const COUPLES_CLUSTER: IntentCluster = {
   hubHref: "/terapia-de-pareja-chillan",
   hubLabel: "Terapia de pareja Chillán",
   hubSectionTitle: "Terapia de pareja y temas relacionados en Chillán",
-  hubSectionSubtitle: "Profundiza por intención dentro del cluster de pareja",
-  satelliteSectionTitle: "Guía del cluster de terapia de pareja",
+  hubSectionSubtitle: "Consulta información sobre comunicación, matrimonio y celos",
+  satelliteSectionTitle: "Más sobre terapia de pareja",
   pages: [
     {
       href: "/terapia-de-pareja-chillan",
@@ -59,15 +59,15 @@ export const COUPLES_CLUSTER: IntentCluster = {
 export const ONLINE_CLUSTER: IntentCluster = {
   id: "online",
   hubHref: "/psicologo-online-chillan",
-  hubLabel: "Psicólogo online Chillán",
-  hubSectionTitle: "Terapia online en Chillán",
+  hubLabel: "Psicólogo online en Chile",
+  hubSectionTitle: "Terapia online en Chile",
   hubSectionSubtitle: "Reserva sesión o entiende cómo funciona el formato",
   satelliteSectionTitle: "Más sobre terapia online",
   pages: [
     {
       href: "/psicologo-online-chillan",
       label: "Psicólogo online",
-      shortTitle: "Psicólogo online Chillán",
+      shortTitle: "Psicólogo online en Chile",
       cardDescription:
         "Videollamada, boleta Isapre y agenda directa para empezar tu proceso.",
       role: "hub",
@@ -86,6 +86,52 @@ export const ONLINE_CLUSTER: IntentCluster = {
       shortTitle: "Online vs presencial Chillán",
       cardDescription:
         "Comparación honesta entre modalidades para elegir con criterio.",
+      role: "satellite",
+    },
+  ],
+};
+
+export const ANXIETY_CLUSTER: IntentCluster = {
+  id: "anxiety",
+  hubHref: "/psicologo-ansiedad-chillan",
+  hubLabel: "Psicólogo para ansiedad en Chillán",
+  hubSectionTitle: "Ansiedad y motivos de consulta relacionados",
+  hubSectionSubtitle: "Encuentra información sobre lo que te está ocurriendo",
+  satelliteSectionTitle: "Más información sobre atención para ansiedad",
+  pages: [
+    {
+      href: "/psicologo-ansiedad-chillan",
+      label: "Ansiedad",
+      shortTitle: "Psicólogo para ansiedad en Chillán",
+      cardDescription: "Conoce el enfoque de trabajo, los valores y las modalidades de atención.",
+      role: "hub",
+    },
+    {
+      href: "/psicologo-crisis-de-panico-chillan",
+      label: "Crisis de pánico",
+      shortTitle: "Atención para crisis de pánico",
+      cardDescription: "Información sobre crisis de pánico y el miedo a que vuelvan a ocurrir.",
+      role: "satellite",
+    },
+    {
+      href: "/psicologo-fobia-social-chillan",
+      label: "Ansiedad social",
+      shortTitle: "Ansiedad social y fobia social",
+      cardDescription: "Consulta por miedo a la evaluación de otros y dificultades en situaciones sociales.",
+      role: "satellite",
+    },
+    {
+      href: "/tratamiento-agorafobia-chillan",
+      label: "Agorafobia",
+      shortTitle: "Atención para agorafobia",
+      cardDescription: "Información para quienes evitan salir o estar en lugares donde sienten inseguridad.",
+      role: "satellite",
+    },
+    {
+      href: "/psicologo-hipocondria-chillan",
+      label: "Ansiedad por la salud",
+      shortTitle: "Ansiedad por la salud e hipocondría",
+      cardDescription: "Consulta por preocupación persistente por la salud y temor a enfermedades.",
       role: "satellite",
     },
   ],
@@ -110,13 +156,9 @@ export const CLUSTER_SATELLITE_ROUTES = new Set([
 ]);
 
 export function getClusterForPath(path: string): IntentCluster | undefined {
-  if (COUPLES_CLUSTER.pages.some((page) => page.href === path)) {
-    return COUPLES_CLUSTER;
-  }
-  if (ONLINE_CLUSTER.pages.some((page) => page.href === path)) {
-    return ONLINE_CLUSTER;
-  }
-  return undefined;
+  return [COUPLES_CLUSTER, ONLINE_CLUSTER, ANXIETY_CLUSTER].find((cluster) =>
+    cluster.pages.some((page) => page.href === path),
+  );
 }
 
 export function getClusterBreadcrumb(

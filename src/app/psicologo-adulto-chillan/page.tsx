@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { ProfessionalCredentials } from "@/app/components/ProfessionalCredentials";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
@@ -160,11 +161,11 @@ export default function PsicologoAdultoChillanPage() {
               label: "Crisis de pánico",
               href: "/psicologo-crisis-de-panico-chillan",
             },
-            { label: "Síntomas depresivos", href: null },
-            { label: "Estrés laboral", href: null },
-            { label: "Relaciones interpersonales", href: null },
-            { label: "Duelo y pérdidas", href: null },
-            { label: "Autoestima", href: null },
+            { label: "Síntomas depresivos", href: "/psicologo-depresion-chillan" },
+            { label: "Estrés laboral", href: "/psicologo-estres-laboral-chillan" },
+            { label: "Relaciones interpersonales", href: "/psicologo-apego-chillan" },
+            { label: "Duelo y pérdidas", href: "/psicologo-duelo-chillan" },
+            { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },
             { label: "Adicciones", href: "/psicologo-adicciones-chillan" },
           ].map((item, i) =>
             item.href ? (
@@ -437,6 +438,36 @@ export default function PsicologoAdultoChillanPage() {
           Agendar sesión <span aria-hidden="true">→</span>
         </Link>
       </section>
+
+      <section style={{ marginBottom: "3rem" }}>
+        <h2 style={{ fontSize: "1.25rem", fontWeight: 600, marginBottom: "0.75rem" }}>
+          Una primera consulta para adultos y hombres
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
+          Si es tu primera vez en terapia, puedes comenzar contando qué te trae
+          a consulta y qué te gustaría cambiar. No necesitas llegar con un
+          diagnóstico ni saber cómo explicar todo. En la primera sesión
+          revisamos tu contexto y acordamos objetivos para el trabajo posterior.
+        </p>
+        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
+          La sesión individual dura 50 minutos y cuesta $35.000. Puedes elegir
+          atención presencial en Chillán o videollamada desde Chile. Emito
+          boleta para solicitar reembolso Isapre según las condiciones de tu plan.
+        </p>
+        <p style={{ color: "#444", lineHeight: 1.7 }}>
+          Revisa el{" "}
+          <Link href="/consulta-psicologica-precio-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+            valor y las formas de pago
+          </Link>
+          {" "}antes de{" "}
+          <Link href="/agendar" style={{ color: "#000", textDecoration: "underline" }}>
+            agendar sesión
+          </Link>
+          .
+        </p>
+      </section>
+
+      <ProfessionalCredentials />
 
       <nav
         style={{

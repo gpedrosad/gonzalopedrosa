@@ -2,10 +2,12 @@
 
 - **Host canónico:** `https://www.gonzalopedrosa.cl`
 - **Inventario / sitemap:** 79 URLs (`organic-routes.ts`)
-- **seo:audit:** PASS (2026-08-04, prod)
-- **Última tanda código:** 2026-08-23 → [CHANGELOG.md](./CHANGELOG.md) · mapa [OPORTUNIDADES.md](./OPORTUNIDADES.md) · eval [EVAL.md](./EVAL.md)
+- **seo:audit:** PASS (2026-10-13, prod antes de esta tanda)
+- **Navegación:** build limpio PASS 79/79 alcanzables, 77 destinos con enlace directo desde portada; producción anterior 49/79 y 18 destinos directos.
+- **Última tanda código:** 2026-10-13 → [CHANGELOG.md](./CHANGELOG.md) · [informe](../../docs/seo-mejoras-2026-10-13.md)
 - **Último GSC:** 2026-08-23 → `docs/gsc-informe-2026-08-23.md` (90d)
 - **GSC property:** `sc-domain:gonzalopedrosa.cl`
+- **Acceso GSC:** intento 2026-10-13 falla con `invalid_grant`; renovar con `npm run gsc:auth` antes de medir impacto. No hay métricas nuevas.
 
 ## Snapshot GSC 2026-08-23 (90d: 23 may → 20 ago)
 

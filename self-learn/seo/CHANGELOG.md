@@ -2,6 +2,16 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-10-13
+
+- Auditoría inicial en producción: 79 URLs con canónicos correctos; navegación orgánica desde portada alcanza solo 49, con 18 enlaces directos y seis páginas a más de tres clics.
+- Directorio por temas en portada: 77 destinos existentes en HTML, sin nuevas landings ni precarga masiva. Build limpio: 79/79 alcanzables, ninguna a más de tres clics.
+- Cinco páginas de ansiedad conectadas con breadcrumbs y enlaces recíprocos; adultos enlaza cinco motivos antes sin enlace y amplía información de primera consulta.
+- Registro profesional visible en portada y páginas principales; navegación online alineada con Chile; copy de navegación sin terminología técnica de SEO.
+- Sitemap con fechas por página (13 actualizadas); robots bloquea interno en todos los grupos de bots.
+- QA: build limpio, tsc y lint PASS (advertencias preexistentes). Nuevo `scripts/seo-navigation-audit.mjs` para repetir la comprobación.
+- GSC no disponible: OAuth `invalid_grant`, requiere renovar autorización. Detalle: [informe](../../docs/seo-mejoras-2026-10-13.md).
+
 ## 2026-08-23
 
 - **GSC 90d:** `docs/gsc-informe-2026-08-23.md` · 28 clics · 406 imp · CTR 6,9% · pos. 10,7.

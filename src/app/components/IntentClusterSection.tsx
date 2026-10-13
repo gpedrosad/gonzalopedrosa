@@ -66,7 +66,7 @@ function ClusterCards({
           lineHeight: 1.3,
         }}
       >
-        {isHub ? cluster.hubSectionTitle : cluster.hubSectionTitle}
+        {cluster.hubSectionTitle}
       </h2>
       <div
         style={{
@@ -145,14 +145,9 @@ export function IntentClusterSection({
             marginBottom: "0.75rem",
           }}
         >
-          {isHub ? "Cluster" : "Volver al hub del cluster"}
+          Servicios relacionados
         </p>
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-          {!isHub ? (
-            <Link href={cluster.hubHref} style={{ ...pillStyle, color: "#000", borderColor: "#d1fae5" }}>
-              {cluster.hubLabel}
-            </Link>
-          ) : null}
           {navPages.map((page) => (
             <Link key={page.href} href={page.href} style={pillStyle}>
               {page.label}
