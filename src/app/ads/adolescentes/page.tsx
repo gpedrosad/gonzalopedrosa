@@ -200,11 +200,11 @@ export default function Page() {
         {/* Para quién es */}
         <section className="px-4 py-10 md:py-14 bg-gray-50">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-6">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-4">
               ¿Tu hijo/a necesita terapia emocional online?
             </h2>
 
-            <div className="grid grid-cols-2 gap-2 md:gap-3">
+            <ul className="flex flex-wrap gap-2">
               {[
                 "Ansiedad escolar",
                 "Cambios de conducta",
@@ -214,21 +214,18 @@ export default function Page() {
                 "Dificultades para concentrarse",
                 "Problemas de sueño",
                 "Irritabilidad constante",
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="p-3 bg-white rounded-lg text-sm text-gray-700 border border-gray-100"
-                >
+              ].map((item) => (
+                <li key={item} className="inline-flex items-center gap-1.5 text-sm text-gray-800 bg-white px-3 py-1.5 rounded-full border border-gray-200">
                   {item}
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
         {/* Cómo funciona */}
         <section className="px-4 py-10 md:py-14 max-w-2xl mx-auto">
-          <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-6">
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-4">
             Cómo funciona la terapia para adolescentes
           </h2>
 
@@ -275,7 +272,7 @@ export default function Page() {
 
         {/* Con qué ayudo */}
         <section className="px-4 py-10 md:py-14 max-w-2xl mx-auto">
-          <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-6">
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-4">
             Situaciones en las que puedo ayudar
           </h2>
 
@@ -319,7 +316,7 @@ export default function Page() {
         {/* Preguntas frecuentes */}
         <section className="px-4 py-10 md:py-14 bg-gray-50">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-6">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-4">
               Preguntas frecuentes
             </h2>
 

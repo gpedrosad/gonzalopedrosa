@@ -4,7 +4,7 @@ export function Faq() {
   return (
     <section className="px-4 py-8 bg-gray-50">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">
+        <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-4">
           Preguntas frecuentes
         </h2>
         <div className="space-y-2">

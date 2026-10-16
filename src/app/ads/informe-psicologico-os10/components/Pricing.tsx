@@ -12,8 +12,8 @@ export function Pricing() {
   return (
     <section id="precio" className="px-4 py-8 bg-gray-50 scroll-mb-28">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">
-          Precios
+        <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-4">
+          Precio
         </h2>
 
         <div className="bg-white rounded-2xl border-2 border-gray-900 p-5 mb-3">

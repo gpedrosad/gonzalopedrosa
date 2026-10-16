@@ -4,7 +4,7 @@ export function HowItWorks() {
   return (
     <section id="como-funciona" className="px-4 py-8 scroll-mb-28">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">
+        <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-4">
           Cómo funciona
         </h2>
         <ol className="space-y-3">

@@ -4,15 +4,12 @@ export function Audience() {
   return (
     <section className="px-4 py-8">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">
-          Para quién es
+        <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-4">
+          ¿Para quién es?
         </h2>
-        <ul className="space-y-3">
+        <ul className="bg-white rounded-2xl border border-gray-200 divide-y divide-gray-100">
           {paraQuien.map((item) => (
-            <li
-              key={item.titulo}
-              className="p-4 bg-gray-50 rounded-xl border border-gray-200"
-            >
+            <li key={item.titulo} className="px-4 py-3.5">
               <h3 className="font-semibold text-gray-900 text-[15px] mb-1">
                 {item.titulo}
               </h3>

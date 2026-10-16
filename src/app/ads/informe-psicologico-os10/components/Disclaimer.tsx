@@ -6,7 +6,7 @@ export function Disclaimer() {
       <div className="max-w-2xl mx-auto">
         <h2
           id="aviso-os10"
-          className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4"
+          className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-4"
         >
           Importante
         </h2>

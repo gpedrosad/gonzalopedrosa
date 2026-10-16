@@ -288,8 +288,8 @@ export default function EvaluacionBariatricaAdsPage() {
         {/* Precio */}
         <section id="precio" className="px-4 py-8 bg-gray-50">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">
-              La evaluación
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-4">
+              Qué incluye la evaluación
             </h2>
             <div className="bg-white rounded-2xl border border-gray-200 p-5">
               <p className="text-sm text-gray-500 mb-1">Precio único</p>
@@ -303,7 +303,7 @@ export default function EvaluacionBariatricaAdsPage() {
 
               <p
                 id="que-incluye"
-                className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2"
+                className="text-sm font-semibold text-gray-900 mb-2"
               >
                 Qué incluye
               </p>
@@ -321,7 +321,7 @@ export default function EvaluacionBariatricaAdsPage() {
                 ))}
               </ul>
 
-              <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">
+              <p className="text-sm font-semibold text-gray-900 mb-2">
                 Qué no incluye
               </p>
               <ul className="space-y-2">
@@ -344,16 +344,13 @@ export default function EvaluacionBariatricaAdsPage() {
         {/* Para quién */}
         <section className="px-4 py-8">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">
-              Para quién es
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-4">
+              ¿Para quién es?
             </h2>
-            <ul className="space-y-2">
+            <ul className="flex flex-wrap gap-2">
               {PARA_QUIEN.map((item) => (
-                <li
-                  key={item}
-                  className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg text-[15px] text-gray-700"
-                >
-                  <span className="w-1.5 h-1.5 bg-gray-400 rounded-full flex-shrink-0" />
+                <li key={item} className="inline-flex items-center gap-1.5 text-sm text-gray-800 bg-gray-50 px-3 py-1.5 rounded-full border border-gray-200">
+                  <span className="text-green-600" aria-hidden="true">✓</span>
                   {item}
                 </li>
               ))}
@@ -364,16 +361,16 @@ export default function EvaluacionBariatricaAdsPage() {
         {/* Qué evalúa + profesional */}
         <section className="px-4 py-8 bg-gray-50">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">
-              Qué evalúa
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-4">
+              Qué se evalúa en la sesión
             </h2>
-            <ul className="space-y-2">
+            <ul className="bg-white rounded-2xl border border-gray-200 divide-y divide-gray-100">
               {QUE_EVALUA.map((item) => (
                 <li
                   key={item}
-                  className="flex items-center gap-3 p-3 bg-white rounded-lg text-[15px] text-gray-700"
+                  className="flex items-start gap-3 px-4 py-3 text-[15px] text-gray-700"
                 >
-                  <span className="w-1.5 h-1.5 bg-gray-400 rounded-full flex-shrink-0" />
+                  <span className="text-green-600 mt-0.5 flex-shrink-0" aria-hidden="true">✓</span>
                   {item}
                 </li>
               ))}
@@ -385,7 +382,7 @@ export default function EvaluacionBariatricaAdsPage() {
         {/* Cómo funciona */}
         <section className="px-4 py-8">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-4">
               Cómo funciona
             </h2>
             <div className="space-y-3">
@@ -433,7 +430,7 @@ export default function EvaluacionBariatricaAdsPage() {
         {/* Importante / disclaimer */}
         <section className="px-4 py-8">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-4">
               Importante
             </h2>
             <div className="p-4 bg-amber-50 border border-amber-200 rounded-xl">
@@ -450,7 +447,7 @@ export default function EvaluacionBariatricaAdsPage() {
         {/* FAQ */}
         <section className="px-4 py-8 bg-gray-50">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-4">
               Preguntas frecuentes
             </h2>
             <div className="space-y-2">

@@ -289,7 +289,7 @@ export default function Page() {
         </section>
 
         {/* CTA intermedio */}
-        <section className="px-4 py-8 md:py-10 bg-gray-50">
+        <section className="px-4 py-8 md:py-10 bg-white">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-green-700 text-xs font-medium uppercase tracking-wider mb-2">
               Primera sesión por WhatsApp
@@ -307,46 +307,6 @@ export default function Page() {
             <p className="text-gray-500 text-sm mt-3">
               Horarios flexibles · Sin compromiso
             </p>
-          </div>
-        </section>
-
-        {/* Sesión online */}
-        <section className="px-4 py-8 md:py-12">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 text-center">
-              Tu sesión online
-            </h2>
-
-            <div className="grid grid-cols-2 gap-3">
-              <div className="p-4 bg-gray-50 rounded-xl text-center">
-                <span className="w-10 h-10 mx-auto mb-2 rounded-full bg-white border border-gray-200 text-green-700 flex items-center justify-center">
-                  <AdsIcon name="video" />
-                </span>
-                <p className="text-sm font-medium text-gray-900">Videollamada</p>
-                <p className="text-xs text-gray-500">Sin descargar nada</p>
-              </div>
-              <div className="p-4 bg-gray-50 rounded-xl text-center">
-                <span className="w-10 h-10 mx-auto mb-2 rounded-full bg-white border border-gray-200 text-green-700 flex items-center justify-center">
-                  <AdsIcon name="clock" />
-                </span>
-                <p className="text-sm font-medium text-gray-900">50 minutos</p>
-                <p className="text-xs text-gray-500">Sesión completa</p>
-              </div>
-              <div className="p-4 bg-gray-50 rounded-xl text-center">
-                <span className="w-10 h-10 mx-auto mb-2 rounded-full bg-white border border-gray-200 text-green-700 flex items-center justify-center">
-                  <AdsIcon name="lock" />
-                </span>
-                <p className="text-sm font-medium text-gray-900">Confidencial</p>
-                <p className="text-xs text-gray-500">100% privado</p>
-              </div>
-              <div className="p-4 bg-gray-50 rounded-xl text-center">
-                <span className="w-10 h-10 mx-auto mb-2 rounded-full bg-white border border-gray-200 text-green-700 flex items-center justify-center">
-                  <AdsIcon name="calendar" />
-                </span>
-                <p className="text-sm font-medium text-gray-900">Flexible</p>
-                <p className="text-xs text-gray-500">Horarios a tu medida</p>
-              </div>
-            </div>
           </div>
         </section>
 
