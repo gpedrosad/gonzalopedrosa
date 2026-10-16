@@ -32,14 +32,14 @@ export function AdsProfessionalCard({
             className="rounded-2xl object-cover flex-shrink-0"
           />
           <div className="min-w-0">
-            <p className="text-xs font-medium uppercase tracking-wider text-green-700 mb-0.5">
+            <p className="text-[13px] font-medium uppercase tracking-wider text-green-700 mb-0.5">
               Te atiende
             </p>
             <p className="font-semibold text-gray-900 text-lg leading-tight">
               Gonzalo Pedrosa
             </p>
             <p className="text-sm text-gray-600">{role}</p>
-            <AdsProviderRegistry className="text-xs text-gray-500 mt-1" withVerifyLink />
+            <AdsProviderRegistry className="text-[13px] text-gray-600 mt-1" withVerifyLink />
           </div>
         </div>
 
@@ -52,7 +52,7 @@ export function AdsProfessionalCard({
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="inline-flex items-center gap-1 text-xs text-gray-700 bg-gray-50 px-3 py-1.5 rounded-full border border-gray-200"
+                className="inline-flex items-center gap-1 text-[13px] text-gray-700 bg-gray-50 px-3 py-1.5 rounded-full border border-gray-200"
               >
                 <span className="text-green-600" aria-hidden="true">
                   ✓

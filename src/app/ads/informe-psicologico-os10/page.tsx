@@ -6,9 +6,7 @@ import { Faq } from "./components/Faq";
 import { FinalCta } from "./components/FinalCta";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
-import { HowItWorks } from "./components/HowItWorks";
-import { Includes } from "./components/Includes";
-import { Pricing } from "./components/Pricing";
+import { Offer } from "./components/Offer";
 import { AdsProfessionalCard } from "../components/AdsProfessionalCard";
 import { StickyBar } from "./components/StickyBar";
 import { WhyUs } from "./components/WhyUs";
@@ -119,9 +117,7 @@ export default function InformePsicologicoOs10Page() {
           tags={["Informe firmado en PDF", "Boleta electrónica", "Online en todo Chile"]}
         />
         <Audience />
-        <Includes />
-        <HowItWorks />
-        <Pricing />
+        <Offer />
         <WhyUs />
         <Faq />
         <Disclaimer />

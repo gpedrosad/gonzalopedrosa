@@ -9,7 +9,7 @@ import {
 import { ProfesionalFoto } from "./ProfesionalFoto";
 
 const waClass =
-  "w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center";
+  "w-full bg-[#15803D] hover:bg-[#166534] text-white font-semibold shadow-md justify-center";
 
 export function Hero() {
   return (
@@ -18,7 +18,7 @@ export function Hero() {
         {hero.badges.map((badge) => (
           <li
             key={badge}
-            className="inline-flex items-center gap-1.5 bg-green-50 text-green-800 text-xs font-medium px-2.5 py-1 rounded-full border border-green-200"
+            className="inline-flex items-center gap-1.5 bg-green-50 text-green-800 text-[13px] font-medium px-2.5 py-1 rounded-full border border-green-200"
           >
             <span className="w-1.5 h-1.5 bg-green-500 rounded-full" aria-hidden="true" />
             {badge}
@@ -60,7 +60,7 @@ export function Hero() {
         >
           {hero.ctaWhatsapp}
         </AdsWhatsAppButton>
-        <p className="text-xs text-gray-500 text-center mt-2">
+        <p className="text-[13px] text-gray-600 text-center mt-2">
           Respuesta por WhatsApp · Sin compromiso
         </p>
       </div>

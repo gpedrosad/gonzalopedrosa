@@ -26,67 +26,37 @@ export const metadata: Metadata = {
 
 const WHATSAPP_HREF = "https://wa.me/56968257817?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20de%20terapia%20online%20para%20adolescente";
 
+const FAQS = [
+  {
+    q: "¿Cuánto cuesta una sesión?",
+    a: "La sesión vale $35.000 CLP y dura 50 minutos por videollamada. Pagas por transferencia o Webpay y entrego boleta electrónica, que puedes presentar a tu Isapre o seguro para pedir reembolso según tu plan.",
+  },
+  {
+    q: "¿Cómo funciona la terapia online para adolescentes?",
+    a: "La sesión es por videollamada, en un espacio privado y confidencial. El adolescente se conecta desde un lugar cómodo de su casa y trabajamos con técnicas adaptadas a su edad.",
+  },
+  {
+    q: "¿Qué se les cuenta a los padres?",
+    a: "Lo que el adolescente conversa en sesión es confidencial. A los padres les comparto el plan de trabajo y los avances generales, y cuando es útil coordinamos un espacio con ellos. Si hay un riesgo para su seguridad, se les informa siempre.",
+  },
+  {
+    q: "¿Necesito autorizar la terapia de mi hijo/a?",
+    a: "Sí. En menores de 18 años, la madre, padre o tutor coordina la primera sesión y autoriza la atención. Puedes escribirme tú por WhatsApp para partir.",
+  },
+  {
+    q: "¿Qué pasa si mi hijo/a no quiere hacer terapia?",
+    a: "Es importante conversar con el adolescente sobre los beneficios de la terapia. En la primera sesión trabajo para generar confianza y un espacio donde se sienta cómodo/a.",
+  },
+];
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "¿Cómo funciona la terapia online para adolescentes?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "La sesión es por videollamada, en un espacio privado y confidencial. El adolescente puede conectarse desde un lugar cómodo de su casa. Trabajamos con técnicas adaptadas a su edad.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿La terapia online es efectiva para adolescentes?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Sí. La terapia online tiene buenos resultados en ansiedad y depresión adolescente, y muchos jóvenes se sienten más cómodos conversando desde su propio espacio.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Cuánto cuesta una sesión de terapia para adolescentes?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "La sesión tiene un valor de $35.000 CLP y dura 50 minutos. Incluye atención personalizada por videollamada.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Los padres deben estar presentes en la sesión?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No necesariamente. Dependiendo de la edad y la situación, se puede trabajar solo con el adolescente para respetar su privacidad y fomentar su autonomía. Cuando es útil, coordinamos un espacio con la madre, padre o tutor.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Qué se les cuenta a los padres?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Lo que el adolescente conversa en sesión es confidencial. A los padres les comparto el plan de trabajo y los avances generales. Si hay un riesgo para su seguridad, se les informa siempre.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Necesito autorizar la terapia de mi hijo/a?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Sí. En menores de 18 años, la madre, padre o tutor coordina la primera sesión y autoriza la atención. Puedes escribirme tú por WhatsApp para partir.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Cómo se paga? ¿Entregas boleta?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Pagas por transferencia o Webpay antes de la sesión. Entrego boleta electrónica, que puedes presentar a tu Isapre o seguro para pedir reembolso según tu plan.",
-      },
-    },
-  ],
+  mainEntity: FAQS.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
 };
 
 const HERO_BULLETS = [
@@ -132,11 +102,11 @@ export default function Page() {
         {/* Hero */}
         <section className="px-4 pt-8 pb-8 max-w-2xl mx-auto">
           <div className="flex items-center justify-between mb-4">
-            <span className="inline-flex items-center gap-1.5 bg-green-50 text-green-700 text-xs font-medium px-2.5 py-1 rounded-full border border-green-200">
+            <span className="inline-flex items-center gap-1.5 bg-green-50 text-green-700 text-[13px] font-medium px-2.5 py-1 rounded-full border border-green-200">
               <span className="w-1.5 h-1.5 bg-green-500 rounded-full" />
               100% online · todo Chile
             </span>
-            <span className="text-xs text-gray-500">Desde 14 años</span>
+            <span className="text-[13px] text-gray-600">Desde 14 años</span>
           </div>
 
           <h1 className="text-[26px] leading-tight md:text-3xl font-bold text-gray-900 tracking-tight mb-3">
@@ -181,11 +151,11 @@ export default function Page() {
             <AdsWhatsAppButton
               href={WHATSAPP_HREF}
               label="ads-adolescentes-hero"
-              className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
+              className="w-full bg-[#15803D] hover:bg-[#166534] text-white font-semibold shadow-md justify-center"
             >
               Agendar sesión online
             </AdsWhatsAppButton>
-            <p className="text-xs text-gray-500 text-center mt-2">
+            <p className="text-[13px] text-gray-600 text-center mt-2">
               Respuesta el mismo día · Sin lista de espera
             </p>
           </div>
@@ -294,7 +264,7 @@ export default function Page() {
         {/* CTA intermedio */}
         <section className="px-4 py-8 md:py-10 bg-gray-900">
           <div className="max-w-2xl mx-auto text-center">
-            <p className="text-green-400 text-xs font-medium uppercase tracking-wider mb-2">
+            <p className="text-green-400 text-[13px] font-medium uppercase tracking-wider mb-2">
               Sin lista de espera
             </p>
             <p className="text-white text-lg font-medium mb-4">
@@ -321,127 +291,20 @@ export default function Page() {
             </h2>
 
             <div className="space-y-3">
-              <details className="p-4 bg-white rounded-xl border border-gray-200 group">
-                <summary className="cursor-pointer font-medium text-gray-900 flex justify-between items-center">
-                  ¿Cómo funciona la terapia online para adolescentes?
-                  <span className="text-gray-400 group-open:rotate-180 transition-transform">
-                    ↓
-                  </span>
-                </summary>
-                <p className="mt-3 text-gray-600 text-sm leading-relaxed">
-                  La sesión es por videollamada, en un espacio privado y confidencial. 
-                  El adolescente puede conectarse desde un lugar cómodo de su casa. 
-                  Trabajamos con técnicas adaptadas a su edad.
-                </p>
-              </details>
-
-              <details className="p-4 bg-white rounded-xl border border-gray-200 group">
-                <summary className="cursor-pointer font-medium text-gray-900 flex justify-between items-center">
-                  ¿La terapia online es efectiva para adolescentes?
-                  <span className="text-gray-400 group-open:rotate-180 transition-transform">
-                    ↓
-                  </span>
-                </summary>
-                <p className="mt-3 text-gray-600 text-sm leading-relaxed">
-                  Sí. La terapia online tiene buenos resultados en ansiedad y depresión 
-                  adolescente, y muchos jóvenes se sienten más cómodos conversando desde 
-                  su propio espacio.
-                </p>
-              </details>
-
-              <details className="p-4 bg-white rounded-xl border border-gray-200 group">
-                <summary className="cursor-pointer font-medium text-gray-900 flex justify-between items-center">
-                  ¿Cuánto cuesta una sesión?
-                  <span className="text-gray-400 group-open:rotate-180 transition-transform">
-                    ↓
-                  </span>
-                </summary>
-                <p className="mt-3 text-gray-600 text-sm leading-relaxed">
-                  La sesión tiene un valor de $35.000 CLP y dura 50 minutos. Incluye 
-                  atención personalizada por videollamada.
-                </p>
-              </details>
-
-              <details className="p-4 bg-white rounded-xl border border-gray-200 group">
-                <summary className="cursor-pointer font-medium text-gray-900 flex justify-between items-center">
-                  ¿Los padres deben estar presentes en la sesión?
-                  <span className="text-gray-400 group-open:rotate-180 transition-transform">
-                    ↓
-                  </span>
-                </summary>
-                <p className="mt-3 text-gray-600 text-sm leading-relaxed">
-                  No necesariamente. Dependiendo de la edad y la situación, se puede 
-                  trabajar solo con el adolescente para respetar su privacidad y fomentar 
-                  su autonomía. Cuando es útil, coordinamos un espacio con la madre, padre 
-                  o tutor.
-                </p>
-              </details>
-              <details className="p-4 bg-white rounded-xl border border-gray-200 group">
-                <summary className="cursor-pointer font-medium text-gray-900 flex justify-between items-center">
-                  ¿Qué se les cuenta a los padres?
-                  <span className="text-gray-400 group-open:rotate-180 transition-transform">
-                    ↓
-                  </span>
-                </summary>
-                <p className="mt-3 text-gray-600 text-sm leading-relaxed">
-                  Lo que el adolescente conversa en sesión es confidencial. A los padres les
-                  comparto el plan de trabajo y los avances generales. Si hay un riesgo para
-                  su seguridad, se les informa siempre.
-                </p>
-              </details>
-              <details className="p-4 bg-white rounded-xl border border-gray-200 group">
-                <summary className="cursor-pointer font-medium text-gray-900 flex justify-between items-center">
-                  ¿Necesito autorizar la terapia de mi hijo/a?
-                  <span className="text-gray-400 group-open:rotate-180 transition-transform">
-                    ↓
-                  </span>
-                </summary>
-                <p className="mt-3 text-gray-600 text-sm leading-relaxed">
-                  Sí. En menores de 18 años, la madre, padre o tutor coordina la primera
-                  sesión y autoriza la atención. Puedes escribirme tú por WhatsApp para partir.
-                </p>
-              </details>
-              <details className="p-4 bg-white rounded-xl border border-gray-200 group">
-                <summary className="cursor-pointer font-medium text-gray-900 flex justify-between items-center">
-                  ¿Cómo se paga? ¿Entregas boleta?
-                  <span className="text-gray-400 group-open:rotate-180 transition-transform">
-                    ↓
-                  </span>
-                </summary>
-                <p className="mt-3 text-gray-600 text-sm leading-relaxed">
-                  Pagas por transferencia o Webpay antes de la sesión. Entrego boleta
-                  electrónica, que puedes presentar a tu Isapre o seguro para pedir reembolso
-                  según tu plan.
-                </p>
-              </details>
-
-              <details className="p-4 bg-white rounded-xl border border-gray-200 group">
-                <summary className="cursor-pointer font-medium text-gray-900 flex justify-between items-center">
-                  ¿Qué pasa si mi hijo/a no quiere hacer terapia?
-                  <span className="text-gray-400 group-open:rotate-180 transition-transform">
-                    ↓
-                  </span>
-                </summary>
-                <p className="mt-3 text-gray-600 text-sm leading-relaxed">
-                  Es importante conversar con el adolescente sobre los beneficios de la 
-                  terapia. En la primera sesión trabajo para generar confianza y un espacio 
-                  donde se sienta cómodo/a.
-                </p>
-              </details>
-
-              <details className="p-4 bg-white rounded-xl border border-gray-200 group">
-                <summary className="cursor-pointer font-medium text-gray-900 flex justify-between items-center">
-                  ¿Cuántas sesiones se necesitan?
-                  <span className="text-gray-400 group-open:rotate-180 transition-transform">
-                    ↓
-                  </span>
-                </summary>
-                <p className="mt-3 text-gray-600 text-sm leading-relaxed">
-                  Depende de la situación y objetivos. Algunas situaciones requieren pocas 
-                  sesiones; otros procesos son más largos. Lo evaluamos juntos en la primera 
-                  consulta.
-                </p>
-              </details>
+              {FAQS.map((faq) => (
+                <details
+                  key={faq.q}
+                  className="p-4 bg-white rounded-xl border border-gray-200 group"
+                >
+                  <summary className="cursor-pointer font-medium text-gray-900 flex justify-between items-center gap-2">
+                    {faq.q}
+                    <span className="text-gray-400 group-open:rotate-180 transition-transform">
+                      ↓
+                    </span>
+                  </summary>
+                  <p className="mt-3 text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+                </details>
+              ))}
             </div>
           </div>
         </section>
@@ -459,7 +322,7 @@ export default function Page() {
           <AdsWhatsAppButton
             href={WHATSAPP_HREF}
             label="ads-adolescentes-final"
-            className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-lg text-base"
+            className="bg-[#15803D] hover:bg-[#166534] text-white font-semibold shadow-lg text-base"
           >
             Agendar sesión online
           </AdsWhatsAppButton>
@@ -473,18 +336,20 @@ export default function Page() {
         <div className="h-20 md:hidden" aria-hidden="true" />
 
         {/* Sticky CTA Mobile */}
-        <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-t border-gray-200 p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
-          <div className="flex items-center justify-between mb-2">
-            <p className="text-xs text-gray-700 font-medium">Sesión online · $35.000</p>
-            <p className="text-xs text-gray-500">Sin lista de espera</p>
+        <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-t border-gray-200 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] px-4 py-2.5 pb-[calc(0.625rem+env(safe-area-inset-bottom))]">
+          <div className="flex items-center gap-3">
+            <div className="flex-1 min-w-0">
+              <p className="text-[13px] text-gray-600 leading-tight">Sesión online</p>
+              <p className="text-lg font-bold text-gray-900 leading-tight">$35.000</p>
+            </div>
+            <AdsWhatsAppButton
+              href={WHATSAPP_HREF}
+              label="ads-adolescentes-sticky"
+              className="bg-[#15803D] hover:bg-[#166534] text-white font-semibold shadow-md"
+            >
+              Agendar sesión
+            </AdsWhatsAppButton>
           </div>
-          <AdsWhatsAppButton
-            href={WHATSAPP_HREF}
-            label="ads-adolescentes-sticky"
-            className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
-          >
-            Agendar sesión online
-          </AdsWhatsAppButton>
         </div>
       </main>
     </>

@@ -107,7 +107,7 @@ export const hero = {
   ],
   microcopy:
     "Documento para presentar en tu trámite de seguridad privada. No incluye el curso OS10.",
-  ctaWhatsapp: "Agendar evaluación por WhatsApp",
+  ctaWhatsapp: "Agendar por WhatsApp",
   ctaComoFunciona: "Ver cómo funciona",
   precioDetalle: "Informe incluido + boleta",
 };

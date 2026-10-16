@@ -16,9 +16,9 @@ export function FinalCta() {
           href={whatsappParticular}
           label="ads-os10-final"
           adsEvent="click_whatsapp"
-          className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-lg justify-center py-3.5"
+          className="w-full bg-[#15803D] hover:bg-[#166534] text-white font-semibold shadow-lg justify-center py-3.5"
         >
-          Agendar evaluación por WhatsApp
+          Agendar por WhatsApp
         </AdsWhatsAppButton>
         <p className="text-gray-300 text-sm mt-3">“{mensajes.particular}”</p>
       </div>

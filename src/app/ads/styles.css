@@ -1,8 +1,7 @@
-.ads-lcp-root main > section:not(:first-of-type) {
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 920px;
-}
-
+/*
+ * Sin content-visibility en las secciones: con páginas de ~5 pantallas el ahorro
+ * de render es mínimo y la altura estimada hacía saltar el scroll y los anclas.
+ */
 .ads-lcp-root .animate-pulse {
   animation: none;
 }

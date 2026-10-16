@@ -92,11 +92,11 @@ export default function Page() {
         {/* Hero */}
         <section className="px-4 pt-8 pb-6 md:pt-16 md:pb-12 max-w-3xl mx-auto">
           <div className="flex items-center justify-between mb-4">
-            <span className="inline-flex items-center gap-1.5 bg-green-50 text-green-700 text-xs font-medium px-2.5 py-1 rounded-full border border-green-200">
+            <span className="inline-flex items-center gap-1.5 bg-green-50 text-green-700 text-[13px] font-medium px-2.5 py-1 rounded-full border border-green-200">
               <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
               Respuesta por WhatsApp
             </span>
-            <span className="text-xs text-gray-500">100% Online</span>
+            <span className="text-[13px] text-gray-600">100% Online</span>
           </div>
 
           <h1 className="text-2xl md:text-4xl font-bold text-gray-900 tracking-tight mb-3 leading-tight">
@@ -141,11 +141,11 @@ export default function Page() {
             <AdsWhatsAppButton
               href={WHATSAPP_HREF}
               label="ads-adiccion-juego-hero"
-              className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
+              className="w-full bg-[#15803D] hover:bg-[#166534] text-white font-semibold shadow-md justify-center"
             >
               Agendar mi sesión
             </AdsWhatsAppButton>
-            <p className="text-xs text-gray-500 text-center mt-2">
+            <p className="text-[13px] text-gray-600 text-center mt-2">
               Respuesta el mismo día · Sin compromiso
             </p>
           </div>
@@ -237,7 +237,7 @@ export default function Page() {
                   <h3 className="font-semibold text-gray-900 text-sm">
                     {item.title}
                   </h3>
-                  <p className="text-gray-500 text-xs">{item.desc}</p>
+                  <p className="text-gray-600 text-[13px]">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -281,7 +281,7 @@ export default function Page() {
                   <h3 className="font-semibold text-white text-sm mb-1">
                     {item.title}
                   </h3>
-                  <p className="text-gray-400 text-xs">{item.desc}</p>
+                  <p className="text-gray-400 text-[13px]">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -291,7 +291,7 @@ export default function Page() {
         {/* CTA intermedio */}
         <section className="px-4 py-8 md:py-10 bg-white">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-green-700 text-xs font-medium uppercase tracking-wider mb-2">
+            <p className="text-green-700 text-[13px] font-medium uppercase tracking-wider mb-2">
               Primera sesión por WhatsApp
             </p>
             <p className="text-gray-900 text-lg font-medium mb-4">
@@ -300,7 +300,7 @@ export default function Page() {
             <AdsWhatsAppButton
               href={WHATSAPP_HREF}
               label="ads-adiccion-juego-mid"
-              className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md"
+              className="bg-[#15803D] hover:bg-[#166534] text-white font-semibold shadow-md"
             >
               Agendar sesión online
             </AdsWhatsAppButton>
@@ -350,7 +350,7 @@ export default function Page() {
                 >
                   <summary className="cursor-pointer font-medium text-gray-900 text-sm flex justify-between items-center">
                     {item.q}
-                    <span className="text-gray-400 group-open:rotate-180 transition-transform text-xs">
+                    <span className="text-gray-400 group-open:rotate-180 transition-transform text-[13px]">
                       ▼
                     </span>
                   </summary>
@@ -389,19 +389,19 @@ export default function Page() {
                   <p className="text-white font-medium text-sm">
                     Gonzalo Pedrosa
                   </p>
-                  <p className="text-gray-400 text-xs">Psicólogo · TCC</p>
+                  <p className="text-gray-400 text-[13px]">Psicólogo · TCC</p>
                 </div>
               </div>
 
               <AdsWhatsAppButton
                 href={WHATSAPP_HREF}
                 label="ads-adiccion-juego-final"
-                className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-lg justify-center"
+                className="w-full bg-[#15803D] hover:bg-[#166534] text-white font-semibold shadow-lg justify-center"
               >
                 Agendar mi sesión · $35.000
               </AdsWhatsAppButton>
 
-              <p className="text-gray-500 text-xs mt-3">
+              <p className="text-gray-400 text-[13px] mt-3">
                 Sin compromiso · Confidencial
               </p>
             </div>
@@ -414,13 +414,13 @@ export default function Page() {
         <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
           <div className="flex items-center gap-3">
             <div className="flex-1">
-              <p className="text-xs text-gray-500">Sesión online</p>
+              <p className="text-[13px] text-gray-600">Sesión online</p>
               <p className="text-lg font-bold text-gray-900">$35.000</p>
             </div>
             <AdsWhatsAppButton
               href={WHATSAPP_HREF}
               label="ads-adiccion-juego-sticky"
-              className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md px-6"
+              className="bg-[#15803D] hover:bg-[#166534] text-white font-semibold shadow-md px-6"
             >
               Agendar ahora
             </AdsWhatsAppButton>

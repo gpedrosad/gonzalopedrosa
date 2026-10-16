@@ -22,7 +22,7 @@ export function AdsWhatsAppButton({
       data-wa-track="1"
       data-wa-label={label ?? href}
       data-ads-event={adsEvent}
-      className={`inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium rounded-full cursor-pointer transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-900 ${className}`}
+      className={`inline-flex items-center justify-center gap-2 px-6 py-3.5 min-h-[52px] text-base font-medium rounded-full cursor-pointer transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-900 ${className}`}
     >
       <svg
         className="w-5 h-5"

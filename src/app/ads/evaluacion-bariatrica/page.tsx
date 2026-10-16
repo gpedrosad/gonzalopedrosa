@@ -36,77 +36,6 @@ export const metadata: Metadata = {
 const WHATSAPP_HREF =
   "https://wa.me/56968257817?text=Hola%2C%20me%20interesa%20la%20evaluaci%C3%B3n%20bari%C3%A1trica%20de%20%2450.000%20(evaluaci%C3%B3n%20%2B%20informe%20el%20mismo%20d%C3%ADa).";
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "¿Cuánto cuesta la evaluación psicológica bariátrica?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "La evaluación vale $50.000 CLP. Incluye 1 sesión clínica de 50 minutos por videollamada, el informe psicológico firmado en PDF el mismo día y boleta electrónica.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Cuántas sesiones incluye?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Una sesión de 50 minutos, online. En esa sesión se hace la evaluación y el informe se entrega el mismo día.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿El informe lo acepta cualquier clínica?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "El informe cubre el documento de psicólogo que suelen pedir las clínicas y equipos bariátricos. Cumple estándares profesionales. Aun así, el equipo de tu clínica puede pedir su propia evaluación o un formato específico: me adapto si me lo indican.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Sirve para Fonasa PAD o Isapre?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "El informe es el documento psicológico que suelen pedir para manga, bypass, Fonasa PAD o Isapre. No garantizo que Fonasa, la Isapre o la clínica aprueben la cirugía: esa decisión es del equipo bariátrico y del prestador.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Cuándo entregas el informe?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "El informe firmado en PDF se entrega el mismo día de la sesión.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Entregas boleta?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Sí. Pagas por transferencia o Webpay y el valor incluye boleta electrónica por la sesión y el informe.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿La evaluación es 100% online?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Sí. La sesión es por videollamada, desde cualquier región de Chile. Solo necesitas conexión a internet y un lugar tranquilo.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Qué pasa si hay una contraindicación?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No es un rechazo eterno. Si hay algo que trabajar ahora (por ejemplo un trastorno alimentario activo, consumo de alcohol o expectativas poco realistas), lo dejamos por escrito y se puede retomar la evaluación cuando corresponda. El informe describe tu situación actual; no garantiza que te aprueben la cirugía.",
-      },
-    },
-  ],
-};
-
 const HERO_BULLETS = [
   "1 sesión clínica de 50 min, por videollamada",
   "Informe psicológico firmado en PDF",
@@ -114,12 +43,6 @@ const HERO_BULLETS = [
   "Boleta electrónica incluida",
 ];
 
-const PACK_INCLUYE = [
-  "1 sesión clínica de 50 minutos (online)",
-  "Informe psicológico firmado en PDF",
-  "Boleta electrónica",
-  "Entrega del informe el mismo día",
-];
 
 const PACK_NO_INCLUYE = [
   "La cirugía ni el equipo médico bariátrico",
@@ -169,38 +92,36 @@ const PASOS = [
 
 const FAQS = [
   {
-    q: "¿Cuánto cuesta?",
-    a: "La evaluación vale $50.000 CLP. Incluye 1 sesión clínica de 50 minutos por videollamada, el informe psicológico firmado en PDF el mismo día y boleta electrónica.",
+    q: "¿Cuánto cuesta y cómo se paga?",
+    a: "La evaluación vale $50.000 CLP: 1 sesión clínica de 50 minutos por videollamada, el informe psicológico firmado en PDF y boleta electrónica. Pagas por transferencia o Webpay.",
   },
   {
-    q: "¿Cuántas sesiones son?",
-    a: "Una sesión de 50 minutos, online. En esa sesión se hace la evaluación y el informe se entrega el mismo día.",
+    q: "¿Cuándo recibo el informe?",
+    a: "El mismo día de la sesión. Es una sola sesión de 50 minutos, online desde cualquier región de Chile, y el informe firmado en PDF se envía ese día.",
   },
   {
     q: "¿Lo acepta cualquier clínica?",
-    a: "El informe cubre el documento de psicólogo que suelen pedir las clínicas y equipos bariátricos. Cumple estándares profesionales. Aun así, el equipo de tu clínica puede pedir su propia evaluación o un formato específico: me adapto si me lo indican.",
+    a: "El informe cubre el documento de psicólogo que suelen pedir las clínicas y equipos bariátricos. Aun así, el equipo de tu clínica puede pedir su propia evaluación o un formato específico: me adapto si me lo indican.",
   },
   {
     q: "¿Sirve para Fonasa PAD o Isapre?",
-    a: "El informe es el documento psicológico que suelen pedir para manga, bypass, Fonasa PAD o Isapre. No garantizo que Fonasa, la Isapre o la clínica aprueben la cirugía: esa decisión es del equipo bariátrico y del prestador.",
-  },
-  {
-    q: "¿Cuándo entregas el informe?",
-    a: "El informe firmado en PDF se entrega el mismo día de la sesión.",
-  },
-  {
-    q: "¿Entregas boleta?",
-    a: "Sí. Pagas por transferencia o Webpay y el valor incluye boleta electrónica por la sesión y el informe.",
-  },
-  {
-    q: "¿Es 100% online?",
-    a: "Sí. La sesión es por videollamada, desde cualquier región de Chile. Solo necesitas conexión a internet y un lugar tranquilo.",
+    a: "Es el documento psicológico que suelen pedir para manga, bypass, Fonasa PAD o Isapre. No garantizo que Fonasa, la Isapre o la clínica aprueben la cirugía: esa decisión es del equipo bariátrico y del prestador.",
   },
   {
     q: "¿Qué pasa si hay una contraindicación?",
-    a: "No es un rechazo eterno. Si hay algo que trabajar ahora (por ejemplo un TCA activo, consumo de alcohol o expectativas poco realistas), lo dejamos por escrito y se puede retomar la evaluación cuando corresponda. El informe describe tu situación actual; no garantiza que te aprueben la cirugía.",
+    a: "No es un rechazo eterno. Si hay algo que trabajar ahora (por ejemplo un TCA activo, consumo de alcohol o expectativas poco realistas), lo dejamos por escrito y se puede retomar la evaluación cuando corresponda.",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
 
 export default function EvaluacionBariatricaAdsPage() {
   return (
@@ -215,11 +136,11 @@ export default function EvaluacionBariatricaAdsPage() {
         {/* Hero */}
         <section className="px-4 pt-8 pb-8 max-w-2xl mx-auto">
           <div className="flex items-center justify-between mb-4">
-            <span className="inline-flex items-center gap-1.5 bg-green-50 text-green-700 text-xs font-medium px-2.5 py-1 rounded-full border border-green-200">
+            <span className="inline-flex items-center gap-1.5 bg-green-50 text-green-700 text-[13px] font-medium px-2.5 py-1 rounded-full border border-green-200">
               <span className="w-1.5 h-1.5 bg-green-500 rounded-full" />
               100% online · todo Chile
             </span>
-            <span className="text-xs text-gray-500">Videollamada</span>
+            <span className="text-[13px] text-gray-600">Videollamada</span>
           </div>
 
           <h1 className="text-[26px] leading-tight md:text-3xl font-bold text-gray-900 tracking-tight mb-3">
@@ -249,7 +170,7 @@ export default function EvaluacionBariatricaAdsPage() {
             className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-2xl p-4 mb-3"
           >
             <div className="flex items-center justify-between mb-3">
-              <div>
+              <div id="precio">
                 <p className="text-sm text-gray-600">
                   1 sesión + informe el mismo día + boleta
                 </p>
@@ -269,11 +190,11 @@ export default function EvaluacionBariatricaAdsPage() {
             <AdsWhatsAppButton
               href={WHATSAPP_HREF}
               label="ads-eval-bariatrica-hero"
-              className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
+              className="w-full bg-[#15803D] hover:bg-[#166534] text-white font-semibold shadow-md justify-center"
             >
               Consultar por WhatsApp
             </AdsWhatsAppButton>
-            <p className="text-xs text-gray-500 text-center mt-2">
+            <p className="text-[13px] text-gray-600 text-center mt-2">
               Respuesta el mismo día · Sin compromiso
             </p>
           </div>
@@ -284,62 +205,6 @@ export default function EvaluacionBariatricaAdsPage() {
           bio="Hago la evaluación psicológica prequirúrgica que piden los equipos bariátricos: motivación, relación con la alimentación, salud mental y red de apoyo. Si tu clínica pide un formato específico, me adapto."
           tags={["Manga y bypass", "Fonasa PAD e Isapre", "Informe el mismo día"]}
         />
-
-        {/* Precio */}
-        <section id="precio" className="px-4 py-8 bg-gray-50">
-          <div className="max-w-2xl mx-auto">
-            <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-4">
-              Qué incluye la evaluación
-            </h2>
-            <div className="bg-white rounded-2xl border border-gray-200 p-5">
-              <p className="text-sm text-gray-500 mb-1">Precio único</p>
-              <p className="text-3xl font-bold text-gray-900 mb-1">
-                $50.000{" "}
-                <span className="text-base font-normal text-gray-500">CLP</span>
-              </p>
-              <p className="text-sm text-gray-600 mb-5">
-                1 sesión de 50 min + informe el mismo día + boleta.
-              </p>
-
-              <p
-                id="que-incluye"
-                className="text-sm font-semibold text-gray-900 mb-2"
-              >
-                Qué incluye
-              </p>
-              <ul className="space-y-2 mb-5">
-                {PACK_INCLUYE.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-2.5 text-[15px] text-gray-700"
-                  >
-                    <span className="text-green-500 mt-0.5 flex-shrink-0">
-                      ✓
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              <p className="text-sm font-semibold text-gray-900 mb-2">
-                Qué no incluye
-              </p>
-              <ul className="space-y-2">
-                {PACK_NO_INCLUYE.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-2.5 text-[15px] text-gray-600"
-                  >
-                    <span className="text-gray-400 mt-0.5 flex-shrink-0">
-                      —
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
 
         {/* Para quién */}
         <section className="px-4 py-8">
@@ -440,6 +305,22 @@ export default function EvaluacionBariatricaAdsPage() {
                 aprueben la cirugía: el equipo bariátrico puede pedir su propia
                 evaluación.
               </p>
+              <p id="que-incluye" className="text-sm font-semibold text-gray-900 mt-4 mb-2">
+                Qué no incluye
+              </p>
+              <ul className="space-y-1.5">
+                {PACK_NO_INCLUYE.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-2.5 text-sm text-gray-700"
+                  >
+                    <span className="text-gray-400 flex-shrink-0" aria-hidden="true">
+                      —
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
@@ -497,7 +378,7 @@ export default function EvaluacionBariatricaAdsPage() {
             <AdsWhatsAppButton
               href={WHATSAPP_HREF}
               label="ads-eval-bariatrica-final"
-              className="bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-lg"
+              className="bg-[#15803D] hover:bg-[#166534] text-white shadow-lg"
             >
               Consultar por WhatsApp
             </AdsWhatsAppButton>
