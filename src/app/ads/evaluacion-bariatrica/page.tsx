@@ -7,7 +7,7 @@ import { LazyStickyWhatsAppCTA } from "./LazyStickyWhatsAppCTA";
 export const metadata: Metadata = {
   title: "Evaluación Psicológica Bariátrica | Informe Online",
   description:
-    "Evaluación psicológica bariátrica: 1 sesión online de 50 min + certificado el mismo día. $75.000. Consulta por WhatsApp.",
+    "Evaluación psicológica bariátrica: 1 sesión online de 50 min + certificado el mismo día. $50.000. Consulta por WhatsApp.",
   robots: {
     index: false,
     follow: false,
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Evaluación Psicológica Bariátrica | Informe Online",
     description:
-      "Evaluación psicológica bariátrica: 1 sesión online + certificado el mismo día. $75.000.",
+      "Evaluación psicológica bariátrica: 1 sesión online + certificado el mismo día. $50.000.",
     url: "https://www.gonzalopedrosa.cl/ads/evaluacion-bariatrica",
     type: "website",
     images: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 };
 
 const WHATSAPP_HREF =
-  "https://wa.me/56968257817?text=Hola%2C%20me%20interesa%20la%20evaluaci%C3%B3n%20bari%C3%A1trica%20de%20%2475.000%20(1%20sesi%C3%B3n%20%2B%20certificado%20el%20mismo%20d%C3%ADa).";
+  "https://wa.me/56968257817?text=Hola%2C%20me%20interesa%20la%20evaluaci%C3%B3n%20bari%C3%A1trica%20de%20%2450.000%20(1%20sesi%C3%B3n%20%2B%20certificado%20el%20mismo%20d%C3%ADa).";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -44,7 +44,7 @@ const faqSchema = {
       name: "¿Cuánto cuesta la evaluación psicológica bariátrica?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La evaluación vale $75.000 CLP. Incluye 1 sesión clínica de 50 minutos por videollamada, el certificado psicológico firmado en PDF el mismo día y boleta electrónica.",
+        text: "La evaluación vale $50.000 CLP. Incluye 1 sesión clínica de 50 minutos por videollamada, el certificado psicológico firmado en PDF el mismo día y boleta electrónica.",
       },
     },
     {
@@ -169,7 +169,7 @@ const PASOS = [
 const FAQS = [
   {
     q: "¿Cuánto cuesta?",
-    a: "La evaluación vale $75.000 CLP. Incluye 1 sesión clínica de 50 minutos por videollamada, el certificado psicológico firmado en PDF el mismo día y boleta electrónica.",
+    a: "La evaluación vale $50.000 CLP. Incluye 1 sesión clínica de 50 minutos por videollamada, el certificado psicológico firmado en PDF el mismo día y boleta electrónica.",
   },
   {
     q: "¿Cuántas sesiones son?",
@@ -227,7 +227,7 @@ export default function EvaluacionBariatricaAdsPage() {
 
           <p className="text-base text-gray-600 mb-4 leading-relaxed">
             Una sesión clínica online de 50 minutos + certificado psicológico
-            firmado el mismo día. $75.000. No garantiza que te aprueben la
+            firmado el mismo día. $50.000. No garantiza que te aprueben la
             cirugía.
           </p>
 
@@ -253,7 +253,7 @@ export default function EvaluacionBariatricaAdsPage() {
                   1 sesión + certificado el mismo día + boleta
                 </p>
                 <p className="text-2xl font-bold text-gray-900">
-                  $75.000{" "}
+                  $50.000{" "}
                   <span className="text-sm font-normal text-gray-500">CLP</span>
                 </p>
               </div>
@@ -287,7 +287,7 @@ export default function EvaluacionBariatricaAdsPage() {
             <div className="bg-white rounded-2xl border border-gray-200 p-5">
               <p className="text-sm text-gray-500 mb-1">Precio único</p>
               <p className="text-3xl font-bold text-gray-900 mb-1">
-                $75.000{" "}
+                $50.000{" "}
                 <span className="text-base font-normal text-gray-500">CLP</span>
               </p>
               <p className="text-sm text-gray-600 mb-5">
@@ -426,7 +426,7 @@ export default function EvaluacionBariatricaAdsPage() {
               ¿Necesitas el certificado para tu cirugía bariátrica?
             </p>
             <p className="text-gray-400 text-sm mb-4">
-              $75.000 · 1 sesión + certificado el mismo día
+              $50.000 · 1 sesión + certificado el mismo día
             </p>
             <AdsWhatsAppButton
               href={WHATSAPP_HREF}
@@ -509,7 +509,7 @@ export default function EvaluacionBariatricaAdsPage() {
               </div>
             </div>
             <p className="text-gray-700 text-[15px] mb-4">
-              $75.000 · 1 sesión + certificado el mismo día
+              $50.000 · 1 sesión + certificado el mismo día
             </p>
             <AdsWhatsAppButton
               href={WHATSAPP_HREF}

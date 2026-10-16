@@ -8,7 +8,7 @@ Paths: `evaluacion` / `bariatrica` · Geo: Chile (`PRESENCE`) · Conv: `whatsapp
 
 ## Oferta
 
-**$75.000 CLP**: 1 sesión de 50 min + certificado PDF el mismo día + boleta. Online en todo Chile.
+**$50.000 CLP**: 1 sesión de 50 min + certificado PDF el mismo día + boleta. Online en todo Chile.
 
 No garantiza aprobación de la cirugía. Es evaluación de aptitud para el equipo quirúrgico.
 
@@ -18,7 +18,7 @@ Pin **H1** el de precio. El resto sin pin.
 
 | # | Texto | n | Tema |
 |---|---|---|---|
-| 1 | Sesión bariátrica $75.000 | 25 | PIN H1 · precio |
+| 1 | Sesión bariátrica $50.000 | 25 | PIN H1 · precio |
 | 2 | Psicólogo bariátrico | 20 | psicólogo bariátrico |
 | 3 | Informe para cirugía | 20 | informe para cirugía |
 | 4 | Boleta Fonasa e Isapre | 22 | Fonasa/Isapre |
@@ -38,7 +38,7 @@ Pin **H1** el de precio. El resto sin pin.
 
 | # | Texto | n |
 |---|---|---|
-| 1 | Sesión $75.000: 50 min online + certificado PDF el mismo día + boleta. Chile. | 77 |
+| 1 | Sesión $50.000: 50 min online + certificado PDF el mismo día + boleta. Chile. | 77 |
 | 2 | Evaluación de aptitud. No garantiza que la clínica te apruebe la cirugía. | 73 |
 | 3 | Psicólogo clínico. Certificado el mismo día para tu equipo. Agenda por WhatsApp. | 80 |
 | 4 | Online en todo Chile. 1 sesión de 50 min, certificado PDF el mismo día y boleta. | 80 |

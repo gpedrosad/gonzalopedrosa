@@ -42,7 +42,7 @@ export function StickyWhatsAppCTA({ href }: { href: string }) {
           <span>Consultar por WhatsApp</span>
         </a>
         <p className="text-center text-xs text-gray-500 mt-2">
-          $75.000 · 1 sesión + certificado hoy
+          $50.000 · 1 sesión + certificado hoy
         </p>
       </div>
     </div>

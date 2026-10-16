@@ -20,7 +20,7 @@ Número único: `HEALTH_PROVIDER_REGISTRY` en `src/lib/site-config.ts` (`504978`
 ## Evaluación bariátrica (`/ads/evaluacion-bariatrica`)
 
 - Tuteo chileno (tú / te / Escríbeme). Sin voseo.
-- **$75.000**: 1 sesión de 50 min + certificado el mismo día. Sin «aprobado», «garantizado» ni «te operan seguro».
+- **$50.000**: 1 sesión de 50 min + certificado el mismo día. Sin «aprobado», «garantizado» ni «te operan seguro».
 - Campaña Ads `evaluacion-bariatrica-online` **propia y PAUSED** (US$1/día). No hereda la negativa `bariatr*` de TCC. No ENABLED hasta confirmación.
 
 ## Informe psicológico OS10 (`/ads/informe-psicologico-os10`)
