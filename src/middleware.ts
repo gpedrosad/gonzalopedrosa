@@ -28,17 +28,21 @@ export function middleware(request: NextRequest) {
     }
   }
 
+  // Google Ads mide en el dominio local de Google (google.cl / google.com.ar);
+  // *.google.com no los cubre.
+  const googleCountryDomains = "https://www.google.cl https://www.google.com.ar";
+
   // CSP relajada: permite scripts inline para compatibilidad con GTM
   const cspDirectives = [
     "default-src 'self'",
     // Scripts: unsafe-inline + unsafe-eval para GTM y sus tags dinámicos
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.google.com https://googleads.g.doubleclick.net https://*.doubleclick.net https://connect.facebook.net https://*.googleadservices.com",
-    // script-src-elem: requerido por algunos navegadores para <script> elements (GTM + Ads)
-    "script-src-elem 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.googleadservices.com https://www.google-analytics.com",
+    // script-src-elem: pisa a script-src para <script>; mismos orígenes (GTM, Ads remarketing, Meta)
+    "script-src-elem 'self' 'unsafe-inline' https://*.googletagmanager.com https://*.google-analytics.com https://*.google.com https://googleads.g.doubleclick.net https://*.doubleclick.net https://connect.facebook.net https://*.googleadservices.com",
     // Conexiones: APIs de tracking + subdominios anidados de doubleclick (stats.g, googleads.g)
-    "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.google.com https://*.doubleclick.net https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://*.googleadservices.com https://*.facebook.com https://connect.facebook.net",
+    `connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.google.com https://*.doubleclick.net https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://*.googleadservices.com https://*.facebook.com https://connect.facebook.net ${googleCountryDomains}`,
     // Imágenes: píxeles de tracking + googleads.g.doubleclick.net (subdominio anidado)
-    "img-src 'self' https://*.google-analytics.com https://*.googletagmanager.com https://*.google.com https://*.doubleclick.net https://googleads.g.doubleclick.net https://*.facebook.com https://*.googleadservices.com data: blob:",
+    `img-src 'self' https://*.google-analytics.com https://*.googletagmanager.com https://*.google.com https://*.doubleclick.net https://googleads.g.doubleclick.net https://*.facebook.com https://*.googleadservices.com ${googleCountryDomains} data: blob:`,
     // Frames: GTM preview, ads + tagassistant (debug, solo útil en dev pero no hace daño en prod)
     `frame-src 'self' https://*.googletagmanager.com https://*.doubleclick.net https://*.google.com${isDev ? " https://tagassistant.google.com" : ""}`,
     // Estilos

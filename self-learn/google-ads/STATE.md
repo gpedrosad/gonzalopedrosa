@@ -1,29 +1,31 @@
 # Estado cuenta (actualizar tras cambios grandes)
 
 - **Customer:** `5930583968` · moneda USD
-- **Campaña principal:** `psicologo-cognitivo-conductual-online` (`23450445740`) · **ENABLED** · horario **lun–vie** · budget ~US$2/día
-- **Campaña test:** `adiccion-al-juego-online` (`24172229213`) · **ENABLED** · horario **lun–vie** · budget **US$1/día** · geo **Chile PRESENCE** · grupo `adiccion-al-juego` ENABLED · landing `/ads/adiccion-al-juego`
-- **Campaña test:** `evaluacion-bariatrica-online` (`24172472867`) · **ENABLED** · horario **lun–vie** · budget **US$1/día** · geo Chile PRESENCE · grupo `evaluacion-bariatrica` (`199819157735`) ENABLED · landing `/ads/evaluacion-bariatrica`
-- **Campaña test:** `informe-psicologico-os10-online` (`24291587680`) · **ENABLED** · horario **lun–vie** · budget **US$1/día** · geo Chile PRESENCE · grupo `informe-psicologico-os10` (`198276616297`) ENABLED · landing `/ads/informe-psicologico-os10`
-- **Campaña test:** `informe-cambio-nombre-apellido-online` (`24298829243`) · **ENABLED** · horario **lun–vie** · budget **US$1/día** · geo Chile PRESENCE · grupo `informe-cambio-nombre-apellido` (`203691716634`) ENABLED · landing `/ads/informe-cambio-nombre-apellido`
+- **Campaña TCC:** `psicologo-cognitivo-conductual-online` (`23450445740`) · **PAUSED** (13 oct) · horario **lun–vie** · budget **US$1/día** · solo grupo agendar (EXACT `a distancia`)
+- **Campaña:** `psicologo-adolescentes-online` (`24334063436`) · **ENABLED** · horario **lun–vie** · budget **US$0,5/día** (13 oct) · geo **Chile PRESENCE** · grupo `psicologo-adolescentes` (`201829585918`) ENABLED · landing `/ads/adolescentes`
+- **Campaña:** `adiccion-al-juego-online` (`24172229213`) · **ENABLED** · horario **lun–vie** · budget **US$1/día** (13 oct) · geo **Chile PRESENCE** · grupo `adiccion-al-juego` ENABLED · landing `/ads/adiccion-al-juego`
+- **Campaña:** `evaluacion-bariatrica-online` (`24172472867`) · **ENABLED** · horario **lun–vie** · budget **US$0,5/día** (13 oct) · geo Chile PRESENCE · grupo `evaluacion-bariatrica` (`199819157735`) ENABLED · landing `/ads/evaluacion-bariatrica`
+- **Campaña:** `informe-psicologico-os10-online` (`24291587680`) · **ENABLED** · horario **lun–vie** · budget **US$2/día** · geo Chile PRESENCE · grupo `informe-psicologico-os10` (`198276616297`) ENABLED · landing `/ads/informe-psicologico-os10`
+- **Campaña:** `informe-cambio-nombre-apellido-online` (`24298829243`) · **ENABLED** · horario **lun–vie** · budget **US$1/día** · geo Chile PRESENCE · grupo `informe-cambio-nombre-apellido` (`203691716634`) ENABLED · landing `/ads/informe-cambio-nombre-apellido`
 - **Conv:** solo **WhatsApp click** (`7451799330`, label `sVwoCKLepeEbEIHgncVC`) primary + métrica + `CONTACT~WEBSITE` biddable. Las otras 3 acciones / goals de lead form y signup no pujan.
-- **Sitelinks:** 4 assets con `www` (agendar, sobre, TCC, cómo funciona).
-- **Última revisión:** 2026-09-06 · conv + sitelinks · eval A+B cerrada 28 jul ([EVAL.md](./EVAL.md))
+- **Sitelinks TCC:** ninguno (todos removed 8 oct). Las URLs `/sitelink/*` del sitio siguen, ya no se anuncian.
+- **Última revisión:** 2026-10-16 · 0 conv desde 9 oct (tracking verificado OK); presupuestos recortados 13 oct
 
 ## Grupos
 
 | Grupo | Status típico | Notas |
 |---|---|---|
-| agendar-psicologo-online | ENABLED | 29 clics / **4 conv** 30d · 7d: 9 / **2** (CPA US$4) |
-| psicologo-adolescentes-online | ENABLED | Motor de volumen: 54 clics / **3 conv** 30d (CPA landing US$11) · 7d: 13 / 0 |
-| psicologo-cognitivo-conductual-online | ENABLED | Bajo volumen |
-| psicologo-ansiedad-online | ENABLED | Sin volumen |
-| psicologo-ataques-de-panico-online | ENABLED | Sin volumen |
-| terapia-pareja | PAUSED | Landing RSA OK si se reactiva |
-| adiccion-al-juego | ENABLED | Campaña propia · US$1/día · Chile PRESENCE · landing `/ads/adiccion-al-juego` |
+| psicologo-adolescentes | ENABLED | Campaña propia `24334063436` · US$1/día · landing `/ads/adolescentes` |
+| agendar-psicologo-online | ENABLED | TCC · solo EXACT `psicologo a distancia` |
+| psicologo-adolescentes-online | PAUSED | 8 oct · grupo viejo en TCC, no pujar contra la campaña nueva |
+| psicologo-cognitivo-conductual-online | PAUSED | 8 oct · 0 conv / US$3,52 · landing intacta |
+| psicologo-ansiedad-online | REMOVED | 8 oct · landing `/ads/…` intacta |
+| psicologo-ataques-de-panico-online | REMOVED | 8 oct · landing intacta |
+| terapia-pareja | REMOVED | 8 oct · landing intacta |
+| adiccion-al-juego | ENABLED | Campaña propia · US$2/día · Chile PRESENCE · landing `/ads/adiccion-al-juego` |
 | evaluacion-bariatrica | ENABLED | Campaña propia · US$1/día · Chile PRESENCE · landing `/ads/evaluacion-bariatrica` |
-| informe-psicologico-os10 | ENABLED | Campaña propia · US$1/día · Chile PRESENCE · landing `/ads/informe-psicologico-os10` · ENABLED 24 sep |
-| informe-cambio-nombre-apellido | ENABLED | Campaña propia · US$1/día · Chile PRESENCE · landing `/ads/informe-cambio-nombre-apellido` · ENABLED 28 sep |
+| informe-psicologico-os10 | ENABLED | Campaña propia · US$2/día · Chile PRESENCE · landing `/ads/informe-psicologico-os10` |
+| informe-cambio-nombre-apellido | ENABLED | Campaña propia · US$1/día · Chile PRESENCE · landing `/ads/informe-cambio-nombre-apellido` |
 
 ## Snapshot métricas 2026-08-27
 
@@ -41,10 +43,11 @@ Landings 7d: `/ads/agendar-…` 9 / **2** · `/ads/adolescentes` 13 / 0 · `/ads
 ## Pendiente (prioridad)
 
 1. ~~Eval A+B~~ (cerrada 28 jul · éxito)
-2. Opcional: ciudades adolescentes (temuco, viña, concepción) si el gasto local crece (~US$3–4 en 30d)
-3. ~~Grupo + RSA adicción al juego~~ · **ENABLED 23 ago** US$1/día. **Ya convierte** (11 clics / 1 conv, CPA US$4). Seguir hasta ~6 sep; no pausar.
-4. ~~Sitelinks → forzar `www`~~ (hecho 6 sep)
-5. Presupuesto solo si se quiere más volumen (CPA 30d estable ~US$10)
-6. ~~Campaña bariátrica~~ · **ENABLED 23 ago** US$1/día. 6 clics / 0 conv / US$3. Seguir hasta ~6 sep o pausar si 0 conv con ≥US$12. Negativa `fonasa` aplicada 26 ago.
-7. Campaña OS10 · **ENABLED 24 sep** US$1/día · lun–vie. Revisar ~14d; pausar si 0 conv con ≥US$12.
-8. Campaña cambio de nombre · **ENABLED 28 sep** US$1/día · lun–vie. Revisar ~14d; pausar si 0 conv con ≥US$12.
+2. Opcional: ciudades adolescentes (temuco, viña, concepción) si el gasto local crece
+3. ~~Grupo + RSA adicción al juego~~ · campaña propia ENABLED
+4. ~~Sitelinks → forzar `www`~~ (hecho 6 sep) · sitelinks TCC off 8 oct
+5. Presupuesto juego si se quiere más volumen (CPA ~US$3,7)
+6. ~~Campaña bariátrica~~ · ENABLED
+7. ~~Campaña OS10~~ · ENABLED
+8. Campaña cambio de nombre · ENABLED 28 sep · 0 clics en 30d
+9. ~~Campaña adolescentes~~ · **ENABLED 8 oct** US$1/día

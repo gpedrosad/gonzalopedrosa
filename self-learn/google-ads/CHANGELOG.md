@@ -2,9 +2,28 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-10-16
+
+- **Tracking WhatsApp:** `whatsapp_lead` sin `preventDefault` ni `eventCallback`: el `<a target="_blank">` abre WhatsApp en el gesto y la landing sigue viva para que GTM envíe la conversión aunque cargue después del click. Script de `/ads/layout.tsx` inline (antes `lazyOnload`: clics tempranos no se medían). Mismo cambio en `WhatsAppButton.tsx`.
+- **CSP** (`src/middleware.ts`): `www.google.cl` / `www.google.com.ar` en `img-src` + `connect-src` (hits `1p-conversion` bloqueados); `script-src-elem` con doubleclick y `connect.facebook.net`.
+- **Revisión:** 9–15 oct 46 clics / US$39 / **0 conv**. Conversión verificada en producción (label correcto). Sin cambios en la cuenta.
+
+## 2026-10-13
+
+- (Registrado el 16 oct desde `change_event`, vía API) TCC `23450445740` → **PAUSED**. Budgets: juego US$2 → **1**, bariátrica US$1 → **0,5**, adolescentes US$1 → **0,5**. Negativas BROAD adolescentes (13 oct) y juego/bari/OS10/cambio-nombre (14 oct).
+
+## 2026-10-08
+
+- **Campaña adolescentes:** `psicologo-adolescentes-online` (`24334063436`) + grupo (`201829585918`) + RSA `…~827500874357` **ENABLED**. Budget US$1/día · Chile PRESENCE · lun–vie · landing `/ads/adolescentes`. TCC grupo adolescentes PAUSED. TCC + negativas BROAD `adolescentes`, `adolescente`, `juvenil`. validate_only previo.
+- **TCC recorte:** PAUSED grupo método `psicologo-cognitivo-conductual-online` (`191937254616`). Agendar: pausadas PHRASE `tomar terapia online`, `psicologo en linea`, `agendar psicologo online`, `agendar terapia online`. Quedan EXACT `a distancia` + grupo adolescentes. Budget US$1. validate_only previo. Juego/OS10/bari/cambio-nombre intactos.
+- **TCC sitelinks:** quitado el último ENABLED (`Agendar sesión` `…~323778366505`). TCC sin sitelinks. validate_only previo.
+- **TCC limpieza:** budget **US$1/día**. REMOVED grupos ansiedad, pánico y pareja. Sitelinks Sobre/TCC/cómo funciona → fuera; queda **Agendar sesión**. Agendar: pausadas 8 kws 0 impr (videollamada/reservar/iniciar/sesión); quedan EXACT `a distancia` + PHRASE `en linea`, `agendar psicologo/terapia online`, `tomar terapia online`. validate_only previo. Juego/OS10/bari/cambio-nombre intactos.
+- **TCC** (`23450445740`): budget **US$1/día** (pedido). Pausados ansiedad `199990977268` y pánico `190222127174` (0 volumen). `psicologo a distancia` PHRASE PAUSED + EXACT ENABLED en agendar. Negativas BROAD `hablemos de todo`, `hablemosdetodo`, `ana galan`. validate_only previo. Juego/OS10/bari/cambio-nombre intactos.
+
 ## 2026-09-30
 
 - **Landings TCC + agendar:** rediseño CRO para tráfico Google Ads con propuesta específica por intención, precio/modalidad visibles, prueba profesional, CTA única por WhatsApp, objeciones y recorrido de 3 pasos; sin cambios de URL ni campaña.
+- **TCC keywords:** reactivar EXACT `psicologo cognitivo conductual online` + EXACT/PHRASE `psicologo cognitivo conductual` en grupo `191937254616` (estaban REMOVED). validate_only previo. No se negativó `psicologa` ni `salud mental` (cortarían adolescentes).
 
 ## 2026-09-28
 

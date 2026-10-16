@@ -9,19 +9,17 @@ Este documento describe la configuración correcta de Google Tag Manager para tr
 ## Arquitectura del Tracking
 
 ```
-[Usuario hace click en WhatsApp]
+[Usuario hace click en WhatsApp (<a target="_blank" data-wa-track="1">)]
          ↓
-[WhatsAppButton.tsx intercepta con preventDefault]
+[Script inline de src/app/ads/layout.tsx (activo desde el parseo del HTML)]
          ↓
-[Push a dataLayer: { event: "whatsapp_lead", eventCallback, eventTimeout }]
+[Push a dataLayer: { event: "whatsapp_lead", label, event_id }]  ← sin preventDefault
          ↓
-[GTM recibe el evento y dispara etiquetas]
+[WhatsApp se abre en nueva pestaña en el mismo gesto (sin bloqueo de popup en iOS)]
+         ↓
+[La landing sigue viva: GTM procesa el evento (aunque cargue después del click)]
          ↓
 [Conversion Linker + Google tag + Conversión Google Ads se ejecutan]
-         ↓
-[GTM llama a eventCallback cuando TODAS las etiquetas terminan]
-         ↓
-[Se abre WhatsApp en nueva pestaña]
 ```
 
 ---
@@ -118,9 +116,13 @@ Si quieres capturar datos adicionales:
    - Solución: Cambiar trigger a `Initialization - All Pages`
 
 3. **La página se cierra antes de completar el hit**
-   - Solución: Ya está resuelta con `eventCallback` + `eventTimeout`
+   - Solución: el link abre WhatsApp en pestaña nueva sin bloquear la landing, que sigue viva y envía el hit
 
-4. **Bloqueadores de ads**
+4. **CSP bloquea el hit** (`src/middleware.ts`)
+   - Google Ads usa el dominio local (`www.google.cl`, `www.google.com.ar`) en `img-src`/`connect-src`; `*.google.com` no lo cubre
+   - `script-src-elem` pisa a `script-src`: debe incluir doubleclick y `connect.facebook.net`
+
+5. **Bloqueadores de ads**
    - Solución: No hay solución técnica, pero el % de usuarios con bloqueadores es bajo
 
 ### "El evento whatsapp_lead no aparece en Tag Assistant"
@@ -136,32 +138,25 @@ Si quieres capturar datos adicionales:
 **Verificar:**
 
 1. Que el `href` sea válido (ej: `https://wa.me/56968257817`)
-2. Que el navegador no esté bloqueando popups
+2. Que el `<a>` tenga `target="_blank"` y no se haga `preventDefault` (abrir con `window.open` después de un callback async lo bloquea iOS)
 3. Revisar consola por errores
 
 ---
 
-## Código del Componente
+## Código del tracking
 
-El componente `WhatsAppButton.tsx` usa las siguientes características de GTM:
+En `/ads/*` el tracking va por delegación en `src/app/ads/layout.tsx` (script inline sobre `a[data-wa-track="1"]`, ver `AdsWhatsAppButton`). Fuera de `/ads`, `WhatsAppButton.tsx` hace lo mismo con `onClick`:
 
 ```typescript
 window.dataLayer.push({
   event: "whatsapp_lead",      // Nombre del evento custom
   label: href,                 // URL de WhatsApp (para debug)
   event_id: generateEventId(), // ID único para deduplicación
-  eventCallback: openOnce,     // Se ejecuta cuando GTM termina TODAS las etiquetas
-  eventTimeout: 1500,          // Fallback: abre WhatsApp después de 1.5s si GTM no responde
 });
+// Sin preventDefault: el <a target="_blank"> abre WhatsApp en el mismo gesto.
 ```
 
-**¿Cómo funciona `eventCallback`?**
-
-GTM intercepta este campo especial y:
-1. Dispara todas las etiquetas asociadas al evento
-2. Espera a que TODAS completen (incluyendo requests de red)
-3. Ejecuta `eventCallback` cuando todo termina
-4. Si pasa `eventTimeout` ms sin terminar, ejecuta `eventCallback` de todas formas
+No se usa `eventCallback`/`eventTimeout`: la landing queda abierta en segundo plano, así GTM dispara la conversión aunque cargue (lazyOnload) después del click.
 
 ---
 
