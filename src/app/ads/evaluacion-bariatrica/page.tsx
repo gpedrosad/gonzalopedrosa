@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { AdsProfessionalCard } from "../components/AdsProfessionalCard";
 import { AdsProfileImage } from "../components/AdsProfileImage";
 import { AdsProviderRegistry } from "../components/AdsProviderRegistry";
 import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
@@ -278,6 +279,12 @@ export default function EvaluacionBariatricaAdsPage() {
           </div>
         </section>
 
+        <AdsProfessionalCard
+          role="Psicólogo clínico · Enfoque cognitivo-conductual"
+          bio="Hago la evaluación psicológica prequirúrgica que piden los equipos bariátricos: motivación, relación con la alimentación, salud mental y red de apoyo. Si tu clínica pide un formato específico, me adapto."
+          tags={["Manga y bypass", "Fonasa PAD e Isapre", "Informe el mismo día"]}
+        />
+
         {/* Precio */}
         <section id="precio" className="px-4 py-8 bg-gray-50">
           <div className="max-w-2xl mx-auto">
@@ -360,7 +367,7 @@ export default function EvaluacionBariatricaAdsPage() {
             <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">
               Qué evalúa
             </h2>
-            <ul className="space-y-2 mb-6">
+            <ul className="space-y-2">
               {QUE_EVALUA.map((item) => (
                 <li
                   key={item}
@@ -372,24 +379,6 @@ export default function EvaluacionBariatricaAdsPage() {
               ))}
             </ul>
 
-            <div className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200">
-              <AdsProfileImage
-                alt="Gonzalo Pedrosa - Psicólogo clínico"
-                width={56}
-                height={56}
-                className="rounded-full object-cover ring-2 ring-gray-100"
-              />
-              <div>
-                <p className="font-semibold text-gray-900 text-[15px]">
-                  Gonzalo Pedrosa
-                </p>
-                <p className="text-sm text-gray-500">
-                  Psicólogo clínico · TCC · +7 años
-                </p>
-                <AdsProviderRegistry className="text-sm text-gray-500" withVerifyLink />
-                <p className="text-sm text-gray-500">4.8 · 281 experiencias</p>
-              </div>
-            </div>
           </div>
         </section>
 

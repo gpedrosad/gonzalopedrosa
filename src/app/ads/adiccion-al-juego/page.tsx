@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { AdsIcon } from "../components/AdsIcon";
+import { AdsProfessionalCard } from "../components/AdsProfessionalCard";
 import { AdsProfileImage } from "../components/AdsProfileImage";
-import { AdsProviderRegistry } from "../components/AdsProviderRegistry";
 import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
 
 export const metadata: Metadata = {
@@ -148,9 +149,13 @@ export default function Page() {
               Respuesta el mismo día · Sin compromiso
             </p>
           </div>
-
-          <AdsProviderRegistry className="text-xs text-gray-500" withVerifyLink />
         </section>
+
+        <AdsProfessionalCard
+          role="Psicólogo clínico · Enfoque cognitivo-conductual"
+          bio="Trabajo con ludopatía: casino, apuestas deportivas y juego online. Llegan personas que ya intentaron parar solas. Identificamos el ciclo, manejamos impulsos y armamos un plan realista para no recaer."
+          tags={["TCC", "Ludopatía y apuestas", "100% online"]}
+        />
 
         {/* Señales / dolor */}
         <section className="px-4 py-8 md:py-12">
@@ -186,47 +191,6 @@ export default function Page() {
               </span>
               .
             </p>
-          </div>
-        </section>
-
-        {/* Sobre el profesional */}
-        <section className="px-4 py-8 md:py-12 bg-gray-50">
-          <div className="max-w-3xl mx-auto">
-            <div className="flex flex-col items-center text-center">
-              <AdsProfileImage
-                alt="Gonzalo Pedrosa - Psicólogo Adicción al Juego"
-                width={120}
-                height={120}
-                className="rounded-full object-cover shadow-lg border-4 border-white mb-4"
-              />
-
-              <h2 className="text-xl font-bold text-gray-900 mb-1">
-                Gonzalo Pedrosa
-              </h2>
-              <p className="text-gray-500 text-sm mb-1">
-                Psicólogo clínico · Enfoque cognitivo-conductual
-              </p>
-              <AdsProviderRegistry className="text-xs text-gray-500 mb-4" withVerifyLink />
-
-              <div className="flex flex-wrap justify-center gap-2 mb-4">
-                <span className="inline-flex items-center gap-1 text-xs bg-white px-3 py-1.5 rounded-full border border-gray-200">
-                  <span className="text-green-500">✓</span> TCC
-                </span>
-                <span className="inline-flex items-center gap-1 text-xs bg-white px-3 py-1.5 rounded-full border border-gray-200">
-                  <span className="text-green-500">✓</span> Ludopatía y apuestas
-                </span>
-                <span className="inline-flex items-center gap-1 text-xs bg-white px-3 py-1.5 rounded-full border border-gray-200">
-                  <span className="text-green-500">✓</span> 100% online
-                </span>
-              </div>
-
-              <p className="text-gray-600 text-sm leading-relaxed max-w-md">
-                Trabajo con ludopatía: casino, apuestas deportivas y juego
-                online. Llegan personas que ya intentaron parar solas.
-                Identificamos el ciclo, manejamos impulsos y armamos un plan
-                realista para no recaer.
-              </p>
-            </div>
           </div>
         </section>
 
@@ -290,28 +254,30 @@ export default function Page() {
             <div className="grid grid-cols-2 gap-3">
               {[
                 {
-                  icon: "🧠",
+                  icon: "idea" as const,
                   title: "Pensamientos",
                   desc: "Creencias sobre “recuperar lo perdido”",
                 },
                 {
-                  icon: "⚡",
+                  icon: "bolt" as const,
                   title: "Impulsos",
                   desc: "Frenar el impulso antes de apostar",
                 },
                 {
-                  icon: "🛡️",
+                  icon: "shield" as const,
                   title: "Recaídas",
                   desc: "Plan concreto para no volver",
                 },
                 {
-                  icon: "🏠",
+                  icon: "home" as const,
                   title: "Vida real",
                   desc: "Finanzas, familia y rutinas",
                 },
               ].map((item, i) => (
                 <div key={i} className="p-4 bg-gray-800 rounded-xl text-center">
-                  <span className="text-2xl mb-2 block">{item.icon}</span>
+                  <span className="w-10 h-10 mx-auto mb-2 rounded-full bg-gray-700 text-green-400 flex items-center justify-center">
+                    <AdsIcon name={item.icon} />
+                  </span>
                   <h3 className="font-semibold text-white text-sm mb-1">
                     {item.title}
                   </h3>
@@ -353,22 +319,30 @@ export default function Page() {
 
             <div className="grid grid-cols-2 gap-3">
               <div className="p-4 bg-gray-50 rounded-xl text-center">
-                <span className="text-2xl mb-2 block">📹</span>
+                <span className="w-10 h-10 mx-auto mb-2 rounded-full bg-white border border-gray-200 text-green-700 flex items-center justify-center">
+                  <AdsIcon name="video" />
+                </span>
                 <p className="text-sm font-medium text-gray-900">Videollamada</p>
                 <p className="text-xs text-gray-500">Sin descargar nada</p>
               </div>
               <div className="p-4 bg-gray-50 rounded-xl text-center">
-                <span className="text-2xl mb-2 block">⏱️</span>
+                <span className="w-10 h-10 mx-auto mb-2 rounded-full bg-white border border-gray-200 text-green-700 flex items-center justify-center">
+                  <AdsIcon name="clock" />
+                </span>
                 <p className="text-sm font-medium text-gray-900">50 minutos</p>
                 <p className="text-xs text-gray-500">Sesión completa</p>
               </div>
               <div className="p-4 bg-gray-50 rounded-xl text-center">
-                <span className="text-2xl mb-2 block">🔒</span>
+                <span className="w-10 h-10 mx-auto mb-2 rounded-full bg-white border border-gray-200 text-green-700 flex items-center justify-center">
+                  <AdsIcon name="lock" />
+                </span>
                 <p className="text-sm font-medium text-gray-900">Confidencial</p>
                 <p className="text-xs text-gray-500">100% privado</p>
               </div>
               <div className="p-4 bg-gray-50 rounded-xl text-center">
-                <span className="text-2xl mb-2 block">📅</span>
+                <span className="w-10 h-10 mx-auto mb-2 rounded-full bg-white border border-gray-200 text-green-700 flex items-center justify-center">
+                  <AdsIcon name="calendar" />
+                </span>
                 <p className="text-sm font-medium text-gray-900">Flexible</p>
                 <p className="text-xs text-gray-500">Horarios a tu medida</p>
               </div>

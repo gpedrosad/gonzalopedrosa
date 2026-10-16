@@ -10,6 +10,7 @@ import { HowItWorks } from "./components/HowItWorks";
 import { Includes } from "./components/Includes";
 import { Pricing } from "./components/Pricing";
 import { SocialProof } from "./components/SocialProof";
+import { AdsProfessionalCard } from "../components/AdsProfessionalCard";
 import { StickyBar } from "./components/StickyBar";
 import { WhyUs } from "./components/WhyUs";
 import {
@@ -113,6 +114,11 @@ export default function InformePsicologicoOs10Page() {
 
       <main className="min-h-screen bg-white">
         <Hero />
+        <AdsProfessionalCard
+          role="Psicólogo clínico · Chillán"
+          bio="Hago la evaluación psicológica de control de impulsos y aptitud psíquica que piden para seguridad privada, por videollamada y con horarios que consideran turnos."
+          tags={["Informe firmado en PDF", "Boleta electrónica", "Online en todo Chile"]}
+        />
         <SocialProof />
         <Audience />
         <Includes />

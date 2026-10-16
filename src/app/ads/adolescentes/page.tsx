@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { AdsIcon, type AdsIconName } from "../components/AdsIcon";
+import { AdsProfessionalCard } from "../components/AdsProfessionalCard";
 import { AdsProfileImage } from "../components/AdsProfileImage";
-import { AdsProviderRegistry } from "../components/AdsProviderRegistry";
 import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
 
 export const metadata: Metadata = {
@@ -88,6 +89,36 @@ const faqSchema = {
   ],
 };
 
+const HERO_BULLETS = [
+  "Sesiones de 50 min por videollamada",
+  "Enfoque cognitivo-conductual adaptado a su edad",
+  "Confidencial, con avances generales para los padres",
+  "Boleta electrónica para reembolso según tu plan",
+];
+
+const SITUACIONES: { icon: AdsIconName; title: string; desc: string }[] = [
+  {
+    icon: "heart",
+    title: "Ansiedad y depresión adolescente",
+    desc: "Preocupación excesiva, tristeza persistente, pérdida de interés en actividades, cambios en el estado de ánimo.",
+  },
+  {
+    icon: "bolt",
+    title: "Ataques de pánico",
+    desc: "Episodios repentinos de miedo intenso, taquicardia, dificultad para respirar, sensación de pérdida de control.",
+  },
+  {
+    icon: "activity",
+    title: "Problemas de conducta",
+    desc: "Dificultades en el manejo de emociones, impulsividad, conductas desafiantes, conflictos con padres o pares.",
+  },
+  {
+    icon: "shield",
+    title: "Bullying y acoso escolar",
+    desc: "Situaciones de acoso en el colegio, dificultades para relacionarse con pares, aislamiento social, baja autoestima.",
+  },
+];
+
 export default function Page() {
   return (
     <>
@@ -98,57 +129,73 @@ export default function Page() {
       />
 
       <main className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="px-4 pt-12 pb-10 md:pt-20 md:pb-16 max-w-2xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <AdsProfileImage
-              alt="Gonzalo Pedrosa - Psicólogo Online para Adolescentes"
-              width={56}
-              height={56}
-              priority
-              className="rounded-full object-cover"
-            />
-            <div>
-              <p className="font-semibold text-gray-900">Gonzalo Pedrosa</p>
-              <p className="text-sm text-gray-500">Psicólogo Online · 281 experiencias</p>
-            </div>
+        {/* Hero */}
+        <section className="px-4 pt-8 pb-8 max-w-2xl mx-auto">
+          <div className="flex items-center justify-between mb-4">
+            <span className="inline-flex items-center gap-1.5 bg-green-50 text-green-700 text-xs font-medium px-2.5 py-1 rounded-full border border-green-200">
+              <span className="w-1.5 h-1.5 bg-green-500 rounded-full" />
+              100% online · todo Chile
+            </span>
+            <span className="text-xs text-gray-500">Desde 14 años</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-4 leading-tight">
+          <h1 className="text-[26px] leading-tight md:text-3xl font-bold text-gray-900 tracking-tight mb-3">
             Psicólogo para adolescentes online
           </h1>
 
-          <p className="text-lg text-gray-600 mb-4 leading-relaxed">
-            Terapia emocional online para adolescentes con ansiedad, depresión, pánico,
-            cambios de conducta o dificultades escolares. Videollamada privada, enfoque
-            cognitivo-conductual y espacio seguro para tu hijo/a.
+          <p className="text-base text-gray-600 mb-4 leading-relaxed">
+            Terapia para adolescentes con ansiedad, depresión, pánico, cambios de
+            conducta o dificultades escolares. Videollamada privada, enfoque
+            cognitivo-conductual y un espacio seguro para tu hijo/a.
           </p>
 
-          <p className="text-sm text-gray-500 mb-6">
-            Desde 14 años · Sesiones de 50 min · $35.000 CLP
-          </p>
+          <ul className="space-y-2 mb-5">
+            {HERO_BULLETS.map((item) => (
+              <li
+                key={item}
+                className="flex items-start gap-2.5 text-[15px] text-gray-700"
+              >
+                <span className="text-green-500 mt-0.5 flex-shrink-0">✓</span>
+                {item}
+              </li>
+            ))}
+          </ul>
 
-          <div className="flex flex-col sm:flex-row gap-3 mb-3">
+          <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-2xl p-4">
+            <div className="flex items-center justify-between mb-3">
+              <div>
+                <p className="text-sm text-gray-600">Sesión online de 50 min</p>
+                <p className="text-2xl font-bold text-gray-900">
+                  $35.000{" "}
+                  <span className="text-sm font-normal text-gray-500">CLP</span>
+                </p>
+              </div>
+              <AdsProfileImage
+                alt="Gonzalo Pedrosa - Psicólogo para adolescentes"
+                width={56}
+                height={56}
+                priority
+                className="rounded-full object-cover border-2 border-white shadow-md"
+              />
+            </div>
             <AdsWhatsAppButton
               href={WHATSAPP_HREF}
               label="ads-adolescentes-hero"
-              className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md"
+              className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold shadow-md justify-center"
             >
               Agendar sesión online
             </AdsWhatsAppButton>
+            <p className="text-xs text-gray-500 text-center mt-2">
+              Respuesta el mismo día · Sin lista de espera
+            </p>
           </div>
-
-          <p className="text-sm text-green-700 font-medium mb-2">
-            ✓ Coordinamos primera sesión por WhatsApp
-          </p>
-
-          <p className="text-sm text-gray-500 flex items-center gap-2">
-            <span className="inline-block w-2 h-2 bg-green-500 rounded-full"></span>
-            Respuesta el mismo día · Horarios flexibles · 100% confidencial
-          </p>
-
-          <AdsProviderRegistry className="mt-3 text-xs text-gray-500" withVerifyLink />
         </section>
+
+        <AdsProfessionalCard
+          role="Psicólogo clínico · Enfoque cognitivo-conductual"
+          bio="Trabajo con adolescentes que atraviesan ansiedad, depresión, ataques de pánico, dificultades de conducta o bullying. Mi objetivo es que tu hijo/a tenga un espacio seguro para expresarse sin juicios y herramientas concretas para sentirse mejor."
+          tags={["Adolescentes desde 14 años", "TCC", "100% online"]}
+        />
 
         {/* Para quién es */}
         <section className="px-4 py-10 md:py-14 bg-gray-50">
@@ -226,42 +273,6 @@ export default function Page() {
           </p>
         </section>
 
-        {/* Sobre el profesional */}
-        <section className="px-4 py-10 md:py-14 bg-gray-50">
-          <div className="max-w-2xl mx-auto">
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-6">
-              Sobre el psicólogo
-            </h2>
-
-            <div className="flex flex-col sm:flex-row gap-6 items-start">
-              <AdsProfileImage
-                alt="Gonzalo Pedrosa - Psicólogo para Adolescentes Online"
-                width={120}
-                height={120}
-                className="rounded-xl object-cover flex-shrink-0"
-              />
-              <div>
-                <h3 className="font-semibold text-gray-900 text-lg mb-2">
-                  Gonzalo Pedrosa
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-3">
-                  Soy psicólogo clínico con enfoque cognitivo-conductual y experiencia 
-                  en trabajo con adolescentes. Trabajo con jóvenes que atraviesan 
-                  ansiedad, depresión, ataques de pánico, dificultades de conducta y 
-                  situaciones de bullying.
-                </p>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Mi objetivo es crear un espacio seguro donde el adolescente pueda 
-                  expresarse sin juicios y desarrollar herramientas concretas para 
-                  sentirse mejor. La terapia online permite flexibilidad y comodidad, 
-                  facilitando el proceso terapéutico.
-                </p>
-                <AdsProviderRegistry className="mt-3 text-sm text-gray-500" withVerifyLink />
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Con qué ayudo */}
         <section className="px-4 py-10 md:py-14 max-w-2xl mx-auto">
           <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-6">
@@ -269,57 +280,17 @@ export default function Page() {
           </h2>
 
           <div className="space-y-4">
-            <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
-              <div className="flex-shrink-0 w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
-                <span className="text-orange-600 text-lg">😰</span>
+            {SITUACIONES.map((item) => (
+              <div key={item.title} className="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+                <div className="flex-shrink-0 w-10 h-10 bg-white border border-gray-200 text-green-700 rounded-full flex items-center justify-center">
+                  <AdsIcon name={item.icon} />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900">{item.title}</h3>
+                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-semibold text-gray-900">Ansiedad y depresión adolescente</h3>
-                <p className="text-gray-600 text-sm">
-                  Preocupación excesiva, tristeza persistente, pérdida de interés en actividades, 
-                  cambios en el estado de ánimo.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
-              <div className="flex-shrink-0 w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
-                <span className="text-red-600 text-lg">⚡</span>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-900">Ataques de pánico</h3>
-                <p className="text-gray-600 text-sm">
-                  Episodios repentinos de miedo intenso, taquicardia, dificultad para respirar, 
-                  sensación de pérdida de control.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
-              <div className="flex-shrink-0 w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
-                <span className="text-purple-600 text-lg">🎭</span>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-900">Problemas de conducta</h3>
-                <p className="text-gray-600 text-sm">
-                  Dificultades en el manejo de emociones, impulsividad, conductas desafiantes, 
-                  conflictos con padres o pares.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
-              <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                <span className="text-blue-600 text-lg">🛡️</span>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-900">Bullying y acoso escolar</h3>
-                <p className="text-gray-600 text-sm">
-                  Situaciones de acoso en el colegio, dificultades para relacionarse con pares, 
-                  aislamiento social, baja autoestima.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
 
