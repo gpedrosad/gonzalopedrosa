@@ -4,6 +4,8 @@ Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
 ## 2026-10-16
 
+- **Presupuestos + assets** (`scripts/google-ads-budgets-assets.mjs`, validate_only previo): juego US$1 → **2**, bariátrica US$0,5 → **1**, adolescentes US$0,5 → **1** (OS10 sigue en 2; total US$6/día). Cambio de nombre `24298829243` → **PAUSED** (4 impr/30d). Primeros assets de la cuenta en juego, bari, OS10 y adolescentes: 6 callouts + snippet `Servicios` + precio (4 ítems CLP, propio primero).
+- **Bariátrica $50.000** (evaluación + informe): landing desplegada antes; RSA nueva ENABLED `199819157735~828278603478` (H1 pin `Evaluación + informe $50.000`); RSA $75.000 `…~825713076380` PAUSED.
 - **Tracking WhatsApp:** `whatsapp_lead` sin `preventDefault` ni `eventCallback`: el `<a target="_blank">` abre WhatsApp en el gesto y la landing sigue viva para que GTM envíe la conversión aunque cargue después del click. Script de `/ads/layout.tsx` inline (antes `lazyOnload`: clics tempranos no se medían). Mismo cambio en `WhatsAppButton.tsx`.
 - **CSP** (`src/middleware.ts`): `www.google.cl` / `www.google.com.ar` en `img-src` + `connect-src` (hits `1p-conversion` bloqueados); `script-src-elem` con doubleclick y `connect.facebook.net`.
 - **Revisión:** 9–15 oct 46 clics / US$39 / **0 conv**. Conversión verificada en producción (label correcto). Sin cambios en la cuenta.

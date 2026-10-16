@@ -43,6 +43,14 @@ npm run google-ads:create-informe-os10 -- --apply
 npm run google-ads:create-informe-cambio-nombre
 npm run google-ads:create-informe-cambio-nombre -- --apply
 
+# Campaña psicólogo adolescentes (crear pausada; dry-run por defecto)
+npm run google-ads:create-psicologo-adolescentes
+npm run google-ads:create-psicologo-adolescentes -- --apply
+
+# Presupuestos + pausa cambio de nombre + assets + RSA bariátrica $50.000 (aplicado 16 oct)
+npm run google-ads:budgets-assets
+npm run google-ads:budgets-assets -- --apply
+
 # Reactivar + horario lun–vie (sin sáb/dom)
 node --env-file=.env.local scripts/google-ads-weekday-enable.mjs
 node --env-file=.env.local scripts/google-ads-weekday-enable.mjs --apply

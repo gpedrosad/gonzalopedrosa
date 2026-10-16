@@ -2,14 +2,15 @@
 
 - **Customer:** `5930583968` · moneda USD
 - **Campaña TCC:** `psicologo-cognitivo-conductual-online` (`23450445740`) · **PAUSED** (13 oct) · horario **lun–vie** · budget **US$1/día** · solo grupo agendar (EXACT `a distancia`)
-- **Campaña:** `psicologo-adolescentes-online` (`24334063436`) · **ENABLED** · horario **lun–vie** · budget **US$0,5/día** (13 oct) · geo **Chile PRESENCE** · grupo `psicologo-adolescentes` (`201829585918`) ENABLED · landing `/ads/adolescentes`
-- **Campaña:** `adiccion-al-juego-online` (`24172229213`) · **ENABLED** · horario **lun–vie** · budget **US$1/día** (13 oct) · geo **Chile PRESENCE** · grupo `adiccion-al-juego` ENABLED · landing `/ads/adiccion-al-juego`
-- **Campaña:** `evaluacion-bariatrica-online` (`24172472867`) · **ENABLED** · horario **lun–vie** · budget **US$0,5/día** (13 oct) · geo Chile PRESENCE · grupo `evaluacion-bariatrica` (`199819157735`) ENABLED · landing `/ads/evaluacion-bariatrica`
+- **Campaña:** `psicologo-adolescentes-online` (`24334063436`) · **ENABLED** · horario **lun–vie** · budget **US$1/día** (16 oct) · geo **Chile PRESENCE** · grupo `psicologo-adolescentes` (`201829585918`) ENABLED · landing `/ads/adolescentes`
+- **Campaña:** `adiccion-al-juego-online` (`24172229213`) · **ENABLED** · horario **lun–vie** · budget **US$2/día** (16 oct) · geo **Chile PRESENCE** · grupo `adiccion-al-juego` ENABLED · landing `/ads/adiccion-al-juego`
+- **Campaña:** `evaluacion-bariatrica-online` (`24172472867`) · **ENABLED** · horario **lun–vie** · budget **US$1/día** (16 oct) · **$50.000** evaluación + informe · geo Chile PRESENCE · grupo `evaluacion-bariatrica` (`199819157735`) ENABLED · landing `/ads/evaluacion-bariatrica`
 - **Campaña:** `informe-psicologico-os10-online` (`24291587680`) · **ENABLED** · horario **lun–vie** · budget **US$2/día** · geo Chile PRESENCE · grupo `informe-psicologico-os10` (`198276616297`) ENABLED · landing `/ads/informe-psicologico-os10`
-- **Campaña:** `informe-cambio-nombre-apellido-online` (`24298829243`) · **ENABLED** · horario **lun–vie** · budget **US$1/día** · geo Chile PRESENCE · grupo `informe-cambio-nombre-apellido` (`203691716634`) ENABLED · landing `/ads/informe-cambio-nombre-apellido`
+- **Campaña:** `informe-cambio-nombre-apellido-online` (`24298829243`) · **PAUSED** (16 oct) · horario **lun–vie** · budget **US$1/día** · geo Chile PRESENCE · grupo `informe-cambio-nombre-apellido` (`203691716634`) ENABLED · landing `/ads/informe-cambio-nombre-apellido`
 - **Conv:** solo **WhatsApp click** (`7451799330`, label `sVwoCKLepeEbEIHgncVC`) primary + métrica + `CONTACT~WEBSITE` biddable. Las otras 3 acciones / goals de lead form y signup no pujan.
 - **Sitelinks TCC:** ninguno (todos removed 8 oct). Las URLs `/sitelink/*` del sitio siguen, ya no se anuncian.
-- **Última revisión:** 2026-10-16 · 0 conv desde 9 oct (tracking verificado OK); presupuestos recortados 13 oct
+- **Assets:** callouts + snippet `Servicios` + precio CLP en las 4 campañas activas (16 oct).
+- **Última revisión:** 2026-10-16 · 0 conv 9–15 oct (tracking verificado OK); presupuestos restaurados y assets nuevos
 
 ## Grupos
 

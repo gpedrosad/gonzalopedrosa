@@ -13,6 +13,8 @@
 
 **No negativar** `cambio de nombre` / `cambio de apellido` / `rectificacion` en `informe-cambio-nombre-apellido-online`. En TCC y las otras campañas sí: aíslan el tráfico.
 
+**No negativar** `adolescentes` / `adolescente` / `juvenil` en `psicologo-adolescentes-online`. En TCC y las otras campañas sí: aíslan el tráfico.
+
 **Sí seguras** (competidores, otro enfoque, expectativa incorrecta): emdr, dbt, betterhelp, unobravo, apps, adventista, 24/7, sexologo, psicoanalisis, gratis/IA, etc.
 
 Negativas se aplican a **nivel campaña**, match BROAD.
@@ -28,6 +30,7 @@ Mapa canónico (www). RSA con URL incorrecta → `align-landings` (no UPDATE de 
 | psicologo-ataques-de-panico-online | `/ads/psicologo-ataques-de-panico-online` |
 | psicologo-cognitivo-conductual-online | `/ads/psicologo-cognitivo-conductual-online` |
 | psicologo-adolescentes-online | `/ads/adolescentes` |
+| psicologo-adolescentes | `/ads/adolescentes` |
 | terapia-pareja | `/ads/terapia-pareja` |
 | adiccion-al-juego | `/ads/adiccion-al-juego` |
 | evaluacion-bariatrica | `/ads/evaluacion-bariatrica` |
