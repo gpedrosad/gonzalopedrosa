@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
 import { AdsProfileImage } from "../components/AdsProfileImage";
+import { AdsProviderRegistry } from "../components/AdsProviderRegistry";
 import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Terapia Online para Adolescentes | Psicólogo Online",
+  title: "Psicólogo para Adolescentes Online | Terapia por Videollamada",
   description:
-    "Terapia emocional online para adolescentes: ansiedad, depresión, pánico y conducta. Psicólogo online por videollamada. Desde 14 años. Agenda por WhatsApp.",
+    "Psicólogo para adolescentes online: ansiedad, depresión, pánico y conducta. Terapia por videollamada desde 14 años. Agenda por WhatsApp.",
   robots: {
     index: false,
     follow: false,
   },
   openGraph: {
-    title: "Terapia Online para Adolescentes | Psicólogo Online",
+    title: "Psicólogo para Adolescentes Online | Terapia por Videollamada",
     description:
       "Terapia emocional online para adolescentes con ansiedad, depresión, pánico o cambios de conducta. Psicólogo online por videollamada.",
     url: "https://www.gonzalopedrosa.cl/ads/adolescentes",
@@ -41,7 +42,7 @@ const faqSchema = {
       name: "¿La terapia online es efectiva para adolescentes?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí. La terapia online para adolescentes ha demostrado ser igual de efectiva que la presencial. Muchos jóvenes se sienten más cómodos en su propio espacio.",
+        text: "Sí. La terapia online tiene buenos resultados en ansiedad y depresión adolescente, y muchos jóvenes se sienten más cómodos conversando desde su propio espacio.",
       },
     },
     {
@@ -57,7 +58,31 @@ const faqSchema = {
       name: "¿Los padres deben estar presentes en la sesión?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No necesariamente. Dependiendo de la edad y la situación, se puede trabajar solo con el adolescente para respetar su privacidad y fomentar su autonomía.",
+        text: "No necesariamente. Dependiendo de la edad y la situación, se puede trabajar solo con el adolescente para respetar su privacidad y fomentar su autonomía. Cuando es útil, coordinamos un espacio con la madre, padre o tutor.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué se les cuenta a los padres?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Lo que el adolescente conversa en sesión es confidencial. A los padres les comparto el plan de trabajo y los avances generales. Si hay un riesgo para su seguridad, se les informa siempre.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Necesito autorizar la terapia de mi hijo/a?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí. En menores de 18 años, la madre, padre o tutor coordina la primera sesión y autoriza la atención. Puedes escribirme tú por WhatsApp para partir.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cómo se paga? ¿Entregas boleta?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Pagas por transferencia o Webpay antes de la sesión. Entrego boleta electrónica, que puedes presentar a tu Isapre o seguro para pedir reembolso según tu plan.",
       },
     },
   ],
@@ -90,7 +115,7 @@ export default function Page() {
           </div>
 
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-4 leading-tight">
-            Terapia Online para Adolescentes
+            Psicólogo para adolescentes online
           </h1>
 
           <p className="text-lg text-gray-600 mb-4 leading-relaxed">
@@ -119,8 +144,10 @@ export default function Page() {
 
           <p className="text-sm text-gray-500 flex items-center gap-2">
             <span className="inline-block w-2 h-2 bg-green-500 rounded-full"></span>
-            Respuesta rápida · Horarios flexibles · 100% confidencial
+            Respuesta el mismo día · Horarios flexibles · 100% confidencial
           </p>
+
+          <AdsProviderRegistry className="mt-3 text-xs text-gray-500" withVerifyLink />
         </section>
 
         {/* Para quién es */}
@@ -218,7 +245,7 @@ export default function Page() {
                   Gonzalo Pedrosa
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-3">
-                  Soy psicólogo clínico con enfoque cognitivo-conductual, especializado 
+                  Soy psicólogo clínico con enfoque cognitivo-conductual y experiencia 
                   en trabajo con adolescentes. Trabajo con jóvenes que atraviesan 
                   ansiedad, depresión, ataques de pánico, dificultades de conducta y 
                   situaciones de bullying.
@@ -229,6 +256,7 @@ export default function Page() {
                   sentirse mejor. La terapia online permite flexibilidad y comodidad, 
                   facilitando el proceso terapéutico.
                 </p>
+                <AdsProviderRegistry className="mt-3 text-sm text-gray-500" withVerifyLink />
               </div>
             </div>
           </div>
@@ -299,7 +327,7 @@ export default function Page() {
         <section className="px-4 py-8 md:py-10 bg-gray-900">
           <div className="max-w-2xl mx-auto text-center">
             <p className="text-green-400 text-xs font-medium uppercase tracking-wider mb-2">
-              Cupos limitados
+              Sin lista de espera
             </p>
             <p className="text-white text-lg font-medium mb-4">
               ¿Buscas ayuda profesional para tu hijo/a?
@@ -312,7 +340,7 @@ export default function Page() {
               Agendar sesión online
             </AdsWhatsAppButton>
             <p className="text-gray-400 text-sm mt-3">
-              Sin lista de espera · Sin compromiso
+              Respuesta el mismo día · Sin compromiso
             </p>
           </div>
         </section>
@@ -347,8 +375,8 @@ export default function Page() {
                   </span>
                 </summary>
                 <p className="mt-3 text-gray-600 text-sm leading-relaxed">
-                  Sí. La terapia online para adolescentes ha demostrado ser igual de 
-                  efectiva que la presencial. Muchos jóvenes se sienten más cómodos en 
+                  Sí. La terapia online tiene buenos resultados en ansiedad y depresión 
+                  adolescente, y muchos jóvenes se sienten más cómodos conversando desde 
                   su propio espacio.
                 </p>
               </details>
@@ -376,7 +404,46 @@ export default function Page() {
                 <p className="mt-3 text-gray-600 text-sm leading-relaxed">
                   No necesariamente. Dependiendo de la edad y la situación, se puede 
                   trabajar solo con el adolescente para respetar su privacidad y fomentar 
-                  su autonomía.
+                  su autonomía. Cuando es útil, coordinamos un espacio con la madre, padre 
+                  o tutor.
+                </p>
+              </details>
+              <details className="p-4 bg-white rounded-xl border border-gray-200 group">
+                <summary className="cursor-pointer font-medium text-gray-900 flex justify-between items-center">
+                  ¿Qué se les cuenta a los padres?
+                  <span className="text-gray-400 group-open:rotate-180 transition-transform">
+                    ↓
+                  </span>
+                </summary>
+                <p className="mt-3 text-gray-600 text-sm leading-relaxed">
+                  Lo que el adolescente conversa en sesión es confidencial. A los padres les
+                  comparto el plan de trabajo y los avances generales. Si hay un riesgo para
+                  su seguridad, se les informa siempre.
+                </p>
+              </details>
+              <details className="p-4 bg-white rounded-xl border border-gray-200 group">
+                <summary className="cursor-pointer font-medium text-gray-900 flex justify-between items-center">
+                  ¿Necesito autorizar la terapia de mi hijo/a?
+                  <span className="text-gray-400 group-open:rotate-180 transition-transform">
+                    ↓
+                  </span>
+                </summary>
+                <p className="mt-3 text-gray-600 text-sm leading-relaxed">
+                  Sí. En menores de 18 años, la madre, padre o tutor coordina la primera
+                  sesión y autoriza la atención. Puedes escribirme tú por WhatsApp para partir.
+                </p>
+              </details>
+              <details className="p-4 bg-white rounded-xl border border-gray-200 group">
+                <summary className="cursor-pointer font-medium text-gray-900 flex justify-between items-center">
+                  ¿Cómo se paga? ¿Entregas boleta?
+                  <span className="text-gray-400 group-open:rotate-180 transition-transform">
+                    ↓
+                  </span>
+                </summary>
+                <p className="mt-3 text-gray-600 text-sm leading-relaxed">
+                  Pagas por transferencia o Webpay antes de la sesión. Entrego boleta
+                  electrónica, que puedes presentar a tu Isapre o seguro para pedir reembolso
+                  según tu plan.
                 </p>
               </details>
 
@@ -413,15 +480,12 @@ export default function Page() {
 
         {/* CTA Final */}
         <section className="px-4 py-12 md:py-16 max-w-2xl mx-auto text-center">
-          <p className="text-green-600 text-sm font-medium mb-3">
-            Horarios disponibles para esta semana
-          </p>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            Consultá disponibilidad por WhatsApp
+            Consulta disponibilidad por WhatsApp
           </h2>
           <p className="text-gray-600 mb-6 max-w-md mx-auto">
             Si tu hijo/a está atravesando ansiedad, depresión, pánico o dificultades de 
-            conducta, la terapia puede ayudar. Escribime y coordinamos una primera sesión.
+            conducta, la terapia puede ayudar. Escríbeme y coordinamos una primera sesión.
           </p>
 
           <AdsWhatsAppButton
@@ -433,7 +497,7 @@ export default function Page() {
           </AdsWhatsAppButton>
 
           <p className="text-sm text-gray-500 mt-4">
-            Agenda inicial en menos de 24 horas · Sin lista de espera
+            Respuesta el mismo día · Sin lista de espera
           </p>
         </section>
 
@@ -443,7 +507,7 @@ export default function Page() {
         {/* Sticky CTA Mobile */}
         <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-t border-gray-200 p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
           <div className="flex items-center justify-between mb-2">
-            <p className="text-xs text-green-600 font-medium">Cupos limitados</p>
+            <p className="text-xs text-gray-700 font-medium">Sesión online · $35.000</p>
             <p className="text-xs text-gray-500">Sin lista de espera</p>
           </div>
           <AdsWhatsAppButton

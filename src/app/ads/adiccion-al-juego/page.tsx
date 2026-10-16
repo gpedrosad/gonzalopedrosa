@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
 import { AdsProfileImage } from "../components/AdsProfileImage";
+import { AdsProviderRegistry } from "../components/AdsProviderRegistry";
 import { AdsWhatsAppButton } from "../components/AdsWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Tratamiento Adicción al Juego Online | Psicólogo TCC",
+  title: "Psicólogo Adicción al Juego y Apuestas Online | Ludopatía",
   description:
-    "Terapia online para ludopatía y adicción al juego. Recupera el control con terapia cognitivo-conductual. Sesiones por videollamada. Agenda por WhatsApp.",
+    "Psicólogo online para ludopatía, adicción al juego y a las apuestas. Terapia cognitivo-conductual por videollamada. Agenda por WhatsApp.",
   robots: {
     index: false,
     follow: false,
   },
   openGraph: {
-    title: "Tratamiento Adicción al Juego Online | Psicólogo TCC",
+    title: "Psicólogo Adicción al Juego y Apuestas Online | Ludopatía",
     description:
       "Terapia online para ludopatía y adicción al juego. Recupera el control con terapia cognitivo-conductual.",
     url: "https://www.gonzalopedrosa.cl/ads/adiccion-al-juego",
@@ -66,6 +67,14 @@ const faqSchema = {
         text: "La sesión tiene un valor de $35.000 CLP y dura 50 minutos. Incluye atención personalizada por videollamada.",
       },
     },
+    {
+      "@type": "Question",
+      name: "¿Qué formas de pago aceptas? ¿Entregas boleta?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Transferencia o Webpay antes de la sesión. Entrego boleta electrónica, que puedes presentar a tu Isapre o seguro para pedir reembolso según tu plan.",
+      },
+    },
   ],
 };
 
@@ -90,7 +99,7 @@ export default function Page() {
           </div>
 
           <h1 className="text-2xl md:text-4xl font-bold text-gray-900 tracking-tight mb-3 leading-tight">
-            Tratamiento psicológico online para adicción al juego
+            Psicólogo online para adicción al juego y a las apuestas
           </h1>
 
           <p className="text-base text-gray-600 mb-4 leading-relaxed">
@@ -104,7 +113,7 @@ export default function Page() {
               ✓ Terapia Cognitivo-Conductual
             </span>
             <span className="inline-flex items-center gap-1.5 text-sm text-gray-700 bg-gray-100 px-3 py-1.5 rounded-full">
-              ✓ Casino, apuestas y online
+              ✓ Prevención de recaídas
             </span>
             <span className="inline-flex items-center gap-1.5 text-sm text-gray-700 bg-gray-100 px-3 py-1.5 rounded-full">
               ✓ 100% confidencial
@@ -136,9 +145,11 @@ export default function Page() {
               Agendar mi sesión
             </AdsWhatsAppButton>
             <p className="text-xs text-gray-500 text-center mt-2">
-              Respuesta en menos de 2 horas · Sin compromiso
+              Respuesta el mismo día · Sin compromiso
             </p>
           </div>
+
+          <AdsProviderRegistry className="text-xs text-gray-500" withVerifyLink />
         </section>
 
         {/* Señales / dolor */}
@@ -192,9 +203,10 @@ export default function Page() {
               <h2 className="text-xl font-bold text-gray-900 mb-1">
                 Gonzalo Pedrosa
               </h2>
-              <p className="text-gray-500 text-sm mb-4">
-                Psicólogo · Enfoque cognitivo-conductual
+              <p className="text-gray-500 text-sm mb-1">
+                Psicólogo clínico · Enfoque cognitivo-conductual
               </p>
+              <AdsProviderRegistry className="text-xs text-gray-500 mb-4" withVerifyLink />
 
               <div className="flex flex-wrap justify-center gap-2 mb-4">
                 <span className="inline-flex items-center gap-1 text-xs bg-white px-3 py-1.5 rounded-full border border-gray-200">
@@ -394,8 +406,8 @@ export default function Page() {
                   a: "Depende de cada caso. Algunas personas notan cambios en pocas semanas; otros procesos son más largos. Lo evaluamos juntos en la primera consulta.",
                 },
                 {
-                  q: "¿Qué formas de pago aceptas?",
-                  a: "Transferencia bancaria antes de la sesión. Te envío los datos al coordinar la hora.",
+                  q: "¿Qué formas de pago aceptas? ¿Entregas boleta?",
+                  a: "Transferencia o Webpay antes de la sesión. Entrego boleta electrónica, que puedes presentar a tu Isapre o seguro para pedir reembolso según tu plan.",
                 },
               ].map((item, i) => (
                 <details
@@ -427,7 +439,7 @@ export default function Page() {
               ¿Listo/a para recuperar el control?
             </h2>
             <p className="text-gray-400 mb-6 text-sm max-w-md mx-auto">
-              Escríbeme ahora y te respondo en menos de 2 horas. Podemos
+              Escríbeme ahora y te respondo el mismo día. Podemos
               coordinar un horario que te acomode.
             </p>
 

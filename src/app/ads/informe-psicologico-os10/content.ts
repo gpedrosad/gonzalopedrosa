@@ -93,12 +93,12 @@ export const h1Activa: keyof typeof h1Variantes = "a";
 export const h1 = h1Variantes[h1Activa];
 
 export const seo = {
-  title: "Informe psicológico OS10 | Control de impulsos para guardias Chile",
-  description: `Evaluación psicológica OS10 online por ${formatClp(precios.particular)}, informe PDF incluido, el mismo día y con boleta. Agenda por WhatsApp.`,
+  title: "Informe Psicológico OS10 | Examen para Guardias de Seguridad",
+  description: `Examen psicológico para guardias (OS10, control de impulsos) online por ${formatClp(precios.particular)}. Certificado o informe PDF el mismo día, con boleta. Agenda por WhatsApp.`,
 };
 
 export const hero = {
-  subtitulo: `Evaluación online con psicólogo registrado · PDF el mismo día · ${formatClp(precios.particular)}, informe incluido`,
+  subtitulo: `Examen psicológico para guardias con psicólogo registrado · Certificado en PDF el mismo día · ${formatClp(precios.particular)}, informe incluido`,
   badges: [
     `Registro N.° ${HEALTH_PROVIDER_REGISTRY}`,
     "Online en todo Chile",
@@ -114,29 +114,19 @@ export const hero = {
 
 export const paraQuien = [
   {
-    titulo: "Guardia de seguridad / vigilante privado",
+    titulo: "Guardia, vigilante o postulante al curso OS10",
     texto:
-      "Te pidieron el informe de control de impulsos para tu cargo, tu curso o tu credencial.",
+      "Te pidieron el informe de control de impulsos para tu cargo, tu curso o tu credencial. El curso lo hace el instituto; aquí obtienes la evaluación.",
   },
   {
-    titulo: "Operador o supervisor CCTV",
+    titulo: "Operador CCTV, supervisor o jefe de seguridad",
     texto:
-      "Sirve cuando el puesto exige el certificado psicológico de aptitud psíquica para seguridad privada.",
-  },
-  {
-    titulo: "Postulante a curso OS10",
-    texto:
-      "El curso lo hace el instituto. Aquí obtienes la evaluación y el informe para presentarlo.",
+      "Cuando el puesto exige el certificado psicológico de control de impulsos y aptitud psíquica.",
   },
   {
     titulo: "Renovación de credencial",
     texto:
       "Si tu empleador te exige el certificado de nuevo, puedes hacerlo online, sin traslado.",
-  },
-  {
-    titulo: "Jefe o asesor de seguridad privada",
-    texto:
-      "Cuando el cargo pide el mismo tipo de certificado de control de impulsos y aptitud psíquica.",
   },
 ] as const;
 
@@ -152,7 +142,7 @@ export const incluye = [
 export const noIncluye = [
   "El curso OS10",
   "La credencial que emite la autoridad",
-  "El certificado médico de aptitud física (próximamente)",
+  "El certificado médico de aptitud física",
   "Terapia psicológica continua",
 ] as const;
 
@@ -187,7 +177,6 @@ export const diferenciales = [
   "El proceso es 100% online, por videollamada, desde cualquier región de Chile.",
   "Entrega rápida: el mismo día o en pocas horas cuando el caso es simple.",
   "Horarios que consideran turnos, también de noche.",
-  "Coordinas directo por WhatsApp.",
 ] as const;
 
 export const faqs = [
@@ -196,8 +185,8 @@ export const faqs = [
     a: "El informe documenta la evaluación de control de impulsos y de condiciones psíquicas compatibles con labores de seguridad privada, en el marco del DS 867 y la normativa asociada. Sirve para presentarlo en tu trámite. No reemplaza la decisión de Carabineros ni de la autoridad que otorga o renueva la credencial.",
   },
   {
-    q: "¿Es online o presencial?",
-    a: "Es online. La entrevista es por videollamada, en todo Chile. Necesitas conexión y un lugar tranquilo. Esta evaluación no tiene modalidad presencial.",
+    q: "¿En qué consiste el examen psicológico para guardias?",
+    a: "Es una entrevista por videollamada y un cuestionario de control de impulsos y aptitud psíquica. Dura entre 20 y 45 minutos y es 100% online, desde cualquier región de Chile.",
   },
   {
     q: "¿Cuánto demora la entrega?",
@@ -205,27 +194,19 @@ export const faqs = [
   },
   {
     q: "¿Qué pasa si no estoy apto?",
-    a: "El resultado depende de la evaluación clínica. El informe describe lo que se observa: no se redacta un apto si la evaluación no lo sostiene. Igual recibes el documento de la prestación realizada. No es un trámite de aprobación automática.",
+    a: "El resultado depende de la evaluación clínica. El informe describe lo que se observa: no se redacta un apto si la evaluación no lo sostiene. Igual recibes el documento de la prestación realizada.",
   },
   {
     q: "¿Necesito también el certificado médico?",
-    a: "Son documentos distintos. Aquí está la evaluación psicológica y el informe de control de impulsos. El certificado médico de aptitud física no está incluido. Si tu trámite lo pide, tienes que gestionarlo aparte.",
+    a: "Son documentos distintos. Aquí está la evaluación psicológica y el informe de control de impulsos. Si tu trámite pide el certificado médico de aptitud física, tienes que gestionarlo aparte.",
   },
   {
-    q: "¿Puedo reembolsar con isapre o con mi empresa?",
-    a: "La boleta electrónica sirve para rendir el gasto cuando tu empleador o tu isapre lo aceptan. No puedo asegurar el reembolso: el criterio lo define tu empresa o tu isapre. Esto no es asesoría legal ni previsional.",
-  },
-  {
-    q: "¿El precio incluye boleta?",
-    a: `Sí. ${formatClp(precios.particular)} incluye la evaluación, el informe en PDF y la boleta electrónica.`,
-  },
-  {
-    q: "¿Sirve para CCTV, supervisor o jefe de seguridad?",
-    a: "Sí, cuando el cargo pide este tipo de certificado de control de impulsos y aptitud psíquica. Si tu empleador exige otro formato, cuéntamelo al agendar y lo revisamos.",
+    q: "¿Incluye boleta? ¿Puedo reembolsar con mi empresa o isapre?",
+    a: `Sí. ${formatClp(precios.particular)} incluye la evaluación, el informe en PDF y la boleta electrónica, que sirve para rendir el gasto si tu empleador o tu isapre lo aceptan. El criterio lo define cada uno.`,
   },
   {
     q: "¿Es lo mismo que el curso OS10?",
-    a: "No. El curso OS10 lo imparte un instituto. La credencial la tramita la autoridad competente. Esta página solo vende la evaluación psicológica y el informe o certificado.",
+    a: "No. El curso OS10 lo imparte un instituto y la credencial la tramita la autoridad competente. Aquí solo está la evaluación psicológica y el informe o certificado.",
   },
 ] as const;
 
