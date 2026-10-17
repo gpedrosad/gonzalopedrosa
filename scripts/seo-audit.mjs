@@ -11,12 +11,14 @@ const MAX_REDIRECT_HOPS = 5;
 const projectRoot = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const organicRoutesPath = path.join(projectRoot, "src/lib/organic-routes.ts");
 
-const loadOrganicRoutes = () => {
-  const source = readFileSync(organicRoutesPath, "utf8");
-  const routes = [...source.matchAll(/route:\s*"([^"]+)"/g)].map((match) => match[1]);
+const loadOrganicRoutes = async () => {
+  const { discoverIndexableRoutes } = await import(
+    "../src/lib/discover-organic-routes.mjs"
+  );
+  const routes = discoverIndexableRoutes(projectRoot);
 
   if (routes.length === 0) {
-    throw new Error(`No se encontraron rutas en ${organicRoutesPath}`);
+    throw new Error(`No se encontraron rutas indexables bajo src/app`);
   }
 
   return routes;
@@ -38,11 +40,7 @@ const loadExcludedPrefixes = () => {
 const baseUrl = new URL(process.env.SEO_AUDIT_BASE_URL ?? DEFAULT_BASE_URL);
 const expectedHost = baseUrl.host;
 
-const routes = (
-  process.env.SEO_AUDIT_ROUTES?.split(",")
-    .map((route) => route.trim())
-    .filter(Boolean) ?? loadOrganicRoutes()
-);
+let routes = [];
 
 const excludedPrefixes = loadExcludedPrefixes();
 const errors = [];
@@ -253,7 +251,15 @@ const checkSitemap = async () => {
   }
 };
 
+const resolveRoutes = async () => {
+  const fromEnv = process.env.SEO_AUDIT_ROUTES?.split(",")
+    .map((route) => route.trim())
+    .filter(Boolean);
+  routes = fromEnv && fromEnv.length > 0 ? fromEnv : await loadOrganicRoutes();
+};
+
 const main = async () => {
+  await resolveRoutes();
   console.log(`Auditando SEO técnico en ${baseUrl.toString()}`);
   console.log(`Inventario orgánico: ${routes.length} rutas`);
 
@@ -279,7 +285,8 @@ const main = async () => {
 };
 
 if (process.argv.includes("--print-routes")) {
-  console.log(routes.join(","));
+  const listed = await loadOrganicRoutes();
+  console.log(listed.join(","));
   process.exit(0);
 }
 

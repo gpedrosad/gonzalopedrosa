@@ -6,14 +6,15 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Certificado de Salud Mental en Chillán | Psicólogo Gonzalo Pedrosa",
+  title: "Certificado de salud mental en Chillán | Gonzalo Pedrosa",
   description:
     "Certificado de salud mental en Chillán. Documento profesional para trámites laborales, licencias, permisos y otros requerimientos.",
   alternates: {
     canonical: "/certificado-salud-mental-chillan",
   },
   openGraph: {
-    title: "Certificado de Salud Mental en Chillán | Psicólogo Gonzalo Pedrosa",
+    locale: "es_CL",
+    title: "Certificado de salud mental en Chillán | Gonzalo Pedrosa",
     description: "Certificado de salud mental en Chillán. Documento profesional para trámites laborales, licencias, permisos y otros requerimientos.",
     url: "https://www.gonzalopedrosa.cl/certificado-salud-mental-chillan",
     type: "website",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Certificado de Salud Mental en Chillán | Psicólogo Gonzalo Pedrosa",
+    title: "Certificado de salud mental en Chillán | Gonzalo Pedrosa",
     description: getTwitterDescription("Certificado de salud mental en Chillán. Documento profesional para trámites laborales, licencias, permisos y otros requerimientos."),
   },
 };

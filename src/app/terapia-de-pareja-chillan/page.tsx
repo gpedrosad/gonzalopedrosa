@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     canonical: "/terapia-de-pareja-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Terapia de pareja Chillán | $35.000 · Online o presencial",
     description,
     url: `${SITE_URL}/terapia-de-pareja-chillan`,

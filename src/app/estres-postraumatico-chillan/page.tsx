@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     canonical: "/estres-postraumatico-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "TEPT y estrés postraumático Chillán | EMDR · TCC",
     description: "Especialista en TEPT en Chillán: estrés postraumático con EMDR y TCC. Flashbacks, evitación e hiperactivación. Online o presencial. Agenda hoy.",
     url: "https://www.gonzalopedrosa.cl/estres-postraumatico-chillan",

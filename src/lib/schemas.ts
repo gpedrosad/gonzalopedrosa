@@ -1,55 +1,104 @@
 // src/lib/schemas.ts
 // Schemas reutilizables para SEO programático
 
-import { CLINICAL_STATS } from "@/lib/site-config";
+import {
+  CLINICAL_STATS,
+  healthProviderIdentifierSchema,
+  HEALTH_PROVIDER_REGISTRY_NAME,
+  toCanonicalUrl,
+} from "@/lib/site-config";
 
 export const SITE_URL = "https://www.gonzalopedrosa.cl";
 
+const CHILLAN_ADDRESS = {
+  "@type": "PostalAddress",
+  addressLocality: "Chillán",
+  addressRegion: "Región de Ñuble",
+  addressCountry: "CL",
+} as const;
+
+/** Persona real del sitio: nombre, registro RNPI y atención en Chillán. Sin redes ni dirección de calle no publicadas. */
+export const personSchema = {
+  "@type": "Person",
+  "@id": `${SITE_URL}/#persona`,
+  name: "Gonzalo Pedrosa",
+  jobTitle: "Psicólogo Clínico",
+  description: `Psicólogo clínico en Chillán, con más de ${CLINICAL_STATS.yearsExperience} años de experiencia. ${HEALTH_PROVIDER_REGISTRY_NAME}.`,
+  image: `${SITE_URL}/yo.png`,
+  url: `${SITE_URL}/`,
+  telephone: "+56968257817",
+  address: CHILLAN_ADDRESS,
+  identifier: healthProviderIdentifierSchema,
+  knowsAbout: [
+    "Ansiedad",
+    "Depresión",
+    "Terapia Cognitivo-Conductual",
+    "Crisis de pánico",
+    "Estrés",
+  ],
+} as const;
+
 /**
- * LocalBusiness Schema para páginas de Chillán
- * Usar en todas las páginas con servicios locales
+ * LocalBusiness + ProfessionalService.
+ * Sin geopin ni sameAs: no hay calle ni perfil social publicados.
  */
 export const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": `${SITE_URL}/#business`,
+  "@type": ["LocalBusiness", "ProfessionalService"],
+  "@id": `${SITE_URL}/#servicio`,
   name: "Gonzalo Pedrosa - Psicólogo",
   image: `${SITE_URL}/yo.png`,
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Chillán",
-    addressRegion: "Región de Ñuble",
-    addressCountry: "CL",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: "-36.6063",
-    longitude: "-72.1034",
-  },
-  url: SITE_URL,
+  url: `${SITE_URL}/`,
   telephone: "+56968257817",
-  priceRange: "$$",
+  priceRange: "$35.000",
+  address: CHILLAN_ADDRESS,
+  identifier: healthProviderIdentifierSchema,
+  provider: { "@id": `${SITE_URL}/#persona` },
+  areaServed: [
+    {
+      "@type": "City",
+      name: "Chillán",
+      "@id": "https://www.wikidata.org/wiki/Q203727",
+    },
+    { "@type": "Country", name: "Chile" },
+  ],
+  serviceType: [
+    "Psicoterapia individual",
+    "Terapia online",
+    "Terapia cognitivo-conductual",
+  ],
+  description:
+    "Atención psicológica profesional para ansiedad, depresión, estrés y más. Sesiones online y presenciales en Chillán.",
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-      ],
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "09:00",
       closes: "19:00",
     },
   ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Servicios de Psicología",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Sesión individual",
+          description: `Sesión de psicoterapia de ${CLINICAL_STATS.sessionMinutes} minutos, online o presencial`,
+        },
+        price: String(CLINICAL_STATS.sessionPriceClp),
+        priceCurrency: "CLP",
+      },
+    ],
+  },
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: CLINICAL_STATS.ratingValue,
     reviewCount: String(CLINICAL_STATS.reviewCount),
     bestRating: "5",
   },
-  sameAs: ["https://wa.me/56968257817"],
 };
 
 /**
@@ -68,7 +117,7 @@ export function getBreadcrumbSchema(items: BreadcrumbItem[]) {
       "@type": "ListItem",
       position: index + 1,
       name: item.label,
-      item: item.href ? `${SITE_URL}${item.href}` : undefined,
+      item: item.href ? toCanonicalUrl(item.href) : undefined,
     })),
   };
 }
@@ -102,7 +151,7 @@ export function getServiceSchema(params: {
     description: params.description,
     offers: {
       "@type": "Offer",
-      price: "35000",
+      price: String(CLINICAL_STATS.sessionPriceClp),
       priceCurrency: "CLP",
     },
   };

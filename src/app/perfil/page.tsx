@@ -47,6 +47,7 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: "/perfil",
     },
     openGraph: {
+    locale: "es_CL",
       title: "Gonzalo Pedrosa | Psicólogo en Chillán · TCC e Isapre",
       description,
       url: `${SITE_URL}/perfil`,

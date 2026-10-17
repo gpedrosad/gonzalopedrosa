@@ -59,11 +59,6 @@ const NHS_SUENO = {
   href: "https://www.nhs.uk/every-mind-matters/mental-health-issues/sleep/",
 };
 
-const RNPI = {
-  label: "Registro Nacional de Prestadores Individuales de Salud",
-  href: "https://rnpi.superdesalud.gob.cl/",
-};
-
 export type InfoSection = {
   heading: string;
   paragraphs: string[];
@@ -102,18 +97,18 @@ export type InfoPage = {
 
 export const GUIDE_HUB = {
   path: "/guias",
-  title: "Guías de psicología para entender lo que te pasa",
-  h1: "Guías de psicología",
+  title: "Guías de salud mental para entender lo que te pasa",
+  h1: "Guías para cuidar la salud mental",
   description:
-    "Guías claras sobre ansiedad, apego, burnout, EMDR, sueño y la diferencia entre psicólogo y psiquiatra. Para entender el tema, sin una hora de venta.",
+    "Lecturas sobre duelo, pánico, ludopatía, EMDR, apego, burnout y sueño, y sobre psicólogo o psiquiatra. No reemplazan una atención profesional.",
 };
 
 export const QUESTION_HUB = {
   path: "/preguntas",
-  title: "Preguntas de psicología respondidas con claridad",
-  h1: "Preguntas de psicología",
+  title: "Preguntas sobre terapia, ansiedad, duelo y burnout",
+  h1: "Preguntas frecuentes sobre terapia",
   description:
-    "Respuestas directas sobre pánico, ERP, apego ansioso, burnout, duelo y el ejercicio de EMDR. Orientación práctica, sin empujarte a reservar una sesión.",
+    "Respuestas directas sobre la duración de la terapia, TCC, ansiedad, estrés, pánico, duelo, burnout, apego y EMDR. No reemplazan una consulta.",
 };
 
 const EMDR_PRODUCT = {
@@ -123,225 +118,7 @@ const EMDR_PRODUCT = {
 };
 
 export const INFORMATIONAL_PAGES: InfoPage[] = [
-  {
-    cluster: "guias",
-    slug: "diferencia-psicologo-psiquiatra",
-    navLabel: "Psicólogo o psiquiatra",
-    title: "Diferencia entre psicólogo y psiquiatra en Chile",
-    h1: "Diferencia entre psicólogo y psiquiatra",
-    description:
-      "El psiquiatra es médico y puede indicar medicamentos. El psicólogo clínico no receta: trabaja con psicoterapia. Mira cómo se diferencian en Chile.",
-    answer:
-      "El psiquiatra es un médico especialista: puede evaluar desde la medicina y recetar medicamentos. El psicólogo clínico no es médico y no receta. Su herramienta principal es la psicoterapia, es decir, un trabajo conversado y práctico sobre lo que piensas, sientes y haces.",
-    sections: [
-      {
-        heading: "Qué puede hacer cada profesional",
-        paragraphs: [
-          "En Chile, quien ejerce como psicólogo tiene un título universitario de psicología. Si atiende en salud, puede estar inscrito en el Registro Nacional de Prestadores Individuales de Salud. Eso acredita el registro, no un resultado de tratamiento.",
-          "El psiquiatra estudió medicina y después la especialidad. Por eso puede indicar, ajustar o suspender fármacos y extender una licencia médica. Un psicólogo no emite licencia médica ni prescribe.",
-        ],
-        bullets: [
-          "Psicólogo clínico: evaluación psicológica y psicoterapia.",
-          "Psiquiatra: evaluación médica y tratamiento con medicamentos.",
-          "Algunos psiquiatras también hacen psicoterapia. No es la regla.",
-          "Los dos pueden trabajar en paralelo cuando el caso lo necesita.",
-        ],
-      },
-      {
-        heading: "Cuándo suele bastar empezar por psicología",
-        paragraphs: [
-          "Para malestar que ya te complica el sueño, la pega, el estudio o los vínculos, y que no viene con un riesgo inmediato, la psicoterapia es un punto de partida habitual. Ansiedad, ánimo bajo, duelo, estrés sostenido y problemas de relación entran seguido en esa conversación.",
-          "Eso no significa que la psicología reemplace una evaluación médica. Si ya tomas fármacos, si hubo un diagnóstico previo o si el malestar te impide funcionar, conviene que un médico revise esa parte.",
-        ],
-      },
-      {
-        heading: "Cuándo conviene una evaluación psiquiátrica",
-        paragraphs: [
-          "Pide una evaluación médica si hay ideas de hacerte daño, síntomas que aparecen de un día para otro y te desorganizan, sospecha de bipolaridad o psicosis, o un cuadro que no cede y te deja sin poder trabajar o cuidarte.",
-          "También tiene sentido si ya hiciste un proceso psicológico y el malestar sigue igual de intenso, o si necesitas revisar una medicación que ya estás tomando. No tienes que elegir un bando: muchas personas usan las dos ayudas.",
-        ],
-      },
-      {
-        heading: "Cómo preparar la primera conversación",
-        paragraphs: [
-          "Anota desde cuándo te pasa, qué lo empeora, si duermes, si comes, si bebes o usas otras sustancias, y qué ya intentaste. Esos datos sirven tanto en psicología como en psiquiatría.",
-          "Pregunta qué enfoque usa la persona y cómo decide si hace falta derivar. Una respuesta clara sobre los límites de su rol es una buena señal, más que una promesa de cuánto vas a mejorar.",
-        ],
-      },
-    ],
-    faqs: [
-      {
-        question: "¿Un psicólogo puede recetar ansiolíticos?",
-        answer:
-          "No. La prescripción de medicamentos es un acto médico. Si aparece esa necesidad, el psicólogo deriva a psiquiatra u otro médico.",
-      },
-      {
-        question: "¿La psicoterapia y los fármacos se oponen?",
-        answer:
-          "No. En varios cuadros se usan juntos. Una cosa no anula la otra: responden a partes distintas del problema.",
-      },
-      {
-        question: "¿El registro de la Superintendencia garantiza que me va a ir bien?",
-        answer:
-          "No. El registro muestra que el profesional está inscrito como prestador. El encaje con tu motivo y la seriedad del trabajo se ven en la atención, no en el número.",
-      },
-    ],
-    related: [
-      { href: "/preguntas/que-hacer-en-un-ataque-de-panico", label: "Qué hacer en un ataque de pánico" },
-      { href: "/guias/terapia-cognitivo-conductual", label: "Qué es la terapia cognitivo-conductual" },
-      { href: "/cuando-ir-al-psicologo-chillan", label: "Señales de cuándo pedir ayuda" },
-    ],
-    sources: [RNPI, MINSAL_4141],
-  },
-  {
-    cluster: "guias",
-    slug: "ansiedad-y-estres",
-    navLabel: "Ansiedad y estrés",
-    title: "Ansiedad y estrés: en qué se parecen y difieren",
-    h1: "Ansiedad y estrés: en qué se diferencian",
-    description:
-      "El estrés responde a una carga concreta. La ansiedad sigue aunque la amenaza no esté. Aprende a distinguirlos y qué puedes observar en tu día.",
-    answer:
-      "El estrés es la respuesta del cuerpo y de la mente frente a una demanda: una prueba, un plazo, un conflicto, una cuenta. La ansiedad es una alarma que se enciende ante una amenaza que anticipas, a veces sin un hecho claro delante. Se parecen en el cuerpo y no son lo mismo.",
-    sections: [
-      {
-        heading: "Qué suele sentirse en el cuerpo",
-        paragraphs: [
-          "En ambos puedes notar el corazón rápido, tensión en el cuello, sueño liviano, irritabilidad o dificultad para concentrarte. Esa activación sirvió, en términos evolutivos, para reaccionar. El problema aparece cuando se queda encendida.",
-          "La guía de trastornos ansiosos del DIPRECE describe la ansiedad como una respuesta ante algo que la persona lee como peligroso, aunque esa lectura no calce con el riesgo real, y que termina alterando su funcionamiento.",
-        ],
-      },
-      {
-        heading: "Una forma simple de distinguirlos",
-        paragraphs: [
-          "Pregúntate si el malestar baja cuando la demanda termina. Si duermes mejor el domingo después de entregar el informe, se parece más a estrés. Si el informe ya salió y la alarma sigue, buscando el próximo peligro, se parece más a ansiedad.",
-          "También mira el foco. El estrés suele tener un nombre: la pega, la plata del mes, el cuidado de alguien. La ansiedad a veces es difusa: una sensación de que algo malo va a pasar, sin un objeto preciso.",
-        ],
-        bullets: [
-          "Estrés: hay una carga identificable y un alivio parcial al resolverla.",
-          "Ansiedad: la alarma se adelanta o se queda después del hecho.",
-          "Pueden venir juntos. Un período de estrés largo puede dejar la alarma sensible.",
-          "Ni el estrés ni la ansiedad son, por sí solos, un diagnóstico.",
-        ],
-      },
-      {
-        heading: "Qué puedes observar durante una semana",
-        paragraphs: [
-          "Sin convertir esto en un examen, anota hora, situación, intensidad de 0 a 10 y qué hiciste después. El registro muestra patrones: cafeína tarde, dormir poco, discutir y luego rumiar, evitar un correo y sentirte peor.",
-          "Evitar lo que temes baja la angustia al tiro y la enseña a volver. Resolver una parte pequeña de la demanda, en cambio, le devuelve al estrés un borde concreto.",
-        ],
-      },
-      {
-        heading: "Cuándo la distinción ya no alcanza",
-        paragraphs: [
-          "Si el malestar te saca de tus rutinas por semanas, si evitaste salir, trabajar o ver gente, o si aparecen crisis de pánico repetidas, ponerle solo el nombre de estrés se queda corto. Ahí corresponde una evaluación, no una etiqueta que te pongas solo.",
-          "Una estimación citada por la guía DIPRECE, a partir de Vicente y colaboradores con criterios DSM-III, situó la prevalencia de vida de trastornos ansiosos en 16,2% en población chilena mayor de 15 años. Es una cifra antigua y poblacional. No describe tu caso.",
-        ],
-      },
-      {
-        heading: "Errores que mantienen la alarma",
-        paragraphs: [
-          "Revisar síntomas en internet durante la noche, cancelar planes para que no te dé, y exigirte estar calmado antes de hacer cualquier cosa. Esas tres maniobras son comprensibles y suelen alargar el problema.",
-          "Una alternativa más útil es reducir un poco la activación (sueño, cafeína, pausas reales) y volver a una actividad pequeña aunque la alarma no esté en cero.",
-        ],
-      },
-    ],
-    faqs: [
-      {
-        question: "¿Puedo tener estrés y ansiedad a la vez?",
-        answer:
-          "Sí. Una carga real puede convivir con una alarma que se adelanta. Separarlos sirve para saber qué parte tiene una tarea concreta y qué parte es anticipación.",
-      },
-      {
-        question: "¿Respirar hondo elimina la ansiedad?",
-        answer:
-          "Puede bajar un pico de activación. No borra el hábito de anticipar. Sirve como apoyo, no como prueba de que deberías poder controlarlo solo.",
-      },
-      {
-        question: "¿Si es estrés, no necesito mirarlo?",
-        answer:
-          "El estrés también desgasta cuando se vuelve el estado de base. Distinguirlo de la ansiedad no es una razón para aguantar de más.",
-      },
-    ],
-    related: [
-      { href: "/preguntas/que-hacer-en-un-ataque-de-panico", label: "Qué hacer durante un ataque de pánico" },
-      { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
-      { href: "/guias/higiene-del-sueno", label: "Hábitos de higiene del sueño" },
-      { href: "/psicologo-ansiedad-chillan", label: "Página de atención por ansiedad" },
-    ],
-    sources: [DIPRECE_ANSIEDAD, NICE_ANSIEDAD],
-  },
-  {
-    cluster: "guias",
-    slug: "terapia-cognitivo-conductual",
-    navLabel: "Terapia cognitivo-conductual",
-    title: "Terapia cognitivo-conductual: qué es y cómo trabaja",
-    h1: "Qué es la terapia cognitivo-conductual",
-    description:
-      "La TCC mira cómo se influyen pensamientos, emociones y conductas. Conoce qué se trabaja en sesión y qué no es pensar en positivo. Sin un plazo prometido.",
-    answer:
-      "La terapia cognitivo-conductual, o TCC, trabaja la relación entre lo que interpretas, lo que sientes en el cuerpo y lo que haces después. No busca que pienses bonito. Busca que puedas revisar interpretaciones rígidas y probar conductas que hoy estás evitando.",
-    sections: [
-      {
-        heading: "El triángulo que se revisa",
-        paragraphs: [
-          "Una situación no trae una sola lectura. Si tu jefe no responde un mensaje, puedes concluir que estás en problemas, que está ocupado o que el mensaje no se vio. Cada lectura empuja una emoción y una acción distinta: revisar el celular, evitar, o esperar.",
-          "En TCC se hace visible ese circuito. La pregunta útil no es si el pensamiento es positivo. Es si es el único posible y qué efecto tiene en lo que haces hoy.",
-        ],
-      },
-      {
-        heading: "Qué suele pasar en un proceso",
-        paragraphs: [
-          "Se define un problema concreto, se observa cuándo aparece y se acuerda una práctica entre sesiones. Esa práctica puede ser registrar pensamientos, retomar una actividad que evitabas o ensayar una conversación difícil.",
-          "Las guías clínicas, entre ellas la CG113 de NICE para ansiedad generalizada y pánico, incluyen la TCC entre los abordajes psicológicos con más investigación. Eso no promete un plazo ni un resultado igual para todas las personas.",
-        ],
-        bullets: [
-          "Se parte por un objetivo observable, no por cambiar tu personalidad.",
-          "Hay tareas entre sesiones. Sin práctica, la sesión se queda en la conversación.",
-          "Se miden cambios chicos: sueño, evitación, discusiones, tiempo rumiando.",
-          "Si el enfoque no calza, se puede cambiar. No es una lealtad.",
-        ],
-      },
-      {
-        heading: "Qué no es",
-        paragraphs: [
-          "No es repetir frases motivacionales ni negar que algo te duele. Tampoco es un consejo rápido del tipo ánimo, tú puedes. Si el pensamiento tiene un dato real (una deuda, un duelo, una pega precaria), la TCC no lo borra: ayuda a separar el hecho de la catástrofe que se le suma.",
-          "Tampoco reemplaza una evaluación médica cuando hay riesgo, síntomas físicos nuevos o un fármaco que revisar.",
-        ],
-      },
-      {
-        heading: "Cómo darte cuenta si el trabajo avanza",
-        paragraphs: [
-          "Una señal modesta y útil es que haces algo que antes evitabas, aunque siga habiendo nervios. Otra es que el mismo pensamiento dura menos y ya no ordena todo el día.",
-          "Si pasan varias sesiones y no hay un problema definido ni una práctica, pregunta qué se está trabajando. La TCC se reconoce por ese orden, no por el nombre en una credencial.",
-        ],
-      },
-    ],
-    faqs: [
-      {
-        question: "¿La TCC sirve solo para ansiedad?",
-        answer:
-          "No. También se usa en ánimo bajo, insomnio, algunos problemas de hábito y en el trabajo con pensamientos que se pegan. El plan cambia según el problema.",
-      },
-      {
-        question: "¿Tengo que contar toda mi infancia?",
-        answer:
-          "No es el requisito para empezar. A veces la historia ayuda a entender una regla actual. El foco suele estar en lo que mantienes hoy.",
-      },
-      {
-        question: "¿Si no hago las tareas, igual funciona?",
-        answer:
-          "El aprendizaje ocurre en la práctica. Sin ella, es fácil entender el modelo y seguir haciendo lo mismo entre una sesión y otra.",
-      },
-    ],
-    related: [
-      { href: "/guias/ansiedad-y-estres", label: "Diferencia entre ansiedad y estrés" },
-      { href: "/preguntas/que-es-la-erp-para-el-toc", label: "Qué es la ERP para el TOC" },
-      { href: "/psicologo-cognitivo-conductual-chillan", label: "Página sobre el enfoque clínico" },
-    ],
-    sources: [NICE_ANSIEDAD],
-  },
-  {
+        {
     cluster: "guias",
     slug: "que-es-el-emdr",
     navLabel: "Qué es el EMDR",
@@ -623,7 +400,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
     ],
     related: [
       { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
-      { href: "/guias/ansiedad-y-estres", label: "Ansiedad y estrés" },
+      { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad y estrés" },
       { href: "/tratamiento-insomnio-chillan", label: "Página de atención por insomnio" },
     ],
     sources: [NHS_SUENO],
@@ -692,7 +469,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       },
     ],
     related: [
-      { href: "/guias/ansiedad-y-estres", label: "Ansiedad y estrés" },
+      { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad y estrés" },
       { href: "/guias/regulacion-emocional", label: "Cómo se regula una emoción" },
       { href: "/psicologo-trastornos-alimenticios-chillan", label: "Información sobre trastornos alimentarios" },
     ],
@@ -772,79 +549,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
 ];
 
 const QUESTION_PAGES: InfoPage[] = [
-  {
-    cluster: "preguntas",
-    slug: "que-hacer-en-un-ataque-de-panico",
-    navLabel: "Qué hacer en un ataque de pánico",
-    title: "Qué hacer durante un ataque de pánico",
-    h1: "Qué hacer durante un ataque de pánico",
-    description:
-      "Un ataque de pánico sube y baja. Qué hacer en los minutos de más miedo, cuándo ver a un médico y qué evita que el siguiente sea peor. Quédate si puedes.",
-    answer:
-      "Durante un ataque de pánico, el cuerpo dispara una alarma de peligro aunque no haya una amenaza externa clara. El pico suele ceder en minutos. En ese rato, quédate donde estás si es seguro, nombra lo que ocurre y deja que la ola baje, en vez de pelear con ella o salir arrancando.",
-    sections: [
-      {
-        heading: "En los minutos del pico",
-        paragraphs: [
-          "Di, en voz baja si puedes: es un ataque de pánico, es intenso y va a bajar. Apoya los pies en el suelo y mira tres objetos que estén quietos. Suelta un poco el aire, sin forzar una respiración perfecta. Hiperventilar a propósito, o aguantar el aire hasta marearte, empeora la sensación.",
-          "No tienes que demostrar calma. El objetivo es no sumar una huida que después te dé miedo repetir. Si estás manejando, estaciona. Si estás en una fila, quédate sentado o apóyate. Irte corriendo enseña que solo afuera estabas a salvo.",
-        ],
-        bullets: [
-          "Nombra el episodio. Ponerle nombre baja la idea de que te estás muriendo, cuando ya sabes que es pánico.",
-          "Quédate, si el lugar es seguro, hasta que el pico ceda un punto.",
-          "No midas el pulso cada diez segundos. Eso mantiene la alarma.",
-          "Cuando baje, no retomes el día como si nada: toma agua y siéntate un momento.",
-        ],
-      },
-      {
-        heading: "La primera vez no se despacha solo",
-        paragraphs: [
-          "Un dolor de pecho, falta de aire o mareo pueden ser pánico y también pueden ser un problema médico. Si es la primera vez, si el dolor es distinto, si te desmayas o si tienes antecedentes cardíacos, corresponde que te evalúe un servicio de urgencia o el SAMU (131). Esta página no distingue eso por ti.",
-          "Después de descartar una causa médica, el miedo a que vuelva a pasar suele ser el problema que queda. Ese miedo lleva a evitar el metro, el supermercado o el ejercicio, y la evitación prepara el episodio siguiente.",
-        ],
-      },
-      {
-        heading: "Qué mantiene los ataques",
-        paragraphs: [
-          "Revisar síntomas, cancelar salidas y pedir que alguien te acompañe a todos lados bajan la angustia hoy y la suben mañana. La guía NICE sobre pánico describe ese círculo: la interpretación catastrófica de una sensación corporal y la conducta de seguridad que la confirma.",
-          "Volver, de a poco y a propósito, al lugar que evitaste es la dirección contraria. No se hace el mismo día del primer episodio ni se hace como una prueba de valentía sin plan. Se hace cuando ya entiendes que la sensación, siendo horrible, no es el peligro que anuncia.",
-        ],
-      },
-      {
-        heading: "Después del episodio",
-        paragraphs: [
-          "Anota hora, qué estabas haciendo, qué pensaste (me va a dar un infarto, me voy a desmayar) y qué hiciste. Ese registro sirve más que castigarte por haber tenido miedo.",
-          "Si los episodios se repiten o ya organizaste la semana para que no te dé, lee la guía de ansiedad y estrés y busca una evaluación. Un artículo te orienta en el momento. No reemplaza ese paso.",
-        ],
-      },
-    ],
-    faqs: [
-      {
-        question: "¿Cuánto dura un ataque de pánico?",
-        answer:
-          "El pico suele bajar en minutos, aunque el temblor y el cansancio pueden quedarse más rato. Si una sensación grave no cede o es la primera vez, que te vea un médico.",
-      },
-      {
-        question: "¿Respirar en una bolsa es obligatorio?",
-        answer:
-          "No. Forzar la respiración puede marearte más. Mejor soltar el aire con calma y apoyar los pies, sin convertir la respiración en otra emergencia.",
-      },
-      {
-        question: "¿Si salgo del lugar, fallé?",
-        answer:
-          "No fallaste. Salir a veces es necesario. El aprendizaje problemático es cuando la única forma de terminar el miedo es escapar, y empiezas a evitar antes de llegar.",
-      },
-    ],
-    related: [
-      { href: "/guias/ansiedad-y-estres", label: "Ansiedad y estrés" },
-      { href: "/guias/diferencia-psicologo-psiquiatra", label: "Psicólogo o psiquiatra" },
-      { href: "/psicologo-crisis-de-panico-chillan", label: "Página de atención por crisis de pánico" },
-    ],
-    safety:
-      "Si además aparecen ideas de hacerte daño, llama al *4141, gratuito y de 24 horas. Ante dolor de pecho nuevo o desmayo, usa el 131.",
-    sources: [NICE_ANSIEDAD, MINSAL_4141, SALUD_RESPONDE],
-  },
-  {
+    {
     cluster: "preguntas",
     slug: "que-es-la-erp-para-el-toc",
     navLabel: "Qué es la ERP para el TOC",
@@ -908,7 +613,7 @@ const QUESTION_PAGES: InfoPage[] = [
       },
     ],
     related: [
-      { href: "/guias/terapia-cognitivo-conductual", label: "Qué es la terapia cognitivo-conductual" },
+      { href: "/preguntas/que-es-la-terapia-cognitivo-conductual", label: "Qué es la terapia cognitivo-conductual" },
       { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
       { href: "/tratamiento-toc-chillan", label: "Página de atención para TOC" },
     ],
@@ -1170,6 +875,9 @@ const QUESTION_PAGES: InfoPage[] = [
       },
     ],
     related: [
+      { href: "/guias/duelo-etapas-y-mitos", label: "Etapas y mitos del duelo" },
+      { href: "/guias/acompanar-a-alguien-en-duelo", label: "Cómo acompañar a alguien en duelo" },
+      { href: "/preguntas/cuanto-dura-un-duelo", label: "Cuánto dura un duelo" },
       { href: "/guias/regulacion-emocional", label: "Regulación emocional" },
       { href: "/psicologo-duelo-chillan", label: "Página de atención por duelo" },
       { href: "/psicologo-depresion-chillan", label: "Página de atención por depresión" },
@@ -1237,7 +945,7 @@ const QUESTION_PAGES: InfoPage[] = [
     related: [
       { href: "/guias/higiene-del-sueno", label: "Higiene del sueño" },
       { href: "/preguntas/que-es-la-erp-para-el-toc", label: "Qué es la ERP para el TOC" },
-      { href: "/guias/ansiedad-y-estres", label: "Ansiedad y estrés" },
+      { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad y estrés" },
       { href: "/guias/regulacion-emocional", label: "Regulación emocional" },
     ],
     safety:
@@ -1329,24 +1037,24 @@ export function informationalPath(page: Pick<InfoPage, "cluster" | "slug">): str
 
 const READING_BY_PATH: Record<string, InfoLink[]> = {
   "/psicologo-ansiedad-chillan": [
-    { href: "/guias/ansiedad-y-estres", label: "Guía: ansiedad y estrés" },
-    { href: "/preguntas/que-hacer-en-un-ataque-de-panico", label: "Qué hacer en un ataque de pánico" },
+    { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
+    { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer en un ataque de pánico" },
   ],
   "/psicologo-crisis-de-panico-chillan": [
-    { href: "/preguntas/que-hacer-en-un-ataque-de-panico", label: "Qué hacer en un ataque de pánico" },
-    { href: "/guias/ansiedad-y-estres", label: "Guía: ansiedad y estrés" },
+    { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer en un ataque de pánico" },
+    { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
   ],
   "/psicologo-fobia-social-chillan": [
-    { href: "/guias/ansiedad-y-estres", label: "Guía: ansiedad y estrés" },
+    { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
     { href: "/guias/regulacion-emocional", label: "Regulación emocional" },
   ],
   "/tratamiento-agorafobia-chillan": [
-    { href: "/preguntas/que-hacer-en-un-ataque-de-panico", label: "Qué hacer en un ataque de pánico" },
-    { href: "/guias/ansiedad-y-estres", label: "Guía: ansiedad y estrés" },
+    { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer en un ataque de pánico" },
+    { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
   ],
   "/psicologo-hipocondria-chillan": [
-    { href: "/guias/ansiedad-y-estres", label: "Guía: ansiedad y estrés" },
-    { href: "/guias/diferencia-psicologo-psiquiatra", label: "Psicólogo o psiquiatra" },
+    { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
+    { href: "/guias/psicologo-o-psiquiatra", label: "Psicólogo o psiquiatra" },
   ],
   "/terapia-de-pareja-chillan": [
     { href: "/guias/estilos-de-apego", label: "Guía: estilos de apego" },
@@ -1372,7 +1080,7 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
   ],
   "/tratamiento-toc-chillan": [
     { href: "/preguntas/que-es-la-erp-para-el-toc", label: "Qué es la ERP para el TOC" },
-    { href: "/guias/terapia-cognitivo-conductual", label: "Qué es la TCC" },
+    { href: "/preguntas/que-es-la-terapia-cognitivo-conductual", label: "Qué es la terapia cognitivo-conductual" },
   ],
   "/tratamiento-burnout-chillan": [
     { href: "/guias/burnout-laboral", label: "Guía: burnout laboral" },
@@ -1389,7 +1097,8 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
   ],
   "/psicologo-duelo-chillan": [
     { href: "/preguntas/duelo-o-depresion", label: "Duelo o depresión" },
-    { href: "/guias/regulacion-emocional", label: "Regulación emocional" },
+    { href: "/guias/duelo-etapas-y-mitos", label: "Etapas y mitos del duelo" },
+    { href: "/preguntas/cuanto-dura-un-duelo", label: "Cuánto dura un duelo" },
   ],
   "/psicologo-depresion-chillan": [
     { href: "/preguntas/duelo-o-depresion", label: "Duelo o depresión" },
@@ -1409,7 +1118,7 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
     { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
   ],
   "/psicologo-cognitivo-conductual-chillan": [
-    { href: "/guias/terapia-cognitivo-conductual", label: "Guía: qué es la TCC" },
+    { href: "/preguntas/que-es-la-terapia-cognitivo-conductual", label: "Qué es la terapia cognitivo-conductual" },
     { href: "/preguntas/que-es-la-erp-para-el-toc", label: "Qué es la ERP para el TOC" },
   ],
   "/psicologo-obesidad-chillan": [

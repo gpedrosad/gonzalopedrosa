@@ -10,13 +10,14 @@ const description =
   "Psicólogo para obesidad en Chillán: alimentación emocional, atracones y cambio de hábitos. También evaluación bariátrica. Online o presencial — agenda hoy.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Obesidad Chillán | Alimentación emocional y hábitos",
+  title: "Psicólogo para obesidad en Chillán | Hábitos y emoción",
   description,
   alternates: {
     canonical: "/psicologo-obesidad-chillan",
   },
   openGraph: {
-    title: "Psicólogo Obesidad Chillán | Alimentación emocional y hábitos",
+    locale: "es_CL",
+    title: "Psicólogo para obesidad en Chillán | Hábitos y emoción",
     description,
     url: "https://www.gonzalopedrosa.cl/psicologo-obesidad-chillan",
     type: "website",

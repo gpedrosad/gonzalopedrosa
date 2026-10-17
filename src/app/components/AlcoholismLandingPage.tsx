@@ -84,7 +84,7 @@ export function getAlcoholismPageMetadata(
       locale: "es_CL",
       images: [
         {
-          url: "/yo.png",
+          url: "/og.png",
           width: 1200,
           height: 630,
           alt: "Gonzalo Pedrosa - Psicólogo",
@@ -95,7 +95,7 @@ export function getAlcoholismPageMetadata(
       card: "summary_large_image",
       title: page.metaTitle,
       description: getTwitterDescription(page.description),
-      images: ["/yo.png"],
+      images: ["/og.png"],
     },
   };
 }

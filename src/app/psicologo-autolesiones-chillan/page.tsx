@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     canonical: "/psicologo-autolesiones-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo Autolesiones en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo para autolesiones en Chillán. Tratamiento confidencial y sin juicios para dejar de hacerte daño y encontrar otras formas de alivio.",
     url: "https://www.gonzalopedrosa.cl/psicologo-autolesiones-chillan",

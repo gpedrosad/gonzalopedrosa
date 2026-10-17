@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     canonical: "/psicologo-duelo-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo Duelo en Chillán, Chile | Gonzalo Pedrosa",
     description: "Psicólogo especializado en duelo y pérdidas en Chillán, Chile. Acompañamiento profesional para procesar el dolor. Sesiones presenciales y online.",
     url: "https://www.gonzalopedrosa.cl/psicologo-duelo-chillan",

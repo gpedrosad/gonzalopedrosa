@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     canonical: "/psicologo-tdah-adulto-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo TDAH Adulto en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo especializado en TDAH adulto en Chillán. Evaluación y estrategias para manejar la desatención, impulsividad y mejorar tu productividad.",
     url: "https://www.gonzalopedrosa.cl/psicologo-tdah-adulto-chillan",

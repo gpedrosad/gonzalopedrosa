@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     canonical: "/evaluacion-bariatrica-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Evaluación bariátrica Chillán | Informe para cirugía",
     description,
     url: "https://www.gonzalopedrosa.cl/evaluacion-bariatrica-chillan",

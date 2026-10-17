@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     canonical: "/agendar",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Agenda psicólogo Chillán hoy | Online o presencial",
     description,
     url: `${SITE_URL}/agendar`,

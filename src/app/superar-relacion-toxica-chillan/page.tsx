@@ -6,14 +6,15 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Superar Relación Tóxica en Chillán | Psicólogo Gonzalo Pedrosa",
+  title: "Superar una relación tóxica en Chillán | Psicólogo",
   description:
     "Psicólogo en Chillán para superar relaciones tóxicas. Recupera tu bienestar, autoestima y aprende a construir vínculos saludables.",
   alternates: {
     canonical: "/superar-relacion-toxica-chillan",
   },
   openGraph: {
-    title: "Superar Relación Tóxica en Chillán | Psicólogo Gonzalo Pedrosa",
+    locale: "es_CL",
+    title: "Superar una relación tóxica en Chillán | Psicólogo",
     description: "Psicólogo en Chillán para superar relaciones tóxicas. Recupera tu bienestar, autoestima y aprende a construir vínculos saludables.",
     url: "https://www.gonzalopedrosa.cl/superar-relacion-toxica-chillan",
     type: "website",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Superar Relación Tóxica en Chillán | Psicólogo Gonzalo Pedrosa",
+    title: "Superar una relación tóxica en Chillán | Psicólogo",
     description: getTwitterDescription("Psicólogo en Chillán para superar relaciones tóxicas. Recupera tu bienestar, autoestima y aprende a construir vínculos saludables."),
   },
 };

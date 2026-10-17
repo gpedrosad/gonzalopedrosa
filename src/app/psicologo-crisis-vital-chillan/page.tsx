@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     canonical: "/psicologo-crisis-vital-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo Crisis Vital en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo especializado en crisis vitales en Chillán. Acompañamiento en momentos de cambio, pérdida o transiciones difíciles de la vida.",
     url: "https://www.gonzalopedrosa.cl/psicologo-crisis-vital-chillan",

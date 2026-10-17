@@ -12,15 +12,16 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Consulta psicológica en Chillán: $35.000 por sesión de 50 min, mismo valor online o presencial. Boleta Isapre, formas de pago y cancelación. Agenda sin compromiso.";
+  "Consulta psicológica en Chillán: $35.000 por 50 min, online o presencial. Boleta Isapre, pago y cancelación. Agenda sin compromiso.";
 
 export const metadata: Metadata = {
-  title: "Consulta psicológica precio Chillán | $35.000 | Gonzalo Pedrosa",
+  title: "Precio de la consulta psicológica en Chillán | $35.000",
   description,
   alternates: {
     canonical: "/consulta-psicologica-precio-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Consulta psicológica precio Chillán | Gonzalo Pedrosa",
     description,
     url: "https://www.gonzalopedrosa.cl/consulta-psicologica-precio-chillan",

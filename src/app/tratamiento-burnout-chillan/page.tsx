@@ -7,14 +7,15 @@ import { getTwitterDescription } from "@/lib/schemas";
 import { RelatedReading } from "@/app/components/RelatedReading";
 
 export const metadata: Metadata = {
-  title: "Tratamiento Burnout en Chillán | Síndrome de Agotamiento Crónico",
+  title: "Tratamiento del burnout en Chillán | Agotamiento laboral",
   description:
     "Tratamiento para síndrome de burnout en Chillán. Agotamiento crónico, estar quemado, cinismo y sensación de ineficacia. Recupera energía y límites.",
   alternates: {
     canonical: "/tratamiento-burnout-chillan",
   },
   openGraph: {
-    title: "Tratamiento Burnout en Chillán | Síndrome de Agotamiento Crónico",
+    locale: "es_CL",
+    title: "Tratamiento del burnout en Chillán | Agotamiento laboral",
     description:
       "Tratamiento para síndrome de burnout en Chillán. Agotamiento crónico, estar quemado, cinismo y sensación de ineficacia. Recupera energía y límites.",
     url: "https://www.gonzalopedrosa.cl/tratamiento-burnout-chillan",
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tratamiento Burnout en Chillán | Síndrome de Agotamiento Crónico",
+    title: "Tratamiento del burnout en Chillán | Agotamiento laboral",
     description: getTwitterDescription("Tratamiento para síndrome de burnout en Chillán. Agotamiento crónico, estar quemado, cinismo y sensación de ineficacia. Recupera energía y límites."),
   },
 };

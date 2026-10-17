@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     canonical: "/psicologo-apego-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo Apego en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo especializado en estilos de apego en Chillán. Terapia para entender tus patrones relacionales y construir vínculos más seguros.",
     url: "https://www.gonzalopedrosa.cl/psicologo-apego-chillan",

@@ -12,15 +12,16 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Psicólogo en el centro de Chillán: consulta presencial de fácil acceso o sesión online el mismo día. Horarios flexibles, boleta Isapre desde $35.000. Agenda en línea.";
+  "Psicólogo en el centro de Chillán: consulta presencial o sesión online. Horarios flexibles, boleta Isapre y $35.000. Agenda en línea.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo centro Chillán | Presencial y online | Gonzalo Pedrosa",
+  title: "Psicólogo en el centro de Chillán | Online y presencial",
   description,
   alternates: {
     canonical: "/psicologo-centro-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo centro Chillán | Gonzalo Pedrosa",
     description,
     url: "https://www.gonzalopedrosa.cl/psicologo-centro-chillan",

@@ -12,15 +12,16 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "¿Buscas el mejor psicólogo en Chillán? Opiniones, enfoque TCC, precios y cómo elegir con criterio —sin promesas vacías. Conoce mi perfil y agenda una primera sesión.";
+  "¿Buscas el mejor psicólogo en Chillán? Opiniones, enfoque TCC, precios y cómo elegir con criterio. Revisa el perfil y agenda una primera sesión.";
 
 export const metadata: Metadata = {
-  title: "Mejor psicólogo Chillán opiniones | Cómo elegir | Gonzalo Pedrosa",
+  title: "Mejor psicólogo en Chillán: opiniones y cómo elegir",
   description,
   alternates: {
     canonical: "/mejor-psicologo-chillan-opiniones",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Mejor psicólogo Chillán opiniones | Gonzalo Pedrosa",
     description,
     url: "https://www.gonzalopedrosa.cl/mejor-psicologo-chillan-opiniones",

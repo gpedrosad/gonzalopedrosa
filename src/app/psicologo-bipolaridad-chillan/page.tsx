@@ -6,7 +6,7 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { SITE_URL, getTwitterDescription } from "@/lib/schemas";
 
 const description =
-  "Apoyo psicológico para trastorno bipolar en Chillán. Terapia complementaria, coordinación con psiquiatría y estrategias para prevenir recaídas. Presencial u online.";
+  "Apoyo psicológico para trastorno bipolar en Chillán. Terapia complementaria, coordinación con psiquiatría y prevención de recaídas.";
 
 export const metadata: Metadata = {
   title: "Psicólogo para bipolaridad en Chillán | Apoyo complementario",
@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     canonical: "/psicologo-bipolaridad-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo para bipolaridad en Chillán | Gonzalo Pedrosa",
     description,
     url: `${SITE_URL}/psicologo-bipolaridad-chillan`,

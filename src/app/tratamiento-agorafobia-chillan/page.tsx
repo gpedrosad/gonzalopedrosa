@@ -8,14 +8,15 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Tratamiento Agorafobia en Chillán | Psicólogo Gonzalo Pedrosa",
+  title: "Tratamiento de la agorafobia en Chillán | Psicólogo",
   description:
     "Tratamiento para agorafobia en Chillán. Terapia especializada para superar el miedo a salir, lugares públicos y situaciones donde escapar es difícil.",
   alternates: {
     canonical: "/tratamiento-agorafobia-chillan",
   },
   openGraph: {
-    title: "Tratamiento Agorafobia en Chillán | Psicólogo Gonzalo Pedrosa",
+    locale: "es_CL",
+    title: "Tratamiento de la agorafobia en Chillán | Psicólogo",
     description: "Tratamiento para agorafobia en Chillán. Terapia especializada para superar el miedo a salir, lugares públicos y situaciones donde escapar es difícil.",
     url: "https://www.gonzalopedrosa.cl/tratamiento-agorafobia-chillan",
     type: "website",
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tratamiento Agorafobia en Chillán | Psicólogo Gonzalo Pedrosa",
+    title: "Tratamiento de la agorafobia en Chillán | Psicólogo",
     description: getTwitterDescription("Tratamiento para agorafobia en Chillán. Terapia especializada para superar el miedo a salir, lugares públicos y situaciones donde escapar es difícil."),
   },
 };

@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     canonical: "/psicologo-sindrome-impostor-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo Síndrome del Impostor en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo especializado en síndrome del impostor en Chillán. Supera la sensación de no merecer tus logros y reconoce tu verdadero valor.",
     url: "https://www.gonzalopedrosa.cl/psicologo-sindrome-impostor-chillan",

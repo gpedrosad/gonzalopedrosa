@@ -13,7 +13,7 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Terapia EMDR en Chillán para trauma, ansiedad y estrés postraumático. Técnica con respaldo internacional, sesiones presenciales u online. Reserva por web o WhatsApp.";
+  "Terapia EMDR en Chillán para trauma, ansiedad y estrés postraumático. Sesiones presenciales u online. Reserva por web o WhatsApp.";
 
 export const metadata: Metadata = {
   title: "Terapia EMDR Chillán | Trauma y TEPT | Gonzalo Pedrosa",
@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     canonical: "/terapia-emdr-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Terapia EMDR Chillán | Gonzalo Pedrosa",
     description,
     url: "https://www.gonzalopedrosa.cl/terapia-emdr-chillan",

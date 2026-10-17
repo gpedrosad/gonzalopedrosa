@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import sitemapFn from "../sitemap";
 
 interface Evaluation {
   estructura: number;
@@ -13,9 +12,33 @@ interface Evaluation {
   intencion_comentario: string;
 }
 
+type SitemapPage = { url: string; priority?: number };
+
 export default function LinksPage() {
-  const pages = sitemapFn();
+  const [pages, setPages] = useState<SitemapPage[]>([]);
   const baseUrl = "https://www.gonzalopedrosa.cl";
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/sitemap.xml")
+      .then((response) => response.text())
+      .then((xml) => {
+        if (cancelled) return;
+        const parsed = [...xml.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((match) => {
+          const block = match[1];
+          const url = block.match(/<loc>(.*?)<\/loc>/)?.[1] ?? "";
+          const priority = Number(block.match(/<priority>(.*?)<\/priority>/)?.[1]);
+          return { url, priority: Number.isFinite(priority) ? priority : undefined };
+        });
+        setPages(parsed.filter((page) => page.url));
+      })
+      .catch(() => {
+        if (!cancelled) setPages([]);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const [clicks, setClicks] = useState<Record<string, number>>({});
   const [copied, setCopied] = useState(false);
@@ -436,7 +459,9 @@ export default function LinksPage() {
               Panel de Links
             </h1>
             <p style={{ color: "#666", fontSize: "0.875rem" }}>
-              {links.length} páginas · 📄 copiar · 🤖 evaluar SEO con GPT{!isLocalhost && " (solo local)"}
+              {pages.length === 0
+                ? "Cargando páginas del sitemap…"
+                : `${links.length} páginas · 📄 copiar · 🤖 evaluar SEO con GPT${!isLocalhost ? " (solo local)" : ""}`}
             </p>
           </div>
           <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>

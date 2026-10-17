@@ -1,20 +1,23 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import EmdrBilateralPlayer from './EmdrBilateralPlayer';
-import { SITE_URL, getTwitterDescription } from '@/lib/schemas';
+import { Breadcrumb } from '@/app/components/Breadcrumb';
+import { JsonLd } from '@/app/components/JsonLd';
+import { SITE_URL, getBreadcrumbSchema, getTwitterDescription, localBusinessSchema } from '@/lib/schemas';
 
 export const metadata: Metadata = {
-  title: 'Ejercicio EMDR autoadministrado | Estimulación bilateral visual',
+  title: 'Ejercicio EMDR autoadministrado | Estimulación visual',
   description: 'Ejercicio práctico de EMDR con estimulación bilateral visual. Configura velocidad y duración de sets para tu sesión de procesamiento emocional.',
   alternates: {
     canonical: "/emdr-autoadministrado/ejercicio",
   },
   openGraph: {
-    title: 'Ejercicio EMDR autoadministrado | Estimulación bilateral visual',
+    locale: "es_CL",
+    title: 'Ejercicio EMDR autoadministrado | Estimulación visual',
     description: 'Ejercicio práctico de EMDR con estimulación bilateral visual. Configura velocidad y duración de sets para tu sesión de procesamiento emocional.',
     url: `${SITE_URL}/emdr-autoadministrado/ejercicio`,
     type: 'website',
-    images: [{ url: '/yo.png', width: 1200, height: 630, alt: 'Gonzalo Pedrosa - Psicólogo' }],
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Gonzalo Pedrosa - Psicólogo' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -23,10 +26,19 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbItems = [
+  { label: "Inicio", href: "/" },
+  { label: "EMDR autoadministrado", href: "/emdr-autoadministrado" },
+  { label: "Ejercicio" },
+];
+
 export default function EjercicioEmdrPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white py-8 px-4">
+      <JsonLd id="local-business" data={localBusinessSchema as Record<string, unknown>} />
+      <JsonLd id="breadcrumb" data={getBreadcrumbSchema(breadcrumbItems) as Record<string, unknown>} />
       <div className="max-w-6xl mx-auto">
+        <Breadcrumb items={breadcrumbItems} />
         <div className="mb-6">
           <Link
             href="/emdr-autoadministrado"
@@ -54,7 +66,7 @@ export default function EjercicioEmdrPage() {
         <EmdrBilateralPlayer />
 
         <div className="mt-8 max-w-3xl mx-auto bg-blue-50 rounded-xl p-6">
-          <h3 className="font-semibold text-gray-900 mb-3">Instrucciones:</h3>
+          <h2 className="font-semibold text-gray-900 mb-3">Instrucciones:</h2>
           <ol className="space-y-2 text-gray-700 text-sm">
             <li><strong>1.</strong> Identifica la situación o emoción que deseas procesar.</li>
             <li><strong>2.</strong> Ajusta la velocidad y duración del set según tu preferencia.</li>

@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     canonical: "/psicologo-identidad-genero-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo Identidad de Género en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo afirmativo para identidad de género en Chillán. Acompañamiento profesional y respetuoso en tu proceso de exploración o transición.",
     url: "https://www.gonzalopedrosa.cl/psicologo-identidad-genero-chillan",

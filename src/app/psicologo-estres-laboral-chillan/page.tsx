@@ -7,14 +7,15 @@ import { getTwitterDescription } from "@/lib/schemas";
 import { RelatedReading } from "@/app/components/RelatedReading";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Estrés Laboral en Chillán | Presión y Agotamiento Laboral",
+  title: "Psicólogo para estrés laboral en Chillán | Agotamiento",
   description:
     "Psicólogo para estrés laboral en Chillán. Presión del trabajo, exigencias constantes y agotamiento por la carga laboral. Sesiones presenciales y online.",
   alternates: {
     canonical: "/psicologo-estres-laboral-chillan",
   },
   openGraph: {
-    title: "Psicólogo Estrés Laboral en Chillán | Presión y Agotamiento Laboral",
+    locale: "es_CL",
+    title: "Psicólogo para estrés laboral en Chillán | Agotamiento",
     description:
       "Psicólogo para estrés laboral en Chillán. Presión del trabajo, exigencias constantes y agotamiento por la carga laboral. Sesiones presenciales y online.",
     url: "https://www.gonzalopedrosa.cl/psicologo-estres-laboral-chillan",
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo Estrés Laboral en Chillán | Presión y Agotamiento Laboral",
+    title: "Psicólogo para estrés laboral en Chillán | Agotamiento",
     description: getTwitterDescription("Psicólogo para estrés laboral en Chillán. Presión del trabajo, exigencias constantes y agotamiento por la carga laboral. Sesiones presenciales y online."),
   },
 };

@@ -1,10 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Página no encontrada | Gonzalo Pedrosa",
+  description:
+    "Esta URL no existe o ya no está disponible. Vuelve al inicio o agenda una sesión con el psicólogo en Chillán.",
+  robots: { index: false, follow: false },
+};
 
 export default function NotFound() {
   return (
-    <>
-      <meta name="robots" content="noindex, nofollow" />
-      <main
+    <main
         style={{
           maxWidth: 640,
           margin: "0 auto",
@@ -44,6 +50,5 @@ export default function NotFound() {
           </Link>
         </p>
       </main>
-    </>
   );
 }

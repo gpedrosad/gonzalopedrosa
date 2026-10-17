@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     canonical: "/tratamiento-tlp-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Tratamiento TLP en Chillán | Psicólogo Gonzalo Pedrosa",
     description: "Tratamiento para Trastorno Límite de Personalidad (TLP) en Chillán. Terapia especializada para regular emociones y mejorar relaciones.",
     url: "https://www.gonzalopedrosa.cl/tratamiento-tlp-chillan",

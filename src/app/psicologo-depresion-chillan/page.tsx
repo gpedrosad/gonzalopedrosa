@@ -13,15 +13,16 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Psicólogo para depresión en Chillán con enfoque TCC. Sesiones online o presenciales, boleta Isapre y respuesta en menos de 24 horas para agendar tu primera consulta.";
+  "Psicólogo para depresión en Chillán con enfoque TCC. Sesiones online o presenciales, boleta Isapre y respuesta en menos de 24 horas.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo para depresión en Chillán | TCC online y presencial",
+  title: "Psicólogo para depresión en Chillán | TCC y online",
   description,
   alternates: {
     canonical: "/psicologo-depresion-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo para depresión en Chillán | Gonzalo Pedrosa",
     description,
     url: "https://www.gonzalopedrosa.cl/psicologo-depresion-chillan",

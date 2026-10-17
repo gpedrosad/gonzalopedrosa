@@ -62,7 +62,7 @@ export const alcoholismPages: Record<AlcoholismPageKey, AlcoholismPage> = {
     slug: "/alcoholismo-chillan",
     metaTitle: "Alcoholismo en Chillán | Terapia online · $35.000",
     description:
-      "¿El alcohol ya te está pasando la cuenta? Terapia para alcoholismo en Chillán: señales, plan claro y sesiones online. $35.000 / 50 min. Agenda primera orientación.",
+      "¿El alcohol ya te está pasando la cuenta? Terapia en Chillán: señales, plan y sesiones online. $35.000 / 50 min. Agenda orientación.",
     h1: "Alcoholismo en Chillán: ayuda psicológica para empezar hoy",
     shortTitle: "Alcoholismo en Chillán",
     cardDescription:

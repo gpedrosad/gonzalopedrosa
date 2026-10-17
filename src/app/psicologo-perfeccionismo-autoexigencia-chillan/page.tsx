@@ -6,14 +6,15 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Perfeccionismo y Autoexigencia en Chillán | Gonzalo Pedrosa",
+  title: "Psicólogo para perfeccionismo en Chillán | Autoexigencia",
   description:
     "Psicólogo especializado en perfeccionismo y autoexigencia en Chillán. Terapia para soltar el control excesivo y vivir con más flexibilidad.",
   alternates: {
     canonical: "/psicologo-perfeccionismo-autoexigencia-chillan",
   },
   openGraph: {
-    title: "Psicólogo Perfeccionismo y Autoexigencia en Chillán | Gonzalo Pedrosa",
+    locale: "es_CL",
+    title: "Psicólogo para perfeccionismo en Chillán | Autoexigencia",
     description: "Psicólogo especializado en perfeccionismo y autoexigencia en Chillán. Terapia para soltar el control excesivo y vivir con más flexibilidad.",
     url: "https://www.gonzalopedrosa.cl/psicologo-perfeccionismo-autoexigencia-chillan",
     type: "website",

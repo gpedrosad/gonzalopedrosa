@@ -7,15 +7,16 @@ import { getTwitterDescription } from "@/lib/schemas";
 import { RelatedReading } from "@/app/components/RelatedReading";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Cognitivo Conductual en Chillán, Chile | Gonzalo Pedrosa",
+  title: "Psicólogo cognitivo-conductual en Chillán | Enfoque TCC",
   description:
-    "Psicólogo con enfoque cognitivo-conductual (TCC) en Chillán, Chile. Terapia basada en evidencia para ansiedad, depresión y más. Sesiones presenciales y online.",
+    "Psicólogo con enfoque cognitivo-conductual (TCC) en Chillán. Terapia para ansiedad, depresión y más. Sesiones presenciales y online.",
   alternates: {
     canonical: "/psicologo-cognitivo-conductual-chillan",
   },
   openGraph: {
-    title: "Psicólogo Cognitivo Conductual en Chillán, Chile | Gonzalo Pedrosa",
-    description: "Psicólogo con enfoque cognitivo-conductual (TCC) en Chillán, Chile. Terapia basada en evidencia para ansiedad, depresión y más. Sesiones presenciales y online.",
+    locale: "es_CL",
+    title: "Psicólogo cognitivo-conductual en Chillán | Enfoque TCC",
+    description: "Psicólogo con enfoque cognitivo-conductual (TCC) en Chillán. Terapia para ansiedad, depresión y más. Sesiones presenciales y online.",
     url: "https://www.gonzalopedrosa.cl/psicologo-cognitivo-conductual-chillan",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Retrato de Gonzalo Pedrosa, psicólogo clínico" }],
@@ -59,7 +60,7 @@ export default function PsicologoCognitivoConductualChillanPage() {
         breadcrumbItems={breadcrumbItems}
         faqs={psicologo_cognitivo_conductual_chillanFAQs}
         serviceType="Psicología Cognitivo Conductual"
-        serviceDescription={"Psicólogo con enfoque cognitivo-conductual (TCC) en Chillán, Chile. Terapia basada en evidencia para ansiedad, depresión y más. Sesiones presenciales y online."}
+        serviceDescription={"Psicólogo con enfoque cognitivo-conductual (TCC) en Chillán. Terapia para ansiedad, depresión y más. Sesiones presenciales y online."}
       />
       <main
       style={{

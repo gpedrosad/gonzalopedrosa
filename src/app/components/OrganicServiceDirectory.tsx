@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { guides } from "@/app/preguntas/_content/guides";
 import {
   GUIDE_HUB,
   informationalPath,
@@ -6,6 +7,7 @@ import {
   QUESTION_HUB,
 } from "@/lib/informational-content";
 import { ORGANIC_SERVICE_GROUPS } from "@/lib/organic-service-directory";
+import { PUBLISHED_GUIDES } from "@/lib/published-guides";
 
 export function OrganicServiceDirectory() {
   return (
@@ -23,6 +25,7 @@ export function OrganicServiceDirectory() {
             title: "Guías para entender",
             links: [
               [GUIDE_HUB.path, GUIDE_HUB.h1],
+              ...PUBLISHED_GUIDES.map((guide) => [guide.href, guide.title]),
               ...pagesByCluster("guias").map((page) => [informationalPath(page), page.navLabel]),
             ],
           },
@@ -30,6 +33,7 @@ export function OrganicServiceDirectory() {
             title: "Preguntas frecuentes",
             links: [
               [QUESTION_HUB.path, QUESTION_HUB.h1],
+              ...guides.map((guide) => [guide.path, guide.h1]),
               ...pagesByCluster("preguntas").map((page) => [informationalPath(page), page.navLabel]),
             ],
           },

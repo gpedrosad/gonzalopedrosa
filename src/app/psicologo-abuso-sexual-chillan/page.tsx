@@ -16,12 +16,13 @@ const description =
   "Acompañamiento psicológico confidencial para abuso sexual en Chillán u online. EMDR y TCC, a tu ritmo, con reserva discreta y espacio seguro.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo por abuso sexual en Chillán | Atención confidencial",
+  title: "Psicólogo por abuso sexual en Chillán | Confidencial",
   description,
   alternates: {
     canonical: "/psicologo-abuso-sexual-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo por abuso sexual en Chillán | Gonzalo Pedrosa",
     description,
     url: `${SITE_URL}/psicologo-abuso-sexual-chillan`,

@@ -12,15 +12,16 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Señales de cuándo conviene ir al psicólogo en Chillán: malestar que no cede, impacto en sueño o trabajo y más. Orientación con TCC y opción de agendar primera sesión.";
+  "Señales para ir al psicólogo en Chillán: malestar que no cede, sueño o trabajo. Orientación con TCC y opción de agendar la primera sesión.";
 
 export const metadata: Metadata = {
-  title: "Cuándo ir al psicólogo en Chillán | Señales y primer paso | Gonzalo Pedrosa",
+  title: "Cuándo ir al psicólogo en Chillán | Señales claras",
   description,
   alternates: {
     canonical: "/cuando-ir-al-psicologo-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Cuándo ir al psicólogo en Chillán | Gonzalo Pedrosa",
     description,
     url: "https://www.gonzalopedrosa.cl/cuando-ir-al-psicologo-chillan",

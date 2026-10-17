@@ -6,14 +6,15 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Tratamiento Anorexia y Bulimia en Chillán | Psicólogo Gonzalo Pedrosa",
+  title: "Tratamiento de anorexia y bulimia en Chillán | Psicólogo",
   description:
     "Tratamiento psicológico para anorexia y bulimia en Chillán. Terapia especializada para recuperar tu salud y tu relación con la comida.",
   alternates: {
     canonical: "/tratamiento-anorexia-bulimia-chillan",
   },
   openGraph: {
-    title: "Tratamiento Anorexia y Bulimia en Chillán | Psicólogo Gonzalo Pedrosa",
+    locale: "es_CL",
+    title: "Tratamiento de anorexia y bulimia en Chillán | Psicólogo",
     description: "Tratamiento psicológico para anorexia y bulimia en Chillán. Terapia especializada para recuperar tu salud y tu relación con la comida.",
     url: "https://www.gonzalopedrosa.cl/tratamiento-anorexia-bulimia-chillan",
     type: "website",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tratamiento Anorexia y Bulimia en Chillán | Psicólogo Gonzalo Pedrosa",
+    title: "Tratamiento de anorexia y bulimia en Chillán | Psicólogo",
     description: getTwitterDescription("Tratamiento psicológico para anorexia y bulimia en Chillán. Terapia especializada para recuperar tu salud y tu relación con la comida."),
   },
 };

@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     canonical: "/psicologo-estres-academico-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo Estrés Académico en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo especializado en estrés académico en Chillán. Tratamiento para burnout estudiantil, ansiedad por exámenes y presión universitaria.",
     url: "https://www.gonzalopedrosa.cl/psicologo-estres-academico-chillan",

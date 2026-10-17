@@ -6,14 +6,15 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Certificado Salud Mental para Trabajo en Chillán | Gonzalo Pedrosa",
+  title: "Certificado de salud mental laboral en Chillán | Pedrosa",
   description:
     "Certificado de salud mental para trabajo en Chillán. Documento profesional para postulaciones laborales, licencias y otros trámites.",
   alternates: {
     canonical: "/certificado-salud-mental-trabajo-chillan",
   },
   openGraph: {
-    title: "Certificado Salud Mental para Trabajo en Chillán | Gonzalo Pedrosa",
+    locale: "es_CL",
+    title: "Certificado de salud mental laboral en Chillán | Pedrosa",
     description: "Certificado de salud mental para trabajo en Chillán. Documento profesional para postulaciones laborales, licencias y otros trámites.",
     url: "https://www.gonzalopedrosa.cl/certificado-salud-mental-trabajo-chillan",
     type: "website",

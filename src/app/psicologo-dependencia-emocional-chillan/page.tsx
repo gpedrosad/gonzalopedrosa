@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     canonical: "/psicologo-dependencia-emocional-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo Dependencia Emocional en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo especializado en dependencia emocional en Chillán. Terapia para superar relaciones de dependencia y construir vínculos más sanos.",
     url: "https://www.gonzalopedrosa.cl/psicologo-dependencia-emocional-chillan",

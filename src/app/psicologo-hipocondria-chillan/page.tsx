@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     canonical: "/psicologo-hipocondria-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo Hipocondría en Chillán | Gonzalo Pedrosa",
     description: "Tratamiento especializado para ansiedad por la salud. Terapia cognitivo-conductual efectiva para hipocondría.",
     url: "https://www.gonzalopedrosa.cl/psicologo-hipocondria-chillan",

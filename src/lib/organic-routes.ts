@@ -1,6 +1,8 @@
 /**
- * Inventario único de rutas orgánicas indexables.
- * Excluye: ads, interno, links, sitelink y páginas con canonical externo.
+ * Prioridad y lastmod de rutas orgánicas ya conocidas.
+ * El sitemap no se limita a esta lista: descubre `page.tsx` nuevas
+ * (por ejemplo bajo /guias y /preguntas) y les asigna valores por defecto.
+ * Excluye: ads, interno, links, sitelink, redirects y canónicos externos.
  */
 export const ORGANIC_EXCLUDED_PREFIXES = [
   "/ads/",
@@ -310,9 +312,12 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
     priority: 0.8,
   },
   { route: "/guias", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.75 },
-  { route: "/guias/diferencia-psicologo-psiquiatra", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
-  { route: "/guias/ansiedad-y-estres", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
-  { route: "/guias/terapia-cognitivo-conductual", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
+  { route: "/guias/familiar-con-ludopatia", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
+  { route: "/guias/psicologo-o-psiquiatra", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
+  { route: "/guias/ataque-de-panico-que-hacer", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
+  { route: "/guias/duelo-etapas-y-mitos", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
+  { route: "/guias/acompanar-a-alguien-en-duelo", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
+  { route: "/guias/si-un-cercano-habla-de-hacerse-dano", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
   { route: "/guias/que-es-el-emdr", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.72 },
   { route: "/guias/estilos-de-apego", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
   { route: "/guias/burnout-laboral", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
@@ -320,7 +325,15 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
   { route: "/guias/emocion-y-comida", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
   { route: "/guias/regulacion-emocional", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
   { route: "/preguntas", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.75 },
-  { route: "/preguntas/que-hacer-en-un-ataque-de-panico", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
+  { route: "/preguntas/cuanto-dura-una-terapia-psicologica", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
+  { route: "/preguntas/que-es-la-terapia-cognitivo-conductual", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
+  { route: "/preguntas/la-terapia-online-funciona", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
+  { route: "/preguntas/ansiedad-o-estres", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
+  { route: "/preguntas/la-ludopatia-es-una-enfermedad", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
+  { route: "/preguntas/pareja-con-adiccion-al-juego", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
+  { route: "/preguntas/cada-cuanto-ir-al-psicologo", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
+  { route: "/preguntas/que-es-un-ataque-de-panico", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
+  { route: "/preguntas/cuanto-dura-un-duelo", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
   { route: "/preguntas/que-es-la-erp-para-el-toc", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.72 },
   { route: "/preguntas/emdr-autoadministrado-y-terapia", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.72 },
   { route: "/preguntas/como-saber-si-es-burnout", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },

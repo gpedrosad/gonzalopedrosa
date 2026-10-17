@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     canonical: "/informe-psicologico-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Informe Psicológico en Chillán | Psicólogo Gonzalo Pedrosa",
     description: "Informes psicológicos profesionales en Chillán. Evaluación para cirugías, trámites legales, laborales y otros fines. Entrega rápida.",
     url: "https://www.gonzalopedrosa.cl/informe-psicologico-chillan",

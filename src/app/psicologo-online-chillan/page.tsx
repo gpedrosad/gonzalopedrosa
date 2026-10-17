@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     canonical: "/psicologo-online-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo online Chile | Videollamada $35.000 · Isapre",
     description,
     url: `${SITE_URL}/psicologo-online-chillan`,

@@ -13,13 +13,14 @@ import { getTwitterDescription } from "@/lib/schemas";
 export const metadata: Metadata = {
   title: "Psicólogo Matrimonial en Chillán, Chile | Gonzalo Pedrosa",
   description:
-    "Psicólogo matrimonial en Chillán. Terapia para matrimonios en crisis, problemas de comunicación y fortalecimiento del vínculo. Sesiones presenciales y online.",
+    "Psicólogo matrimonial en Chillán. Terapia para crisis, comunicación y el vínculo de pareja. Sesiones presenciales y online.",
   alternates: {
     canonical: "/psicologo-matrimonial-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo Matrimonial en Chillán, Chile | Gonzalo Pedrosa",
-    description: "Psicólogo matrimonial en Chillán. Terapia para matrimonios en crisis, problemas de comunicación y fortalecimiento del vínculo. Sesiones presenciales y online.",
+    description: "Psicólogo matrimonial en Chillán. Terapia para crisis, comunicación y el vínculo de pareja. Sesiones presenciales y online.",
     url: "https://www.gonzalopedrosa.cl/psicologo-matrimonial-chillan",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Retrato de Gonzalo Pedrosa, psicólogo clínico" }],
@@ -68,7 +69,7 @@ export default function PsicologoMatrimonialChillanPage() {
         breadcrumbItems={breadcrumbItems}
         faqs={psicologo_matrimonial_chillanFAQs}
         serviceType="Psicología Matrimonial"
-        serviceDescription={"Psicólogo matrimonial en Chillán. Terapia para matrimonios en crisis, problemas de comunicación y fortalecimiento del vínculo. Sesiones presenciales y online."}
+        serviceDescription={"Psicólogo matrimonial en Chillán. Terapia para crisis, comunicación y el vínculo de pareja. Sesiones presenciales y online."}
       />
       <main
       style={{

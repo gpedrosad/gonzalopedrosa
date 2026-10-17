@@ -8,8 +8,10 @@ El último Search Console usable sigue siendo el del 23 de agosto de 2026 (28 cl
 
 Dos clusters nuevos, enlazados desde la portada y entre sí:
 
-- `/guias`: diferencia entre psicólogo y psiquiatra, ansiedad y estrés, terapia cognitivo-conductual, EMDR, estilos de apego, burnout, higiene del sueño, emoción y comida, regulación emocional.
-- `/preguntas`: ataque de pánico, ERP para el TOC, límites del EMDR autoadministrado, cómo reconocer burnout, apego ansioso, duelo o depresión, rumiación y cómo poner un límite.
+- `/guias`: las de la ronda 1 (duelo, acompañar un duelo, pánico, familiar con ludopatía, riesgo de un cercano, psicólogo o psiquiatra) más EMDR, estilos de apego, burnout, higiene del sueño, emoción y comida, y regulación emocional.
+- `/preguntas`: las de la ronda 1 (duración y frecuencia de la terapia, TCC, terapia online, ansiedad o estrés, ludopatía, pareja y juego, qué es un ataque de pánico, cuánto dura un duelo) más ERP para el TOC, límites del EMDR autoadministrado, cómo reconocer burnout, apego ansioso, duelo o depresión, rumiación y cómo poner un límite.
+
+Temas repetidos quedaron en una sola URL, con redirección permanente: psicólogo o psiquiatra vive en `/guias/psicologo-o-psiquiatra`; ansiedad o estrés en `/preguntas/ansiedad-o-estres`; la TCC en `/preguntas/que-es-la-terapia-cognitivo-conductual`; qué hacer en un ataque de pánico en `/guias/ataque-de-panico-que-hacer`. «Qué es un ataque de pánico» y «duelo o depresión» se mantienen porque contestan otra pregunta, y se enlazan con esas guías.
 
 El único producto digital del sitio es el ejercicio de estimulación bilateral en `/emdr-autoadministrado`. Las páginas de EMDR lo explican y marcan para qué malestar leve sirve. Las páginas de los temas que ya tenían impresiones (ansiedad, pareja, EMDR, TOC, burnout, apego, sueño, obesidad) ahora enlazan a la guía o la pregunta correspondiente.
 
@@ -17,7 +19,7 @@ Imágenes orgánicas: el retrato usa el texto alternativo «Retrato de Gonzalo P
 
 ## Temas de la competencia que todavía no tienen guía
 
-Sitios como [Psicologias.cl](https://psicologias.cl/guias/psicologo-o-psiquiatra), [psicologosenchile.cl](https://psicologosenchile.cl/diferencias-entre-psicologo-y-psiquiatra-en-chile/) y [Domina con Sentido](https://www.dominaconsentido.com/psicologo-psiquiatra-o-coach-guia-clara-para-saber-a-quien-acudir-en-chile) rankean explicaciones, no solo «psicólogo + comuna». Estos temas aparecen en sus índices y aquí no tienen artículo propio. Conviene una página solo cuando haya algo útil que decir y una URL que no compita con una ficha de atención ya indexada.
+Sitios como [Psicologias.cl](https://psicologias.cl/guias/psicologo-o-psiquiatra), [psicologosenchile.cl](https://psicologosenchile.cl/diferencias-entre-psicologo-y-psiquiatra-en-chile/) y [Domina con Sentido](https://www.dominaconsentido.com/psicologo-psiquiatra-o-coach-guia-clara-para-saber-a-quien-acudir-en-chile) rankean explicaciones, no solo «psicólogo + comuna». Psicólogo versus psiquiatra ya está en `/guias/psicologo-o-psiquiatra`. Los temas de la tabla siguen sin artículo propio. Conviene una página solo cuando haya algo útil que decir y una URL que no compita con una ficha de atención ya indexada.
 
 | Tema que ellos cubren | Por qué puede servir | Cuidado |
 |---|---|---|

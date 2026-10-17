@@ -6,15 +6,16 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Baja Autoestima en Chillán, Chile | Gonzalo Pedrosa",
+  title: "Psicólogo para la baja autoestima en Chillán | Pedrosa",
   description:
-    "Psicólogo especializado en autoestima en Chillán, Chile. Tratamiento para baja autoestima e inseguridad. Terapia cognitivo-conductual. Sesiones presenciales y online.",
+    "Psicólogo para baja autoestima en Chillán. Trabajo de inseguridad con terapia cognitivo-conductual. Sesiones presenciales y online.",
   alternates: {
     canonical: "/psicologo-baja-autoestima-chillan",
   },
   openGraph: {
-    title: "Psicólogo Baja Autoestima en Chillán, Chile | Gonzalo Pedrosa",
-    description: "Psicólogo especializado en autoestima en Chillán, Chile. Tratamiento para baja autoestima e inseguridad. Terapia cognitivo-conductual. Sesiones presenciales y online.",
+    locale: "es_CL",
+    title: "Psicólogo para la baja autoestima en Chillán | Pedrosa",
+    description: "Psicólogo para baja autoestima en Chillán. Trabajo de inseguridad con terapia cognitivo-conductual. Sesiones presenciales y online.",
     url: "https://www.gonzalopedrosa.cl/psicologo-baja-autoestima-chillan",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Retrato de Gonzalo Pedrosa, psicólogo clínico" }],
@@ -58,7 +59,7 @@ export default function PsicologoBajaAutoestimaChillanPage() {
         breadcrumbItems={breadcrumbItems}
         faqs={psicologo_baja_autoestima_chillanFAQs}
         serviceType="Psicología Baja Autoestima"
-        serviceDescription={"Psicólogo especializado en autoestima en Chillán, Chile. Tratamiento para baja autoestima e inseguridad. Terapia cognitivo-conductual. Sesiones presenciales y online."}
+        serviceDescription={"Psicólogo para baja autoestima en Chillán. Trabajo de inseguridad con terapia cognitivo-conductual. Sesiones presenciales y online."}
       />
       <main
       style={{

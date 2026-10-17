@@ -6,14 +6,15 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Superar Trauma de Infancia en Chillán | Psicólogo Gonzalo Pedrosa",
+  title: "Superar el trauma de infancia en Chillán | Psicólogo",
   description:
     "Psicólogo para superar traumas de infancia en Chillán. Terapia para sanar heridas del pasado que afectan tu presente.",
   alternates: {
     canonical: "/superar-trauma-infancia-chillan",
   },
   openGraph: {
-    title: "Superar Trauma de Infancia en Chillán | Psicólogo Gonzalo Pedrosa",
+    locale: "es_CL",
+    title: "Superar el trauma de infancia en Chillán | Psicólogo",
     description: "Psicólogo para superar traumas de infancia en Chillán. Terapia para sanar heridas del pasado que afectan tu presente.",
     url: "https://www.gonzalopedrosa.cl/superar-trauma-infancia-chillan",
     type: "website",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Superar Trauma de Infancia en Chillán | Psicólogo Gonzalo Pedrosa",
+    title: "Superar el trauma de infancia en Chillán | Psicólogo",
     description: getTwitterDescription("Psicólogo para superar traumas de infancia en Chillán. Terapia para sanar heridas del pasado que afectan tu presente."),
   },
 };

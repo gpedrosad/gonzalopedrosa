@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     canonical: "/tratamiento-ludopatia-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Tratamiento Ludopatía en Chillán | Psicólogo Gonzalo Pedrosa",
     description: "Tratamiento para ludopatía y adicción al juego en Chillán. Terapia especializada para recuperar el control y tu bienestar.",
     url: "https://www.gonzalopedrosa.cl/tratamiento-ludopatia-chillan",

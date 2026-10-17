@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     canonical: "/psicologo-ansiedad-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo para ansiedad en Chillán | Agenda hoy · $35.000",
     description,
     url: "https://www.gonzalopedrosa.cl/psicologo-ansiedad-chillan",

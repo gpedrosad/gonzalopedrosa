@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     canonical: "/psicologo-manejo-frustracion-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo Manejo de Frustración en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo para manejo de frustración en Chillán. Aprende a tolerar la frustración, regular emociones y responder mejor ante lo que no puedes controlar.",
     url: "https://www.gonzalopedrosa.cl/psicologo-manejo-frustracion-chillan",

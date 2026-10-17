@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     canonical: "/orientacion-padres-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Orientación a Padres en Chillán | Psicólogo Gonzalo Pedrosa",
     description: "Orientación psicológica para padres en Chillán. Apoyo profesional para crianza, conducta de hijos, comunicación familiar y desafíos parentales.",
     url: "https://www.gonzalopedrosa.cl/orientacion-padres-chillan",

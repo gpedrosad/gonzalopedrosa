@@ -2,6 +2,11 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-10-17
+
+- Auditoría técnica: sitemap descubre `page.tsx` nuevas (sin tocar `/guias` ni `/preguntas`); canónico www por metadata y header `Link`; titles ≤60 y metas ≤155; OG en `/og.png`; BreadcrumbList y Person/LocalBusiness con registro RNPI, sin geopin ni sameAs inventados.
+- CWV barato: `sizes` en retratos, sin `priority` en avatares chicos, favicon que faltaba, caché de imágenes y migas sin JS de cliente.
+
 ## 2026-10-13
 
 - Auditoría inicial en producción: 79 URLs con canónicos correctos; navegación orgánica desde portada alcanza solo 49, con 18 enlaces directos y seis páginas a más de tres clics.

@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     canonical: "/tratamiento-toc-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Terapia ERP TOC Chillán | Exposición y prevención",
     description,
     url: `${SITE_URL}/tratamiento-toc-chillan`,

@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     canonical: "/hora-psicologo-chillan-hoy",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Hora Psicólogo Chillán Hoy | Disponibilidad Inmediata",
     description: "¿Necesitas hora con psicólogo en Chillán hoy? Consulta disponibilidad inmediata. Atención presencial y online. Respuesta rápida por WhatsApp.",
     url: "https://www.gonzalopedrosa.cl/hora-psicologo-chillan-hoy",

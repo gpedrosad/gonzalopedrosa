@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     canonical: "/psicologo-adulto-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo para hombres Chillán | Adultos · TCC online",
     description,
     url: "https://www.gonzalopedrosa.cl/psicologo-adulto-chillan",

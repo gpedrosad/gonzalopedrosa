@@ -6,13 +6,14 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Terapia Control de Ira en Chillán | Psicólogo Gonzalo Pedrosa",
+  title: "Terapia para el control de la ira en Chillán | Pedrosa",
   description:
     "Terapia para el control de la ira en Chillán. Aprende a manejar la rabia, la impulsividad y las reacciones explosivas de forma efectiva.",
   alternates: {
     canonical: "/terapia-control-ira-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Terapia Control de Ira en Chillán | Gonzalo Pedrosa",
     description: "Aprende a manejar la rabia y la impulsividad de forma efectiva con terapia profesional.",
     url: "https://www.gonzalopedrosa.cl/terapia-control-ira-chillan",
