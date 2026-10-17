@@ -39,3 +39,10 @@ Número único: `HEALTH_PROVIDER_REGISTRY` en `src/lib/site-config.ts` (`504978`
 - Conversión de puja: clic WhatsApp → `whatsapp_lead`. Diagnóstico: `view_landing`, `click_whatsapp`, `scroll_depth` y `faq_open`.
 - CTA única en toda la página: «Solicitar informe por WhatsApp».
 - Campaña Ads `informe-cambio-nombre-apellido-online` **propia y ENABLED** (US$1/día, lun–vie). Chile PRESENCE. RSA: `CAMPAIGN.md`.
+
+## Evaluación psicolaboral (`/ads/evaluacion-psicolaboral`)
+
+- B2B: empresas, pymes y RR.HH. Precio por candidato: operativos $45.000, técnicos/profesionales $60.000, jefaturas $85.000. Desde 5 candidatos, precio por volumen.
+- Informe PDF con recomendación en 48 horas hábiles. No nombrar pruebas específicas: se informan al cotizar.
+- CTA única: «Cotizar por WhatsApp» → `whatsapp_lead`.
+- Campaña Ads `evaluacion-psicolaboral-online` **ENABLED** (US$2/día, lun–vie, Chile PRESENCE).

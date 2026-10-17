@@ -51,6 +51,10 @@ npm run google-ads:create-psicologo-adolescentes -- --apply
 npm run google-ads:budgets-assets
 npm run google-ads:budgets-assets -- --apply
 
+# Campaña evaluación psicolaboral (aplicada ENABLED 17 oct)
+npm run google-ads:create-evaluacion-psicolaboral
+npm run google-ads:create-evaluacion-psicolaboral -- --apply --enabled
+
 # Reactivar + horario lun–vie (sin sáb/dom)
 node --env-file=.env.local scripts/google-ads-weekday-enable.mjs
 node --env-file=.env.local scripts/google-ads-weekday-enable.mjs --apply

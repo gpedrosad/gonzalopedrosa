@@ -7,10 +7,11 @@
 - **Campaña:** `evaluacion-bariatrica-online` (`24172472867`) · **ENABLED** · horario **lun–vie** · budget **US$1/día** (16 oct) · **$50.000** evaluación + informe · geo Chile PRESENCE · grupo `evaluacion-bariatrica` (`199819157735`) ENABLED · landing `/ads/evaluacion-bariatrica`
 - **Campaña:** `informe-psicologico-os10-online` (`24291587680`) · **ENABLED** · horario **lun–vie** · budget **US$2/día** · geo Chile PRESENCE · grupo `informe-psicologico-os10` (`198276616297`) ENABLED · landing `/ads/informe-psicologico-os10`
 - **Campaña:** `informe-cambio-nombre-apellido-online` (`24298829243`) · **PAUSED** (16 oct) · horario **lun–vie** · budget **US$1/día** · geo Chile PRESENCE · grupo `informe-cambio-nombre-apellido` (`203691716634`) ENABLED · landing `/ads/informe-cambio-nombre-apellido`
+- **Campaña:** `evaluacion-psicolaboral-online` (`24360933243`) · **ENABLED** (17 oct) · horario **lun–vie** · budget **US$2/día** · geo Chile PRESENCE · grupo `evaluacion-psicolaboral` ENABLED · landing `/ads/evaluacion-psicolaboral` · desde $45.000 por candidato
 - **Conv:** solo **WhatsApp click** (`7451799330`, label `sVwoCKLepeEbEIHgncVC`) primary + métrica + `CONTACT~WEBSITE` biddable. Las otras 3 acciones / goals de lead form y signup no pujan.
 - **Sitelinks TCC:** ninguno (todos removed 8 oct). Las URLs `/sitelink/*` del sitio siguen, ya no se anuncian.
 - **Assets:** callouts + snippet `Servicios` + precio CLP en las 4 campañas activas (16 oct).
-- **Última revisión:** 2026-10-16 · 0 conv 9–15 oct (tracking verificado OK); presupuestos restaurados y assets nuevos
+- **Última revisión:** 2026-10-17 · campaña psicolaboral nueva · antes: 2026-10-16 · 0 conv 9–15 oct (tracking verificado OK); presupuestos restaurados y assets nuevos
 
 ## Grupos
 
@@ -26,7 +27,8 @@
 | adiccion-al-juego | ENABLED | Campaña propia · US$2/día · Chile PRESENCE · landing `/ads/adiccion-al-juego` |
 | evaluacion-bariatrica | ENABLED | Campaña propia · US$1/día · Chile PRESENCE · landing `/ads/evaluacion-bariatrica` |
 | informe-psicologico-os10 | ENABLED | Campaña propia · US$2/día · Chile PRESENCE · landing `/ads/informe-psicologico-os10` |
-| informe-cambio-nombre-apellido | ENABLED | Campaña propia · US$1/día · Chile PRESENCE · landing `/ads/informe-cambio-nombre-apellido` |
+| informe-cambio-nombre-apellido | ENABLED (campaña PAUSED 16 oct) | Campaña propia · US$1/día · Chile PRESENCE · landing `/ads/informe-cambio-nombre-apellido` |
+| evaluacion-psicolaboral | ENABLED | Campaña propia `24360933243` · US$2/día · Chile PRESENCE · landing `/ads/evaluacion-psicolaboral` · B2B |
 
 ## Snapshot métricas 2026-08-27
 

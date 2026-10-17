@@ -13,6 +13,8 @@
 
 **No negativar** `cambio de nombre` / `cambio de apellido` / `rectificacion` en `informe-cambio-nombre-apellido-online`. En TCC y las otras campañas sí: aíslan el tráfico.
 
+**No negativar** `psicolaboral` / `evaluaciones psicolaborales` en `evaluacion-psicolaboral-online`. Ahí sí negativar intención de postulante (`preguntas`, `respuestas`, `como aprobar`, `wartegg`, `pdf`, `trabajo`): el cliente es la empresa, no el candidato.
+
 **No negativar** `adolescentes` / `adolescente` / `juvenil` en `psicologo-adolescentes-online`. En TCC y las otras campañas sí: aíslan el tráfico.
 
 **Sí seguras** (competidores, otro enfoque, expectativa incorrecta): emdr, dbt, betterhelp, unobravo, apps, adventista, 24/7, sexologo, psicoanalisis, gratis/IA, etc.
@@ -36,6 +38,7 @@ Mapa canónico (www). RSA con URL incorrecta → `align-landings` (no UPDATE de 
 | evaluacion-bariatrica | `/ads/evaluacion-bariatrica` |
 | informe-psicologico-os10 | `/ads/informe-psicologico-os10` |
 | informe-cambio-nombre-apellido | `/ads/informe-cambio-nombre-apellido` |
+| evaluacion-psicolaboral | `/ads/evaluacion-psicolaboral` |
 
 Host: siempre `https://www.gonzalopedrosa.cl` (no apex sin www).
 
