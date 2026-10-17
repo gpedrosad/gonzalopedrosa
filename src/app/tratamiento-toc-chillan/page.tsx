@@ -46,7 +46,7 @@ const tratamiento_toc_chillanFAQs = [
   {
     question: "¿El TOC tiene cura?",
     answer:
-      "El TOC es una condición crónica, pero con tratamiento adecuado muchas personas logran reducir significativamente sus síntomas y llevar una vida normal. La terapia ERP/EPR tiene tasas de éxito entre 60-80%.",
+      "El TOC es una condición crónica, pero con tratamiento adecuado muchas personas logran reducir de forma importante sus síntomas y llevar una vida normal. En la terapia ERP/EPR te acercas de a poco a lo que dispara la obsesión y dejas de hacer el ritual.",
   },
   {
     question: "¿Necesito medicación?",
@@ -424,9 +424,9 @@ export default function TratamientoTocChillanPage() {
               }}
             >
               El TOC es una condición crónica, pero con tratamiento adecuado
-              muchas personas logran reducir significativamente sus síntomas y
-              llevar una vida normal. La terapia ERP/EPR tiene tasas de éxito
-              entre 60-80%.
+              muchas personas logran reducir de forma importante sus síntomas y
+              llevar una vida normal. En la terapia ERP/EPR te acercas de a
+              poco a lo que dispara la obsesión y dejas de hacer el ritual.
             </p>
           </details>
 
