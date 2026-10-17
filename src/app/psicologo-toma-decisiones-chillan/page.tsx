@@ -13,11 +13,12 @@ export const metadata: Metadata = {
     canonical: "/psicologo-toma-decisiones-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo Toma de Decisiones en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo para ayudarte a tomar decisiones difíciles en Chillán. Terapia para clarificar opciones, superar la parálisis y decidir con confianza.",
     url: "https://www.gonzalopedrosa.cl/psicologo-toma-decisiones-chillan",
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -63,7 +64,7 @@ export default function PsicologoTomaDecisionesChillanPage() {
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
-        <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
+        <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} style={{ borderRadius: "9999px", objectFit: "cover" }}  sizes="64px" />
         <div>
           <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>Gonzalo Pedrosa</p>
           <p style={{ fontSize: "0.875rem", color: "#666" }}>Psicólogo Clínico · +7 años de experiencia</p>

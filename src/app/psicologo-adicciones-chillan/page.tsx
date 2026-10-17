@@ -8,16 +8,17 @@ import { getTwitterDescription } from "@/lib/schemas";
 export const metadata: Metadata = {
   title: "Psicólogo Adicciones en Chillán, Chile | Gonzalo Pedrosa",
   description:
-    "Psicólogo especializado en adicciones en Chillán, Chile. Tratamiento para conductas adictivas con enfoque cognitivo-conductual. Atención presencial y online.",
+    "Psicólogo para adicciones en Chillán. Tratamiento de conductas adictivas con enfoque cognitivo-conductual. Atención presencial y online.",
   alternates: {
     canonical: "/psicologo-adicciones-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo Adicciones en Chillán, Chile | Gonzalo Pedrosa",
-    description: "Psicólogo especializado en adicciones en Chillán, Chile. Tratamiento para conductas adictivas con enfoque cognitivo-conductual. Atención presencial y online.",
+    description: "Psicólogo para adicciones en Chillán. Tratamiento de conductas adictivas con enfoque cognitivo-conductual. Atención presencial y online.",
     url: "https://www.gonzalopedrosa.cl/psicologo-adicciones-chillan",
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -58,7 +59,7 @@ export default function PsicologoAdiccionesChillanPage() {
         breadcrumbItems={breadcrumbItems}
         faqs={psicologo_adicciones_chillanFAQs}
         serviceType="Psicología Adicciones"
-        serviceDescription={"Psicólogo especializado en adicciones en Chillán, Chile. Tratamiento para conductas adictivas con enfoque cognitivo-conductual. Atención presencial y online."}
+        serviceDescription={"Psicólogo para adicciones en Chillán. Tratamiento de conductas adictivas con enfoque cognitivo-conductual. Atención presencial y online."}
       />
       <main
       style={{
@@ -83,12 +84,11 @@ export default function PsicologoAdiccionesChillanPage() {
           alt="Gonzalo Pedrosa - Psicólogo"
           width={64}
           height={64}
-          priority
           style={{
             borderRadius: "9999px",
             objectFit: "cover",
           }}
-        />
+         sizes="64px" />
         <div>
           <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>
             Gonzalo Pedrosa

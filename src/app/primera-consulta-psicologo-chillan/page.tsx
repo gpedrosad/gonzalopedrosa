@@ -12,20 +12,21 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Qué esperar en la primera consulta con psicólogo en Chillán: duración, confidencialidad, qué llevar y cómo agendar. TCC con Gonzalo Pedrosa. Presencial u online.";
+  "Qué esperar en la primera consulta en Chillán: duración, confidencialidad y cómo agendar. TCC con Gonzalo Pedrosa, presencial u online.";
 
 export const metadata: Metadata = {
-  title: "Primera consulta psicólogo Chillán | Qué esperar | Gonzalo Pedrosa",
+  title: "Primera consulta con psicólogo en Chillán | Qué esperar",
   description,
   alternates: {
     canonical: "/primera-consulta-psicologo-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Primera consulta con psicólogo en Chillán | Gonzalo Pedrosa",
     description,
     url: "https://www.gonzalopedrosa.cl/primera-consulta-psicologo-chillan",
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -104,12 +105,11 @@ export default function PrimeraConsultaPsicologoChillanPage() {
             alt="Gonzalo Pedrosa - Psicólogo"
             width={64}
             height={64}
-            priority
             style={{
               borderRadius: "9999px",
               objectFit: "cover",
             }}
-          />
+           sizes="64px" />
           <div>
             <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>Gonzalo Pedrosa</p>
             <p style={{ fontSize: "0.875rem", color: "#666" }}>

@@ -23,11 +23,12 @@ export const metadata: Metadata = {
     canonical: "/agendar",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Agenda psicólogo Chillán hoy | Online o presencial",
     description,
     url: `${SITE_URL}/agendar`,
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -96,12 +97,11 @@ export default function AgendarPage() {
             alt="Gonzalo Pedrosa - Psicólogo"
             width={80}
             height={80}
-            priority
             style={{
               borderRadius: "9999px",
               objectFit: "cover",
             }}
-          />
+           sizes="80px" />
           <div>
             <h1
               style={{

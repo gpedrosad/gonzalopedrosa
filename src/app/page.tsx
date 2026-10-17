@@ -9,6 +9,7 @@ import {
   localBusinessSchema,
   getServiceSchema,
   getPageFAQSchema,
+  getBreadcrumbSchema,
   getTwitterDescription,
 } from "@/lib/schemas";
 
@@ -22,11 +23,12 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Gonzalo Pedrosa | Psicólogo en Chillán · Online y presencial",
     description,
     url: SITE_URL,
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -514,6 +516,10 @@ export default function HomePage() {
         </footer>
       </main>
       <JsonLd id="local-business" data={localBusinessSchema} />
+      <JsonLd
+        id="breadcrumb"
+        data={getBreadcrumbSchema([{ label: "Inicio", href: "/" }]) as Record<string, unknown>}
+      />
       <JsonLd id="service" data={serviceSchema} />
       <JsonLd id="faq-schema" data={faqSchema as Record<string, unknown>} />
     </>

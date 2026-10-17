@@ -20,17 +20,18 @@ const description =
   "Terapia online vs presencial en Chillán: ventajas, límites y para quién conviene cada modalidad. Psicólogo con TCC. Agenda sesión presencial u online.";
 
 export const metadata: Metadata = {
-  title: "Terapia online vs presencial en Chillán | Comparación | Gonzalo Pedrosa",
+  title: "Terapia online vs presencial en Chillán | Comparación",
   description,
   alternates: {
     canonical: "/terapia-online-vs-presencial-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Terapia online vs presencial en Chillán | Gonzalo Pedrosa",
     description,
     url: "https://www.gonzalopedrosa.cl/terapia-online-vs-presencial-chillan",
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -132,12 +133,11 @@ export default function TerapiaOnlineVsPresencialChillanPage() {
             alt="Gonzalo Pedrosa - Psicólogo"
             width={64}
             height={64}
-            priority
             style={{
               borderRadius: "9999px",
               objectFit: "cover",
             }}
-          />
+           sizes="64px" />
           <div>
             <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>Gonzalo Pedrosa</p>
             <p style={{ fontSize: "0.875rem", color: "#666" }}>

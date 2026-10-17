@@ -13,11 +13,12 @@ export const metadata: Metadata = {
     canonical: "/psicologo-dependencia-emocional-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo Dependencia Emocional en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo especializado en dependencia emocional en Chillán. Terapia para superar relaciones de dependencia y construir vínculos más sanos.",
     url: "https://www.gonzalopedrosa.cl/psicologo-dependencia-emocional-chillan",
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -75,9 +76,8 @@ export default function PsicologoDependenciaEmocionalChillanPage() {
           alt="Gonzalo Pedrosa - Psicólogo"
           width={56}
           height={56}
-          priority
           style={{ borderRadius: "9999px", objectFit: "cover" }}
-        />
+         sizes="56px" />
         <div>
           <p style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.125rem" }}>
             Chillán, Chile

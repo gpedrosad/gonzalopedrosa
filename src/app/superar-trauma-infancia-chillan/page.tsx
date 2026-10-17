@@ -6,22 +6,23 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Superar Trauma de Infancia en Chillán | Psicólogo Gonzalo Pedrosa",
+  title: "Superar el trauma de infancia en Chillán | Psicólogo",
   description:
     "Psicólogo para superar traumas de infancia en Chillán. Terapia para sanar heridas del pasado que afectan tu presente.",
   alternates: {
     canonical: "/superar-trauma-infancia-chillan",
   },
   openGraph: {
-    title: "Superar Trauma de Infancia en Chillán | Psicólogo Gonzalo Pedrosa",
+    locale: "es_CL",
+    title: "Superar el trauma de infancia en Chillán | Psicólogo",
     description: "Psicólogo para superar traumas de infancia en Chillán. Terapia para sanar heridas del pasado que afectan tu presente.",
     url: "https://www.gonzalopedrosa.cl/superar-trauma-infancia-chillan",
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Superar Trauma de Infancia en Chillán | Psicólogo Gonzalo Pedrosa",
+    title: "Superar el trauma de infancia en Chillán | Psicólogo",
     description: getTwitterDescription("Psicólogo para superar traumas de infancia en Chillán. Terapia para sanar heridas del pasado que afectan tu presente."),
   },
 };
@@ -63,7 +64,7 @@ export default function SuperarTraumaInfanciaChillanPage() {
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
-        <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
+        <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} style={{ borderRadius: "9999px", objectFit: "cover" }}  sizes="64px" />
         <div>
           <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>Gonzalo Pedrosa</p>
           <p style={{ fontSize: "0.875rem", color: "#666" }}>Psicólogo Clínico · +7 años de experiencia</p>

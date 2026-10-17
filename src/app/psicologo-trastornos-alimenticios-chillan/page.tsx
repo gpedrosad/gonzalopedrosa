@@ -6,18 +6,19 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Trastornos Alimenticios en Chillán | Gonzalo Pedrosa",
+  title: "Psicólogo para trastornos alimenticios en Chillán",
   description:
     "Psicólogo especializado en trastornos alimenticios en Chillán. Tratamiento para anorexia, bulimia, atracones y relación problemática con la comida.",
   alternates: {
     canonical: "/psicologo-trastornos-alimenticios-chillan",
   },
   openGraph: {
-    title: "Psicólogo Trastornos Alimenticios en Chillán | Gonzalo Pedrosa",
+    locale: "es_CL",
+    title: "Psicólogo para trastornos alimenticios en Chillán",
     description: "Psicólogo especializado en trastornos alimenticios en Chillán. Tratamiento para anorexia, bulimia, atracones y relación problemática con la comida.",
     url: "https://www.gonzalopedrosa.cl/psicologo-trastornos-alimenticios-chillan",
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -63,7 +64,7 @@ export default function PsicologoTrastornosAlimenticiosChillanPage() {
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
-        <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
+        <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} style={{ borderRadius: "9999px", objectFit: "cover" }}  sizes="64px" />
         <div>
           <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>Gonzalo Pedrosa</p>
           <p style={{ fontSize: "0.875rem", color: "#666" }}>Psicólogo Clínico · +7 años de experiencia</p>

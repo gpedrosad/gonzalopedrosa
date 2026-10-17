@@ -6,7 +6,7 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { SITE_URL, getTwitterDescription } from "@/lib/schemas";
 
 const description =
-  "Apoyo psicológico para trastorno bipolar en Chillán. Terapia complementaria, coordinación con psiquiatría y estrategias para prevenir recaídas. Presencial u online.";
+  "Apoyo psicológico para trastorno bipolar en Chillán. Terapia complementaria, coordinación con psiquiatría y prevención de recaídas.";
 
 export const metadata: Metadata = {
   title: "Psicólogo para bipolaridad en Chillán | Apoyo complementario",
@@ -15,11 +15,12 @@ export const metadata: Metadata = {
     canonical: "/psicologo-bipolaridad-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo para bipolaridad en Chillán | Gonzalo Pedrosa",
     description,
     url: `${SITE_URL}/psicologo-bipolaridad-chillan`,
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -67,7 +68,7 @@ export default function PsicologoBipolaridadChillanPage() {
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
-        <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
+        <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} style={{ borderRadius: "9999px", objectFit: "cover" }}  sizes="64px" />
         <div>
           <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>Gonzalo Pedrosa</p>
           <p style={{ fontSize: "0.875rem", color: "#666" }}>Psicólogo Clínico · +7 años de experiencia</p>

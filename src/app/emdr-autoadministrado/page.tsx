@@ -6,16 +6,17 @@ import { getTwitterDescription } from '@/lib/schemas';
 
 export const metadata: Metadata = {
   title: 'EMDR autoadministrado online | Estimulación bilateral visual',
-  description: 'Herramienta de EMDR autoadministrado con estimulación bilateral visual. Ejercicio guiado para procesar emociones de forma segura. No reemplaza terapia profesional. Uso responsable y consciente.',
+  description: 'Ejercicio de EMDR autoadministrado con estimulación bilateral visual. Guía para emociones leves. No reemplaza la terapia profesional.',
   alternates: {
     canonical: "/emdr-autoadministrado",
   },
   openGraph: {
+    locale: "es_CL",
     title: 'EMDR autoadministrado online | Estimulación bilateral visual',
     description: 'Herramienta de EMDR autoadministrado con estimulación bilateral visual. Ejercicio guiado para procesar emociones de forma segura.',
     url: 'https://www.gonzalopedrosa.cl/emdr-autoadministrado',
     type: 'website',
-    images: [{ url: '/yo.png', width: 1200, height: 630, alt: 'EMDR autoadministrado' }],
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'EMDR autoadministrado' }],
   },
   twitter: {
     card: 'summary_large_image',

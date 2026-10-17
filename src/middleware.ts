@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { CANONICAL_HOST } from "@/lib/site-config";
+import { CANONICAL_HOST, toCanonicalUrl } from "@/lib/site-config";
 
 /**
  * Middleware que:
@@ -56,6 +56,26 @@ export function middleware(request: NextRequest) {
 
   const response = NextResponse.next();
   response.headers.set("Content-Security-Policy", cspDirectives);
+
+  const pathname = request.nextUrl.pathname;
+  const redirectedPaths = new Set([
+    "/index",
+    "/index.html",
+    "/psicologo-hombres-chillan",
+    "/psicologo-especialista-ansiedad-chillan",
+  ]);
+  const isDocument = !redirectedPaths.has(pathname) &&
+    !pathname.startsWith("/api/") &&
+    pathname !== "/robots.txt" &&
+    pathname !== "/sitemap.xml" &&
+    pathname !== "/llms.txt";
+  if (isDocument) {
+    const canonicalPath = pathname === "/" ? "/" : pathname.replace(/\/+$/, "");
+    response.headers.append(
+      "Link",
+      `<${toCanonicalUrl(canonicalPath)}>; rel="canonical"`,
+    );
+  }
 
   return response;
 }
