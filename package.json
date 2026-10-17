@@ -28,7 +28,8 @@
     "google-ads:create-informe-os10": "node --env-file=.env.local scripts/google-ads-create-informe-os10.mjs",
     "google-ads:create-informe-cambio-nombre": "node --env-file=.env.local scripts/google-ads-create-informe-cambio-nombre.mjs",
     "google-ads:create-psicologo-adolescentes": "node --env-file=.env.local scripts/google-ads-create-psicologo-adolescentes.mjs",
-    "google-ads:budgets-assets": "node --env-file=.env.local scripts/google-ads-budgets-assets.mjs"
+    "google-ads:budgets-assets": "node --env-file=.env.local scripts/google-ads-budgets-assets.mjs",
+    "google-ads:create-evaluacion-psicolaboral": "node --env-file=.env.local scripts/google-ads-create-evaluacion-psicolaboral.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.1.1",
