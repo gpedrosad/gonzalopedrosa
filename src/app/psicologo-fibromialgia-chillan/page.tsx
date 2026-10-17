@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: "Psicólogo especializado en fibromialgia en Chillán. Terapia para manejo del dolor crónico, fatiga y aspectos emocionales de la enfermedad.",
     url: "https://www.gonzalopedrosa.cl/psicologo-fibromialgia-chillan",
     type: "website",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Retrato de Gonzalo Pedrosa, psicólogo clínico" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -64,7 +64,7 @@ export default function PsicologoFibromialgiaChillanPage() {
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
-        <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} style={{ borderRadius: "9999px", objectFit: "cover" }}  sizes="64px" />
+        <Image src="/yo.png" alt="Retrato de Gonzalo Pedrosa, psicólogo clínico" width={64} height={64} sizes="64px" style={{ borderRadius: "9999px", objectFit: "cover" }} loading="lazy" />
         <div>
           <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>Gonzalo Pedrosa</p>
           <p style={{ fontSize: "0.875rem", color: "#666" }}>Psicólogo Clínico · +7 años de experiencia</p>

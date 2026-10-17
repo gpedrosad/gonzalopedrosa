@@ -38,6 +38,31 @@ const nextConfig: NextConfig = {
         destination: "/psicologo-ansiedad-chillan",
         permanent: true,
       },
+      {
+        source: "/guias/diferencia-psicologo-psiquiatra",
+        destination: "/guias/psicologo-o-psiquiatra",
+        permanent: true,
+      },
+      {
+        source: "/guias/ansiedad-y-estres",
+        destination: "/preguntas/ansiedad-o-estres",
+        permanent: true,
+      },
+      {
+        source: "/guias/terapia-cognitivo-conductual",
+        destination: "/preguntas/que-es-la-terapia-cognitivo-conductual",
+        permanent: true,
+      },
+      {
+        source: "/preguntas/que-hacer-en-un-ataque-de-panico",
+        destination: "/guias/ataque-de-panico-que-hacer",
+        permanent: true,
+      },
+      {
+        source: "/preguntas/psicologo-o-psiquiatra",
+        destination: "/guias/psicologo-o-psiquiatra",
+        permanent: true,
+      },
     ];
   },
   // Headers de seguridad (CSP se maneja en middleware.ts con nonce)

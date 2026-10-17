@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
+import { RelatedReading } from "@/app/components/RelatedReading";
 
 export const metadata: Metadata = {
   title: "Psicólogo Duelo en Chillán, Chile | Gonzalo Pedrosa",
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     description: "Psicólogo especializado en duelo y pérdidas en Chillán, Chile. Acompañamiento profesional para procesar el dolor. Sesiones presenciales y online.",
     url: "https://www.gonzalopedrosa.cl/psicologo-duelo-chillan",
     type: "website",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Retrato de Gonzalo Pedrosa, psicólogo clínico" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -81,14 +82,16 @@ export default function PsicologoDueloChillanPage() {
       >
         <Image
           src="/yo.png"
-          alt="Gonzalo Pedrosa - Psicólogo"
+          alt="Retrato de Gonzalo Pedrosa, psicólogo clínico"
           width={56}
           height={56}
+            sizes="56px"
           style={{
             borderRadius: "9999px",
             objectFit: "cover",
           }}
-         sizes="56px" />
+        loading="lazy"
+        />
         <div>
           <p
             style={{
@@ -463,6 +466,7 @@ export default function PsicologoDueloChillanPage() {
           ))}
         </div>
       </nav>
+    <RelatedReading currentPath="/psicologo-duelo-chillan" />
     </main>
     </>
   );

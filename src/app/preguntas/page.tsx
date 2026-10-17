@@ -5,10 +5,15 @@ import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { getBreadcrumbSchema, getPageFAQSchema } from "@/lib/schemas";
 import { toCanonicalUrl } from "@/lib/site-config";
 import { guides } from "./_content/guides";
+import {
+  OG_IMAGE,
+  QUESTION_HUB,
+  informationalPath,
+  pagesByCluster,
+} from "@/lib/informational-content";
 
-const title = "Preguntas sobre terapia y salud mental";
-const description =
-  "Respuestas directas sobre duración de la terapia, TCC, terapia online, ansiedad, estrés, ludopatía, pánico y duelo.";
+const title = QUESTION_HUB.title;
+const description = QUESTION_HUB.description;
 const path = "/preguntas";
 const url = toCanonicalUrl(path);
 
@@ -46,13 +51,13 @@ export const metadata: Metadata = {
     description,
     siteName: "Gonzalo Pedrosa - Psicólogo",
     locale: "es_CL",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
-    images: ["/og.png"],
+    images: [OG_IMAGE.url],
   },
   robots: { index: true, follow: true },
 };
@@ -70,8 +75,6 @@ const blurbs: Record<string, string> = {
     "Por qué las clasificaciones hablan de trastorno adictivo y la familia dice enfermedad.",
   "pareja-con-adiccion-al-juego":
     "Límites con la plata, cómo hablar con hechos y por qué tu desgaste también importa.",
-  "psicologo-o-psiquiatra":
-    "Quién hace psicoterapia, quién puede recetar en Chile y cuándo las dos ayudas se juntan.",
   "cada-cuanto-ir-al-psicologo":
     "Por qué al inicio suele servir una vez por semana y cuándo tiene sentido espaciar.",
   "que-es-un-ataque-de-panico":
@@ -79,6 +82,8 @@ const blurbs: Record<string, string> = {
   "cuanto-dura-un-duelo":
     "Por qué no hay una fecha para estar bien y qué umbrales usan las clasificaciones para evaluar.",
 };
+
+const extraQuestions = pagesByCluster("preguntas");
 
 export default function PreguntasIndexPage() {
   return (
@@ -116,12 +121,13 @@ export default function PreguntasIndexPage() {
             margin: "0 0 1rem",
           }}
         >
-          Preguntas frecuentes sobre terapia
+          {QUESTION_HUB.h1}
         </h1>
         <p style={{ fontSize: "1.125rem", lineHeight: 1.7, color: "#222", margin: "0 0 1.5rem" }}>
           Aquí hay respuestas directas a preguntas que la gente escribe antes de entender un malestar o un
           tratamiento. Cada página contesta una sola cosa en el primer párrafo y después explica los matices.
-          El texto es general: no diagnostica, no promete un plazo y no cuenta casos de personas atendidas.
+          El texto es general: no diagnostica, no promete un plazo y no cuenta casos de personas atendidas. Si
+          quieres una lectura más larga, parte por las <Link href="/guias">guías</Link>.
         </p>
 
         <h2 style={{ fontSize: "1.35rem", fontWeight: 650, margin: "2rem 0 0.75rem" }}>Cómo leer estas guías</h2>
@@ -152,7 +158,7 @@ export default function PreguntasIndexPage() {
           ordenado y con preguntas concretas sobre frecuencia, modalidad o el tipo de profesional.
         </p>
         <p style={{ fontSize: "1.0625rem", lineHeight: 1.75, color: "#333", margin: "0 0 1rem" }}>
-          Hay temas que estas diez páginas no cubren, como informes, certificados o el valor de una sesión. Esos
+          Hay temas que este índice no cubre, como informes, certificados o el valor de una sesión. Esos
           contenidos ya viven en otras rutas del sitio. Si tu búsqueda es un nombre de comuna más un problema,
           entra a la página de ese problema. Si tu búsqueda es una pregunta, empieza por esta lista.
         </p>
@@ -172,6 +178,17 @@ export default function PreguntasIndexPage() {
               <p style={{ margin: "0.25rem 0 0", color: "#333" }}>{blurbs[guide.slug]}</p>
             </li>
           ))}
+          {extraQuestions.map((page) => (
+            <li key={page.slug} style={{ marginBottom: "1rem", lineHeight: 1.6 }}>
+              <Link
+                href={informationalPath(page)}
+                style={{ color: "#111", fontWeight: 650, textDecoration: "underline" }}
+              >
+                {page.h1}
+              </Link>
+              <p style={{ margin: "0.25rem 0 0", color: "#333" }}>{page.description}</p>
+            </li>
+          ))}
         </ul>
 
         <h2 style={{ fontSize: "1.35rem", fontWeight: 650, margin: "2rem 0 0.75rem" }}>Otras dudas frecuentes</h2>
@@ -188,7 +205,12 @@ export default function PreguntasIndexPage() {
 
         <p style={{ fontSize: "0.95rem", lineHeight: 1.7, color: "#444", marginTop: "2rem" }}>
           Si tú o alguien cercano está en riesgo, llama al 131, a Salud Responde (600 360 7777) o al Fono de la
-          Esperanza (717 200 200). Si hay violencia, Carabineros atiende en el 133.
+          Esperanza (717 200 200). Si hay violencia, Carabineros atiende en el 133. La diferencia entre psicólogo
+          y psiquiatra está en la guía{" "}
+          <Link href="/guias/psicologo-o-psiquiatra" style={{ color: "#111" }}>
+            psicólogo y psiquiatra
+          </Link>
+          .
         </p>
       </main>
     </>

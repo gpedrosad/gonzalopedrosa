@@ -39,6 +39,11 @@ export default function GuiaAtaquePanicoPage() {
       ]}
       relatedGuides={[
         {
+          href: "/preguntas/que-es-un-ataque-de-panico",
+          label: "Qué es un ataque de pánico",
+          note: "La definición del pico, distinta de los pasos para atravesarlo.",
+        },
+        {
           href: "/guias/psicologo-o-psiquiatra",
           label: "Psicólogo y psiquiatra",
           note: "Si después de la crisis quieres entender quién evalúa el cuerpo y quién el miedo.",

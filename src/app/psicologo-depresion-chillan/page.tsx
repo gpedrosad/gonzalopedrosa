@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { JsonLd } from "@/app/components/JsonLd";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
+import { RelatedReading } from "@/app/components/RelatedReading";
 import {
   localBusinessSchema,
   getBreadcrumbSchema,
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     description,
     url: "https://www.gonzalopedrosa.cl/psicologo-depresion-chillan",
     type: "website",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Retrato de Gonzalo Pedrosa, psicólogo clínico" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -105,14 +106,16 @@ export default function PsicologoDepresionChillanPage() {
       >
         <Image
           src="/yo.png"
-          alt="Gonzalo Pedrosa - Psicólogo"
+          alt="Retrato de Gonzalo Pedrosa, psicólogo clínico"
           width={56}
           height={56}
+            sizes="56px"
           style={{
             borderRadius: "9999px",
             objectFit: "cover",
           }}
-         sizes="56px" />
+        loading="lazy"
+        />
         <div>
           <p
             style={{
@@ -453,6 +456,7 @@ export default function PsicologoDepresionChillanPage() {
           ))}
         </div>
       </nav>
+    <RelatedReading currentPath="/psicologo-depresion-chillan" />
     </main>
     </>
   );

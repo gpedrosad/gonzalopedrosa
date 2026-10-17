@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
+import { RelatedReading } from "@/app/components/RelatedReading";
 
 export const metadata: Metadata = {
   title: "Tratamiento del burnout en Chillán | Agotamiento laboral",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
       "Tratamiento para síndrome de burnout en Chillán. Agotamiento crónico, estar quemado, cinismo y sensación de ineficacia. Recupera energía y límites.",
     url: "https://www.gonzalopedrosa.cl/tratamiento-burnout-chillan",
     type: "website",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Retrato de Gonzalo Pedrosa, psicólogo clínico" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -65,7 +66,7 @@ export default function TratamientoBurnoutChillanPage() {
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem" }}>
-        <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={56} height={56} style={{ borderRadius: "9999px", objectFit: "cover" }}  sizes="56px" />
+        <Image src="/yo.png" alt="Retrato de Gonzalo Pedrosa, psicólogo clínico" width={56} height={56} sizes="56px" style={{ borderRadius: "9999px", objectFit: "cover" }} loading="lazy" />
         <div>
           <p style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.125rem" }}>Chillán, Chile</p>
           <p style={{ fontWeight: 500, color: "#000" }}>Gonzalo Pedrosa</p>
@@ -209,6 +210,7 @@ export default function TratamientoBurnoutChillanPage() {
           ))}
         </div>
       </nav>
+    <RelatedReading currentPath="/tratamiento-burnout-chillan" />
     </main>
     </>
   );

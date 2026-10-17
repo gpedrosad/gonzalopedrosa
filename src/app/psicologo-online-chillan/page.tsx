@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description,
     url: `${SITE_URL}/psicologo-online-chillan`,
     type: "website",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Retrato de Gonzalo Pedrosa, psicólogo clínico" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -116,14 +116,16 @@ export default function PsicologoOnlineChillanPage() {
         >
           <Image
             src="/yo.png"
-            alt="Gonzalo Pedrosa - Psicólogo"
+            alt="Retrato de Gonzalo Pedrosa, psicólogo clínico"
             width={56}
             height={56}
+            sizes="56px"
             style={{
               borderRadius: "9999px",
               objectFit: "cover",
             }}
-           sizes="56px" />
+          loading="lazy"
+        />
           <div>
             <p
               style={{

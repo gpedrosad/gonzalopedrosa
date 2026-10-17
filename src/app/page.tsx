@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description,
     url: SITE_URL,
     type: "website",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Retrato de Gonzalo Pedrosa, psicólogo clínico" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -99,7 +99,7 @@ export default function HomePage() {
         <section style={{ textAlign: "center", marginBottom: "2rem" }}>
           <Image
             src="/yo.png"
-            alt="Gonzalo Pedrosa - Psicólogo"
+            alt="Retrato de Gonzalo Pedrosa, psicólogo clínico"
             width={120}
             height={120}
             priority

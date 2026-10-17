@@ -5,10 +5,11 @@ import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { getBreadcrumbSchema, SITE_URL } from "@/lib/schemas";
 import { CANONICAL_ORIGIN } from "@/lib/site-config";
 import { GUIA_UPDATED_ISO, GUIA_UPDATED_LABEL } from "./guia-article";
+import { GUIDE_HUB, OG_IMAGE, informationalPath, pagesByCluster } from "@/lib/informational-content";
+import { PUBLISHED_GUIDES } from "@/lib/published-guides";
 
-const title = "Guías para cuidar la salud mental";
-const description =
-  "Lecturas para un duelo, un ataque de pánico o un familiar con ludopatía, y para distinguir al psicólogo del psiquiatra. No reemplazan atención.";
+const title = GUIDE_HUB.title;
+const description = GUIDE_HUB.description;
 const path = "/guias";
 const url = `${CANONICAL_ORIGIN}${path}`;
 
@@ -23,20 +24,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_CL",
     siteName: "Gonzalo Pedrosa - Psicólogo",
-    images: [
-      {
-        url: "/og.png",
-        width: 1200,
-        height: 630,
-        alt: "Gonzalo Pedrosa - Psicólogo",
-      },
-    ],
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
-    images: ["/og.png"],
+    images: [OG_IMAGE.url],
   },
   robots: { index: true, follow: true, "max-image-preview": "large" },
 };
@@ -47,36 +41,12 @@ const breadcrumbItems = [
 ];
 
 const guides = [
-  {
-    href: "/guias/familiar-con-ludopatia",
-    title: "Ayudar a un familiar con adicción al juego",
-    note: "Señales que ve la familia, cómo conversar y cómo dejar de financiar la apuesta sin abandonar a la persona.",
-  },
-  {
-    href: "/guias/psicologo-o-psiquiatra",
-    title: "Psicólogo y psiquiatra: cuál es la diferencia",
-    note: "Formación, medicamentos y criterios generales para saber a quién consultar.",
-  },
-  {
-    href: "/guias/ataque-de-panico-que-hacer",
-    title: "Ataque de pánico: qué hacer en el momento",
-    note: "Pasos mientras el miedo está en el techo, y cuándo el episodio pide una urgencia médica.",
-  },
-  {
-    href: "/guias/duelo-etapas-y-mitos",
-    title: "Duelo: etapas, mitos y qué sí ayuda",
-    note: "Por qué las cinco etapas no son obligatorias y qué mitos le agregan peso a la pena.",
-  },
-  {
-    href: "/guias/acompanar-a-alguien-en-duelo",
-    title: "Cómo acompañar a alguien que está en duelo",
-    note: "Presencia, frases que sobran y ayuda concreta para las semanas en que el resto ya volvió a su vida.",
-  },
-  {
-    href: "/guias/si-un-cercano-habla-de-hacerse-dano",
-    title: "Si un cercano habla de hacerse daño",
-    note: "Cómo preguntar, qué no prometer y qué números usar en Chile si el riesgo es inmediato.",
-  },
+  ...PUBLISHED_GUIDES,
+  ...pagesByCluster("guias").map((page) => ({
+    href: informationalPath(page),
+    title: page.h1,
+    note: page.description,
+  })),
 ];
 
 const itemList = {
@@ -109,11 +79,12 @@ export default function GuiasIndexPage() {
       />
       <main className="guia">
         <Breadcrumb items={breadcrumbItems} />
-        <h1>{title}</h1>
+        <h1>{GUIDE_HUB.h1}</h1>
         <p className="guia-lead">
           Textos para entender una situación y saber qué puedes hacer hoy.
           Actualizados el {GUIA_UPDATED_LABEL}. No son una ficha clínica ni un
-          reemplazo de la atención profesional.
+          reemplazo de la atención profesional. Si buscas una respuesta corta,
+          mira también las <Link href="/preguntas">preguntas frecuentes</Link>.
         </p>
         <p className="guia-disclaimer" role="note">
           Si tú o alguien cercano está en riesgo de hacerse daño, no uses estas
@@ -133,7 +104,8 @@ export default function GuiasIndexPage() {
           <p>
             El <Link href="/perfil">perfil de quien escribe</Link> sitúa la
             autoría. Cada guía, al final, enlaza lecturas del mismo sitio que
-            tocan el tema desde otro ángulo.
+            tocan el tema desde otro ángulo. El recurso práctico del sitio es el{" "}
+            <Link href="/emdr-autoadministrado">ejercicio de estimulación bilateral</Link>.
           </p>
         </section>
       </main>
@@ -202,6 +174,7 @@ export default function GuiasIndexPage() {
           line-height: 1.65;
           margin: 0;
         }
+        .guia-lead a,
         .guia-related a { color: #111; }
       `}</style>
     </>

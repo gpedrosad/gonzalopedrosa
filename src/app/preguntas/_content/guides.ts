@@ -45,9 +45,6 @@ const gamblingLead =
 const partnerLead =
   "Si tu pareja tiene adicción al juego, protege la plata compartida, deja de cubrir deudas en silencio y habla en un momento tranquilo, con hechos concretos. Puedes ofrecer compañía para una evaluación y también buscar apoyo para ti. No puedes hacer el tratamiento por la otra persona. Si aparece una amenaza de hacerse daño, usa las líneas de urgencia.";
 
-const rolesLead =
-  "El psicólogo se forma en psicología y puede evaluar y hacer psicoterapia. En Chile no receta medicamentos. El psiquiatra es un médico especialista: puede diagnosticar y recetar. Ninguno anula al otro. Muchas personas conversan con un psicólogo y, si hace falta revisar fármacos, también ven a un psiquiatra o a su médico de cabecera.";
-
 const frequencyLead =
   "Al comienzo, lo más habitual es una sesión por semana. Esa continuidad ayuda a retomar lo conversado y a probar algo en la vida real antes de que se enfríe. Cuando el malestar baja y ya usas lo aprendido, hay personas que pasan a cada dos semanas. En una crisis corta a veces se acuerda un contacto más seguido. La frecuencia sale del problema, del riesgo y de tu vida práctica.";
 
@@ -259,10 +256,10 @@ export const guides: Guide[] = [
     ],
     related: [
       { href: "/psicologo-ansiedad-chillan", label: "Ansiedad: información y atención en Chillán" },
-      { href: "/psicologo-especialista-ansiedad-chillan", label: "Psicólogo especialista en ansiedad" },
       { href: "/psicologo-estres-laboral-chillan", label: "Estrés laboral en Chillán" },
       { href: "/tratamiento-burnout-chillan", label: "Burnout y agotamiento" },
       { href: "/preguntas/que-es-un-ataque-de-panico", label: "¿Qué es un ataque de pánico?" },
+      { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer en un ataque de pánico" },
     ],
     faqs: [
       {
@@ -383,62 +380,7 @@ export const guides: Guide[] = [
       },
     ],
   },
-  {
-    slug: "psicologo-o-psiquiatra",
-    path: "/preguntas/psicologo-o-psiquiatra",
-    title: "¿Psicólogo o psiquiatra? Diferencias",
-    description:
-      "El psicólogo hace psicoterapia y en Chile no receta. El psiquiatra es médico y puede indicar fármacos. Cómo se complementan.",
-    breadcrumbLabel: "Psicólogo o psiquiatra",
-    h1: "¿Psicólogo o psiquiatra: en qué se diferencian?",
-    lead: rolesLead,
-    sections: [
-      {
-        heading: "Formación y herramientas",
-        paragraphs: [
-          "El psicólogo estudia conducta, emoción, evaluación y distintas formas de psicoterapia. En la sesión se conversa con un método: se ordena el problema, se miran patrones y se ensayan cambios. En Chile, ese título no habilita para recetar antidepresivos, ansiolíticos ni otros fármacos.",
-          "El psiquiatra pasó por medicina y después por la especialidad. Puede diagnosticar, pedir exámenes cuando corresponde y recetar. Su hora a veces es más corta y está centrada en síntomas, sueño, riesgo y medicación. Algunos psiquiatras también hacen psicoterapia. Muchos derivan esa parte a un psicólogo.",
-          "El médico de cabecera queda en el medio en la vida real. A veces es quien inicia un fármaco o quien deriva. Si ya tienes hora con medicina general, lleva tus síntomas concretos. Esta guía no te dice qué pastilla usar. Esa decisión es médica.",
-        ],
-      },
-      {
-        heading: "Cuándo se complementan",
-        paragraphs: [
-          "Ansiedad leve o un problema acotado de sueño, de pareja o de hábito a menudo parte con psicoterapia. Si hay un ánimo muy caído, pánico que te saca de la pega, ideas de hacerte daño, o un cuadro que ya no te deja funcionar, sumar evaluación médica es una medida de cuidado.",
-          "Las dos ayudas pueden ir juntas. La psicoterapia trabaja lo que haces y lo que piensas entre semana. El fármaco, cuando está indicado, puede bajar una intensidad que no deja ni siquiera empezar ese trabajo. Una no reemplaza a la otra por prestigio.",
-          "Si dudas por dónde partir, una primera conversación con un psicólogo puede ordenar el mapa y decirte con franqueza si conviene un médico. La [primera consulta](/primera-consulta-psicologo-chillan) sirve para eso. El perfil de [Gonzalo Pedrosa](/perfil) cuenta la formación de quien publica este sitio, por si quieres saber desde qué oficio está escrita la guía.",
-        ],
-      },
-      {
-        heading: "Cómo elegir según tu pregunta",
-        paragraphs: [
-          "Pregúntate qué necesitas esta semana. Si quieres entender un patrón y tener con quién revisar ensayos concretos, buscas psicoterapia. Si quieres saber si un medicamento podría ayudarte, o ya tomas uno y hay que ajustarlo, buscas un médico. Si necesitas las dos cosas, se pueden coordinar.",
-          "Elige también por el encaje. Un título correcto con una persona con la que no puedes hablar sirve poco. En la primera sesión puedes preguntar cómo trabaja, qué hace si el tema se sale de su alcance y cómo se coordina con un médico. Esas respuestas valen más que un listado de nombres.",
-          "Hay páginas de este sitio para temas concretos, como [depresión](/psicologo-depresion-chillan) o [cuándo ir al psicólogo](/cuando-ir-al-psicologo-chillan). Úsalas para afinar el motivo. La elección entre psicólogo y psiquiatra se responde con el tipo de ayuda que buscas, no con cuál suena más grave.",
-        ],
-      },
-    ],
-    related: [
-      { href: "/perfil", label: "Perfil de Gonzalo Pedrosa" },
-      { href: "/cuando-ir-al-psicologo-chillan", label: "Cuándo ir al psicólogo" },
-      { href: "/primera-consulta-psicologo-chillan", label: "Qué esperar en la primera consulta" },
-      { href: "/psicologo-depresion-chillan", label: "Depresión: información y atención en Chillán" },
-      { href: "/preguntas/cuanto-dura-una-terapia-psicologica", label: "¿Cuánto dura una terapia psicológica?" },
-    ],
-    faqs: [
-      {
-        question: "¿El psicólogo puede recetar en Chile?",
-        answer:
-          "No. La psicoterapia y la evaluación psicológica están en su campo. Los medicamentos los indica un médico, como un psiquiatra o, en algunos casos, el médico de cabecera.",
-      },
-      {
-        question: "¿Tengo que ver a los dos?",
-        answer:
-          "No siempre. Hay procesos solo con psicoterapia y otros que necesitan evaluación de fármacos. Si el malestar te impide trabajar, dormir o estar a salvo, sumar un médico es una precaución razonable.",
-      },
-    ],
-  },
-  {
+    {
     slug: "cada-cuanto-ir-al-psicologo",
     path: "/preguntas/cada-cuanto-ir-al-psicologo",
     title: "¿Cada cuánto conviene ir al psicólogo?",
@@ -527,6 +469,7 @@ export const guides: Guide[] = [
       },
     ],
     related: [
+      { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer durante el ataque" },
       { href: "/psicologo-crisis-de-panico-chillan", label: "Crisis de pánico en Chillán" },
       { href: "/psicologo-ansiedad-chillan", label: "Ansiedad: información y atención en Chillán" },
       { href: "/tratamiento-agorafobia-chillan", label: "Agorafobia y miedo a salir" },
@@ -580,10 +523,11 @@ export const guides: Guide[] = [
       },
     ],
     related: [
+      { href: "/preguntas/duelo-o-depresion", label: "¿Es duelo o depresión?" },
+      { href: "/guias/duelo-etapas-y-mitos", label: "Etapas y mitos del duelo" },
+      { href: "/guias/acompanar-a-alguien-en-duelo", label: "Cómo acompañar a alguien en duelo" },
       { href: "/psicologo-duelo-chillan", label: "Duelo: información y atención en Chillán" },
-      { href: "/cuando-ir-al-psicologo-chillan", label: "Cuándo ir al psicólogo" },
       { href: "/psicologo-depresion-chillan", label: "Depresión: información y atención en Chillán" },
-      { href: "/preguntas/ansiedad-o-estres", label: "¿Cómo sé si tengo ansiedad o estrés?" },
     ],
     faqs: [
       {

@@ -98,5 +98,18 @@ export const discoverIndexableRoutes = (projectRoot) => {
   };
 
   walk(appDir);
+
+  const infoSource = readFileSync(
+    path.join(projectRoot, "src/lib/informational-content.ts"),
+    "utf8",
+  );
+  for (const match of infoSource.matchAll(
+    /cluster:\s*"(guias|preguntas)"\s*,\s*slug:\s*"([^"]+)"/g,
+  )) {
+    const route = `/${match[1]}/${match[2]}`;
+    if (routes.includes(route) || isExcludedRoute(route, prefixes) || redirects.has(route)) continue;
+    routes.push(route);
+  }
+
   return routes;
 };

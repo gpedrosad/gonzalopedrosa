@@ -34,6 +34,11 @@ export default function GuiaDueloEtapasPage() {
       ]}
       relatedGuides={[
         {
+          href: "/preguntas/duelo-o-depresion",
+          label: "Duelo o depresión",
+          note: "Criterios para no confundir la pena con un ánimo bajo que pide otra mirada.",
+        },
+        {
           href: "/guias/acompanar-a-alguien-en-duelo",
           label: "Cómo acompañar a alguien en duelo",
           note: "Si tú no eres quien perdió, sino quien quiere estar cerca sin decir frases que duelen.",
