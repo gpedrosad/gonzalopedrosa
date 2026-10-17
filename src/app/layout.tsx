@@ -4,7 +4,8 @@ import { Geist } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { DeferredAnalytics } from "@/app/components/DeferredAnalytics";
-import { CANONICAL_ORIGIN, CLINICAL_STATS } from "@/lib/site-config";
+import { localBusinessSchema, personSchema } from "@/lib/schemas";
+import { CANONICAL_ORIGIN } from "@/lib/site-config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,74 +18,7 @@ const GTM_ID = "GTM-N3DXMKTR";
 
 const layoutLdGraph = {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://www.gonzalopedrosa.cl/#persona",
-      name: "Gonzalo Pedrosa",
-      jobTitle: "Psicólogo Clínico",
-      description:
-        `Psicólogo con más de ${CLINICAL_STATS.yearsExperience} años de experiencia en atención clínica. Especialista en terapia cognitivo-conductual.`,
-      image: "https://www.gonzalopedrosa.cl/yo.png",
-      url: "https://www.gonzalopedrosa.cl/",
-      sameAs: ["https://wa.me/56968257817"],
-      knowsAbout: [
-        "Ansiedad",
-        "Depresión",
-        "Terapia Cognitivo-Conductual",
-        "Crisis de pánico",
-        "Estrés",
-      ],
-    },
-    {
-      "@type": "ProfessionalService",
-      "@id": "https://www.gonzalopedrosa.cl/#servicio",
-      name: "Gonzalo Pedrosa - Psicólogo",
-      provider: { "@id": "https://www.gonzalopedrosa.cl/#persona" },
-      areaServed: [
-        {
-          "@type": "City",
-          name: "Chillán",
-          "@id": "https://www.wikidata.org/wiki/Q203727",
-        },
-        { "@type": "Country", name: "Chile" },
-      ],
-      serviceType: [
-        "Psicoterapia individual",
-        "Terapia online",
-        "Terapia cognitivo-conductual",
-      ],
-      url: "https://www.gonzalopedrosa.cl/",
-      image: "https://www.gonzalopedrosa.cl/yo.png",
-      description:
-        "Atención psicológica profesional para ansiedad, depresión, estrés y más. Sesiones online y presenciales en Chillán.",
-      priceRange: "$35.000 CLP",
-      telephone: "+56968257817",
-      hasOfferCatalog: {
-        "@type": "OfferCatalog",
-        name: "Servicios de Psicología",
-        itemListElement: [
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Sesión individual",
-              description:
-                "Sesión de psicoterapia de 50 minutos, online o presencial",
-            },
-            price: "35000",
-            priceCurrency: "CLP",
-          },
-        ],
-      },
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: CLINICAL_STATS.ratingValue,
-        reviewCount: CLINICAL_STATS.reviewCount,
-        bestRating: "5",
-      },
-    },
-  ],
+  "@graph": [personSchema, localBusinessSchema],
 };
 
 /**
@@ -95,7 +29,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(CANONICAL_ORIGIN),
   title: "Gonzalo Pedrosa | Psicólogo",
   description:
-    "Psicólogo con más de 7 años de experiencia. Atención profesional para ansiedad, depresión, estrés y más. Terapia cognitivo-conductual. Sesiones online y presenciales.",
+    "Psicólogo en Chillán con más de 7 años de experiencia. TCC para ansiedad, depresión y estrés. Sesiones online y presenciales.",
   openGraph: {
     type: "website",
     url: `${CANONICAL_ORIGIN}/`,

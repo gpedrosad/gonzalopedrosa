@@ -29,11 +29,12 @@ export const metadata: Metadata = {
     canonical: "/psicologo-online-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo online Chile | Videollamada $35.000 · Isapre",
     description,
     url: `${SITE_URL}/psicologo-online-chillan`,
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -118,12 +119,11 @@ export default function PsicologoOnlineChillanPage() {
             alt="Gonzalo Pedrosa - Psicólogo"
             width={56}
             height={56}
-            priority
             style={{
               borderRadius: "9999px",
               objectFit: "cover",
             }}
-          />
+           sizes="56px" />
           <div>
             <p
               style={{

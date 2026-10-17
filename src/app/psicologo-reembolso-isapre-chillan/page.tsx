@@ -13,11 +13,12 @@ export const metadata: Metadata = {
     canonical: "/psicologo-reembolso-isapre-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo con Reembolso Isapre en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo en Chillán con boleta para reembolso Isapre. Atención particular con documentación válida para todas las Isapres. Sesiones presenciales y online.",
     url: "https://www.gonzalopedrosa.cl/psicologo-reembolso-isapre-chillan",
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -88,12 +89,11 @@ export default function PsicologoReembolsoIsapreChillanPage() {
           alt="Gonzalo Pedrosa - Psicólogo"
           width={56}
           height={56}
-          priority
           style={{
             borderRadius: "9999px",
             objectFit: "cover",
           }}
-        />
+         sizes="56px" />
         <div>
           <p
             style={{

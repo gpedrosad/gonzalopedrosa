@@ -6,22 +6,23 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Psicólogo en Chillán Viejo | Gonzalo Pedrosa - Atención Cercana",
+  title: "Psicólogo en Chillán Viejo | Atención cercana y online",
   description:
     "Psicólogo en Chillán Viejo y alrededores. Atención presencial cercana y terapia online. Ansiedad, depresión, estrés y más. Agenda tu hora.",
   alternates: {
     canonical: "/psicologo-chillan-viejo",
   },
   openGraph: {
-    title: "Psicólogo en Chillán Viejo | Gonzalo Pedrosa - Atención Cercana",
+    locale: "es_CL",
+    title: "Psicólogo en Chillán Viejo | Atención cercana y online",
     description: "Psicólogo en Chillán Viejo y alrededores. Atención presencial cercana y terapia online. Ansiedad, depresión, estrés y más. Agenda tu hora.",
     url: "https://www.gonzalopedrosa.cl/psicologo-chillan-viejo",
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo en Chillán Viejo | Gonzalo Pedrosa - Atención Cercana",
+    title: "Psicólogo en Chillán Viejo | Atención cercana y online",
     description: getTwitterDescription("Psicólogo en Chillán Viejo y alrededores. Atención presencial cercana y terapia online. Ansiedad, depresión, estrés y más. Agenda tu hora."),
   },
 };
@@ -83,12 +84,11 @@ export default function PsicologoChillanViejoPage() {
           alt="Gonzalo Pedrosa - Psicólogo"
           width={56}
           height={56}
-          priority
           style={{
             borderRadius: "9999px",
             objectFit: "cover",
           }}
-        />
+         sizes="56px" />
         <div>
           <p
             style={{

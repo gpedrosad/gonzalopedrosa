@@ -1,6 +1,8 @@
 /**
- * Inventario único de rutas orgánicas indexables.
- * Excluye: ads, interno, links, sitelink y páginas con canonical externo.
+ * Prioridad y lastmod de rutas orgánicas ya conocidas.
+ * El sitemap no se limita a esta lista: descubre `page.tsx` nuevas
+ * (por ejemplo bajo /guias y /preguntas) y les asigna valores por defecto.
+ * Excluye: ads, interno, links, sitelink, redirects y canónicos externos.
  */
 export const ORGANIC_EXCLUDED_PREFIXES = [
   "/ads/",

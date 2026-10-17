@@ -6,18 +6,19 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Baja Autoestima en Chillán, Chile | Gonzalo Pedrosa",
+  title: "Psicólogo para la baja autoestima en Chillán | Pedrosa",
   description:
-    "Psicólogo especializado en autoestima en Chillán, Chile. Tratamiento para baja autoestima e inseguridad. Terapia cognitivo-conductual. Sesiones presenciales y online.",
+    "Psicólogo para baja autoestima en Chillán. Trabajo de inseguridad con terapia cognitivo-conductual. Sesiones presenciales y online.",
   alternates: {
     canonical: "/psicologo-baja-autoestima-chillan",
   },
   openGraph: {
-    title: "Psicólogo Baja Autoestima en Chillán, Chile | Gonzalo Pedrosa",
-    description: "Psicólogo especializado en autoestima en Chillán, Chile. Tratamiento para baja autoestima e inseguridad. Terapia cognitivo-conductual. Sesiones presenciales y online.",
+    locale: "es_CL",
+    title: "Psicólogo para la baja autoestima en Chillán | Pedrosa",
+    description: "Psicólogo para baja autoestima en Chillán. Trabajo de inseguridad con terapia cognitivo-conductual. Sesiones presenciales y online.",
     url: "https://www.gonzalopedrosa.cl/psicologo-baja-autoestima-chillan",
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -58,7 +59,7 @@ export default function PsicologoBajaAutoestimaChillanPage() {
         breadcrumbItems={breadcrumbItems}
         faqs={psicologo_baja_autoestima_chillanFAQs}
         serviceType="Psicología Baja Autoestima"
-        serviceDescription={"Psicólogo especializado en autoestima en Chillán, Chile. Tratamiento para baja autoestima e inseguridad. Terapia cognitivo-conductual. Sesiones presenciales y online."}
+        serviceDescription={"Psicólogo para baja autoestima en Chillán. Trabajo de inseguridad con terapia cognitivo-conductual. Sesiones presenciales y online."}
       />
       <main
       style={{
@@ -83,12 +84,11 @@ export default function PsicologoBajaAutoestimaChillanPage() {
           alt="Gonzalo Pedrosa - Psicólogo"
           width={56}
           height={56}
-          priority
           style={{
             borderRadius: "9999px",
             objectFit: "cover",
           }}
-        />
+         sizes="56px" />
         <div>
           <p
             style={{

@@ -6,23 +6,24 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Estrés Laboral en Chillán | Presión y Agotamiento Laboral",
+  title: "Psicólogo para estrés laboral en Chillán | Agotamiento",
   description:
     "Psicólogo para estrés laboral en Chillán. Presión del trabajo, exigencias constantes y agotamiento por la carga laboral. Sesiones presenciales y online.",
   alternates: {
     canonical: "/psicologo-estres-laboral-chillan",
   },
   openGraph: {
-    title: "Psicólogo Estrés Laboral en Chillán | Presión y Agotamiento Laboral",
+    locale: "es_CL",
+    title: "Psicólogo para estrés laboral en Chillán | Agotamiento",
     description:
       "Psicólogo para estrés laboral en Chillán. Presión del trabajo, exigencias constantes y agotamiento por la carga laboral. Sesiones presenciales y online.",
     url: "https://www.gonzalopedrosa.cl/psicologo-estres-laboral-chillan",
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo Estrés Laboral en Chillán | Presión y Agotamiento Laboral",
+    title: "Psicólogo para estrés laboral en Chillán | Agotamiento",
     description: getTwitterDescription("Psicólogo para estrés laboral en Chillán. Presión del trabajo, exigencias constantes y agotamiento por la carga laboral. Sesiones presenciales y online."),
   },
 };
@@ -84,12 +85,11 @@ export default function PsicologoEstresLaboralChillanPage() {
           alt="Gonzalo Pedrosa - Psicólogo"
           width={56}
           height={56}
-          priority
           style={{
             borderRadius: "9999px",
             objectFit: "cover",
           }}
-        />
+         sizes="56px" />
         <div>
           <p
             style={{

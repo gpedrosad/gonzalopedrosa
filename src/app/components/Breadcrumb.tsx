@@ -1,6 +1,4 @@
 // src/app/components/Breadcrumb.tsx
-"use client";
-
 import Link from "next/link";
 
 export interface BreadcrumbItem {
@@ -15,7 +13,8 @@ interface BreadcrumbProps {
 export function Breadcrumb({ items }: BreadcrumbProps) {
   return (
     <nav
-      aria-label="Breadcrumb"
+      aria-label="Ruta de navegación"
+      className="site-breadcrumb"
       style={{
         marginBottom: "1.5rem",
         fontSize: "0.875rem",
@@ -52,15 +51,6 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
                 style={{
                   color: "#666",
                   textDecoration: "none",
-                  transition: "color 0.2s",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = "#000";
-                  e.currentTarget.style.textDecoration = "underline";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = "#666";
-                  e.currentTarget.style.textDecoration = "none";
                 }}
               >
                 {item.label}

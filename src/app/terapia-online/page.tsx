@@ -19,20 +19,21 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Guía sobre terapia online: pasos de cada sesión, requisitos técnicos, ventajas y confidencialidad. Información clara desde Chillán. Para reservar videollamada, agenda en el sitio.";
+  "Guía de terapia online: pasos de la sesión, requisitos técnicos y confidencialidad. Información desde Chillán. Para videollamada, agenda en el sitio.";
 
 export const metadata: Metadata = {
-  title: "Terapia online: cómo funciona | Psicólogo Chillán | Gonzalo Pedrosa",
+  title: "Terapia online: cómo funciona | Psicólogo en Chillán",
   description,
   alternates: {
     canonical: "/terapia-online",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Terapia online: cómo funciona | Gonzalo Pedrosa",
     description,
     url: `${SITE_URL}/terapia-online`,
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -106,12 +107,11 @@ export default function TerapiaOnlinePage() {
             alt="Gonzalo Pedrosa - Psicólogo"
             width={56}
             height={56}
-            priority
             style={{
               borderRadius: "9999px",
               objectFit: "cover",
             }}
-          />
+           sizes="56px" />
           <div>
             <p style={{ fontWeight: 500, color: "#000" }}>Gonzalo Pedrosa</p>
             <p style={{ fontSize: "0.875rem", color: "#666" }}>

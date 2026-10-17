@@ -18,11 +18,12 @@ export const metadata: Metadata = {
     canonical: "/terapia-celos-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Terapia para Celos en Chillán | Gonzalo Pedrosa",
     description: "Tratamiento para celos patológicos e inseguridad en la pareja. Terapia cognitivo-conductual efectiva.",
     url: "https://www.gonzalopedrosa.cl/terapia-celos-chillan",
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -87,12 +88,11 @@ export default function TerapiaCelosChillanPage() {
           alt="Gonzalo Pedrosa - Psicólogo"
           width={56}
           height={56}
-          priority
           style={{
             borderRadius: "9999px",
             objectFit: "cover",
           }}
-        />
+         sizes="56px" />
         <div>
           <p
             style={{

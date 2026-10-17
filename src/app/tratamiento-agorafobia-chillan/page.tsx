@@ -8,22 +8,23 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Tratamiento Agorafobia en Chillán | Psicólogo Gonzalo Pedrosa",
+  title: "Tratamiento de la agorafobia en Chillán | Psicólogo",
   description:
     "Tratamiento para agorafobia en Chillán. Terapia especializada para superar el miedo a salir, lugares públicos y situaciones donde escapar es difícil.",
   alternates: {
     canonical: "/tratamiento-agorafobia-chillan",
   },
   openGraph: {
-    title: "Tratamiento Agorafobia en Chillán | Psicólogo Gonzalo Pedrosa",
+    locale: "es_CL",
+    title: "Tratamiento de la agorafobia en Chillán | Psicólogo",
     description: "Tratamiento para agorafobia en Chillán. Terapia especializada para superar el miedo a salir, lugares públicos y situaciones donde escapar es difícil.",
     url: "https://www.gonzalopedrosa.cl/tratamiento-agorafobia-chillan",
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tratamiento Agorafobia en Chillán | Psicólogo Gonzalo Pedrosa",
+    title: "Tratamiento de la agorafobia en Chillán | Psicólogo",
     description: getTwitterDescription("Tratamiento para agorafobia en Chillán. Terapia especializada para superar el miedo a salir, lugares públicos y situaciones donde escapar es difícil."),
   },
 };
@@ -62,7 +63,7 @@ export default function TratamientoAgorafobiaChillanPage() {
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
-        <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
+        <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={64} height={64} style={{ borderRadius: "9999px", objectFit: "cover" }}  sizes="64px" />
         <div>
           <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>Gonzalo Pedrosa</p>
           <p style={{ fontSize: "0.875rem", color: "#666" }}>Psicólogo Clínico · +7 años de experiencia</p>

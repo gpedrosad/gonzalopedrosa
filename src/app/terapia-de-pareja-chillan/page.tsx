@@ -29,11 +29,12 @@ export const metadata: Metadata = {
     canonical: "/terapia-de-pareja-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Terapia de pareja Chillán | $35.000 · Online o presencial",
     description,
     url: `${SITE_URL}/terapia-de-pareja-chillan`,
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -119,12 +120,11 @@ export default function TerapiaParejaChillanPage() {
           alt="Gonzalo Pedrosa - Psicólogo"
           width={64}
           height={64}
-          priority
           style={{
             borderRadius: "9999px",
             objectFit: "cover",
           }}
-        />
+         sizes="64px" />
         <div>
           <p
             style={{

@@ -269,9 +269,10 @@ const Profile: React.FC = () => {
         <div className="flex flex-col items-center">
           <Image
             src={profileData.photo}
-            alt={profileData.name}
+            alt="Retrato de Gonzalo Pedrosa, psicólogo clínico"
             width={240}
             height={240}
+            sizes="240px"
             priority
             className="rounded-lg mb-4 object-cover"
           />

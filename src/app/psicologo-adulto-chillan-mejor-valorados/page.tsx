@@ -8,22 +8,23 @@ import { Button } from "../components/Button";
 
 export const metadata: Metadata = {
   title:
-    "Cómo Elegir un Psicólogo Bien Valorado en Chillán, Chile | Guía Práctica",
+    "Cómo elegir un psicólogo bien valorado en Chillán",
   description:
-    "Guía para elegir un psicólogo bien valorado en Chillán, Chile. Qué considerar al buscar un profesional de salud mental: formación, enfoque, experiencia y más.",
+    "Guía para elegir un psicólogo bien valorado en Chillán. Qué mirar: formación, enfoque, experiencia y si explica el proceso con claridad.",
   alternates: {
     canonical: "/psicologo-adulto-chillan-mejor-valorados",
   },
   openGraph: {
-    title: "Cómo Elegir un Psicólogo Bien Valorado en Chillán, Chile | Guía Práctica",
-    description: "Guía para elegir un psicólogo bien valorado en Chillán, Chile. Qué considerar al buscar un profesional de salud mental: formación, enfoque, experiencia y más.",
+    locale: "es_CL",
+    title: "Cómo elegir un psicólogo bien valorado en Chillán",
+    description: "Guía para elegir un psicólogo bien valorado en Chillán. Qué mirar: formación, enfoque, experiencia y si explica el proceso con claridad.",
     url: "https://www.gonzalopedrosa.cl/psicologo-adulto-chillan-mejor-valorados",
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cómo Elegir un Psicólogo Bien Valorado en Chillán, Chile | Guía Práctica",
+    title: "Cómo elegir un psicólogo bien valorado en Chillán",
     description: getTwitterDescription("Guía para elegir un psicólogo bien valorado en Chillán, Chile. Qué considerar al buscar un profesional de salud mental: formación, enfoque, experienci"),
   },
 };
@@ -60,7 +61,7 @@ export default function PsicologoMejorValoradosChillanPage() {
         breadcrumbItems={breadcrumbItems}
         faqs={psicologo_adulto_chillan_mejor_valoradosFAQs}
         serviceType="Psicología Adulto Chillan Mejor Valorados"
-        serviceDescription={"Guía para elegir un psicólogo bien valorado en Chillán, Chile. Qué considerar al buscar un profesional de salud mental: formación, enfoque, experiencia y más."}
+        serviceDescription={"Guía para elegir un psicólogo bien valorado en Chillán. Qué mirar: formación, enfoque, experiencia y si explica el proceso con claridad."}
       />
       <main
       style={{
@@ -85,12 +86,11 @@ export default function PsicologoMejorValoradosChillanPage() {
           alt="Gonzalo Pedrosa - Psicólogo"
           width={64}
           height={64}
-          priority
           style={{
             borderRadius: "9999px",
             objectFit: "cover",
           }}
-        />
+         sizes="64px" />
         <div>
           <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>
             Gonzalo Pedrosa

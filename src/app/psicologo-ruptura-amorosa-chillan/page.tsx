@@ -13,11 +13,12 @@ export const metadata: Metadata = {
     canonical: "/psicologo-ruptura-amorosa-chillan",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Psicólogo Ruptura Amorosa en Chillán | Gonzalo Pedrosa",
     description: "Psicólogo especializado en rupturas amorosas en Chillán. Supera el dolor de una separación con terapia profesional. Sesiones presenciales y online.",
     url: "https://www.gonzalopedrosa.cl/psicologo-ruptura-amorosa-chillan",
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -83,9 +84,8 @@ export default function PsicologoRupturaAmorosaChillanPage() {
           alt="Gonzalo Pedrosa - Psicólogo"
           width={56}
           height={56}
-          priority
           style={{ borderRadius: "9999px", objectFit: "cover" }}
-        />
+         sizes="56px" />
         <div>
           <p
             style={{

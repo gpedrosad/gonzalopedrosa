@@ -12,20 +12,21 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "¿Buscas el mejor psicólogo en Chillán? Opiniones, enfoque TCC, precios y cómo elegir con criterio —sin promesas vacías. Conoce mi perfil y agenda una primera sesión.";
+  "¿Buscas el mejor psicólogo en Chillán? Opiniones, enfoque TCC, precios y cómo elegir con criterio. Revisa el perfil y agenda una primera sesión.";
 
 export const metadata: Metadata = {
-  title: "Mejor psicólogo Chillán opiniones | Cómo elegir | Gonzalo Pedrosa",
+  title: "Mejor psicólogo en Chillán: opiniones y cómo elegir",
   description,
   alternates: {
     canonical: "/mejor-psicologo-chillan-opiniones",
   },
   openGraph: {
+    locale: "es_CL",
     title: "Mejor psicólogo Chillán opiniones | Gonzalo Pedrosa",
     description,
     url: "https://www.gonzalopedrosa.cl/mejor-psicologo-chillan-opiniones",
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -72,7 +73,7 @@ export default function MejorPsicologoChillanOpinionesPage() {
     <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
         <Breadcrumb items={breadcrumbItems} />
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem" }}>
-        <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={56} height={56} priority style={{ borderRadius: "9999px", objectFit: "cover" }} />
+        <Image src="/yo.png" alt="Gonzalo Pedrosa - Psicólogo" width={56} height={56} style={{ borderRadius: "9999px", objectFit: "cover" }}  sizes="56px" />
         <div>
           <p style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.125rem" }}>Chillán, Chile</p>
           <p style={{ fontWeight: 500, color: "#000" }}>Gonzalo Pedrosa</p>
