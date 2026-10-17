@@ -7,6 +7,7 @@ import {
   type ClusterPage,
   type IntentCluster,
 } from "@/lib/intent-clusters";
+import { readingLinksFor } from "@/lib/informational-content";
 
 type ExtraLink = {
   label: string;
@@ -129,6 +130,9 @@ export function IntentClusterSection({
 
   const isHub = currentPath === cluster.hubHref;
   const navPages = getClusterNavPages(cluster, currentPath);
+  const reading = readingLinksFor(currentPath).filter(
+    (item) => item.href !== currentPath && !extraLinks.some((extra) => extra.href === item.href),
+  );
 
   return (
     <>
@@ -159,6 +163,29 @@ export function IntentClusterSection({
             </Link>
           ))}
         </div>
+        {reading.length > 0 && (
+          <div style={{ marginTop: "1rem" }}>
+            <p
+              style={{
+                fontSize: "0.75rem",
+                fontWeight: 600,
+                textTransform: "uppercase",
+                letterSpacing: "0.1em",
+                color: "#999",
+                marginBottom: "0.75rem",
+              }}
+            >
+              Para entender el tema
+            </p>
+            <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+              {reading.map((item) => (
+                <Link key={item.href} href={item.href} prefetch={false} style={pillStyle}>
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </nav>
     </>
   );

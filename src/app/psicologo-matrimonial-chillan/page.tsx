@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: "Psicólogo matrimonial en Chillán. Terapia para matrimonios en crisis, problemas de comunicación y fortalecimiento del vínculo. Sesiones presenciales y online.",
     url: "https://www.gonzalopedrosa.cl/psicologo-matrimonial-chillan",
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Retrato de Gonzalo Pedrosa, psicólogo clínico" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -90,14 +90,15 @@ export default function PsicologoMatrimonialChillanPage() {
       >
         <Image
           src="/yo.png"
-          alt="Gonzalo Pedrosa - Psicólogo"
+          alt="Retrato de Gonzalo Pedrosa, psicólogo clínico"
           width={56}
           height={56}
-          priority
+            sizes="56px"
           style={{
             borderRadius: "9999px",
             objectFit: "cover",
           }}
+        loading="lazy"
         />
         <div>
           <p

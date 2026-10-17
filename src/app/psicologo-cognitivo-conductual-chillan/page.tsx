@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
+import { RelatedReading } from "@/app/components/RelatedReading";
 
 export const metadata: Metadata = {
   title: "Psicólogo Cognitivo Conductual en Chillán, Chile | Gonzalo Pedrosa",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     description: "Psicólogo con enfoque cognitivo-conductual (TCC) en Chillán, Chile. Terapia basada en evidencia para ansiedad, depresión y más. Sesiones presenciales y online.",
     url: "https://www.gonzalopedrosa.cl/psicologo-cognitivo-conductual-chillan",
     type: "website",
-    images: [{ url: "/yo.png", width: 1200, height: 630, alt: "Gonzalo Pedrosa - Psicólogo" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Retrato de Gonzalo Pedrosa, psicólogo clínico" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -80,14 +81,15 @@ export default function PsicologoCognitivoConductualChillanPage() {
       >
         <Image
           src="/yo.png"
-          alt="Gonzalo Pedrosa - Psicólogo"
+          alt="Retrato de Gonzalo Pedrosa, psicólogo clínico"
           width={64}
           height={64}
-          priority
+            sizes="64px"
           style={{
             borderRadius: "9999px",
             objectFit: "cover",
           }}
+        loading="lazy"
         />
         <div>
           <p style={{ fontWeight: 600, marginBottom: "0.125rem" }}>
@@ -523,6 +525,7 @@ export default function PsicologoCognitivoConductualChillanPage() {
           >Psicólogo online</Link>
         </div>
       </nav>
+    <RelatedReading currentPath="/psicologo-cognitivo-conductual-chillan" />
     </main>
     </>
   );

@@ -203,6 +203,29 @@ export function getWebPageSchema(params: {
   };
 }
 
+/** Artículo informativo. No incluye oferta de sesión. */
+export function getArticleSchema(params: {
+  headline: string;
+  description: string;
+  path: string;
+  datePublished: string;
+  dateModified: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: params.headline,
+    description: params.description,
+    inLanguage: "es-CL",
+    datePublished: params.datePublished,
+    dateModified: params.dateModified,
+    image: `${SITE_URL}/og.png`,
+    author: { "@id": `${SITE_URL}/#persona` },
+    publisher: { "@id": `${SITE_URL}/#persona` },
+    mainEntityOfPage: `${SITE_URL}${params.path}`,
+  };
+}
+
 /**
  * Genera FAQPage Schema con FAQs personalizadas + base
  */

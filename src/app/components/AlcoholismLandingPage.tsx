@@ -145,12 +145,13 @@ export function AlcoholismLandingPage({
             <div className="mb-6 flex items-center gap-4 rounded-2xl border border-stone-200 bg-white/90 p-4 shadow-sm">
               <Image
                 src="/yo.png"
-                alt="Gonzalo Pedrosa - Psicólogo"
+                alt="Retrato de Gonzalo Pedrosa, psicólogo clínico"
                 width={64}
                 height={64}
-                priority
+            sizes="64px"
                 className="rounded-full border border-stone-200 object-cover"
-              />
+              loading="lazy"
+        />
               <div>
                 <p className="text-base font-semibold text-stone-900">
                   Gonzalo Pedrosa

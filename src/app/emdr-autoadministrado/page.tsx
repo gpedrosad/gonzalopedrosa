@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Breadcrumb } from '@/app/components/Breadcrumb';
 import { OrganicSeoScripts } from '@/app/components/OrganicSeoScripts';
 import { getTwitterDescription } from '@/lib/schemas';
+import { RelatedReading } from "@/app/components/RelatedReading";
 
 export const metadata: Metadata = {
   title: 'EMDR autoadministrado online | Estimulación bilateral visual',
@@ -135,6 +136,7 @@ export default function EmdrAutoadministradoPage() {
             </div>
           </section>
 
+          <RelatedReading currentPath="/emdr-autoadministrado" />
           <div className="text-center mt-12">
             <Link
               href="/emdr-autoadministrado/ejercicio"
