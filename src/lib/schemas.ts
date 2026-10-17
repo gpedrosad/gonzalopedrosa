@@ -17,9 +17,13 @@ const CHILLAN_ADDRESS = {
   addressCountry: "CL",
 } as const;
 
-/** Persona real del sitio: nombre, registro RNPI y atención en Chillán. Sin redes ni dirección de calle no publicadas. */
+/**
+ * Persona real del sitio: nombre, registro RNPI y atención en Chillán.
+ * Psychologist es el tipo de schema.org para el oficio. Sin sameAs: el repo no
+ * publica un perfil social ni una ficha personal del registro, solo la portada.
+ */
 export const personSchema = {
-  "@type": "Person",
+  "@type": ["Person", "Psychologist"],
   "@id": `${SITE_URL}/#persona`,
   name: "Gonzalo Pedrosa",
   jobTitle: "Psicólogo Clínico",
@@ -40,7 +44,7 @@ export const personSchema = {
 
 /**
  * LocalBusiness + ProfessionalService.
- * Sin geopin ni sameAs: no hay calle ni perfil social publicados.
+ * Sin geopin ni sameAs: no hay calle ni perfil social publicados en el repo.
  */
 export const localBusinessSchema = {
   "@context": "https://schema.org",

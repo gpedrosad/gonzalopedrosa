@@ -5,6 +5,7 @@ import { JsonLd } from "@/app/components/JsonLd";
 import { ProfessionalCredentials } from "@/app/components/ProfessionalCredentials";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { IntentClusterSection } from "@/app/components/IntentClusterSection";
+import { RelatedReading } from "@/app/components/RelatedReading";
 import {
   COUPLES_CLUSTER,
   getClusterBreadcrumb,
@@ -20,17 +21,17 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Terapia de pareja en Chillán: comunicación, celos, crisis o distancia. Desde $35.000, TCC online o presencial. Agenda hoy por web o WhatsApp.";
+  "Terapia de pareja en Chillán para comunicación, discusiones que se repiten y distancia. Psicólogo de pareja, presencial u online. La guía explica el ciclo.";
 
 export const metadata: Metadata = {
-  title: "Terapia de pareja Chillán | $35.000 · Online o presencial",
+  title: "Terapia de pareja en Chillán | Psicólogo de pareja",
   description,
   alternates: {
     canonical: "/terapia-de-pareja-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Terapia de pareja Chillán | $35.000 · Online o presencial",
+    title: "Terapia de pareja en Chillán | Psicólogo de pareja",
     description,
     url: `${SITE_URL}/terapia-de-pareja-chillan`,
     type: "website",
@@ -38,10 +39,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terapia de pareja Chillán | $35.000",
-    description: getTwitterDescription(
-      "Comunicación, celos o crisis de pareja en Chillán. Desde $35.000, TCC online o presencial. Agenda hoy."
-    ),
+    title: "Terapia de pareja en Chillán",
+    description: getTwitterDescription(description),
   },
 };
 
@@ -167,7 +166,7 @@ export default function TerapiaParejaChillanPage() {
           lineHeight: 1.6,
         }}
       >
-        Si están buscando terapia de pareja en Chillán, este espacio ayuda a trabajar
+        Si buscas terapia de pareja en Chillán o un psicólogo de pareja, este espacio trabaja
         comunicación, distancia emocional,{" "}
         <Link href="/terapia-celos-chillan" style={{ color: "#000", textDecoration: "underline" }}>
           celos
@@ -177,8 +176,12 @@ export default function TerapiaParejaChillanPage() {
         <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
           online
         </Link>
-        , sin tomar bandos. El primer paso es una evaluación conjunta para entender el
-        problema y proponer un plan claro.
+        , sin tomar bandos. Si quieres entender el ciclo de la pelea antes de mirar la
+        atención, la guía de{" "}
+        <Link href="/guias/comunicacion-en-pareja" style={{ color: "#000", textDecoration: "underline" }}>
+          comunicación en pareja
+        </Link>{" "}
+        explica el circuito. Esta página es la de Chillán.
       </p>
 
       <div
@@ -500,6 +503,8 @@ export default function TerapiaParejaChillanPage() {
       </section>
 
       <ProfessionalCredentials />
+
+      <RelatedReading currentPath="/terapia-de-pareja-chillan" />
 
       <IntentClusterSection
         currentPath="/terapia-de-pareja-chillan"

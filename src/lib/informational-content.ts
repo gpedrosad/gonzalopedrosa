@@ -100,7 +100,7 @@ export const GUIDE_HUB = {
   title: "Guías de salud mental para entender lo que te pasa",
   h1: "Guías para cuidar la salud mental",
   description:
-    "Lecturas sobre duelo, pánico, ludopatía, EMDR, apego, burnout y sueño, y sobre psicólogo o psiquiatra. No reemplazan una atención profesional.",
+    "Lecturas sobre duelo, pareja, TEPT, EMDR, apego, burnout y sueño. Explican el tema. No reemplazan una atención profesional.",
 };
 
 export const QUESTION_HUB = {
@@ -125,7 +125,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
     title: "EMDR: qué es, para qué se usa y qué no reemplaza",
     h1: "Qué es el EMDR",
     description:
-      "El EMDR es una psicoterapia para procesar recuerdos que siguen activos. Conoce sus fases, sus límites y el ejercicio gratuito del sitio. No es un video suelto.",
+      "El EMDR es una psicoterapia para procesar recuerdos que siguen activos. Conoce sus fases, sus límites y el ejercicio gratuito del sitio.",
     answer:
       "EMDR significa desensibilización y reprocesamiento por movimientos oculares. Es una psicoterapia usada sobre todo cuando un recuerdo sigue disparando miedo, vergüenza o imágenes como si estuviera pasando ahora. La estimulación bilateral (ojos, sonidos o golpes suaves alternados) es una parte del procedimiento, no el tratamiento entero.",
     sections: [
@@ -182,10 +182,163 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       },
     ],
     related: [
+      { href: "/guias/que-es-el-tept", label: "Qué es el TEPT" },
       { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "¿El ejercicio reemplaza la terapia?" },
       { href: "/emdr-autoadministrado/ejercicio", label: "Ir al ejercicio bilateral" },
       { href: "/estres-postraumatico-chillan", label: "Información sobre estrés postraumático" },
       { href: "/terapia-emdr-chillan", label: "Página de atención con EMDR" },
+    ],
+    product: EMDR_PRODUCT,
+    safety:
+      "Si hay ideas de hacerte daño o de querer morir, llama al *4141 (gratuito, 24 horas, desde celular o fijo). Para otra orientación de salud, Salud Responde atiende al 600 360 7777. Esa llamada tiene costo de llamada local según tu plan.",
+    sources: [OMS_ESTRES, MINSAL_4141, SALUD_RESPONDE],
+  },
+  {
+    cluster: "guias",
+    slug: "comunicacion-en-pareja",
+    navLabel: "Comunicación en pareja",
+    title: "Comunicación en pareja y ciclos de discusión",
+    h1: "Comunicación en pareja: cuando la pelea se repite",
+    description:
+      "Cómo se arma un ciclo de discusión en la pareja, qué lo mantiene y cómo pausar la misma pelea. Una guía para entender, no para reservar hora.",
+    answer:
+      "Muchas parejas no discuten un tema distinto cada vez: recorren el mismo ciclo. Una persona insiste, la otra se cierra, sube el volumen o el silencio, y al final las dos quedan con la sensación de que la otra no escuchó. El contenido (plata, celos, tareas, la familia) cambia. El circuito, no.",
+    sections: [
+      {
+        heading: "Cómo se ve el ciclo",
+        paragraphs: [
+          "Parte con un roce chico. Una pide claridad y la otra responde corto. La primera insiste porque el silencio se siente como abandono. La segunda se aleja porque la insistencia se siente como ataque. Cada paso confirma el miedo del otro.",
+          "Desde fuera parece que pelean por el plato sucio o por un mensaje. Desde dentro, una busca que la conversación no se corte y la otra busca que la conversación no se vuelva un juicio. Las dos están defendiéndose de algo distinto.",
+        ],
+        bullets: [
+          "Persecución y retirada: una habla más, la otra habla menos.",
+          "El mismo reproche con otro tema. Si cambias el ejemplo y la pelea es idéntica, es un ciclo.",
+          "El cierre en falso: «ya, da lo mismo» no cierra. Deja la conversación a medias.",
+          "La cuenta de viejos: se trae una pelea de hace meses para ganar la de hoy.",
+        ],
+      },
+      {
+        heading: "Qué suele trabar la comunicación",
+        paragraphs: [
+          "Criticar a la persona en vez de nombrar el hecho. Defenderse antes de haber escuchado la frase entera. Contestar con otro reproche. Irse de la pieza o del chat sin decir que necesitas una pausa. Esas cuatro jugadas alargan el ciclo aunque el tema original ya no importe.",
+          "También lo alarga pedir que el otro adivine. «Si me quisieras, sabrías» deja a la otra persona sin una petición concreta. Una frase usable nombra el hecho, lo que te pasó y qué pides ahora.",
+        ],
+      },
+      {
+        heading: "Cómo pausar sin abandonar la conversación",
+        paragraphs: [
+          "Acuerden una pausa antes de la próxima pelea, no en el minuto más alto. Una pausa sirve si tiene hora de regreso: veinte minutos, o esta noche después de comer. Irse sin hora de regreso se vive como castigo.",
+          "Al volver, partan por repetir lo que entendieron del otro, en una frase, antes de explicar su versión. Si no pueden repetirlo, todavía no están en la misma conversación. No hace falta resolver el fondo en ese intento. Alcanza con salir del circuito.",
+        ],
+        bullets: [
+          "Bajen el tema a un ejemplo de esta semana, no a «siempre».",
+          "Una petición por vez. Tres reclamos juntos no se pueden responder.",
+          "Si hay gritos, insultos o miedo, la pausa no es un truco: es el límite.",
+          "Escribir el mensaje y leerlo al día siguiente evita el chat de las dos de la mañana.",
+        ],
+      },
+      {
+        heading: "Cuándo el patrón pide otra mirada",
+        paragraphs: [
+          "Tiene sentido pedir ayuda si el ciclo se repite cada semana, si uno de los dos ya no quiere hablar, o si la conversación incluye desprecio, control o miedo. Esta guía solo nombra el circuito. No dice quién tiene la razón ni qué debería hacer tu pareja.",
+          "El estilo de apego a veces explica por qué uno insiste y el otro se cierra. Esa lectura está en otra guía. La página de terapia de pareja en Chillán describe la atención local, que es otra intención: aquí el objetivo es entender la pelea.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Toda discusión que se repite es un problema?",
+        answer:
+          "No. Una diferencia que vuelve y se puede conversar es parte de convivir. El ciclo es otro: las dos personas salen peor, el tema no avanza y la forma de pelear ya es el problema.",
+      },
+      {
+        question: "¿Sirve si mi pareja no quiere leer esto?",
+        answer:
+          "Puedes usar la pausa y la petición concreta aunque la otra persona no participe. No puedes obligarla a escuchar. Si solo una quiere cambiar el circuito, el cambio es más chico y sigue siendo real.",
+      },
+      {
+        question: "¿Y si hay violencia?",
+        answer:
+          "Una guía de comunicación no alcanza. Si hay golpes, amenazas o miedo de estar en la casa, la prioridad es tu seguridad. En Chile, Carabineros atiende en el 133.",
+      },
+    ],
+    related: [
+      { href: "/terapia-de-pareja-chillan", label: "Terapia de pareja en Chillán" },
+      { href: "/guias/estilos-de-apego", label: "Estilos de apego en adultos" },
+      { href: "/preguntas/que-es-el-apego-ansioso", label: "Qué es el apego ansioso" },
+      { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
+    ],
+    sources: [APA_APEGO],
+  },
+  {
+    cluster: "guias",
+    slug: "que-es-el-tept",
+    navLabel: "Qué es el TEPT",
+    title: "Qué es el TEPT: señales y cuándo pedir ayuda",
+    h1: "Qué es el TEPT",
+    description:
+      "El TEPT es el trastorno de estrés postraumático: el recuerdo sigue activo. Señales frecuentes, cuándo pedir ayuda y qué terapias se usan.",
+    answer:
+      "TEPT significa trastorno de estrés postraumático. Aparece después de un hecho que amenazó la vida, la integridad o la de alguien cercano, cuando el recuerdo no queda archivado: vuelve en imágenes, sueños o alarma, y la persona organiza el día para no toparse con él.",
+    sections: [
+      {
+        heading: "Qué lo distingue de un mal recuerdo",
+        paragraphs: [
+          "Un susto fuerte puede dejar días de alerta y eso no es, por sí solo, un TEPT. El cuadro se parece más a esto: el hecho ya pasó y el cuerpo sigue reaccionando como si estuviera pasando. Un ruido, un olor o una fecha alcanzan para traer la escena.",
+          "No todo trauma deriva en TEPT. Hay personas que atraviesan un hecho grave y siguen con miedo un tiempo, sin que el recuerdo tome el control de la semana. Ponerse el nombre sin una evaluación no ayuda. Sirve para reconocer el patrón y decidir si conversarlo.",
+        ],
+      },
+      {
+        heading: "Señales que se repiten",
+        paragraphs: [
+          "Las señales cambian de persona a persona. Estas son las que más se nombran cuando alguien describe un TEPT. No son una lista para diagnosticarte.",
+        ],
+        bullets: [
+          "El recuerdo vuelve solo: imágenes, pesadillas o la sensación de estar otra vez ahí.",
+          "Evitas lugares, conversaciones, noticias o personas que lo disparan.",
+          "Estás en alerta: te sobresaltas, duermes liviano o te cuesta bajar la guardia.",
+          "Cambia el ánimo: culpa, vergüenza, distancia de quienes quieres o una sensación de peligro presente.",
+        ],
+      },
+      {
+        heading: "Cuándo conviene pedir ayuda",
+        paragraphs: [
+          "Conviene conversarlo con un profesional si estas señales llevan semanas, te limitan en la pega o en la casa, o si evitas cada vez más cosas para no activarte. También si el sueño no vuelve o si un cercano te dice que ya no estás en el presente.",
+          "Si hay ideas de hacerte daño o de querer morir, eso no espera una hora programada. En Chile la línea *4141 es gratuita y atiende las 24 horas. Esta guía no evalúa riesgo.",
+        ],
+      },
+      {
+        heading: "Qué terapias se usan con más frecuencia",
+        paragraphs: [
+          "La guía de la OMS de 2013 sobre condiciones relacionadas con el estrés nombra, para adultos con TEPT, terapias centradas en el trauma. Entre ellas están la terapia cognitivo-conductual focalizada en el trauma y el EMDR. Que una guía las nombre no dice qué te corresponde a ti ni en qué orden.",
+          "El EMDR no es un video de un punto que se mueve. El procedimiento completo incluye evaluación, preparación y cierre. El ejercicio gratuito de este sitio solo muestra la estimulación bilateral para un malestar leve. No procesa un trauma ni un TEPT por tu cuenta.",
+          "Esta página explica el trastorno. La atención con EMDR en Chillán y la ficha local de estrés postraumático son otras URLs: una es el método en consulta, la otra es la información de esa atención.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "¿El TEPT solo aparece después de una guerra o un accidente?",
+        answer:
+          "No. También se describe después de violencia, abuso, un asalto o haber presenciado que otra persona estaba en peligro. El hecho importa menos que el efecto: el recuerdo sigue activo y limita la vida.",
+      },
+      {
+        question: "¿Puedo usar el ejercicio bilateral del sitio si creo que tengo TEPT?",
+        answer:
+          "No para reprocesar ese recuerdo. El ejercicio es para emoción cotidiana o estrés leve, y la propia página pide que lo pares si aparecen imágenes que no puedes guardar.",
+      },
+      {
+        question: "¿Una guía alcanza para saber si lo tengo?",
+        answer:
+          "No. Sirve para reconocer señales. El nombre de TEPT lo pone una evaluación, no una lista leída en internet.",
+      },
+    ],
+    related: [
+      { href: "/guias/que-es-el-emdr", label: "Qué es el EMDR" },
+      { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "Límites del ejercicio bilateral" },
+      { href: "/emdr-autoadministrado", label: "Ejercicio bilateral gratuito" },
+      { href: "/terapia-emdr-chillan", label: "Página de atención con EMDR" },
+      { href: "/estres-postraumatico-chillan", label: "Estrés postraumático en Chillán" },
     ],
     product: EMDR_PRODUCT,
     safety:
@@ -553,10 +706,10 @@ const QUESTION_PAGES: InfoPage[] = [
     cluster: "preguntas",
     slug: "que-es-la-erp-para-el-toc",
     navLabel: "Qué es la ERP para el TOC",
-    title: "Terapia ERP para el TOC: en qué consiste",
+    title: "Qué es la terapia ERP para el TOC",
     h1: "Qué es la terapia ERP para el TOC",
     description:
-      "La ERP expone al miedo del TOC y frena el ritual que lo calma un rato. Mira en qué consiste y por qué no es aguantar a ciegas. Sirve para reconocer el método.",
+      "La ERP es exposición con prevención de respuesta: te acercas al miedo del TOC y no haces el ritual. Esta página explica; la atención en Chillán es otra.",
     answer:
       "ERP significa exposición con prevención de respuesta. En el TOC, te acercas de forma planificada a lo que dispara la obsesión y no haces el ritual que normalmente baja la angustia. El aprendizaje es que la ansiedad sube, se mantiene un rato y puede bajar sin la compulsión.",
     sections: [
@@ -591,7 +744,7 @@ const QUESTION_PAGES: InfoPage[] = [
         heading: "Errores frecuentes",
         paragraphs: [
           "Hacer la exposición y después compensar con un ritual más largo. Pedir que la familia participe del ritual para terminar antes. Medir el éxito solo por si la ansiedad llegó a cero. El éxito temprano es hacer el paso sin el ritual, aunque el nervio siga.",
-          "Si el TOC ocupa varias horas del día, esta explicación no alcanza como plan. Sirve para reconocer el método cuando lo converses con quien te evalúe.",
+          "Si el TOC ocupa varias horas del día, esta explicación no alcanza como plan. Sirve para reconocer el método cuando lo converses con quien te evalúe. La página de terapia ERP para el TOC en Chillán es la ficha local: esta pregunta no la reemplaza.",
         ],
       },
     ],
@@ -1057,6 +1210,9 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
     { href: "/guias/psicologo-o-psiquiatra", label: "Psicólogo o psiquiatra" },
   ],
   "/terapia-de-pareja-chillan": [
+    { href: "/guias/comunicacion-en-pareja", label: "Guía: comunicación en pareja" },
+    { href: "/guias", label: "Guías" },
+    { href: "/preguntas", label: "Preguntas" },
     { href: "/guias/estilos-de-apego", label: "Guía: estilos de apego" },
     { href: "/preguntas/que-es-el-apego-ansioso", label: "Qué es el apego ansioso" },
     { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
@@ -1070,17 +1226,37 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
     { href: "/guias/estilos-de-apego", label: "Guía: estilos de apego" },
   ],
   "/terapia-emdr-chillan": [
+    { href: "/guias/que-es-el-tept", label: "Guía: qué es el TEPT" },
     { href: "/guias/que-es-el-emdr", label: "Guía: qué es el EMDR" },
+    { href: "/guias", label: "Guías" },
+    { href: "/preguntas", label: "Preguntas" },
     { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "Qué puede el ejercicio de EMDR" },
     { href: "/emdr-autoadministrado", label: "Ejercicio bilateral gratuito" },
   ],
   "/estres-postraumatico-chillan": [
+    { href: "/guias/que-es-el-tept", label: "Guía: qué es el TEPT" },
+    { href: "/guias", label: "Guías" },
+    { href: "/preguntas", label: "Preguntas" },
     { href: "/guias/que-es-el-emdr", label: "Guía: qué es el EMDR" },
     { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "Límites del EMDR autoadministrado" },
   ],
   "/tratamiento-toc-chillan": [
     { href: "/preguntas/que-es-la-erp-para-el-toc", label: "Qué es la ERP para el TOC" },
+    { href: "/guias", label: "Guías" },
+    { href: "/preguntas", label: "Preguntas" },
     { href: "/preguntas/que-es-la-terapia-cognitivo-conductual", label: "Qué es la terapia cognitivo-conductual" },
+  ],
+  "/terapia-online": [
+    { href: "/preguntas/la-terapia-online-funciona", label: "¿La terapia online funciona?" },
+    { href: "/psicologo-online-chillan", label: "Psicólogo online en Chile" },
+    { href: "/guias", label: "Guías" },
+    { href: "/preguntas", label: "Preguntas" },
+  ],
+  "/psicologo-online-chillan": [
+    { href: "/terapia-online", label: "Cómo es una sesión de terapia online" },
+    { href: "/preguntas/la-terapia-online-funciona", label: "¿La terapia online funciona?" },
+    { href: "/guias", label: "Guías" },
+    { href: "/preguntas", label: "Preguntas" },
   ],
   "/tratamiento-burnout-chillan": [
     { href: "/guias/burnout-laboral", label: "Guía: burnout laboral" },
@@ -1124,6 +1300,8 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
   "/psicologo-obesidad-chillan": [
     { href: "/guias/emocion-y-comida", label: "Guía: emoción y comida" },
     { href: "/guias/regulacion-emocional", label: "Regulación emocional" },
+    { href: "/guias", label: "Guías" },
+    { href: "/preguntas", label: "Preguntas" },
   ],
   "/psicologo-trastornos-alimenticios-chillan": [
     { href: "/guias/emocion-y-comida", label: "Guía: emoción y comida" },

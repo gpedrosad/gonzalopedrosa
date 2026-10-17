@@ -7,17 +7,17 @@ import { SITE_URL, getTwitterDescription } from "@/lib/schemas";
 import { RelatedReading } from "@/app/components/RelatedReading";
 
 const description =
-  "Terapia ERP (EPR) para TOC en Chillán: exposición con prevención de respuesta, obsesiones y compulsiones. Presencial u online. Agenda evaluación.";
+  "Terapia ERP (exposición con prevención de respuesta) para el TOC: te acercas al miedo y no haces el ritual. Atención en Chillán, presencial u online.";
 
 export const metadata: Metadata = {
-  title: "Terapia ERP TOC Chillán | Exposición y prevención",
+  title: "Terapia ERP para el TOC en Chillán",
   description,
   alternates: {
     canonical: "/tratamiento-toc-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Terapia ERP TOC Chillán | Exposición y prevención",
+    title: "Terapia ERP para el TOC en Chillán",
     description,
     url: `${SITE_URL}/tratamiento-toc-chillan`,
     type: "website",
@@ -25,10 +25,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terapia ERP TOC Chillán | EPR y TCC",
-    description: getTwitterDescription(
-      "Terapia ERP (EPR) para TOC en Chillán. Exposición con prevención de respuesta, online o presencial."
-    ),
+    title: "Terapia ERP para el TOC en Chillán",
+    description: getTwitterDescription(description),
   },
 };
 
@@ -132,7 +130,7 @@ export default function TratamientoTocChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Terapia ERP para TOC en Chillán
+        Terapia ERP para el TOC en Chillán
       </h1>
 
       <p
@@ -143,10 +141,14 @@ export default function TratamientoTocChillanPage() {
           lineHeight: 1.6,
         }}
       >
-        Si buscas terapia ERP para TOC en Chillán, trabajo con Terapia
-        Cognitivo-Conductual y Exposición con Prevención de Respuesta (ERP/EPR)
-        para reducir obsesiones, compulsiones y el tiempo que el TOC consume
-        en tu día.
+        La terapia ERP (exposición con prevención de respuesta) para el TOC
+        consiste en acercarte al disparador y no hacer el ritual. En Chillán
+        trabajo ese método con terapia cognitivo-conductual, presencial u online.
+        Si quieres la explicación del método, sin la ficha local, lee{" "}
+        <Link href="/preguntas/que-es-la-erp-para-el-toc" style={{ color: "#000", textDecoration: "underline" }}>
+          qué es la ERP para el TOC
+        </Link>
+        .
       </p>
 
       <section style={{ marginBottom: "3rem" }}>

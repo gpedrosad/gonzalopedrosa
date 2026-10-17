@@ -5,6 +5,7 @@ import { JsonLd } from "@/app/components/JsonLd";
 import { ProfessionalCredentials } from "@/app/components/ProfessionalCredentials";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { IntentClusterSection } from "@/app/components/IntentClusterSection";
+import { RelatedReading } from "@/app/components/RelatedReading";
 import {
   ONLINE_CLUSTER,
   getClusterBreadcrumb,
@@ -20,7 +21,7 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Psicólogo online en Chile por videollamada: TCC, boleta Isapre y horarios flexibles. $35.000 / 50 min. Atiendo todo el país — agenda tu sesión hoy.";
+  "Psicólogo online en Chile por videollamada: TCC, boleta Isapre y $35.000 por 50 minutos. Cómo es la sesión y si funciona están en otras páginas.";
 
 export const metadata: Metadata = {
   title: "Psicólogo online Chile | Videollamada $35.000 · Isapre",
@@ -39,9 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo online Chile | $35.000 e Isapre",
-    description: getTwitterDescription(
-      "Terapia online: videollamada, TCC y boleta Isapre. $35.000 / 50 min. Agenda hoy desde cualquier ciudad de Chile."
-    ),
+    description: getTwitterDescription(description),
   },
 };
 
@@ -176,9 +175,17 @@ export default function PsicologoOnlineChillanPage() {
             lineHeight: 1.6,
           }}
         >
-          Si buscas psicólogo online en Chile, atiendo por videollamada con la misma
-          calidad clínica que una sesión presencial. Consultorio en Chillán y agenda
-          para todo el país, con horarios flexibles y boleta para reembolso Isapre.
+          Si buscas psicólogo online en Chile o terapia online en Chile, esta es la
+          página de atención por videollamada: TCC, boleta para reembolso Isapre y
+          consulta en Chillán. Cómo es una sesión está en{" "}
+          <Link href="/terapia-online" style={{ color: "#000", textDecoration: "underline" }}>
+            terapia online
+          </Link>
+          . Si la duda es si el formato funciona, está en{" "}
+          <Link href="/preguntas/la-terapia-online-funciona" style={{ color: "#000", textDecoration: "underline" }}>
+            la pregunta correspondiente
+          </Link>
+          .
         </p>
 
         <div
@@ -536,6 +543,8 @@ export default function PsicologoOnlineChillanPage() {
             Ir a agendar →
           </Link>
         </section>
+
+        <RelatedReading currentPath="/psicologo-online-chillan" />
 
         <ProfessionalCredentials />
 
