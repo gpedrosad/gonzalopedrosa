@@ -3,7 +3,8 @@ import { WhatsAppButton } from "../../components/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: "Método Cognitivo Conductual | Terapia TCC",
-  description: "Conoce cómo el enfoque cognitivo conductual puede ayudarte a superar las crisis de pánico.",
+  description:
+    "Cómo funciona la terapia cognitivo-conductual online: pensamientos, emociones y conductas, con herramientas prácticas.",
   robots: {
     index: false,
     follow: false,
@@ -11,25 +12,22 @@ export const metadata: Metadata = {
 };
 
 const WHATSAPP_HREF =
-  "https://wa.me/56968257817?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20por%20ataques%20de%20p%C3%A1nico";
+  "https://wa.me/56968257817?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20de%20terapia%20cognitivo-conductual%20online";
 
 export default function MetodoCognitivoConductualPage() {
   return (
     <main className="min-h-screen bg-white">
-      {/* Hero */}
       <section className="px-4 pt-8 pb-6 md:pt-16 md:pb-10 max-w-2xl mx-auto">
         <h1 className="text-2xl md:text-4xl font-bold text-gray-900 tracking-tight mb-4 leading-tight">
           Método cognitivo conductual en tu proceso
         </h1>
 
         <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-          Si estás buscando ayuda para las crisis de pánico, probablemente hayas escuchado sobre 
-          la Terapia Cognitivo-Conductual (TCC). Aquí te explico de forma simple qué es y por qué 
-          puede ayudarte.
+          La Terapia Cognitivo-Conductual (TCC) es el enfoque con el que trabajo.
+          Aquí te explico de forma simple qué es y cómo se usa en sesión.
         </p>
       </section>
 
-      {/* Qué es la TCC */}
       <section className="px-4 py-8 md:py-12 bg-gray-50">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
@@ -37,8 +35,8 @@ export default function MetodoCognitivoConductualPage() {
           </h2>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            La TCC parte de una idea simple pero poderosa: la forma en que pensamos sobre 
-            una situación influye directamente en cómo nos sentimos y cómo actuamos.
+            La TCC parte de una idea concreta: la forma en que piensas una
+            situación influye en cómo te sientes y en lo que haces.
           </p>
 
           <div className="bg-white rounded-xl p-5 border border-gray-100 mb-6">
@@ -63,44 +61,43 @@ export default function MetodoCognitivoConductualPage() {
           </div>
 
           <p className="text-gray-700 leading-relaxed">
-            Cuando entendemos esta relación, podemos trabajar en modificar los pensamientos 
-            y conductas que mantienen el problema. No se trata de &ldquo;pensar positivo&rdquo;, sino de 
-            aprender a pensar de forma más realista y útil.
+            Cuando vemos esa relación, podemos cambiar los pensamientos y las
+            conductas que mantienen el problema. No se trata de “pensar
+            positivo”, sino de pensar de forma más realista y útil.
           </p>
         </div>
       </section>
 
-      {/* Cómo se aplica a crisis de pánico */}
       <section className="px-4 py-8 md:py-12">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-            Cómo se aplica cuando hay crisis de pánico
+            En qué se usa en la práctica
           </h2>
 
           <p className="text-gray-700 leading-relaxed mb-6">
-            En el caso de las crisis de pánico, la TCC ayuda a trabajar en varios frentes:
+            En sesión trabajamos con lo que te está costando hoy. Suele incluir:
           </p>
 
           <div className="space-y-4 mb-8">
             {[
               {
-                title: "Identificar disparadores",
-                desc: "Entender qué situaciones, pensamientos o sensaciones físicas suelen desencadenar una crisis. A veces hay patrones que no son evidentes hasta que los analizamos juntos.",
+                title: "Identificar patrones",
+                desc: "Ver qué pensamientos, situaciones o hábitos están alimentando el malestar.",
               },
               {
-                title: "Trabajar con pensamientos catastróficos",
-                desc: "Durante una crisis, es común pensar cosas como \"me voy a morir\" o \"voy a perder el control\". Aprendemos a cuestionar estos pensamientos y verlos de forma más realista.",
+                title: "Trabajar con pensamientos que no ayudan",
+                desc: "Cuestionar interpretaciones rígidas o catastróficas y probar lecturas más ajustadas a los hechos.",
               },
               {
-                title: "Manejar los síntomas físicos",
-                desc: "Técnicas de respiración, relajación y otras herramientas concretas que puedes usar en el momento para regular lo que pasa en tu cuerpo.",
+                title: "Herramientas concretas",
+                desc: "Técnicas que puedes usar entre sesiones: registro, exposición gradual, regulación o planificación, según el caso.",
               },
               {
-                title: "Enfrentar la evitación",
-                desc: "Cuando evitamos lugares o situaciones por miedo, el problema suele empeorar. Trabajamos de forma gradual para que puedas retomar actividades que hoy evitas.",
+                title: "Cambiar la evitación",
+                desc: "Si dejas de hacer cosas por miedo o agotamiento, avanzamos paso a paso para recuperarlas.",
               },
             ].map((item, i) => (
-              <div key={i} className="flex items-start gap-4">
+              <div key={item.title} className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-medium text-sm">
                   {i + 1}
                 </div>
@@ -114,7 +111,6 @@ export default function MetodoCognitivoConductualPage() {
         </div>
       </section>
 
-      {/* Enfoque práctico */}
       <section className="px-4 py-8 md:py-12 bg-gray-50">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
@@ -122,36 +118,25 @@ export default function MetodoCognitivoConductualPage() {
           </h2>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            Una de las cosas que más valoran las personas que trabajan conmigo es que la TCC 
-            no es solo &ldquo;hablar de lo que te pasa&rdquo;. Es un proceso activo donde aprendes 
-            herramientas concretas que puedes usar en tu día a día.
+            La TCC no es solo hablar de lo que te pasa. Es un proceso activo:
+            aprendes herramientas que puedes usar en tu día a día.
           </p>
 
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Las sesiones tienen estructura: revisamos cómo te fue en la semana, trabajamos 
-            en algo específico, y te llevas tareas o ejercicios para practicar. Así el avance 
-            no depende solo de la hora de sesión, sino de lo que aplicas entre sesiones.
+          <p className="text-gray-700 leading-relaxed">
+            Las sesiones tienen estructura: revisamos la semana, trabajamos algo
+            específico y te llevas algo para practicar. El avance no depende
+            solo de la hora de sesión.
           </p>
-
-          <div className="bg-white rounded-xl p-5 border border-gray-100">
-            <p className="text-gray-700 leading-relaxed">
-              La investigación científica ha demostrado que la TCC es uno de los tratamientos 
-              más efectivos para el trastorno de pánico, con resultados que suelen mantenerse 
-              en el tiempo.
-            </p>
-          </div>
         </div>
       </section>
 
-      {/* CTA Final */}
       <section className="px-4 py-10 md:py-14 bg-gray-900">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-xl md:text-2xl font-bold text-white mb-3">
-            ¿Quieres saber si este enfoque es para ti?
+            ¿Quieres ver si este enfoque te sirve?
           </h2>
           <p className="text-gray-400 mb-6 max-w-md mx-auto">
-            Escríbeme y conversemos sobre tu situación. Puedo explicarte cómo aplicaríamos 
-            estas herramientas en tu caso particular.
+            Escríbeme y conversamos. Te explico cómo lo aplicaríamos en tu caso.
           </p>
 
           <WhatsAppButton
@@ -160,10 +145,6 @@ export default function MetodoCognitivoConductualPage() {
           >
             Agendar sesión online
           </WhatsAppButton>
-
-          <p className="text-gray-500 text-sm mt-4">
-            Respuesta en menos de 2 horas
-          </p>
         </div>
       </section>
     </main>

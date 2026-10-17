@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const WHATSAPP_HREF =
-  "https://wa.me/56968257817?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20por%20ataques%20de%20p%C3%A1nico";
+  "https://wa.me/56968257817?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20de%20terapia%20cognitivo-conductual%20online";
 
 export default function ComoFuncionaTerapiaOnlinePage() {
   return (
@@ -24,7 +24,7 @@ export default function ComoFuncionaTerapiaOnlinePage() {
 
         <p className="text-base md:text-lg text-gray-600 leading-relaxed">
           Si nunca has tenido una sesión por videollamada, es normal tener dudas sobre cómo funciona. 
-          Aquí te explico todo lo que necesitas saber para que te sientas preparado/a.
+          Aquí te explico lo que necesitas para conectarte tranquilo.
         </p>
       </section>
 
@@ -45,12 +45,12 @@ export default function ComoFuncionaTerapiaOnlinePage() {
               {
                 icon: "💻",
                 title: "Dispositivo con cámara",
-                desc: "Puede ser computador, tablet o celular. Lo importante es que puedas verte cómodo/a durante la sesión.",
+                desc: "Puede ser computador, tablet o celular. Lo importante es que puedas verte cómodo durante la sesión.",
               },
               {
                 icon: "🔇",
                 title: "Espacio privado",
-                desc: "Un lugar donde puedas hablar tranquilo/a, sin interrupciones y donde te sientas seguro/a para expresarte.",
+                desc: "Un lugar donde puedas hablar tranquilo, sin interrupciones y donde te sientas seguro para expresarte.",
               },
             ].map((item, i) => (
               <div key={i} className="bg-white rounded-xl p-5 border border-gray-100 text-center">
@@ -120,7 +120,7 @@ export default function ComoFuncionaTerapiaOnlinePage() {
             {[
               {
                 title: "Comodidad",
-                desc: "Puedes tomar la sesión desde tu casa, tu oficina o cualquier lugar donde te sientas cómodo/a.",
+                desc: "Puedes tomar la sesión desde tu casa, tu oficina o cualquier lugar donde te sientas cómodo.",
               },
               {
                 title: "Ahorro de tiempo",
@@ -172,9 +172,9 @@ export default function ComoFuncionaTerapiaOnlinePage() {
 
           <div className="bg-gray-50 rounded-xl p-5 border border-gray-100">
             <p className="text-gray-700 leading-relaxed">
-              La evidencia científica muestra que la terapia online es igual de efectiva que 
-              la presencial para tratar ansiedad y crisis de pánico. La modalidad no afecta 
-              los resultados cuando hay compromiso de ambas partes.
+              La terapia online puede ser tan efectiva como la presencial cuando hay
+              compromiso de ambas partes. La modalidad no reemplaza el trabajo de
+              sesión.
             </p>
           </div>
         </div>
@@ -184,7 +184,7 @@ export default function ComoFuncionaTerapiaOnlinePage() {
       <section className="px-4 py-10 md:py-14 bg-gray-900">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-xl md:text-2xl font-bold text-white mb-3">
-            ¿Listo/a para probar la terapia online?
+            ¿Quieres probar la terapia online?
           </h2>
           <p className="text-gray-400 mb-6 max-w-md mx-auto">
             Escríbeme por WhatsApp y coordinamos tu primera sesión. Si tienes alguna 
@@ -198,9 +198,7 @@ export default function ComoFuncionaTerapiaOnlinePage() {
             Agendar sesión online
           </WhatsAppButton>
 
-          <p className="text-gray-500 text-sm mt-4">
-            Respuesta en menos de 2 horas
-          </p>
+          <p className="text-gray-500 text-sm mt-4">Respuesta por WhatsApp</p>
         </div>
       </section>
     </main>
