@@ -13,17 +13,17 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Terapia EMDR en Chillán para trauma, ansiedad y estrés postraumático. Sesiones presenciales u online. Reserva por web o WhatsApp.";
+  "Terapia EMDR en Chillán para trauma y estrés postraumático, presencial u online. Qué es el TEPT se explica en una guía. Esta página es la atención.";
 
 export const metadata: Metadata = {
-  title: "Terapia EMDR Chillán | Trauma y TEPT | Gonzalo Pedrosa",
+  title: "Terapia EMDR Chillán | Trauma y TEPT",
   description,
   alternates: {
     canonical: "/terapia-emdr-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Terapia EMDR Chillán | Gonzalo Pedrosa",
+    title: "Terapia EMDR Chillán | Trauma y TEPT",
     description,
     url: "https://www.gonzalopedrosa.cl/terapia-emdr-chillan",
     type: "website",
@@ -32,9 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Terapia EMDR Chillán",
-    description: getTwitterDescription(
-      "EMDR para trauma en Chillán u online. Evaluación inicial y plan a tu ritmo. Agenda en el sitio."
-    ),
+    description: getTwitterDescription(description),
   },
 };
 
@@ -154,14 +152,19 @@ export default function TerapiaEmdrChillanPage() {
         }}
       >
         <p style={{ fontWeight: 600, marginBottom: "0.5rem", fontSize: "0.9375rem" }}>
-          ¿Buscas especialista en TEPT?
+          Trauma y TEPT
         </p>
         <p style={{ color: "#444", fontSize: "0.875rem", lineHeight: 1.6 }}>
-          EMDR es una de las técnicas que uso para trauma. Si tu consulta es
-          específicamente por trastorno de estrés postraumático, empieza por{" "}
-          <Link href="/estres-postraumatico-chillan" style={{ color: "#000", textDecoration: "underline" }}>
-            TEPT y estrés postraumático en Chillán.
+          EMDR es una de las técnicas que uso para trauma. Qué es el trastorno
+          de estrés postraumático está en la{" "}
+          <Link href="/guias/que-es-el-tept" style={{ color: "#000", textDecoration: "underline" }}>
+            guía de TEPT
           </Link>
+          . La ficha local sigue en{" "}
+          <Link href="/estres-postraumatico-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+            estrés postraumático en Chillán
+          </Link>
+          .
         </p>
       </section>
 

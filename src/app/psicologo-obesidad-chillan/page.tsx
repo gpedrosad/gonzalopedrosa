@@ -7,17 +7,17 @@ import { getTwitterDescription } from "@/lib/schemas";
 import { RelatedReading } from "@/app/components/RelatedReading";
 
 const description =
-  "Psicólogo para obesidad en Chillán: alimentación emocional, atracones y cambio de hábitos. También evaluación bariátrica. Online o presencial — agenda hoy.";
+  "Psicólogo especialista en obesidad en Chillán: alimentación emocional y hábitos. La evaluación bariátrica (informe para cirugía) está en otra página.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo para obesidad en Chillán | Hábitos y emoción",
+  title: "Psicólogo especialista en obesidad | Chillán",
   description,
   alternates: {
     canonical: "/psicologo-obesidad-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Psicólogo para obesidad en Chillán | Hábitos y emoción",
+    title: "Psicólogo especialista en obesidad | Chillán",
     description,
     url: "https://www.gonzalopedrosa.cl/psicologo-obesidad-chillan",
     type: "website",
@@ -26,9 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Psicólogo Obesidad Chillán",
-    description: getTwitterDescription(
-      "Obesidad y alimentación emocional en Chillán. Hábitos, atracones y evaluación bariátrica. Online o presencial."
-    ),
+    description: getTwitterDescription(description),
   },
 };
 
@@ -79,7 +77,7 @@ export default function PsicologoObesidadChillanPage() {
       <p style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.75rem" }}>Chillán, Chile</p>
 
       <h1 style={{ fontSize: "2.5rem", fontWeight: 700, letterSpacing: "-0.03em", marginBottom: "1rem", lineHeight: 1.1 }}>
-        Psicólogo Obesidad en Chillán
+        Psicólogo especialista en obesidad en Chillán
       </h1>
 
       <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "3rem", lineHeight: 1.6 }}>
@@ -188,9 +186,9 @@ export default function PsicologoObesidadChillanPage() {
           ¿Necesitas evaluación bariátrica?
         </h2>
         <p style={{ color: "#0c4a6e", fontSize: "0.875rem", lineHeight: 1.6, marginBottom: "0.75rem" }}>
-          Si tu equipo pide informe psicológico para manga gástrica o bypass,
-          esa evaluación está en una página aparte. Aquí trabajo hábitos y
-          alimentación emocional; allá el informe para cirugía.
+          Si buscas psicólogo bariátrico para el informe de manga gástrica o
+          bypass, esa evaluación está en una página aparte. Aquí trabajo hábitos
+          y alimentación emocional; allá el informe para cirugía.
         </p>
         <Link
           href="/evaluacion-bariatrica-chillan"

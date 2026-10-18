@@ -27,7 +27,7 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
     priority: 1,
   },
   { route: "/agendar", changeFrequency: "monthly", priority: 0.9 },
-  { route: "/perfil", changeFrequency: "monthly", priority: 0.6 },
+  { route: "/perfil", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.6 },
   { route: "/emdr-autoadministrado",
     lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
   {
@@ -37,7 +37,7 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
   },
   {
     route: "/terapia-online",
-    lastModified: "2026-10-13",
+    lastModified: "2026-10-17",
     changeFrequency: "monthly",
     priority: 0.85,
   },
@@ -319,6 +319,8 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
   { route: "/guias/acompanar-a-alguien-en-duelo", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
   { route: "/guias/si-un-cercano-habla-de-hacerse-dano", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
   { route: "/guias/que-es-el-emdr", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.72 },
+  { route: "/guias/comunicacion-en-pareja", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.72 },
+  { route: "/guias/que-es-el-tept", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.72 },
   { route: "/guias/estilos-de-apego", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
   { route: "/guias/burnout-laboral", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
   { route: "/guias/higiene-del-sueno", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },

@@ -14,17 +14,17 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Gonzalo Pedrosa, psicólogo en Chillán. +7 años de experiencia en TCC presencial y online. Ansiedad, depresión, TOC y estrés. Agenda por web o WhatsApp.";
+  "Gonzalo Pedrosa, psicólogo clínico en Chillán. +7 años de experiencia en TCC presencial y online. Ansiedad, depresión, TOC y estrés. Guías en el sitio.";
 
 export const metadata: Metadata = {
-  title: "Gonzalo Pedrosa | Psicólogo en Chillán · Online y presencial",
+  title: "Gonzalo Pedrosa | Psicólogo clínico en Chillán",
   description,
   alternates: {
     canonical: "/",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Gonzalo Pedrosa | Psicólogo en Chillán · Online y presencial",
+    title: "Gonzalo Pedrosa | Psicólogo clínico en Chillán",
     description,
     url: SITE_URL,
     type: "website",
@@ -33,9 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Gonzalo Pedrosa | Psicólogo en Chillán",
-    description: getTwitterDescription(
-      "TCC presencial y online en Chillán. +7 años de experiencia. Agenda tu sesión por web o WhatsApp."
-    ),
+    description: getTwitterDescription(description),
   },
 };
 
@@ -124,7 +122,7 @@ export default function HomePage() {
               lineHeight: 1.1,
             }}
           >
-            Psicólogo en Chillán
+            Gonzalo Pedrosa, psicólogo en Chillán
           </h1>
 
           <p
@@ -134,7 +132,7 @@ export default function HomePage() {
               marginBottom: "0.5rem",
             }}
           >
-            Gonzalo Pedrosa · Terapia cognitivo-conductual
+            Terapia cognitivo-conductual · Presencial y online
           </p>
 
           <div
@@ -338,6 +336,21 @@ export default function HomePage() {
           </div>
         </section>
 
+        <p style={{ color: "#444", lineHeight: 1.7, margin: "0 0 1rem" }}>
+          Si quieres entender un tema antes de mirar una ficha, parte por las{" "}
+          <Link href="/guias" style={{ color: "#000", textDecoration: "underline" }}>
+            guías
+          </Link>{" "}
+          o por las{" "}
+          <Link href="/preguntas" style={{ color: "#000", textDecoration: "underline" }}>
+            preguntas
+          </Link>
+          . El perfil de quien escribe está en{" "}
+          <Link href="/perfil" style={{ color: "#000", textDecoration: "underline" }}>
+            Gonzalo Pedrosa
+          </Link>
+          .
+        </p>
         <OrganicServiceDirectory />
 
         {/* Sobre mí */}

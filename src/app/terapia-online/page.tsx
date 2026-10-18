@@ -4,6 +4,7 @@ import Link from "next/link";
 import { JsonLd } from "@/app/components/JsonLd";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { IntentClusterSection } from "@/app/components/IntentClusterSection";
+import { RelatedReading } from "@/app/components/RelatedReading";
 import { Button } from "../components/Button";
 import {
   ONLINE_CLUSTER,
@@ -19,17 +20,17 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Guía de terapia online: pasos de la sesión, requisitos técnicos y confidencialidad. Información desde Chillán. Para videollamada, agenda en el sitio.";
+  "Una sesión de psicología online dura 50 minutos por videollamada, en un espacio privado. Recorrido, confidencialidad y cómo se combina con presencial.";
 
 export const metadata: Metadata = {
-  title: "Terapia online: cómo funciona | Psicólogo en Chillán",
+  title: "¿Cómo es una sesión de psicología online?",
   description,
   alternates: {
     canonical: "/terapia-online",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Terapia online: cómo funciona | Gonzalo Pedrosa",
+    title: "¿Cómo es una sesión de psicología online?",
     description,
     url: `${SITE_URL}/terapia-online`,
     type: "website",
@@ -37,10 +38,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terapia online: cómo funciona",
-    description: getTwitterDescription(
-      "Qué esperar en cada sesión por videollamada: requisitos, ventajas y FAQs. Chillán. Para agendar, usa psicólogo online."
-    ),
+    title: "¿Cómo es una sesión de psicología online?",
+    description: getTwitterDescription(description),
   },
 };
 
@@ -50,6 +49,16 @@ const breadcrumbItems = getClusterBreadcrumb(
 );
 
 const terapiaOnlineFAQs = [
+  {
+    question: "¿cómo es una sesión de psicología online?",
+    answer:
+      "Es una videollamada de 50 minutos. Coordinas la hora, recibes el enlace (Zoom, Google Meet u otra) y te conectas desde un espacio privado, con cámara, micrófono e internet estable. El secreto profesional se mantiene: conviene que nadie te escuche desde tu lado.",
+  },
+  {
+    question: "¿cómo funciona la terapia psicológica online?",
+    answer:
+      "Tiene hora y continuidad, hecha por videollamada. El recorrido es contacto, confirmación con el enlace, la sesión de 50 minutos y un acuerdo de frecuencia. Puedes alternar con presencial. Si la duda es si el formato sirve, esa respuesta está en otra página.",
+  },
   {
     question: "¿Es igual de efectiva que la terapia presencial?",
     answer:
@@ -158,13 +167,54 @@ export default function TerapiaOnlinePage() {
             lineHeight: 1.6,
           }}
         >
-          Esta página explica el formato de atención por videollamada: pasos,
-          requisitos y ventajas. Si buscas reservar una sesión, ve a{" "}
+          Esta página explica cómo es una sesión por videollamada: duración,
+          recorrido y privacidad. Si la pregunta es si el formato funciona, lee{" "}
+          <Link href="/preguntas/la-terapia-online-funciona" style={{ color: "#000", textDecoration: "underline" }}>
+            ¿la terapia online funciona?
+          </Link>
+          . La página de atención es{" "}
           <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
-            psicólogo online en Chillán
+            psicólogo online en Chile
           </Link>
           .
         </p>
+
+        <section style={{ marginBottom: "2.5rem" }}>
+          <h2
+            style={{
+              fontSize: "1.35rem",
+              fontWeight: 600,
+              letterSpacing: "-0.02em",
+              marginBottom: "0.75rem",
+              lineHeight: 1.3,
+            }}
+          >
+            {terapiaOnlineFAQs[0].question}
+          </h2>
+          <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
+            {terapiaOnlineFAQs[0].answer}
+          </p>
+        </section>
+
+        <section style={{ marginBottom: "2.5rem" }}>
+          <h2
+            style={{
+              fontSize: "1.35rem",
+              fontWeight: 600,
+              letterSpacing: "-0.02em",
+              marginBottom: "0.75rem",
+              lineHeight: 1.3,
+            }}
+          >
+            {terapiaOnlineFAQs[1].question}
+          </h2>
+          <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
+            {terapiaOnlineFAQs[1].answer}{" "}
+            <Link href="/preguntas/la-terapia-online-funciona" style={{ color: "#000", textDecoration: "underline" }}>
+              ¿La terapia online funciona?
+            </Link>
+          </p>
+        </section>
 
         <div
           style={{
@@ -397,7 +447,7 @@ export default function TerapiaOnlinePage() {
           </h2>
 
           <div style={{ display: "grid", gap: "0.5rem" }}>
-            {terapiaOnlineFAQs.map((faq, index) => (
+            {terapiaOnlineFAQs.slice(2).map((faq, index) => (
               <details
                 key={index}
                 style={{
@@ -455,6 +505,8 @@ export default function TerapiaOnlinePage() {
           </p>
           <Button href="/agendar">Agendar sesión</Button>
         </section>
+
+        <RelatedReading currentPath="/terapia-online" />
 
         <IntentClusterSection
           currentPath="/terapia-online"

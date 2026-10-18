@@ -15,7 +15,7 @@ import {
 export const dynamic = "force-dynamic";
 
 const description =
-  "Gonzalo Pedrosa, psicólogo en Chillán: TCC, boleta Isapre y +7 años de experiencia. Perfil, valoraciones y reserva de sesión online o presencial.";
+  "Perfil de Gonzalo Pedrosa, psicólogo clínico en Chillán: TCC, boleta Isapre y +7 años. La ficha de quien escribe las guías del sitio.";
 
 const breadcrumbItems = [
   { label: "Inicio", href: "/" },
@@ -41,14 +41,14 @@ const serviceSchema = getServiceSchema({
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Gonzalo Pedrosa | Psicólogo en Chillán · TCC e Isapre",
+    title: "Perfil de Gonzalo Pedrosa | Psicólogo en Chillán",
     description,
     alternates: {
       canonical: "/perfil",
     },
     openGraph: {
     locale: "es_CL",
-      title: "Gonzalo Pedrosa | Psicólogo en Chillán · TCC e Isapre",
+      title: "Perfil de Gonzalo Pedrosa | Psicólogo en Chillán",
       description,
       url: `${SITE_URL}/perfil`,
       type: "profile",
@@ -57,9 +57,7 @@ export async function generateMetadata(): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       title: "Gonzalo Pedrosa | Psicólogo Chillán",
-      description: getTwitterDescription(
-        "Gonzalo Pedrosa, psicólogo en Chillán: TCC, boleta Isapre y +7 años de experiencia. Agenda online o presencial."
-      ),
+      description: getTwitterDescription(description),
     },
     robots: {
       index: true,
@@ -94,7 +92,7 @@ export default function ProfilePage() {
             color: "#111",
           }}
         >
-          Gonzalo Pedrosa, psicólogo en Chillán
+          Perfil de Gonzalo Pedrosa
         </h1>
         <section
           style={{
@@ -105,12 +103,14 @@ export default function ProfilePage() {
           }}
         >
           <p style={{ color: "#444", lineHeight: 1.7, margin: "0 0 0.75rem" }}>
-            Si quieres ver cómo trabajo según el motivo de consulta, aquí tienes tres páginas que hoy concentran la prioridad SEO del sitio.
+            Este es el perfil de Gonzalo Pedrosa. La portada está en el inicio.
+            Para leer, parte por las guías o las preguntas.
           </p>
           <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
             {[
-              { label: "Psicólogo online", href: "/psicologo-online-chillan" },
-              { label: "Depresión", href: "/psicologo-depresion-chillan" },
+              { label: "Inicio", href: "/" },
+              { label: "Guías", href: "/guias" },
+              { label: "Preguntas", href: "/preguntas" },
               { label: "Terapia de pareja", href: "/terapia-de-pareja-chillan" },
             ].map((item) => (
               <Link
