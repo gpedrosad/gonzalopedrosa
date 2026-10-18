@@ -13,17 +13,17 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Psicólogo para depresión en Chillán con enfoque TCC. Sesiones online o presenciales, boleta Isapre y respuesta en menos de 24 horas.";
+  "Qué es la depresión, qué síntomas se miran y en qué se diferencia del duelo. Información general. Si hay ideas de hacerte daño, hay teléfonos en la página.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo para depresión en Chillán | TCC y online",
+  title: "Depresión en Chillán: qué es, síntomas y tratamiento",
   description,
   alternates: {
     canonical: "/psicologo-depresion-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Psicólogo para depresión en Chillán | Gonzalo Pedrosa",
+    title: "Depresión en Chillán: qué es, síntomas y tratamiento",
     description,
     url: "https://www.gonzalopedrosa.cl/psicologo-depresion-chillan",
     type: "website",
@@ -31,10 +31,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo para depresión en Chillán",
-    description: getTwitterDescription(
-      "Terapia para depresión en Chillán u online, con TCC y boleta Isapre. Agenda por web o WhatsApp."
-    ),
+    title: "Depresión en Chillán: qué es, síntomas y tratamiento",
+    description: getTwitterDescription(description),
   },
 };
 
@@ -145,7 +143,7 @@ export default function PsicologoDepresionChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo depresión en Chillán
+        Depresión en Chillán: qué es, síntomas y tratamiento
       </h1>
 
       <p

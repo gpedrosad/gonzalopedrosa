@@ -4,20 +4,21 @@ import Link from "next/link";
 import { ProfessionalCredentials } from "@/app/components/ProfessionalCredentials";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { RelatedReading } from "@/app/components/RelatedReading";
 import { getTwitterDescription } from "@/lib/schemas";
 
 const description =
-  "Psicólogo para adultos y hombres en Chillán: ansiedad, estrés, depresión y crisis vital. TCC presencial u online, $35.000 / 50 min. Agenda hoy.";
+  "Qué temas se trabajan con adultos y hombres en Chillán: ansiedad, ánimo, estrés y crisis. No es un ranking ni la guía para elegir psicólogo.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo para hombres Chillán | Adultos · TCC online",
+  title: "Psicólogo para adultos en Chillán: qué temas se trabajan",
   description,
   alternates: {
     canonical: "/psicologo-adulto-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Psicólogo para hombres Chillán | Adultos · TCC online",
+    title: "Psicólogo para adultos en Chillán: qué temas se trabajan",
     description,
     url: "https://www.gonzalopedrosa.cl/psicologo-adulto-chillan",
     type: "website",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo para hombres Chillán | Adultos",
+    title: "Psicólogo para adultos en Chillán: qué temas se trabajan",
     description: getTwitterDescription(description),
   },
 };
@@ -120,7 +121,7 @@ export default function PsicologoAdultoChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo para adultos y hombres en Chillán
+        Psicólogo para adultos en Chillán: qué temas se trabajan
       </h1>
 
       <p
@@ -515,6 +516,7 @@ export default function PsicologoAdultoChillanPage() {
           ))}
         </div>
       </nav>
+      <RelatedReading currentPath="/psicologo-adulto-chillan" />
     </main>
     </>
   );

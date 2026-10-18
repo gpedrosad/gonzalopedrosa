@@ -10,10 +10,6 @@ export type AlcoholismPageKey = (typeof alcoholClusterOrder)[number];
 /** Página hub del cluster; el resto enlazan aquí en breadcrumb y navegación. */
 export const alcoholClusterHubKey: AlcoholismPageKey = "alcoholismo-chillan";
 
-/** Intención transaccional fuerte (dejar de beber); destacada en el hub. */
-export const alcoholClusterActionLeaderKey: AlcoholismPageKey =
-  "dejar-de-beber-chillan";
-
 type QuickFact = {
   title: string;
   description: string;
@@ -60,17 +56,17 @@ export type AlcoholismPage = {
 export const alcoholismPages: Record<AlcoholismPageKey, AlcoholismPage> = {
   "alcoholismo-chillan": {
     slug: "/alcoholismo-chillan",
-    metaTitle: "Alcoholismo en Chillán | Terapia online · $35.000",
+    metaTitle: "Alcoholismo en Chillán: qué es, señales y tratamiento",
     description:
-      "¿El alcohol ya te está pasando la cuenta? Terapia en Chillán: señales, plan y sesiones online. $35.000 / 50 min. Agenda orientación.",
-    h1: "Alcoholismo en Chillán: ayuda psicológica para empezar hoy",
-    shortTitle: "Alcoholismo en Chillán",
+      "Qué se entiende por alcoholismo, qué señales aparecen en la casa o el trabajo y en qué se diferencia de un plan para dejar de beber. Página principal.",
+    h1: "Alcoholismo: qué es, señales y cómo se trata",
+    shortTitle: "Alcoholismo: qué es",
     cardDescription:
-      "Una guía clara para reconocer el problema y entender cuándo conviene pedir ayuda.",
+      "Página principal: qué es el problema, qué señales importan y dónde sigue cada lectura.",
     serviceType: "Apoyo psicológico para alcoholismo",
-    intentLabel: "Búsqueda general sobre alcoholismo",
+    intentLabel: "Página principal sobre alcoholismo",
     lead:
-      "Cuando el alcohol empieza a ordenar tu descanso, tu ánimo, tus discusiones o tus fines de semana, el problema ya no es solo cuánto bebes, sino el lugar que el consumo tomó en tu vida. Esta página está pensada para quienes buscan orientación inicial sobre alcoholismo en Chillán y quieren entender qué tipo de ayuda psicológica existe antes de dar el primer paso.",
+      "Esta es la página principal sobre alcoholismo. Resume qué se entiende por el problema, qué señales se ven en la casa, el trabajo o la pareja, y cómo se diferencia de las otras lecturas: qué evalúa un psicólogo, cómo se organiza un tratamiento y qué pasos prácticos tiene dejar de beber. No pone un diagnóstico.",
     heroHighlights: [
       "Terapia online",
       "Atención para adultos",
@@ -193,19 +189,17 @@ export const alcoholismPages: Record<AlcoholismPageKey, AlcoholismPage> = {
   },
   "psicologo-alcoholismo-chillan": {
     slug: "/psicologo-alcoholismo-chillan",
-    metaTitle:
-      "Psicólogo para Alcoholismo en Chillán | Gonzalo Pedrosa",
+    metaTitle: "Qué evalúa un psicólogo si hay alcoholismo en Chillán",
     description:
-      "Psicólogo para alcoholismo en Chillán: evaluación clínica, terapia cognitivo-conductual y sesiones online. Agenda primera sesión con Gonzalo Pedrosa.",
-    h1:
-      "Psicólogo para alcoholismo en Chillán: apoyo profesional para cambiar tu relación con el alcohol",
-    shortTitle: "Psicólogo alcoholismo Chillán",
+      "Qué evalúa un psicólogo cuando el tema es el alcohol: frecuencia, para qué se bebe y qué riesgos hay. No es la definición general ni un instructivo.",
+    h1: "Qué evalúa un psicólogo cuando el tema es el alcohol",
+    shortTitle: "Qué evalúa el psicólogo",
     cardDescription:
-      "Pensada para quien ya sabe que necesita apoyo profesional y quiere entender cómo trabaja un psicólogo.",
+      "Describe la evaluación. La definición general está en la página principal.",
     serviceType: "Terapia psicológica para alcoholismo",
-    intentLabel: "Búsqueda por profesional",
+    intentLabel: "Qué evalúa un psicólogo",
     lead:
-      "Buscar un psicólogo para alcoholismo en Chillán suele aparecer cuando ya intentaste controlar el consumo por tu cuenta y viste que no basta con proponértelo. El trabajo terapéutico no consiste en juzgarte ni en repetir consejos obvios, sino en evaluar el problema con criterio clínico, entender qué mantiene el patrón y diseñar un tratamiento que puedas sostener en tu vida real.",
+      "Esta página responde qué hace un psicólogo cuando el tema es el alcohol: qué datos mira y qué no puede prometer. La explicación general del problema está en la página de alcoholismo. Los pasos para un intento concreto están en dejar de beber.",
     heroHighlights: [
       "Evaluación clínica",
       "Trabajo con recaídas",
@@ -325,19 +319,17 @@ export const alcoholismPages: Record<AlcoholismPageKey, AlcoholismPage> = {
   },
   "tratamiento-alcoholismo-chillan": {
     slug: "/tratamiento-alcoholismo-chillan",
-    metaTitle:
-      "Tratamiento del Alcoholismo en Chillán | Gonzalo Pedrosa",
+    metaTitle: "Tratamiento del alcoholismo: en qué consisten las fases",
     description:
-      "Tratamiento del alcoholismo en Chillán: evaluación, fases claras y prevención de recaídas. Terapia online con psicólogo clínico Gonzalo Pedrosa.",
-    h1:
-      "Tratamiento del alcoholismo en Chillán: en qué consiste y cómo se organiza el proceso",
-    shortTitle: "Tratamiento alcoholismo Chillán",
+      "Qué fases tiene un tratamiento psicológico del alcoholismo: evaluación, trabajo activo y seguimiento. No es la definición del problema ni un plan solo.",
+    h1: "Cómo se organiza un tratamiento por consumo de alcohol",
+    shortTitle: "Fases del tratamiento",
     cardDescription:
-      "Explica cómo se estructura un tratamiento serio, qué fases tiene y cuándo conviene apoyo complementario.",
+      "Ordena las fases. No es un instructivo para dejar de beber por tu cuenta.",
     serviceType: "Tratamiento psicológico del alcoholismo",
-    intentLabel: "Búsqueda de tratamiento",
+    intentLabel: "Cómo se organiza el tratamiento",
     lead:
-      "Cuando alguien busca tratamiento alcoholismo Chillán normalmente ya no quiere solo información general: quiere entender cómo se ve un proceso terapéutico de verdad, cuánto dura, qué objetivos se trabajan y qué pasa si hay recaídas. Un buen tratamiento no se reduce a decirte que dejes de beber; organiza fases, mide avances y adapta la intervención al nivel de riesgo y al contexto de cada persona.",
+      "Esta página describe cómo se organiza un tratamiento psicológico del alcoholismo: evaluación, fase activa y seguimiento. No es un instructivo para dejar de beber por tu cuenta ni la definición general del problema.",
     heroHighlights: [
       "Evaluación inicial",
       "Plan por fases",
@@ -462,18 +454,17 @@ export const alcoholismPages: Record<AlcoholismPageKey, AlcoholismPage> = {
   },
   "dejar-de-beber-chillan": {
     slug: "/dejar-de-beber-chillan",
-    metaTitle: "Dejar de Beber en Chillán | Terapia online · Plan concreto",
+    metaTitle: "Dejar de beber: pasos prácticos y cuándo pedir ayuda",
     description:
-      "Quieres dejar de beber y no sabes por dónde empezar. Terapia online en Chillán: craving, recaídas y un plan seguro. Agenda tu primera sesión hoy.",
-    h1:
-      "Terapia para dejar de beber en Chillán: ayuda concreta para empezar hoy",
-    shortTitle: "Dejar de beber Chillán",
+      "Pasos prácticos si quieres dejar de beber: anotar las ganas, limitar el acceso y distinguir malestar de una alerta médica. No reemplaza una evaluación.",
+    h1: "Dejar de beber: pasos prácticos y cuándo no hacerlo solo",
+    shortTitle: "Pasos para dejar de beber",
     cardDescription:
-      "Dirigida a quien quiere empezar ya y necesita pasos concretos para cortar el consumo con apoyo profesional.",
+      "Pasos concretos y alertas médicas. El marco general está en la página de alcoholismo.",
     serviceType: "Terapia para dejar de beber",
-    intentLabel: "Búsqueda de ayuda inmediata",
+    intentLabel: "Pasos prácticos para dejar de beber",
     lead:
-      "Querer dejar de beber no siempre significa tener claro cómo hacerlo. Muchas personas llegan cansadas de prometerse cambios los domingos y romperlos a mitad de semana, o asustadas porque el alcohol ya se convirtió en la respuesta automática frente al estrés. Si hoy buscas terapia para dejar de beber Chillán o ayuda para alcoholismo Chillán, lo importante es transformar esa urgencia en un plan seguro y posible.",
+      "Esta página es práctica: qué puedes ordenar si quieres dejar de beber y qué señales piden una evaluación médica antes de cortar el consumo de golpe. No reemplaza la página general sobre alcoholismo ni un tratamiento.",
     heroHighlights: [
       "Primeros pasos claros",
       "Apoyo para craving",

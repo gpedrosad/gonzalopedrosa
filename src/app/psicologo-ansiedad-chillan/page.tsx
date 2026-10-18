@@ -15,17 +15,17 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "¿Ansiedad, preocupación constante o miedo a crisis? Psicólogo en Chillán con TCC: presencial u online, $35.000 / 50 min, boleta Isapre. Agenda hoy.";
+  "Qué es la ansiedad, qué síntomas se notan en el cuerpo y la mente, y cómo se aborda con terapia cognitivo-conductual. Texto general: no diagnostica.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo para ansiedad en Chillán | Agenda hoy · $35.000",
+  title: "Ansiedad en Chillán: qué es, síntomas y tratamiento",
   description,
   alternates: {
     canonical: "/psicologo-ansiedad-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Psicólogo para ansiedad en Chillán | Agenda hoy · $35.000",
+    title: "Ansiedad en Chillán: qué es, síntomas y tratamiento",
     description,
     url: "https://www.gonzalopedrosa.cl/psicologo-ansiedad-chillan",
     type: "website",
@@ -33,10 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo para ansiedad Chillán | $35.000",
-    description: getTwitterDescription(
-      "TCC para ansiedad en Chillán u online. $35.000 / 50 min con boleta Isapre. Agenda hoy."
-    ),
+    title: "Ansiedad en Chillán: qué es, síntomas y tratamiento",
+    description: getTwitterDescription(description),
   },
 };
 
@@ -148,7 +146,7 @@ export default function PsicologoAnsiedadChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo para ansiedad en Chillán
+        Ansiedad en Chillán: qué es, síntomas y cómo se trata
       </h1>
 
       <p
@@ -354,8 +352,7 @@ export default function PsicologoAnsiedadChillanPage() {
           >
             Terapia Cognitivo-Conductual (TCC)
           </Link>
-          , el tratamiento con mayor respaldo científico para la ansiedad. Este
-          enfoque tiene tasas de efectividad del 60-80% según estudios clínicos.
+          , el tratamiento con mayor respaldo científico para la ansiedad.
         </p>
         <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
           El proceso incluye:

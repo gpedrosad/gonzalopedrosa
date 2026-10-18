@@ -27,7 +27,7 @@ export function RelatedReading({ currentPath }: { currentPath: string }) {
           marginBottom: "0.75rem",
         }}
       >
-        Para entender el tema
+        Para leer más
       </p>
       <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
         {links.map((item) => (

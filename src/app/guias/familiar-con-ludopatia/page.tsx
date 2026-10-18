@@ -43,6 +43,11 @@ export default function GuiaFamiliarLudopatiaPage() {
           label: "Psicólogo y psiquiatra",
           note: "Para qué sirve cada profesional si la familia está decidiendo a quién consultar.",
         },
+        {
+          href: "/guias/familiar-con-problema-de-alcohol",
+          label: "Familiar con problema de alcohol",
+          note: "Si el patrón que ves en casa es la bebida y no la apuesta.",
+        },
       ]}
     >
       <p>

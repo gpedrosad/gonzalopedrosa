@@ -140,7 +140,6 @@ export const ANXIETY_CLUSTER: IntentCluster = {
 /** Rutas líderes (hub o intención principal) → prioridad sitemap más alta. */
 export const CLUSTER_LEADER_ROUTES = new Set([
   "/alcoholismo-chillan",
-  "/dejar-de-beber-chillan",
   "/terapia-de-pareja-chillan",
   "/psicologo-online-chillan",
   "/terapia-online",
@@ -150,6 +149,7 @@ export const CLUSTER_LEADER_ROUTES = new Set([
 export const CLUSTER_SATELLITE_ROUTES = new Set([
   "/psicologo-alcoholismo-chillan",
   "/tratamiento-alcoholismo-chillan",
+  "/dejar-de-beber-chillan",
   "/psicologo-matrimonial-chillan",
   "/terapia-celos-chillan",
   "/terapia-online-vs-presencial-chillan",

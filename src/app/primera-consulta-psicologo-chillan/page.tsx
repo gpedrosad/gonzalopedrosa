@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { JsonLd } from "@/app/components/JsonLd";
+import { RelatedReading } from "@/app/components/RelatedReading";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import {
   localBusinessSchema,
@@ -12,17 +13,17 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Qué esperar en la primera consulta en Chillán: duración, confidencialidad y cómo agendar. TCC con Gonzalo Pedrosa, presencial u online.";
+  "Qué ocurre en la primera hora con un psicólogo en Chillán: qué se conversa, cuánto dura y qué no tienes que llevar. No cierra un diagnóstico ni un plazo.";
 
 export const metadata: Metadata = {
-  title: "Primera consulta con psicólogo en Chillán | Qué esperar",
+  title: "Primera consulta con psicólogo en Chillán: qué esperar",
   description,
   alternates: {
     canonical: "/primera-consulta-psicologo-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Primera consulta con psicólogo en Chillán | Gonzalo Pedrosa",
+    title: "Primera consulta con psicólogo en Chillán: qué esperar",
     description,
     url: "https://www.gonzalopedrosa.cl/primera-consulta-psicologo-chillan",
     type: "website",
@@ -30,10 +31,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Primera consulta con psicólogo en Chillán",
-    description: getTwitterDescription(
-      "Prepara tu primera sesión sin sorpresas: tiempo, valor, agenda y modalidad. Chillán y videollamada."
-    ),
+    title: "Primera consulta con psicólogo en Chillán: qué esperar",
+    description: getTwitterDescription(description),
   },
 };
 
@@ -142,7 +141,7 @@ export default function PrimeraConsultaPsicologoChillanPage() {
             lineHeight: 1.1,
           }}
         >
-          Primera consulta con psicólogo en Chillán
+          Primera consulta con un psicólogo: qué esperar
         </h1>
 
         <p
@@ -462,6 +461,7 @@ export default function PrimeraConsultaPsicologoChillanPage() {
             ))}
           </div>
         </nav>
+        <RelatedReading currentPath="/primera-consulta-psicologo-chillan" />
       </main>
     </>
   );

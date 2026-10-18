@@ -39,6 +39,16 @@ const NICE_ANSIEDAD = {
   href: "https://www.nice.org.uk/guidance/cg113",
 };
 
+const NICE_ALCOHOL = {
+  label: "NICE: guía CG115 sobre trastornos por consumo de alcohol",
+  href: "https://www.nice.org.uk/guidance/cg115",
+};
+
+const OMS_ALCOHOL = {
+  label: "Organización Mundial de la Salud: hoja informativa sobre el alcohol",
+  href: "https://www.who.int/news-room/fact-sheets/detail/alcohol",
+};
+
 const NICE_TOC = {
   label: "NICE: guía CG31 sobre trastorno obsesivo-compulsivo",
   href: "https://www.nice.org.uk/guidance/cg31",
@@ -57,6 +67,11 @@ const APA_APEGO = {
 const NHS_SUENO = {
   label: "NHS: hábitos para dormir mejor",
   href: "https://www.nhs.uk/every-mind-matters/mental-health-issues/sleep/",
+};
+
+const NHS_AUTOESTIMA = {
+  label: "NHS: ideas para una autoestima más amable",
+  href: "https://www.nhs.uk/mental-health/self-help/tips-and-support/raise-low-self-esteem/",
 };
 
 export type InfoSection = {
@@ -78,6 +93,8 @@ export type InfoSource = {
 export type InfoPage = {
   cluster: "guias" | "preguntas";
   slug: string;
+  /** Fecha de esta ficha. Si falta, se usa INFORMATIONAL_UPDATED. */
+  updated?: string;
   navLabel: string;
   title: string;
   h1: string;
@@ -100,7 +117,7 @@ export const GUIDE_HUB = {
   title: "Guías de salud mental para entender lo que te pasa",
   h1: "Guías para cuidar la salud mental",
   description:
-    "Lecturas sobre duelo, pareja, TEPT, EMDR, apego, burnout y sueño. Explican el tema. No reemplazan una atención profesional.",
+    "Lecturas sobre duelo, pareja, alcohol, ansiedad, TEPT, EMDR, apego, burnout y sueño. Explican el tema. No reemplazan una atención profesional.",
 };
 
 export const QUESTION_HUB = {
@@ -108,7 +125,7 @@ export const QUESTION_HUB = {
   title: "Preguntas sobre terapia, ansiedad, duelo y burnout",
   h1: "Preguntas frecuentes sobre terapia",
   description:
-    "Respuestas directas sobre la duración de la terapia, TCC, ansiedad, estrés, pánico, duelo, burnout, apego y EMDR. No reemplazan una consulta.",
+    "Respuestas directas sobre terapia, síntomas físicos de la ansiedad, autoestima, estrés, duelo, burnout, apego y EMDR. No reemplazan una consulta.",
 };
 
 const EMDR_PRODUCT = {
@@ -699,6 +716,88 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
     ],
     sources: [NICE_ANSIEDAD],
   },
+  {
+    cluster: "guias",
+    slug: "familiar-con-problema-de-alcohol",
+    updated: "2026-10-18",
+    navLabel: "Familiar con problema de alcohol",
+    title: "Familiar con alcohol: señales y cómo puedes ayudar",
+    h1: "Cómo reconocer un problema con el alcohol y ayudar a un familiar",
+    description:
+      "Señales de que el alcohol ya ordena la vida de un familiar, cómo conversar y qué no ayuda. No diagnostica y no reemplaza una urgencia médica.",
+    answer:
+      "Una relación problemática con el alcohol no se define solo por la cantidad. Importa si la bebida ya decide el ánimo, el sueño, la plata o las peleas, y si los intentos de parar duran menos de lo que la persona se promete. Desde la familia puedes describir lo que ves, cuidar tus límites y pedir ayuda. No puedes controlar el trago de otra persona ni diagnosticarla.",
+    sections: [
+      {
+        heading: "Señales que se ven desde afuera",
+        paragraphs: [
+          "La guía de NICE sobre trastornos por consumo de alcohol y la hoja de la OMS describen un patrón que se sostiene: beber más o por más tiempo del que se pensaba, no poder cortar, y seguir aunque aparezcan daños en la salud, el trabajo o los vínculos. Tú no tienes el diario de la persona. Sí puedes anotar hechos.",
+          "Un hecho es distinto de un insulto. Llegó tarde tres veces esta semana, escondió botellas, pidió plata para una deuda que no explica, o al día siguiente no recuerda la pelea. Una noche aislada no alcanza para ponerle un nombre clínico. Un patrón que se repite, sí merece una conversación y, si la persona quiere, una evaluación.",
+        ],
+        bullets: [
+          "Bebe para dormir, para calmarse o para poder estar con gente.",
+          "Minimiza la cantidad o se enoja si le preguntas con calma.",
+          "Cambia el humor después de tomar: irritabilidad, culpa o aislamiento.",
+          "El fin de semana, o un día cualquiera, ya se organiza alrededor del próximo trago.",
+        ],
+      },
+      {
+        heading: "Cómo conversar sin convertir la casa en un juicio",
+        paragraphs: [
+          "Elige un momento en que la persona esté sobria y tú no estés en la peor rabia. Habla de hechos y de cómo te afecta: el domingo no pudiste dormir porque no sabías si iba a llegar. Evita la etiqueta como primera frase. Alcoholismo, dicho como insulto, suele cerrar la puerta.",
+          "Puedes ofrecer una opción concreta: acompañar a una evaluación, dejar un número a mano, o leer juntos la página general sobre alcoholismo. La decisión de ir sigue siendo de la otra persona. Si dice que no, el límite tuyo igual puede existir.",
+        ],
+        bullets: [
+          "Una razón breve alcanza. Un discurso largo invita a discutir cada ejemplo.",
+          "No negocies el límite en medio de la borrachera.",
+          "Si hay niños en la casa, prioriza que estén cuidados esa noche.",
+          "Repite la misma frase si hace falta. No armes un argumento nuevo cada vez.",
+        ],
+      },
+      {
+        heading: "Qué suele empeorar el problema",
+        paragraphs: [
+          "Pagar la deuda del trago, mentir en la pega o esconder las botellas para que no se note enseña que el costo lo absorbe otra persona. Es parecido a lo que ocurre cuando una familia financia la apuesta: la guía sobre un familiar con ludopatía recorre ese mismo nudo de plata, secreto y desgaste.",
+          "Vigilar el celular toda la noche tampoco es un plan. Te agota y no le devuelve el control a quien bebe. Un límite dice lo que tú vas a hacer: no presto plata para alcohol, no cubro la ausencia en el trabajo, no sigo la pelea si hay gritos.",
+        ],
+      },
+      {
+        heading: "Tu desgaste y la alerta médica",
+        paragraphs: [
+          "Cuidar a alguien que bebe de más también desordena el sueño, la rabia y la culpa. Eso no se arregla con más control. Puedes bajar la activación del día con un recurso acotado, como el ejercicio de estimulación bilateral del sitio, si el malestar es leve y cotidiano. No lo uses para procesar una escena de violencia ni para reemplazar una conversación con alguien que te escuche.",
+          "Cortar el alcohol de golpe puede ser peligroso si el consumo es alto. Temblores marcados, sudoración intensa, confusión o un antecedente de convulsiones al dejar de beber piden evaluación médica, no una promesa de aguantar en la casa. Si hay ideas de hacerse daño, la llamada es al *4141.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Tengo que esperar a que toque fondo?",
+        answer:
+          "No. Puedes hablar cuando el patrón ya se nota, aunque la persona siga trabajando. Tocar fondo no es un requisito clínico. Sí hace falta que la otra persona acepte una evaluación para que el trabajo sea con ella.",
+      },
+      {
+        question: "¿Sirve esconder las botellas?",
+        answer:
+          "Quitar el alcohol de la casa puede ser parte de un plan que la persona ya aceptó. Esconderlo a escondidas, sin acuerdo, suele volverse una pelea y no corta el patrón.",
+      },
+      {
+        question: "¿Y si no quiere hablar?",
+        answer:
+          "Puedes mantener el límite con la plata y con lo que estás dispuesto a cubrir. También puedes buscar orientación para ti. Forzar una sesión no reemplaza esa decisión.",
+      },
+    ],
+    related: [
+      { href: "/alcoholismo-chillan", label: "Alcoholismo: qué es y qué señales importan" },
+      { href: "/dejar-de-beber-chillan", label: "Pasos prácticos para dejar de beber" },
+      { href: "/guias/familiar-con-ludopatia", label: "Ayudar a un familiar con adicción al juego" },
+      { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
+      { href: "/psicologo-adicciones-chillan", label: "Información sobre adicciones" },
+    ],
+    product: EMDR_PRODUCT,
+    safety:
+      "Si hay ideas de hacerse daño, llama al *4141 (gratuito, 24 horas). Ante temblores, confusión o un antecedente de convulsiones al dejar el alcohol, pide evaluación médica. Salud Responde atiende al 600 360 7777. En una urgencia, llama al 131.",
+    sources: [NICE_ALCOHOL, OMS_ALCOHOL, MINSAL_4141, SALUD_RESPONDE],
+  },
 ];
 
 const QUESTION_PAGES: InfoPage[] = [
@@ -1169,6 +1268,144 @@ const QUESTION_PAGES: InfoPage[] = [
     ],
     sources: [APA_APEGO],
   },
+  {
+    cluster: "preguntas",
+    slug: "sintomas-fisicos-de-la-ansiedad",
+    updated: "2026-10-18",
+    navLabel: "Síntomas físicos de la ansiedad",
+    title: "Síntomas físicos de la ansiedad y qué pueden indicar",
+    h1: "Síntomas físicos de la ansiedad",
+    description:
+      "Palpitaciones, falta de aire, tensión o malestar digestivo pueden ser ansiedad. Cuándo conviene una revisión médica y qué no confirma un diagnóstico.",
+    answer:
+      "La ansiedad no vive solo en la cabeza. Puede sentirse en el corazón, la respiración, el estómago, los músculos o el sueño. Esas sensaciones son reales. Un síntoma físico no confirma por sí solo un trastorno de ansiedad, y un dolor de pecho nuevo o muy intenso igual pide una revisión médica.",
+    sections: [
+      {
+        heading: "Qué se describe con más frecuencia",
+        paragraphs: [
+          "La guía NICE de ansiedad generalizada y pánico agrupa, entre otras, palpitaciones, sudor, temblor, boca seca, dificultad para respirar, molestia en el pecho, náuseas, mareo y tensión muscular. También aparecen cansancio, irritabilidad y un sueño que no repone. No tienes que cumplir la lista entera.",
+          "El cuerpo entra en alarma aunque el peligro no esté delante. Por eso puedes tener el pulso rápido sentado en la pega, o el estómago revuelto antes de una conversación. Nombrar la sensación no la borra. Te permite no tratarla, de entrada, como una prueba de que algo catastrófico ya está pasando.",
+        ],
+        bullets: [
+          "Corazón acelerado o latidos que notas de golpe.",
+          "Aire corto, suspiro frecuente o pecho apretado.",
+          "Estómago, náusea o diarrea cuando sube la preocupación.",
+          "Mandíbula, hombros o manos tensas durante horas.",
+        ],
+      },
+      {
+        heading: "Ansiedad del día y ataque de pánico",
+        paragraphs: [
+          "La ansiedad puede quedarse como fondo: preocupación difícil de cortar, cuerpo inquieto, evitación. Un ataque de pánico es un pico de minutos, con miedo intenso y síntomas físicos muy marcados. Si el pico es lo que te asusta, la guía de qué hacer en el momento y la pregunta sobre el ataque ordenan esa diferencia.",
+          "Que el episodio baje no demuestra que fue solo ansiedad, ni que fue un infarto. Si el dolor de pecho es nuevo, se va al brazo, viene con desmayo o no cede, la evaluación es médica. La psicología no reemplaza esa revisión.",
+        ],
+      },
+      {
+        heading: "Qué puedes hacer cuando el cuerpo ya está encendido",
+        paragraphs: [
+          "Baja el ritmo de una cosa a la vez. Apoya los pies en el suelo, alarga la salida del aire y nombra tres objetos que ves. No es un tratamiento. Es una forma de no alimentar la alarma con más lucha. La guía de regulación emocional explica por qué aguantar en silencio y explotar después no es lo mismo que bajar la activación.",
+          "Si el malestar es leve y de un día cargado, el ejercicio de estimulación bilateral del sitio sirve para conocer esa sensación en un marco acotado. No lo uses en medio de un pánico que no puedes guardar, ni para un recuerdo de trauma. La propia página del ejercicio lo dice.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Si me late el corazón tengo ansiedad?",
+        answer:
+          "Puede ser una alarma de ansiedad y puede ser otra cosa. Un episodio nuevo, intenso o con dolor de pecho se mira con un médico. La etiqueta viene después, no antes de descartar lo urgente.",
+      },
+      {
+        question: "¿Respirar profundo siempre ayuda?",
+        answer:
+          "A algunas personas les baja la activación. A otras, fijarse en la respiración la sube. Prueba con calma, en un momento que no sea el peor, y quédate con lo que tu cuerpo tolera.",
+      },
+      {
+        question: "¿Estos síntomas significan que necesito medicación?",
+        answer:
+          "No se deduce de una lista. Hay personas que trabajan la ansiedad con terapia y hay casos en que un médico evalúa un fármaco. Esta página no indica medicamentos.",
+      },
+    ],
+    related: [
+      { href: "/psicologo-ansiedad-chillan", label: "Ansiedad: qué es y cómo se trabaja" },
+      { href: "/guias/regulacion-emocional", label: "Cómo se regula una emoción" },
+      { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
+      { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer en un ataque de pánico" },
+      { href: "/preguntas/que-es-un-ataque-de-panico", label: "Qué es un ataque de pánico" },
+    ],
+    product: EMDR_PRODUCT,
+    safety:
+      "Dolor de pecho nuevo, desmayo o falta de aire que no cede: llama al 131 o acude a urgencia. Si hay ideas de hacerte daño, llama al *4141. Salud Responde atiende al 600 360 7777.",
+    sources: [NICE_ANSIEDAD, DIPRECE_ANSIEDAD, MINSAL_4141],
+  },
+  {
+    cluster: "preguntas",
+    slug: "senales-de-baja-autoestima",
+    updated: "2026-10-18",
+    navLabel: "Señales de autoestima baja",
+    title: "Señales de una autoestima baja: qué mirar y qué no es",
+    h1: "Señales de autoestima baja",
+    description:
+      "Señales de autoestima baja en lo cotidiano: crítica dura, evitar y comparar. No es un test ni un diagnóstico. Enlaza con la página de Chillán.",
+    answer:
+      "La autoestima baja es un modo repetido de leerte como menos capaz o menos digno de cuidado, no un defecto de carácter ni un test de internet. Se nota en lo que haces: evitas, te disculpas de más, comparas y descartas un logro apenas aparece. Una lista de señales no diagnostica. Sirve para mirar el patrón con más precisión.",
+    sections: [
+      {
+        heading: "Señales en el día a día",
+        paragraphs: [
+          "La crítica suele sonar como un hecho: si me equivoco en esto, confirmo que no sirvo. El elogio se explica por suerte o por lástima. Pedir algo cuesta más que ceder, y ceder después deja rabia. No hace falta que todas las señales estén presentes.",
+          "También se ve en el cuerpo y en la agenda. Hombros tensos antes de hablar, revisar el mensaje diez veces, no postular, no decir que no. La guía de regulación emocional ayuda a separar la emoción del veredicto. Poner un límite es otra pieza: la culpa de decir que no no demuestra que el límite esté mal.",
+        ],
+        bullets: [
+          "Compararte y salir siempre perdiendo, aunque el dato no alcance.",
+          "Evitar una tarea para no sentir la vergüenza de hacerla mal.",
+          "Pedir perdón por ocupar espacio, una pregunta o un descanso.",
+          "Quedarte en relaciones o pegas donde el trato ya te achica.",
+        ],
+      },
+      {
+        heading: "Qué no es",
+        paragraphs: [
+          "No es modestia. La modestia puede reconocer un límite real. La autoestima baja convierte un error chico en una identidad. Tampoco es un diagnóstico con nombre propio en una tarde: a veces viene junto a ánimo bajo, ansiedad o una historia de crítica, y a veces no.",
+          "Un día inseguro después de una mala noticia no es el patrón. El patrón es la lectura que se repite cuando las pruebas cambian y la conclusión sobre ti no cambia.",
+        ],
+      },
+      {
+        heading: "Qué puedes observar esta semana",
+        paragraphs: [
+          "Anota tres momentos en que la frase sobre ti fue más dura que el hecho. Al lado, escribe qué hiciste: evitaste, te adelantaste a pedir perdón, o seguiste. No tienes que corregirlo todo el mismo día. Ver la secuencia ya es información.",
+          "Si la autocrítica te deja el cuerpo muy activo por un malestar leve, el ejercicio bilateral del sitio es un recurso para esa activación cotidiana. No procesa una historia de humillación grave ni reemplaza una evaluación. Si la crítica incluye hacerte daño, deja el ejercicio y llama.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "¿La autoestima baja es una enfermedad?",
+        answer:
+          "No es, por sí sola, un diagnóstico. Puede acompañar ansiedad, ánimo bajo u otras dificultades. Una evaluación mira el conjunto, no una frase suelta.",
+      },
+      {
+        question: "¿Elogiarme frente al espejo lo cambia?",
+        answer:
+          "Una frase bonita que no te crees suele durar poco. Sirve más registrar el hecho, la crítica y la conducta que la siguió, y practicar una acción distinta en un caso chico.",
+      },
+      {
+        question: "¿Se puede trabajar?",
+        answer:
+          "El modo de interpretarte se puede revisar. No hay un plazo único ni un resultado garantizado. La página sobre baja autoestima en Chillán cuenta cómo se plantea ese trabajo.",
+      },
+    ],
+    related: [
+      { href: "/psicologo-baja-autoestima-chillan", label: "Baja autoestima: cómo se trabaja" },
+      { href: "/guias/regulacion-emocional", label: "Regulación emocional" },
+      { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
+      { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
+      { href: "/primera-consulta-psicologo-chillan", label: "Qué ocurre en una primera consulta" },
+    ],
+    product: EMDR_PRODUCT,
+    safety:
+      "Si la autocrítica incluye ideas de hacerte daño, llama al *4141. Salud Responde atiende al 600 360 7777. Esta lectura no reemplaza esa llamada.",
+    sources: [NHS_AUTOESTIMA, MINSAL_4141],
+  },
 ];
 
 INFORMATIONAL_PAGES.push(...QUESTION_PAGES);
@@ -1190,8 +1427,63 @@ export function informationalPath(page: Pick<InfoPage, "cluster" | "slug">): str
 
 const READING_BY_PATH: Record<string, InfoLink[]> = {
   "/psicologo-ansiedad-chillan": [
+    { href: "/preguntas/sintomas-fisicos-de-la-ansiedad", label: "Síntomas físicos de la ansiedad" },
+    { href: "/guias/regulacion-emocional", label: "Cómo se regula una emoción" },
     { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
-    { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer en un ataque de pánico" },
+    { href: "/guias", label: "Guías" },
+    { href: "/preguntas", label: "Preguntas" },
+  ],
+  "/agendar": [
+    { href: "/primera-consulta-psicologo-chillan", label: "Qué esperar de la primera consulta" },
+    { href: "/preguntas/cuanto-dura-una-terapia-psicologica", label: "Cuánto dura una terapia" },
+    { href: "/guias", label: "Guías" },
+    { href: "/preguntas", label: "Preguntas" },
+  ],
+  "/psicologo-adulto-chillan": [
+    { href: "/psicologo-adulto-chillan-mejor-valorados", label: "Cómo elegir un psicólogo" },
+    { href: "/guias/regulacion-emocional", label: "Cómo se regula una emoción" },
+    { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
+    { href: "/guias", label: "Guías" },
+    { href: "/preguntas", label: "Preguntas" },
+  ],
+  "/psicologo-adulto-chillan-mejor-valorados": [
+    { href: "/psicologo-adulto-chillan", label: "Qué se trabaja con adultos" },
+    { href: "/primera-consulta-psicologo-chillan", label: "Qué esperar de la primera consulta" },
+    { href: "/guias", label: "Guías" },
+    { href: "/preguntas", label: "Preguntas" },
+  ],
+  "/primera-consulta-psicologo-chillan": [
+    { href: "/preguntas/cuanto-dura-una-terapia-psicologica", label: "Cuánto dura una terapia" },
+    { href: "/preguntas/que-es-la-terapia-cognitivo-conductual", label: "Qué es la terapia cognitivo-conductual" },
+    { href: "/guias/psicologo-o-psiquiatra", label: "Psicólogo o psiquiatra" },
+    { href: "/guias", label: "Guías" },
+    { href: "/preguntas", label: "Preguntas" },
+  ],
+  "/psicologo-abuso-sexual-chillan": [
+    { href: "/guias/que-es-el-tept", label: "Qué es el TEPT" },
+    { href: "/guias/que-es-el-emdr", label: "Qué es el EMDR" },
+    { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "Límites del ejercicio bilateral" },
+    { href: "/guias", label: "Guías" },
+    { href: "/preguntas", label: "Preguntas" },
+  ],
+  "/psicologo-baja-autoestima-chillan": [
+    { href: "/preguntas/senales-de-baja-autoestima", label: "Señales de autoestima baja" },
+    { href: "/guias/regulacion-emocional", label: "Cómo se regula una emoción" },
+    { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
+    { href: "/guias", label: "Guías" },
+    { href: "/preguntas", label: "Preguntas" },
+  ],
+  "/psicologo-bipolaridad-chillan": [
+    { href: "/guias/psicologo-o-psiquiatra", label: "Psicólogo o psiquiatra" },
+    { href: "/preguntas/duelo-o-depresion", label: "Duelo o depresión" },
+    { href: "/guias", label: "Guías" },
+    { href: "/preguntas", label: "Preguntas" },
+  ],
+  "/psicologo-centro-chillan": [
+    { href: "/primera-consulta-psicologo-chillan", label: "Qué esperar de la primera consulta" },
+    { href: "/psicologo-adulto-chillan", label: "Psicólogo para adultos" },
+    { href: "/guias", label: "Guías" },
+    { href: "/preguntas", label: "Preguntas" },
   ],
   "/psicologo-crisis-de-panico-chillan": [
     { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer en un ataque de pánico" },
@@ -1279,6 +1571,8 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
   "/psicologo-depresion-chillan": [
     { href: "/preguntas/duelo-o-depresion", label: "Duelo o depresión" },
     { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
+    { href: "/guias", label: "Guías" },
+    { href: "/preguntas", label: "Preguntas" },
   ],
   "/tratamiento-insomnio-chillan": [
     { href: "/guias/higiene-del-sueno", label: "Guía: higiene del sueño" },

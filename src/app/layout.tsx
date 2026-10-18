@@ -4,6 +4,7 @@ import { Geist } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { DeferredAnalytics } from "@/app/components/DeferredAnalytics";
+import { OrganicReadFooter } from "@/app/components/OrganicReadFooter";
 import { localBusinessSchema, personSchema } from "@/lib/schemas";
 import { CANONICAL_ORIGIN } from "@/lib/site-config";
 
@@ -140,6 +141,7 @@ export default function RootLayout({
 
       <body className={`${geistSans.variable} antialiased`}>
         {children}
+        <OrganicReadFooter />
         <Script id="gtm-init" strategy="lazyOnload">
           {`(function(w,l){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});})(window,'dataLayer');`}
         </Script>
