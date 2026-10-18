@@ -44,6 +44,7 @@ export function informationalMetadata(cluster: InfoPage["cluster"], slug: string
       description: getTwitterDescription(page.description),
       images: [OG_IMAGE.url],
     },
+    robots: { index: true, follow: true, "max-image-preview": "large" },
   };
 }
 
@@ -58,6 +59,7 @@ export function InformationalArticle({
   if (!page) notFound();
 
   const path = informationalPath(page);
+  const updated = page.updated ?? INFORMATIONAL_UPDATED;
   const hubLabel = cluster === "guias" ? "Guías" : "Preguntas";
   const hubHref = cluster === "guias" ? "/guias" : "/preguntas";
   const breadcrumbItems = [
@@ -69,8 +71,8 @@ export function InformationalArticle({
     headline: page.h1,
     description: page.description,
     path,
-    datePublished: INFORMATIONAL_UPDATED,
-    dateModified: INFORMATIONAL_UPDATED,
+    datePublished: updated,
+    dateModified: updated,
   });
 
   return (
@@ -86,7 +88,7 @@ export function InformationalArticle({
             <p style={{ fontWeight: 600, margin: 0 }}>Gonzalo Pedrosa</p>
             <p style={{ margin: 0, color: "#666", fontSize: "0.875rem" }}>
               Psicólogo clínico · {cluster === "guias" ? "Guía" : "Pregunta"} informativa, actualizada el{" "}
-              {INFORMATIONAL_UPDATED}
+              {updated}
             </p>
           </div>
         </div>

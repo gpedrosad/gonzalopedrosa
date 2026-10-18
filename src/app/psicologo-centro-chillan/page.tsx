@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { JsonLd } from "@/app/components/JsonLd";
+import { RelatedReading } from "@/app/components/RelatedReading";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import {
   localBusinessSchema,
@@ -12,17 +13,17 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Psicólogo en el centro de Chillán: consulta presencial o sesión online. Horarios flexibles, boleta Isapre y $35.000. Agenda en línea.";
+  "Qué implica atenderse con un psicólogo en el centro de Chillán o por videollamada: la modalidad y la duración de la sesión. No anuncia cupos.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo en el centro de Chillán | Online y presencial",
+  title: "Psicólogo en el centro de Chillán: cómo es la hora",
   description,
   alternates: {
     canonical: "/psicologo-centro-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Psicólogo centro Chillán | Gonzalo Pedrosa",
+    title: "Psicólogo en el centro de Chillán: cómo es la hora",
     description,
     url: "https://www.gonzalopedrosa.cl/psicologo-centro-chillan",
     type: "website",
@@ -30,10 +31,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo centro Chillán",
-    description: getTwitterDescription(
-      "Consulta en el centro de Chillán u online. $35.000, boleta Isapre. Reserva en /agendar."
-    ),
+    title: "Psicólogo en el centro de Chillán: cómo es la hora",
+    description: getTwitterDescription(description),
   },
 };
 
@@ -87,7 +86,7 @@ export default function PsicologoCentroChillanPage() {
       </div>
 
       <h1 style={{ fontSize: "2.5rem", fontWeight: 700, letterSpacing: "-0.03em", marginBottom: "1rem", lineHeight: 1.1 }}>
-        Psicólogo en el centro de Chillán
+        Psicólogo en el centro de Chillán: cómo es la atención
       </h1>
 
       <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "1.5rem", lineHeight: 1.6 }}>
@@ -242,6 +241,7 @@ export default function PsicologoCentroChillanPage() {
           ))}
         </div>
       </nav>
+      <RelatedReading currentPath="/psicologo-centro-chillan" />
     </main>
     </>
   );

@@ -2,6 +2,10 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-10-18
+
+- Lote apilado sobre el 17 oct: pie con `/guias` y `/preguntas`, tres fichas nuevas (familiar con alcohol, síntomas físicos de la ansiedad, señales de autoestima baja), títulos informativos en páginas con impresiones y 0 clics, y clúster alcohol diferenciado sin 301. Detalle: [lote](../../docs/seo-lote-2026-10-18.md).
+
 ## 2026-10-17
 
 - Auditoría técnica: sitemap descubre `page.tsx` nuevas (sin tocar `/guias` ni `/preguntas`); canónico www por metadata y header `Link`; titles ≤60 y metas ≤155; OG en `/og.png`; BreadcrumbList y Person/LocalBusiness con registro RNPI, sin geopin ni sameAs inventados.

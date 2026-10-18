@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { JsonLd } from "@/app/components/JsonLd";
+import { RelatedReading } from "@/app/components/RelatedReading";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { Button } from "../components/Button";
 import {
@@ -14,17 +15,17 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Agenda psicólogo en Chillán hoy: presencial u online por videollamada. Respuesta en 24 h, TCC, boleta Isapre y primera consulta sin complicaciones.";
+  "Qué se coordina al pedir hora con un psicólogo en Chillán: presencial u online, el motivo y un horario. Explica el orden y no promete un cupo.";
 
 export const metadata: Metadata = {
-  title: "Agenda psicólogo Chillán hoy | Online o presencial",
+  title: "Agendar con un psicólogo en Chillán: qué se coordina",
   description,
   alternates: {
     canonical: "/agendar",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Agenda psicólogo Chillán hoy | Online o presencial",
+    title: "Agendar con un psicólogo en Chillán: qué se coordina",
     description,
     url: `${SITE_URL}/agendar`,
     type: "website",
@@ -32,10 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Agenda psicólogo Chillán hoy",
-    description: getTwitterDescription(
-      "Coordina tu primera sesión presencial u online hoy. WhatsApp o web. TCC y boleta Isapre."
-    ),
+    title: "Agendar con un psicólogo en Chillán: qué se coordina",
+    description: getTwitterDescription(description),
   },
 };
 
@@ -460,6 +459,7 @@ export default function AgendarPage() {
             Ansiedad
           </Button>
         </nav>
+        <RelatedReading currentPath="/agendar" />
       </main>
     </>
   );

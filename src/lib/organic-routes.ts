@@ -26,7 +26,7 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
     changeFrequency: "weekly",
     priority: 1,
   },
-  { route: "/agendar", changeFrequency: "monthly", priority: 0.9 },
+  { route: "/agendar", lastModified: "2026-10-18", changeFrequency: "monthly", priority: 0.9 },
   { route: "/perfil", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.6 },
   { route: "/emdr-autoadministrado",
     lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
@@ -54,12 +54,13 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
   },
   {
     route: "/primera-consulta-psicologo-chillan",
+    lastModified: "2026-10-18",
     changeFrequency: "monthly",
     priority: 0.85,
   },
   {
     route: "/psicologo-ansiedad-chillan",
-    lastModified: "2026-10-17",
+    lastModified: "2026-10-18",
     changeFrequency: "monthly",
     priority: 0.8,
   },
@@ -71,7 +72,7 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
   },
   {
     route: "/psicologo-adulto-chillan",
-    lastModified: "2026-10-13",
+    lastModified: "2026-10-18",
     changeFrequency: "monthly",
     priority: 0.8,
   },
@@ -83,6 +84,7 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
   },
   {
     route: "/psicologo-adulto-chillan-mejor-valorados",
+    lastModified: "2026-10-18",
     changeFrequency: "monthly",
     priority: 0.7,
   },
@@ -97,7 +99,7 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
   { route: "/psicologo-chillan-viejo", changeFrequency: "monthly", priority: 0.7 },
   { route: "/psicologo-isapre-chillan", changeFrequency: "monthly", priority: 0.8 },
   { route: "/psicologo-depresion-chillan",
-    lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.8 },
+    lastModified: "2026-10-18", changeFrequency: "monthly", priority: 0.8 },
   {
     route: "/psicologo-estres-laboral-chillan",
     lastModified: "2026-10-17",
@@ -108,6 +110,7 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
     lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.8 },
   {
     route: "/psicologo-baja-autoestima-chillan",
+    lastModified: "2026-10-18",
     changeFrequency: "monthly",
     priority: 0.8,
   },
@@ -186,7 +189,7 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
     changeFrequency: "monthly",
     priority: 0.7,
   },
-  { route: "/psicologo-centro-chillan", changeFrequency: "monthly", priority: 0.7 },
+  { route: "/psicologo-centro-chillan", lastModified: "2026-10-18", changeFrequency: "monthly", priority: 0.7 },
   {
     route: "/psicologo-sindrome-impostor-chillan",
     changeFrequency: "monthly",
@@ -214,6 +217,7 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
   },
   {
     route: "/psicologo-abuso-sexual-chillan",
+    lastModified: "2026-10-18",
     changeFrequency: "monthly",
     priority: 0.8,
   },
@@ -225,7 +229,7 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
   { route: "/estres-postraumatico-chillan",
     lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.8 },
   { route: "/tratamiento-tlp-chillan", changeFrequency: "monthly", priority: 0.8 },
-  { route: "/psicologo-bipolaridad-chillan", changeFrequency: "monthly", priority: 0.8 },
+  { route: "/psicologo-bipolaridad-chillan", lastModified: "2026-10-18", changeFrequency: "monthly", priority: 0.8 },
   {
     route: "/psicologo-manejo-frustracion-chillan",
     changeFrequency: "monthly",
@@ -297,22 +301,23 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
     changeFrequency: "monthly",
     priority: 0.8,
   },
-  { route: "/alcoholismo-chillan", changeFrequency: "monthly", priority: 0.9 },
-  { route: "/psicologo-alcoholismo-chillan", changeFrequency: "monthly", priority: 0.65 },
+  { route: "/alcoholismo-chillan", lastModified: "2026-10-18", changeFrequency: "monthly", priority: 0.9 },
+  { route: "/psicologo-alcoholismo-chillan", lastModified: "2026-10-18", changeFrequency: "monthly", priority: 0.65 },
   {
     route: "/tratamiento-alcoholismo-chillan",
+    lastModified: "2026-10-18",
     changeFrequency: "monthly",
     priority: 0.65,
   },
-  { route: "/dejar-de-beber-chillan", changeFrequency: "monthly", priority: 0.85 },
+  { route: "/dejar-de-beber-chillan", lastModified: "2026-10-18", changeFrequency: "monthly", priority: 0.7 },
   {
     route: "/psicologo-hipocondria-chillan",
     lastModified: "2026-10-17",
     changeFrequency: "monthly",
     priority: 0.8,
   },
-  { route: "/guias", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.75 },
-  { route: "/guias/familiar-con-ludopatia", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
+  { route: "/guias", lastModified: "2026-10-18", changeFrequency: "monthly", priority: 0.75 },
+  { route: "/guias/familiar-con-ludopatia", lastModified: "2026-10-18", changeFrequency: "monthly", priority: 0.7 },
   { route: "/guias/psicologo-o-psiquiatra", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
   { route: "/guias/ataque-de-panico-que-hacer", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
   { route: "/guias/duelo-etapas-y-mitos", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
@@ -326,7 +331,13 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
   { route: "/guias/higiene-del-sueno", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
   { route: "/guias/emocion-y-comida", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
   { route: "/guias/regulacion-emocional", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
-  { route: "/preguntas", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.75 },
+  {
+    route: "/guias/familiar-con-problema-de-alcohol",
+    lastModified: "2026-10-18",
+    changeFrequency: "monthly",
+    priority: 0.72,
+  },
+  { route: "/preguntas", lastModified: "2026-10-18", changeFrequency: "monthly", priority: 0.75 },
   { route: "/preguntas/cuanto-dura-una-terapia-psicologica", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
   { route: "/preguntas/que-es-la-terapia-cognitivo-conductual", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
   { route: "/preguntas/la-terapia-online-funciona", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
@@ -343,6 +354,18 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
   { route: "/preguntas/duelo-o-depresion", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
   { route: "/preguntas/por-que-la-mente-no-para", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
   { route: "/preguntas/como-poner-un-limite", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.7 },
+  {
+    route: "/preguntas/sintomas-fisicos-de-la-ansiedad",
+    lastModified: "2026-10-18",
+    changeFrequency: "monthly",
+    priority: 0.72,
+  },
+  {
+    route: "/preguntas/senales-de-baja-autoestima",
+    lastModified: "2026-10-18",
+    changeFrequency: "monthly",
+    priority: 0.72,
+  },
 ];
 
 export const ORGANIC_INDEXABLE_ROUTES = ORGANIC_SITEMAP_ENTRIES.map(

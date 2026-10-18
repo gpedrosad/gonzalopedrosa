@@ -3,27 +3,30 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { RelatedReading } from "@/app/components/RelatedReading";
 import { getTwitterDescription } from "@/lib/schemas";
 
+const description =
+  "Qué se entiende por autoestima baja, qué señales se ven en el día a día y cómo se trabaja en terapia. No es un test ni una lista de defectos.";
+
 export const metadata: Metadata = {
-  title: "Psicólogo para la baja autoestima en Chillán | Pedrosa",
-  description:
-    "Psicólogo para baja autoestima en Chillán. Trabajo de inseguridad con terapia cognitivo-conductual. Sesiones presenciales y online.",
+  title: "Baja autoestima en Chillán: señales y cómo se trata",
+  description,
   alternates: {
     canonical: "/psicologo-baja-autoestima-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Psicólogo para la baja autoestima en Chillán | Pedrosa",
-    description: "Psicólogo para baja autoestima en Chillán. Trabajo de inseguridad con terapia cognitivo-conductual. Sesiones presenciales y online.",
+    title: "Baja autoestima en Chillán: señales y cómo se trata",
+    description,
     url: "https://www.gonzalopedrosa.cl/psicologo-baja-autoestima-chillan",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Retrato de Gonzalo Pedrosa, psicólogo clínico" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo Baja Autoestima en Chillán, Chile",
-    description: getTwitterDescription("Psicólogo especializado en autoestima en Chillán, Chile. Tratamiento para baja autoestima e inseguridad. Terapia cognitivo-conductual. Sesiones presen"),
+    title: "Baja autoestima en Chillán: señales y cómo se trata",
+    description: getTwitterDescription(description),
   },
 };
 
@@ -117,7 +120,7 @@ export default function PsicologoBajaAutoestimaChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo Baja Autoestima en Chillán
+        Baja autoestima: señales y cómo se trabaja
       </h1>
 
       <p
@@ -447,6 +450,7 @@ export default function PsicologoBajaAutoestimaChillanPage() {
           ))}
         </div>
       </nav>
+      <RelatedReading currentPath="/psicologo-baja-autoestima-chillan" />
     </main>
     </>
   );

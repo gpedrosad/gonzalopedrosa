@@ -8,7 +8,6 @@ import {
   alcoholismPages,
   alcoholClusterOrder,
   alcoholClusterHubKey,
-  alcoholClusterActionLeaderKey,
   type AlcoholismPageKey,
 } from "@/lib/alcoholism-pages";
 import {
@@ -29,6 +28,33 @@ const TRUST_ITEMS = [
 
 const buildWhatsAppHref = (message: string) =>
   `https://wa.me/56968257817?text=${encodeURIComponent(message)}`;
+
+const ALCOHOL_READING: Record<AlcoholismPageKey, { href: string; label: string }[]> = {
+  "alcoholismo-chillan": [
+    { href: "/guias/familiar-con-problema-de-alcohol", label: "Cómo ayudar a un familiar" },
+    { href: "/dejar-de-beber-chillan", label: "Pasos prácticos para dejar de beber" },
+    { href: "/guias", label: "Guías" },
+    { href: "/preguntas", label: "Preguntas" },
+  ],
+  "psicologo-alcoholismo-chillan": [
+    { href: "/alcoholismo-chillan", label: "Qué es el alcoholismo" },
+    { href: "/guias/familiar-con-problema-de-alcohol", label: "Si el que bebe es un familiar" },
+    { href: "/tratamiento-alcoholismo-chillan", label: "Cómo se organiza el tratamiento" },
+    { href: "/preguntas", label: "Preguntas" },
+  ],
+  "tratamiento-alcoholismo-chillan": [
+    { href: "/alcoholismo-chillan", label: "Página principal sobre alcoholismo" },
+    { href: "/dejar-de-beber-chillan", label: "Pasos prácticos para dejar de beber" },
+    { href: "/guias/familiar-con-problema-de-alcohol", label: "Cómo ayudar a un familiar" },
+    { href: "/guias", label: "Guías" },
+  ],
+  "dejar-de-beber-chillan": [
+    { href: "/alcoholismo-chillan", label: "Qué es el alcoholismo" },
+    { href: "/guias/familiar-con-problema-de-alcohol", label: "Si quieres ayudar a un familiar" },
+    { href: "/guias/regulacion-emocional", label: "Cómo se regula una emoción" },
+    { href: "/guias", label: "Guías" },
+  ],
+};
 
 const getBreadcrumbItems = (pageKey: AlcoholismPageKey) => {
   const page = alcoholismPages[pageKey];
@@ -172,6 +198,22 @@ export function AlcoholismLandingPage({
               <p className="mt-5 text-base leading-8 text-stone-600 md:text-lg">
                 {page.lead}
               </p>
+              <nav aria-label="Para leer más" className="mt-6">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-stone-500">
+                  Para leer más
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {ALCOHOL_READING[pageKey].map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="rounded-full border border-stone-200 bg-white px-3 py-1.5 text-sm text-stone-800 underline decoration-stone-300 underline-offset-2"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </nav>
             </div>
 
             <div className="mt-6 flex flex-wrap gap-2">
@@ -323,9 +365,7 @@ export function AlcoholismLandingPage({
                   key={relatedPage.slug}
                   href={relatedPage.slug}
                   className={`rounded-2xl border bg-white p-5 transition hover:-translate-y-0.5 hover:border-stone-300 hover:shadow-sm ${
-                    relatedPage.slug === alcoholismPages[alcoholClusterHubKey].slug ||
-                    relatedPage.slug ===
-                      alcoholismPages[alcoholClusterActionLeaderKey].slug
+                    relatedPage.slug === alcoholismPages[alcoholClusterHubKey].slug
                       ? "border-emerald-200 ring-1 ring-emerald-100"
                       : "border-stone-200"
                   }`}

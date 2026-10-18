@@ -3,20 +3,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { RelatedReading } from "@/app/components/RelatedReading";
 import { SITE_URL, getTwitterDescription } from "@/lib/schemas";
 
 const description =
-  "Apoyo psicológico para trastorno bipolar en Chillán. Terapia complementaria, coordinación con psiquiatría y prevención de recaídas.";
+  "Qué es el trastorno bipolar, qué cambios de ánimo se describen y por qué la terapia acompaña sin reemplazar al psiquiatra. Información general.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo para bipolaridad en Chillán | Apoyo complementario",
+  title: "Bipolaridad en Chillán: qué es, síntomas y terapia",
   description,
   alternates: {
     canonical: "/psicologo-bipolaridad-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Psicólogo para bipolaridad en Chillán | Gonzalo Pedrosa",
+    title: "Bipolaridad en Chillán: qué es, síntomas y terapia",
     description,
     url: `${SITE_URL}/psicologo-bipolaridad-chillan`,
     type: "website",
@@ -24,10 +25,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo para bipolaridad en Chillán",
-    description: getTwitterDescription(
-      "Apoyo psicológico para trastorno bipolar en Chillán, con prevención de recaídas y coordinación con psiquiatría."
-    ),
+    title: "Bipolaridad en Chillán: qué es, síntomas y terapia",
+    description: getTwitterDescription(description),
   },
 };
 
@@ -78,7 +77,7 @@ export default function PsicologoBipolaridadChillanPage() {
       <p style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.75rem" }}>Chillán, Chile</p>
 
       <h1 style={{ fontSize: "2.5rem", fontWeight: 700, letterSpacing: "-0.03em", marginBottom: "1rem", lineHeight: 1.1 }}>
-        Psicólogo para bipolaridad en Chillán
+        Bipolaridad: qué es y qué aporta la terapia
       </h1>
 
       <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "3rem", lineHeight: 1.6 }}>
@@ -202,6 +201,7 @@ export default function PsicologoBipolaridadChillanPage() {
           ))}
         </div>
       </nav>
+      <RelatedReading currentPath="/psicologo-bipolaridad-chillan" />
     </main>
     </>
   );
