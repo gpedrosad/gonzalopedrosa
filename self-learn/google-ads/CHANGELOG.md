@@ -2,6 +2,11 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-10-17
+
+- **Campaña psicolaboral:** `evaluacion-psicolaboral-online` (`24360933243`) + grupo `evaluacion-psicolaboral` **ENABLED** tras desplegar la landing. Budget US$2/día · Chile PRESENCE · lun–vie · Maximizar conversiones. 14 keywords B2B (PHRASE/EXACT: empresas, precio, valor, online, consultora, informe psicolaboral); sin `evaluacion psicolaboral` sola (la buscan postulantes). 43 negativas BROAD (que es, preguntas, respuestas, como aprobar, wartegg, pdf, trabajo, empleo, os10, bariatrica…). 6 callouts + snippet `Servicios` + precio (operativo $45.000, profesional $60.000, jefatura $85.000). validate_only previo. Script `scripts/google-ads-create-evaluacion-psicolaboral.mjs`.
+- **Landing** `/ads/evaluacion-psicolaboral`: B2B, informe en 48 h hábiles, CTA "Cotizar por WhatsApp" (`whatsapp_lead`).
+
 ## 2026-10-16
 
 - **Presupuestos + assets** (`scripts/google-ads-budgets-assets.mjs`, validate_only previo): juego US$1 → **2**, bariátrica US$0,5 → **1**, adolescentes US$0,5 → **1** (OS10 sigue en 2; total US$6/día). Cambio de nombre `24298829243` → **PAUSED** (4 impr/30d). Primeros assets de la cuenta en juego, bari, OS10 y adolescentes: 6 callouts + snippet `Servicios` + precio (4 ítems CLP, propio primero).

@@ -41,6 +41,11 @@ const ADS_LANDING_INVENTORY = [
   "/ads/terapia-pareja",
   "/ads/adolescentes",
   "/ads/compin",
+  "/ads/adiccion-al-juego",
+  "/ads/evaluacion-bariatrica",
+  "/ads/informe-psicologico-os10",
+  "/ads/informe-cambio-nombre-apellido",
+  "/ads/evaluacion-psicolaboral",
 ];
 
 const allowedDuring = new Set([7, 14, 30, 90, 180, 365]);

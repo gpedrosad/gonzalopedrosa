@@ -30,6 +30,7 @@ const CAMPAIGNS = [
   { id: "24291587680", name: "informe-psicologico-os10-online" },
   { id: "24298829243", name: "informe-cambio-nombre-apellido-online" },
   { id: "24334063436", name: "psicologo-adolescentes-online" },
+  { id: "24360933243", name: "evaluacion-psicolaboral-online" },
 ];
 
 const WEEKDAYS = [

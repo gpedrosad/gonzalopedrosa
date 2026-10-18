@@ -352,8 +352,7 @@ export default function PsicologoAnsiedadChillanPage() {
           >
             Terapia Cognitivo-Conductual (TCC)
           </Link>
-          , el tratamiento con mayor respaldo científico para la ansiedad. Este
-          enfoque tiene tasas de efectividad del 60-80% según estudios clínicos.
+          , el tratamiento con mayor respaldo científico para la ansiedad.
         </p>
         <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
           El proceso incluye:
