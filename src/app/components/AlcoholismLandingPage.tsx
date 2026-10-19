@@ -6,8 +6,6 @@ import { JsonLd } from "@/app/components/JsonLd";
 import { WhatsAppButton } from "@/app/components/WhatsAppButton";
 import {
   alcoholismPages,
-  alcoholClusterOrder,
-  alcoholClusterHubKey,
   type AlcoholismPageKey,
 } from "@/lib/alcoholism-pages";
 import {
@@ -32,61 +30,16 @@ const buildWhatsAppHref = (message: string) =>
 const ALCOHOL_READING: Record<AlcoholismPageKey, { href: string; label: string }[]> = {
   "alcoholismo-chillan": [
     { href: "/guias/familiar-con-problema-de-alcohol", label: "Cómo ayudar a un familiar" },
-    { href: "/dejar-de-beber-chillan", label: "Pasos prácticos para dejar de beber" },
     { href: "/guias", label: "Guías" },
     { href: "/preguntas", label: "Preguntas" },
-  ],
-  "psicologo-alcoholismo-chillan": [
-    { href: "/alcoholismo-chillan", label: "Qué es el alcoholismo" },
-    { href: "/guias/familiar-con-problema-de-alcohol", label: "Si el que bebe es un familiar" },
-    { href: "/tratamiento-alcoholismo-chillan", label: "Cómo se organiza el tratamiento" },
-    { href: "/preguntas", label: "Preguntas" },
-  ],
-  "tratamiento-alcoholismo-chillan": [
-    { href: "/alcoholismo-chillan", label: "Página principal sobre alcoholismo" },
-    { href: "/dejar-de-beber-chillan", label: "Pasos prácticos para dejar de beber" },
-    { href: "/guias/familiar-con-problema-de-alcohol", label: "Cómo ayudar a un familiar" },
-    { href: "/guias", label: "Guías" },
-  ],
-  "dejar-de-beber-chillan": [
-    { href: "/alcoholismo-chillan", label: "Qué es el alcoholismo" },
-    { href: "/guias/familiar-con-problema-de-alcohol", label: "Si quieres ayudar a un familiar" },
-    { href: "/guias/regulacion-emocional", label: "Cómo se regula una emoción" },
-    { href: "/guias", label: "Guías" },
   ],
 };
 
 const getBreadcrumbItems = (pageKey: AlcoholismPageKey) => {
   const page = alcoholismPages[pageKey];
-  const hub = alcoholismPages[alcoholClusterHubKey];
-
-  if (pageKey === alcoholClusterHubKey) {
-    return [
-      { label: "Inicio", href: "/" },
-      { label: page.shortTitle },
-    ];
-  }
-
   return [
     { label: "Inicio", href: "/" },
-    { label: hub.shortTitle, href: hub.slug },
     { label: page.shortTitle },
-  ];
-};
-
-const getClusterNavPages = (pageKey: AlcoholismPageKey) => {
-  const hub = alcoholismPages[alcoholClusterHubKey];
-  const siblings = alcoholClusterOrder
-    .filter((key) => key !== pageKey)
-    .map((key) => alcoholismPages[key]);
-
-  if (pageKey === alcoholClusterHubKey) {
-    return siblings;
-  }
-
-  return [
-    hub,
-    ...siblings.filter((item) => item.slug !== hub.slug),
   ];
 };
 
@@ -133,7 +86,6 @@ export function AlcoholismLandingPage({
 }) {
   const page = alcoholismPages[pageKey];
   const breadcrumbItems = getBreadcrumbItems(pageKey);
-  const clusterNavPages = getClusterNavPages(pageKey);
   const faqSchema = getPageFAQSchema(page.faqs);
   const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
   const serviceSchema = getServiceSchema({
@@ -142,7 +94,6 @@ export function AlcoholismLandingPage({
     areaServed: "Chillán",
   });
   const whatsappHref = buildWhatsAppHref(page.whatsappMessage);
-  const isHub = pageKey === alcoholClusterHubKey;
 
   return (
     <>
@@ -346,41 +297,7 @@ export function AlcoholismLandingPage({
 
         <section className="bg-white px-4 py-8 md:py-12">
           <div className="mx-auto max-w-4xl rounded-3xl border border-stone-200 bg-stone-50 p-6 md:p-8">
-            <div className="mb-6 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-              <div>
-                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
-                  {isHub ? "Profundiza por intención" : "Guía del cluster"}
-                </p>
-                <h2 className="text-2xl font-bold tracking-tight text-stone-900">
-                  {isHub
-                    ? "Páginas del cluster alcoholismo en Chillán"
-                    : "Más información sobre alcoholismo en Chillán"}
-                </h2>
-              </div>
-            </div>
-
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {clusterNavPages.map((relatedPage) => (
-                <Link
-                  key={relatedPage.slug}
-                  href={relatedPage.slug}
-                  className={`rounded-2xl border bg-white p-5 transition hover:-translate-y-0.5 hover:border-stone-300 hover:shadow-sm ${
-                    relatedPage.slug === alcoholismPages[alcoholClusterHubKey].slug
-                      ? "border-emerald-200 ring-1 ring-emerald-100"
-                      : "border-stone-200"
-                  }`}
-                >
-                  <h3 className="mb-2 text-lg font-semibold text-stone-900">
-                    {relatedPage.shortTitle}
-                  </h3>
-                  <p className="text-sm leading-6 text-stone-600">
-                    {relatedPage.cardDescription}
-                  </p>
-                </Link>
-              ))}
-            </div>
-
-            <div className="mt-8 flex flex-wrap gap-4 border-t border-stone-200 pt-6 text-sm">
+            <div className="flex flex-wrap gap-4 text-sm">
               <Link
                 href="/psicologo-online-chillan"
                 className="font-medium text-stone-800 underline decoration-stone-300 underline-offset-4 transition hover:text-stone-950"

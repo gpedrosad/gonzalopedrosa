@@ -147,9 +147,6 @@ export const CLUSTER_LEADER_ROUTES = new Set([
 
 /** Satélites de cluster → prioridad sitemap reducida. */
 export const CLUSTER_SATELLITE_ROUTES = new Set([
-  "/psicologo-alcoholismo-chillan",
-  "/tratamiento-alcoholismo-chillan",
-  "/dejar-de-beber-chillan",
   "/psicologo-matrimonial-chillan",
   "/terapia-celos-chillan",
   "/terapia-online-vs-presencial-chillan",
