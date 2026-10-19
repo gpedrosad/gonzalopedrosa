@@ -63,6 +63,26 @@ const nextConfig: NextConfig = {
         destination: "/guias/psicologo-o-psiquiatra",
         permanent: true,
       },
+      {
+        source: "/psicologo-alcoholismo-chillan",
+        destination: "/alcoholismo-chillan",
+        permanent: true,
+      },
+      {
+        source: "/tratamiento-alcoholismo-chillan",
+        destination: "/alcoholismo-chillan",
+        permanent: true,
+      },
+      {
+        source: "/dejar-de-beber-chillan",
+        destination: "/alcoholismo-chillan",
+        permanent: true,
+      },
+      {
+        source: "/psicologo-adulto-chillan-mejor-valorados",
+        destination: "/psicologo-adulto-chillan",
+        permanent: true,
+      },
     ];
   },
   // Headers de seguridad (CSP se maneja en middleware.ts con nonce)

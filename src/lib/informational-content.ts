@@ -797,7 +797,6 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
     ],
     related: [
       { href: "/alcoholismo-chillan", label: "Alcoholismo: qué es y qué señales importan" },
-      { href: "/dejar-de-beber-chillan", label: "Pasos prácticos para dejar de beber" },
       { href: "/guias/familiar-con-ludopatia", label: "Ayudar a un familiar con adicción al juego" },
       { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
       { href: "/psicologo-adicciones-chillan", label: "Información sobre adicciones" },
@@ -1603,15 +1602,8 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
     { href: "/preguntas", label: "Preguntas" },
   ],
   "/psicologo-adulto-chillan": [
-    { href: "/psicologo-adulto-chillan-mejor-valorados", label: "Cómo elegir un psicólogo" },
     { href: "/guias/regulacion-emocional", label: "Cómo se regula una emoción" },
     { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
-    { href: "/guias", label: "Guías" },
-    { href: "/preguntas", label: "Preguntas" },
-  ],
-  "/psicologo-adulto-chillan-mejor-valorados": [
-    { href: "/psicologo-adulto-chillan", label: "Qué se trabaja con adultos" },
-    { href: "/primera-consulta-psicologo-chillan", label: "Qué esperar de la primera consulta" },
     { href: "/guias", label: "Guías" },
     { href: "/preguntas", label: "Preguntas" },
   ],

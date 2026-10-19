@@ -47,7 +47,7 @@ const psicologo_adulto_chillanFAQs = [
   {
     question: "¿Cómo elegir un buen psicólogo?",
     answer:
-      "Es importante sentirte cómodo con tu terapeuta. Lee sobre cómo elegir un psicólogo para orientarte.",
+      "Es importante sentirte cómodo con tu terapeuta y que te explique el proceso con claridad.",
   },
 ];
 
@@ -381,14 +381,8 @@ export default function PsicologoAdultoChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              Es importante sentirte cómodo con tu terapeuta. Lee sobre{" "}
-              <Link
-                href="/psicologo-adulto-chillan-mejor-valorados"
-                style={{ color: "#000", textDecoration: "underline" }}
-              >
-                cómo elegir un psicólogo
-              </Link>{" "}
-              para orientarte.
+              Es importante sentirte cómodo con tu terapeuta y que te explique el
+              proceso con claridad.
             </p>
           </details>
         </div>

@@ -82,12 +82,6 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
     changeFrequency: "monthly",
     priority: 0.8,
   },
-  {
-    route: "/psicologo-adulto-chillan-mejor-valorados",
-    lastModified: "2026-10-18",
-    changeFrequency: "monthly",
-    priority: 0.7,
-  },
   { route: "/psicologo-adicciones-chillan", changeFrequency: "monthly", priority: 0.8 },
   {
     route: "/hora-psicologo-chillan-hoy",
@@ -302,14 +296,6 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
     priority: 0.8,
   },
   { route: "/alcoholismo-chillan", lastModified: "2026-10-18", changeFrequency: "monthly", priority: 0.9 },
-  { route: "/psicologo-alcoholismo-chillan", lastModified: "2026-10-18", changeFrequency: "monthly", priority: 0.65 },
-  {
-    route: "/tratamiento-alcoholismo-chillan",
-    lastModified: "2026-10-18",
-    changeFrequency: "monthly",
-    priority: 0.65,
-  },
-  { route: "/dejar-de-beber-chillan", lastModified: "2026-10-18", changeFrequency: "monthly", priority: 0.7 },
   {
     route: "/psicologo-hipocondria-chillan",
     lastModified: "2026-10-17",

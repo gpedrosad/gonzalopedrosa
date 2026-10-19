@@ -86,9 +86,6 @@ export const ORGANIC_SERVICE_GROUPS = [
     links: [
       ["/psicologo-adicciones-chillan", "Atención psicológica para adicciones"],
       ["/alcoholismo-chillan", "Ayuda por consumo de alcohol"],
-      ["/psicologo-alcoholismo-chillan", "Psicólogo para alcoholismo"],
-      ["/tratamiento-alcoholismo-chillan", "Tratamiento del alcoholismo"],
-      ["/dejar-de-beber-chillan", "Primeros pasos para dejar de beber"],
       ["/tratamiento-ludopatia-chillan", "Ludopatía y adicción al juego"],
     ],
   },
@@ -118,7 +115,6 @@ export const ORGANIC_SERVICE_GROUPS = [
       ["/psicologo-chillan-viejo", "Atención para personas de Chillán Viejo"],
       ["/psicologo-isapre-chillan", "Atención y boleta para Isapre"],
       ["/psicologo-reembolso-isapre-chillan", "Cómo solicitar reembolso Isapre"],
-      ["/psicologo-adulto-chillan-mejor-valorados", "Cómo elegir psicólogo para adultos"],
       ["/mejor-psicologo-chillan-opiniones", "Opiniones y criterios para elegir psicólogo"],
     ],
   },
