@@ -318,6 +318,20 @@ export default function PsicologoOnlineChillanPage() {
               </li>
             ))}
           </ul>
+          <p style={{ color: "#444", lineHeight: 1.7, margin: "1rem 0 0" }}>
+            Así es una sesión de psicología online: reservas, recibes el enlace,
+            te conectas 50 minutos desde un lugar privado y el secreto
+            profesional se mantiene. Cómo funciona la hora, de principio a fin,
+            está en{" "}
+            <Link href="/terapia-online" style={{ color: "#000", textDecoration: "underline" }}>
+              cómo es una sesión de psicología online
+            </Link>
+            . Si la pregunta es si el formato sirve, está en{" "}
+            <Link href="/preguntas/la-terapia-online-funciona" style={{ color: "#000", textDecoration: "underline" }}>
+              ¿la terapia online funciona?
+            </Link>
+            .
+          </p>
         </section>
 
         <section style={{ marginBottom: "3rem" }}>

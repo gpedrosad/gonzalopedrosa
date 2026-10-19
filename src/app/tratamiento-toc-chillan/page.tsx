@@ -7,17 +7,17 @@ import { SITE_URL, getTwitterDescription } from "@/lib/schemas";
 import { RelatedReading } from "@/app/components/RelatedReading";
 
 const description =
-  "Terapia ERP (exposición con prevención de respuesta) para el TOC: te acercas al miedo y no haces el ritual. Atención en Chillán, presencial u online.";
+  "La terapia ERP para el TOC es exposición con prevención de respuesta: te acercas al miedo y no haces el ritual. Cómo funciona, en Chillán u online.";
 
 export const metadata: Metadata = {
-  title: "Terapia ERP para el TOC en Chillán",
+  title: "Qué es la terapia ERP para el TOC y cómo se practica",
   description,
   alternates: {
     canonical: "/tratamiento-toc-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Terapia ERP para el TOC en Chillán",
+    title: "Qué es la terapia ERP para el TOC y cómo se practica",
     description,
     url: `${SITE_URL}/tratamiento-toc-chillan`,
     type: "website",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terapia ERP para el TOC en Chillán",
+    title: "Qué es la terapia ERP para el TOC y cómo se practica",
     description: getTwitterDescription(description),
   },
 };
@@ -130,26 +130,61 @@ export default function TratamientoTocChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Terapia ERP para el TOC en Chillán
+        Qué es la terapia ERP para el TOC
       </h1>
 
       <p
         style={{
           fontSize: "1.125rem",
           color: "#666",
-          marginBottom: "3rem",
+          marginBottom: "1.5rem",
           lineHeight: 1.6,
         }}
       >
         La terapia ERP (exposición con prevención de respuesta) para el TOC
         consiste en acercarte al disparador y no hacer el ritual. En Chillán
         trabajo ese método con terapia cognitivo-conductual, presencial u online.
-        Si quieres la explicación del método, sin la ficha local, lee{" "}
-        <Link href="/preguntas/que-es-la-erp-para-el-toc" style={{ color: "#000", textDecoration: "underline" }}>
-          qué es la ERP para el TOC
-        </Link>
-        .
       </p>
+
+      <section
+        style={{
+          marginBottom: "2.5rem",
+          padding: "1.25rem",
+          backgroundColor: "#fafafa",
+          borderRadius: "12px",
+          border: "1px solid #eaeaea",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "1.35rem",
+            fontWeight: 600,
+            letterSpacing: "-0.02em",
+            marginBottom: "0.75rem",
+            lineHeight: 1.3,
+          }}
+        >
+          Qué es la terapia ERP para el TOC
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.7, margin: "0 0 0.75rem" }}>
+          Te acercas de forma planificada a lo que dispara la obsesión y no
+          haces el ritual que normalmente baja la angustia. La alarma puede
+          subir y, un rato después, bajar sin la compulsión. ERP y EPR son el
+          mismo método: el segundo es el nombre en español.
+        </p>
+        <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
+          El paso a paso, qué no es ERP y los errores frecuentes están en{" "}
+          <Link href="/preguntas/que-es-la-erp-para-el-toc" style={{ color: "#000", textDecoration: "underline" }}>
+            qué es la ERP para el TOC
+          </Link>
+          . Esta página es la de Chillán. La diferencia entre obsesión y
+          compulsión está en{" "}
+          <Link href="/preguntas/obsesiones-y-compulsiones" style={{ color: "#000", textDecoration: "underline" }}>
+            obsesiones y compulsiones
+          </Link>
+          .
+        </p>
+      </section>
 
       <section style={{ marginBottom: "3rem" }}>
         <h2
@@ -241,7 +276,12 @@ export default function TratamientoTocChillanPage() {
             <h3 style={{ fontWeight: 600, marginBottom: "0.5rem" }}>Compulsiones</h3>
             <p style={{ color: "#666", fontSize: "0.9375rem", lineHeight: 1.6 }}>
               Comportamientos o actos mentales repetitivos que la persona se
-              siente impulsada a realizar para reducir la ansiedad.
+              siente impulsada a realizar para reducir la ansiedad. Cómo se
+              distinguen de la obsesión está en{" "}
+              <Link href="/preguntas/obsesiones-y-compulsiones" style={{ color: "#000", textDecoration: "underline" }}>
+                obsesiones y compulsiones
+              </Link>
+              .
             </p>
           </div>
         </div>
