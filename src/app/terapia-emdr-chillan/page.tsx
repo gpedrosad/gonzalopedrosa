@@ -13,17 +13,17 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Terapia EMDR en Chillán para trauma y estrés postraumático, presencial u online. Qué es el TEPT se explica en una guía. Esta página es la atención.";
+  "Si buscas especialista en TEPT, esta página dice qué es el trastorno y cómo entra el EMDR. Las señales están en la guía. Aquí, la atención en Chillán.";
 
 export const metadata: Metadata = {
-  title: "Terapia EMDR Chillán | Trauma y TEPT",
+  title: "Especialista en TEPT: qué mirar y cómo entra el EMDR",
   description,
   alternates: {
     canonical: "/terapia-emdr-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Terapia EMDR Chillán | Trauma y TEPT",
+    title: "Especialista en TEPT: qué mirar y cómo entra el EMDR",
     description,
     url: "https://www.gonzalopedrosa.cl/terapia-emdr-chillan",
     type: "website",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terapia EMDR Chillán",
+    title: "Especialista en TEPT: qué mirar y cómo entra el EMDR",
     description: getTwitterDescription(description),
   },
 };
@@ -123,7 +123,7 @@ export default function TerapiaEmdrChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Terapia EMDR en Chillán
+        Qué mirar si buscas un especialista en TEPT
       </h1>
 
       <p
@@ -134,12 +134,13 @@ export default function TerapiaEmdrChillanPage() {
           lineHeight: 1.6,
         }}
       >
-        La terapia EMDR en Chillán trata trauma, ansiedad y estrés postraumático con una técnica
-        reconocida internacionalmente, en sesiones presenciales o{" "}
+        Si buscas un especialista en TEPT, primero conviene saber qué es el
+        trastorno y qué terapias se nombran para adultos. En Chillán trabajo
+        trauma y estrés postraumático con EMDR, presencial o{" "}
         <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
           online
         </Link>
-        . Evaluamos si EMDR encaja contigo en la primera consulta.
+        . Esta página es la de atención. No reemplaza la guía que explica el cuadro.
       </p>
 
       <section
@@ -156,9 +157,14 @@ export default function TerapiaEmdrChillanPage() {
         </p>
         <p style={{ color: "#444", fontSize: "0.875rem", lineHeight: 1.6 }}>
           EMDR es una de las técnicas que uso para trauma. Qué es el trastorno
-          de estrés postraumático está en la{" "}
+          de estrés postraumático, y qué suele buscar quien escribe especialista
+          en TEPT, está en la{" "}
           <Link href="/guias/que-es-el-tept" style={{ color: "#000", textDecoration: "underline" }}>
             guía de TEPT
+          </Link>
+          . Las fases del método están en{" "}
+          <Link href="/guias/que-es-el-emdr" style={{ color: "#000", textDecoration: "underline" }}>
+            qué es el EMDR
           </Link>
           . La ficha local sigue en{" "}
           <Link href="/estres-postraumatico-chillan" style={{ color: "#000", textDecoration: "underline" }}>

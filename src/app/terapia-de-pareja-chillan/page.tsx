@@ -21,17 +21,17 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Terapia de pareja en Chillán para comunicación, discusiones que se repiten y distancia. Psicólogo de pareja, presencial u online. La guía explica el ciclo.";
+  "Terapia de pareja en Chillán: discusiones que se repiten, distancia y comunicación. La guía del ciclo explica el patrón. Esta página es la atención local.";
 
 export const metadata: Metadata = {
-  title: "Terapia de pareja en Chillán | Psicólogo de pareja",
+  title: "Terapia de pareja en Chillán: comunicación y ciclos",
   description,
   alternates: {
     canonical: "/terapia-de-pareja-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Terapia de pareja en Chillán | Psicólogo de pareja",
+    title: "Terapia de pareja en Chillán: comunicación y ciclos",
     description,
     url: `${SITE_URL}/terapia-de-pareja-chillan`,
     type: "website",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terapia de pareja en Chillán",
+    title: "Terapia de pareja en Chillán: comunicación y ciclos",
     description: getTwitterDescription(description),
   },
 };
@@ -166,8 +166,8 @@ export default function TerapiaParejaChillanPage() {
           lineHeight: 1.6,
         }}
       >
-        Si buscas terapia de pareja en Chillán o un psicólogo de pareja, este espacio trabaja
-        comunicación, distancia emocional,{" "}
+        La terapia de pareja en Chillán trabaja comunicación,
+        distancia emocional,{" "}
         <Link href="/terapia-celos-chillan" style={{ color: "#000", textDecoration: "underline" }}>
           celos
         </Link>

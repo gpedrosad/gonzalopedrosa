@@ -137,6 +137,31 @@ export default function EmdrAutoadministradoPage() {
             </div>
           </section>
 
+          <section className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              Antes de abrir el ejercicio
+            </h2>
+            <p className="text-gray-700 mb-4 leading-relaxed">
+              Si lo que buscas es el trastorno de estrés postraumático, la{" "}
+              <Link href="/guias/que-es-el-tept" className="underline">
+                guía de qué es el TEPT
+              </Link>{" "}
+              explica las señales. Este ejercicio no procesa un trauma ni un TEPT.
+              Las fases del método profesional están en{" "}
+              <Link href="/guias/que-es-el-emdr" className="underline">
+                qué es el EMDR
+              </Link>
+              .
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              Cuando ya leíste los límites y el malestar es leve, el{" "}
+              <Link href="/emdr-autoadministrado/ejercicio" className="underline">
+                ejercicio bilateral
+              </Link>{" "}
+              está en su propia página. Ahí ajustas velocidad y duración.
+            </p>
+          </section>
+
           <RelatedReading currentPath="/emdr-autoadministrado" />
           <div className="text-center mt-12">
             <Link

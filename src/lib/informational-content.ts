@@ -138,6 +138,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
         {
     cluster: "guias",
     slug: "que-es-el-emdr",
+    updated: "2026-10-19",
     navLabel: "Qué es el EMDR",
     title: "EMDR: qué es, para qué se usa y qué no reemplaza",
     h1: "Qué es el EMDR",
@@ -149,7 +150,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       {
         heading: "Para qué se desarrolló",
         paragraphs: [
-          "El procedimiento se usa en el trabajo con trauma y con el trastorno de estrés postraumático. La guía de la OMS de 2013 sobre condiciones relacionadas con el estrés incluye, para adultos con TEPT, terapias centradas en el trauma, entre ellas la cognitivo-conductual y el EMDR.",
+          "El procedimiento se usa en el trabajo con trauma y con el trastorno de estrés postraumático. La guía de la OMS de 2013 sobre condiciones relacionadas con el estrés incluye, para adultos con TEPT, terapias centradas en el trauma, entre ellas la cognitivo-conductual y el EMDR. Si tu búsqueda es especialista en TEPT, la explicación del trastorno está en la guía de TEPT. Esta página se queda en el método.",
           "Que una guía lo nombre no convierte cualquier video de un punto que se mueve en una sesión de EMDR. El procedimiento completo incluye evaluación, preparación y cierre, con alguien que sepa detenerse si la activación se dispara.",
         ],
       },
@@ -290,11 +291,12 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
   {
     cluster: "guias",
     slug: "que-es-el-tept",
+    updated: "2026-10-19",
     navLabel: "Qué es el TEPT",
-    title: "Qué es el TEPT: señales y cuándo pedir ayuda",
+    title: "Qué es el TEPT y qué busca un especialista en TEPT",
     h1: "Qué es el TEPT",
     description:
-      "El TEPT es el trastorno de estrés postraumático: el recuerdo sigue activo. Señales frecuentes, cuándo pedir ayuda y qué terapias se usan.",
+      "Especialista en TEPT: qué es el trastorno de estrés postraumático, qué señales se repiten y cuándo pedir ayuda. Enlaza el EMDR y la atención en Chillán.",
     answer:
       "TEPT significa trastorno de estrés postraumático. Aparece después de un hecho que amenazó la vida, la integridad o la de alguien cercano, cuando el recuerdo no queda archivado: vuelve en imágenes, sueños o alarma, y la persona organiza el día para no toparse con él.",
     sections: [
@@ -330,6 +332,13 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
           "La guía de la OMS de 2013 sobre condiciones relacionadas con el estrés nombra, para adultos con TEPT, terapias centradas en el trauma. Entre ellas están la terapia cognitivo-conductual focalizada en el trauma y el EMDR. Que una guía las nombre no dice qué te corresponde a ti ni en qué orden.",
           "El EMDR no es un video de un punto que se mueve. El procedimiento completo incluye evaluación, preparación y cierre. El ejercicio gratuito de este sitio solo muestra la estimulación bilateral para un malestar leve. No procesa un trauma ni un TEPT por tu cuenta.",
           "Esta página explica el trastorno. La atención con EMDR en Chillán y la ficha local de estrés postraumático son otras URLs: una es el método en consulta, la otra es la información de esa atención.",
+        ],
+      },
+      {
+        heading: "Si buscas un especialista en TEPT",
+        paragraphs: [
+          "Esa búsqueda suele pedir a alguien que evalúe un recuerdo que sigue activo y que conozca terapias centradas en el trauma. La guía de la OMS nombra, para adultos, la terapia cognitivo-conductual focalizada en el trauma y el EMDR, cuando las aplica personal de salud capacitado. El nombre de la técnica no reemplaza la evaluación.",
+          "Esta guía no certifica a quien la escribe. Explica el cuadro y enlaza el método. Las fases del EMDR están en la guía correspondiente. La página de EMDR en Chillán es la de atención con ese método. El ejercicio bilateral del sitio queda fuera de este tema: no reprocesa un TEPT.",
         ],
       },
     ],
@@ -865,6 +874,7 @@ const QUESTION_PAGES: InfoPage[] = [
       },
     ],
     related: [
+      { href: "/preguntas/obsesiones-y-compulsiones", label: "Obsesiones y compulsiones" },
       { href: "/preguntas/que-es-la-terapia-cognitivo-conductual", label: "Qué es la terapia cognitivo-conductual" },
       { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
       { href: "/tratamiento-toc-chillan", label: "Página de atención para TOC" },
@@ -1197,6 +1207,8 @@ const QUESTION_PAGES: InfoPage[] = [
     related: [
       { href: "/guias/higiene-del-sueno", label: "Higiene del sueño" },
       { href: "/preguntas/que-es-la-erp-para-el-toc", label: "Qué es la ERP para el TOC" },
+      { href: "/preguntas/obsesiones-y-compulsiones", label: "Obsesiones y compulsiones" },
+      { href: "/preguntas/procrastinacion-y-ansiedad", label: "Procrastinación y ansiedad" },
       { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad y estrés" },
       { href: "/guias/regulacion-emocional", label: "Regulación emocional" },
     ],
@@ -1406,6 +1418,157 @@ const QUESTION_PAGES: InfoPage[] = [
       "Si la autocrítica incluye ideas de hacerte daño, llama al *4141. Salud Responde atiende al 600 360 7777. Esta lectura no reemplaza esa llamada.",
     sources: [NHS_AUTOESTIMA, MINSAL_4141],
   },
+  {
+    cluster: "preguntas",
+    slug: "obsesiones-y-compulsiones",
+    updated: "2026-10-19",
+    navLabel: "Obsesiones y compulsiones",
+    title: "Obsesiones y compulsiones: cómo distinguirlas en el TOC",
+    h1: "Obsesiones y compulsiones en el TOC",
+    description:
+      "Obsesiones y compulsiones no son lo mismo: la obsesión alarma y la compulsión intenta bajar esa alarma. Cómo distinguirlas, sin un test ni un diagnóstico.",
+    answer:
+      "En el TOC, la obsesión es el pensamiento, la imagen o el impulso que llega sin que lo invites y sube la alarma. La compulsión es lo que haces, con las manos o con la mente, para bajar esa alarma. No son lo mismo: una es la duda y la otra es el intento de cerrarla.",
+    sections: [
+      {
+        heading: "Cómo se ve una obsesión",
+        paragraphs: [
+          "Llega sola y se siente urgente. Puede ser una imagen de contaminación, una duda de si cerraste la puerta, un impulso que te asusta o la idea de que vas a hacer daño. No la elegiste. Tratar de empujarla fuera suele devolverla más fuerte.",
+          "Pensar mucho en un problema no alcanza para llamarlo obsesión. En la rumiación das vueltas a un tema y no aparece un paso. En la obsesión del TOC la alarma pide un acto concreto para quedar seguro. Si lo que se repite es la mente de noche, sin ritual, la pregunta sobre por qué la mente no para está más cerca.",
+        ],
+      },
+      {
+        heading: "Cómo se ve una compulsión",
+        paragraphs: [
+          "Es el acto que baja la alarma un rato: lavar, revisar, rezar en un orden, pedir que alguien te confirme que quedó bien, o repasar la memoria hasta sentir certeza. El alivio enseña que el acto era necesario. A la siguiente, la duda vuelve más pronto.",
+          "Un ritual mental cuenta. Dejar de lavarte las manos y seguir rumiando una hora no corta la compulsión: la cambia de lugar. La guía NICE CG31 trata la exposición con prevención de respuesta como parte de la TCC para el TOC. Esta página solo distingue las dos piezas. El método está en la pregunta sobre la ERP.",
+        ],
+        bullets: [
+          "Obsesión: la alarma. Compulsión: lo que haces para apagarla.",
+          "Pedir confirmación a la familia suele ser otra compulsión.",
+          "Evitar el disparador también mantiene el circuito.",
+          "Una lista leída en internet no pone el nombre de TOC.",
+        ],
+      },
+      {
+        heading: "Por qué se encadenan",
+        paragraphs: [
+          "La obsesión abre una amenaza y la compulsión la cierra en falso. El cerebro registra que, sin el ritual, el peligro seguía. Por eso la siguiente obsesión pide el mismo acto, o uno más largo. Discutir durante horas si el peligro era real alimenta la duda.",
+          "La ERP ensaya quedarte con la duda sin completar el ritual, en un paso acordado. No se parte por la imagen más aterradora. Si el TOC ocupa varias horas del día, esta distinción no alcanza como plan. Sirve para reconocer las dos partes cuando lo converses con quien te evalúe.",
+        ],
+      },
+      {
+        heading: "Qué no corresponde a un ejercicio suelto",
+        paragraphs: [
+          "Una obsesión no se trabaja con un punto que se mueve en la pantalla. El ejercicio bilateral del sitio es para malestar leve y cotidiano, y la propia página pide que lo pares si aparecen imágenes que no puedes guardar. No es un tratamiento del TOC ni de un trauma.",
+          "Si el malestar es una preocupación del día, sin ritual, puedes leer la guía de regulación emocional. Si aparecen ideas de hacerte daño, deja cualquier ejercicio y llama.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Pensar mucho es una obsesión?",
+        answer:
+          "No por sí solo. La obsesión del TOC trae alarma y empuja a un ritual para bajarla. Dar vueltas sin un acto de cierre se parece más a la rumiación.",
+      },
+      {
+        question: "¿Un ritual mental cuenta como compulsión?",
+        answer:
+          "Sí. Repasar, rezar en un orden o revisar la memoria hasta quedar seguro es una compulsión, aunque nadie lo vea.",
+      },
+      {
+        question: "¿Esto se trabaja con ERP?",
+        answer:
+          "La ERP es el método en que te acercas al disparador y no haces el ritual. La pregunta sobre la ERP lo explica. La página de Chillán es la de atención. Ninguna de las dos diagnostica.",
+      },
+    ],
+    related: [
+      { href: "/preguntas/que-es-la-erp-para-el-toc", label: "Qué es la ERP para el TOC" },
+      { href: "/tratamiento-toc-chillan", label: "Terapia ERP para el TOC en Chillán" },
+      { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
+      { href: "/preguntas/que-es-la-terapia-cognitivo-conductual", label: "Qué es la terapia cognitivo-conductual" },
+      { href: "/guias/regulacion-emocional", label: "Regulación emocional" },
+    ],
+    safety:
+      "Si hay ideas de hacerte daño o de querer morir, llama al *4141 (gratuito, 24 horas). Salud Responde atiende al 600 360 7777. En una urgencia, llama al 131. Esta lectura no reemplaza esa llamada.",
+    sources: [NICE_TOC, MINSAL_4141, SALUD_RESPONDE],
+  },
+  {
+    cluster: "preguntas",
+    slug: "procrastinacion-y-ansiedad",
+    updated: "2026-10-19",
+    navLabel: "Procrastinación y ansiedad",
+    title: "Procrastinación y ansiedad: por qué postergas la tarea",
+    h1: "Procrastinación y ansiedad",
+    description:
+      "Postergar puede ir con ansiedad: evitas el malestar de empezar, no solo la tarea. Qué mantiene el circuito y qué puedes mirar en un paso chico.",
+    answer:
+      "A veces postergas porque la tarea trae una emoción que no quieres sentir: vergüenza de hacerla mal, miedo a empezar o la presión de que tiene que salir perfecta. La ansiedad y la postergación se empujan. No es solo desorden ni un horario que te falta.",
+    sections: [
+      {
+        heading: "Cómo se arma el circuito",
+        paragraphs: [
+          "Ves la tarea y el cuerpo se apura: el pecho, la mandíbula o la cabeza. Abres otra cosa más fácil. El alivio es inmediato y la tarea queda más grande. Al día siguiente el mismo roce parte más alto, porque ahora también está la culpa de haberla dejado.",
+          "El circuito se parece al de una evitación. No hace falta un diagnóstico para notarlo. Hace falta ver qué emoción aparece justo antes de cambiar de pestaña.",
+        ],
+        bullets: [
+          "La tarea chica se siente enorme cuando el miedo es a hacerla mal.",
+          "Empezar por el correo, el aseo o el celular baja la alarma un rato.",
+          "La culpa llega después y vuelve más difícil sentarte.",
+          "Un plazo más corto no corta el circuito si la emoción sigue igual.",
+        ],
+      },
+      {
+        heading: "Ansiedad y la tarea que crece",
+        paragraphs: [
+          "La ansiedad del día puede ser una preocupación que no se suelta. Aquí se engancha con una acción concreta que evitas. Si además la mente rumia de noche el mismo pendiente, la pregunta sobre por qué la mente no para ordena esa parte. Son piezas distintas del mismo cansancio.",
+          "Perfeccionismo y postergación se acompañan seguido: si solo cuenta el resultado impecable, empezar se siente como un examen. Un borrador feo de diez minutos es un dato, no una prueba de capacidad.",
+        ],
+      },
+      {
+        heading: "Un paso chico, no un sistema nuevo",
+        paragraphs: [
+          "Elige una tarea que quepa en diez minutos y escribe la primera acción visible: abrir el archivo, una frase, el enunciado. Pon un temporizador. Cuando suene, te detienes aunque quede el resto. El aprendizaje es que pudiste estar con el malestar un rato, no que terminaste el semestre.",
+          "Si al sentarte el cuerpo queda muy activado por un malestar leve, el ejercicio bilateral del sitio es un recurso para esa activación cotidiana. No es para una crisis, un trauma ni una obsesión con ritual. Léelo antes de abrirlo.",
+        ],
+      },
+      {
+        heading: "Cuándo el patrón pide otra mirada",
+        paragraphs: [
+          "Si la postergación ya te saca de los estudios, de la pega o del sueño durante semanas, esta explicación no alcanza como plan. La página de procrastinación en los estudios en Chillán describe ese motivo. Esta pregunta se queda en el circuito.",
+          "Si junto con evitar aparecen ideas de hacerte daño, o dejas de comer y de dormir, pide ayuda el mismo día. Un temporizador no es la herramienta para eso.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Postergar es pereza?",
+        answer:
+          "La pereza es una palabra suelta. En este circuito hay una emoción incómoda justo antes de cambiar de tarea, y un alivio corto después. Mirar esa secuencia es más útil que el apodo.",
+      },
+      {
+        question: "¿Es ansiedad o es el hábito de dejarlo para después?",
+        answer:
+          "Pueden ir juntos. La ansiedad sube al ver la tarea y el hábito es la salida que ya conoces. Separarlos ayuda a elegir un paso chico en vez de pelear con el carácter.",
+      },
+      {
+        question: "¿El ejercicio bilateral sirve para ponerme a estudiar?",
+        answer:
+          "Sirve, si acaso, para un malestar leve antes de empezar. No ordena la materia ni reemplaza una evaluación cuando el patrón ya te limita la semana.",
+      },
+    ],
+    related: [
+      { href: "/psicologo-procrastinacion-estudios-chillan", label: "Procrastinación en los estudios" },
+      { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
+      { href: "/psicologo-ansiedad-chillan", label: "Ansiedad: qué es y cómo se trabaja" },
+      { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
+      { href: "/guias/regulacion-emocional", label: "Regulación emocional" },
+    ],
+    product: EMDR_PRODUCT,
+    safety:
+      "Si hay ideas de hacerte daño, llama al *4141. Es gratuito, confidencial y atiende las 24 horas. Salud Responde atiende al 600 360 7777. En una urgencia, llama al 131.",
+    sources: [NICE_ANSIEDAD, MINSAL_4141, SALUD_RESPONDE],
+  },
 ];
 
 INFORMATIONAL_PAGES.push(...QUESTION_PAGES);
@@ -1534,6 +1697,7 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
   ],
   "/tratamiento-toc-chillan": [
     { href: "/preguntas/que-es-la-erp-para-el-toc", label: "Qué es la ERP para el TOC" },
+    { href: "/preguntas/obsesiones-y-compulsiones", label: "Obsesiones y compulsiones" },
     { href: "/guias", label: "Guías" },
     { href: "/preguntas", label: "Preguntas" },
     { href: "/preguntas/que-es-la-terapia-cognitivo-conductual", label: "Qué es la terapia cognitivo-conductual" },
@@ -1579,8 +1743,11 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
     { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
   ],
   "/psicologo-procrastinacion-estudios-chillan": [
+    { href: "/preguntas/procrastinacion-y-ansiedad", label: "Procrastinación y ansiedad" },
     { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
     { href: "/guias/regulacion-emocional", label: "Regulación emocional" },
+    { href: "/guias", label: "Guías" },
+    { href: "/preguntas", label: "Preguntas" },
   ],
   "/psicologo-dependencia-emocional-chillan": [
     { href: "/preguntas/que-es-el-apego-ansioso", label: "Qué es el apego ansioso" },
@@ -1601,8 +1768,12 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
     { href: "/guias/emocion-y-comida", label: "Guía: emoción y comida" },
   ],
   "/emdr-autoadministrado": [
+    { href: "/guias/que-es-el-tept", label: "Guía: qué es el TEPT" },
+    { href: "/emdr-autoadministrado/ejercicio", label: "Abrir el ejercicio bilateral" },
     { href: "/guias/que-es-el-emdr", label: "Guía: qué es el EMDR" },
     { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "Qué puede y qué no puede el ejercicio" },
+    { href: "/guias", label: "Guías" },
+    { href: "/preguntas", label: "Preguntas" },
   ],
 };
 

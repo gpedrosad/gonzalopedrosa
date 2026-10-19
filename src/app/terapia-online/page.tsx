@@ -20,17 +20,17 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Una sesión de psicología online dura 50 minutos por videollamada, en un espacio privado. Recorrido, confidencialidad y cómo se combina con presencial.";
+  "Cómo es una sesión de psicología online: 50 minutos por videollamada, con enlace previo y un espacio privado. El secreto profesional se mantiene.";
 
 export const metadata: Metadata = {
-  title: "¿Cómo es una sesión de psicología online?",
+  title: "Cómo es y cómo funciona una sesión de psicología online",
   description,
   alternates: {
     canonical: "/terapia-online",
   },
   openGraph: {
     locale: "es_CL",
-    title: "¿Cómo es una sesión de psicología online?",
+    title: "Cómo es y cómo funciona una sesión de psicología online",
     description,
     url: `${SITE_URL}/terapia-online`,
     type: "website",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "¿Cómo es una sesión de psicología online?",
+    title: "Cómo es y cómo funciona una sesión de psicología online",
     description: getTwitterDescription(description),
   },
 };
@@ -50,14 +50,14 @@ const breadcrumbItems = getClusterBreadcrumb(
 
 const terapiaOnlineFAQs = [
   {
-    question: "¿cómo es una sesión de psicología online?",
+    question: "¿Cómo es una sesión de psicología online?",
     answer:
-      "Es una videollamada de 50 minutos. Coordinas la hora, recibes el enlace (Zoom, Google Meet u otra) y te conectas desde un espacio privado, con cámara, micrófono e internet estable. El secreto profesional se mantiene: conviene que nadie te escuche desde tu lado.",
+      "Es una videollamada de 50 minutos. Antes de la hora recibes el enlace (Zoom, Google Meet u otra). Te conectas desde un computador, una tablet o un celular, con cámara, micrófono e internet estable, en una pieza donde nadie más escuche. El secreto profesional se mantiene igual que en una sala.",
   },
   {
-    question: "¿cómo funciona la terapia psicológica online?",
+    question: "¿Cómo funciona la terapia psicológica online?",
     answer:
-      "Tiene hora y continuidad, hecha por videollamada. El recorrido es contacto, confirmación con el enlace, la sesión de 50 minutos y un acuerdo de frecuencia. Puedes alternar con presencial. Si la duda es si el formato sirve, esa respuesta está en otra página.",
+      "Tiene hora de inicio y de cierre. Partes por lo que trajiste: una situación, un pensamiento que se repitió o algo que intentaste. Durante los 50 minutos la conversación se queda en ese punto. Al terminar puedes anotar un paso para la semana. La videollamada se puede alternar con presencial. Si la duda es si el formato sirve, esa respuesta está en otra página.",
   },
   {
     question: "¿Es igual de efectiva que la terapia presencial?",
@@ -156,7 +156,7 @@ export default function TerapiaOnlinePage() {
             lineHeight: 1.1,
           }}
         >
-          Terapia online: cómo funciona
+          Cómo es una sesión de psicología online
         </h1>
 
         <p
@@ -214,6 +214,31 @@ export default function TerapiaOnlinePage() {
               ¿La terapia online funciona?
             </Link>
           </p>
+        </section>
+
+        <section style={{ marginBottom: "2.5rem" }}>
+          <h2
+            style={{
+              fontSize: "1.35rem",
+              fontWeight: 600,
+              letterSpacing: "-0.02em",
+              marginBottom: "0.75rem",
+              lineHeight: 1.3,
+            }}
+          >
+            Qué preparas antes de conectarte
+          </h2>
+          <p style={{ color: "#444", lineHeight: 1.7, margin: "0 0 0.75rem" }}>
+            Deja el enlace a mano. Prueba cámara y micrófono. Elige una pieza
+            con puerta, donde la conversación no tenga público. La hora son 50
+            minutos, los mismos de una sesión presencial, así que conviene
+            entrar ya sentado y no en medio de un traslado.
+          </p>
+          <ul style={{ margin: 0, paddingLeft: "1.2rem", color: "#444", lineHeight: 1.7 }}>
+            <li>Internet estable y el enlace de Zoom, Google Meet u otra videollamada.</li>
+            <li>Cámara, micrófono y un lugar privado.</li>
+            <li>Un punto de la semana: una situación, un pensamiento o algo que intentaste.</li>
+          </ul>
         </section>
 
         <div
