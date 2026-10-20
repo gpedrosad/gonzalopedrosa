@@ -163,7 +163,19 @@ export default function PsicologoAnsiedadChillanPage() {
           online
         </Link>
         , desde $35.000 con boleta Isapre. Trabajamos exposición gradual y herramientas para el
-        día a día.
+        día a día. Para entender el malestar antes de una ficha:{" "}
+        <Link href="/preguntas/sintomas-fisicos-de-la-ansiedad" style={{ color: "#000", textDecoration: "underline" }}>
+          síntomas físicos de la ansiedad
+        </Link>
+        ,{" "}
+        <Link href="/preguntas/ansiedad-o-estres" style={{ color: "#000", textDecoration: "underline" }}>
+          ansiedad o estrés
+        </Link>{" "}
+        y{" "}
+        <Link href="/guias/ataque-de-panico-que-hacer" style={{ color: "#000", textDecoration: "underline" }}>
+          qué hacer en un ataque de pánico
+        </Link>
+        .
       </p>
 
       <div

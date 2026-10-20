@@ -133,7 +133,11 @@ export default function PsicologoBajaAutoestimaChillanPage() {
       >
         La autoestima es la valoración que hacemos de nosotros mismos. Cuando es
         baja, afecta todas las áreas de nuestra vida. La buena noticia es que
-        puede trabajarse y mejorarse.
+        puede trabajarse y mejorarse. Las señales, sin convertirlas en un test, están en{" "}
+        <Link href="/preguntas/senales-de-baja-autoestima" style={{ color: "#000", textDecoration: "underline" }}>
+          señales de baja autoestima
+        </Link>
+        .
       </p>
 
       <section style={{ marginBottom: "3rem" }}>

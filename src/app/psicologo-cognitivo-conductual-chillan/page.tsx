@@ -6,25 +6,28 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 import { RelatedReading } from "@/app/components/RelatedReading";
 
+const title = "Psicólogo o psicóloga cognitivo conductual en Chillán";
+const description =
+  "Psicólogo o psicóloga cognitivo conductual en Chillán: qué mira la TCC entre pensamiento, emoción y conducta. La definición larga está en una pregunta.";
+
 export const metadata: Metadata = {
-  title: "Psicólogo cognitivo-conductual en Chillán | Enfoque TCC",
-  description:
-    "Psicólogo con enfoque cognitivo-conductual (TCC) en Chillán. Terapia para ansiedad, depresión y más. Sesiones presenciales y online.",
+  title,
+  description,
   alternates: {
     canonical: "/psicologo-cognitivo-conductual-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Psicólogo cognitivo-conductual en Chillán | Enfoque TCC",
-    description: "Psicólogo con enfoque cognitivo-conductual (TCC) en Chillán. Terapia para ansiedad, depresión y más. Sesiones presenciales y online.",
+    title,
+    description,
     url: "https://www.gonzalopedrosa.cl/psicologo-cognitivo-conductual-chillan",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Retrato de Gonzalo Pedrosa, psicólogo clínico" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo Cognitivo Conductual en Chillán, Chile",
-    description: getTwitterDescription("Psicólogo con enfoque cognitivo-conductual (TCC) en Chillán, Chile. Terapia basada en evidencia para ansiedad, depresión y más. Sesiones presenciales "),
+    title,
+    description: getTwitterDescription(description),
   },
 };
 
@@ -122,7 +125,7 @@ export default function PsicologoCognitivoConductualChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo Cognitivo Conductual en Chillán
+        Psicólogo o psicóloga cognitivo conductual en Chillán
       </h1>
 
       <p
@@ -160,7 +163,11 @@ export default function PsicologoCognitivoConductualChillanPage() {
         <p style={{ color: "#444", lineHeight: 1.7 }}>
           Es un enfoque activo y colaborativo: terapeuta y paciente trabajan
           juntos estableciendo metas claras, con ejercicios entre sesiones para
-          consolidar los aprendizajes.
+          consolidar los aprendizajes. La definición, sin una ficha de atención, está en{" "}
+          <Link href="/preguntas/que-es-la-terapia-cognitivo-conductual" style={{ color: "#000", textDecoration: "underline" }}>
+            qué es la terapia cognitivo-conductual
+          </Link>
+          .
         </p>
       </section>
 

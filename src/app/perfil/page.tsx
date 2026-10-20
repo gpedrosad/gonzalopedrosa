@@ -9,13 +9,15 @@ import {
   getBreadcrumbSchema,
   getServiceSchema,
   getPageFAQSchema,
+  getProfilePageSchema,
   getTwitterDescription,
 } from "@/lib/schemas";
 
 export const dynamic = "force-dynamic";
 
+const title = "Gonzalo Pedrosa | Perfil de psicólogo clínico en Chillán";
 const description =
-  "Perfil de Gonzalo Pedrosa, psicólogo clínico en Chillán: TCC, boleta Isapre y +7 años. La ficha de quien escribe las guías del sitio.";
+  "Perfil de Gonzalo Pedrosa, psicólogo clínico en Chillán: TCC, boleta Isapre y +7 años. Ficha de quien escribe las guías; el mismo nombre de la portada.";
 
 const breadcrumbItems = [
   { label: "Inicio", href: "/" },
@@ -41,14 +43,14 @@ const serviceSchema = getServiceSchema({
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Perfil de Gonzalo Pedrosa | Psicólogo en Chillán",
+    title,
     description,
     alternates: {
       canonical: "/perfil",
     },
     openGraph: {
     locale: "es_CL",
-      title: "Perfil de Gonzalo Pedrosa | Psicólogo en Chillán",
+      title,
       description,
       url: `${SITE_URL}/perfil`,
       type: "profile",
@@ -56,7 +58,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: "Gonzalo Pedrosa | Psicólogo Chillán",
+      title,
       description: getTwitterDescription(description),
     },
     robots: {
@@ -69,6 +71,10 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function ProfilePage() {
   return (
     <>
+      <JsonLd
+        id="profile-page"
+        data={getProfilePageSchema({ name: "Gonzalo Pedrosa", description }) as Record<string, unknown>}
+      />
       <JsonLd id="local-business" data={localBusinessSchema as Record<string, unknown>} />
       <JsonLd id="breadcrumb" data={breadcrumbSchema as Record<string, unknown>} />
       <JsonLd id="service" data={serviceSchema as Record<string, unknown>} />
@@ -103,7 +109,11 @@ export default function ProfilePage() {
           }}
         >
           <p style={{ color: "#444", lineHeight: 1.7, margin: "0 0 0.75rem" }}>
-            Este es el perfil de Gonzalo Pedrosa. La portada está en el inicio.
+            Este es el perfil de{" "}
+            <Link href="/" style={{ color: "#000", textDecoration: "underline" }}>
+              Gonzalo Pedrosa
+            </Link>
+            , psicólogo clínico en Chillán. La portada usa el mismo nombre.
             Para leer, parte por las guías o las preguntas.
           </p>
           <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>

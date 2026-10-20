@@ -48,17 +48,17 @@ export type AlcoholismPage = {
 export const alcoholismPages: Record<AlcoholismPageKey, AlcoholismPage> = {
   "alcoholismo-chillan": {
     slug: "/alcoholismo-chillan",
-    metaTitle: "Alcoholismo en Chillán: qué es, señales y tratamiento",
+    metaTitle: "Alcoholismo en Chillán: señales y cómo dejar de beber",
     description:
-      "Qué se entiende por alcoholismo, qué señales aparecen en la casa o el trabajo y en qué se diferencia de un plan para dejar de beber. Página principal.",
-    h1: "Alcoholismo: qué es, señales y cómo se trata",
+      "Señales de un consumo problemático, por dónde empezar si quieres dejar de beber y cuándo el corte pide evaluación médica. No pone un diagnóstico.",
+    h1: "Alcoholismo: señales y cómo empezar a dejar de beber",
     shortTitle: "Alcoholismo: qué es",
     cardDescription:
       "Página principal: qué es el problema y qué señales importan.",
     serviceType: "Apoyo psicológico para alcoholismo",
     intentLabel: "Página principal sobre alcoholismo",
     lead:
-      "Esta es la página principal sobre alcoholismo. Resume qué se entiende por el problema y qué señales se ven en la casa, el trabajo o la pareja. No pone un diagnóstico.",
+      "Esta es la página principal sobre alcoholismo en Chillán. Junta las señales de un consumo problemático, por dónde empezar si quieres dejar de beber y cuándo el corte pide evaluación médica. No pone un diagnóstico.",
     heroHighlights: [
       "Terapia online",
       "Atención para adultos",
@@ -125,6 +125,35 @@ export const alcoholismPages: Record<AlcoholismPageKey, AlcoholismPage> = {
         ],
       },
       {
+        title: "Señales de consumo problemático",
+        paragraphs: [
+          "Un consumo problemático no se define solo por los tragos de una noche. Se parece más a un patrón: bebes más o por más tiempo del que te habías propuesto, te cuesta cortar, y sigues aunque ya haya costo en el sueño, la pega, la plata o la pareja. La cantidad importa menos que si el alcohol ya decide el día.",
+          "Estas señales no ponen un diagnóstico. Sirven para mirar con honestidad antes de comparar tu caso con el más extremo que conoces. Si todavía trabajas, o si no bebes todos los días, el patrón igual puede estar.",
+        ],
+        bullets: [
+          "Beber para dormir, calmarte o poder estar con gente.",
+          "Esconder la cantidad o minimizar lo que pasó al día siguiente.",
+          "Pensar con anticipación cuándo vas a tomar o si va a alcanzar.",
+          "Volver al mismo trago después de una pelea, una resaca o una promesa de parar.",
+        ],
+      },
+      {
+        title: "Dejar de beber: por dónde empezar",
+        paragraphs: [
+          "Si quieres dejar de beber, el primer paso útil es un registro corto, no una promesa enorme. Durante una semana anota día, hora, qué estabas sintiendo antes y qué pasó después. Ese cuaderno no te cura. Te muestra el circuito: estrés, soledad, fin de semana o vergüenza.",
+          "Elige un tramo chico que puedas sostener, por ejemplo no beber los días de pega, o una cantidad menor que la de la semana pasada. Un corte total de un día para otro puede ser la meta, y también puede ser peligroso si el consumo es alto. Eso se decide con una evaluación, no con una frase de internet.",
+          "Si quien bebe es un familiar y no tú, el enlace «Cómo ayudar a un familiar» de esta página recorre cómo conversar y qué límites no ayudan. Aquí el foco es la persona que quiere mirar su propio consumo.",
+        ],
+      },
+      {
+        title: "Cuándo pedir ayuda médica",
+        paragraphs: [
+          "Dejar el alcohol de golpe puede ser peligroso. Si el consumo es alto y sostenido, el cuerpo puede reaccionar con temblores marcados, sudor intenso, confusión, pulso muy acelerado o convulsiones. Eso no se resuelve aguantando en la casa. Pide una evaluación médica antes de cortar, o el mismo día si esos síntomas ya aparecieron.",
+          "También pide ayuda médica si hay vómitos con sangre, color amarillo en los ojos, un desmayo, o un antecedente de convulsiones al dejar de beber. En una urgencia, llama al 131. Salud Responde atiende al 600 360 7777. Si hay ideas de hacerte daño, llama al *4141: es gratuito y atiende las 24 horas.",
+          "Una conversación psicológica no reemplaza esa evaluación cuando hay riesgo de abstinencia. Pueden ir juntas. El orden lo marca el riesgo físico.",
+        ],
+      },
+      {
         title: "Cómo puede ayudarte una terapia online si decides empezar ahora",
         paragraphs: [
           "La terapia online suele facilitar el inicio porque reduce barreras prácticas y emocionales. Muchas personas postergan pedir hora por vergüenza, falta de tiempo o cansancio para trasladarse. Con una sesión por videollamada es posible empezar desde un espacio privado, revisar qué está pasando y construir un plan concreto para la semana siguiente. No es una conversación abstracta: se trabaja con situaciones específicas, horarios, desencadenantes y respuestas alternativas.",
@@ -166,6 +195,11 @@ export const alcoholismPages: Record<AlcoholismPageKey, AlcoholismPage> = {
         question: "¿Puede consultar un familiar aunque la persona no quiera ir?",
         answer:
           "Sí. Una orientación inicial para familiares puede ser útil para ordenar límites, dejar de reforzar ciertas conductas y aprender formas más efectivas de pedir ayuda sin entrar en peleas estériles.",
+      },
+      {
+        question: "¿Puedo dejar de beber de un día para otro?",
+        answer:
+          "Depende del consumo. Si es alto y sostenido, el corte brusco puede traer temblores, confusión o convulsiones. Eso pide evaluación médica antes de cortar, no una prueba de voluntad en la casa. En una urgencia, llama al 131.",
       },
       {
         question: "¿El alcoholismo siempre requiere internación?",

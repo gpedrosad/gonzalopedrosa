@@ -66,7 +66,7 @@ export function getAlcoholismPageMetadata(
           url: "/og.png",
           width: 1200,
           height: 630,
-          alt: "Gonzalo Pedrosa - Psicólogo",
+          alt: "Retrato de Gonzalo Pedrosa, psicólogo clínico",
         },
       ],
     },

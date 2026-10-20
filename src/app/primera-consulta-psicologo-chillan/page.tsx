@@ -12,18 +12,19 @@ import {
   getTwitterDescription,
 } from "@/lib/schemas";
 
+const title = "Qué pasa en la primera consulta psicológica en Chillán";
 const description =
-  "Qué ocurre en la primera hora con un psicólogo en Chillán: qué se conversa, cuánto dura y qué no tienes que llevar. No cierra un diagnóstico ni un plazo.";
+  "Qué pasa en la primera consulta con un psicólogo en Chillán: de qué se habla, cuánto dura y qué no tienes que llevar. No cierra un diagnóstico.";
 
 export const metadata: Metadata = {
-  title: "Primera consulta con psicólogo en Chillán: qué esperar",
+  title,
   description,
   alternates: {
     canonical: "/primera-consulta-psicologo-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Primera consulta con psicólogo en Chillán: qué esperar",
+    title,
     description,
     url: "https://www.gonzalopedrosa.cl/primera-consulta-psicologo-chillan",
     type: "website",
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Primera consulta con psicólogo en Chillán: qué esperar",
+    title,
     description: getTwitterDescription(description),
   },
 };
@@ -141,7 +142,7 @@ export default function PrimeraConsultaPsicologoChillanPage() {
             lineHeight: 1.1,
           }}
         >
-          Primera consulta con un psicólogo: qué esperar
+          Qué pasa en la primera consulta con un psicólogo
         </h1>
 
         <p

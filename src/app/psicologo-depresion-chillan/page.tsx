@@ -160,7 +160,11 @@ export default function PsicologoDepresionChillanPage() {
           online
         </Link>
         , desde $35.000 con boleta Isapre. La depresión tiene tratamiento; el primer paso es
-        pedir ayuda.
+        pedir ayuda. Cómo mirar las señales sin un test está en{" "}
+        <Link href="/preguntas/senales-de-depresion" style={{ color: "#000", textDecoration: "underline" }}>
+          cómo saber si tengo depresión
+        </Link>
+        .
       </p>
 
       <div
