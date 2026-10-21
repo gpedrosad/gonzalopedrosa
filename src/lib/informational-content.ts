@@ -130,7 +130,7 @@ export const QUESTION_HUB = {
   title: "Preguntas sobre terapia, ansiedad, duelo y burnout",
   h1: "Preguntas frecuentes sobre terapia",
   description:
-    "Respuestas directas sobre terapia, síntomas físicos de la ansiedad, autoestima, estrés, duelo, burnout, apego y EMDR. No reemplazan una consulta.",
+    "Respuestas sobre sesión online, ansiedad, autoestima, estrés, duelo, TEPT y EMDR. Cada ficha explica una pregunta. No reemplazan una consulta.",
 };
 
 const EMDR_PRODUCT = {
@@ -297,7 +297,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
   {
     cluster: "guias",
     slug: "que-es-el-tept",
-    updated: "2026-10-20",
+    updated: "2026-10-21",
     navLabel: "Qué es el TEPT",
     title: "Qué es el TEPT y qué busca un especialista en TEPT",
     h1: "Qué es el TEPT",
@@ -344,7 +344,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
         heading: "Si buscas un especialista en TEPT",
         paragraphs: [
           "Esa búsqueda suele pedir a alguien que evalúe un recuerdo que sigue activo y que conozca terapias centradas en el trauma. La guía de la OMS nombra, para adultos, la terapia cognitivo-conductual focalizada en el trauma y el EMDR, cuando las aplica personal de salud capacitado. El nombre de la técnica no reemplaza la evaluación.",
-          "Esta guía no certifica a quien la escribe. Explica el cuadro y enlaza el método. Las fases del EMDR están en la guía correspondiente. La página de EMDR en Chillán es la de atención con ese método. El ejercicio bilateral del sitio queda fuera de este tema: no reprocesa un TEPT.",
+          "Qué hace esa persona en la evaluación está en la pregunta sobre el especialista en estrés postraumático. Esta guía se queda en el cuadro. No certifica a quien la escribe. Las fases del EMDR están en la guía correspondiente. La página de EMDR en Chillán es la de atención con ese método. El ejercicio bilateral del sitio queda fuera de este tema: no reprocesa un TEPT.",
         ],
       },
     ],
@@ -366,6 +366,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       },
     ],
     related: [
+      { href: "/preguntas/que-hace-un-especialista-en-estres-postraumatico", label: "Qué hace un especialista en estrés postraumático" },
       { href: "/preguntas/que-es-un-trauma-psicologico", label: "Qué es un trauma psicológico" },
       { href: "/guias/que-es-el-emdr", label: "Qué es el EMDR" },
       { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "Límites del ejercicio bilateral" },
@@ -1656,7 +1657,7 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "que-es-un-trauma-psicologico",
-    updated: "2026-10-20",
+    updated: "2026-10-21",
     navLabel: "Qué es un trauma psicológico",
     title: "Qué es un trauma psicológico y cuándo no es un TEPT",
     h1: "Qué es un trauma psicológico",
@@ -1719,11 +1720,226 @@ const QUESTION_PAGES: InfoPage[] = [
     ],
     related: [
       { href: "/guias/que-es-el-tept", label: "Qué es el TEPT" },
+      { href: "/preguntas/que-hace-un-especialista-en-estres-postraumatico", label: "Qué hace un especialista en estrés postraumático" },
       { href: "/guias/que-es-el-emdr", label: "Qué es el EMDR" },
       { href: "/terapia-emdr-chillan", label: "EMDR en Chillán: página de atención" },
       { href: "/estres-postraumatico-chillan", label: "Estrés postraumático en Chillán" },
       { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "Límites del ejercicio bilateral" },
       { href: "/emdr-autoadministrado", label: "Ejercicio bilateral para un malestar leve" },
+    ],
+    product: EMDR_PRODUCT,
+    safety:
+      "Si hay ideas de hacerte daño o de querer morir, llama al *4141 (gratuito, 24 horas). Salud Responde atiende al 600 360 7777. En una urgencia, llama al 131. Esta lectura no reemplaza esa llamada.",
+    sources: [OMS_ESTRES, MINSAL_4141, SALUD_RESPONDE],
+  },
+  {
+    cluster: "preguntas",
+    slug: "como-es-una-sesion-de-psicologia-online",
+    updated: "2026-10-21",
+    navLabel: "Cómo es una sesión online",
+    title: "Cómo es una sesión de psicología online: 50 minutos",
+    h1: "¿Cómo es una sesión de psicología online?",
+    description:
+      "Una sesión de psicología online es una videollamada de 50 minutos, con enlace previo y un lugar donde nadie más escuche. No es un chat ni una urgencia.",
+    answer:
+      "Una sesión de psicología online es una videollamada de 50 minutos. Antes de la hora recibes un enlace (Zoom, Google Meet u otra). Te conectas desde un computador, una tablet o un celular, con cámara, micrófono e internet estable, en una pieza donde nadie más escuche. El secreto profesional se mantiene igual que en una sala. La consulta presencial está en Chillán. La videollamada es para quien está en Chile.",
+    sections: [
+      {
+        heading: "Qué ocurre en esos 50 minutos",
+        paragraphs: [
+          "La hora tiene inicio y cierre. Partes por lo que trajiste de la semana: una situación, un pensamiento que se repitió o algo que intentaste. La conversación se queda en ese punto. Al terminar puedes anotar un paso para los días que vienen. No es un chat abierto ni un mensaje que se responde cuando se puede.",
+          "El enlace llega antes. Conviene probar cámara y micrófono y entrar ya sentado, no en un traslado. Si la conexión se corta, en la página de atención está escrito que se retoma o se reprograma sin un cobro extra por ese corte.",
+        ],
+        bullets: [
+          "Duración: 50 minutos, los mismos de una sesión presencial.",
+          "Llega un enlace de Zoom, Google Meet u otra videollamada.",
+          "Sirve computador, tablet o celular, con cámara y micrófono.",
+          "La pieza tiene puerta: la conversación no tiene público.",
+        ],
+      },
+      {
+        heading: "Conexión, privacidad y lugar",
+        paragraphs: [
+          "Internet estable, cámara y micrófono son el mínimo. Si la casa es ruidosa, unos audífonos ayudan. Avisos del celular en silencio. Si vives con más gente, esa hora no está disponible para el resto: una puerta cerrada cambia lo que te atreves a decir.",
+          "El secreto profesional no cambia por la pantalla. Lo que sí cambia es tu entorno. Si alguien puede oír desde el pasillo, la reserva baja aunque la persona que atiende no esté en la misma ciudad. La diferencia entre videollamada y sala, con más detalle, está en la comparación de modalidades.",
+        ],
+      },
+      {
+        heading: "Qué no es esta hora",
+        paragraphs: [
+          "No reemplaza una urgencia médica ni una crisis con riesgo. Si hay ideas de hacerte daño, esa llamada es el *4141, Salud Responde o el 131, no una sesión programada. Tampoco es la página de atención: esa es la de psicólogo online, con consulta en Chillán y videollamada para quien está en Chile.",
+          "Si la pregunta es cómo se organiza el proceso (antes, durante y después, y en qué se diferencia de la sala), está en la otra pregunta. Si la duda es si el formato puede servir, está en la pregunta de si la terapia online funciona. Esta ficha se queda en cómo es la hora.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Qué plataforma se usa?",
+        answer:
+          "Zoom, Google Meet u otra videollamada. El enlace se envía antes de la hora. No hace falta instalar algo distinto de lo que ya uses para una reunión.",
+      },
+      {
+        question: "¿Es igual de reservada que una sala?",
+        answer:
+          "El secreto profesional se mantiene. La reserva de tu lado depende del lugar: puerta, audífonos si hace falta, y que nadie más esté en la pieza.",
+      },
+      {
+        question: "¿Puedo estar en otra ciudad de Chile?",
+        answer:
+          "La videollamada es para quien está en Chile, con horario compatible, conexión y un lugar privado. La consulta presencial está en Chillán. Esta página no abre sedes en otras ciudades.",
+      },
+    ],
+    related: [
+      { href: "/terapia-online", label: "Terapia online en Chile" },
+      { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "Cómo funciona la terapia psicológica online" },
+      { href: "/preguntas/la-terapia-online-funciona", label: "¿La terapia online funciona?" },
+      { href: "/psicologo-online-chillan", label: "Psicólogo online en Chile, consulta en Chillán" },
+      { href: "/terapia-online-vs-presencial-chillan", label: "Online y presencial" },
+      { href: "/consulta-psicologica-precio-chillan", label: "Valor publicado de la sesión" },
+    ],
+    safety:
+      "Una videollamada no es una urgencia. Si hay ideas de hacerte daño o de querer morir, llama ahora al *4141. Es gratuito, confidencial y atiende las 24 horas. Salud Responde atiende al 600 360 7777. En una urgencia, llama al 131.",
+    sources: [MINSAL_4141, SALUD_RESPONDE],
+  },
+  {
+    cluster: "preguntas",
+    slug: "como-funciona-la-terapia-psicologica-online",
+    updated: "2026-10-21",
+    navLabel: "Cómo funciona la terapia online",
+    title: "Cómo funciona la terapia psicológica online en Chile",
+    h1: "¿Cómo funciona la terapia psicológica online?",
+    description:
+      "La terapia psicológica online es una hora con inicio, un tema de la semana y un cierre. Pide conexión, privacidad y poder alternarla con la sala.",
+    answer:
+      "La terapia psicológica online funciona como una cita con hora de inicio y de cierre, hecha por videollamada. Antes recibes el enlace. En los 50 minutos se trabaja un punto de la semana. Al terminar puedes anotar un paso. Se puede alternar con la consulta presencial en Chillán. Pide conexión estable, cámara, micrófono y un lugar donde nadie más escuche.",
+    sections: [
+      {
+        heading: "El recorrido, sin una reserva en esta página",
+        paragraphs: [
+          "El orden que ya está descrito en el sitio es este: se coordina la hora, llega el enlace con una indicación breve, te conectas a la hora y la sesión dura 50 minutos. No es una conversación que queda abierta el resto del día. La página de terapia online en Chile resume el formato. Esta pregunta baja al funcionamiento.",
+          "Llegas con un punto: una situación, un pensamiento que se repitió o algo que intentaste. Si entras a mitad de un traslado, la hora se gasta en acomodarte. Conviene estar sentado, con el enlace a mano.",
+        ],
+      },
+      {
+        heading: "Qué tiene que estar listo",
+        paragraphs: [
+          "Internet que no se corte cada minuto, cámara, micrófono y una pieza con puerta. Computador, tablet o celular alcanzan. Si la casa es ruidosa, audífonos. Si compartes pieza y no hay forma de hablar con reserva, el formato deja de cuidar la confidencialidad: eso ya está dicho en la pregunta de si la terapia online funciona.",
+          "La videollamada es para quien está en Chile. La sala está en Chillán. No hay otras ciudades en esta ficha. Si estás en otra comuna, el requisito sigue siendo horario, conexión y un lugar privado.",
+        ],
+        bullets: [
+          "Enlace de videollamada antes de la hora.",
+          "Cámara, micrófono e internet estable.",
+          "Lugar privado durante los 50 minutos.",
+          "Un tema concreto de la semana, no un relato sin borde.",
+        ],
+      },
+      {
+        heading: "En qué se diferencia de la sala",
+        paragraphs: [
+          "No hay traslado. La privacidad depende de tu casa u oficina, no de una sala ya reservada. Se ve parte del lenguaje del cuerpo; el encuadre de la cámara importa. En un malestar muy intenso, la videollamada pide que tengas un lugar seguro. La sala puede sentirse más contenida para quien prefiere salir de la casa. La comparación online y presencial ordena esas diferencias. Se pueden alternar las dos modalidades.",
+          "El secreto profesional es el mismo. Lo que cambia es el lugar desde el que hablas.",
+        ],
+      },
+      {
+        heading: "Cómo preguntar el valor",
+        paragraphs: [
+          "Online y presencial tienen el mismo valor. El número publicado en el sitio es $35.000 por 50 minutos, con boleta para reembolso Isapre. El pago, la primera sesión y la cancelación están en la ficha de precio. Esta pregunta no reserva una hora.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Puedo alternar online y presencial?",
+        answer:
+          "Sí. La videollamada y la consulta en Chillán se pueden alternar. El trabajo sigue siendo el mismo proceso, con otra puerta de entrada.",
+      },
+      {
+        question: "¿El valor cambia por ser online?",
+        answer:
+          "No. El valor publicado es el mismo: $35.000 por 50 minutos, con boleta para Isapre. El detalle de pago está en la ficha de precio.",
+      },
+      {
+        question: "¿Qué pasa si se corta internet?",
+        answer:
+          "En la página de atención está escrito que se retoma la conexión o se reprograma, sin un cobro extra por ese corte.",
+      },
+    ],
+    related: [
+      { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "Cómo es una sesión de psicología online" },
+      { href: "/terapia-online", label: "Terapia online en Chile" },
+      { href: "/psicologo-online-chillan", label: "Psicólogo online en Chile, consulta en Chillán" },
+      { href: "/terapia-online-vs-presencial-chillan", label: "Online y presencial" },
+      { href: "/preguntas/la-terapia-online-funciona", label: "¿La terapia online funciona?" },
+      { href: "/consulta-psicologica-precio-chillan", label: "Valor publicado de la sesión" },
+    ],
+    safety:
+      "Una videollamada no es una urgencia. Si hay ideas de hacerte daño o de querer morir, llama ahora al *4141. Es gratuito, confidencial y atiende las 24 horas. Salud Responde atiende al 600 360 7777. En una urgencia, llama al 131.",
+    sources: [MINSAL_4141, SALUD_RESPONDE],
+  },
+  {
+    cluster: "preguntas",
+    slug: "que-hace-un-especialista-en-estres-postraumatico",
+    updated: "2026-10-21",
+    navLabel: "Especialista en estrés postraumático",
+    title: "Qué hace un especialista en estrés postraumático (TEPT)",
+    h1: "¿Qué hace un especialista en estrés postraumático?",
+    description:
+      "Un especialista en estrés postraumático evalúa si el recuerdo sigue activo y limita la semana. No pone el nombre TEPT por un párrafo. La guía explica el cuadro.",
+    answer:
+      "Un especialista en estrés postraumático, o en TEPT, evalúa si un recuerdo sigue activo y limita la semana, y conoce terapias centradas en el trauma. No pone ese nombre porque leíste una lista. TEPT y estrés postraumático nombran el mismo cuadro. Qué es el trastorno está en la guía. Esta pregunta se queda en qué hace esa persona en el trabajo.",
+    sections: [
+      {
+        heading: "Qué mira en una evaluación",
+        paragraphs: [
+          "Mira si el hecho ya pasó y el cuerpo sigue reaccionando como si estuviera pasando: imágenes, pesadillas o la sensación de estar otra vez ahí; si evitas lugares, conversaciones o personas; si la alerta no baja; y si eso ya cambia el sueño, la pega o los vínculos. Un susto fuerte de unos días no alcanza, por sí solo, para el nombre.",
+          "Tampoco hace falta que el hecho sea una guerra o un accidente. La guía de TEPT recuerda que también se describe después de violencia, abuso, un asalto o haber presenciado que otra persona estaba en peligro. La evaluación escucha el efecto, no el tamaño de la noticia.",
+        ],
+        bullets: [
+          "El recuerdo vuelve solo y organiza parte del día.",
+          "La evitación crece para no activarse.",
+          "La alerta se queda: sobresalto, sueño liviano, guardia alta.",
+          "Una coincidencia con este párrafo no confirma el diagnóstico.",
+        ],
+      },
+      {
+        heading: "Qué terapias se nombran, sin un resultado prometido",
+        paragraphs: [
+          "La guía de la OMS de 2013 sobre condiciones relacionadas con el estrés nombra, para adultos con TEPT, terapias centradas en el trauma. Entre ellas están la terapia cognitivo-conductual focalizada en el trauma y el EMDR, cuando las aplica personal de salud capacitado. Que una guía las nombre no dice cuál te corresponde ni en cuántas horas.",
+          "El EMDR no es un punto que se mueve en una pantalla. El procedimiento completo incluye evaluación, preparación y cierre. Las fases están en la guía de EMDR. La página de EMDR en Chillán es la de atención con ese método. No certifica un resultado.",
+        ],
+      },
+      {
+        heading: "Qué no hace esta lectura",
+        paragraphs: [
+          "No certifica a quien escribe el sitio ni publica un registro. No dice que un hecho grave siempre deje un TEPT. No usa el ejercicio de estimulación bilateral para reprocesar un trauma: ese recurso es para un malestar leve y la propia página pide pararlo si la escena vuelve y no puedes dejarla.",
+          "La ficha local de estrés postraumático en Chillán es otra URL, ya sobre esa atención. Esta pregunta explica el oficio de la búsqueda. La guía explica el cuadro.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Especialista en TEPT y especialista en estrés postraumático es la misma búsqueda?",
+        answer:
+          "Sí. TEPT significa trastorno de estrés postraumático. Las dos frases piden a alguien que evalúe un recuerdo que sigue activo. La guía define el cuadro. Esta pregunta dice qué hace esa persona.",
+      },
+      {
+        question: "¿Esta página dice si quien escribe es especialista?",
+        answer:
+          "No. No certifica títulos ni un registro. Explica qué suele pedir la búsqueda y enlaza la guía, el método y la atención en Chillán.",
+      },
+      {
+        question: "¿Puedo usar el ejercicio bilateral si creo que tengo TEPT?",
+        answer:
+          "No para reprocesar ese recuerdo. El ejercicio es para un malestar leve. Si aparecen imágenes que no puedes guardar, páralo.",
+      },
+    ],
+    related: [
+      { href: "/guias/que-es-el-tept", label: "Qué es el TEPT" },
+      { href: "/terapia-emdr-chillan", label: "EMDR en Chillán: página de atención" },
+      { href: "/estres-postraumatico-chillan", label: "Estrés postraumático en Chillán" },
+      { href: "/guias/que-es-el-emdr", label: "Qué es el EMDR" },
+      { href: "/preguntas/que-es-un-trauma-psicologico", label: "Qué es un trauma psicológico" },
+      { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "Límites del ejercicio bilateral" },
     ],
     product: EMDR_PRODUCT,
     safety:
@@ -1836,6 +2052,7 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
     { href: "/guias/estilos-de-apego", label: "Guía: estilos de apego" },
   ],
   "/terapia-emdr-chillan": [
+    { href: "/preguntas/que-hace-un-especialista-en-estres-postraumatico", label: "Qué hace un especialista en estrés postraumático" },
     { href: "/preguntas/que-es-un-trauma-psicologico", label: "Qué es un trauma psicológico" },
     { href: "/guias/que-es-el-tept", label: "Guía: qué es el TEPT" },
     { href: "/guias/que-es-el-emdr", label: "Guía: qué es el EMDR" },
@@ -1845,6 +2062,7 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
     { href: "/emdr-autoadministrado", label: "Ejercicio bilateral gratuito" },
   ],
   "/estres-postraumatico-chillan": [
+    { href: "/preguntas/que-hace-un-especialista-en-estres-postraumatico", label: "Qué hace un especialista en estrés postraumático" },
     { href: "/guias/que-es-el-tept", label: "Guía: qué es el TEPT" },
     { href: "/guias", label: "Guías" },
     { href: "/preguntas", label: "Preguntas" },
@@ -1859,16 +2077,19 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
     { href: "/preguntas/que-es-la-terapia-cognitivo-conductual", label: "Qué es la terapia cognitivo-conductual" },
   ],
   "/terapia-online": [
+    { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "¿Cómo es una sesión de psicología online?" },
+    { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "¿Cómo funciona la terapia psicológica online?" },
     { href: "/preguntas/la-terapia-online-funciona", label: "¿La terapia online funciona?" },
     { href: "/psicologo-online-chillan", label: "Psicólogo online en Chile" },
-    { href: "/guias", label: "Guías" },
-    { href: "/preguntas", label: "Preguntas" },
+    { href: "/terapia-online-vs-presencial-chillan", label: "Online y presencial" },
   ],
   "/psicologo-online-chillan": [
-    { href: "/terapia-online", label: "Cómo es una sesión de terapia online" },
+    { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "¿Cómo es una sesión de psicología online?" },
+    { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "¿Cómo funciona la terapia psicológica online?" },
+    { href: "/terapia-online", label: "Terapia online en Chile" },
     { href: "/preguntas/la-terapia-online-funciona", label: "¿La terapia online funciona?" },
-    { href: "/guias", label: "Guías" },
-    { href: "/preguntas", label: "Preguntas" },
+    { href: "/consulta-psicologica-precio-chillan", label: "Valor publicado de la sesión" },
+    { href: "/terapia-online-vs-presencial-chillan", label: "Online y presencial" },
   ],
   "/tratamiento-burnout-chillan": [
     { href: "/guias/burnout-laboral", label: "Guía: burnout laboral" },

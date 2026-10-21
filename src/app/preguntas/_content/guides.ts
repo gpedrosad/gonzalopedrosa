@@ -196,12 +196,14 @@ export const guides: Guide[] = [
         paragraphs: [
           "Elige el mismo tipo de condiciones que pedirías en una consulta: luz suficiente para que te vean, cámara a la altura de los ojos, y avisos del celular en silencio. Si vives con más gente, avisa que esa hora no está disponible. Una puerta cerrada cambia la calidad de lo que te atreves a decir.",
           "Llega con un punto de la semana. Puede ser una situación, un pensamiento que se repitió o algo que intentaste. Esa preparación ayuda a que los 50 o 60 minutos alcancen para trabajar un tema con calma.",
-          "La página [cómo funciona la terapia online](/terapia-online) describe el recorrido de una sesión por videollamada. Esta respuesta se limita a la pregunta de si el formato puede servir.",
+          "La página [terapia online en Chile](/terapia-online) resume el formato. Cómo es la hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online). Cómo funciona el proceso está en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online). Esta respuesta se limita a si el formato puede servir.",
         ],
       },
     ],
     related: [
-      { href: "/terapia-online", label: "Cómo funciona una sesión de terapia online" },
+      { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "¿Cómo es una sesión de psicología online?" },
+      { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "¿Cómo funciona la terapia psicológica online?" },
+      { href: "/terapia-online", label: "Terapia online en Chile" },
       { href: "/terapia-online-vs-presencial-chillan", label: "Terapia online y presencial en Chillán" },
       { href: "/psicologo-online-chillan", label: "Psicólogo online desde Chillán" },
       { href: "/preguntas/que-es-la-terapia-cognitivo-conductual", label: "¿Qué es la terapia cognitivo-conductual?" },
