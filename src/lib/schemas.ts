@@ -256,6 +256,39 @@ export function getWebPageSchema(params: {
   };
 }
 
+/**
+ * La portada nombra a la misma persona que el layout (`/#persona`).
+ * Sin sameAs: no hay perfil social ni ficha personal del registro en el sitio.
+ */
+export function getHomeEntityWebPageSchema(params: { name: string; description: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/#webpage`,
+    url: `${SITE_URL}/`,
+    name: params.name,
+    description: params.description,
+    inLanguage: "es-CL",
+    mainEntity: { "@id": `${SITE_URL}/#persona` },
+    about: { "@id": `${SITE_URL}/#persona` },
+  };
+}
+
+/** Perfil de la misma persona. El @id no cambia respecto de la portada. */
+export function getProfilePageSchema(params: { name: string; description: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": `${SITE_URL}/perfil#webpage`,
+    url: `${SITE_URL}/perfil`,
+    name: params.name,
+    description: params.description,
+    inLanguage: "es-CL",
+    mainEntity: { "@id": `${SITE_URL}/#persona` },
+    about: { "@id": `${SITE_URL}/#persona` },
+  };
+}
+
 /** Artículo informativo. No incluye oferta de sesión. */
 export function getArticleSchema(params: {
   headline: string;

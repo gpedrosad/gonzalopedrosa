@@ -2,6 +2,10 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-10-20
+
+- Lote de marca, alcohol consolidado y dos preguntas (depresión y trauma). Detalle: [lote](../../docs/seo-lote-2026-10-20.md).
+
 ## 2026-10-18
 
 - Lote apilado sobre el 17 oct: pie con `/guias` y `/preguntas`, tres fichas nuevas (familiar con alcohol, síntomas físicos de la ansiedad, señales de autoestima baja), títulos informativos en páginas con impresiones y 0 clics, y clúster alcohol diferenciado sin 301. Detalle: [lote](../../docs/seo-lote-2026-10-18.md).

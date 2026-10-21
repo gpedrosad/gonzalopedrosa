@@ -49,6 +49,11 @@ const OMS_ALCOHOL = {
   href: "https://www.who.int/news-room/fact-sheets/detail/alcohol",
 };
 
+const OMS_DEPRESION = {
+  label: "Organización Mundial de la Salud: hoja informativa sobre la depresión",
+  href: "https://www.who.int/news-room/fact-sheets/detail/depression",
+};
+
 const NICE_TOC = {
   label: "NICE: guía CG31 sobre trastorno obsesivo-compulsivo",
   href: "https://www.nice.org.uk/guidance/cg31",
@@ -138,7 +143,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
         {
     cluster: "guias",
     slug: "que-es-el-emdr",
-    updated: "2026-10-19",
+    updated: "2026-10-20",
     navLabel: "Qué es el EMDR",
     title: "EMDR: qué es, para qué se usa y qué no reemplaza",
     h1: "Qué es el EMDR",
@@ -200,6 +205,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       },
     ],
     related: [
+      { href: "/preguntas/que-es-un-trauma-psicologico", label: "Qué es un trauma psicológico" },
       { href: "/guias/que-es-el-tept", label: "Qué es el TEPT" },
       { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "¿El ejercicio reemplaza la terapia?" },
       { href: "/emdr-autoadministrado/ejercicio", label: "Ir al ejercicio bilateral" },
@@ -291,7 +297,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
   {
     cluster: "guias",
     slug: "que-es-el-tept",
-    updated: "2026-10-19",
+    updated: "2026-10-20",
     navLabel: "Qué es el TEPT",
     title: "Qué es el TEPT y qué busca un especialista en TEPT",
     h1: "Qué es el TEPT",
@@ -360,6 +366,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       },
     ],
     related: [
+      { href: "/preguntas/que-es-un-trauma-psicologico", label: "Qué es un trauma psicológico" },
       { href: "/guias/que-es-el-emdr", label: "Qué es el EMDR" },
       { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "Límites del ejercicio bilateral" },
       { href: "/emdr-autoadministrado", label: "Ejercicio bilateral gratuito" },
@@ -1082,6 +1089,7 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "duelo-o-depresion",
+    updated: "2026-10-20",
     navLabel: "Duelo o depresión",
     title: "Duelo o depresión: cómo distinguirlos",
     h1: "¿Es duelo o depresión?",
@@ -1136,6 +1144,7 @@ const QUESTION_PAGES: InfoPage[] = [
       },
     ],
     related: [
+      { href: "/preguntas/senales-de-depresion", label: "Cómo saber si tengo depresión" },
       { href: "/guias/duelo-etapas-y-mitos", label: "Etapas y mitos del duelo" },
       { href: "/guias/acompanar-a-alguien-en-duelo", label: "Cómo acompañar a alguien en duelo" },
       { href: "/preguntas/cuanto-dura-un-duelo", label: "Cuánto dura un duelo" },
@@ -1568,6 +1577,159 @@ const QUESTION_PAGES: InfoPage[] = [
       "Si hay ideas de hacerte daño, llama al *4141. Es gratuito, confidencial y atiende las 24 horas. Salud Responde atiende al 600 360 7777. En una urgencia, llama al 131.",
     sources: [NICE_ANSIEDAD, MINSAL_4141, SALUD_RESPONDE],
   },
+  {
+    cluster: "preguntas",
+    slug: "senales-de-depresion",
+    updated: "2026-10-20",
+    navLabel: "Señales de depresión",
+    title: "Cómo saber si tengo depresión: señales, no un test",
+    h1: "Cómo saber si tengo depresión",
+    description:
+      "Cómo saber si lo que sientes se parece a depresión: ánimo, interés y energía durante semanas. No es un test. El duelo se distingue en otra pregunta.",
+    answer:
+      "No hay un test en esta página que te diga si tienes depresión. Lo que se mira es si el ánimo, el interés o la energía vienen bajos la mayor parte de los días, durante semanas, y si eso ya cambia el sueño, la comida, la pega o los vínculos. Un mal día, o una pena pegada a una pérdida, no alcanza para poner el nombre.",
+    sections: [
+      {
+        heading: "Qué suele describir quien consulta",
+        paragraphs: [
+          "La hoja informativa de la OMS sobre la depresión habla de un ánimo bajo o de una pérdida de interés y de placer que se sostiene en el tiempo, junto con menos energía. En la vida diaria eso se parece a despertar sin ganas, a que las cosas que antes te importaban no muevan nada, y a un cansancio que no se explica solo por una mala noche.",
+          "También puede cambiar el sueño (mucho o casi nada), el apetito, la concentración y la idea que tienes de ti. Una autocrítica constante, o la sensación de ser una carga, entra en esa descripción. Una coincidencia con este párrafo no confirma un diagnóstico.",
+        ],
+        bullets: [
+          "El ánimo bajo ocupa la mayor parte del día, no solo un rato.",
+          "El interés cae en varias áreas, no solo en una tarea que te carga.",
+          "La energía no vuelve con un fin de semana de descanso.",
+          "El patrón se mide en semanas, no en una tarde difícil.",
+        ],
+      },
+      {
+        heading: "Qué no alcanza para llamarlo depresión",
+        paragraphs: [
+          "Una semana pesada en la pega, una pelea o un examen pueden bajarte el ánimo y eso no es, por sí solo, una depresión. Si al bajar la exigencia vuelves a comer, a dormir y a interesarte, estás más cerca del estrés que de un cuadro depresivo. La pregunta sobre ansiedad o estrés ordena esa diferencia cuando la alarma es lo que predomina.",
+          "Tampoco sirve una lista leída de noche para ponerte el nombre. Anotar duración, sueño e interés te da un lenguaje más preciso si después conversas con alguien. No reemplaza esa conversación.",
+        ],
+      },
+      {
+        heading: "Duelo y depresión no son la misma pena",
+        paragraphs: [
+          "El duelo duele en olas y sigue conectado con lo que perdiste. La depresión aplana más áreas, incluso cuando no hay un recordatorio. Pueden coincidir. La pregunta de duelo o depresión recorre esa distinción con más calma. Esta página se queda en las señales del ánimo bajo.",
+          "Si la pena empezó con una pérdida y ya no puedes funcionar en absoluto, no esperes a tener clara la etiqueta. Pide ayuda el mismo día.",
+        ],
+      },
+      {
+        heading: "Malestar leve y lo que este sitio no reemplaza",
+        paragraphs: [
+          "Si lo que tienes es un malestar leve del día, sin semanas de ánimo caído y sin ideas de hacerte daño, el ejercicio de estimulación bilateral del sitio es un recurso para esa activación cotidiana. Léelo antes de abrirlo. No es un tratamiento de la depresión, no procesa un trauma y no sirve en una crisis.",
+          "Cuando el patrón ya cambia el sueño, la pega o los vínculos durante semanas, la página de depresión en Chillán es la de atención. Esta pregunta no reserva una hora ni promete un plazo.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Una lista de internet diagnostica depresión?",
+        answer:
+          "No. Orienta qué mirar: duración, interés, energía y cómo está el día. El nombre lo pone una evaluación, no una coincidencia con un párrafo.",
+      },
+      {
+        question: "¿Es depresión o es duelo?",
+        answer:
+          "El duelo se enciende con la pérdida y puede tener treguas. La depresión aplana más áreas de la vida. Pueden ir juntas. La otra pregunta lo distingue con más detalle.",
+      },
+      {
+        question: "¿El ejercicio bilateral sirve si creo que estoy deprimido?",
+        answer:
+          "Solo si el malestar es leve y cotidiano. No trata una depresión de semanas, un trauma ni una crisis. Si hay ideas de hacerte daño, deja el ejercicio y llama.",
+      },
+    ],
+    related: [
+      { href: "/psicologo-depresion-chillan", label: "Depresión: información y atención en Chillán" },
+      { href: "/preguntas/duelo-o-depresion", label: "Duelo o depresión" },
+      { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
+      { href: "/guias/regulacion-emocional", label: "Regulación emocional" },
+      { href: "/emdr-autoadministrado", label: "Ejercicio bilateral para un malestar leve" },
+    ],
+    product: EMDR_PRODUCT,
+    safety:
+      "Si hay ideas de hacerte daño o de querer morir, llama ahora al *4141. Es gratuito, confidencial y atiende las 24 horas. Salud Responde atiende al 600 360 7777. En una urgencia, llama al 131. Esta lectura no reemplaza esa llamada.",
+    sources: [OMS_DEPRESION, MINSAL_4141, SALUD_RESPONDE],
+  },
+  {
+    cluster: "preguntas",
+    slug: "que-es-un-trauma-psicologico",
+    updated: "2026-10-20",
+    navLabel: "Qué es un trauma psicológico",
+    title: "Qué es un trauma psicológico y cuándo no es un TEPT",
+    h1: "Qué es un trauma psicológico",
+    description:
+      "Un trauma psicológico es un hecho que dejó la alarma encendida. No todo golpe duro es trauma ni todo trauma es TEPT. La guía de TEPT sigue desde aquí.",
+    answer:
+      "Un trauma psicológico es la marca que deja un hecho que superó lo que podías integrar en ese momento: una amenaza, violencia, un accidente, o haber visto que otra persona estaba en peligro. El hecho ya pasó y la alarma, la imagen o la vergüenza siguen. No todo momento difícil es un trauma, y no todo trauma llega a ser un trastorno de estrés postraumático.",
+    sections: [
+      {
+        heading: "Qué lo distingue de un mal rato",
+        paragraphs: [
+          "Un despido, una pelea o una decepción duelen y no por eso son un trauma. El trauma se parece más a esto: el sistema de alarma no archivó el hecho. Un ruido, un olor, una fecha o una cercanía física traen la escena, o te dejan en guardia como si todavía estuviera pasando.",
+          "Tampoco hace falta que el hecho haya salido en las noticias. Abuso, violencia en la casa, un asalto o un accidente alcanzan para dejar esa marca. La gravedad la miras por el efecto en tu semana, no por si otra persona lo consideraría suficiente.",
+        ],
+        bullets: [
+          "El recuerdo vuelve solo, en imágenes, sueños o en el cuerpo.",
+          "Evitas lugares, conversaciones o personas para no activarte.",
+          "La vergüenza o la culpa se sienten presentes, no como un dato viejo.",
+          "Un mal día de pega, sin esa alarma, no entra en esta definición.",
+        ],
+      },
+      {
+        heading: "Trauma y TEPT no son sinónimos",
+        paragraphs: [
+          "Puedes haber vivido un hecho grave y seguir con miedo un tiempo, sin que el recuerdo organice la semana. Eso no se llama TEPT por una búsqueda en internet. El TEPT es el cuadro en que el recuerdo sigue activo y limita la vida. La guía de qué es el TEPT recorre esas señales y cita la guía de la OMS sobre condiciones relacionadas con el estrés.",
+          "Ponerte el nombre antes de una evaluación no ayuda. Sirve reconocer el patrón y decidir si conversarlo. Esta pregunta se queda en la definición. La guía sigue con el trastorno.",
+        ],
+      },
+      {
+        heading: "Qué lugar tiene el EMDR",
+        paragraphs: [
+          "La misma guía de la OMS nombra, para adultos con TEPT, terapias centradas en el trauma, entre ellas la cognitivo-conductual y el EMDR, cuando las aplica personal de salud capacitado. El EMDR no es un punto que se mueve en una pantalla. El procedimiento completo incluye evaluación, preparación y cierre. La guía de qué es el EMDR lo explica.",
+          "Si buscas psicólogos que trabajen trauma, la página de EMDR en Chillán es la de atención con ese método. No certifica un resultado. Dice qué es la atención. La ficha local de estrés postraumático es otra URL, ya sobre ese cuadro.",
+        ],
+      },
+      {
+        heading: "El ejercicio del sitio no es para un trauma",
+        paragraphs: [
+          "Si lo que te pasa es un estrés leve del día, sin imágenes que no puedes guardar, el ejercicio de estimulación bilateral es un recurso acotado para esa activación. No lo uses para reprocesar un abuso, un accidente, un TEPT o una crisis. La propia página pide que lo pares si la escena vuelve y no puedes dejarla.",
+          "Un trauma no se trabaja solo con un video. Si al leer esto la alarma sube mucho, cierra la página y busca a alguien que pueda detenerse contigo.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Todo hecho grave deja un trauma?",
+        answer:
+          "No. Hay personas que atraviesan un hecho grave y el recuerdo no toma el control de la semana. El nombre no se pone por el tamaño del hecho, sino por cómo quedó la alarma.",
+      },
+      {
+        question: "¿Trauma y TEPT son lo mismo?",
+        answer:
+          "No. El trauma es la marca del hecho. El TEPT es un cuadro en que esa marca sigue limitando la vida. La guía de TEPT lo distingue. Esta página no diagnostica.",
+      },
+      {
+        question: "¿Puedo usar el ejercicio bilateral si el tema es un trauma?",
+        answer:
+          "No para reprocesar ese recuerdo. El ejercicio es para un malestar leve y cotidiano. Si aparecen imágenes que no puedes guardar, páralo.",
+      },
+    ],
+    related: [
+      { href: "/guias/que-es-el-tept", label: "Qué es el TEPT" },
+      { href: "/guias/que-es-el-emdr", label: "Qué es el EMDR" },
+      { href: "/terapia-emdr-chillan", label: "EMDR en Chillán: página de atención" },
+      { href: "/estres-postraumatico-chillan", label: "Estrés postraumático en Chillán" },
+      { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "Límites del ejercicio bilateral" },
+      { href: "/emdr-autoadministrado", label: "Ejercicio bilateral para un malestar leve" },
+    ],
+    product: EMDR_PRODUCT,
+    safety:
+      "Si hay ideas de hacerte daño o de querer morir, llama al *4141 (gratuito, 24 horas). Salud Responde atiende al 600 360 7777. En una urgencia, llama al 131. Esta lectura no reemplaza esa llamada.",
+    sources: [OMS_ESTRES, MINSAL_4141, SALUD_RESPONDE],
+  },
 ];
 
 INFORMATIONAL_PAGES.push(...QUESTION_PAGES);
@@ -1590,8 +1752,9 @@ export function informationalPath(page: Pick<InfoPage, "cluster" | "slug">): str
 const READING_BY_PATH: Record<string, InfoLink[]> = {
   "/psicologo-ansiedad-chillan": [
     { href: "/preguntas/sintomas-fisicos-de-la-ansiedad", label: "Síntomas físicos de la ansiedad" },
-    { href: "/guias/regulacion-emocional", label: "Cómo se regula una emoción" },
     { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
+    { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer en un ataque de pánico" },
+    { href: "/guias/regulacion-emocional", label: "Cómo se regula una emoción" },
     { href: "/guias", label: "Guías" },
     { href: "/preguntas", label: "Preguntas" },
   ],
@@ -1673,6 +1836,7 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
     { href: "/guias/estilos-de-apego", label: "Guía: estilos de apego" },
   ],
   "/terapia-emdr-chillan": [
+    { href: "/preguntas/que-es-un-trauma-psicologico", label: "Qué es un trauma psicológico" },
     { href: "/guias/que-es-el-tept", label: "Guía: qué es el TEPT" },
     { href: "/guias/que-es-el-emdr", label: "Guía: qué es el EMDR" },
     { href: "/guias", label: "Guías" },
@@ -1725,6 +1889,7 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
     { href: "/preguntas/cuanto-dura-un-duelo", label: "Cuánto dura un duelo" },
   ],
   "/psicologo-depresion-chillan": [
+    { href: "/preguntas/senales-de-depresion", label: "Cómo saber si tengo depresión" },
     { href: "/preguntas/duelo-o-depresion", label: "Duelo o depresión" },
     { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
     { href: "/guias", label: "Guías" },

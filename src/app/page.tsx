@@ -10,21 +10,23 @@ import {
   getServiceSchema,
   getPageFAQSchema,
   getBreadcrumbSchema,
+  getHomeEntityWebPageSchema,
   getTwitterDescription,
 } from "@/lib/schemas";
 
+const title = "Gonzalo Pedrosa | Psicólogo clínico en Chillán, Chile";
 const description =
   "Gonzalo Pedrosa, psicólogo clínico en Chillán. +7 años de experiencia en TCC presencial y online. Ansiedad, depresión, TOC y estrés. Guías en el sitio.";
 
 export const metadata: Metadata = {
-  title: "Gonzalo Pedrosa | Psicólogo clínico en Chillán",
+  title,
   description,
   alternates: {
     canonical: "/",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Gonzalo Pedrosa | Psicólogo clínico en Chillán",
+    title,
     description,
     url: SITE_URL,
     type: "website",
@@ -32,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gonzalo Pedrosa | Psicólogo en Chillán",
+    title,
     description: getTwitterDescription(description),
   },
 };
@@ -528,6 +530,10 @@ export default function HomePage() {
           </p>
         </footer>
       </main>
+      <JsonLd
+        id="home-webpage"
+        data={getHomeEntityWebPageSchema({ name: "Gonzalo Pedrosa", description }) as Record<string, unknown>}
+      />
       <JsonLd id="local-business" data={localBusinessSchema} />
       <JsonLd
         id="breadcrumb"

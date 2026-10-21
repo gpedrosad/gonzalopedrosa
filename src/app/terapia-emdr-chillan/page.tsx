@@ -166,6 +166,10 @@ export default function TerapiaEmdrChillanPage() {
           <Link href="/guias/que-es-el-emdr" style={{ color: "#000", textDecoration: "underline" }}>
             qué es el EMDR
           </Link>
+          . Qué es un trauma psicológico, antes del nombre TEPT, está en{" "}
+          <Link href="/preguntas/que-es-un-trauma-psicologico" style={{ color: "#000", textDecoration: "underline" }}>
+            esta pregunta
+          </Link>
           . La ficha local sigue en{" "}
           <Link href="/estres-postraumatico-chillan" style={{ color: "#000", textDecoration: "underline" }}>
             estrés postraumático en Chillán
