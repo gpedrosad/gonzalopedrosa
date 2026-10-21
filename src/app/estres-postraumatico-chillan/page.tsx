@@ -6,25 +6,27 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 import { RelatedReading } from "@/app/components/RelatedReading";
 
+const description =
+  "Estrés postraumático en Chillán: reexperimentación, evitación y alerta, sin un diagnóstico. La guía explica el TEPT. Esta ficha es la atención local.";
+
 export const metadata: Metadata = {
-  title: "TEPT y estrés postraumático Chillán | EMDR · TCC",
-  description:
-    "Especialista en TEPT en Chillán: estrés postraumático con EMDR y TCC. Flashbacks, evitación e hiperactivación. Online o presencial. Agenda hoy.",
+  title: "Estrés postraumático en Chillán: las señales del TEPT",
+  description,
   alternates: {
     canonical: "/estres-postraumatico-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "TEPT y estrés postraumático Chillán | EMDR · TCC",
-    description: "Especialista en TEPT en Chillán: estrés postraumático con EMDR y TCC. Flashbacks, evitación e hiperactivación. Online o presencial. Agenda hoy.",
+    title: "Estrés postraumático en Chillán: las señales del TEPT",
+    description,
     url: "https://www.gonzalopedrosa.cl/estres-postraumatico-chillan",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Retrato de Gonzalo Pedrosa, psicólogo clínico" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TEPT y estrés postraumático Chillán | EMDR · TCC",
-    description: getTwitterDescription("Especialista en TEPT en Chillán: EMDR y TCC para flashbacks, evitación e hiperactivación. Agenda hoy."),
+    title: "Estrés postraumático en Chillán: las señales del TEPT",
+    description: getTwitterDescription(description),
   },
 };
 
@@ -78,11 +80,35 @@ export default function EstresPostraumaticoChillanPage() {
         TEPT y estrés postraumático en Chillán
       </h1>
 
-      <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "3rem", lineHeight: 1.6 }}>
-        El TEPT (Trastorno de Estrés Postraumático) ocurre cuando el impacto de
-        una experiencia traumática persiste en el tiempo. Con tratamiento
-        adecuado, es posible recuperarte.
+      <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "1.5rem", lineHeight: 1.6 }}>
+        El estrés postraumático, o TEPT, es el cuadro en que un hecho ya pasó y
+        el recuerdo sigue organizando la semana. Esta página es la ficha local,
+        en Chillán. Qué es el trastorno está en la{" "}
+        <Link href="/guias/que-es-el-tept" style={{ color: "#000", textDecoration: "underline" }}>
+          guía de TEPT
+        </Link>
+        . Qué hace un especialista en estrés postraumático está en{" "}
+        <Link href="/preguntas/que-hace-un-especialista-en-estres-postraumatico" style={{ color: "#000", textDecoration: "underline" }}>
+          esta pregunta
+        </Link>
+        . La atención con EMDR está en{" "}
+        <Link href="/terapia-emdr-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+          la página del método
+        </Link>
+        .
       </p>
+
+      <section style={{ marginBottom: "3rem" }}>
+        <h2 style={{ fontSize: "1.35rem", fontWeight: 600, letterSpacing: "-0.02em", marginBottom: "0.75rem", lineHeight: 1.3 }}>
+          Especialista en estrés postraumático
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
+          Si la búsqueda es especialista en estrés postraumático, o especialista
+          en TEPT, pide a alguien que evalúe un recuerdo que sigue activo. Qué
+          hace en ese trabajo está en la pregunta. Qué es el cuadro está en la
+          guía. Esta ficha no certifica un resultado ni un registro.
+        </p>
+      </section>
 
       <section style={{ marginBottom: "3rem" }}>
         <h2 style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "1rem" }}>

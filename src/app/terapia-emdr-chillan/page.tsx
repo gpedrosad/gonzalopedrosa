@@ -178,6 +178,33 @@ export default function TerapiaEmdrChillanPage() {
         </p>
       </section>
 
+      <section style={{ marginBottom: "2.5rem" }}>
+        <h2
+          style={{
+            fontSize: "1.35rem",
+            fontWeight: 600,
+            letterSpacing: "-0.02em",
+            marginBottom: "0.75rem",
+            lineHeight: 1.3,
+          }}
+        >
+          Especialista en estrés postraumático
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
+          Si la frase que escribiste es especialista en estrés postraumático, es
+          la misma búsqueda que especialista en TEPT: alguien que evalúe un
+          recuerdo que sigue activo. Qué hace en ese trabajo está en{" "}
+          <Link href="/preguntas/que-hace-un-especialista-en-estres-postraumatico" style={{ color: "#000", textDecoration: "underline" }}>
+            esta pregunta
+          </Link>
+          . Qué es el cuadro está en la{" "}
+          <Link href="/guias/que-es-el-tept" style={{ color: "#000", textDecoration: "underline" }}>
+            guía de TEPT
+          </Link>
+          . Esta página sigue siendo la de atención con EMDR en Chillán.
+        </p>
+      </section>
+
       <div
         style={{
           marginBottom: "2.5rem",

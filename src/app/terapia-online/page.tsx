@@ -20,17 +20,17 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Cómo es una sesión de psicología online: 50 minutos por videollamada, con enlace previo y un espacio privado. El secreto profesional se mantiene.";
+  "Terapia online en Chile: conexión, lugar privado y una hora de 50 minutos, y en qué se diferencia de una sala. El recorrido está en las preguntas.";
 
 export const metadata: Metadata = {
-  title: "Cómo es y cómo funciona una sesión de psicología online",
+  title: "Terapia online en Chile: sesión, privacidad y hora",
   description,
   alternates: {
     canonical: "/terapia-online",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Cómo es y cómo funciona una sesión de psicología online",
+    title: "Terapia online en Chile: sesión, privacidad y hora",
     description,
     url: `${SITE_URL}/terapia-online`,
     type: "website",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cómo es y cómo funciona una sesión de psicología online",
+    title: "Terapia online en Chile: sesión, privacidad y hora",
     description: getTwitterDescription(description),
   },
 };
@@ -81,8 +81,7 @@ const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
 const serviceSchema = getServiceSchema({
   serviceType: "Información sobre terapia psicológica online",
   description:
-    "Explicación del formato de atención por videollamada: proceso, requisitos y ventajas, desde Chillán.",
-  areaServed: "Chillán",
+    "Explicación de la terapia online en Chile: hora, conexión, privacidad y diferencia con la sala. La atención está en la página de psicólogo online.",
 });
 
 export default function TerapiaOnlinePage() {
@@ -140,10 +139,11 @@ export default function TerapiaOnlinePage() {
           }}
         >
           <p style={{ fontSize: "0.8125rem", color: "#444", lineHeight: 1.6, margin: 0 }}>
-            Página informativa · Para reservar sesión:{" "}
+            Página informativa de Chile. La atención, con consulta en Chillán, está en{" "}
             <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
-              psicólogo online Chillán
+              psicólogo online
             </Link>
+            .
           </p>
         </section>
 
@@ -156,7 +156,7 @@ export default function TerapiaOnlinePage() {
             lineHeight: 1.1,
           }}
         >
-          Cómo es una sesión de psicología online
+          Terapia online en Chile
         </h1>
 
         <p
@@ -167,14 +167,20 @@ export default function TerapiaOnlinePage() {
             lineHeight: 1.6,
           }}
         >
-          Esta página explica cómo es una sesión por videollamada: duración,
-          recorrido y privacidad. Si la pregunta es si el formato funciona, lee{" "}
+          Esta página explica la terapia online en Chile: qué pide el formato y
+          en qué se diferencia de una sala. La consulta presencial está en
+          Chillán. La videollamada es para quien está en Chile. Cómo es la hora
+          está en{" "}
+          <Link href="/preguntas/como-es-una-sesion-de-psicologia-online" style={{ color: "#000", textDecoration: "underline" }}>
+            cómo es una sesión de psicología online
+          </Link>
+          . Cómo funciona el proceso está en{" "}
+          <Link href="/preguntas/como-funciona-la-terapia-psicologica-online" style={{ color: "#000", textDecoration: "underline" }}>
+            cómo funciona la terapia psicológica online
+          </Link>
+          . Si la duda es si el formato sirve, está en{" "}
           <Link href="/preguntas/la-terapia-online-funciona" style={{ color: "#000", textDecoration: "underline" }}>
             ¿la terapia online funciona?
-          </Link>
-          . La página de atención es{" "}
-          <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
-            psicólogo online en Chile
           </Link>
           .
         </p>
@@ -192,7 +198,12 @@ export default function TerapiaOnlinePage() {
             {terapiaOnlineFAQs[0].question}
           </h2>
           <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
-            {terapiaOnlineFAQs[0].answer}
+            {terapiaOnlineFAQs[0].answer}{" "}
+            El recorrido de la hora está en{" "}
+            <Link href="/preguntas/como-es-una-sesion-de-psicologia-online" style={{ color: "#000", textDecoration: "underline" }}>
+              cómo es una sesión de psicología online
+            </Link>
+            .
           </p>
         </section>
 
@@ -210,8 +221,13 @@ export default function TerapiaOnlinePage() {
           </h2>
           <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
             {terapiaOnlineFAQs[1].answer}{" "}
+            El proceso completo está en{" "}
+            <Link href="/preguntas/como-funciona-la-terapia-psicologica-online" style={{ color: "#000", textDecoration: "underline" }}>
+              cómo funciona la terapia psicológica online
+            </Link>
+            . Si la duda es si el formato sirve, está en{" "}
             <Link href="/preguntas/la-terapia-online-funciona" style={{ color: "#000", textDecoration: "underline" }}>
-              ¿La terapia online funciona?
+              ¿la terapia online funciona?
             </Link>
           </p>
         </section>
@@ -239,6 +255,37 @@ export default function TerapiaOnlinePage() {
             <li>Cámara, micrófono y un lugar privado.</li>
             <li>Un punto de la semana: una situación, un pensamiento o algo que intentaste.</li>
           </ul>
+        </section>
+
+        <section style={{ marginBottom: "2.5rem" }}>
+          <h2
+            style={{
+              fontSize: "1.35rem",
+              fontWeight: 600,
+              letterSpacing: "-0.02em",
+              marginBottom: "0.75rem",
+              lineHeight: 1.3,
+            }}
+          >
+            En qué se diferencia de una sala
+          </h2>
+          <p style={{ color: "#444", lineHeight: 1.7, margin: "0 0 0.75rem" }}>
+            No hay traslado. La privacidad depende de tu casa u oficina. Se ve
+            parte del lenguaje del cuerpo y el encuadre de la cámara importa.
+            En un malestar muy intenso, la videollamada pide un lugar seguro.
+            La sala, en Chillán, puede sentirse más contenida si prefieres
+            salir de la casa. El secreto profesional es el mismo. Se pueden
+            alternar las dos modalidades. La comparación está en{" "}
+            <Link href="/terapia-online-vs-presencial-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+              terapia online y presencial
+            </Link>
+            . El valor publicado es el mismo en las dos; el número y el pago
+            están en{" "}
+            <Link href="/consulta-psicologica-precio-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+              la ficha de precio
+            </Link>
+            .
+          </p>
         </section>
 
         <div

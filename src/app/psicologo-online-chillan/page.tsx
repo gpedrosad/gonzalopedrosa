@@ -21,17 +21,17 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Psicólogo online en Chile por videollamada: TCC, boleta Isapre y $35.000 por 50 minutos. Cómo es la sesión y si funciona están en otras páginas.";
+  "Psicólogo online en Chile por videollamada, con consulta en Chillán. Cómo es la sesión y cómo funciona están en otras páginas. El valor está publicado.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo online Chile | Videollamada $35.000 · Isapre",
+  title: "Psicólogo online en Chile: videollamada desde Chillán",
   description,
   alternates: {
     canonical: "/psicologo-online-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Psicólogo online Chile | Videollamada $35.000 · Isapre",
+    title: "Psicólogo online en Chile: videollamada desde Chillán",
     description,
     url: `${SITE_URL}/psicologo-online-chillan`,
     type: "website",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo online Chile | $35.000 e Isapre",
+    title: "Psicólogo online en Chile: videollamada desde Chillán",
     description: getTwitterDescription(description),
   },
 };
@@ -164,7 +164,7 @@ export default function PsicologoOnlineChillanPage() {
             lineHeight: 1.1,
           }}
         >
-          Psicólogo online para todo Chile
+          Psicólogo online en Chile
         </h1>
 
         <p
@@ -175,15 +175,23 @@ export default function PsicologoOnlineChillanPage() {
             lineHeight: 1.6,
           }}
         >
-          Si buscas psicólogo online en Chile o terapia online en Chile, esta es la
-          página de atención por videollamada: TCC, boleta para reembolso Isapre y
-          consulta en Chillán. Cómo es una sesión está en{" "}
+          Esta es la página de atención: psicólogo online, con consulta
+          presencial en Chillán y videollamada para quien está en Chile. La
+          página informativa del formato es{" "}
           <Link href="/terapia-online" style={{ color: "#000", textDecoration: "underline" }}>
-            terapia online
+            terapia online en Chile
           </Link>
-          . Si la duda es si el formato funciona, está en{" "}
+          . Cómo es la hora está en{" "}
+          <Link href="/preguntas/como-es-una-sesion-de-psicologia-online" style={{ color: "#000", textDecoration: "underline" }}>
+            cómo es una sesión de psicología online
+          </Link>
+          . Cómo funciona el proceso está en{" "}
+          <Link href="/preguntas/como-funciona-la-terapia-psicologica-online" style={{ color: "#000", textDecoration: "underline" }}>
+            cómo funciona la terapia psicológica online
+          </Link>
+          . Si la duda es si el formato sirve, está en{" "}
           <Link href="/preguntas/la-terapia-online-funciona" style={{ color: "#000", textDecoration: "underline" }}>
-            la pregunta correspondiente
+            ¿la terapia online funciona?
           </Link>
           .
         </p>
@@ -319,16 +327,19 @@ export default function PsicologoOnlineChillanPage() {
             ))}
           </ul>
           <p style={{ color: "#444", lineHeight: 1.7, margin: "1rem 0 0" }}>
-            Así es una sesión de psicología online: reservas, recibes el enlace,
-            te conectas 50 minutos desde un lugar privado y el secreto
-            profesional se mantiene. Cómo funciona la hora, de principio a fin,
-            está en{" "}
-            <Link href="/terapia-online" style={{ color: "#000", textDecoration: "underline" }}>
+            Así es una sesión de psicología online: recibes el enlace, te
+            conectas 50 minutos desde un lugar privado y el secreto profesional
+            se mantiene. El detalle de la hora está en{" "}
+            <Link href="/preguntas/como-es-una-sesion-de-psicologia-online" style={{ color: "#000", textDecoration: "underline" }}>
               cómo es una sesión de psicología online
             </Link>
-            . Si la pregunta es si el formato sirve, está en{" "}
-            <Link href="/preguntas/la-terapia-online-funciona" style={{ color: "#000", textDecoration: "underline" }}>
-              ¿la terapia online funciona?
+            . El proceso está en{" "}
+            <Link href="/preguntas/como-funciona-la-terapia-psicologica-online" style={{ color: "#000", textDecoration: "underline" }}>
+              cómo funciona la terapia psicológica online
+            </Link>
+            . El formato, en{" "}
+            <Link href="/terapia-online" style={{ color: "#000", textDecoration: "underline" }}>
+              terapia online en Chile
             </Link>
             .
           </p>
@@ -394,9 +405,61 @@ export default function PsicologoOnlineChillanPage() {
           </p>
           <p style={{ color: "#0c4a6e", fontSize: "0.875rem", lineHeight: 1.6 }}>
             Computador, tablet o celular con cámara y micrófono. Conexión estable y un
-            espacio privado. Más detalle en{" "}
-            <Link href="/terapia-online" style={{ color: "#0369a1", textDecoration: "underline" }}>
-              terapia online (guía)
+            espacio privado, con puerta, donde nadie más escuche. Si la casa es
+            ruidosa, unos audífonos. Más detalle en{" "}
+            <Link href="/preguntas/como-es-una-sesion-de-psicologia-online" style={{ color: "#0369a1", textDecoration: "underline" }}>
+              cómo es una sesión de psicología online
+            </Link>
+            .
+          </p>
+        </section>
+
+        <section style={{ marginBottom: "3rem" }}>
+          <h2
+            style={{
+              fontSize: "0.75rem",
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              color: "#999",
+              marginBottom: "1rem",
+            }}
+          >
+            En qué se diferencia de la sala
+          </h2>
+          <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
+            No hay traslado. La privacidad depende del lugar desde el que te
+            conectas. Se ve parte del lenguaje del cuerpo. En un malestar muy
+            intenso, la videollamada pide un lugar seguro; la sala en Chillán
+            puede sentirse más contenida si prefieres salir de la casa. El
+            secreto profesional es el mismo y las dos modalidades se pueden
+            alternar. La comparación está en{" "}
+            <Link href="/terapia-online-vs-presencial-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+              terapia online y presencial
+            </Link>
+            .
+          </p>
+        </section>
+
+        <section style={{ marginBottom: "3rem" }}>
+          <h2
+            style={{
+              fontSize: "0.75rem",
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              color: "#999",
+              marginBottom: "1rem",
+            }}
+          >
+            Cómo preguntar el valor
+          </h2>
+          <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
+            El valor publicado es $35.000 por 50 minutos, el mismo en
+            videollamada y en la consulta de Chillán, con boleta para reembolso
+            Isapre. El pago, la primera sesión y la cancelación están en{" "}
+            <Link href="/consulta-psicologica-precio-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+              la ficha de precio
             </Link>
             .
           </p>
