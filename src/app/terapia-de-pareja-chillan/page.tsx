@@ -21,17 +21,17 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Terapia de pareja en Chillán: discusiones que se repiten, distancia y comunicación. La guía del ciclo explica el patrón. Esta página es la atención local.";
+  "Terapia de pareja en Chillán cuando las discusiones se repiten o hay distancia. La guía de comunicación explica el ciclo. Esta página es la atención local.";
 
 export const metadata: Metadata = {
-  title: "Terapia de pareja en Chillán: comunicación y ciclos",
+  title: "Terapia de pareja en Chillán: qué se habla en sesión",
   description,
   alternates: {
     canonical: "/terapia-de-pareja-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Terapia de pareja en Chillán: comunicación y ciclos",
+    title: "Terapia de pareja en Chillán: qué se habla en sesión",
     description,
     url: `${SITE_URL}/terapia-de-pareja-chillan`,
     type: "website",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terapia de pareja en Chillán: comunicación y ciclos",
+    title: "Terapia de pareja en Chillán: qué se habla en sesión",
     description: getTwitterDescription(description),
   },
 };

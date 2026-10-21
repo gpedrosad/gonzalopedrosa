@@ -2,6 +2,10 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-10-21
+
+- Lote apilado sobre el PR #10: terapia online diferenciada (Chile informativa / atención en Chillán), tres preguntas (sesión online, cómo funciona, especialista en estrés postraumático), H2 de TEPT y título de pareja. Detalle: [lote](../../docs/seo-lote-2026-10-21.md).
+
 ## 2026-10-20
 
 - Lote de marca, alcohol consolidado y dos preguntas (depresión y trauma). Detalle: [lote](../../docs/seo-lote-2026-10-20.md).
