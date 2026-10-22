@@ -132,6 +132,15 @@ export default function PsicologoDueloChillanPage() {
         El duelo es el proceso natural de adaptación ante una pérdida
         significativa. Aunque es doloroso, con el acompañamiento adecuado es
         posible transitar este camino y encontrar una nueva forma de vivir.
+        Las etapas y los mitos están en la guía{" "}
+        <Link href="/guias/duelo-etapas-y-mitos" style={{ color: "#000", textDecoration: "underline" }}>
+          duelo: etapas, mitos y qué sí ayuda
+        </Link>
+        . Si acompañas a otra persona, lee{" "}
+        <Link href="/guias/acompanar-a-alguien-en-duelo" style={{ color: "#000", textDecoration: "underline" }}>
+          cómo acompañar a alguien en duelo
+        </Link>
+        .
       </p>
 
       <section style={{ marginBottom: "3rem" }}>
