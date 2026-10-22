@@ -88,7 +88,12 @@ export default function AyudaPsicologicaUrgenteChillanPage() {
 
       <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "3rem", lineHeight: 1.6 }}>
         Si estás pasando por una crisis emocional y necesitas hablar con un
-        profesional lo antes posible, puedo intentar darte una hora pronto.
+        profesional lo antes posible, puedo intentar darte una hora pronto. Si
+        quien habla de hacerse daño es un cercano, la guía{" "}
+        <Link href="/guias/si-un-cercano-habla-de-hacerse-dano" style={{ color: "#000", textDecoration: "underline" }}>
+          si un cercano habla de hacerse daño
+        </Link>{" "}
+        dice cómo preguntar y qué números de este sitio usar.
       </p>
 
       <section style={{ marginBottom: "3rem" }}>

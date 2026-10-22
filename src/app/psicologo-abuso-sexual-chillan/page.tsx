@@ -13,18 +13,19 @@ import {
   getTwitterDescription,
 } from "@/lib/schemas";
 
+const title = "Psicólogo abuso infantil en Chillán: trauma en adultos";
 const description =
-  "Qué puede acompañar un psicólogo después de un abuso sexual, con reserva y a tu ritmo. Información general. Si hay riesgo, usa los teléfonos del sitio.";
+  "Si viviste abuso en la infancia, un psicólogo puede acompañarte en la adultez, sin el relato completo y sin un plazo. El TEPT y el EMDR están en las guías.";
 
 export const metadata: Metadata = {
-  title: "Abuso sexual: apoyo psicológico en Chillán, qué es",
+  title,
   description,
   alternates: {
     canonical: "/psicologo-abuso-sexual-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Abuso sexual: apoyo psicológico en Chillán, qué es",
+    title,
     description,
     url: `${SITE_URL}/psicologo-abuso-sexual-chillan`,
     type: "website",
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abuso sexual: apoyo psicológico en Chillán, qué es",
+    title,
     description: getTwitterDescription(description),
   },
 };
@@ -46,17 +47,17 @@ const abusoFAQs = [
   {
     question: "¿Tengo que contar todo lo que pasó?",
     answer:
-      "No. Trabajamos a tu ritmo. Puedes compartir lo que te sientas cómodo/a compartiendo. El proceso respeta tus límites.",
+      "No. El ritmo lo marcas tú. Puedes hablar de lo que puedas y parar cuando quieras. Esta página no pide el relato completo.",
   },
   {
-    question: "¿Aunque haya pasado hace muchos años?",
+    question: "¿Sirve si el abuso fue en la infancia y ahora soy adulto?",
     answer:
-      "Sí. El trauma puede afectar durante décadas si no se procesa. Nunca es tarde para buscar ayuda y sanar.",
+      "Esta página está escrita para esa búsqueda. Que el hecho haya sido en la infancia no cierra el tema en la adultez. Tampoco promete un plazo ni un resultado.",
   },
   {
-    question: "¿Es realmente confidencial?",
+    question: "¿La conversación es confidencial?",
     answer:
-      "100%. Todo está protegido por secreto profesional. La única excepción es si hay riesgo vital o se trata de un menor en peligro actual.",
+      "El secreto profesional se mantiene. La excepción que esta página ya nombra es un riesgo vital o un menor en peligro actual.",
   },
 ];
 
@@ -89,20 +90,21 @@ export default function PsicologoAbusoSexualChillanPage() {
       <p style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.75rem" }}>Chillán, Chile</p>
 
       <h1 style={{ fontSize: "2.5rem", fontWeight: 700, letterSpacing: "-0.03em", marginBottom: "1rem", lineHeight: 1.1 }}>
-        Apoyo psicológico después de un abuso sexual
+        Psicólogo por abuso sexual vivido en la infancia
       </h1>
 
       <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "1.5rem", lineHeight: 1.6 }}>
-        Si buscas psicólogo por abuso sexual en Chillán, ofrezco un espacio confidencial para procesar
-        el trauma a tu ritmo, con{" "}
-        <Link href="/terapia-emdr-chillan" style={{ color: "#000", textDecoration: "underline" }}>
-          EMDR
-        </Link>{" "}
-        y TCC, presencial u{" "}
+        Si buscas psicólogo por abuso infantil, esta página habla de adultos que
+        vivieron abuso sexual en la infancia. La atención es en Chillán o{" "}
         <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
-          online
+          por videollamada
         </Link>
-        . No fue tu culpa; no tienes que cargarlo solo/a.
+        . No tienes que traer el relato completo. No hay un resultado prometido.
+        El método de{" "}
+        <Link href="/terapia-emdr-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+          EMDR en Chillán
+        </Link>{" "}
+        es otra URL.
       </p>
 
       <div style={{ marginBottom: "2.5rem", display: "flex", flexWrap: "wrap", gap: "0.75rem", alignItems: "center" }}>
@@ -128,7 +130,64 @@ export default function PsicologoAbusoSexualChillanPage() {
         <p style={{ color: "#78350f", fontSize: "0.875rem", lineHeight: 1.6 }}>
           Fono Denuncia: 600 400 0101 (24/7)<br />
           Fono Familia Carabineros: 149 (24/7)<br />
-          Si necesitas ayuda urgente, no dudes en llamar.
+          Si necesitas ayuda urgente, llama. Si quien habla de hacerse daño es un
+          cercano, la guía{" "}
+          <Link href="/guias/si-un-cercano-habla-de-hacerse-dano" style={{ color: "#78350f", textDecoration: "underline" }}>
+            si un cercano habla de hacerse daño
+          </Link>{" "}
+          ordena cómo preguntar, con números que este sitio ya publica.
+        </p>
+      </section>
+
+      <section style={{ marginBottom: "2.5rem" }}>
+        <h2 style={{ fontSize: "1.35rem", fontWeight: 600, letterSpacing: "-0.02em", marginBottom: "0.75rem", lineHeight: 1.3 }}>
+          Si el abuso fue en la infancia
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
+          Hay adultos que buscan un psicólogo por un abuso vivido en la infancia.
+          El hecho ya pasó y pueden seguir la vergüenza, las imágenes o la
+          guardia alta. Eso no confirma un diagnóstico. Qué es un trauma
+          psicológico está en{" "}
+          <Link href="/preguntas/que-es-un-trauma-psicologico" style={{ color: "#000", textDecoration: "underline" }}>
+            esta pregunta
+          </Link>
+          . En qué se distingue de un TEPT está en la{" "}
+          <Link href="/guias/que-es-el-tept" style={{ color: "#000", textDecoration: "underline" }}>
+            guía de TEPT
+          </Link>
+          .
+        </p>
+        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
+          No tienes que contar el relato completo. El ritmo lo marcas tú. Primero
+          se busca un poco más de calma, y el trabajo del recuerdo queda para
+          cuando tú lo decides. La explicación, sin una comuna, está en{" "}
+          <Link href="/preguntas/como-ayuda-la-terapia-tras-abuso-en-la-infancia" style={{ color: "#000", textDecoration: "underline" }}>
+            cómo ayuda la terapia a un adulto que vivió abuso en la infancia
+          </Link>
+          . La otra ficha de atención es{" "}
+          <Link href="/superar-trauma-infancia-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+            trauma de infancia en Chillán
+          </Link>
+          .
+        </p>
+        <p style={{ color: "#444", lineHeight: 1.7 }}>
+          La guía de la OMS de 2013 nombra, para adultos con TEPT, la terapia
+          cognitivo-conductual focalizada en el trauma y el EMDR, cuando las
+          aplica personal de salud capacitado. Que las nombre no dice cuál te
+          corresponde. Las fases están en{" "}
+          <Link href="/guias/que-es-el-emdr" style={{ color: "#000", textDecoration: "underline" }}>
+            qué es el EMDR
+          </Link>
+          . El ejercicio bilateral del sitio no es para reprocesar un abuso: el
+          límite está en{" "}
+          <Link href="/preguntas/emdr-autoadministrado-y-terapia" style={{ color: "#000", textDecoration: "underline" }}>
+            la pregunta del ejercicio
+          </Link>{" "}
+          y el recurso en{" "}
+          <Link href="/emdr-autoadministrado" style={{ color: "#000", textDecoration: "underline" }}>
+            estimulación bilateral para un malestar leve
+          </Link>
+          .
         </p>
       </section>
 
@@ -188,25 +247,25 @@ export default function PsicologoAbusoSexualChillanPage() {
           <details style={{ padding: "1rem", border: "1px solid #eaeaea", borderRadius: "12px" }}>
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>¿Tengo que contar todo lo que pasó?</summary>
             <p style={{ marginTop: "0.75rem", color: "#666", lineHeight: 1.6, fontSize: "0.9375rem" }}>
-              No. Trabajamos a tu ritmo. Puedes compartir lo que te sientas
-              cómodo/a compartiendo. El proceso respeta tus límites.
+              No. El ritmo lo marcas tú. Puedes hablar de lo que puedas y parar
+              cuando quieras. Esta página no pide el relato completo.
             </p>
           </details>
 
           <details style={{ padding: "1rem", border: "1px solid #eaeaea", borderRadius: "12px" }}>
-            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>¿Aunque haya pasado hace muchos años?</summary>
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>¿Sirve si el abuso fue en la infancia y ahora soy adulto?</summary>
             <p style={{ marginTop: "0.75rem", color: "#666", lineHeight: 1.6, fontSize: "0.9375rem" }}>
-              Sí. El trauma puede afectar durante décadas si no se procesa.
-              Nunca es tarde para buscar ayuda y sanar.
+              Esta página está escrita para esa búsqueda. Que el hecho haya sido
+              en la infancia no cierra el tema en la adultez. Tampoco promete un
+              plazo ni un resultado.
             </p>
           </details>
 
           <details style={{ padding: "1rem", border: "1px solid #eaeaea", borderRadius: "12px" }}>
-            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>¿Es realmente confidencial?</summary>
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>¿La conversación es confidencial?</summary>
             <p style={{ marginTop: "0.75rem", color: "#666", lineHeight: 1.6, fontSize: "0.9375rem" }}>
-              100%. Todo está protegido por secreto profesional. La única
-              excepción es si hay riesgo vital o se trata de un menor en
-              peligro actual.
+              El secreto profesional se mantiene. La excepción que esta página
+              ya nombra es un riesgo vital o un menor en peligro actual.
             </p>
           </details>
         </div>
@@ -214,10 +273,13 @@ export default function PsicologoAbusoSexualChillanPage() {
 
       <section style={{ padding: "2rem", backgroundColor: "#000", borderRadius: "16px", marginBottom: "3rem", textAlign: "center" }}>
         <h2 style={{ fontSize: "1.25rem", fontWeight: 600, marginBottom: "0.75rem", color: "#fff" }}>
-          Mereces sanar
+          La explicación está en una pregunta
         </h2>
         <p style={{ color: "rgba(255,255,255,0.7)", marginBottom: "1.5rem", fontSize: "0.9375rem" }}>
-          No fue tu culpa. Y no tienes que cargar esto solo/a.
+          <Link href="/preguntas/como-ayuda-la-terapia-tras-abuso-en-la-infancia" style={{ color: "#fff", textDecoration: "underline" }}>
+            Cómo ayuda la terapia a un adulto que vivió abuso en la infancia
+          </Link>
+          . Esta URL es la atención en Chillán. No promete un plazo.
         </p>
         <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", alignItems: "center" }}>
           <Link href="/agendar" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", padding: "0.75rem 1.5rem", backgroundColor: "#fff", color: "#000", borderRadius: "9999px", textDecoration: "none", fontWeight: 500, fontSize: "0.875rem" }}>

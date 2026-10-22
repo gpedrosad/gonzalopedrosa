@@ -6,9 +6,9 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 import { RelatedReading } from "@/app/components/RelatedReading";
 
-const title = "Psicólogo o psicóloga cognitivo conductual en Chillán";
+const title = "Psicólogo cognitivo conductual en Chillán y online";
 const description =
-  "Psicólogo o psicóloga cognitivo conductual en Chillán: qué mira la TCC entre pensamiento, emoción y conducta. La definición larga está en una pregunta.";
+  "Psicólogo cognitivo conductual en Chillán y por videollamada. La TCC mira pensamiento, emoción y conducta. Una sesión revisa la semana, un punto y un paso.";
 
 export const metadata: Metadata = {
   title,
@@ -35,19 +35,19 @@ export const metadata: Metadata = {
 
 const psicologo_cognitivo_conductual_chillanFAQs = [
   {
-    question: "¿En qué se diferencia de otros enfoques?",
+    question: "¿Qué es la terapia cognitivo-conductual?",
     answer:
-      "La TCC se caracteriza por su enfoque en el presente y en soluciones prácticas. Cuando es relevante, también se trabajan experiencias pasadas que influyen en patrones actuales.",
+      "Mira la relación entre una situación, un pensamiento, una emoción y lo que haces después. El foco está en el presente. La definición larga está en la pregunta, sin la ficha de atención.",
   },
   {
-    question: "¿Cuántas sesiones se necesitan?",
+    question: "¿Cómo suele ir una sesión?",
     answer:
-      "Depende del motivo de consulta. Para problemas focalizados pueden bastar pocas sesiones. Para cuadros más complejos, el proceso puede extenderse.",
+      "Se revisa la semana, se trabaja un punto y queda un paso para la siguiente. No hay un número de sesiones que sirva para todos.",
   },
   {
-    question: "¿La TCC funciona en formato online?",
+    question: "¿La TCC se puede hacer online?",
     answer:
-      "Sí, la terapia online con enfoque cognitivo-conductual ha mostrado efectividad comparable a la presencial.",
+      "Sí. Esta atención existe en Chillán y por videollamada. En qué condiciones el formato se parece a la sala está en la pregunta de si la terapia online funciona. Esta página no publica una tasa de resultado.",
   },
 ];
 
@@ -125,7 +125,7 @@ export default function PsicologoCognitivoConductualChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo o psicóloga cognitivo conductual en Chillán
+        Psicólogo cognitivo conductual en Chillán y online
       </h1>
 
       <p
@@ -136,9 +136,14 @@ export default function PsicologoCognitivoConductualChillanPage() {
           lineHeight: 1.6,
         }}
       >
-        La TCC es uno de los enfoques con mayor respaldo científico. Se centra
-        en la relación entre pensamientos, emociones y conductas, trabajando de
-        manera práctica y orientada a objetivos.
+        Si buscas psicólogo o psicóloga cognitivo conductual, esta página es la
+        atención en Chillán y por videollamada. La TCC mira cómo un pensamiento,
+        una emoción y una conducta se empujan. La definición, sin esta ficha,
+        está en{" "}
+        <Link href="/preguntas/que-es-la-terapia-cognitivo-conductual" style={{ color: "#000", textDecoration: "underline" }}>
+          qué es la terapia cognitivo-conductual
+        </Link>
+        .
       </p>
 
       <section style={{ marginBottom: "3rem" }}>
@@ -161,13 +166,55 @@ export default function PsicologoCognitivoConductualChillanPage() {
           desarrollar formas más adaptativas de afrontar las situaciones.
         </p>
         <p style={{ color: "#444", lineHeight: 1.7 }}>
-          Es un enfoque activo y colaborativo: terapeuta y paciente trabajan
-          juntos estableciendo metas claras, con ejercicios entre sesiones para
-          consolidar los aprendizajes. La definición, sin una ficha de atención, está en{" "}
-          <Link href="/preguntas/que-es-la-terapia-cognitivo-conductual" style={{ color: "#000", textDecoration: "underline" }}>
-            qué es la terapia cognitivo-conductual
+          Es un enfoque activo y colaborativo: se acuerdan objetivos que se
+          pueden observar y hay tareas entre sesiones. Si una herramienta no
+          calza, se ajusta. La definición larga sigue en la pregunta de arriba.
+        </p>
+      </section>
+
+      <section style={{ marginBottom: "3rem" }}>
+        <h2
+          style={{
+            fontSize: "0.75rem",
+            fontWeight: 600,
+            textTransform: "uppercase",
+            letterSpacing: "0.1em",
+            color: "#999",
+            marginBottom: "1rem",
+          }}
+        >
+          Cómo suele ir un proceso
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
+          En una sesión se elige un problema concreto y se arma un mapa: qué
+          situación lo dispara, qué pensamiento aparece, qué emoción sube y qué
+          haces después. El trabajo mira el presente. Si una historia antigua
+          sigue empujando ese círculo, se nombra, y el énfasis queda en lo que
+          puedes ensayar esta semana.
+        </p>
+        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
+          Una hora ordenada revisa la semana, trabaja un punto y deja un paso
+          para la siguiente. No hay un número de sesiones que sirva para todos.
+          Esa duda está en{" "}
+          <Link href="/preguntas/cuanto-dura-una-terapia-psicologica" style={{ color: "#000", textDecoration: "underline" }}>
+            cuánto dura una terapia psicológica
           </Link>
           .
+        </p>
+        <p style={{ color: "#444", lineHeight: 1.7 }}>
+          Si el tema es la ansiedad, la página de{" "}
+          <Link href="/psicologo-ansiedad-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+            ansiedad en Chillán
+          </Link>{" "}
+          sigue desde ahí. Si aparece un pico de miedo de minutos, la guía{" "}
+          <Link href="/guias/ataque-de-panico-que-hacer" style={{ color: "#000", textDecoration: "underline" }}>
+            qué hacer en un ataque de pánico
+          </Link>{" "}
+          y la pregunta{" "}
+          <Link href="/preguntas/que-es-un-ataque-de-panico" style={{ color: "#000", textDecoration: "underline" }}>
+            qué es un ataque de pánico
+          </Link>{" "}
+          lo separan de la preocupación del día.
         </p>
       </section>
 
@@ -326,7 +373,7 @@ export default function PsicologoCognitivoConductualChillanPage() {
             <summary
               style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}
             >
-              ¿En qué se diferencia de otros enfoques?
+              ¿Qué es la terapia cognitivo-conductual?
             </summary>
             <p
               style={{
@@ -336,9 +383,9 @@ export default function PsicologoCognitivoConductualChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              La TCC se caracteriza por su enfoque en el presente y en
-              soluciones prácticas. Cuando es relevante, también se trabajan
-              experiencias pasadas que influyen en patrones actuales.
+              Mira la relación entre una situación, un pensamiento, una emoción
+              y lo que haces después. El foco está en el presente. La definición
+              larga está en la pregunta, sin la ficha de atención.
             </p>
           </details>
 
@@ -352,7 +399,7 @@ export default function PsicologoCognitivoConductualChillanPage() {
             <summary
               style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}
             >
-              ¿Cuántas sesiones se necesitan?
+              ¿Cómo suele ir una sesión?
             </summary>
             <p
               style={{
@@ -362,9 +409,8 @@ export default function PsicologoCognitivoConductualChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              Depende del motivo de consulta. Para problemas focalizados pueden
-              bastar pocas sesiones. Para cuadros más complejos, el proceso
-              puede extenderse.
+              Se revisa la semana, se trabaja un punto y queda un paso para la
+              siguiente. No hay un número de sesiones que sirva para todos.
             </p>
           </details>
 
@@ -378,7 +424,7 @@ export default function PsicologoCognitivoConductualChillanPage() {
             <summary
               style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}
             >
-              ¿La TCC funciona en formato online?
+              ¿La TCC se puede hacer online?
             </summary>
             <p
               style={{
@@ -388,15 +434,16 @@ export default function PsicologoCognitivoConductualChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              Sí, la{" "}
+              Sí. Esta atención existe en Chillán y por{" "}
               <Link
                 href="/psicologo-online-chillan"
                 style={{ color: "#000", textDecoration: "underline" }}
               >
-                terapia online
-              </Link>{" "}
-              con enfoque cognitivo-conductual ha mostrado efectividad
-              comparable a la presencial.
+                videollamada
+              </Link>
+              . En qué condiciones el formato se parece a la sala está en la
+              pregunta de si la terapia online funciona. Esta página no publica
+              una tasa de resultado.
             </p>
           </details>
         </div>

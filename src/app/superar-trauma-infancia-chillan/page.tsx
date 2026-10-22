@@ -80,7 +80,20 @@ export default function SuperarTraumaInfanciaChillanPage() {
       <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "3rem", lineHeight: 1.6 }}>
         Las experiencias difíciles de la infancia pueden seguir afectándote en
         la adultez. La terapia te ayuda a procesar el pasado para vivir mejor
-        el presente.
+        el presente. Si el tema es un abuso, la explicación sin una comuna está
+        en{" "}
+        <Link href="/preguntas/como-ayuda-la-terapia-tras-abuso-en-la-infancia" style={{ color: "#000", textDecoration: "underline" }}>
+          cómo ayuda la terapia a un adulto que vivió abuso en la infancia
+        </Link>
+        . El cuadro y el método están en la{" "}
+        <Link href="/guias/que-es-el-tept" style={{ color: "#000", textDecoration: "underline" }}>
+          guía de TEPT
+        </Link>{" "}
+        y en{" "}
+        <Link href="/guias/que-es-el-emdr" style={{ color: "#000", textDecoration: "underline" }}>
+          qué es el EMDR
+        </Link>
+        .
       </p>
 
       <section style={{ marginBottom: "3rem" }}>

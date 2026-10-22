@@ -1657,7 +1657,7 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "que-es-un-trauma-psicologico",
-    updated: "2026-10-21",
+    updated: "2026-10-22",
     navLabel: "Qué es un trauma psicológico",
     title: "Qué es un trauma psicológico y cuándo no es un TEPT",
     h1: "Qué es un trauma psicológico",
@@ -1726,10 +1726,84 @@ const QUESTION_PAGES: InfoPage[] = [
       { href: "/estres-postraumatico-chillan", label: "Estrés postraumático en Chillán" },
       { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "Límites del ejercicio bilateral" },
       { href: "/emdr-autoadministrado", label: "Ejercicio bilateral para un malestar leve" },
+      { href: "/preguntas/como-ayuda-la-terapia-tras-abuso-en-la-infancia", label: "Terapia tras un abuso en la infancia" },
     ],
     product: EMDR_PRODUCT,
     safety:
       "Si hay ideas de hacerte daño o de querer morir, llama al *4141 (gratuito, 24 horas). Salud Responde atiende al 600 360 7777. En una urgencia, llama al 131. Esta lectura no reemplaza esa llamada.",
+    sources: [OMS_ESTRES, MINSAL_4141, SALUD_RESPONDE],
+  },
+  {
+    cluster: "preguntas",
+    slug: "como-ayuda-la-terapia-tras-abuso-en-la-infancia",
+    updated: "2026-10-22",
+    navLabel: "Terapia tras abuso en la infancia",
+    title: "Terapia para un adulto que vivió abuso en la infancia",
+    h1: "¿Cómo ayuda la terapia a un adulto que vivió abuso en la infancia?",
+    description:
+      "La terapia puede acompañar a un adulto que vivió abuso en la infancia, sin el relato completo y sin un plazo. El TEPT y el EMDR están en las guías.",
+    answer:
+      "La terapia puede acompañar a un adulto que vivió abuso en la infancia cuando la vergüenza, las imágenes o la guardia alta siguen en la semana. No pide el relato completo el primer día y no promete un plazo ni un resultado. Esta pregunta explica eso. No diagnostica y no abre una ciudad.",
+    sections: [
+      {
+        heading: "Qué puede quedar años después",
+        paragraphs: [
+          "Un abuso, también sexual, puede dejar la alarma encendida: el hecho ya pasó y vuelven imágenes, sueños o una vergüenza que se siente de ahora. No todo momento difícil es un trauma, y no todo trauma es un trastorno de estrés postraumático. La pregunta de qué es un trauma psicológico separa esas palabras. La guía de TEPT sigue con el cuadro.",
+          "Que haya ocurrido en la infancia no cierra el tema en la adultez. Tampoco lo convierte, por sí solo, en un diagnóstico. Sirve notar si el recuerdo organiza la semana. El nombre lo pone una evaluación, no esta lectura.",
+        ],
+        bullets: [
+          "No tienes que contar el hecho con todo el detalle para empezar a hablar.",
+          "Puedes parar. Eso es parte de la conversación, no una falla.",
+          "La culpa o la vergüenza pueden sentirse presentes aunque el hecho haya sido de otra persona.",
+          "Una coincidencia con este párrafo no confirma un TEPT.",
+        ],
+      },
+      {
+        heading: "Qué puede hacer una conversación, y qué no",
+        paragraphs: [
+          "El ritmo lo marcas tú. En la página de atención el orden que se nombra es este: primero un poco más de calma, y el trabajo del recuerdo cuando tú lo decides. No hay obligación de entrar al peor momento el primer día.",
+          "El secreto profesional se mantiene. La excepción que esa página ya escribe es un riesgo vital o un menor en peligro actual. Esta pregunta no agrega otra.",
+          "No hay un número de horas que sirva para todos ni una promesa de cómo vas a terminar. Si buscas la atención en Chillán, esa es otra URL. Esta se queda en la explicación.",
+        ],
+      },
+      {
+        heading: "TEPT, EMDR y el ejercicio del sitio",
+        paragraphs: [
+          "La guía de la OMS de 2013 sobre condiciones relacionadas con el estrés nombra, para adultos con TEPT, terapias centradas en el trauma. Entre ellas están la terapia cognitivo-conductual focalizada en el trauma y el EMDR, cuando las aplica personal de salud capacitado. Que una guía las nombre no dice cuál te corresponde ni en cuántas horas.",
+          "El EMDR no es un punto que se mueve en una pantalla. El procedimiento completo incluye evaluación, preparación y cierre. Las fases están en la guía de qué es el EMDR. La página de EMDR en Chillán es la de atención con ese método. No certifica un resultado.",
+          "El ejercicio de estimulación bilateral del sitio es para un malestar leve. No lo uses para reprocesar un abuso, un accidente o un TEPT. Si aparecen imágenes que no puedes guardar, la propia página pide que lo pares.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Tengo que contar lo que pasó?",
+        answer:
+          "No. Puedes hablar de lo que puedas y parar cuando quieras. El relato completo no es la entrada.",
+      },
+      {
+        question: "¿Si fue en la infancia y ahora soy adulto, igual se conversa?",
+        answer:
+          "Sí se puede conversar. Que el hecho haya sido en la infancia no cierra el tema. Esta lectura no pone un plazo ni un resultado.",
+      },
+      {
+        question: "¿Puedo usar el ejercicio bilateral para este recuerdo?",
+        answer:
+          "No para reprocesarlo. El ejercicio es para un malestar leve. Si la escena vuelve y no puedes dejarla, páralo.",
+      },
+    ],
+    related: [
+      { href: "/psicologo-abuso-sexual-chillan", label: "Atención en Chillán por abuso sexual" },
+      { href: "/superar-trauma-infancia-chillan", label: "Trauma de infancia en Chillán" },
+      { href: "/preguntas/que-es-un-trauma-psicologico", label: "Qué es un trauma psicológico" },
+      { href: "/guias/que-es-el-tept", label: "Qué es el TEPT" },
+      { href: "/guias/que-es-el-emdr", label: "Qué es el EMDR" },
+      { href: "/terapia-emdr-chillan", label: "EMDR en Chillán: página de atención" },
+      { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "Límites del ejercicio bilateral" },
+    ],
+    product: EMDR_PRODUCT,
+    safety:
+      "Si hay ideas de hacerte daño o de querer morir, llama al *4141 (gratuito, 24 horas). Salud Responde atiende al 600 360 7777. En una urgencia, llama al 131. La página de atención también deja Fono Denuncia (600 400 0101) y Fono Familia (149). Esta lectura no reemplaza esa llamada.",
     sources: [OMS_ESTRES, MINSAL_4141, SALUD_RESPONDE],
   },
   {
@@ -1994,9 +2068,12 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
     { href: "/preguntas", label: "Preguntas" },
   ],
   "/psicologo-abuso-sexual-chillan": [
+    { href: "/preguntas/como-ayuda-la-terapia-tras-abuso-en-la-infancia", label: "Terapia tras un abuso en la infancia" },
+    { href: "/preguntas/que-es-un-trauma-psicologico", label: "Qué es un trauma psicológico" },
     { href: "/guias/que-es-el-tept", label: "Qué es el TEPT" },
     { href: "/guias/que-es-el-emdr", label: "Qué es el EMDR" },
     { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "Límites del ejercicio bilateral" },
+    { href: "/guias/si-un-cercano-habla-de-hacerse-dano", label: "Si un cercano habla de hacerse daño" },
     { href: "/guias", label: "Guías" },
     { href: "/preguntas", label: "Preguntas" },
   ],
@@ -2060,6 +2137,7 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
     { href: "/preguntas", label: "Preguntas" },
     { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "Qué puede el ejercicio de EMDR" },
     { href: "/emdr-autoadministrado", label: "Ejercicio bilateral gratuito" },
+    { href: "/preguntas/como-ayuda-la-terapia-tras-abuso-en-la-infancia", label: "Terapia tras un abuso en la infancia" },
   ],
   "/estres-postraumatico-chillan": [
     { href: "/preguntas/que-hace-un-especialista-en-estres-postraumatico", label: "Qué hace un especialista en estrés postraumático" },
@@ -2107,6 +2185,7 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
   "/psicologo-duelo-chillan": [
     { href: "/preguntas/duelo-o-depresion", label: "Duelo o depresión" },
     { href: "/guias/duelo-etapas-y-mitos", label: "Etapas y mitos del duelo" },
+    { href: "/guias/acompanar-a-alguien-en-duelo", label: "Cómo acompañar a alguien en duelo" },
     { href: "/preguntas/cuanto-dura-un-duelo", label: "Cuánto dura un duelo" },
   ],
   "/psicologo-depresion-chillan": [
@@ -2134,6 +2213,10 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
   ],
   "/psicologo-cognitivo-conductual-chillan": [
     { href: "/preguntas/que-es-la-terapia-cognitivo-conductual", label: "Qué es la terapia cognitivo-conductual" },
+    { href: "/preguntas/cuanto-dura-una-terapia-psicologica", label: "Cuánto dura una terapia" },
+    { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer en un ataque de pánico" },
+    { href: "/preguntas/que-es-un-ataque-de-panico", label: "Qué es un ataque de pánico" },
+    { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
     { href: "/preguntas/que-es-la-erp-para-el-toc", label: "Qué es la ERP para el TOC" },
   ],
   "/psicologo-obesidad-chillan": [

@@ -46,7 +46,12 @@ const psicologo_obesidad_chillanFAQs = [
   {
     question: "¿La terapia me hará bajar de peso?",
     answer:
-      "La terapia trabaja los factores psicológicos que dificultan mantener cambios. Combinada con alimentación y actividad física adecuadas, facilita resultados duraderos.",
+      "Esta página no informa un resultado de peso. Mira los factores psicológicos de la alimentación. La guía de emoción y comida tampoco es una dieta.",
+  },
+  {
+    question: "¿Esta página incluye la evaluación psicológica para una cirugía bariátrica?",
+    answer:
+      "No. La evaluación para manga gástrica o bypass, con el informe para el equipo quirúrgico, está en la página de evaluación bariátrica. Suele tomar una o dos sesiones y el informe se entrega dentro de la semana siguiente. Aquí se mira la alimentación emocional.",
   },
 ];
 
@@ -81,9 +86,17 @@ export default function PsicologoObesidadChillanPage() {
       </h1>
 
       <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "3rem", lineHeight: 1.6 }}>
-        La obesidad tiene componentes psicológicos importantes. Las dietas
-        solas no funcionan si no trabajas la relación emocional con la comida.
-        La terapia te ayuda a hacer cambios duraderos.
+        La obesidad tiene componentes psicológicos. Si comes para calmar
+        ansiedad, tristeza o aburrimiento, la guía{" "}
+        <Link href="/guias/emocion-y-comida" style={{ color: "#000", textDecoration: "underline" }}>
+          cuando comes para calmar una emoción
+        </Link>{" "}
+        explica ese ciclo, sin dieta ni meta de peso. La evaluación psicológica
+        para manga gástrica o bypass no es esta página: está en{" "}
+        <Link href="/evaluacion-bariatrica-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+          evaluación bariátrica en Chillán
+        </Link>
+        .
       </p>
 
       <section style={{ marginBottom: "3rem" }}>
@@ -223,9 +236,20 @@ export default function PsicologoObesidadChillanPage() {
           <details style={{ padding: "1rem", border: "1px solid #eaeaea", borderRadius: "12px" }}>
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>¿La terapia me hará bajar de peso?</summary>
             <p style={{ marginTop: "0.75rem", color: "#666", lineHeight: 1.6, fontSize: "0.9375rem" }}>
-              La terapia trabaja los factores psicológicos que dificultan
-              mantener cambios. Combinada con alimentación y actividad física
-              adecuadas, facilita resultados duraderos.
+              Esta página no informa un resultado de peso. Mira los factores
+              psicológicos de la alimentación. La guía de emoción y comida
+              tampoco es una dieta.
+            </p>
+          </details>
+
+          <details style={{ padding: "1rem", border: "1px solid #eaeaea", borderRadius: "12px" }}>
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>¿Esta página incluye la evaluación psicológica para una cirugía bariátrica?</summary>
+            <p style={{ marginTop: "0.75rem", color: "#666", lineHeight: 1.6, fontSize: "0.9375rem" }}>
+              No. La evaluación para manga gástrica o bypass, con el informe
+              para el equipo quirúrgico, está en la página de evaluación
+              bariátrica. Suele tomar una o dos sesiones y el informe se entrega
+              dentro de la semana siguiente. Aquí se mira la alimentación
+              emocional.
             </p>
           </details>
         </div>

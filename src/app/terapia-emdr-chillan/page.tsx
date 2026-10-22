@@ -12,18 +12,19 @@ import {
   getTwitterDescription,
 } from "@/lib/schemas";
 
+const title = "Terapia EMDR en Chillán: especialista en TEPT, qué es";
 const description =
-  "Si buscas especialista en TEPT, esta página dice qué es el trastorno y cómo entra el EMDR. Las señales están en la guía. Aquí, la atención en Chillán.";
+  "Terapia EMDR en Chillán: qué es el método y cómo entra si buscas especialista en TEPT. Las fases están en la guía. El ejercicio gratuito no es esa sesión.";
 
 export const metadata: Metadata = {
-  title: "Especialista en TEPT: qué mirar y cómo entra el EMDR",
+  title,
   description,
   alternates: {
     canonical: "/terapia-emdr-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Especialista en TEPT: qué mirar y cómo entra el EMDR",
+    title,
     description,
     url: "https://www.gonzalopedrosa.cl/terapia-emdr-chillan",
     type: "website",
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Especialista en TEPT: qué mirar y cómo entra el EMDR",
+    title,
     description: getTwitterDescription(description),
   },
 };
@@ -45,17 +46,22 @@ const emdrFAQs = [
   {
     question: "¿Qué es EMDR?",
     answer:
-      "EMDR (Eye Movement Desensitization and Reprocessing) es una terapia reconocida para procesar memorias traumáticas mediante estimulación bilateral, con amplio respaldo científico.",
+      "EMDR significa desensibilización y reprocesamiento por movimientos oculares. Es una psicoterapia para cuando un recuerdo sigue activo. La estimulación bilateral es una parte del procedimiento, no el tratamiento entero. Las fases están en la guía de qué es el EMDR.",
   },
   {
-    question: "¿Cuántas sesiones de EMDR necesito?",
+    question: "¿El ejercicio bilateral del sitio es una sesión de EMDR?",
     answer:
-      "Varía según el caso. Traumas únicos pueden procesarse en pocas sesiones; traumas complejos o múltiples requieren más tiempo. Lo evaluamos en la primera consulta.",
+      "No. Es un recurso gratuito para un malestar leve. No procesa un abuso, un accidente ni un TEPT. La pregunta sobre el ejercicio y la terapia marca ese límite.",
+  },
+  {
+    question: "¿Cuántas sesiones de EMDR se necesitan?",
+    answer:
+      "No hay un número que sirva para todos. Un recuerdo único y un trauma complejo no se abordan igual. Esta página no promete un plazo.",
   },
   {
     question: "¿Se puede hacer EMDR online?",
     answer:
-      "Sí, EMDR puede adaptarse al formato online con estimulación bilateral alternativa. Evaluamos juntos la modalidad más adecuada.",
+      "La atención de esta página existe en Chillán y por videollamada. La modalidad se conversa. El ejercicio gratuito no es esa sesión.",
   },
 ];
 
@@ -170,6 +176,14 @@ export default function TerapiaEmdrChillanPage() {
           <Link href="/preguntas/que-es-un-trauma-psicologico" style={{ color: "#000", textDecoration: "underline" }}>
             esta pregunta
           </Link>
+          . El ejercicio gratuito de estimulación bilateral es para un malestar leve y no procesa un trauma: está en{" "}
+          <Link href="/emdr-autoadministrado" style={{ color: "#000", textDecoration: "underline" }}>
+            el recurso
+          </Link>{" "}
+          y sus límites en{" "}
+          <Link href="/preguntas/emdr-autoadministrado-y-terapia" style={{ color: "#000", textDecoration: "underline" }}>
+            esta pregunta
+          </Link>
           . La ficha local sigue en{" "}
           <Link href="/estres-postraumatico-chillan" style={{ color: "#000", textDecoration: "underline" }}>
             estrés postraumático en Chillán
@@ -248,18 +262,45 @@ export default function TerapiaEmdrChillanPage() {
             marginBottom: "1rem",
           }}
         >
-          ¿Qué es EMDR?
+          Qué es el EMDR
         </h2>
         <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
-          EMDR es una psicoterapia integradora que utiliza estimulación
-          bilateral (movimientos oculares u otras formas) para ayudar al cerebro
-          a procesar recuerdos traumáticos o perturbadores que no se han
-          integrado adecuadamente.
+          EMDR significa desensibilización y reprocesamiento por movimientos
+          oculares. Se usa cuando un recuerdo sigue disparando miedo, vergüenza
+          o imágenes. La estimulación bilateral (ojos, sonidos o golpes suaves
+          alternados) es una parte del procedimiento, no el tratamiento entero.
+        </p>
+        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
+          La guía de la OMS de 2013 sobre condiciones relacionadas con el estrés
+          nombra, para adultos con TEPT, terapias centradas en el trauma, entre
+          ellas la cognitivo-conductual y el EMDR, cuando las aplica personal de
+          salud capacitado. Que una guía lo nombre no dice cuántas horas te
+          corresponden ni un resultado. El detalle de las fases está en{" "}
+          <Link href="/guias/que-es-el-emdr" style={{ color: "#000", textDecoration: "underline" }}>
+            qué es el EMDR
+          </Link>
+          . El cuadro está en la{" "}
+          <Link href="/guias/que-es-el-tept" style={{ color: "#000", textDecoration: "underline" }}>
+            guía de TEPT
+          </Link>
+          . Qué cuenta como trauma, antes del nombre del trastorno, está en{" "}
+          <Link href="/preguntas/que-es-un-trauma-psicologico" style={{ color: "#000", textDecoration: "underline" }}>
+            qué es un trauma psicológico
+          </Link>
+          .
         </p>
         <p style={{ color: "#444", lineHeight: 1.7 }}>
-          Desarrollada por Francine Shapiro en 1987, EMDR está reconocida por la
-          OMS y diversas organizaciones de salud mental como tratamiento
-          efectivo para el trauma.
+          El sitio tiene un{" "}
+          <Link href="/emdr-autoadministrado" style={{ color: "#000", textDecoration: "underline" }}>
+            ejercicio de estimulación bilateral
+          </Link>{" "}
+          gratuito para emoción cotidiana o estrés leve. No es una sesión de
+          EMDR y no se usa para reprocesar un abuso, un accidente o un TEPT. Ese
+          límite está en{" "}
+          <Link href="/preguntas/emdr-autoadministrado-y-terapia" style={{ color: "#000", textDecoration: "underline" }}>
+            la pregunta del ejercicio y la terapia
+          </Link>
+          .
         </p>
       </section>
 
@@ -412,7 +453,7 @@ export default function TerapiaEmdrChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿EMDR es seguro?
+              ¿Qué es EMDR?
             </summary>
             <p
               style={{
@@ -422,9 +463,10 @@ export default function TerapiaEmdrChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              Sí, EMDR es una terapia segura cuando es aplicada por un
-              profesional entrenado. Es reconocida por la OMS y otras
-              organizaciones de salud a nivel mundial.
+              Es una psicoterapia para un recuerdo que sigue activo. La
+              estimulación bilateral es una parte, no el procedimiento completo.
+              Las fases están en la guía de qué es el EMDR. Esta página no
+              promete un resultado.
             </p>
           </details>
 
@@ -436,7 +478,7 @@ export default function TerapiaEmdrChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Cuántas sesiones se necesitan?
+              ¿El ejercicio bilateral del sitio es una sesión de EMDR?
             </summary>
             <p
               style={{
@@ -446,9 +488,33 @@ export default function TerapiaEmdrChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              El número de sesiones varía según el caso. Traumas únicos pueden
-              procesarse en pocas sesiones, mientras que traumas complejos o
-              múltiples requieren más tiempo.
+              No. Es un recurso gratuito para un malestar leve. No procesa un
+              abuso, un accidente ni un TEPT. Si al usarlo aparecen imágenes que
+              no puedes guardar, la propia página pide que lo pares.
+            </p>
+          </details>
+
+          <details
+            style={{
+              padding: "1rem",
+              border: "1px solid #eaeaea",
+              borderRadius: "12px",
+            }}
+          >
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
+              ¿Cuántas sesiones de EMDR se necesitan?
+            </summary>
+            <p
+              style={{
+                marginTop: "0.75rem",
+                color: "#666",
+                lineHeight: 1.6,
+                fontSize: "0.9375rem",
+              }}
+            >
+              No hay un número que sirva para todos. Un recuerdo único y un
+              trauma complejo no se abordan igual. Esta página no promete un
+              plazo.
             </p>
           </details>
 
@@ -470,15 +536,14 @@ export default function TerapiaEmdrChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              Sí, EMDR puede adaptarse al formato{" "}
+              La atención existe en Chillán y por{" "}
               <Link
                 href="/psicologo-online-chillan"
                 style={{ color: "#000", textDecoration: "underline" }}
               >
-                online
-              </Link>{" "}
-              utilizando diferentes formas de estimulación bilateral. Evaluamos
-              juntos la modalidad más adecuada.
+                videollamada
+              </Link>
+              . La modalidad se conversa. El ejercicio gratuito no es esa sesión.
             </p>
           </details>
         </div>

@@ -78,7 +78,11 @@ export default function TratamientoLudopatiaChillanPage() {
       <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "3rem", lineHeight: 1.6 }}>
         La ludopatía es una adicción al juego que puede destruir finanzas,
         relaciones y bienestar. Con tratamiento adecuado, es posible recuperar
-        el control de tu vida.
+        el control de tu vida. Si quien te preocupa es un familiar, la guía{" "}
+        <Link href="/guias/familiar-con-ludopatia" style={{ color: "#000", textDecoration: "underline" }}>
+          ayudar a un familiar con adicción al juego
+        </Link>{" "}
+        habla de la conversación y de dejar de financiar la apuesta.
       </p>
 
       <section style={{ marginBottom: "3rem" }}>

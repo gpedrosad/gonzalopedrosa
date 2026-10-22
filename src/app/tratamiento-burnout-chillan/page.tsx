@@ -123,7 +123,12 @@ export default function TratamientoBurnoutChillanPage() {
         <p style={{ fontWeight: 600, color: "#92400e", marginBottom: "0.5rem", fontSize: "0.9375rem" }}>⚠️ No ignores estas señales</p>
         <p style={{ color: "#78350f", fontSize: "0.875rem", lineHeight: 1.6 }}>
           El burnout no tratado puede llevar a depresión, problemas de salud
-          graves y colapso. Pedir ayuda es el primer paso para recuperarte.
+          graves y colapso. Pedir ayuda es el primer paso para recuperarte. Qué
+          describe la OMS, sin una etiqueta puesta a la rápida, está en la guía{" "}
+          <Link href="/guias/burnout-laboral" style={{ color: "#78350f", textDecoration: "underline" }}>
+            qué es el burnout laboral
+          </Link>
+          .
         </p>
       </section>
 
