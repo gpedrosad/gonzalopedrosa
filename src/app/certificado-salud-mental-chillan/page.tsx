@@ -6,24 +6,24 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Certificado de salud mental en Chillán | Gonzalo Pedrosa",
+  title: "Certificado de salud mental en Chillán, también laboral",
   description:
-    "Certificado de salud mental en Chillán. Documento profesional para trámites laborales, licencias, permisos y otros requerimientos.",
+    "Certificado de salud mental en Chillán para trabajo, licencia, porte u otros trámites. Es más breve que un informe y refleja el estado del momento.",
   alternates: {
     canonical: "/certificado-salud-mental-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Certificado de salud mental en Chillán | Gonzalo Pedrosa",
-    description: "Certificado de salud mental en Chillán. Documento profesional para trámites laborales, licencias, permisos y otros requerimientos.",
+    title: "Certificado de salud mental en Chillán, también laboral",
+    description: "Certificado de salud mental en Chillán para trabajo, licencia, porte u otros trámites. Es más breve que un informe y refleja el estado del momento.",
     url: "https://www.gonzalopedrosa.cl/certificado-salud-mental-chillan",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Retrato de Gonzalo Pedrosa, psicólogo clínico" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Certificado de salud mental en Chillán | Gonzalo Pedrosa",
-    description: getTwitterDescription("Certificado de salud mental en Chillán. Documento profesional para trámites laborales, licencias, permisos y otros requerimientos."),
+    title: "Certificado de salud mental en Chillán, también laboral",
+    description: getTwitterDescription("Certificado de salud mental en Chillán para trabajo, licencia, porte u otros trámites. Es más breve que un informe y refleja el estado del momento."),
   },
 };
 
@@ -45,6 +45,11 @@ const certificado_salud_mental_chillanFAQs = [
     answer:
       "Si la evaluación muestra condiciones que contraindican lo que necesitas (ej: porte de armas), el certificado lo reflejará. No puedo emitir un documento falso.",
   },
+  {
+    question: "¿Qué pasa si ya tengo un diagnóstico?",
+    answer:
+      "Tener un diagnóstico no impide por sí solo el certificado. Depende del diagnóstico, de cómo está hoy y de lo que pide el trámite.",
+  },
 ];
 
 const breadcrumbItems = [
@@ -59,7 +64,7 @@ export default function CertificadoSaludMentalChillanPage() {
         breadcrumbItems={breadcrumbItems}
         faqs={certificado_salud_mental_chillanFAQs}
         serviceType="Certificado Salud Mental"
-        serviceDescription={"Certificado de salud mental en Chillán. Documento profesional para trámites laborales, licencias, permisos y otros requerimientos."}
+        serviceDescription={"Certificado de salud mental en Chillán para trabajo, licencia, porte u otros trámites. Es más breve que un informe."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <Breadcrumb items={breadcrumbItems} />
@@ -74,12 +79,17 @@ export default function CertificadoSaludMentalChillanPage() {
       <p style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.75rem" }}>Chillán, Chile</p>
 
       <h1 style={{ fontSize: "2.5rem", fontWeight: 700, letterSpacing: "-0.03em", marginBottom: "1rem", lineHeight: 1.1 }}>
-        Certificado de Salud Mental en Chillán
+        Certificado de salud mental en Chillán
       </h1>
 
       <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "3rem", lineHeight: 1.6 }}>
-        Emito certificados de salud mental para diversos trámites. Documento
-        profesional con evaluación del estado psicológico actual.
+        Emito certificados de salud mental para trámites laborales y para otros
+        requerimientos. El documento es breve: describe el estado psicológico
+        al momento de la evaluación, con firma y timbre. No reemplaza un{" "}
+        <Link href="/informe-psicologico-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+          informe psicológico
+        </Link>
+        , que es más largo y pide más sesiones.
       </p>
 
       <section style={{ marginBottom: "3rem" }}>
@@ -95,6 +105,10 @@ export default function CertificadoSaludMentalChillanPage() {
             "Trámites migratorios",
             "Seguros y previsión",
             "Otros requerimientos institucionales",
+            "Postulación a empleos públicos y procesos de selección",
+            "Trabajos con manejo de armas o cargos de responsabilidad",
+            "Trámites de residencia o visa de trabajo",
+            "Reincorporación laboral después de una licencia",
           ].map((item, i) => (
             <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem", padding: "0.75rem 1rem", backgroundColor: "#fafafa", borderRadius: "8px", fontSize: "0.9375rem", color: "#444" }}>
               <span style={{ color: "#000", flexShrink: 0 }}>—</span>
@@ -161,6 +175,14 @@ export default function CertificadoSaludMentalChillanPage() {
               Si la evaluación muestra condiciones que contraindican lo que
               necesitas (ej: porte de armas), el certificado lo reflejará.
               No puedo emitir un documento falso.
+            </p>
+          </details>
+
+          <details style={{ padding: "1rem", border: "1px solid #eaeaea", borderRadius: "12px" }}>
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>¿Qué pasa si ya tengo un diagnóstico?</summary>
+            <p style={{ marginTop: "0.75rem", color: "#666", lineHeight: 1.6, fontSize: "0.9375rem" }}>
+              Tener un diagnóstico no impide por sí solo el certificado. Depende
+              del diagnóstico, de cómo está hoy y de lo que pide el trámite.
             </p>
           </details>
         </div>

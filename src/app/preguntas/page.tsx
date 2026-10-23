@@ -133,7 +133,11 @@ export default function PreguntasIndexPage() {
         <h2 style={{ fontSize: "1.35rem", fontWeight: 650, margin: "2rem 0 0.75rem" }}>Cómo leer estas guías</h2>
         <p style={{ fontSize: "1.0625rem", lineHeight: 1.75, color: "#333", margin: "0 0 1rem" }}>
           Parte por la pregunta que más se parece a la tuya. Si dudas entre dos, lee las dos: ansiedad y
-          estrés se tocan, y lo mismo pasa con el duelo y el ánimo bajo. Quédate con los criterios, no con una
+          estrés se tocan, y lo mismo pasa con el duelo y el ánimo bajo. Si la duda es el ánimo,{" "}
+          <Link href="/preguntas/senales-de-depresion" style={{ color: "#111", textDecoration: "underline" }}>
+            cómo saber si tengo depresión
+          </Link>{" "}
+          lista señales sin poner un diagnóstico. Quédate con los criterios, no con una
           etiqueta puesta a la rápida.
         </p>
         <p style={{ fontSize: "1.0625rem", lineHeight: 1.75, color: "#333", margin: "0 0 1rem" }}>

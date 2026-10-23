@@ -220,6 +220,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
   {
     cluster: "guias",
     slug: "comunicacion-en-pareja",
+    updated: "2026-10-23",
     navLabel: "Comunicación en pareja",
     title: "Comunicación en pareja y ciclos de discusión",
     h1: "Comunicación en pareja: cuando la pelea se repite",
@@ -265,7 +266,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
         heading: "Cuándo el patrón pide otra mirada",
         paragraphs: [
           "Tiene sentido pedir ayuda si el ciclo se repite cada semana, si uno de los dos ya no quiere hablar, o si la conversación incluye desprecio, control o miedo. Esta guía solo nombra el circuito. No dice quién tiene la razón ni qué debería hacer tu pareja.",
-          "El estilo de apego a veces explica por qué uno insiste y el otro se cierra. Esa lectura está en otra guía. La página de terapia de pareja en Chillán describe la atención local, que es otra intención: aquí el objetivo es entender la pelea.",
+          "El estilo de apego a veces explica por qué uno insiste y el otro se cierra. Esa lectura está en la guía de [estilos de apego en adultos](/guias/estilos-de-apego). La página de terapia de pareja en Chillán describe la atención local, que es otra intención: aquí el objetivo es entender la pelea.",
         ],
       },
     ],
@@ -452,6 +453,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
   {
     cluster: "guias",
     slug: "burnout-laboral",
+    updated: "2026-10-23",
     navLabel: "Burnout laboral",
     title: "Burnout laboral: qué es y cómo reconocerlo",
     h1: "Qué es el burnout laboral",
@@ -491,7 +493,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
         heading: "Un orden para revisarlo",
         paragraphs: [
           "Anota carga real de la semana, horas de desconexión y una tarea que podrías soltar o delegar. Después mira un límite chico: no responder después de cierta hora, o pedir una prioridad en vez de aceptar tres.",
-          "Si el lugar no permite ningún límite y tu salud ya se quebró, la conversación deja de ser de hábitos y pasa a ser de riesgo laboral y de apoyo médico. Un texto no decide esa renuncia por ti.",
+          "Si el lugar no permite ningún límite y tu salud ya se quebró, la conversación deja de ser de hábitos y pasa a ser de riesgo laboral y de apoyo médico. Un texto no decide esa renuncia por ti. La ficha local, distinta de esta guía, es el [tratamiento del burnout en Chillán](/tratamiento-burnout-chillan).",
         ],
       },
     ],
@@ -595,6 +597,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
   {
     cluster: "guias",
     slug: "emocion-y-comida",
+    updated: "2026-10-23",
     navLabel: "Emoción y comida",
     title: "Emoción y comida: cuando comes por malestar",
     h1: "Cuando comes para calmar una emoción",
@@ -633,7 +636,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       {
         heading: "Cuándo esto se queda chico",
         paragraphs: [
-          "Si vomitas, usas laxantes, haces ejercicio para castigarte o el día se organiza alrededor de la comida y el cuerpo, esto supera una guía de hábitos. Los trastornos de la conducta alimentaria se evalúan con profesionales de salud, no con un artículo.",
+          "Si vomitas, usas laxantes, haces ejercicio para castigarte o el día se organiza alrededor de la comida y el cuerpo, esto supera una guía de hábitos. Los trastornos de la conducta alimentaria se evalúan con profesionales de salud, no con un artículo. En Chillán, anorexia, bulimia y atracón están en la página de [trastornos alimenticios](/psicologo-trastornos-alimenticios-chillan).",
           "Si el comer aparece junto con un ánimo muy bajo o con ansiedad que ya no te deja funcionar, mira también esas páginas del sitio. El alimento puede ser la parte visible de otra cosa.",
         ],
       },
@@ -665,6 +668,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
   {
     cluster: "guias",
     slug: "regulacion-emocional",
+    updated: "2026-10-23",
     navLabel: "Regulación emocional",
     title: "Regulación emocional: qué es y qué puedes practicar",
     h1: "Qué es la regulación emocional",
@@ -704,7 +708,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
         heading: "Cómo practicar sin un programa de ocho semanas",
         paragraphs: [
           "Elige una situación repetida, por ejemplo el correo de la jefatura. Anota emoción, impulso y qué hiciste. Al día siguiente cambia solo el tercer paso. Una semana de ese registro enseña más que una lista larga de técnicas.",
-          "Si la emoción es tan intensa que no hay ventana, o si viene con ideas de hacerte daño, esta práctica se queda corta. Ahí corresponde apoyo de otra persona, no más fuerza de voluntad.",
+          "Si la emoción es tan intensa que no hay ventana, o si viene con ideas de hacerte daño, esta práctica se queda corta. Ahí corresponde apoyo de otra persona, no más fuerza de voluntad. Si además los vínculos se vuelven el centro del malestar y las emociones cambian muy rápido, la ficha de atención es [trastorno límite de la personalidad en Chillán](/tratamiento-tlp-chillan). Esta guía no pone ese diagnóstico.",
         ],
       },
     ],
@@ -1090,7 +1094,7 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "duelo-o-depresion",
-    updated: "2026-10-20",
+    updated: "2026-10-23",
     navLabel: "Duelo o depresión",
     title: "Duelo o depresión: cómo distinguirlos",
     h1: "¿Es duelo o depresión?",
@@ -1109,7 +1113,7 @@ const QUESTION_PAGES: InfoPage[] = [
       {
         heading: "Cuándo se parece más a depresión",
         paragraphs: [
-          "Cuando casi nada genera interés, cuando te criticas de forma constante, cuando el cuerpo se frena durante semanas y la pena ya no se organiza alrededor del recuerdo sino de una sensación de vacío general. También cuando aparecen ideas de que no vales o de que otros estarían mejor sin ti.",
+          "Cuando casi nada genera interés, cuando te criticas de forma constante, cuando el cuerpo se frena durante semanas y la pena ya no se organiza alrededor del recuerdo sino de una sensación de vacío general. También cuando aparecen ideas de que no vales o de que otros estarían mejor sin ti. Cómo mirar ánimo, interés y energía sin un test está en [cómo saber si tengo depresión](/preguntas/senales-de-depresion). Si el peso es la culpa y no solo la pena, la ficha es [sentimiento de culpa en Chillán](/psicologo-sentimiento-culpa-chillan).",
           "Esas ideas no son una parte normal que haya que aguantar en silencio. Aunque hayan empezado con una pérdida, merecen una evaluación.",
         ],
         bullets: [
@@ -2090,12 +2094,6 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
     { href: "/guias", label: "Guías" },
     { href: "/preguntas", label: "Preguntas" },
   ],
-  "/psicologo-centro-chillan": [
-    { href: "/primera-consulta-psicologo-chillan", label: "Qué esperar de la primera consulta" },
-    { href: "/psicologo-adulto-chillan", label: "Psicólogo para adultos" },
-    { href: "/guias", label: "Guías" },
-    { href: "/preguntas", label: "Preguntas" },
-  ],
   "/psicologo-crisis-de-panico-chillan": [
     { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer en un ataque de pánico" },
     { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
@@ -2118,10 +2116,6 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
     { href: "/preguntas", label: "Preguntas" },
     { href: "/guias/estilos-de-apego", label: "Guía: estilos de apego" },
     { href: "/preguntas/que-es-el-apego-ansioso", label: "Qué es el apego ansioso" },
-    { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
-  ],
-  "/psicologo-matrimonial-chillan": [
-    { href: "/guias/estilos-de-apego", label: "Guía: estilos de apego" },
     { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
   ],
   "/terapia-celos-chillan": [

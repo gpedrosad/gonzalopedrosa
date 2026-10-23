@@ -70,6 +70,11 @@ const parejaFAQs = [
     answer:
       "Puedes comenzar solo/a. A veces trabajar individualmente sobre la relación genera cambios que motivan a la otra persona a sumarse después.",
   },
+  {
+    question: "¿Atiendes matrimonios de muchos años?",
+    answer:
+      "Sí. La misma atención cubre matrimonios recién casados y parejas con décadas de convivencia. Los temas cambian. El espacio sigue siendo para los dos.",
+  },
 ];
 
 const faqSchema = getPageFAQSchema(parejaFAQs);
@@ -326,6 +331,42 @@ export default function TerapiaParejaChillanPage() {
       <section style={{ marginBottom: "3rem" }}>
         <h2
           style={{
+            fontSize: "1.35rem",
+            fontWeight: 600,
+            letterSpacing: "-0.02em",
+            marginBottom: "0.75rem",
+            lineHeight: 1.3,
+          }}
+        >
+          Si están casados
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
+          La terapia de pareja y la que antes se llamaba matrimonial son la
+          misma atención. Cubre novios, convivientes y matrimonios. En un
+          matrimonio de años suelen aparecer el desgaste de la convivencia, la
+          plata que tensiona la casa, la crianza, la intimidad y una crisis
+          después de la jubilación o cuando los hijos se van.
+        </p>
+        <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
+          Venir no obliga a “salvar” el matrimonio. También puede ordenar una
+          separación respetuosa si los dos lo ven así. La sesión es para los
+          cónyuges. Si el tema son los hijos de forma directa, se mira aparte:
+          la{" "}
+          <Link href="/orientacion-padres-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+            orientación para padres
+          </Link>{" "}
+          es otra página. Los estilos de búsqueda de cercanía están en la guía
+          de{" "}
+          <Link href="/guias/estilos-de-apego" style={{ color: "#000", textDecoration: "underline" }}>
+            estilos de apego
+          </Link>
+          .
+        </p>
+      </section>
+
+      <section style={{ marginBottom: "3rem" }}>
+        <h2
+          style={{
             fontSize: "0.75rem",
             fontWeight: 600,
             textTransform: "uppercase",
@@ -436,6 +477,30 @@ export default function TerapiaParejaChillanPage() {
               Puedes comenzar solo/a. A veces trabajar individualmente sobre la
               relación genera cambios que motivan a la otra persona a sumarse
               después.
+            </p>
+          </details>
+
+          <details
+            style={{
+              padding: "1rem",
+              border: "1px solid #eaeaea",
+              borderRadius: "12px",
+            }}
+          >
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
+              ¿Atiendes matrimonios de muchos años?
+            </summary>
+            <p
+              style={{
+                marginTop: "0.75rem",
+                color: "#666",
+                lineHeight: 1.6,
+                fontSize: "0.9375rem",
+              }}
+            >
+              Sí. La misma atención cubre matrimonios recién casados y parejas
+              con décadas de convivencia. Los temas cambian. El espacio sigue
+              siendo para los dos.
             </p>
           </details>
         </div>

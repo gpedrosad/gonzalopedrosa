@@ -7,24 +7,24 @@ import { getTwitterDescription } from "@/lib/schemas";
 import { RelatedReading } from "@/app/components/RelatedReading";
 
 export const metadata: Metadata = {
-  title: "Psicólogo para trastornos alimenticios en Chillán",
+  title: "Trastornos alimenticios en Chillán: anorexia y bulimia",
   description:
-    "Psicólogo especializado en trastornos alimenticios en Chillán. Tratamiento para anorexia, bulimia, atracones y relación problemática con la comida.",
+    "Anorexia, bulimia, atracón y otras relaciones con la comida en Chillán. Señales de alerta y cuándo sumar nutrición o psiquiatría. No es una dieta.",
   alternates: {
     canonical: "/psicologo-trastornos-alimenticios-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Psicólogo para trastornos alimenticios en Chillán",
-    description: "Psicólogo especializado en trastornos alimenticios en Chillán. Tratamiento para anorexia, bulimia, atracones y relación problemática con la comida.",
+    title: "Trastornos alimenticios en Chillán: anorexia y bulimia",
+    description: "Anorexia, bulimia, atracón y otras relaciones con la comida en Chillán. Señales de alerta y cuándo sumar nutrición o psiquiatría. No es una dieta.",
     url: "https://www.gonzalopedrosa.cl/psicologo-trastornos-alimenticios-chillan",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Retrato de Gonzalo Pedrosa, psicólogo clínico" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo Trastornos Alimenticios en Chillán",
-    description: getTwitterDescription("Psicólogo especializado en trastornos alimenticios en Chillán. Tratamiento para anorexia, bulimia, atracones y relación problemática con la comida."),
+    title: "Trastornos alimenticios en Chillán: anorexia y bulimia",
+    description: getTwitterDescription("Anorexia, bulimia, atracón y otras relaciones con la comida en Chillán. Señales de alerta y cuándo sumar nutrición o psiquiatría. No es una dieta."),
   },
 };
 
@@ -42,9 +42,14 @@ const psicologo_trastornos_alimenticios_chillanFAQs = [
       "Generalmente sí, especialmente en casos más severos. El trabajo conjunto psicólogo-nutricionista es lo más efectivo.",
   },
   {
-    question: "¿Se puede recuperar completamente?",
+    question: "¿Qué pasa si hay una recaída?",
     answer:
-      "Sí. Muchas personas se recuperan completamente y desarrollan una relación sana con la comida y su cuerpo. Requiere compromiso pero es posible.",
+      "Una recaída puede formar parte del proceso. Lo útil es retomar la conversación y mirar qué pasó, sin tratarla como un fracaso cerrado.",
+  },
+  {
+    question: "¿Cuánto dura el proceso?",
+    answer:
+      "No se mide en una sesión. En anorexia y bulimia suele hablarse de meses, a veces más. No hay un plazo único en esta página.",
   },
 ];
 
@@ -60,7 +65,7 @@ export default function PsicologoTrastornosAlimenticiosChillanPage() {
         breadcrumbItems={breadcrumbItems}
         faqs={psicologo_trastornos_alimenticios_chillanFAQs}
         serviceType="Psicología Trastornos Alimenticios"
-        serviceDescription={"Psicólogo especializado en trastornos alimenticios en Chillán. Tratamiento para anorexia, bulimia, atracones y relación problemática con la comida."}
+        serviceDescription={"Anorexia, bulimia, atracón y otras relaciones con la comida en Chillán. Señales de alerta. No es una dieta."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <Breadcrumb items={breadcrumbItems} />
@@ -75,22 +80,59 @@ export default function PsicologoTrastornosAlimenticiosChillanPage() {
       <p style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.75rem" }}>Chillán, Chile</p>
 
       <h1 style={{ fontSize: "2.5rem", fontWeight: 700, letterSpacing: "-0.03em", marginBottom: "1rem", lineHeight: 1.1 }}>
-        Psicólogo Trastornos Alimenticios en Chillán
+        Trastornos alimenticios en Chillán: anorexia, bulimia y atracón
       </h1>
 
       <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "3rem", lineHeight: 1.6 }}>
-        Los trastornos de la conducta alimentaria van más allá de la comida.
-        Afectan tu relación contigo mismo/a, tu cuerpo y tus emociones. El
-        tratamiento psicológico es fundamental para la recuperación.
+        Anorexia, bulimia, atracón y otras relaciones con la comida caben en
+        esta página. No es una dieta ni una meta de peso. Cómo se come para
+        calmar una emoción, sin un plan alimentario, está en la guía de{" "}
+        <Link href="/guias/emocion-y-comida" style={{ color: "#000", textDecoration: "underline" }}>
+          emoción y comida
+        </Link>
+        . La{" "}
+        <Link href="/psicologo-obesidad-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+          obesidad
+        </Link>{" "}
+        y la{" "}
+        <Link href="/evaluacion-bariatrica-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+          evaluación para cirugía
+        </Link>{" "}
+        están en otras fichas.
       </p>
 
       <section style={{ padding: "1.25rem", backgroundColor: "#fef3c7", borderRadius: "12px", marginBottom: "2.5rem", border: "1px solid #fcd34d" }}>
         <p style={{ fontWeight: 600, color: "#92400e", marginBottom: "0.5rem", fontSize: "0.9375rem" }}>⚠️ Importante</p>
         <p style={{ color: "#78350f", fontSize: "0.875rem", lineHeight: 1.6 }}>
-          Los trastornos alimenticios severos requieren tratamiento
-          multidisciplinario (psicólogo, psiquiatra, nutricionista). Puedo
-          coordinar con tu equipo médico.
+          Los trastornos alimenticios severos se miran con más de un profesional
+          (psicología, psiquiatría, nutrición). Si hay riesgo vital, como una
+          desnutrición severa o conductas purgativas extremas, hace falta
+          atención médica urgente. Salud Responde: 600 360 7777.
         </p>
+      </section>
+
+      <section style={{ marginBottom: "3rem" }}>
+        <h2 style={{ fontSize: "1.35rem", fontWeight: 600, letterSpacing: "-0.02em", marginBottom: "0.75rem", lineHeight: 1.3 }}>
+          Señales de anorexia y de bulimia
+        </h2>
+        <div style={{ display: "grid", gap: "1rem" }}>
+          <div style={{ padding: "1rem", backgroundColor: "#fafafa", borderRadius: "8px" }}>
+            <p style={{ fontWeight: 600, marginBottom: "0.5rem", color: "#000" }}>Anorexia</p>
+            <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.25rem" }}>
+              {["Restricción severa de comida", "Miedo intenso a engordar", "Verse con más peso del que marca la balanza", "Ejercicio que ya no se puede parar"].map((item) => (
+                <li key={item} style={{ fontSize: "0.875rem", color: "#666" }}>• {item}</li>
+              ))}
+            </ul>
+          </div>
+          <div style={{ padding: "1rem", backgroundColor: "#fafafa", borderRadius: "8px" }}>
+            <p style={{ fontWeight: 600, marginBottom: "0.5rem", color: "#000" }}>Bulimia</p>
+            <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.25rem" }}>
+              {["Atracones de comida", "Vómitos autoprovocados", "Uso de laxantes o diuréticos", "Ayunos o ejercicio para compensar"].map((item) => (
+                <li key={item} style={{ fontSize: "0.875rem", color: "#666" }}>• {item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section style={{ marginBottom: "3rem" }}>
@@ -157,11 +199,18 @@ export default function PsicologoTrastornosAlimenticiosChillanPage() {
           </details>
 
           <details style={{ padding: "1rem", border: "1px solid #eaeaea", borderRadius: "12px" }}>
-            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>¿Se puede recuperar completamente?</summary>
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>¿Qué pasa si hay una recaída?</summary>
             <p style={{ marginTop: "0.75rem", color: "#666", lineHeight: 1.6, fontSize: "0.9375rem" }}>
-              Sí. Muchas personas se recuperan completamente y desarrollan una
-              relación sana con la comida y su cuerpo. Requiere compromiso pero
-              es posible.
+              Una recaída puede formar parte del proceso. Lo útil es retomar la
+              conversación y mirar qué pasó, sin tratarla como un fracaso cerrado.
+            </p>
+          </details>
+
+          <details style={{ padding: "1rem", border: "1px solid #eaeaea", borderRadius: "12px" }}>
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>¿Cuánto dura el proceso?</summary>
+            <p style={{ marginTop: "0.75rem", color: "#666", lineHeight: 1.6, fontSize: "0.9375rem" }}>
+              No se mide en una sesión. En anorexia y bulimia suele hablarse de
+              meses, a veces más. No hay un plazo único en esta página.
             </p>
           </details>
         </div>
@@ -183,7 +232,6 @@ export default function PsicologoTrastornosAlimenticiosChillanPage() {
         <p style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.75rem" }}>Servicios relacionados</p>
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {[
-            { label: "Anorexia y bulimia", href: "/tratamiento-anorexia-bulimia-chillan" },
             { label: "Obesidad", href: "/psicologo-obesidad-chillan" },
             { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },

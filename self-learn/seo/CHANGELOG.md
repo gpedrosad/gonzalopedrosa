@@ -2,6 +2,10 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-10-23
+
+- Lote de duplicados: cinco redirecciones permanentes (certificado laboral, matrimonial, anorexia y bulimia, centro, estrés académico) con el contenido útil fundido en la página de destino. Intención de adultos, ERP para el TOC y enlaces de descubrimiento hacia URLs que Google aún no reconoce. Detalle: [lote](../../docs/seo-lote-2026-10-23.md).
+
 ## 2026-10-22
 
 - Lote EMDR, TCC y abuso en la infancia: títulos de las tres fichas de atención, sección de proceso en TCC, FAQ bariátrica en obesidad (el servicio ya existía) y una pregunta nueva sobre terapia tras abuso en la infancia. Enlaces desde páginas con impresiones hacia las guías que Google aún no indexa. Detalle: [lote](../../docs/seo-lote-2026-10-22.md).

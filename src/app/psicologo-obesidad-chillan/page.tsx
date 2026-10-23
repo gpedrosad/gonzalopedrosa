@@ -160,12 +160,7 @@ export default function PsicologoObesidadChillanPage() {
             {
               label: "Trastornos alimenticios",
               href: "/psicologo-trastornos-alimenticios-chillan",
-              desc: "Atracones, restricción y relación con la comida",
-            },
-            {
-              label: "Anorexia y bulimia",
-              href: "/tratamiento-anorexia-bulimia-chillan",
-              desc: "Tratamiento psicológico especializado",
+              desc: "Anorexia, bulimia, atracones y relación con la comida",
             },
             {
               label: "Ansiedad",
@@ -273,7 +268,6 @@ export default function PsicologoObesidadChillanPage() {
           {[
             { label: "Evaluación bariátrica", href: "/evaluacion-bariatrica-chillan" },
             { label: "Trastornos alimenticios", href: "/psicologo-trastornos-alimenticios-chillan" },
-            { label: "Anorexia y bulimia", href: "/tratamiento-anorexia-bulimia-chillan" },
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },
           ].map((item, i) => (

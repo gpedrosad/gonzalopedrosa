@@ -48,8 +48,7 @@ export const ORGANIC_SERVICE_GROUPS = [
       ["/psicologo-toma-decisiones-chillan", "Dificultad para tomar decisiones"],
       ["/psicologo-timidez-chillan", "Timidez"],
       ["/psicologo-tdah-adulto-chillan", "TDAH en adultos"],
-      ["/psicologo-estudiantes-chillan", "Atención para estudiantes"],
-      ["/psicologo-estres-academico-chillan", "Estrés académico"],
+      ["/psicologo-estudiantes-chillan", "Estudiantes y estrés académico"],
       ["/psicologo-procrastinacion-estudios-chillan", "Procrastinación en los estudios"],
       ["/tratamiento-tlp-chillan", "Trastorno límite de la personalidad"],
       ["/psicologo-bipolaridad-chillan", "Acompañamiento en bipolaridad"],
@@ -60,8 +59,7 @@ export const ORGANIC_SERVICE_GROUPS = [
   {
     title: "Pareja, vínculos y familia",
     links: [
-      ["/terapia-de-pareja-chillan", "Terapia de pareja"],
-      ["/psicologo-matrimonial-chillan", "Psicólogo matrimonial"],
+      ["/terapia-de-pareja-chillan", "Terapia de pareja y matrimonial"],
       ["/terapia-celos-chillan", "Celos y desconfianza"],
       ["/psicologo-ruptura-amorosa-chillan", "Ruptura amorosa"],
       ["/psicologo-dependencia-emocional-chillan", "Dependencia emocional"],
@@ -92,8 +90,7 @@ export const ORGANIC_SERVICE_GROUPS = [
   {
     title: "Alimentación y salud",
     links: [
-      ["/psicologo-trastornos-alimenticios-chillan", "Trastornos de la conducta alimentaria"],
-      ["/tratamiento-anorexia-bulimia-chillan", "Anorexia y bulimia"],
+      ["/psicologo-trastornos-alimenticios-chillan", "Trastornos alimenticios, anorexia y bulimia"],
       ["/psicologo-obesidad-chillan", "Acompañamiento psicológico en obesidad"],
       ["/evaluacion-bariatrica-chillan", "Evaluación psicológica bariátrica"],
       ["/psicologo-fibromialgia-chillan", "Acompañamiento en fibromialgia"],
@@ -103,15 +100,13 @@ export const ORGANIC_SERVICE_GROUPS = [
     title: "Informes y certificados",
     links: [
       ["/informe-psicologico-chillan", "Informe psicológico"],
-      ["/certificado-salud-mental-chillan", "Certificado de salud mental"],
-      ["/certificado-salud-mental-trabajo-chillan", "Certificado de salud mental para trabajo"],
+      ["/certificado-salud-mental-chillan", "Certificado de salud mental, también laboral"],
     ],
   },
   {
     title: "Consulta en Chillán, boletas y referencias",
     links: [
       ["/psicologo-particular-chillan", "Consulta psicológica particular"],
-      ["/psicologo-centro-chillan", "Consulta en el centro de Chillán"],
       ["/psicologo-chillan-viejo", "Atención para personas de Chillán Viejo"],
       ["/psicologo-isapre-chillan", "Atención y boleta para Isapre"],
       ["/psicologo-reembolso-isapre-chillan", "Cómo solicitar reembolso Isapre"],

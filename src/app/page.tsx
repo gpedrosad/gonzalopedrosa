@@ -43,7 +43,7 @@ const homeFAQs = [
   {
     question: "¿Atiendes solo en Chillán?",
     answer:
-      "Tengo consulta presencial en Chillán y también sesiones por videollamada para personas de otras comunas o regiones de Chile.",
+      "La hora presencial es en el centro de Chillán, de lunes a viernes, en la mañana o en la tarde. La zona tiene transporte público y estacionamiento cercano. La dirección exacta se entrega al coordinar. También hay sesiones por videollamada para otras comunas o regiones de Chile.",
   },
   {
     question: "¿Cuánto cuesta una sesión?",
@@ -424,6 +424,39 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </section>
+
+        <section style={{ marginBottom: "3rem" }}>
+          <h2
+            style={{
+              fontSize: "1.35rem",
+              fontWeight: 600,
+              letterSpacing: "-0.02em",
+              marginBottom: "0.75rem",
+              lineHeight: 1.3,
+            }}
+          >
+            La hora presencial en el centro de Chillán
+          </h2>
+          <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
+            Si buscas psicólogo en el centro de Chillán, la atención presencial
+            es en una zona céntrica, con transporte público y estacionamiento
+            cercano. La dirección exacta se entrega al coordinar la hora. El
+            horario es de lunes a viernes, mañana o tarde. Puedes alternar esa
+            hora con{" "}
+            <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+              videollamada
+            </Link>
+            . La boleta para reembolso Isapre se explica en{" "}
+            <Link href="/psicologo-reembolso-isapre-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+              cómo pedir el reembolso
+            </Link>
+            . Qué se conversa la primera vez está en{" "}
+            <Link href="/primera-consulta-psicologo-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+              la primera consulta
+            </Link>
+            .
+          </p>
         </section>
 
         {/* Preguntas frecuentes */}

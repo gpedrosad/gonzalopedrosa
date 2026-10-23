@@ -83,6 +83,31 @@ const nextConfig: NextConfig = {
         destination: "/psicologo-adulto-chillan",
         permanent: true,
       },
+      {
+        source: "/certificado-salud-mental-trabajo-chillan",
+        destination: "/certificado-salud-mental-chillan",
+        permanent: true,
+      },
+      {
+        source: "/psicologo-matrimonial-chillan",
+        destination: "/terapia-de-pareja-chillan",
+        permanent: true,
+      },
+      {
+        source: "/tratamiento-anorexia-bulimia-chillan",
+        destination: "/psicologo-trastornos-alimenticios-chillan",
+        permanent: true,
+      },
+      {
+        source: "/psicologo-centro-chillan",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/psicologo-estres-academico-chillan",
+        destination: "/psicologo-estudiantes-chillan",
+        permanent: true,
+      },
     ];
   },
   // Headers de seguridad (CSP se maneja en middleware.ts con nonce)

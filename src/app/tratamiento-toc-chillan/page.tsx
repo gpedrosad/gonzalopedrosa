@@ -7,17 +7,17 @@ import { SITE_URL, getTwitterDescription } from "@/lib/schemas";
 import { RelatedReading } from "@/app/components/RelatedReading";
 
 const description =
-  "La terapia ERP para el TOC es exposición con prevención de respuesta: te acercas al miedo y no haces el ritual. Cómo funciona, en Chillán u online.";
+  "Terapia ERP para el TOC, también llamada ERP TOC: te acercas al disparador y no haces el ritual. Se practica en Chillán u online, sin un plazo de sesiones.";
 
 export const metadata: Metadata = {
-  title: "Qué es la terapia ERP para el TOC y cómo se practica",
+  title: "Terapia ERP para el TOC: qué es y cómo se practica",
   description,
   alternates: {
     canonical: "/tratamiento-toc-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Qué es la terapia ERP para el TOC y cómo se practica",
+    title: "Terapia ERP para el TOC: qué es y cómo se practica",
     description,
     url: `${SITE_URL}/tratamiento-toc-chillan`,
     type: "website",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Qué es la terapia ERP para el TOC y cómo se practica",
+    title: "Terapia ERP para el TOC: qué es y cómo se practica",
     description: getTwitterDescription(description),
   },
 };
@@ -130,7 +130,7 @@ export default function TratamientoTocChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Qué es la terapia ERP para el TOC
+        Terapia ERP para el TOC
       </h1>
 
       <p
@@ -189,23 +189,32 @@ export default function TratamientoTocChillanPage() {
       <section style={{ marginBottom: "3rem" }}>
         <h2
           style={{
-            fontSize: "0.75rem",
+            fontSize: "1.35rem",
             fontWeight: 600,
-            textTransform: "uppercase",
-            letterSpacing: "0.1em",
-            color: "#999",
-            marginBottom: "1rem",
+            letterSpacing: "-0.02em",
+            marginBottom: "0.75rem",
+            lineHeight: 1.3,
           }}
         >
-          Terapia ERP para TOC
+          ERP para el TOC
         </h2>
         <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
-          La <strong>terapia ERP</strong> (Exposure and Response Prevention),
+          Si la búsqueda es ERP TOC o terapia ERP para el TOC, el método es
+          este: exposición con prevención de respuesta. La{" "}
+          <strong>terapia ERP</strong> (Exposure and Response Prevention),
           conocida en español como <strong>EPR</strong>, es el tratamiento con
           más evidencia para el trastorno obsesivo-compulsivo. No se trata de
           “dejar de pensar”: se trata de enfrentar el disparador y{" "}
           <em>no</em> hacer el ritual, hasta que el cerebro aprende que la
-          amenaza baja sin compulsión.
+          amenaza baja sin compulsión. El paso a paso está en{" "}
+          <Link href="/preguntas/que-es-la-erp-para-el-toc" style={{ color: "#000", textDecoration: "underline" }}>
+            qué es la ERP para el TOC
+          </Link>
+          . La diferencia entre obsesión y compulsión está en{" "}
+          <Link href="/preguntas/obsesiones-y-compulsiones" style={{ color: "#000", textDecoration: "underline" }}>
+            obsesiones y compulsiones
+          </Link>
+          .
         </p>
         <div style={{ display: "grid", gap: "0.75rem" }}>
           {[
