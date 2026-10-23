@@ -8,17 +8,17 @@ import { RelatedReading } from "@/app/components/RelatedReading";
 import { getTwitterDescription } from "@/lib/schemas";
 
 const description =
-  "Qué temas se trabajan con adultos y hombres en Chillán: ansiedad, ánimo, estrés y crisis. No es un ranking ni la guía para elegir psicólogo.";
+  "Psicólogo para adultos en Chillán: ansiedad, ánimo, relaciones, duelo y trabajo. El primer proceso parte por el contexto, sin diagnóstico ni plazo.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo para adultos en Chillán: qué temas se trabajan",
+  title: "Psicólogo para adultos en Chillán: temas de consulta",
   description,
   alternates: {
     canonical: "/psicologo-adulto-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Psicólogo para adultos en Chillán: qué temas se trabajan",
+    title: "Psicólogo para adultos en Chillán: temas de consulta",
     description,
     url: "https://www.gonzalopedrosa.cl/psicologo-adulto-chillan",
     type: "website",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo para adultos en Chillán: qué temas se trabajan",
+    title: "Psicólogo para adultos en Chillán: temas de consulta",
     description: getTwitterDescription(description),
   },
 };
@@ -121,7 +121,7 @@ export default function PsicologoAdultoChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo para adultos en Chillán: qué temas se trabajan
+        Psicólogo para adultos en Chillán: temas de consulta
       </h1>
 
       <p
@@ -132,11 +132,57 @@ export default function PsicologoAdultoChillanPage() {
           lineHeight: 1.6,
         }}
       >
-        Atiendo adultos y hombres en Chillán (y online) por ansiedad, estrés,
-        depresión o una crisis vital. Si buscas psicólogo para hombres, este es
-        el espacio: TCC, sin recetas genéricas, con un plan claro desde la
-        primera sesión.
+        Si buscas psicólogo para adultos en Chillán, aquí ves qué temas se
+        trabajan y cómo suele partir un proceso. También cubre la búsqueda de
+        psicólogo para hombres. El enfoque es cognitivo-conductual, presencial
+        u online. No es un ranking de profesionales.
       </p>
+
+      <section style={{ marginBottom: "3rem" }}>
+        <h2 style={{ fontSize: "1.35rem", fontWeight: 600, letterSpacing: "-0.02em", marginBottom: "0.75rem", lineHeight: 1.3 }}>
+          Qué temas traen los adultos
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
+          En la adultez la consulta suele mezclar más de un tema: ansiedad que
+          no baja al terminar la jornada, un ánimo plano durante semanas, una
+          relación que se repite, un duelo o la sensación de estar estancado en
+          el trabajo. No es una lista de diagnósticos. El ánimo, sin un test,
+          está en{" "}
+          <Link href="/preguntas/senales-de-depresion" style={{ color: "#000", textDecoration: "underline" }}>
+            cómo saber si tengo depresión
+          </Link>
+          . La diferencia entre alarma y exigencia está en{" "}
+          <Link href="/preguntas/ansiedad-o-estres" style={{ color: "#000", textDecoration: "underline" }}>
+            ansiedad o estrés
+          </Link>
+          .
+        </p>
+        <h2 style={{ fontSize: "1.35rem", fontWeight: 600, letterSpacing: "-0.02em", marginBottom: "0.75rem", lineHeight: 1.3 }}>
+          Cómo suele ir un primer proceso
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
+          No necesitas llegar con un diagnóstico ni con el relato ordenado. En
+          la primera conversación se mira el contexto y se acuerda qué quieres
+          cambiar. La frecuencia de partida suele ser semanal y después puede
+          espaciarse. El detalle de esa hora está en{" "}
+          <Link href="/primera-consulta-psicologo-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+            qué pasa en la primera consulta
+          </Link>
+          . Cada cuánto seguir está en{" "}
+          <Link href="/preguntas/cada-cuanto-ir-al-psicologo" style={{ color: "#000", textDecoration: "underline" }}>
+            cada cuánto ir al psicólogo
+          </Link>
+          . Si dudas entre psicólogo y psiquiatra, la{" "}
+          <Link href="/guias/psicologo-o-psiquiatra" style={{ color: "#000", textDecoration: "underline" }}>
+            guía
+          </Link>{" "}
+          los separa. Cuándo tiene sentido pedir compañía está en{" "}
+          <Link href="/cuando-ir-al-psicologo-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+            cuándo ir al psicólogo
+          </Link>
+          .
+        </p>
+      </section>
 
       <section style={{ marginBottom: "3rem" }}>
         <h2

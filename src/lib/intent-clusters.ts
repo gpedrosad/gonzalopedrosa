@@ -26,7 +26,7 @@ export const COUPLES_CLUSTER: IntentCluster = {
   hubHref: "/terapia-de-pareja-chillan",
   hubLabel: "Terapia de pareja Chillán",
   hubSectionTitle: "Terapia de pareja y temas relacionados en Chillán",
-  hubSectionSubtitle: "Consulta información sobre comunicación, matrimonio y celos",
+  hubSectionSubtitle: "Comunicación, celos y lo que cambia cuando la pareja está casada",
   satelliteSectionTitle: "Más sobre terapia de pareja",
   pages: [
     {
@@ -36,14 +36,6 @@ export const COUPLES_CLUSTER: IntentCluster = {
       cardDescription:
         "Comunicación, crisis, distancia emocional y primeros pasos para volver a conectar.",
       role: "hub",
-    },
-    {
-      href: "/psicologo-matrimonial-chillan",
-      label: "Matrimonial",
-      shortTitle: "Psicólogo matrimonial Chillán",
-      cardDescription:
-        "Acompañamiento para matrimonios en crisis o que quieren fortalecer el vínculo.",
-      role: "satellite",
     },
     {
       href: "/terapia-celos-chillan",
@@ -147,7 +139,6 @@ export const CLUSTER_LEADER_ROUTES = new Set([
 
 /** Satélites de cluster → prioridad sitemap reducida. */
 export const CLUSTER_SATELLITE_ROUTES = new Set([
-  "/psicologo-matrimonial-chillan",
   "/terapia-celos-chillan",
   "/terapia-online-vs-presencial-chillan",
 ]);

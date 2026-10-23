@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { JsonLd } from "@/app/components/JsonLd";
@@ -13,6 +14,35 @@ import {
   type InfoPage,
 } from "@/lib/informational-content";
 import { getArticleSchema, getBreadcrumbSchema, getPageFAQSchema, getTwitterDescription } from "@/lib/schemas";
+
+const LINK_RE = /\[([^\]]+)\]\((\/[^)\s]+)\)/g;
+
+function RichText({ text }: { text: string }) {
+  const nodes: ReactNode[] = [];
+  const re = new RegExp(LINK_RE);
+  let last = 0;
+  let match: RegExpExecArray | null;
+
+  while ((match = re.exec(text)) !== null) {
+    if (match.index > last) nodes.push(text.slice(last, match.index));
+    const label = match[1];
+    const href = match[2];
+    const blocked = href.startsWith("//") || href.startsWith("/ads") || href.startsWith("/sitelink");
+    if (blocked) {
+      nodes.push(label);
+    } else {
+      nodes.push(
+        <Link key={`${href}-${match.index}`} href={href} style={{ color: "#111", textDecoration: "underline" }}>
+          {label}
+        </Link>,
+      );
+    }
+    last = match.index + match[0].length;
+  }
+
+  if (last < text.length) nodes.push(text.slice(last));
+  return <>{nodes}</>;
+}
 
 const pageStyle = {
   maxWidth: 680,
@@ -96,13 +126,17 @@ export function InformationalArticle({
         <h1 style={{ fontSize: "2rem", lineHeight: 1.2, letterSpacing: "-0.03em", marginBottom: "1rem" }}>
           {page.h1}
         </h1>
-        <p style={{ fontSize: "1.125rem", marginTop: 0 }}>{page.answer}</p>
+        <p style={{ fontSize: "1.125rem", marginTop: 0 }}>
+          <RichText text={page.answer} />
+        </p>
 
         {page.sections.map((section) => (
           <section key={section.heading} style={{ marginTop: "2rem" }}>
             <h2 style={{ fontSize: "1.3rem", lineHeight: 1.3, marginBottom: "0.75rem" }}>{section.heading}</h2>
             {section.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+              <p key={paragraph}>
+                <RichText text={paragraph} />
+              </p>
             ))}
             {section.bullets && (
               <ul>

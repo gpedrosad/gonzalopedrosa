@@ -129,7 +129,13 @@ export default function GuiaFamiliarLudopatiaPage() {
         revisando el correo a escondidas, si los niños escuchan peleas por
         plata todas las semanas o si dejaste de pagar algo básico para cubrir
         un hoyo del juego, el problema ya no es “un hobby”. Es un asunto de la
-        familia, aunque la conducta sea de una sola persona.
+        familia, aunque la conducta sea de una sola persona. Si lo que ves en
+        casa es el alcohol y no el juego, la guía de{" "}
+        <Link href="/guias/familiar-con-problema-de-alcohol">
+          un familiar con problema de alcohol
+        </Link>{" "}
+        recorre otra conducta con la misma pregunta: qué puedes hacer tú y qué
+        no te toca cargar.
       </p>
 
       <h2>Por qué pelear, controlar o prestar plata suele salir mal</h2>

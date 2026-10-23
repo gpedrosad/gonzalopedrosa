@@ -6,24 +6,24 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Psicólogo para Estudiantes en Chillán | Gonzalo Pedrosa",
+  title: "Psicólogo para estudiantes en Chillán: estrés académico",
   description:
-    "Psicólogo para estudiantes universitarios y de enseñanza media en Chillán. Apoyo en ansiedad, estrés académico, procrastinación y orientación vocacional.",
+    "Psicólogo para estudiantes en Chillán: estrés académico, pruebas, procrastinación y dudas de carrera. Sin un diagnóstico ni un plazo de notas.",
   alternates: {
     canonical: "/psicologo-estudiantes-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Psicólogo para Estudiantes en Chillán | Gonzalo Pedrosa",
-    description: "Psicólogo para estudiantes universitarios y de enseñanza media en Chillán. Apoyo en ansiedad, estrés académico, procrastinación y orientación vocacional.",
+    title: "Psicólogo para estudiantes en Chillán: estrés académico",
+    description: "Psicólogo para estudiantes en Chillán: estrés académico, pruebas, procrastinación y dudas de carrera. Sin un diagnóstico ni un plazo de notas.",
     url: "https://www.gonzalopedrosa.cl/psicologo-estudiantes-chillan",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Retrato de Gonzalo Pedrosa, psicólogo clínico" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo para Estudiantes en Chillán",
-    description: getTwitterDescription("Psicólogo para estudiantes universitarios y de enseñanza media en Chillán. Apoyo en ansiedad, estrés académico, procrastinación y orientación vocacion"),
+    title: "Psicólogo para estudiantes en Chillán: estrés académico",
+    description: getTwitterDescription("Psicólogo para estudiantes en Chillán: estrés académico, pruebas, procrastinación y dudas de carrera. Sin un diagnóstico ni un plazo de notas."),
   },
 };
 
@@ -45,6 +45,16 @@ const psicologo_estudiantes_chillanFAQs = [
     answer:
       "Es más común de lo que crees. Muchos estudiantes pasan por momentos difíciles. Que sea común no significa que tengas que aguantarlo solo/a.",
   },
+  {
+    question: "¿No debería poder manejar esto solo/a?",
+    answer:
+      "La presión de estudiar puede superar los recursos de cualquiera. Pedir una conversación es una decisión, no una debilidad.",
+  },
+  {
+    question: "¿La terapia apunta a subir las notas?",
+    answer:
+      "El foco es cómo estás, no un promedio. Al bajar la ansiedad y ordenar el tiempo, algunas personas rinden con menos desgaste. Eso no es una promesa de resultado.",
+  },
 ];
 
 const breadcrumbItems = [
@@ -59,7 +69,7 @@ export default function PsicologoEstudiantesChillanPage() {
         breadcrumbItems={breadcrumbItems}
         faqs={psicologo_estudiantes_chillanFAQs}
         serviceType="Psicología Estudiantes"
-        serviceDescription={"Psicólogo para estudiantes universitarios y de enseñanza media en Chillán. Apoyo en ansiedad, estrés académico, procrastinación y orientación vocacional."}
+        serviceDescription={"Psicólogo para estudiantes en Chillán: estrés académico, pruebas, procrastinación y dudas de carrera. Sin un diagnóstico ni un plazo de notas."}
       />
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "4rem 1.5rem", fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <Breadcrumb items={breadcrumbItems} />
@@ -74,13 +84,13 @@ export default function PsicologoEstudiantesChillanPage() {
       <p style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.75rem" }}>Chillán, Chile</p>
 
       <h1 style={{ fontSize: "2.5rem", fontWeight: 700, letterSpacing: "-0.03em", marginBottom: "1rem", lineHeight: 1.1 }}>
-        Psicólogo para Estudiantes en Chillán
+        Psicólogo para estudiantes en Chillán
       </h1>
 
       <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "3rem", lineHeight: 1.6 }}>
-        La etapa de estudiante puede ser desafiante. Presión académica, dudas
-        vocacionales, relaciones, identidad... La terapia te ayuda a navegar
-        este período con más claridad.
+        La etapa de estudiante puede ser desafiante: estrés académico, pruebas,
+        dudas vocacionales, relaciones e identidad. Esta página describe esos
+        temas. No diagnostica y no pone un plazo de notas.
       </p>
 
       <section style={{ marginBottom: "3rem" }}>
@@ -166,7 +176,66 @@ export default function PsicologoEstudiantesChillanPage() {
               difíciles. Que sea común no significa que tengas que aguantarlo solo/a.
             </p>
           </details>
+
+          <details style={{ padding: "1rem", border: "1px solid #eaeaea", borderRadius: "12px" }}>
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>¿No debería poder manejar esto solo/a?</summary>
+            <p style={{ marginTop: "0.75rem", color: "#666", lineHeight: 1.6, fontSize: "0.9375rem" }}>
+              La presión de estudiar puede superar los recursos de cualquiera.
+              Pedir una conversación es una decisión, no una debilidad.
+            </p>
+          </details>
+
+          <details style={{ padding: "1rem", border: "1px solid #eaeaea", borderRadius: "12px" }}>
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>¿La terapia apunta a subir las notas?</summary>
+            <p style={{ marginTop: "0.75rem", color: "#666", lineHeight: 1.6, fontSize: "0.9375rem" }}>
+              El foco es cómo estás, no un promedio. Al bajar la ansiedad y
+              ordenar el tiempo, algunas personas rinden con menos desgaste.
+              Eso no es una promesa de resultado.
+            </p>
+          </details>
         </div>
+      </section>
+
+      <section style={{ marginBottom: "3rem" }}>
+        <h2 style={{ fontSize: "1.25rem", fontWeight: 650, marginBottom: "0.75rem" }}>
+          Señales de estrés académico
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
+          El estrés académico aparece cuando la carga de estudiar se mete en el
+          sueño, el cuerpo o las ganas de seguir. No es lo mismo que una prueba
+          difícil de una semana. Estas son señales frecuentes:
+        </p>
+        <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem", marginBottom: "1rem" }}>
+          {[
+            "Ansiedad constante por las notas y las evaluaciones",
+            "Problemas de sueño en época de pruebas",
+            "Sensación de ir siempre atrasado o atrasada",
+            "Bloqueos al estudiar o durante un examen",
+            "Cansancio físico y mental",
+            "Pérdida de motivación por la carrera",
+            "Aislarse para estudiar",
+            "Dolor de cabeza o tensión",
+          ].map((item) => (
+            <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem", padding: "0.75rem 1rem", backgroundColor: "#fafafa", borderRadius: "8px", fontSize: "0.9375rem", color: "#444" }}>
+              <span style={{ color: "#000", flexShrink: 0 }}>—</span>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <p style={{ color: "#444", lineHeight: 1.7 }}>
+          Si lo que más pesa es postergar el estudio, la página de{" "}
+          <Link href="/psicologo-procrastinacion-estudios-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+            procrastinación en los estudios
+          </Link>{" "}
+          lo separa. Si sientes que los demás van a descubrir que no sabes
+          tanto como creen, el{" "}
+          <Link href="/psicologo-sindrome-impostor-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+            síndrome del impostor
+          </Link>{" "}
+          tiene su propia ficha. En la sesión se puede hablar de manejo del
+          estrés, ansiedad ante pruebas, organización del tiempo, perfeccionismo
+          y el equilibrio entre estudiar y el resto del día.
+        </p>
       </section>
 
       <section style={{ padding: "2rem", backgroundColor: "#000", borderRadius: "16px", marginBottom: "3rem", textAlign: "center" }}>
@@ -185,7 +254,6 @@ export default function PsicologoEstudiantesChillanPage() {
         <p style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.75rem" }}>Servicios relacionados</p>
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {[
-            { label: "Estrés académico", href: "/psicologo-estres-academico-chillan" },
             { label: "Procrastinación", href: "/psicologo-procrastinacion-estudios-chillan" },
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             { label: "Síndrome impostor", href: "/psicologo-sindrome-impostor-chillan" },

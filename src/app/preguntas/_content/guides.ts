@@ -511,7 +511,7 @@ export const guides: Guide[] = [
       {
         heading: "Las olas que vuelven",
         paragraphs: [
-          "Aunque el día a día se vaya ordenando, una canción, un cumpleaños o el olor de una comida pueden traer el dolor de vuelta. El duelo se mueve por olas. Recordar sigue doliendo. La diferencia está en si puedes volver a una comida, a la pega o a un vínculo después de esa ola.",
+          "Aunque el día a día se vaya ordenando, una canción, un cumpleaños o el olor de una comida pueden traer el dolor de vuelta. El duelo se mueve por olas. Recordar sigue doliendo. La diferencia está en si puedes volver a una comida, a la pega o a un vínculo después de esa ola. Si quien está en duelo es otra persona, [cómo acompañar a alguien en duelo](/guias/acompanar-a-alguien-en-duelo) dice qué puedes hacer y qué conviene no decir.",
           "El tipo de muerte, si fue sorpresiva, y la red que te queda cambian el terreno. [Cuándo ir al psicólogo](/cuando-ir-al-psicologo-chillan) reúne señales generales si dudas si pedir compañía.",
         ],
       },
