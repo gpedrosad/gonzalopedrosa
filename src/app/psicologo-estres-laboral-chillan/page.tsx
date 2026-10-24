@@ -7,25 +7,25 @@ import { getTwitterDescription } from "@/lib/schemas";
 import { RelatedReading } from "@/app/components/RelatedReading";
 
 export const metadata: Metadata = {
-  title: "Psicólogo para estrés laboral en Chillán | Agotamiento",
+  title: "Estrés laboral y burnout en Chillán: en qué se diferencian",
   description:
-    "Psicólogo para estrés laboral en Chillán. Presión del trabajo, exigencias constantes y agotamiento por la carga laboral. Sesiones presenciales y online.",
+    "El estrés laboral es la carga del día. El burnout es el agotamiento que el descanso ya no repone, con distancia y menos eficacia. El acoso es otro motivo.",
   alternates: {
     canonical: "/psicologo-estres-laboral-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Psicólogo para estrés laboral en Chillán | Agotamiento",
+    title: "Estrés laboral y burnout en Chillán: en qué se diferencian",
     description:
-      "Psicólogo para estrés laboral en Chillán. Presión del trabajo, exigencias constantes y agotamiento por la carga laboral. Sesiones presenciales y online.",
+      "El estrés laboral es la carga del día. El burnout es el agotamiento que el descanso ya no repone, con distancia y menos eficacia. El acoso es otro motivo.",
     url: "https://www.gonzalopedrosa.cl/psicologo-estres-laboral-chillan",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Retrato de Gonzalo Pedrosa, psicólogo clínico" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo para estrés laboral en Chillán | Agotamiento",
-    description: getTwitterDescription("Psicólogo para estrés laboral en Chillán. Presión del trabajo, exigencias constantes y agotamiento por la carga laboral. Sesiones presenciales y online."),
+    title: "Estrés laboral y burnout en Chillán: en qué se diferencian",
+    description: getTwitterDescription("El estrés laboral es la carga del día. El burnout es el agotamiento que el descanso ya no repone, con distancia y menos eficacia. El acoso es otro motivo."),
   },
 };
 
@@ -33,19 +33,19 @@ export const metadata: Metadata = {
 
 const psicologo_estres_laboral_chillanFAQs = [
   {
-    question: "¿Debería renunciar a mi trabajo?",
+    question: "¿El burnout es lo mismo que el estrés laboral?",
     answer:
-      "No necesariamente. En terapia trabajamos para que puedas tomar decisiones informadas sobre tu carrera, desarrollando herramientas que pueden ayudarte en tu trabajo actual o prepararte para un cambio si es lo mejor para ti.",
+      "No. Un período de presión puede aflojar con descanso. En el burnout vuelves igual de vacío: agotamiento, distancia mental y la idea de que haces más y rindes menos. No es una debilidad. A veces alcanzan límites. A veces el puesto no deja margen. No hay un plazo único ni una renuncia decidida por esta página.",
   },
   {
-    question: "¿Cuántas sesiones necesito?",
+    question: "¿El acoso laboral entra en esta página?",
     answer:
-      "Depende de la severidad del cuadro y tus objetivos. Muchas personas notan mejoría significativa en 8-12 sesiones, aunque el proceso puede ser más breve o extenso según cada caso.",
+      "No. El acoso es sistemático, se sostiene en el tiempo y busca dañar. Una carga alta o un mal clima no son lo mismo. Esa diferencia está en la página de acoso laboral.",
   },
   {
-    question: "¿Puedo tener sesiones fuera del horario de oficina?",
+    question: "¿La hora puede ser fuera de la oficina?",
     answer:
-      "Sí, tengo horarios flexibles. La terapia online ofrece aún más flexibilidad para adaptarse a tu agenda.",
+      "La hora presencial es de lunes a viernes, mañana o tarde. La videollamada está descrita en la página de terapia online.",
   },
 ];
 
@@ -61,7 +61,7 @@ export default function PsicologoEstresLaboralChillanPage() {
         breadcrumbItems={breadcrumbItems}
         faqs={psicologo_estres_laboral_chillanFAQs}
         serviceType="Psicología Estres Laboral"
-        serviceDescription={"Psicólogo para estrés laboral en Chillán. Presión del trabajo, exigencias constantes y agotamiento por la carga laboral. Sesiones presenciales y online."}
+        serviceDescription={"El estrés laboral es la carga del día. El burnout es el agotamiento que el descanso ya no repone, con distancia y menos eficacia. El acoso es otro motivo."}
       />
       <main
       style={{
@@ -119,7 +119,7 @@ export default function PsicologoEstresLaboralChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo Estrés Laboral en Chillán
+        Estrés laboral y burnout en Chillán
       </h1>
 
       <p
@@ -130,9 +130,10 @@ export default function PsicologoEstresLaboralChillanPage() {
           lineHeight: 1.6,
         }}
       >
-        El estrés laboral crónico puede afectar seriamente tu salud física y
-        mental. Si sientes que el trabajo te está sobrepasando, es momento de
-        buscar ayuda profesional.
+        La presión de una semana cargada no es lo mismo que el burnout. En el
+        estrés laboral pesa la exigencia del día. En el burnout el descanso ya
+        no repone: hay agotamiento, distancia o cinismo hacia la pega, y la
+        sensación de rendir menos.
       </p>
 
       <p
@@ -143,16 +144,20 @@ export default function PsicologoEstresLaboralChillanPage() {
           lineHeight: 1.6,
         }}
       >
-        Aquí trabajamos la presión y el agotamiento ligados al trabajo, no el
-        síndrome de estar quemado: si llevas meses con agotamiento crónico,
-        cinismo y sensación de ineficacia, revisa el{" "}
-        <Link
-          href="/tratamiento-burnout-chillan"
-          style={{ color: "#000", textDecoration: "underline" }}
-        >
-          tratamiento para burnout en Chillán
+        La Organización Mundial de la Salud describe el burnout como un
+        fenómeno del trabajo, no como una enfermedad. El detalle está en la guía{" "}
+        <Link href="/guias/burnout-laboral" style={{ color: "#000", textDecoration: "underline" }}>
+          qué es el burnout laboral
+        </Link>{" "}
+        y en la pregunta{" "}
+        <Link href="/preguntas/como-saber-si-es-burnout" style={{ color: "#000", textDecoration: "underline" }}>
+          cómo saber si es burnout
         </Link>
-        .
+        . Si el daño es sistemático y dirigido a ti, eso es{" "}
+        <Link href="/psicologo-acoso-laboral-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+          acoso laboral
+        </Link>
+        , no carga de trabajo.
       </p>
 
       <section style={{ marginBottom: "3rem" }}>
@@ -222,15 +227,22 @@ export default function PsicologoEstresLaboralChillanPage() {
           }}
         >
           <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
-            El síndrome de burnout o &quot;estar quemado&quot; es un estado de
-            agotamiento físico, emocional y mental causado por estrés laboral
-            crónico. Se caracteriza por:
+            El síndrome de burnout, o &quot;estar quemado&quot;, es agotamiento
+            físico, emocional y mental por estrés laboral crónico. Un límite
+            chico (no responder después de cierta hora, o soltar una de tres
+            prioridades) está descrito en{" "}
+            <Link href="/preguntas/como-poner-un-limite" style={{ color: "#000", textDecoration: "underline" }}>
+              cómo poner un límite
+            </Link>
+            . Se caracteriza por:
           </p>
           <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem" }}>
             {[
               "Agotamiento extremo que no mejora con descanso",
               "Distanciamiento mental del trabajo (cinismo)",
               "Reducción de la eficacia profesional",
+              "El sueño, el humor o el cuerpo no se recuperan en el fin de semana",
+              "Te aislas de la gente con la que trabajas",
             ].map((item, i) => (
               <li
                 key={i}
@@ -319,7 +331,7 @@ export default function PsicologoEstresLaboralChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Debería renunciar a mi trabajo?
+              ¿El burnout es lo mismo que el estrés laboral?
             </summary>
             <p
               style={{
@@ -329,10 +341,11 @@ export default function PsicologoEstresLaboralChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              No necesariamente. En terapia trabajamos para que puedas tomar
-              decisiones informadas sobre tu carrera, desarrollando herramientas
-              que pueden ayudarte en tu trabajo actual o prepararte para un
-              cambio si es lo mejor para ti.
+              No. Un período de presión puede aflojar con descanso. En el
+              burnout vuelves igual de vacío: agotamiento, distancia mental y la
+              idea de que haces más y rindes menos. No es una debilidad. A veces
+              alcanzan límites. A veces el puesto no deja margen. No hay un
+              plazo único ni una renuncia decidida por esta página.
             </p>
           </details>
 
@@ -344,7 +357,7 @@ export default function PsicologoEstresLaboralChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Cuántas sesiones necesito?
+              ¿El acoso laboral entra en esta página?
             </summary>
             <p
               style={{
@@ -354,9 +367,9 @@ export default function PsicologoEstresLaboralChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              Depende de la severidad del cuadro y tus objetivos. Muchas
-              personas notan mejoría significativa en 8-12 sesiones, aunque el
-              proceso puede ser más breve o extenso según cada caso.
+              No. El acoso es sistemático, se sostiene en el tiempo y busca
+              dañar. Una carga alta o un mal clima no son lo mismo. Esa
+              diferencia está en la página de acoso laboral.
             </p>
           </details>
 
@@ -368,7 +381,7 @@ export default function PsicologoEstresLaboralChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Puedo tener sesiones fuera del horario de oficina?
+              ¿La hora puede ser fuera de la oficina?
             </summary>
             <p
               style={{
@@ -378,14 +391,22 @@ export default function PsicologoEstresLaboralChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              Sí, tengo horarios flexibles. La{" "}
+              La hora presencial es de lunes a viernes, mañana o tarde. Cómo es
+              la videollamada está en{" "}
               <Link
                 href="/terapia-online"
                 style={{ color: "#000", textDecoration: "underline" }}
               >
                 terapia online
               </Link>{" "}
-              ofrece aún más flexibilidad para adaptarse a tu agenda.
+              y en{" "}
+              <Link
+                href="/preguntas/como-es-una-sesion-de-psicologia-online"
+                style={{ color: "#000", textDecoration: "underline" }}
+              >
+                cómo es una sesión de psicología online
+              </Link>
+              .
             </p>
           </details>
         </div>
@@ -457,7 +478,7 @@ export default function PsicologoEstresLaboralChillanPage() {
           {[
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             { label: "Depresión", href: "/psicologo-depresion-chillan" },
-            { label: "Tratamiento de burnout", href: "/tratamiento-burnout-chillan" },
+            { label: "Acoso laboral", href: "/psicologo-acoso-laboral-chillan" },
             { label: "Psicólogo adultos", href: "/psicologo-adulto-chillan" },
             { label: "Adultos", href: "/psicologo-adulto-chillan" },
             { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },

@@ -493,7 +493,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
         heading: "Un orden para revisarlo",
         paragraphs: [
           "Anota carga real de la semana, horas de desconexión y una tarea que podrías soltar o delegar. Después mira un límite chico: no responder después de cierta hora, o pedir una prioridad en vez de aceptar tres.",
-          "Si el lugar no permite ningún límite y tu salud ya se quebró, la conversación deja de ser de hábitos y pasa a ser de riesgo laboral y de apoyo médico. Un texto no decide esa renuncia por ti. La ficha local, distinta de esta guía, es el [tratamiento del burnout en Chillán](/tratamiento-burnout-chillan).",
+          "Si el lugar no permite ningún límite y tu salud ya se quebró, la conversación deja de ser de hábitos y pasa a ser de riesgo laboral y de apoyo médico. Un texto no decide esa renuncia por ti. La ficha local, distinta de esta guía, reúne el [estrés laboral y el burnout en Chillán](/psicologo-estres-laboral-chillan).",
         ],
       },
     ],
@@ -518,7 +518,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       { href: "/preguntas/como-saber-si-es-burnout", label: "Cómo saber si es burnout" },
       { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
       { href: "/guias/higiene-del-sueno", label: "Hábitos de sueño" },
-      { href: "/tratamiento-burnout-chillan", label: "Página de atención por burnout" },
+      { href: "/psicologo-estres-laboral-chillan", label: "Estrés laboral y burnout en Chillán" },
     ],
     safety:
       "Si el agotamiento viene con ideas de hacerte daño, llama al *4141. Es gratuito y atiende las 24 horas.",
@@ -2083,6 +2083,7 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
   ],
   "/psicologo-baja-autoestima-chillan": [
     { href: "/preguntas/senales-de-baja-autoestima", label: "Señales de autoestima baja" },
+    { href: "/preguntas/procrastinacion-y-ansiedad", label: "Procrastinación y ansiedad" },
     { href: "/guias/regulacion-emocional", label: "Cómo se regula una emoción" },
     { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
     { href: "/guias", label: "Guías" },
@@ -2096,15 +2097,13 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
   ],
   "/psicologo-crisis-de-panico-chillan": [
     { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer en un ataque de pánico" },
+    { href: "/preguntas/que-es-un-ataque-de-panico", label: "Qué es un ataque de pánico" },
     { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
   ],
   "/psicologo-fobia-social-chillan": [
+    { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
     { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
     { href: "/guias/regulacion-emocional", label: "Regulación emocional" },
-  ],
-  "/tratamiento-agorafobia-chillan": [
-    { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer en un ataque de pánico" },
-    { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
   ],
   "/psicologo-hipocondria-chillan": [
     { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
@@ -2163,14 +2162,11 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
     { href: "/consulta-psicologica-precio-chillan", label: "Valor publicado de la sesión" },
     { href: "/terapia-online-vs-presencial-chillan", label: "Online y presencial" },
   ],
-  "/tratamiento-burnout-chillan": [
-    { href: "/guias/burnout-laboral", label: "Guía: burnout laboral" },
-    { href: "/preguntas/como-saber-si-es-burnout", label: "Cómo saber si es burnout" },
-  ],
   "/psicologo-estres-laboral-chillan": [
     { href: "/guias/burnout-laboral", label: "Guía: burnout laboral" },
     { href: "/preguntas/como-saber-si-es-burnout", label: "Cómo saber si es burnout" },
     { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
+    { href: "/psicologo-acoso-laboral-chillan", label: "Acoso laboral" },
   ],
   "/psicologo-apego-chillan": [
     { href: "/guias/estilos-de-apego", label: "Guía: estilos de apego" },

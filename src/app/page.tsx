@@ -46,6 +46,11 @@ const homeFAQs = [
       "La hora presencial es en el centro de Chillán, de lunes a viernes, en la mañana o en la tarde. La zona tiene transporte público y estacionamiento cercano. La dirección exacta se entrega al coordinar. También hay sesiones por videollamada para otras comunas o regiones de Chile.",
   },
   {
+    question: "¿Atiendes en Chillán Viejo?",
+    answer:
+      "No hay consulta en esa comuna. La hora presencial es en el centro de Chillán, a pocos minutos de Chillán Viejo, de lunes a viernes, mañana o tarde. Hay transporte público y estacionamiento cercano. La dirección se entrega al coordinar. Si el traslado complica, la videollamada está en la página de psicólogo online.",
+  },
+  {
     question: "¿Cuánto cuesta una sesión?",
     answer:
       "Cada sesión de 50 minutos tiene un valor de $35.000. Emito boleta para reembolso Isapre según tu plan.",
@@ -441,11 +446,16 @@ export default function HomePage() {
           <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
             Si buscas psicólogo en el centro de Chillán, la atención presencial
             es en una zona céntrica, con transporte público y estacionamiento
-            cercano. La dirección exacta se entrega al coordinar la hora. El
-            horario es de lunes a viernes, mañana o tarde. Puedes alternar esa
-            hora con{" "}
+            cercano. La dirección exacta se entrega al coordinar la hora. Si
+            vienes desde Chillán Viejo, no hay un box en esa comuna: la hora es
+            en este mismo centro. El horario es de lunes a viernes, mañana o
+            tarde. Puedes alternar esa hora con{" "}
             <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
               videollamada
+            </Link>
+            . Cómo es esa sesión por videollamada está en{" "}
+            <Link href="/preguntas/como-es-una-sesion-de-psicologia-online" style={{ color: "#000", textDecoration: "underline" }}>
+              cómo es una sesión de psicología online
             </Link>
             . La boleta para reembolso Isapre se explica en{" "}
             <Link href="/psicologo-reembolso-isapre-chillan" style={{ color: "#000", textDecoration: "underline" }}>

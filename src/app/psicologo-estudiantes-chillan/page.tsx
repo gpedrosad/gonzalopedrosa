@@ -228,13 +228,18 @@ export default function PsicologoEstudiantesChillanPage() {
             procrastinación en los estudios
           </Link>{" "}
           lo separa. Si sientes que los demás van a descubrir que no sabes
-          tanto como creen, el{" "}
-          <Link href="/psicologo-sindrome-impostor-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+          tanto como creen, esa lectura, el{" "}
+          <Link href="/psicologo-baja-autoestima-chillan" style={{ color: "#000", textDecoration: "underline" }}>
             síndrome del impostor
-          </Link>{" "}
-          tiene su propia ficha. En la sesión se puede hablar de manejo del
-          estrés, ansiedad ante pruebas, organización del tiempo, perfeccionismo
-          y el equilibrio entre estudiar y el resto del día.
+          </Link>
+          , está en la página de autoestima, junto con la autoexigencia. Cuando
+          postergas por miedo a empezar, mira{" "}
+          <Link href="/preguntas/procrastinacion-y-ansiedad" style={{ color: "#000", textDecoration: "underline" }}>
+            procrastinación y ansiedad
+          </Link>
+          . En la sesión se puede hablar de manejo del estrés, ansiedad ante
+          pruebas, organización del tiempo y el equilibrio entre estudiar y el
+          resto del día.
         </p>
       </section>
 
@@ -256,7 +261,7 @@ export default function PsicologoEstudiantesChillanPage() {
           {[
             { label: "Procrastinación", href: "/psicologo-procrastinacion-estudios-chillan" },
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
-            { label: "Síndrome impostor", href: "/psicologo-sindrome-impostor-chillan" },
+            { label: "Autoestima e impostor", href: "/psicologo-baja-autoestima-chillan" },
           ].map((item, i) => (
             <Link key={i} href={item.href} style={{ color: "#666", fontSize: "0.875rem", textDecoration: "none", padding: "0.375rem 0.75rem", border: "1px solid #eaeaea", borderRadius: "9999px" }}>
               {item.label}

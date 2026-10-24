@@ -18,18 +18,13 @@ export default function GuiaAtaquePanicoPage() {
       relatedSite={[
         {
           href: "/psicologo-crisis-de-panico-chillan",
-          label: "Crisis de pánico",
-          note: "Página del sitio sobre el cuadro y el tipo de tratamiento que se ofrece cuando las crisis se repiten.",
+          label: "Crisis de pánico y agorafobia",
+          note: "La crisis es el episodio. En la misma página está la agorafobia: evitar lugares por miedo a que vuelva y no poder salir.",
         },
         {
           href: "/psicologo-ansiedad-chillan",
           label: "Ansiedad",
           note: "Contexto sobre la preocupación y la activación que a veces conviven con el pánico.",
-        },
-        {
-          href: "/tratamiento-agorafobia-chillan",
-          label: "Agorafobia",
-          note: "Cuando el miedo a otra crisis empieza a cerrar calles, micros o lugares.",
         },
         {
           href: "/ayuda-psicologica-urgente-chillan",
@@ -184,7 +179,7 @@ export default function GuiaAtaquePanicoPage() {
         se acelera por subir una escalera y la mente dice “ya viene otra”. Ese
         círculo tiene nombre cuando se instala: a veces trastorno de pánico, a
         veces{" "}
-        <Link href="/tratamiento-agorafobia-chillan">agorafobia</Link> si el
+        <Link href="/psicologo-crisis-de-panico-chillan">agorafobia</Link> si el
         miedo a no poder salir o pedir ayuda cierra lugares. Reconocerlo temprano
         ayuda a no organizar toda la semana alrededor del “por si acaso”.
       </p>

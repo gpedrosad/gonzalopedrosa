@@ -40,12 +40,17 @@ const psicologo_crisis_de_panico_chillanFAQs = [
   {
     question: "¿Puedo tener terapia online?",
     answer:
-      "Sí, la terapia online puede ser efectiva para el tratamiento del pánico. Evaluamos juntos la modalidad más adecuada.",
+      "Sí. Si salir de casa está difícil, la videollamada puede ser el primer formato. Cómo es esa hora está en la página de terapia online.",
   },
   {
     question: "¿Cuánto tiempo toma el tratamiento?",
     answer:
-      "La duración depende de cada caso. Muchas personas experimentan mejoría significativa en 8-16 sesiones.",
+      "No hay un plazo único. Depende del caso y no se promete un número de sesiones.",
+  },
+  {
+    question: "¿La agorafobia es lo mismo que una crisis de pánico?",
+    answer:
+      "No. La crisis es el episodio: un pico de miedo que sube y baja. La agorafobia es evitar lugares porque temes que la crisis aparezca y no puedas salir o pedir ayuda, como la micro, una tienda, una fila o estar fuera de casa. Pueden ir juntas.",
   },
 ];
 
@@ -274,6 +279,61 @@ export default function PsicologoCrisisPanicoChillanPage() {
             marginBottom: "1rem",
           }}
         >
+          Si además evitas salir
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
+          La agorafobia no es la crisis. Es el miedo a lugares donde escapar o
+          pedir ayuda se ve difícil si aparece una: la micro, una plaza, una
+          tienda, una fila o estar fuera de casa. Si salir está muy difícil, la
+          videollamada puede ser el primer formato. Qué es el episodio está en{" "}
+          <Link href="/preguntas/que-es-un-ataque-de-panico" style={{ color: "#000", textDecoration: "underline" }}>
+            qué es un ataque de pánico
+          </Link>{" "}
+          y qué hacer en el minuto, en{" "}
+          <Link href="/guias/ataque-de-panico-que-hacer" style={{ color: "#000", textDecoration: "underline" }}>
+            ataque de pánico: qué hacer
+          </Link>
+          .
+        </p>
+        <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem" }}>
+          {[
+            "Transporte público: buses, metro, aviones",
+            "Espacios abiertos: plazas o estacionamientos",
+            "Espacios cerrados: tiendas o cines",
+            "Multitudes o filas",
+            "Estar fuera de casa sin compañía",
+          ].map((item) => (
+            <li
+              key={item}
+              style={{
+                display: "flex",
+                alignItems: "flex-start",
+                gap: "0.75rem",
+                padding: "0.75rem 1rem",
+                backgroundColor: "#fafafa",
+                borderRadius: "8px",
+                fontSize: "0.9375rem",
+                color: "#444",
+              }}
+            >
+              <span style={{ color: "#000", flexShrink: 0 }}>—</span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section style={{ marginBottom: "3rem" }}>
+        <h2
+          style={{
+            fontSize: "0.75rem",
+            fontWeight: 600,
+            textTransform: "uppercase",
+            letterSpacing: "0.1em",
+            color: "#999",
+            marginBottom: "1rem",
+          }}
+        >
           Preguntas frecuentes
         </h2>
 
@@ -324,15 +384,21 @@ export default function PsicologoCrisisPanicoChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              Sí, la{" "}
+              Sí. Si salir de casa está difícil, la{" "}
               <Link
                 href="/psicologo-online-chillan"
                 style={{ color: "#000", textDecoration: "underline" }}
               >
-                terapia online
+                videollamada
               </Link>{" "}
-              puede ser efectiva para el tratamiento del pánico. Evaluamos
-              juntos la modalidad más adecuada.
+              puede ser el primer formato. Cómo es esa hora está en{" "}
+              <Link
+                href="/terapia-online"
+                style={{ color: "#000", textDecoration: "underline" }}
+              >
+                terapia online
+              </Link>
+              . No es un chat ni una urgencia.
             </p>
           </details>
 
@@ -356,8 +422,35 @@ export default function PsicologoCrisisPanicoChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              La duración depende de cada caso. Muchas personas experimentan
-              mejoría significativa en 8-16 sesiones.
+              No hay un plazo único. Depende del caso y no se promete un número
+              de sesiones.
+            </p>
+          </details>
+
+          <details
+            style={{
+              padding: "1rem",
+              border: "1px solid #eaeaea",
+              borderRadius: "12px",
+            }}
+          >
+            <summary
+              style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}
+            >
+              ¿La agorafobia es lo mismo que una crisis de pánico?
+            </summary>
+            <p
+              style={{
+                marginTop: "0.75rem",
+                color: "#666",
+                lineHeight: 1.6,
+                fontSize: "0.9375rem",
+              }}
+            >
+              No. La crisis es el episodio: un pico de miedo que sube y baja. La
+              agorafobia es evitar lugares porque temes que la crisis aparezca y
+              no puedas salir o pedir ayuda, como la micro, una tienda, una fila
+              o estar fuera de casa. Pueden ir juntas.
             </p>
           </details>
         </div>

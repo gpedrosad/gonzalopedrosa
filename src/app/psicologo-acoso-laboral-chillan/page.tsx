@@ -212,7 +212,7 @@ export default function PsicologoAcosoLaboralChillanPage() {
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {[
             { label: "Estrés laboral", href: "/psicologo-estres-laboral-chillan" },
-            { label: "Burnout", href: "/tratamiento-burnout-chillan" },
+            { label: "Estrés laboral y burnout", href: "/psicologo-estres-laboral-chillan" },
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             { label: "Depresión", href: "/psicologo-depresion-chillan" },
           ].map((item, i) => (

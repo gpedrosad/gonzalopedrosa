@@ -187,7 +187,7 @@ export default function PsicologoProcrastinacionChillanPage() {
           {[
             { label: "TDAH adulto", href: "/psicologo-tdah-adulto-chillan" },
             { label: "Estudiantes y estrés académico", href: "/psicologo-estudiantes-chillan" },
-            { label: "Perfeccionismo", href: "/psicologo-perfeccionismo-autoexigencia-chillan" },
+            { label: "Autoestima y exigencia", href: "/psicologo-baja-autoestima-chillan" },
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
           ].map((item, i) => (
             <Link key={i} href={item.href} style={{ color: "#666", fontSize: "0.875rem", textDecoration: "none", padding: "0.375rem 0.75rem", border: "1px solid #eaeaea", borderRadius: "9999px" }}>
