@@ -100,23 +100,18 @@ export const ANXIETY_CLUSTER: IntentCluster = {
     },
     {
       href: "/psicologo-crisis-de-panico-chillan",
-      label: "Crisis de pánico",
-      shortTitle: "Atención para crisis de pánico",
-      cardDescription: "Información sobre crisis de pánico y el miedo a que vuelvan a ocurrir.",
+      label: "Crisis de pánico y agorafobia",
+      shortTitle: "Crisis de pánico y agorafobia",
+      cardDescription:
+        "La crisis es el episodio. La agorafobia es evitar lugares por miedo a que ocurra y no poder salir.",
       role: "satellite",
     },
     {
       href: "/psicologo-fobia-social-chillan",
-      label: "Ansiedad social",
-      shortTitle: "Ansiedad social y fobia social",
-      cardDescription: "Consulta por miedo a la evaluación de otros y dificultades en situaciones sociales.",
-      role: "satellite",
-    },
-    {
-      href: "/tratamiento-agorafobia-chillan",
-      label: "Agorafobia",
-      shortTitle: "Atención para agorafobia",
-      cardDescription: "Información para quienes evitan salir o estar en lugares donde sienten inseguridad.",
+      label: "Ansiedad social y timidez",
+      shortTitle: "Fobia social y timidez",
+      cardDescription:
+        "La timidez es un rasgo. La fobia social es el miedo que te saca de reuniones, clases o filas.",
       role: "satellite",
     },
     {

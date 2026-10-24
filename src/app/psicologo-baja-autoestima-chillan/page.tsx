@@ -7,17 +7,17 @@ import { RelatedReading } from "@/app/components/RelatedReading";
 import { getTwitterDescription } from "@/lib/schemas";
 
 const description =
-  "Qué se entiende por autoestima baja, qué señales se ven en el día a día y cómo se trabaja en terapia. No es un test ni una lista de defectos.";
+  "Autoestima baja, perfeccionismo y síndrome del impostor en Chillán: crítica dura, miedo a equivocarte y logros que se sienten prestados. No es un test ni un plazo.";
 
 export const metadata: Metadata = {
-  title: "Baja autoestima en Chillán: señales y cómo se trata",
+  title: "Baja autoestima en Chillán: señales, exigencia e impostor",
   description,
   alternates: {
     canonical: "/psicologo-baja-autoestima-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Baja autoestima en Chillán: señales y cómo se trata",
+    title: "Baja autoestima en Chillán: señales, exigencia e impostor",
     description,
     url: "https://www.gonzalopedrosa.cl/psicologo-baja-autoestima-chillan",
     type: "website",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Baja autoestima en Chillán: señales y cómo se trata",
+    title: "Baja autoestima en Chillán: señales, exigencia e impostor",
     description: getTwitterDescription(description),
   },
 };
@@ -34,19 +34,19 @@ export const metadata: Metadata = {
 
 const psicologo_baja_autoestima_chillanFAQs = [
   {
-    question: "¿Se puede mejorar la autoestima?",
+    question: "¿El perfeccionismo es lo mismo que la autoestima baja?",
     answer:
-      "Sí, definitivamente. La autoestima no es algo fijo, puede trabajarse y mejorarse con el abordaje adecuado. Es un proceso que requiere tiempo y compromiso, pero los cambios son posibles.",
+      "No. Pueden ir juntos. El perfeccionismo es la exigencia que no te deja cerrar una tarea. La autoestima baja es leerte, una y otra vez, como menos capaz. No hay un número de sesiones que sirva para todos.",
   },
   {
-    question: "¿De dónde viene la baja autoestima?",
+    question: "¿El síndrome del impostor es una enfermedad?",
     answer:
-      "Puede tener múltiples orígenes: experiencias de la infancia, mensajes recibidos de figuras significativas, experiencias de fracaso o rechazo, comparaciones sociales, entre otros. En terapia exploramos tu historia personal.",
+      "No. Es la lectura de que un logro fue suerte y de que van a descubrir un fraude. Aparece en la pega, en la carrera y en un cambio de rol. No es un diagnóstico ni un porcentaje de la población.",
   },
   {
-    question: "¿Cuánto tiempo toma el proceso?",
+    question: "¿De dónde puede venir la autoestima baja?",
     answer:
-      "Depende de cada persona y la profundidad del trabajo necesario. Generalmente se comienzan a notar cambios entre las 8-12 sesiones, aunque el proceso puede ser más extenso para consolidar los avances.",
+      "De mensajes repetidos, de compararte o de una historia de crítica. Una lista no lo diagnostica. La pregunta de señales describe el patrón sin convertirlo en un test.",
   },
 ];
 
@@ -62,7 +62,7 @@ export default function PsicologoBajaAutoestimaChillanPage() {
         breadcrumbItems={breadcrumbItems}
         faqs={psicologo_baja_autoestima_chillanFAQs}
         serviceType="Psicología Baja Autoestima"
-        serviceDescription={"Psicólogo para baja autoestima en Chillán. Trabajo de inseguridad con terapia cognitivo-conductual. Sesiones presenciales y online."}
+        serviceDescription={"Autoestima baja, perfeccionismo y síndrome del impostor en Chillán. No es un test ni un plazo de sesiones."}
       />
       <main
       style={{
@@ -120,7 +120,7 @@ export default function PsicologoBajaAutoestimaChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Baja autoestima: señales y cómo se trabaja
+        Baja autoestima en Chillán: señales, exigencia e impostor
       </h1>
 
       <p
@@ -131,9 +131,9 @@ export default function PsicologoBajaAutoestimaChillanPage() {
           lineHeight: 1.6,
         }}
       >
-        La autoestima es la valoración que hacemos de nosotros mismos. Cuando es
-        baja, afecta todas las áreas de nuestra vida. La buena noticia es que
-        puede trabajarse y mejorarse. Las señales, sin convertirlas en un test, están en{" "}
+        La autoestima baja es un modo repetido de leerte como menos capaz. El
+        perfeccionismo y el síndrome del impostor se le parecen y no son lo
+        mismo. Las señales, sin convertirlas en un test, están en{" "}
         <Link href="/preguntas/senales-de-baja-autoestima" style={{ color: "#000", textDecoration: "underline" }}>
           señales de baja autoestima
         </Link>
@@ -288,6 +288,58 @@ export default function PsicologoBajaAutoestimaChillanPage() {
             marginBottom: "1rem",
           }}
         >
+          Perfeccionismo y autoexigencia
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
+          El perfeccionismo dañino no es tener un estándar. Es no poder cerrar
+          una tarea porque nunca está bastante bien, y leer un error como
+          prueba de que no sirves. Puedes cuidar la calidad sin que el miedo al
+          rechazo dirija el día. Cuando la postergación viene de ese miedo, la
+          pregunta de{" "}
+          <Link href="/preguntas/procrastinacion-y-ansiedad" style={{ color: "#000", textDecoration: "underline" }}>
+            procrastinación y ansiedad
+          </Link>{" "}
+          lo separa.
+        </p>
+      </section>
+
+      <section style={{ marginBottom: "3rem" }}>
+        <h2
+          style={{
+            fontSize: "0.75rem",
+            fontWeight: 600,
+            textTransform: "uppercase",
+            letterSpacing: "0.1em",
+            color: "#999",
+            marginBottom: "1rem",
+          }}
+        >
+          Síndrome del impostor
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
+          Es la idea de que un logro fue suerte y de que van a descubrir un
+          fraude. Aparece en la pega, en la carrera y en un cambio de rol. No es
+          un diagnóstico ni una cifra de cuánta gente lo vive. Puede ir junto a
+          la autoestima baja: aquí el logro existe y la lectura lo borra. Poner
+          un límite, cuando la exigencia no te deja, está en{" "}
+          <Link href="/preguntas/como-poner-un-limite" style={{ color: "#000", textDecoration: "underline" }}>
+            cómo poner un límite
+          </Link>
+          .
+        </p>
+      </section>
+
+      <section style={{ marginBottom: "3rem" }}>
+        <h2
+          style={{
+            fontSize: "0.75rem",
+            fontWeight: 600,
+            textTransform: "uppercase",
+            letterSpacing: "0.1em",
+            color: "#999",
+            marginBottom: "1rem",
+          }}
+        >
           Preguntas frecuentes
         </h2>
         <div style={{ display: "grid", gap: "0.5rem" }}>
@@ -299,7 +351,7 @@ export default function PsicologoBajaAutoestimaChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Se puede mejorar la autoestima?
+              ¿El perfeccionismo es lo mismo que la autoestima baja?
             </summary>
             <p
               style={{
@@ -309,9 +361,10 @@ export default function PsicologoBajaAutoestimaChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              Sí, definitivamente. La autoestima no es algo fijo, puede
-              trabajarse y mejorarse con el abordaje adecuado. Es un proceso que
-              requiere tiempo y compromiso, pero los cambios son posibles.
+              No. Pueden ir juntos. El perfeccionismo es la exigencia que no te
+              deja cerrar una tarea. La autoestima baja es leerte, una y otra
+              vez, como menos capaz. No hay un número de sesiones que sirva para
+              todos.
             </p>
           </details>
 
@@ -323,7 +376,7 @@ export default function PsicologoBajaAutoestimaChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿De dónde viene la baja autoestima?
+              ¿El síndrome del impostor es una enfermedad?
             </summary>
             <p
               style={{
@@ -333,10 +386,10 @@ export default function PsicologoBajaAutoestimaChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              Puede tener múltiples orígenes: experiencias de la infancia,
-              mensajes recibidos de figuras significativas, experiencias de
-              fracaso o rechazo, comparaciones sociales, entre otros. En terapia
-              exploramos tu historia personal.
+              No. Es la lectura de que un logro fue suerte y de que van a
+              descubrir un fraude. Aparece en la pega, en la carrera y en un
+              cambio de rol. No es un diagnóstico ni un porcentaje de la
+              población.
             </p>
           </details>
 
@@ -348,7 +401,7 @@ export default function PsicologoBajaAutoestimaChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Cuánto tiempo toma el proceso?
+              ¿De dónde puede venir la autoestima baja?
             </summary>
             <p
               style={{
@@ -358,10 +411,9 @@ export default function PsicologoBajaAutoestimaChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              Depende de cada persona y la profundidad del trabajo necesario.
-              Generalmente se comienzan a notar cambios entre las 8-12 sesiones,
-              aunque el proceso puede ser más extenso para consolidar los
-              avances.
+              De mensajes repetidos, de compararte o de una historia de crítica.
+              Una lista no lo diagnostica. La pregunta de señales describe el
+              patrón sin convertirlo en un test.
             </p>
           </details>
         </div>

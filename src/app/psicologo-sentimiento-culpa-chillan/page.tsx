@@ -181,7 +181,7 @@ export default function PsicologoSentimientoCulpaChillanPage() {
           {[
             { label: "Depresión", href: "/psicologo-depresion-chillan" },
             { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },
-            { label: "Perfeccionismo", href: "/psicologo-perfeccionismo-autoexigencia-chillan" },
+            { label: "Autoestima y exigencia", href: "/psicologo-baja-autoestima-chillan" },
             { label: "Duelo", href: "/psicologo-duelo-chillan" },
           ].map((item, i) => (
             <Link key={i} href={item.href} style={{ color: "#666", fontSize: "0.875rem", textDecoration: "none", padding: "0.375rem 0.75rem", border: "1px solid #eaeaea", borderRadius: "9999px" }}>

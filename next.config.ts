@@ -108,6 +108,36 @@ const nextConfig: NextConfig = {
         destination: "/psicologo-estudiantes-chillan",
         permanent: true,
       },
+      {
+        source: "/psicologo-timidez-chillan",
+        destination: "/psicologo-fobia-social-chillan",
+        permanent: true,
+      },
+      {
+        source: "/tratamiento-burnout-chillan",
+        destination: "/psicologo-estres-laboral-chillan",
+        permanent: true,
+      },
+      {
+        source: "/psicologo-perfeccionismo-autoexigencia-chillan",
+        destination: "/psicologo-baja-autoestima-chillan",
+        permanent: true,
+      },
+      {
+        source: "/psicologo-sindrome-impostor-chillan",
+        destination: "/psicologo-baja-autoestima-chillan",
+        permanent: true,
+      },
+      {
+        source: "/psicologo-chillan-viejo",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/tratamiento-agorafobia-chillan",
+        destination: "/psicologo-crisis-de-panico-chillan",
+        permanent: true,
+      },
     ];
   },
   // Headers de seguridad (CSP se maneja en middleware.ts con nonce)

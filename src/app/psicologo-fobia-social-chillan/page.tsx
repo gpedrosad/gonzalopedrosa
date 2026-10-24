@@ -8,24 +8,24 @@ import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
 import { getTwitterDescription } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Psicólogo Fobia Social en Chillán, Chile | Gonzalo Pedrosa",
+  title: "Fobia social en Chillán: qué la separa de la timidez",
   description:
-    "Psicólogo especializado en fobia social y ansiedad social en Chillán, Chile. Tratamiento con terapia cognitivo-conductual. Sesiones presenciales y online.",
+    "La timidez es un rasgo: puedes seguir siendo introvertido. La fobia social te saca de reuniones, clases o filas. La exposición se acuerda y no tiene un plazo.",
   alternates: {
     canonical: "/psicologo-fobia-social-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Psicólogo Fobia Social en Chillán, Chile | Gonzalo Pedrosa",
-    description: "Psicólogo especializado en fobia social y ansiedad social en Chillán, Chile. Tratamiento con terapia cognitivo-conductual. Sesiones presenciales y online.",
+    title: "Fobia social en Chillán: qué la separa de la timidez",
+    description: "La timidez es un rasgo: puedes seguir siendo introvertido. La fobia social te saca de reuniones, clases o filas. La exposición se acuerda y no tiene un plazo.",
     url: "https://www.gonzalopedrosa.cl/psicologo-fobia-social-chillan",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Retrato de Gonzalo Pedrosa, psicólogo clínico" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo Fobia Social en Chillán, Chile",
-    description: getTwitterDescription("Psicólogo especializado en fobia social y ansiedad social en Chillán, Chile. Tratamiento con terapia cognitivo-conductual. Sesiones presenciales y onl"),
+    title: "Fobia social en Chillán: qué la separa de la timidez",
+    description: getTwitterDescription("La timidez es un rasgo: puedes seguir siendo introvertido. La fobia social te saca de reuniones, clases o filas. La exposición se acuerda y no tiene un plazo."),
   },
 };
 
@@ -35,17 +35,17 @@ const psicologo_fobia_social_chillanFAQs = [
   {
     question: "¿Es lo mismo que ser tímido?",
     answer:
-      "No exactamente. La timidez es un rasgo de personalidad, mientras que la fobia social es un trastorno de ansiedad que causa malestar significativo e interfiere con la vida cotidiana.",
+      "No. La timidez es un rasgo. La fobia social es el miedo que te saca de reuniones, clases, filas o de hablar. Puedes seguir siendo introvertido. Si se usa exposición, va de a poco y con tu acuerdo.",
   },
   {
-    question: "¿La fobia social se cura?",
+    question: "¿Hay que dejar de ser introvertido?",
     answer:
-      "Con tratamiento adecuado, muchas personas logran superar la fobia social o reducir significativamente sus síntomas. La TCC tiene alta efectividad para este problema.",
+      "No. El punto no es cambiar la personalidad. Es que el miedo no decida las reuniones, las clases ni los trámites.",
   },
   {
-    question: "¿Me sirve la terapia online si tengo fobia social?",
+    question: "¿Sirve empezar por videollamada?",
     answer:
-      "Sí, la terapia online puede ser especialmente útil al inicio, ya que es menos intimidante. A medida que avanza el tratamiento, podemos incorporar sesiones presenciales si es apropiado.",
+      "Puede ser más cómodo al principio, porque no estás en una sala con alguien. Cómo es esa hora está en la página de terapia online. No es un chat ni una urgencia.",
   },
 ];
 
@@ -58,7 +58,7 @@ export default function PsicologoFobiaSocialChillanPage() {
         breadcrumbItems={breadcrumbItems}
         faqs={psicologo_fobia_social_chillanFAQs}
         serviceType="Psicología Fobia Social"
-        serviceDescription={"Psicólogo especializado en fobia social y ansiedad social en Chillán, Chile. Tratamiento con terapia cognitivo-conductual. Sesiones presenciales y online."}
+        serviceDescription={"La timidez es un rasgo. La fobia social es el miedo que interfiere con reuniones, clases o filas. La exposición, si se usa, se acuerda."}
       />
       <main
       style={{
@@ -116,22 +116,73 @@ export default function PsicologoFobiaSocialChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo Fobia Social en Chillán
+        Fobia social en Chillán: qué la separa de la timidez
       </h1>
 
       <p
         style={{
           fontSize: "1.125rem",
           color: "#666",
-          marginBottom: "3rem",
+          marginBottom: "1.5rem",
           lineHeight: 1.6,
         }}
       >
-        La fobia social o ansiedad social es un miedo intenso a situaciones
-        sociales donde podrías ser juzgado o evaluado. Es más que timidez: puede
-        limitar seriamente tu vida. Con tratamiento adecuado, es posible
-        superarla.
+        La fobia social, o ansiedad social, es un miedo intenso a que te evalúen
+        en una reunión, una clase, una fila o al hablar con alguien que no
+        conoces. La timidez es otra cosa: un rasgo. Puedes seguir siendo
+        introvertido y, aun así, decir lo que piensas.
       </p>
+
+      <section style={{ marginBottom: "3rem" }}>
+        <h2
+          style={{
+            fontSize: "0.75rem",
+            fontWeight: 600,
+            textTransform: "uppercase",
+            letterSpacing: "0.1em",
+            color: "#999",
+            marginBottom: "1rem",
+          }}
+        >
+          Si es timidez y no fobia
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
+          En la timidez cuesta partir una conversación, pedir algo o hablar en
+          una reunión, y después das vueltas a lo que dijiste. Si el miedo te
+          saca de muchas de esas situaciones, ya se parece más a la fobia
+          social. Esa rumiación está en{" "}
+          <Link href="/preguntas/por-que-la-mente-no-para" style={{ color: "#000", textDecoration: "underline" }}>
+            por qué la mente no para
+          </Link>
+          .
+        </p>
+        <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem" }}>
+          {[
+            "Evitas situaciones sociales o las pasas muy mal",
+            "Te cuesta hablar con desconocidos o en un grupo",
+            "Miedo a que te juzguen o a hacer el ridículo",
+            "Te callas aunque tengas algo que decir",
+            "En la pega no postulas o no hablas en las reuniones",
+          ].map((item) => (
+            <li
+              key={item}
+              style={{
+                display: "flex",
+                alignItems: "flex-start",
+                gap: "0.75rem",
+                padding: "0.75rem 1rem",
+                backgroundColor: "#fafafa",
+                borderRadius: "8px",
+                fontSize: "0.9375rem",
+                color: "#444",
+              }}
+            >
+              <span style={{ color: "#000", flexShrink: 0 }}>—</span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </section>
 
       <section style={{ marginBottom: "3rem" }}>
         <h2
@@ -302,9 +353,9 @@ export default function PsicologoFobiaSocialChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              No exactamente. La timidez es un rasgo de personalidad, mientras
-              que la fobia social es un trastorno de ansiedad que causa malestar
-              significativo e interfiere con la vida cotidiana.
+              No. La timidez es un rasgo. La fobia social es el miedo que te
+              saca de reuniones, clases, filas o de hablar. Puedes seguir siendo
+              introvertido. Si se usa exposición, va de a poco y con tu acuerdo.
             </p>
           </details>
 
@@ -316,7 +367,7 @@ export default function PsicologoFobiaSocialChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿La fobia social se cura?
+              ¿Hay que dejar de ser introvertido?
             </summary>
             <p
               style={{
@@ -326,9 +377,8 @@ export default function PsicologoFobiaSocialChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              Con tratamiento adecuado, muchas personas logran superar la fobia
-              social o reducir significativamente sus síntomas. La TCC tiene
-              alta efectividad para este problema.
+              No. El punto no es cambiar la personalidad. Es que el miedo no
+              decida las reuniones, las clases ni los trámites.
             </p>
           </details>
 
@@ -340,7 +390,7 @@ export default function PsicologoFobiaSocialChillanPage() {
             }}
           >
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
-              ¿Me sirve la terapia online si tengo fobia social?
+              ¿Sirve empezar por videollamada?
             </summary>
             <p
               style={{
@@ -350,16 +400,15 @@ export default function PsicologoFobiaSocialChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              Sí, la{" "}
+              Puede ser más cómodo al principio, porque no estás en una sala con
+              alguien. Cómo es esa hora está en la página de{" "}
               <Link
                 href="/terapia-online"
                 style={{ color: "#000", textDecoration: "underline" }}
               >
                 terapia online
-              </Link>{" "}
-              puede ser especialmente útil al inicio, ya que es menos
-              intimidante. A medida que avanza el tratamiento, podemos
-              incorporar sesiones presenciales si es apropiado.
+              </Link>
+              . No es un chat ni una urgencia.
             </p>
           </details>
         </div>
@@ -391,7 +440,7 @@ export default function PsicologoFobiaSocialChillanPage() {
             fontSize: "0.9375rem",
           }}
         >
-          La fobia social tiene tratamiento efectivo. Da el primer paso.
+          La exposición va de a poco y con tu acuerdo.
         </p>
         <a
           href="https://wa.me/56968257817"

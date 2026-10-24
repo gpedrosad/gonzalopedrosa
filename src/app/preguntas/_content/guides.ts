@@ -258,8 +258,8 @@ export const guides: Guide[] = [
     ],
     related: [
       { href: "/psicologo-ansiedad-chillan", label: "Ansiedad: información y atención en Chillán" },
-      { href: "/psicologo-estres-laboral-chillan", label: "Estrés laboral en Chillán" },
-      { href: "/tratamiento-burnout-chillan", label: "Burnout y agotamiento" },
+      { href: "/psicologo-estres-laboral-chillan", label: "Estrés laboral y burnout en Chillán" },
+      { href: "/preguntas/como-saber-si-es-burnout", label: "Cómo saber si es burnout" },
       { href: "/preguntas/que-es-un-ataque-de-panico", label: "¿Qué es un ataque de pánico?" },
       { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer en un ataque de pánico" },
     ],
@@ -459,7 +459,7 @@ export const guides: Guide[] = [
         paragraphs: [
           "La ansiedad del día es una preocupación que se estira por horas. El ataque de pánico es un pico. Puedes tener los dos: una base de preocupación y, encima, episodios súbitos. También puedes tener un ataque aislado en una etapa de mucho estrés y que no se repita.",
           "El cuerpo imita problemas médicos, sobre todo del corazón y de la respiración. Si el dolor de pecho es nuevo, muy intenso, viene con desmayo o con falta de aire que no cede, corresponde una evaluación médica urgente. Descartar una causa física es un paso de cuidado, no una exageración.",
-          "Cuando los ataques se repiten y empiezas a evitar lugares por miedo a que vuelvan, el problema ya ocupa más espacio. Ahí una evaluación psicológica tiene sentido. La página de [crisis de pánico en Chillán](/psicologo-crisis-de-panico-chillan) está escrita desde esa atención. La [agorafobia](/tratamiento-agorafobia-chillan) aparece cuando el miedo a los ataques te saca de la calle, de la micro o de los locales.",
+          "Cuando los ataques se repiten y empiezas a evitar lugares por miedo a que vuelvan, el problema ya ocupa más espacio. Ahí una evaluación psicológica tiene sentido. La página de [crisis de pánico en Chillán](/psicologo-crisis-de-panico-chillan) incluye la agorafobia: el miedo a los ataques que te saca de la calle, de la micro o de los locales.",
         ],
       },
       {
@@ -472,9 +472,8 @@ export const guides: Guide[] = [
     ],
     related: [
       { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer durante el ataque" },
-      { href: "/psicologo-crisis-de-panico-chillan", label: "Crisis de pánico en Chillán" },
+      { href: "/psicologo-crisis-de-panico-chillan", label: "Crisis de pánico y agorafobia en Chillán" },
       { href: "/psicologo-ansiedad-chillan", label: "Ansiedad: información y atención en Chillán" },
-      { href: "/tratamiento-agorafobia-chillan", label: "Agorafobia y miedo a salir" },
       { href: "/preguntas/ansiedad-o-estres", label: "¿Cómo sé si tengo ansiedad o estrés?" },
     ],
     faqs: [

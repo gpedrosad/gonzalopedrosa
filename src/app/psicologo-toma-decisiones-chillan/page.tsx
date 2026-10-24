@@ -187,7 +187,7 @@ export default function PsicologoTomaDecisionesChillanPage() {
             { label: "Crisis vital", href: "/psicologo-crisis-vital-chillan" },
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             { label: "Terapia de pareja", href: "/terapia-de-pareja-chillan" },
-            { label: "Burnout", href: "/tratamiento-burnout-chillan" },
+            { label: "Estrés laboral y burnout", href: "/psicologo-estres-laboral-chillan" },
           ].map((item, i) => (
             <Link key={i} href={item.href} style={{ color: "#666", fontSize: "0.875rem", textDecoration: "none", padding: "0.375rem 0.75rem", border: "1px solid #eaeaea", borderRadius: "9999px" }}>
               {item.label}

@@ -178,7 +178,7 @@ export default function PsicologoSoledadAislamientoChillanPage() {
           {[
             { label: "Depresión", href: "/psicologo-depresion-chillan" },
             { label: "Fobia social", href: "/psicologo-fobia-social-chillan" },
-            { label: "Timidez", href: "/psicologo-timidez-chillan" },
+            { label: "Fobia social y timidez", href: "/psicologo-fobia-social-chillan" },
             { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },
           ].map((item, i) => (
             <Link key={i} href={item.href} style={{ color: "#666", fontSize: "0.875rem", textDecoration: "none", padding: "0.375rem 0.75rem", border: "1px solid #eaeaea", borderRadius: "9999px" }}>

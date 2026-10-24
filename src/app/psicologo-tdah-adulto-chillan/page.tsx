@@ -187,7 +187,7 @@ export default function PsicologoTdahAdultoChillanPage() {
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },
             { label: "Estrés laboral", href: "/psicologo-estres-laboral-chillan" },
-            { label: "Perfeccionismo", href: "/psicologo-perfeccionismo-autoexigencia-chillan" },
+            { label: "Autoestima y exigencia", href: "/psicologo-baja-autoestima-chillan" },
           ].map((item, i) => (
             <Link key={i} href={item.href} style={{ color: "#666", fontSize: "0.875rem", textDecoration: "none", padding: "0.375rem 0.75rem", border: "1px solid #eaeaea", borderRadius: "9999px" }}>
               {item.label}

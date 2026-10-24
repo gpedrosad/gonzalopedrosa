@@ -2,6 +2,10 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-10-24
+
+- Lote de fin de semana: seis redirecciones permanentes (timidez, burnout, perfeccionismo, impostor, Chillán Viejo y agorafobia) con el contenido útil fundido en fobia social, estrés laboral, autoestima, la portada y crisis de pánico. Enlaces de descubrimiento hacia preguntas y guías que siguen sin indexar. Detalle: [lote](../../docs/seo-lote-2026-10-24.md).
+
 ## 2026-10-23
 
 - Lote de duplicados: cinco redirecciones permanentes (certificado laboral, matrimonial, anorexia y bulimia, centro, estrés académico) con el contenido útil fundido en la página de destino. Intención de adultos, ERP para el TOC y enlaces de descubrimiento hacia URLs que Google aún no reconoce. Detalle: [lote](../../docs/seo-lote-2026-10-23.md).
