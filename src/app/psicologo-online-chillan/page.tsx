@@ -249,7 +249,7 @@ export default function PsicologoOnlineChillanPage() {
               marginBottom: "1rem",
             }}
           >
-            ¿Cómo funciona?
+            Cómo se coordina la videollamada
           </h2>
           <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem" }}>
             <li
@@ -327,9 +327,7 @@ export default function PsicologoOnlineChillanPage() {
             ))}
           </ul>
           <p style={{ color: "#444", lineHeight: 1.7, margin: "1rem 0 0" }}>
-            Así es una sesión de psicología online: recibes el enlace, te
-            conectas 50 minutos desde un lugar privado y el secreto profesional
-            se mantiene. El detalle de la hora está en{" "}
+            El detalle de la hora (enlace, duración y lugar privado) está en{" "}
             <Link href="/preguntas/como-es-una-sesion-de-psicologia-online" style={{ color: "#000", textDecoration: "underline" }}>
               cómo es una sesión de psicología online
             </Link>

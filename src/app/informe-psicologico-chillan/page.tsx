@@ -89,7 +89,7 @@ export default function InformePsicologicoChillanPage() {
         </h2>
         <div style={{ display: "grid", gap: "0.75rem" }}>
           {[
-            { tipo: "Evaluación bariátrica", desc: "Para cirugía de manga gástrica, bypass y otros.", link: "/evaluacion-bariatrica-chillan" },
+            { tipo: "Evaluación bariátrica", desc: "Para cirugía de manga gástrica, bypass y otros.", link: "/psicologo-obesidad-chillan#evaluacion-bariatrica" },
             { tipo: "Certificado de salud mental", desc: "Para trámites laborales, licencias o permisos.", link: "/certificado-salud-mental-chillan" },
             { tipo: "Informe clínico", desc: "Estado actual, diagnóstico y recomendaciones de tratamiento." },
             { tipo: "Informe para tribunales", desc: "Evaluaciones requeridas en procesos judiciales." },
@@ -195,7 +195,7 @@ export default function InformePsicologicoChillanPage() {
         <p style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.75rem" }}>Servicios relacionados</p>
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {[
-            { label: "Evaluación bariátrica", href: "/evaluacion-bariatrica-chillan" },
+            { label: "Evaluación bariátrica", href: "/psicologo-obesidad-chillan#evaluacion-bariatrica" },
             { label: "Certificado salud mental", href: "/certificado-salud-mental-chillan" },
             { label: "Consulta precio", href: "/consulta-psicologica-precio-chillan" },
           ].map((item, i) => (

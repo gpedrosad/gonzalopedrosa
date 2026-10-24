@@ -189,7 +189,7 @@ export default function TratamientoTlpChillanPage() {
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {[
             { label: "Regulación emocional", href: "/psicologo-manejo-frustracion-chillan" },
-            { label: "Dependencia emocional", href: "/psicologo-dependencia-emocional-chillan" },
+            { label: "Dependencia y ruptura", href: "/psicologo-ruptura-amorosa-chillan" },
             { label: "Trauma", href: "/superar-trauma-infancia-chillan" },
             { label: "Depresión", href: "/psicologo-depresion-chillan" },
           ].map((item, i) => (

@@ -21,17 +21,17 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Terapia de pareja en Chillán cuando las discusiones se repiten o hay distancia. La guía de comunicación explica el ciclo. Esta página es la atención local.";
+  "La terapia de pareja es un espacio para los dos: se mira el ciclo de la pelea, los celos o la distancia, sin tomar bandos. En Chillán, también si están casados.";
 
 export const metadata: Metadata = {
-  title: "Terapia de pareja en Chillán: qué se habla en sesión",
+  title: "Terapia de pareja en Chillán: qué es y cómo funciona",
   description,
   alternates: {
     canonical: "/terapia-de-pareja-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Terapia de pareja en Chillán: qué se habla en sesión",
+    title: "Terapia de pareja en Chillán: qué es y cómo funciona",
     description,
     url: `${SITE_URL}/terapia-de-pareja-chillan`,
     type: "website",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terapia de pareja en Chillán: qué se habla en sesión",
+    title: "Terapia de pareja en Chillán: qué es y cómo funciona",
     description: getTwitterDescription(description),
   },
 };
@@ -58,7 +58,22 @@ const parejaFAQs = [
   {
     question: "¿Cuánto dura el proceso?",
     answer:
-      "Depende de la situación de cada pareja. Algunos temas se trabajan en 8-12 sesiones, otros requieren más tiempo. Evaluamos el avance continuamente.",
+      "No hay un número de sesiones que sirva para todas las parejas. Depende de lo que traigan los dos y de cómo avanza la conversación.",
+  },
+  {
+    question: "¿Los celos siempre indican inseguridad?",
+    answer:
+      "No siempre. A veces reflejan una traición anterior o un patrón aprendido. Conviene distinguir qué es una señal y qué es una interpretación ansiosa.",
+  },
+  {
+    question: "¿Los celos se conversan de a uno o de a dos?",
+    answer:
+      "Puedes venir solo o con tu pareja. El trabajo suele ser individual, y en algunos momentos sirve que la otra persona entre.",
+  },
+  {
+    question: "¿El objetivo es que los celos desaparezcan?",
+    answer:
+      "No. Los celos son una emoción humana. El punto es que dejen de controlar la relación. Si hay una razón real de desconfianza, eso también se puede conversar. No hay un plazo único.",
   },
   {
     question: "¿Puede ser online?",
@@ -80,7 +95,7 @@ const parejaFAQs = [
 const faqSchema = getPageFAQSchema(parejaFAQs);
 const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
 const webPageSchema = getWebPageSchema({
-  name: "Terapia de pareja Chillán",
+  name: "Terapia de pareja en Chillán: qué es y cómo funciona",
   description,
   path: "/terapia-de-pareja-chillan",
 });
@@ -160,7 +175,7 @@ export default function TerapiaParejaChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Terapia de pareja en Chillán
+        Terapia de pareja en Chillán: qué es y cómo funciona
       </h1>
 
       <p
@@ -171,22 +186,22 @@ export default function TerapiaParejaChillanPage() {
           lineHeight: 1.6,
         }}
       >
-        La terapia de pareja en Chillán trabaja comunicación,
-        distancia emocional,{" "}
-        <Link href="/terapia-celos-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+        La terapia de pareja es un espacio para los dos. Se mira cómo discuten,
+        la distancia, los{" "}
+        <Link href="#celos" style={{ color: "#000", textDecoration: "underline" }}>
           celos
-        </Link>
-        , confianza o crisis de convivencia,
-        en formato presencial u{" "}
+        </Link>{" "}
+        o una crisis de confianza, sin tomar bandos. Puede ser presencial en
+        Chillán o por{" "}
         <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
-          online
-        </Link>
-        , sin tomar bandos. Si quieres entender el ciclo de la pelea antes de mirar la
-        atención, la guía de{" "}
+          videollamada
+        </Link>{" "}
+        si están en el mismo lugar. El ciclo de la pelea, antes de la atención
+        local, está en la guía de{" "}
         <Link href="/guias/comunicacion-en-pareja" style={{ color: "#000", textDecoration: "underline" }}>
           comunicación en pareja
-        </Link>{" "}
-        explica el circuito. Esta página es la de Chillán.
+        </Link>
+        .
       </p>
 
       <div
@@ -360,7 +375,68 @@ export default function TerapiaParejaChillanPage() {
           <Link href="/guias/estilos-de-apego" style={{ color: "#000", textDecoration: "underline" }}>
             estilos de apego
           </Link>
+          . Si la relación ya terminó, o hay dependencia o control, eso no es
+          esta página: está en{" "}
+          <Link href="/psicologo-ruptura-amorosa-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+            ruptura, dependencia y relación tóxica
+          </Link>
           .
+        </p>
+      </section>
+
+      <section id="celos" style={{ marginBottom: "3rem" }}>
+        <h2
+          style={{
+            fontSize: "1.35rem",
+            fontWeight: 600,
+            letterSpacing: "-0.02em",
+            marginBottom: "0.75rem",
+            lineHeight: 1.3,
+          }}
+        >
+          Si el tema son los celos
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
+          Los celos, en cierta medida, son normales. Cuando se vuelven intensos,
+          frecuentes o infundados, pueden dañar la relación. No siempre son
+          inseguridad: a veces hay una traición anterior o un patrón aprendido.
+          Conviene separar una señal de una interpretación ansiosa.
+        </p>
+        <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem", marginBottom: "1rem" }}>
+          {[
+            "Revisar el celular o las redes de tu pareja una y otra vez",
+            "Necesitar saber dónde está en todo momento",
+            "Leer un gesto corriente como infidelidad",
+            "Limitar los contactos sociales de la otra persona",
+            "Buscar pruebas",
+          ].map((item) => (
+            <li
+              key={item}
+              style={{
+                display: "flex",
+                alignItems: "flex-start",
+                gap: "0.75rem",
+                padding: "0.75rem 1rem",
+                backgroundColor: "#fafafa",
+                borderRadius: "8px",
+                fontSize: "0.9375rem",
+                color: "#444",
+              }}
+            >
+              <span style={{ color: "#000", flexShrink: 0 }}>—</span>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
+          Detrás puede haber miedo al abandono, una infidelidad anterior,{" "}
+          <Link href="/psicologo-baja-autoestima-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+            autoestima baja
+          </Link>
+          , ansiedad o un apego ansioso. Ese mapa está en la guía de estilos de
+          apego. Puedes venir solo o con tu pareja. El objetivo no es que la
+          emoción desaparezca: es que deje de controlar la relación. Si hay una
+          razón real de desconfianza, eso también se conversa.
         </p>
       </section>
 
@@ -420,9 +496,8 @@ export default function TerapiaParejaChillanPage() {
                 fontSize: "0.9375rem",
               }}
             >
-              Depende de la situación de cada pareja. Algunos temas se trabajan
-              en 8-12 sesiones, otros requieren más tiempo. Evaluamos el avance
-              continuamente.
+              No hay un número de sesiones que sirva para todas las parejas.
+              Depende de lo que traigan los dos y de cómo avanza la conversación.
             </p>
           </details>
 
@@ -501,6 +576,77 @@ export default function TerapiaParejaChillanPage() {
               Sí. La misma atención cubre matrimonios recién casados y parejas
               con décadas de convivencia. Los temas cambian. El espacio sigue
               siendo para los dos.
+            </p>
+          </details>
+
+          <details
+            style={{
+              padding: "1rem",
+              border: "1px solid #eaeaea",
+              borderRadius: "12px",
+            }}
+          >
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
+              ¿Los celos siempre indican inseguridad?
+            </summary>
+            <p
+              style={{
+                marginTop: "0.75rem",
+                color: "#666",
+                lineHeight: 1.6,
+                fontSize: "0.9375rem",
+              }}
+            >
+              No siempre. A veces reflejan una traición anterior o un patrón
+              aprendido. Conviene distinguir qué es una señal y qué es una
+              interpretación ansiosa.
+            </p>
+          </details>
+
+          <details
+            style={{
+              padding: "1rem",
+              border: "1px solid #eaeaea",
+              borderRadius: "12px",
+            }}
+          >
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
+              ¿Los celos se conversan de a uno o de a dos?
+            </summary>
+            <p
+              style={{
+                marginTop: "0.75rem",
+                color: "#666",
+                lineHeight: 1.6,
+                fontSize: "0.9375rem",
+              }}
+            >
+              Puedes venir solo o con tu pareja. El trabajo suele ser
+              individual, y en algunos momentos sirve que la otra persona entre.
+            </p>
+          </details>
+
+          <details
+            style={{
+              padding: "1rem",
+              border: "1px solid #eaeaea",
+              borderRadius: "12px",
+            }}
+          >
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
+              ¿El objetivo es que los celos desaparezcan?
+            </summary>
+            <p
+              style={{
+                marginTop: "0.75rem",
+                color: "#666",
+                lineHeight: 1.6,
+                fontSize: "0.9375rem",
+              }}
+            >
+              No. Los celos son una emoción humana. El punto es que dejen de
+              controlar la relación. Si hay una razón real de desconfianza, eso
+              también se puede conversar. No hay un plazo único.
             </p>
           </details>
         </div>

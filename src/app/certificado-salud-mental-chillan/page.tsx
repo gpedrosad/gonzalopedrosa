@@ -205,7 +205,7 @@ export default function CertificadoSaludMentalChillanPage() {
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {[
             { label: "Informe psicológico", href: "/informe-psicologico-chillan" },
-            { label: "Evaluación bariátrica", href: "/evaluacion-bariatrica-chillan" },
+            { label: "Evaluación bariátrica", href: "/psicologo-obesidad-chillan#evaluacion-bariatrica" },
             { label: "Consulta precio", href: "/consulta-psicologica-precio-chillan" },
           ].map((item, i) => (
             <Link key={i} href={item.href} style={{ color: "#666", fontSize: "0.875rem", textDecoration: "none", padding: "0.375rem 0.75rem", border: "1px solid #eaeaea", borderRadius: "9999px" }}>

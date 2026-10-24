@@ -7,7 +7,7 @@ import { getTwitterDescription } from "@/lib/schemas";
 import { RelatedReading } from "@/app/components/RelatedReading";
 
 const description =
-  "Psicólogo especialista en obesidad en Chillán: alimentación emocional y hábitos. La evaluación bariátrica (informe para cirugía) está en otra página.";
+  "Psicólogo especialista en obesidad en Chillán: alimentación emocional y hábitos. La evaluación para manga o bypass, con el informe, está en esta misma página.";
 
 export const metadata: Metadata = {
   title: "Psicólogo especialista en obesidad | Chillán",
@@ -51,7 +51,17 @@ const psicologo_obesidad_chillanFAQs = [
   {
     question: "¿Esta página incluye la evaluación psicológica para una cirugía bariátrica?",
     answer:
-      "No. La evaluación para manga gástrica o bypass, con el informe para el equipo quirúrgico, está en la página de evaluación bariátrica. Suele tomar una o dos sesiones y el informe se entrega dentro de la semana siguiente. Aquí se mira la alimentación emocional.",
+      "Sí. La evaluación para manga gástrica o bypass, con el informe para el equipo quirúrgico, está en esta misma página. Suele tomar una o dos sesiones y el informe se entrega dentro de la semana siguiente. El resto mira la alimentación emocional, que es otro motivo.",
+  },
+  {
+    question: "¿Me pueden rechazar en la evaluación bariátrica?",
+    answer:
+      "La evaluación mira si estás preparado o preparada en este momento. Si hay algo que conviene trabajar antes, se puede retomar más adelante.",
+  },
+  {
+    question: "¿El informe lo acepta cualquier clínica?",
+    answer:
+      "El informe cumple estándares profesionales. Si el equipo pide un formato específico, se adapta a ese requerimiento.",
   },
 ];
 
@@ -92,9 +102,9 @@ export default function PsicologoObesidadChillanPage() {
           cuando comes para calmar una emoción
         </Link>{" "}
         explica ese ciclo, sin dieta ni meta de peso. La evaluación psicológica
-        para manga gástrica o bypass no es esta página: está en{" "}
-        <Link href="/evaluacion-bariatrica-chillan" style={{ color: "#000", textDecoration: "underline" }}>
-          evaluación bariátrica en Chillán
+        para manga gástrica o bypass, con el informe, está en{" "}
+        <Link href="#evaluacion-bariatrica" style={{ color: "#000", textDecoration: "underline" }}>
+          esta misma página
         </Link>
         .
       </p>
@@ -154,8 +164,8 @@ export default function PsicologoObesidadChillanPage() {
           {[
             {
               label: "Evaluación bariátrica",
-              href: "/evaluacion-bariatrica-chillan",
-              desc: "Informe psicológico para manga o bypass",
+              href: "#evaluacion-bariatrica",
+              desc: "Informe psicológico para manga o bypass, en esta página",
             },
             {
               label: "Trastornos alimenticios",
@@ -189,21 +199,44 @@ export default function PsicologoObesidadChillanPage() {
         </div>
       </section>
 
-      <section style={{ padding: "1.25rem", backgroundColor: "#f0f9ff", borderRadius: "12px", marginBottom: "2.5rem", border: "1px solid #bae6fd" }}>
-        <h2 style={{ fontWeight: 600, color: "#0369a1", marginBottom: "0.5rem", fontSize: "0.9375rem" }}>
-          ¿Necesitas evaluación bariátrica?
+      <section id="evaluacion-bariatrica" style={{ marginBottom: "3rem" }}>
+        <h2 style={{ fontSize: "1.35rem", fontWeight: 600, letterSpacing: "-0.02em", marginBottom: "0.75rem", lineHeight: 1.3 }}>
+          Evaluación psicológica para cirugía bariátrica
         </h2>
-        <p style={{ color: "#0c4a6e", fontSize: "0.875rem", lineHeight: 1.6, marginBottom: "0.75rem" }}>
-          Si buscas psicólogo bariátrico para el informe de manga gástrica o
-          bypass, esa evaluación está en una página aparte. Aquí trabajo hábitos
-          y alimentación emocional; allá el informe para cirugía.
+        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
+          Si estás considerando una manga gástrica o un bypass, el informe para
+          el equipo quirúrgico se hace aquí. No es el trabajo de alimentación
+          emocional de más arriba. El informe cumple estándares profesionales y
+          es el que la ficha describía como aceptado por clínicas y equipos
+          bariátricos. Si piden un formato específico, se adapta.
         </p>
-        <Link
-          href="/evaluacion-bariatrica-chillan"
-          style={{ color: "#0369a1", textDecoration: "underline", fontWeight: 600, fontSize: "0.875rem" }}
-        >
-          Ir a evaluación bariátrica en Chillán →
-        </Link>
+        <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem", marginBottom: "1rem" }}>
+          {[
+            "Motivación y expectativas",
+            "Historia con la alimentación y el peso",
+            "Si hay un trastorno alimentario",
+            "Estado emocional",
+            "Capacidad de seguir el tratamiento",
+            "Red de apoyo",
+            "Si comprendes los cambios después de la cirugía",
+          ].map((item) => (
+            <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem", padding: "0.75rem 1rem", backgroundColor: "#fafafa", borderRadius: "8px", fontSize: "0.9375rem", color: "#444" }}>
+              <span style={{ color: "#000", flexShrink: 0 }}>—</span>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
+          El proceso que ya estaba escrito es este: una entrevista de una o dos
+          sesiones, pruebas cuando el equipo las pide, el informe y la entrega
+          para presentarlo al equipo médico. El informe sale dentro de la
+          semana siguiente a completar la evaluación. Otras formas de informe
+          están en{" "}
+          <Link href="/informe-psicologico-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+            informe psicológico
+          </Link>
+          .
+        </p>
       </section>
 
       <section style={{ marginBottom: "3rem" }}>
@@ -240,11 +273,28 @@ export default function PsicologoObesidadChillanPage() {
           <details style={{ padding: "1rem", border: "1px solid #eaeaea", borderRadius: "12px" }}>
             <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>¿Esta página incluye la evaluación psicológica para una cirugía bariátrica?</summary>
             <p style={{ marginTop: "0.75rem", color: "#666", lineHeight: 1.6, fontSize: "0.9375rem" }}>
-              No. La evaluación para manga gástrica o bypass, con el informe
-              para el equipo quirúrgico, está en la página de evaluación
-              bariátrica. Suele tomar una o dos sesiones y el informe se entrega
-              dentro de la semana siguiente. Aquí se mira la alimentación
-              emocional.
+              Sí. La evaluación para manga gástrica o bypass, con el informe
+              para el equipo quirúrgico, está en esta misma página. Suele tomar
+              una o dos sesiones y el informe se entrega dentro de la semana
+              siguiente. El resto mira la alimentación emocional, que es otro
+              motivo.
+            </p>
+          </details>
+
+          <details style={{ padding: "1rem", border: "1px solid #eaeaea", borderRadius: "12px" }}>
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>¿Me pueden rechazar en la evaluación bariátrica?</summary>
+            <p style={{ marginTop: "0.75rem", color: "#666", lineHeight: 1.6, fontSize: "0.9375rem" }}>
+              La evaluación mira si estás preparado o preparada en este momento.
+              Si hay algo que conviene trabajar antes, se puede retomar más
+              adelante.
+            </p>
+          </details>
+
+          <details style={{ padding: "1rem", border: "1px solid #eaeaea", borderRadius: "12px" }}>
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>¿El informe lo acepta cualquier clínica?</summary>
+            <p style={{ marginTop: "0.75rem", color: "#666", lineHeight: 1.6, fontSize: "0.9375rem" }}>
+              El informe cumple estándares profesionales. Si el equipo pide un
+              formato específico, se adapta a ese requerimiento.
             </p>
           </details>
         </div>
@@ -266,7 +316,7 @@ export default function PsicologoObesidadChillanPage() {
         <p style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#999", marginBottom: "0.75rem" }}>Servicios relacionados</p>
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {[
-            { label: "Evaluación bariátrica", href: "/evaluacion-bariatrica-chillan" },
+            { label: "Evaluación bariátrica", href: "#evaluacion-bariatrica" },
             { label: "Trastornos alimenticios", href: "/psicologo-trastornos-alimenticios-chillan" },
             { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
             { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },

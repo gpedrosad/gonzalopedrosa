@@ -54,12 +54,9 @@ export const ORGANIC_SERVICE_GROUPS = [
   {
     title: "Pareja, vínculos y familia",
     links: [
-      ["/terapia-de-pareja-chillan", "Terapia de pareja y matrimonial"],
-      ["/terapia-celos-chillan", "Celos y desconfianza"],
-      ["/psicologo-ruptura-amorosa-chillan", "Ruptura amorosa"],
-      ["/psicologo-dependencia-emocional-chillan", "Dependencia emocional"],
-      ["/superar-relacion-toxica-chillan", "Relaciones tóxicas"],
-      ["/psicologo-apego-chillan", "Apego y vínculos"],
+      ["/terapia-de-pareja-chillan", "Terapia de pareja: qué es y cómo funciona"],
+      ["/psicologo-ruptura-amorosa-chillan", "Ruptura, dependencia y relación tóxica"],
+      ["/guias/estilos-de-apego", "Estilos de apego"],
       ["/psicologo-falta-deseo-sexual-chillan", "Falta de deseo sexual"],
       ["/orientacion-padres-chillan", "Orientación para padres"],
     ],
@@ -86,8 +83,7 @@ export const ORGANIC_SERVICE_GROUPS = [
     title: "Alimentación y salud",
     links: [
       ["/psicologo-trastornos-alimenticios-chillan", "Trastornos alimenticios, anorexia y bulimia"],
-      ["/psicologo-obesidad-chillan", "Acompañamiento psicológico en obesidad"],
-      ["/evaluacion-bariatrica-chillan", "Evaluación psicológica bariátrica"],
+      ["/psicologo-obesidad-chillan", "Obesidad y evaluación bariátrica"],
       ["/psicologo-fibromialgia-chillan", "Acompañamiento en fibromialgia"],
     ],
   },

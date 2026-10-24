@@ -95,10 +95,10 @@ export default function PsicologoTrastornosAlimenticiosChillanPage() {
           obesidad
         </Link>{" "}
         y la{" "}
-        <Link href="/evaluacion-bariatrica-chillan" style={{ color: "#000", textDecoration: "underline" }}>
-          evaluación para cirugía
+        <Link href="/psicologo-obesidad-chillan#evaluacion-bariatrica" style={{ color: "#000", textDecoration: "underline" }}>
+          evaluación para manga o bypass
         </Link>{" "}
-        están en otras fichas.
+        están en la misma ficha.
       </p>
 
       <section style={{ padding: "1.25rem", backgroundColor: "#fef3c7", borderRadius: "12px", marginBottom: "2.5rem", border: "1px solid #fcd34d" }}>

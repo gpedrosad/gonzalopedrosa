@@ -3,27 +3,30 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { OrganicSeoScripts } from "@/app/components/OrganicSeoScripts";
+import { RelatedReading } from "@/app/components/RelatedReading";
 import { getTwitterDescription } from "@/lib/schemas";
 
+const description =
+  "Si la relación terminó, si tu estado depende del otro o si hay control y miedo, no es el mismo momento. En Chillán se explican los tres, con el Fono Familia 149.";
+
 export const metadata: Metadata = {
-  title: "Psicólogo Ruptura Amorosa en Chillán | Gonzalo Pedrosa",
-  description:
-    "Psicólogo especializado en rupturas amorosas en Chillán. Supera el dolor de una separación con terapia profesional. Sesiones presenciales y online.",
+  title: "Ruptura, dependencia y una relación tóxica en Chillán",
+  description,
   alternates: {
     canonical: "/psicologo-ruptura-amorosa-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Psicólogo Ruptura Amorosa en Chillán | Gonzalo Pedrosa",
-    description: "Psicólogo especializado en rupturas amorosas en Chillán. Supera el dolor de una separación con terapia profesional. Sesiones presenciales y online.",
+    title: "Ruptura, dependencia y una relación tóxica en Chillán",
+    description,
     url: "https://www.gonzalopedrosa.cl/psicologo-ruptura-amorosa-chillan",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Retrato de Gonzalo Pedrosa, psicólogo clínico" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo Ruptura Amorosa en Chillán",
-    description: getTwitterDescription("Psicólogo especializado en rupturas amorosas en Chillán. Supera el dolor de una separación con terapia profesional. Sesiones presenciales y online."),
+    title: "Ruptura, dependencia y una relación tóxica en Chillán",
+    description: getTwitterDescription(description),
   },
 };
 
@@ -43,13 +46,23 @@ const psicologo_ruptura_amorosa_chillanFAQs = [
   {
     question: "¿Sirve si la ruptura fue hace mucho?",
     answer:
-      "Sí. A veces el dolor se estanca y no se procesa correctamente. La terapia ayuda a cerrar ese capítulo aunque haya pasado tiempo.",
+      "Sí. A veces el dolor se estanca y no se procesa. Se puede conversar ese capítulo aunque haya pasado tiempo. No hay un plazo único.",
+  },
+  {
+    question: "¿Tengo que terminar la relación?",
+    answer:
+      "No necesariamente. A veces el vínculo mejora y a veces decides que no te conviene. La dependencia no obliga a una ruptura.",
+  },
+  {
+    question: "¿Por qué cuesta salir si hay control?",
+    answer:
+      "El ciclo de maltrato y reconciliación hace difícil cortar. Si hay violencia física o psicológica grave, llama al Fono Familia 149. Atiende las 24 horas.",
   },
 ];
 
 const breadcrumbItems = [
   { label: "Inicio", href: "/" },
-  { label: "Psicólogo Ruptura Amorosa Chillán" },
+  { label: "Ruptura, dependencia y relación tóxica" },
 ];
 
 export default function PsicologoRupturaAmorosaChillanPage() {
@@ -59,7 +72,7 @@ export default function PsicologoRupturaAmorosaChillanPage() {
         breadcrumbItems={breadcrumbItems}
         faqs={psicologo_ruptura_amorosa_chillanFAQs}
         serviceType="Psicología Ruptura Amorosa"
-        serviceDescription={"Psicólogo especializado en rupturas amorosas en Chillán. Supera el dolor de una separación con terapia profesional. Sesiones presenciales y online."}
+        serviceDescription={description}
       />
       <main
       style={{
@@ -114,7 +127,7 @@ export default function PsicologoRupturaAmorosaChillanPage() {
           lineHeight: 1.1,
         }}
       >
-        Psicólogo Ruptura Amorosa en Chillán
+        Ruptura, dependencia y una relación tóxica en Chillán
       </h1>
 
       <p
@@ -125,9 +138,17 @@ export default function PsicologoRupturaAmorosaChillanPage() {
           lineHeight: 1.6,
         }}
       >
-        El fin de una relación puede ser devastador. La terapia te ayuda a
-        procesar el dolor, entender qué pasó y reconstruirte para avanzar de
-        forma saludable.
+        No es lo mismo que la relación haya terminado, que tu estado quede
+        tomado por el otro, o que haya control y miedo. Esta página separa esos
+        tres momentos. Si siguen juntos y el tema es la pelea, eso es{" "}
+        <Link href="/terapia-de-pareja-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+          terapia de pareja
+        </Link>
+        . Cómo se busca cercanía está en la guía de{" "}
+        <Link href="/guias/estilos-de-apego" style={{ color: "#000", textDecoration: "underline" }}>
+          estilos de apego
+        </Link>
+        .
       </p>
 
       <section style={{ marginBottom: "3rem" }}>
@@ -141,7 +162,7 @@ export default function PsicologoRupturaAmorosaChillanPage() {
             marginBottom: "1rem",
           }}
         >
-          Lo que puedes estar sintiendo
+          Si ya terminó
         </h2>
         <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem" }}>
           {[
@@ -184,32 +205,77 @@ export default function PsicologoRupturaAmorosaChillanPage() {
             marginBottom: "1rem",
           }}
         >
-          Cómo te puedo ayudar
+          Si tu estado depende del otro
         </h2>
+        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
+          La dependencia emocional es sentir que no puedes estar sin el otro:
+          el miedo al abandono, la aprobación constante, postergarte, tolerar
+          lo que te daña o perder el nombre propio dentro de la relación. No
+          obliga a terminarla. A veces el vínculo mejora y a veces decides que
+          no te conviene.
+        </p>
         <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: "0.5rem" }}>
           {[
-            "Procesar el duelo de la relación",
-            "Entender patrones que se repiten en tus relaciones",
-            "Trabajar la autoestima y el amor propio",
-            "Manejar la ansiedad y los pensamientos intrusivos",
-            "Reconstruir tu identidad fuera de la relación",
-            "Prepararte para futuras relaciones más sanas",
-          ].map((item, i) => (
+            "Miedo intenso al abandono o al rechazo",
+            "Necesidad constante de aprobación",
+            "Dificultad para decidir sin el otro",
+            "Vacío cuando no estás en pareja",
+            "Celos o control que se te van de las manos",
+          ].map((item) => (
             <li
-              key={i}
+              key={item}
               style={{
                 display: "flex",
-                alignItems: "center",
+                alignItems: "flex-start",
                 gap: "0.75rem",
-                color: "#444",
+                padding: "0.75rem 1rem",
+                backgroundColor: "#fafafa",
+                borderRadius: "8px",
                 fontSize: "0.9375rem",
+                color: "#444",
               }}
             >
-              <span style={{ color: "#000" }}>✓</span>
+              <span style={{ color: "#000", flexShrink: 0 }}>—</span>
               {item}
             </li>
           ))}
         </ul>
+      </section>
+
+      <section style={{ marginBottom: "3rem" }}>
+        <h2
+          style={{
+            fontSize: "1.35rem",
+            fontWeight: 600,
+            letterSpacing: "-0.02em",
+            marginBottom: "0.75rem",
+            lineHeight: 1.3,
+          }}
+        >
+          Si hay control o miedo
+        </h2>
+        <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
+          Una relación con manipulación, control de tus amistades, críticas que
+          te achican, ciclos de idealización y desprecio, o aislamiento de tu
+          red, no se explica solo como apego. Salir puede ser el primer paso.
+          El ciclo de maltrato y reconciliación hace difícil cortar.
+        </p>
+        <div
+          style={{
+            padding: "1.25rem",
+            backgroundColor: "#fef3c7",
+            borderRadius: "12px",
+            border: "1px solid #fcd34d",
+          }}
+        >
+          <p style={{ fontWeight: 600, color: "#92400e", marginBottom: "0.5rem", fontSize: "0.9375rem" }}>
+            Si hay violencia
+          </p>
+          <p style={{ color: "#78350f", fontSize: "0.875rem", lineHeight: 1.6, margin: 0 }}>
+            Si estás en una relación con violencia física o psicológica grave,
+            busca ayuda especializada. Fono Familia: 149, las 24 horas.
+          </p>
+        </div>
       </section>
 
       <section style={{ marginBottom: "3rem" }}>
@@ -259,8 +325,34 @@ export default function PsicologoRupturaAmorosaChillanPage() {
               ¿Sirve si la ruptura fue hace mucho?
             </summary>
             <p style={{ marginTop: "0.75rem", color: "#666", lineHeight: 1.6, fontSize: "0.9375rem" }}>
-              Sí. A veces el dolor se estanca y no se procesa correctamente. La
-              terapia ayuda a cerrar ese capítulo aunque haya pasado tiempo.
+              Sí. A veces el dolor se estanca y no se procesa. Se puede
+              conversar ese capítulo aunque haya pasado tiempo. No hay un plazo
+              único.
+            </p>
+          </details>
+
+          <details
+            style={{ padding: "1rem", border: "1px solid #eaeaea", borderRadius: "12px" }}
+          >
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
+              ¿Tengo que terminar la relación?
+            </summary>
+            <p style={{ marginTop: "0.75rem", color: "#666", lineHeight: 1.6, fontSize: "0.9375rem" }}>
+              No necesariamente. A veces el vínculo mejora y a veces decides que
+              no te conviene. La dependencia no obliga a una ruptura.
+            </p>
+          </details>
+
+          <details
+            style={{ padding: "1rem", border: "1px solid #eaeaea", borderRadius: "12px" }}
+          >
+            <summary style={{ cursor: "pointer", fontWeight: 500, color: "#000" }}>
+              ¿Por qué cuesta salir si hay control?
+            </summary>
+            <p style={{ marginTop: "0.75rem", color: "#666", lineHeight: 1.6, fontSize: "0.9375rem" }}>
+              El ciclo de maltrato y reconciliación hace difícil cortar. Si hay
+              violencia física o psicológica grave, llama al Fono Familia 149.
+              Atiende las 24 horas.
             </p>
           </details>
         </div>
@@ -317,8 +409,8 @@ export default function PsicologoRupturaAmorosaChillanPage() {
         </p>
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {[
-            { label: "Dependencia emocional", href: "/psicologo-dependencia-emocional-chillan" },
-            { label: "Relación tóxica", href: "/superar-relacion-toxica-chillan" },
+            { label: "Terapia de pareja", href: "/terapia-de-pareja-chillan" },
+            { label: "Estilos de apego", href: "/guias/estilos-de-apego" },
             { label: "Duelo", href: "/psicologo-duelo-chillan" },
             { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },
           ].map((item, i) => (
@@ -339,6 +431,7 @@ export default function PsicologoRupturaAmorosaChillanPage() {
           ))}
         </div>
       </nav>
+      <RelatedReading currentPath="/psicologo-ruptura-amorosa-chillan" />
     </main>
     </>
   );

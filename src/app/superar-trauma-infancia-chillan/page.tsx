@@ -212,7 +212,7 @@ export default function SuperarTraumaInfanciaChillanPage() {
           {[
             { label: "Abuso sexual", href: "/psicologo-abuso-sexual-chillan" },
             { label: "TEPT", href: "/estres-postraumatico-chillan" },
-            { label: "Apego", href: "/psicologo-apego-chillan" },
+            { label: "Estilos de apego", href: "/guias/estilos-de-apego" },
             { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },
           ].map((item, i) => (
             <Link key={i} href={item.href} style={{ color: "#666", fontSize: "0.875rem", textDecoration: "none", padding: "0.375rem 0.75rem", border: "1px solid #eaeaea", borderRadius: "9999px" }}>

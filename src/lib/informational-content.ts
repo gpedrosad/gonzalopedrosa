@@ -383,6 +383,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
   {
     cluster: "guias",
     slug: "estilos-de-apego",
+    updated: "2026-10-24",
     navLabel: "Estilos de apego",
     title: "Estilos de apego en adultos: una guía clara",
     h1: "Estilos de apego en adultos",
@@ -425,6 +426,13 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
           "Si el otro se aleja, no completes la historia por él. Pregunta. Si tú te cierras, avisa que vuelves en un rato en vez de desaparecer. Son conductas chicas. El estilo no se reescribe con una frase.",
         ],
       },
+      {
+        heading: "Si el patrón ya está en una relación",
+        paragraphs: [
+          "Si se ve en una discusión de a dos, la página de [terapia de pareja en Chillán](/terapia-de-pareja-chillan) describe ese espacio: qué es y cómo se conversa, incluidos los celos. Esta guía no reserva una hora.",
+          "Si el vínculo duele de otra forma, la ficha de [ruptura, dependencia y relación tóxica](/psicologo-ruptura-amorosa-chillan) separa tres momentos: que la relación terminó, que tu estado queda tomado por el otro, y que hay control o miedo. Si hay violencia, esa página deja el Fono Familia 149.",
+        ],
+      },
     ],
     faqs: [
       {
@@ -442,11 +450,17 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
         answer:
           "Las personas modifican conductas de búsqueda y de retirada cuando practican otra respuesta y la relación lo permite. No es un interruptor ni una garantía.",
       },
+      {
+        question: "¿Por qué elijo vínculos que se parecen a los de antes?",
+        answer:
+          "A veces se busca lo familiar, aunque duela. El mapa del apego puede ordenar esa repetición. No la explica toda y no es un diagnóstico.",
+      },
     ],
     related: [
       { href: "/preguntas/que-es-el-apego-ansioso", label: "Qué es el apego ansioso" },
       { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
-      { href: "/psicologo-apego-chillan", label: "Página de atención sobre apego" },
+      { href: "/terapia-de-pareja-chillan", label: "Terapia de pareja en Chillán" },
+      { href: "/psicologo-ruptura-amorosa-chillan", label: "Ruptura, dependencia y relación tóxica" },
     ],
     sources: [APA_APEGO],
   },
@@ -1076,7 +1090,7 @@ const QUESTION_PAGES: InfoPage[] = [
       {
         question: "¿Es lo mismo que dependencia emocional?",
         answer:
-          "No siempre. La dependencia describe que tu estado queda tomado por el otro. El apego ansioso describe la alarma ante la distancia. Pueden ir juntos.",
+          "No siempre. La dependencia describe que tu estado queda tomado por el otro. El apego ansioso describe la alarma ante la distancia. Pueden ir juntos. La ficha que los separa de una ruptura y de una relación con control está en Chillán.",
       },
       {
         question: "¿Mi pareja tiene que cambiar para que yo esté bien?",
@@ -1087,7 +1101,7 @@ const QUESTION_PAGES: InfoPage[] = [
     related: [
       { href: "/guias/estilos-de-apego", label: "Guía de estilos de apego" },
       { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
-      { href: "/psicologo-dependencia-emocional-chillan", label: "Información sobre dependencia emocional" },
+      { href: "/psicologo-ruptura-amorosa-chillan", label: "Ruptura, dependencia y relación tóxica" },
     ],
     sources: [APA_APEGO],
   },
@@ -1813,9 +1827,9 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "como-es-una-sesion-de-psicologia-online",
-    updated: "2026-10-21",
+    updated: "2026-10-24",
     navLabel: "Cómo es una sesión online",
-    title: "Cómo es una sesión de psicología online: 50 minutos",
+    title: "¿Cómo es una sesión de psicología online? La videollamada",
     h1: "¿Cómo es una sesión de psicología online?",
     description:
       "Una sesión de psicología online es una videollamada de 50 minutos, con enlace previo y un lugar donde nadie más escuche. No es un chat ni una urgencia.",
@@ -2116,10 +2130,7 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
     { href: "/guias/estilos-de-apego", label: "Guía: estilos de apego" },
     { href: "/preguntas/que-es-el-apego-ansioso", label: "Qué es el apego ansioso" },
     { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
-  ],
-  "/terapia-celos-chillan": [
-    { href: "/preguntas/que-es-el-apego-ansioso", label: "Qué es el apego ansioso" },
-    { href: "/guias/estilos-de-apego", label: "Guía: estilos de apego" },
+    { href: "/psicologo-ruptura-amorosa-chillan", label: "Si la relación ya terminó o hay control" },
   ],
   "/terapia-emdr-chillan": [
     { href: "/preguntas/que-hace-un-especialista-en-estres-postraumatico", label: "Qué hace un especialista en estrés postraumático" },
@@ -2168,9 +2179,10 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
     { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
     { href: "/psicologo-acoso-laboral-chillan", label: "Acoso laboral" },
   ],
-  "/psicologo-apego-chillan": [
-    { href: "/guias/estilos-de-apego", label: "Guía: estilos de apego" },
+  "/psicologo-ruptura-amorosa-chillan": [
     { href: "/preguntas/que-es-el-apego-ansioso", label: "Qué es el apego ansioso" },
+    { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
+    { href: "/guias/duelo-etapas-y-mitos", label: "Etapas y mitos del duelo" },
   ],
   "/psicologo-duelo-chillan": [
     { href: "/preguntas/duelo-o-depresion", label: "Duelo o depresión" },
@@ -2195,11 +2207,6 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
     { href: "/guias/regulacion-emocional", label: "Regulación emocional" },
     { href: "/guias", label: "Guías" },
     { href: "/preguntas", label: "Preguntas" },
-  ],
-  "/psicologo-dependencia-emocional-chillan": [
-    { href: "/preguntas/que-es-el-apego-ansioso", label: "Qué es el apego ansioso" },
-    { href: "/guias/estilos-de-apego", label: "Guía: estilos de apego" },
-    { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
   ],
   "/psicologo-cognitivo-conductual-chillan": [
     { href: "/preguntas/que-es-la-terapia-cognitivo-conductual", label: "Qué es la terapia cognitivo-conductual" },
