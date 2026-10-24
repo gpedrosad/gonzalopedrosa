@@ -20,17 +20,17 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Terapia online en Chile: conexión, lugar privado y una hora de 50 minutos, y en qué se diferencia de una sala. El recorrido está en las preguntas.";
+  "Terapia online en Chile: qué pide el formato, la privacidad de la casa y en qué se diferencia de una sala. Cómo es la hora está en otra pregunta.";
 
 export const metadata: Metadata = {
-  title: "Terapia online en Chile: sesión, privacidad y hora",
+  title: "Terapia online en Chile: formato, privacidad y hora",
   description,
   alternates: {
     canonical: "/terapia-online",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Terapia online en Chile: sesión, privacidad y hora",
+    title: "Terapia online en Chile: formato, privacidad y hora",
     description,
     url: `${SITE_URL}/terapia-online`,
     type: "website",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terapia online en Chile: sesión, privacidad y hora",
+    title: "Terapia online en Chile: formato, privacidad y hora",
     description: getTwitterDescription(description),
   },
 };
@@ -50,9 +50,9 @@ const breadcrumbItems = getClusterBreadcrumb(
 
 const terapiaOnlineFAQs = [
   {
-    question: "¿Cómo es una sesión de psicología online?",
+    question: "¿Dónde se describe cómo es la hora?",
     answer:
-      "Es una videollamada de 50 minutos. Antes de la hora recibes el enlace (Zoom, Google Meet u otra). Te conectas desde un computador, una tablet o un celular, con cámara, micrófono e internet estable, en una pieza donde nadie más escuche. El secreto profesional se mantiene igual que en una sala.",
+      "En la pregunta dedicada: el enlace, los 50 minutos y la pieza con puerta. Esta página se queda en el formato en Chile y en qué se diferencia de una sala.",
   },
   {
     question: "¿Cómo funciona la terapia psicológica online?",

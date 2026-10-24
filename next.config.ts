@@ -138,6 +138,31 @@ const nextConfig: NextConfig = {
         destination: "/psicologo-crisis-de-panico-chillan",
         permanent: true,
       },
+      {
+        source: "/terapia-celos-chillan",
+        destination: "/terapia-de-pareja-chillan",
+        permanent: true,
+      },
+      {
+        source: "/psicologo-dependencia-emocional-chillan",
+        destination: "/psicologo-ruptura-amorosa-chillan",
+        permanent: true,
+      },
+      {
+        source: "/superar-relacion-toxica-chillan",
+        destination: "/psicologo-ruptura-amorosa-chillan",
+        permanent: true,
+      },
+      {
+        source: "/psicologo-apego-chillan",
+        destination: "/guias/estilos-de-apego",
+        permanent: true,
+      },
+      {
+        source: "/evaluacion-bariatrica-chillan",
+        destination: "/psicologo-obesidad-chillan",
+        permanent: true,
+      },
     ];
   },
   // Headers de seguridad (CSP se maneja en middleware.ts con nonce)

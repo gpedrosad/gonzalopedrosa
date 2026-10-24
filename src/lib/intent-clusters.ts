@@ -34,16 +34,8 @@ export const COUPLES_CLUSTER: IntentCluster = {
       label: "Terapia de pareja",
       shortTitle: "Terapia de pareja Chillán",
       cardDescription:
-        "Comunicación, crisis, distancia emocional y primeros pasos para volver a conectar.",
+        "Qué es, cómo funciona, celos y lo que cambia cuando la pareja está casada.",
       role: "hub",
-    },
-    {
-      href: "/terapia-celos-chillan",
-      label: "Celos",
-      shortTitle: "Terapia para celos Chillán",
-      cardDescription:
-        "Trabajo sobre celos, desconfianza y patrones que erosionan la seguridad en la pareja.",
-      role: "satellite",
     },
   ],
 };
@@ -134,7 +126,6 @@ export const CLUSTER_LEADER_ROUTES = new Set([
 
 /** Satélites de cluster → prioridad sitemap reducida. */
 export const CLUSTER_SATELLITE_ROUTES = new Set([
-  "/terapia-celos-chillan",
   "/terapia-online-vs-presencial-chillan",
 ]);
 

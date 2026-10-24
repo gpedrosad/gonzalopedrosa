@@ -212,7 +212,7 @@ export default function PsicologoAdultoChillanPage() {
             },
             { label: "Síntomas depresivos", href: "/psicologo-depresion-chillan" },
             { label: "Estrés laboral", href: "/psicologo-estres-laboral-chillan" },
-            { label: "Relaciones interpersonales", href: "/psicologo-apego-chillan" },
+            { label: "Estilos de apego", href: "/guias/estilos-de-apego" },
             { label: "Duelo y pérdidas", href: "/psicologo-duelo-chillan" },
             { label: "Autoestima", href: "/psicologo-baja-autoestima-chillan" },
             { label: "Adicciones", href: "/psicologo-adicciones-chillan" },

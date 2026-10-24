@@ -5,6 +5,7 @@ Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 ## 2026-10-24
 
 - Lote de fin de semana: seis redirecciones permanentes (timidez, burnout, perfeccionismo, impostor, Chillán Viejo y agorafobia) con el contenido útil fundido en fobia social, estrés laboral, autoestima, la portada y crisis de pánico. Enlaces de descubrimiento hacia preguntas y guías que siguen sin indexar. Detalle: [lote](../../docs/seo-lote-2026-10-24.md).
+- Lote 24b: cinco redirecciones permanentes del grupo de pareja y de la evaluación bariátrica (celos, dependencia, relación tóxica, apego y bariátrica). Títulos de pareja, de la pregunta de la sesión online y de terapia online. Detalle: [lote](../../docs/seo-lote-2026-10-24b.md).
 
 ## 2026-10-23
 
