@@ -20,17 +20,17 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Terapia online en Chile: qué pide el formato, la privacidad de la casa y en qué se diferencia de una sala. Cómo es la hora está en otra pregunta.";
+  "La terapia online en Chile es una videollamada con hora de inicio y de cierre, un lugar privado y continuidad. La atención local, en Chillán, está en otra página.";
 
 export const metadata: Metadata = {
-  title: "Terapia online en Chile: formato, privacidad y hora",
+  title: "Terapia online en Chile: cómo funciona, paso a paso",
   description,
   alternates: {
     canonical: "/terapia-online",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Terapia online en Chile: formato, privacidad y hora",
+    title: "Terapia online en Chile: cómo funciona, paso a paso",
     description,
     url: `${SITE_URL}/terapia-online`,
     type: "website",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terapia online en Chile: formato, privacidad y hora",
+    title: "Terapia online en Chile: cómo funciona, paso a paso",
     description: getTwitterDescription(description),
   },
 };
@@ -50,19 +50,19 @@ const breadcrumbItems = getClusterBreadcrumb(
 
 const terapiaOnlineFAQs = [
   {
+    question: "¿Cómo funciona la terapia online en Chile?",
+    answer:
+      "Es una videollamada con hora de inicio y de cierre. Llega un enlace antes. En la hora se trabaja un punto de la semana y al terminar puedes anotar un paso. Pide conexión, cámara, micrófono y un lugar privado. La sala está en Chillán. La videollamada es para quien está en Chile.",
+  },
+  {
     question: "¿Dónde se describe cómo es la hora?",
     answer:
-      "En la pregunta dedicada: el enlace, los 50 minutos y la pieza con puerta. Esta página se queda en el formato en Chile y en qué se diferencia de una sala.",
+      "En la pregunta dedicada: el enlace, los 50 minutos y la pieza con puerta. Qué necesitas tener listo está en otra pregunta. Esta página explica el formato.",
   },
   {
-    question: "¿Cómo funciona la terapia psicológica online?",
+    question: "¿Esta página dice si el formato sirve?",
     answer:
-      "Tiene hora de inicio y de cierre. Partes por lo que trajiste: una situación, un pensamiento que se repitió o algo que intentaste. Durante los 50 minutos la conversación se queda en ese punto. Al terminar puedes anotar un paso para la semana. La videollamada se puede alternar con presencial. Si la duda es si el formato sirve, esa respuesta está en otra página.",
-  },
-  {
-    question: "¿Es igual de efectiva que la terapia presencial?",
-    answer:
-      "Diversos estudios indican que la terapia online puede ser tan efectiva como la presencial para muchas problemáticas, siempre que se mantengan las condiciones adecuadas.",
+      "No compara resultados. Si la duda es si puede servirte, está en la pregunta de si la terapia online funciona. Aquí se explica cómo funciona el formato en Chile.",
   },
   {
     question: "¿Qué plataforma utilizan?",
@@ -81,7 +81,7 @@ const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
 const serviceSchema = getServiceSchema({
   serviceType: "Información sobre terapia psicológica online",
   description:
-    "Explicación de la terapia online en Chile: hora, conexión, privacidad y diferencia con la sala. La atención está en la página de psicólogo online.",
+    "Cómo funciona la terapia online en Chile: videollamada, hora con inicio y cierre, y diferencia con la sala. La atención local está en Chillán.",
 });
 
 export default function TerapiaOnlinePage() {
@@ -156,7 +156,7 @@ export default function TerapiaOnlinePage() {
             lineHeight: 1.1,
           }}
         >
-          Terapia online en Chile
+          Terapia online en Chile: cómo funciona
         </h1>
 
         <p
@@ -167,16 +167,21 @@ export default function TerapiaOnlinePage() {
             lineHeight: 1.6,
           }}
         >
-          Esta página explica la terapia online en Chile: qué pide el formato y
-          en qué se diferencia de una sala. La consulta presencial está en
-          Chillán. La videollamada es para quien está en Chile. Cómo es la hora
-          está en{" "}
+          La terapia online en Chile funciona como una videollamada con hora de
+          inicio y de cierre. Antes llega un enlace. En la hora se trabaja un
+          punto de la semana y al terminar puedes anotar un paso. Pide conexión
+          estable, cámara, micrófono y un lugar donde nadie más escuche. La
+          consulta presencial está en Chillán. La atención local está en{" "}
+          <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+            psicólogo online en Chillán
+          </Link>
+          . Cómo es la hora está en{" "}
           <Link href="/preguntas/como-es-una-sesion-de-psicologia-online" style={{ color: "#000", textDecoration: "underline" }}>
             cómo es una sesión de psicología online
           </Link>
-          . Cómo funciona el proceso está en{" "}
+          . Qué necesitas tener listo está en{" "}
           <Link href="/preguntas/como-funciona-la-terapia-psicologica-online" style={{ color: "#000", textDecoration: "underline" }}>
-            cómo funciona la terapia psicológica online
+            qué necesitas para la terapia psicológica online
           </Link>
           . Si la duda es si el formato sirve, está en{" "}
           <Link href="/preguntas/la-terapia-online-funciona" style={{ color: "#000", textDecoration: "underline" }}>
@@ -221,9 +226,9 @@ export default function TerapiaOnlinePage() {
           </h2>
           <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
             {terapiaOnlineFAQs[1].answer}{" "}
-            El proceso completo está en{" "}
+            Qué necesitas tener listo está en{" "}
             <Link href="/preguntas/como-funciona-la-terapia-psicologica-online" style={{ color: "#000", textDecoration: "underline" }}>
-              cómo funciona la terapia psicológica online
+              qué necesitas para la terapia psicológica online
             </Link>
             . Si la duda es si el formato sirve, está en{" "}
             <Link href="/preguntas/la-terapia-online-funciona" style={{ color: "#000", textDecoration: "underline" }}>

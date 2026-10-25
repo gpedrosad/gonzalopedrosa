@@ -4,7 +4,6 @@ import { JsonLd } from "@/app/components/JsonLd";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { getBreadcrumbSchema, SITE_URL } from "@/lib/schemas";
 import { CANONICAL_ORIGIN } from "@/lib/site-config";
-import { GUIA_UPDATED_ISO, GUIA_UPDATED_LABEL } from "./guia-article";
 import { GUIDE_HUB, OG_IMAGE, informationalPath, pagesByCluster } from "@/lib/informational-content";
 import { PUBLISHED_GUIDES } from "@/lib/published-guides";
 
@@ -56,7 +55,7 @@ const itemList = {
   description,
   url,
   inLanguage: "es-CL",
-  dateModified: GUIA_UPDATED_ISO,
+  dateModified: "2026-10-25",
   isPartOf: `${SITE_URL}/`,
   mainEntity: {
     "@type": "ItemList",
@@ -82,9 +81,18 @@ export default function GuiasIndexPage() {
         <h1>{GUIDE_HUB.h1}</h1>
         <p className="guia-lead">
           Textos para entender una situación y saber qué puedes hacer hoy.
-          Actualizados el {GUIA_UPDATED_LABEL}. No son una ficha clínica ni un
+          Cada guía indica su fecha. No son una ficha clínica ni un
           reemplazo de la atención profesional. Si buscas una respuesta corta,
           mira también las <Link href="/preguntas">preguntas frecuentes</Link>.
+        </p>
+        <p className="guia-lead">
+          Si el tema es el trabajo, parte por{" "}
+          <Link href="/guias/burnout-laboral">qué es el burnout laboral</Link>.
+          Si comparas oficios, lee{" "}
+          <Link href="/guias/psicologo-o-psiquiatra">psicólogo o psiquiatra</Link>.
+          Si el recuerdo sigue activo, están{" "}
+          <Link href="/guias/que-es-el-tept">qué es el TEPT</Link> y{" "}
+          <Link href="/guias/que-es-el-emdr">qué es la terapia EMDR</Link>.
         </p>
         <p className="guia-disclaimer" role="note">
           Si tú o alguien cercano está en riesgo de hacerse daño, no uses estas

@@ -166,23 +166,23 @@ export default function TerapiaEmdrChillanPage() {
           de estrés postraumático, y qué suele buscar quien escribe especialista
           en TEPT, está en la{" "}
           <Link href="/guias/que-es-el-tept" style={{ color: "#000", textDecoration: "underline" }}>
-            guía de TEPT
+            qué es el TEPT
           </Link>
           . Las fases del método están en{" "}
           <Link href="/guias/que-es-el-emdr" style={{ color: "#000", textDecoration: "underline" }}>
-            qué es el EMDR
+            qué es la terapia EMDR
           </Link>
           . Qué es un trauma psicológico, antes del nombre TEPT, está en{" "}
           <Link href="/preguntas/que-es-un-trauma-psicologico" style={{ color: "#000", textDecoration: "underline" }}>
-            esta pregunta
+            qué es un trauma psicológico
           </Link>
           . El ejercicio gratuito de estimulación bilateral es para un malestar leve y no procesa un trauma: está en{" "}
           <Link href="/emdr-autoadministrado" style={{ color: "#000", textDecoration: "underline" }}>
-            el recurso
+            el ejercicio de estimulación bilateral
           </Link>{" "}
           y sus límites en{" "}
           <Link href="/preguntas/emdr-autoadministrado-y-terapia" style={{ color: "#000", textDecoration: "underline" }}>
-            esta pregunta
+            límites del ejercicio bilateral
           </Link>
           . La ficha local sigue en{" "}
           <Link href="/estres-postraumatico-chillan" style={{ color: "#000", textDecoration: "underline" }}>

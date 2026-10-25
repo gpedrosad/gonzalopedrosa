@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { GuiaArticle, guiaMetadata } from "../guia-article";
 
-const title = "Psicólogo y psiquiatra: cuál es la diferencia";
+const title = "Psicólogo o psiquiatra: cuál es la diferencia real";
 const description =
-  "En qué se forman, quién puede recetar y cuándo conviene uno, el otro o los dos. Guía clara, sin reemplazar una evaluación.";
+  "Psicólogo o psiquiatra no son el mismo oficio: el psiquiatra es médico y puede recetar. El psicólogo no indica fármacos. A veces trabajan juntos.";
 const path = "/guias/psicologo-o-psiquiatra";
 
 export const metadata = guiaMetadata({ title, description, path });
@@ -11,10 +11,29 @@ export const metadata = guiaMetadata({ title, description, path });
 export default function GuiaPsicologoPsiquiatraPage() {
   return (
     <GuiaArticle
-      h1={title}
-      breadcrumbLabel="Psicólogo y psiquiatra"
+      h1="Psicólogo o psiquiatra: cuál es la diferencia"
+      breadcrumbLabel="Psicólogo o psiquiatra"
       path={path}
       description={description}
+      updatedIso="2026-10-25"
+      updatedLabel="25 de octubre de 2026"
+      faqs={[
+        {
+          question: "¿El psicólogo puede recetar?",
+          answer:
+            "No. Recetar un psicofármaco es un acto médico. Si un medicamento podría ayudar, corresponde derivar a un médico, en general un psiquiatra. El psicólogo puede ayudarte a preparar las preguntas. No indica la dosis ni te dice que dejes un remedio.",
+        },
+        {
+          question: "¿Tengo que elegir solo a uno?",
+          answer:
+            "No siempre. Cuando hace falta, el psiquiatra puede mirar el diagnóstico médico y la medicación, y el psicólogo trabajar la terapia con más frecuencia. Con tu permiso, pueden comunicarse.",
+        },
+        {
+          question: "¿Ver a un psiquiatra significa que el caso es más grave?",
+          answer:
+            "No. Llegar a esa hora no te obliga a salir con una receta. La gravedad la mira quien te evalúa, no el título de la puerta.",
+        },
+      ]}
       relatedSite={[
         {
           href: "/perfil",
@@ -51,14 +70,14 @@ export default function GuiaPsicologoPsiquiatraPage() {
       ]}
     >
       <p>
-        La diferencia corta es esta: el psiquiatra es médico y puede indicar
-        medicamentos. El psicólogo se forma en psicología y trabaja con la
-        conversación, la evaluación y el cambio de hábitos y de formas de
-        pensar. No son rivales ni escalones de una misma carrera. Responden
-        preguntas distintas, y en muchos casos se complementan.
+        Psicólogo o psiquiatra no son el mismo oficio ni escalones de una
+        misma carrera. El psiquiatra es médico y puede indicar medicamentos.
+        El psicólogo se forma en psicología y trabaja con la conversación, la
+        evaluación y el cambio de hábitos y de formas de pensar. Responden
+        preguntas distintas y, en muchos casos, se complementan.
       </p>
 
-      <h2>De qué profesión viene cada uno</h2>
+      <h2>Cómo se reconoce cada profesión</h2>
       <p>
         El psiquiatra estudió medicina y después una especialidad en
         psiquiatría. Mira el malestar también desde el cuerpo: sueño, energía,
@@ -191,6 +210,27 @@ export default function GuiaPsicologoPsiquiatraPage() {
         tiempos de espera y los copagos cambian según la ciudad y tu previsión.
         Esta guía no te dice a cuál ir en tu caso: te da criterios para no
         elegir a ciegas ni descartar a uno por prejuicio.
+      </p>
+
+      <h2>Qué puedes hacer para elegir</h2>
+      <p>
+        Anota qué te pasa, desde cuándo, cómo estás durmiendo, si hay ideas de
+        hacerte daño y si ya tomas un fármaco. Con eso puedes preguntar, en la
+        primera conversación, qué rol tiene esa persona y si deriva cuando el
+        problema se sale de lo que trata. Esta guía no elige por ti.
+      </p>
+      <p>
+        Si el motivo es el ánimo que no levanta, la ficha de{" "}
+        <Link href="/psicologo-depresion-chillan">depresión en Chillán</Link>{" "}
+        es la atención de ese tema, no esta comparación. Si el motivo es un
+        miedo que achica la semana, está la de{" "}
+        <Link href="/psicologo-ansiedad-chillan">ansiedad en Chillán</Link>.
+        El método de una psicoterapia frecuente, la cognitivo-conductual, está
+        explicado en{" "}
+        <Link href="/preguntas/que-es-la-terapia-cognitivo-conductual">
+          qué es la terapia cognitivo-conductual
+        </Link>
+        .
       </p>
 
       <h2>Mitos que confunden la decisión</h2>

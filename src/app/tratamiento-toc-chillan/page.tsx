@@ -182,6 +182,10 @@ export default function TratamientoTocChillanPage() {
           <Link href="/preguntas/obsesiones-y-compulsiones" style={{ color: "#000", textDecoration: "underline" }}>
             obsesiones y compulsiones
           </Link>
+          . La ERP es una forma de{" "}
+          <Link href="/preguntas/que-es-la-terapia-cognitivo-conductual" style={{ color: "#000", textDecoration: "underline" }}>
+            terapia cognitivo-conductual
+          </Link>
           .
         </p>
       </section>

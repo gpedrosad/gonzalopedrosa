@@ -85,13 +85,17 @@ export default function SuperarTraumaInfanciaChillanPage() {
         <Link href="/preguntas/como-ayuda-la-terapia-tras-abuso-en-la-infancia" style={{ color: "#000", textDecoration: "underline" }}>
           cómo ayuda la terapia a un adulto que vivió abuso en la infancia
         </Link>
-        . El cuadro y el método están en la{" "}
+        . Qué es un trauma psicológico está en{" "}
+        <Link href="/preguntas/que-es-un-trauma-psicologico" style={{ color: "#000", textDecoration: "underline" }}>
+          qué es un trauma psicológico
+        </Link>
+        . El cuadro y el método están en{" "}
         <Link href="/guias/que-es-el-tept" style={{ color: "#000", textDecoration: "underline" }}>
-          guía de TEPT
+          qué es el TEPT
         </Link>{" "}
         y en{" "}
         <Link href="/guias/que-es-el-emdr" style={{ color: "#000", textDecoration: "underline" }}>
-          qué es el EMDR
+          qué es la terapia EMDR
         </Link>
         .
       </p>

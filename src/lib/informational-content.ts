@@ -143,47 +143,47 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
         {
     cluster: "guias",
     slug: "que-es-el-emdr",
-    updated: "2026-10-20",
+    updated: "2026-10-25",
     navLabel: "Qué es el EMDR",
-    title: "EMDR: qué es, para qué se usa y qué no reemplaza",
-    h1: "Qué es el EMDR",
+    title: "EMDR en psicología: qué es la terapia y cómo se usa",
+    h1: "Qué es la terapia EMDR",
     description:
-      "El EMDR es una psicoterapia para procesar recuerdos que siguen activos. Conoce sus fases, sus límites y el ejercicio gratuito del sitio.",
+      "La terapia EMDR trabaja recuerdos que siguen activos. Incluye evaluación, preparación y cierre. El movimiento de ojos es una parte, no el tratamiento entero.",
     answer:
-      "EMDR significa desensibilización y reprocesamiento por movimientos oculares. Es una psicoterapia usada sobre todo cuando un recuerdo sigue disparando miedo, vergüenza o imágenes como si estuviera pasando ahora. La estimulación bilateral (ojos, sonidos o golpes suaves alternados) es una parte del procedimiento, no el tratamiento entero.",
+      "EMDR significa desensibilización y reprocesamiento por movimientos oculares. En psicología es una psicoterapia para recuerdos que siguen disparando miedo, vergüenza o imágenes como si estuvieran pasando ahora. La estimulación bilateral (ojos, sonidos o golpes suaves alternados) es una parte del procedimiento, no la terapia entera.",
     sections: [
       {
-        heading: "Para qué se desarrolló",
-        paragraphs: [
-          "El procedimiento se usa en el trabajo con trauma y con el trastorno de estrés postraumático. La guía de la OMS de 2013 sobre condiciones relacionadas con el estrés incluye, para adultos con TEPT, terapias centradas en el trauma, entre ellas la cognitivo-conductual y el EMDR. Si tu búsqueda es especialista en TEPT, la explicación del trastorno está en la guía de TEPT. Esta página se queda en el método.",
-          "Que una guía lo nombre no convierte cualquier video de un punto que se mueve en una sesión de EMDR. El procedimiento completo incluye evaluación, preparación y cierre, con alguien que sepa detenerse si la activación se dispara.",
-        ],
-      },
-      {
-        heading: "Las fases, en lenguaje simple",
+        heading: "Cómo se reconoce un proceso de EMDR",
         paragraphs: [
           "Primero se revisa tu historia y si hoy estás lo bastante estable para trabajar un recuerdo. Después se acuerdan recursos para volver a sentirte en el presente. Solo entonces se elige una memoria concreta y se alterna la atención entre esa memoria y la estimulación bilateral.",
-          "Al cierre se comprueba cómo quedaste y qué harás si el malestar sube en las horas siguientes. Saltarse la preparación y el cierre es el error más común de los ejercicios sueltos.",
+          "Al cierre se comprueba cómo quedaste y qué harás si el malestar sube en las horas siguientes. Un punto que se mueve en una pantalla, solo, no es esta terapia. Saltarse la preparación y el cierre es el error más común de los ejercicios sueltos.",
         ],
         bullets: [
           "No se parte por el peor recuerdo el primer día.",
-          "La persona puede parar. Eso es parte del método, no una falla.",
+          "Puedes parar. Eso es parte del método, no una falla.",
           "Procesar no es contar el hecho con todo el detalle cada vez.",
           "Un recuerdo único y un trauma complejo no se abordan igual.",
         ],
       },
       {
-        heading: "Qué puedes probar en este sitio",
+        heading: "Para qué se usa, en general",
         paragraphs: [
-          "El ejercicio de estimulación bilateral visual es un recurso gratuito para emociones cotidianas o estrés leve, con instrucciones y una advertencia. Sirve para conocer la sensación del movimiento de ojos en un contexto acotado.",
-          "No lo uses para reprocesar un abuso, un accidente o un TEPT por tu cuenta. Si al intentarlo aparecen imágenes que no puedes guardar, para y busca apoyo. El recurso lo dice en su propia página y conviene leerlo antes de abrirlo.",
+          "Se usa en el trabajo con trauma y con el trastorno de estrés postraumático. La guía de la OMS de 2013 sobre condiciones relacionadas con el estrés incluye, para adultos con TEPT, terapias centradas en el trauma, entre ellas la cognitivo-conductual y el EMDR, cuando las aplica personal de salud capacitado. Que una guía las nombre no dice cuál te corresponde.",
+          "Qué es el cuadro, distinto del método, está en [qué es el TEPT](/guias/que-es-el-tept). Qué es la marca del hecho, antes de ese nombre, está en [qué es un trauma psicológico](/preguntas/que-es-un-trauma-psicologico). Esta página se queda en la terapia EMDR.",
         ],
       },
       {
-        heading: "Límites que conviene tener claros",
+        heading: "Qué puedes hacer en este sitio",
         paragraphs: [
-          "EMDR no es hipnosis ni te obliga a creer una versión nueva del pasado. Tampoco está indicado como primer paso si estás en crisis, con ideas de hacerte daño, o sin un lugar seguro donde volver después.",
-          "Si tu búsqueda es especialista en TEPT, el nombre de la técnica no reemplaza la evaluación. Hay otros tratamientos centrados en el trauma. La elección depende del recuerdo, de tu estabilidad actual y de la formación de quien te atiende.",
+          "El [ejercicio de estimulación bilateral](/emdr-autoadministrado) es un recurso gratuito para emociones cotidianas o estrés leve, con instrucciones y una advertencia. Sirve para conocer la sensación del movimiento de ojos en un contexto acotado.",
+          "No lo uses para reprocesar un abuso, un accidente o un TEPT por tu cuenta. Si al intentarlo aparecen imágenes que no puedes guardar, para y busca apoyo. Los límites están en [el ejercicio y la terapia](/preguntas/emdr-autoadministrado-y-terapia).",
+        ],
+      },
+      {
+        heading: "Cuándo consultar y qué no reemplaza",
+        paragraphs: [
+          "EMDR no es hipnosis ni te obliga a creer una versión nueva del pasado. Tampoco es el primer paso si estás en crisis, con ideas de hacerte daño, o sin un lugar seguro donde volver después.",
+          "Conviene una evaluación si el recuerdo organiza la semana: vuelve en imágenes, evitas para no activarte o la alerta no baja. El nombre de la técnica no reemplaza esa evaluación. La atención con este método en Chillán está en [terapia EMDR en Chillán](/terapia-emdr-chillan). La ficha local del cuadro es [estrés postraumático en Chillán](/estres-postraumatico-chillan).",
         ],
       },
     ],
@@ -298,54 +298,49 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
   {
     cluster: "guias",
     slug: "que-es-el-tept",
-    updated: "2026-10-21",
+    updated: "2026-10-25",
     navLabel: "Qué es el TEPT",
-    title: "Qué es el TEPT y qué busca un especialista en TEPT",
+    title: "Qué es el TEPT: señales, causas y cuándo consultar",
     h1: "Qué es el TEPT",
     description:
-      "Especialista en TEPT: qué es el trastorno de estrés postraumático, qué señales se repiten y cuándo pedir ayuda. Enlaza el EMDR y la atención en Chillán.",
+      "El TEPT es un trastorno en que un hecho ya pasó y el recuerdo sigue activo: imágenes, evitación y alerta. No todo susto es TEPT. El nombre lo pone una evaluación.",
     answer:
-      "TEPT significa trastorno de estrés postraumático. Aparece después de un hecho que amenazó la vida, la integridad o la de alguien cercano, cuando el recuerdo no queda archivado: vuelve en imágenes, sueños o alarma, y la persona organiza el día para no toparse con él.",
+      "El TEPT, o trastorno de estrés postraumático, aparece cuando un hecho que amenazó la vida, la integridad o la de alguien cercano ya pasó, y el recuerdo no queda archivado. Vuelve en imágenes, sueños o alarma, y la persona organiza el día para no toparse con él. No todo susto fuerte es un TEPT.",
     sections: [
       {
-        heading: "Qué lo distingue de un mal recuerdo",
+        heading: "Cómo se reconoce",
         paragraphs: [
           "Un susto fuerte puede dejar días de alerta y eso no es, por sí solo, un TEPT. El cuadro se parece más a esto: el hecho ya pasó y el cuerpo sigue reaccionando como si estuviera pasando. Un ruido, un olor o una fecha alcanzan para traer la escena.",
-          "No todo trauma deriva en TEPT. Hay personas que atraviesan un hecho grave y siguen con miedo un tiempo, sin que el recuerdo tome el control de la semana. Ponerse el nombre sin una evaluación no ayuda. Sirve para reconocer el patrón y decidir si conversarlo.",
-        ],
-      },
-      {
-        heading: "Señales que se repiten",
-        paragraphs: [
-          "Las señales cambian de persona a persona. Estas son las que más se nombran cuando alguien describe un TEPT. No son una lista para diagnosticarte.",
+          "No todo trauma deriva en TEPT. Hay personas que atraviesan un hecho grave y siguen con miedo un tiempo, sin que el recuerdo tome el control de la semana. La marca del hecho, antes de este nombre, está en [qué es un trauma psicológico](/preguntas/que-es-un-trauma-psicologico). Ponerse el nombre sin una evaluación no ayuda.",
         ],
         bullets: [
           "El recuerdo vuelve solo: imágenes, pesadillas o la sensación de estar otra vez ahí.",
           "Evitas lugares, conversaciones, noticias o personas que lo disparan.",
           "Estás en alerta: te sobresaltas, duermes liviano o te cuesta bajar la guardia.",
-          "Cambia el ánimo: culpa, vergüenza, distancia de quienes quieres o una sensación de peligro presente.",
+          "Cambia el ánimo: culpa, vergüenza, distancia o una sensación de peligro presente.",
         ],
       },
       {
-        heading: "Cuándo conviene pedir ayuda",
+        heading: "Causas generales",
         paragraphs: [
-          "Conviene conversarlo con un profesional si estas señales llevan semanas, te limitan en la pega o en la casa, o si evitas cada vez más cosas para no activarte. También si el sueño no vuelve o si un cercano te dice que ya no estás en el presente.",
+          "Se describe después de un hecho que amenazó la vida o la integridad: un accidente, violencia, abuso, un asalto, o haber presenciado que otra persona estaba en peligro. No hace falta que el hecho sea una guerra ni que haya salido en las noticias.",
+          "El tamaño de la noticia no decide el cuadro. Lo que se mira es si el recuerdo sigue activo y limita la semana. Dos personas pueden vivir un hecho parecido y no quedar igual. Esta guía no pone una causa única ni una cifra.",
+        ],
+      },
+      {
+        heading: "Qué puedes hacer",
+        paragraphs: [
+          "Anota, con calma, si el recuerdo vuelve solo, qué evitas y si la alerta ya cambia el sueño o la pega. Ese registro no diagnostica. Te da un lenguaje más preciso si después conversas con alguien.",
+          "La guía de la OMS de 2013 sobre condiciones relacionadas con el estrés nombra, para adultos con TEPT, terapias centradas en el trauma. Entre ellas están la terapia cognitivo-conductual focalizada en el trauma y el EMDR, cuando las aplica personal de salud capacitado. Que una guía las nombre no dice cuál te corresponde ni en qué orden. Las fases del método están en [qué es la terapia EMDR](/guias/que-es-el-emdr).",
+          "El [ejercicio de estimulación bilateral](/emdr-autoadministrado) de este sitio es para un malestar leve. No reprocesa un TEPT. Si aparecen imágenes que no puedes guardar, la propia página pide que lo pares.",
+        ],
+      },
+      {
+        heading: "Cuándo consultar",
+        paragraphs: [
+          "Conviene conversarlo con un profesional si estas señales llevan semanas, te limitan en la pega o en la casa, o si evitas cada vez más para no activarte. También si el sueño no vuelve o si un cercano te dice que ya no estás en el presente.",
           "Si hay ideas de hacerte daño o de querer morir, eso no espera una hora programada. En Chile la línea *4141 es gratuita y atiende las 24 horas. Esta guía no evalúa riesgo.",
-        ],
-      },
-      {
-        heading: "Qué terapias se usan con más frecuencia",
-        paragraphs: [
-          "La guía de la OMS de 2013 sobre condiciones relacionadas con el estrés nombra, para adultos con TEPT, terapias centradas en el trauma. Entre ellas están la terapia cognitivo-conductual focalizada en el trauma y el EMDR. Que una guía las nombre no dice qué te corresponde a ti ni en qué orden.",
-          "El EMDR no es un video de un punto que se mueve. El procedimiento completo incluye evaluación, preparación y cierre. El ejercicio gratuito de este sitio solo muestra la estimulación bilateral para un malestar leve. No procesa un trauma ni un TEPT por tu cuenta.",
-          "Esta página explica el trastorno. La atención con EMDR en Chillán y la ficha local de estrés postraumático son otras URLs: una es el método en consulta, la otra es la información de esa atención.",
-        ],
-      },
-      {
-        heading: "Si buscas un especialista en TEPT",
-        paragraphs: [
-          "Esa búsqueda suele pedir a alguien que evalúe un recuerdo que sigue activo y que conozca terapias centradas en el trauma. La guía de la OMS nombra, para adultos, la terapia cognitivo-conductual focalizada en el trauma y el EMDR, cuando las aplica personal de salud capacitado. El nombre de la técnica no reemplaza la evaluación.",
-          "Qué hace esa persona en la evaluación está en la pregunta sobre el especialista en estrés postraumático. Esta guía se queda en el cuadro. No certifica a quien la escribe. Las fases del EMDR están en la guía correspondiente. La página de EMDR en Chillán es la de atención con ese método. El ejercicio bilateral del sitio queda fuera de este tema: no reprocesa un TEPT.",
+          "Qué hace quien evalúa un recuerdo que sigue activo está en [qué hace un especialista en estrés postraumático](/preguntas/que-hace-un-especialista-en-estres-postraumatico). La atención con EMDR en Chillán está en [terapia EMDR en Chillán](/terapia-emdr-chillan). La ficha local del cuadro es [estrés postraumático en Chillán](/estres-postraumatico-chillan). Esta guía se queda en qué es el TEPT. No certifica a quien la escribe.",
         ],
       },
     ],
@@ -467,65 +462,65 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
   {
     cluster: "guias",
     slug: "burnout-laboral",
-    updated: "2026-10-23",
+    updated: "2026-10-25",
     navLabel: "Burnout laboral",
-    title: "Burnout laboral: qué es y cómo reconocerlo",
+    title: "Burnout laboral: qué es, señales y qué puedes hacer",
     h1: "Qué es el burnout laboral",
     description:
-      "La OMS describe el burnout como un fenómeno del trabajo, no como una enfermedad. Revisa agotamiento, distancia y eficacia sin culparte del puesto.",
+      "El burnout laboral es agotamiento del trabajo que el descanso ya no repone, con distancia y menos eficacia. No es una enfermedad ni el cansancio de un viernes.",
     answer:
-      "El burnout es el resultado de un estrés laboral crónico que no se logró manejar. La Organización Mundial de la Salud lo clasifica como fenómeno ocupacional, no como una enfermedad. Se describe con tres rasgos: agotamiento, distancia mental o cinismo respecto del trabajo, y una sensación de ser menos eficaz.",
+      "El burnout laboral es lo que queda cuando el estrés del trabajo se alarga y el descanso ya no repone. La Organización Mundial de la Salud lo describe como un fenómeno ocupacional, no como una enfermedad. Se reconoce cuando se juntan tres rasgos: agotamiento, distancia mental o cinismo hacia la pega, y la sensación de ser menos eficaz.",
     sections: [
       {
-        heading: "No es estar cansado un viernes",
+        heading: "Cómo se reconoce",
         paragraphs: [
-          "Un viernes intenso se recupera con descanso. En el burnout el descanso ya no repone: vuelves el lunes igual de vacío, te irrita la gente con la que trabajas y sientes que haces más y rindes menos.",
-          "La definición importa porque mueve la causa. Si todo se explica como falta de carácter, se te pide aguantar un puesto que está mal diseñado. Parte del problema puede ser tuya (límites, autoexigencia) y parte está en la carga, los turnos, el jefe o la falta de control.",
-        ],
-      },
-      {
-        heading: "Tres señales para mirar con calma",
-        paragraphs: [
-          "Agotamiento: te cuesta partir el día y el sueño no alcanza. Distancia: te da lo mismo, contestas seco o evitas reuniones que antes te importaban. Eficacia: dudas de tu criterio aunque los hechos no muestren un error claro.",
-          "Si solo está el cansancio de una semana punta, todavía no completa el cuadro. Si las tres se instalan por semanas, ya no es un mal día.",
+          "Un viernes intenso se recupera con descanso. En el burnout vuelves el lunes igual de vacío, te irrita la gente con la que trabajas y sientes que haces más y rindes menos. El fin de semana ya no alcanza para volver a sentirte tú.",
+          "Si solo está el cansancio de una semana punta, todavía no completa el cuadro. Si el agotamiento, la distancia y la duda sobre tu eficacia se instalan por semanas, ya no es un mal día. La pregunta [cómo saber si es burnout](/preguntas/como-saber-si-es-burnout) ordena esa diferencia.",
         ],
         bullets: [
-          "El fin de semana ya no alcanza para volver a sentirte tú.",
-          "Aparece cinismo hacia usuarios, alumnos o compañeros.",
-          "Trabajas más horas y te sientes menos capaz.",
+          "Agotamiento: te cuesta partir el día y el sueño no alcanza.",
+          "Distancia: contestas seco, evitas reuniones o te da lo mismo.",
+          "Eficacia: dudas de tu criterio aunque no haya un error claro.",
           "El malestar se mete en el sueño, el ánimo o la casa.",
         ],
       },
       {
-        heading: "Qué no se arregla solo con actitud",
+        heading: "Causas generales",
         paragraphs: [
-          "Dormir mejor y poner un límite ayudan, y a veces no alcanzan si la dotación, la meta o el maltrato siguen iguales. Decir que es burnout no te obliga a renunciar mañana. Te obliga a dejar de tratarlo como una falla personal única.",
-          "Tampoco es lo mismo que una depresión. Pueden coincidir. Si el vacío está en toda tu vida y no solo en la pega, o si aparecen ideas de hacerte daño, hace falta una evaluación más amplia que un artículo.",
+          "La definición mueve la causa fuera del carácter. Parte puede estar en tus límites o en la autoexigencia, y parte está en la carga, los turnos, un jefe que no prioriza o la falta de control sobre cómo haces el trabajo.",
+          "No es lo mismo que el estrés de un día cargado, ni que una depresión. El estrés es la exigencia de ahora. El burnout es el agotamiento que el descanso ya no repone. La depresión puede coincidir cuando el vacío está en toda la vida y no solo en la pega. El hostigamiento dirigido a ti es otro motivo: la ficha de [estrés laboral y burnout en Chillán](/psicologo-estres-laboral-chillan) lo separa del acoso.",
         ],
       },
       {
-        heading: "Un orden para revisarlo",
+        heading: "Qué puedes hacer",
         paragraphs: [
-          "Anota carga real de la semana, horas de desconexión y una tarea que podrías soltar o delegar. Después mira un límite chico: no responder después de cierta hora, o pedir una prioridad en vez de aceptar tres.",
-          "Si el lugar no permite ningún límite y tu salud ya se quebró, la conversación deja de ser de hábitos y pasa a ser de riesgo laboral y de apoyo médico. Un texto no decide esa renuncia por ti. La ficha local, distinta de esta guía, reúne el [estrés laboral y el burnout en Chillán](/psicologo-estres-laboral-chillan).",
+          "Anota la carga real de la semana, las horas en que sí te desconectas y una tarea que podrías soltar o delegar. Después prueba un límite chico: no responder después de cierta hora, o pedir una prioridad en vez de aceptar tres. Cómo se dice ese límite está en [cómo poner un límite](/preguntas/como-poner-un-limite).",
+          "Dormir un poco mejor ayuda, y a veces no alcanza si la dotación, la meta o el maltrato siguen iguales. Decir que es burnout no te obliga a renunciar mañana. Te saca de tratarlo como una falla personal única. Si el sueño es la pieza que más se quebró, la guía de [hábitos de sueño](/guias/higiene-del-sueno) es un punto de partida, no el tratamiento del insomnio.",
+        ],
+      },
+      {
+        heading: "Cuándo consultar",
+        paragraphs: [
+          "Conviene conversarlo con un profesional si el agotamiento lleva semanas, el descanso ya no repone y la distancia con la pega ya cambia el ánimo o la casa. Si el lugar no permite ningún límite y tu salud ya se quebró, la conversación deja de ser solo de hábitos.",
+          "Esta guía explica el fenómeno. La ficha local es [estrés laboral y burnout en Chillán](/psicologo-estres-laboral-chillan). Un texto no decide una renuncia por ti. Si el agotamiento viene con ideas de hacerte daño, llama al *4141. Es gratuito y atiende las 24 horas.",
         ],
       },
     ],
     faqs: [
       {
-        question: "¿El burnout es una enfermedad?",
+        question: "¿El burnout laboral es una enfermedad?",
         answer:
-          "La OMS lo ubica como fenómeno ocupacional en la CIE-11, no como un trastorno médico. Igual puede coincidir con ansiedad, depresión o problemas de sueño que sí requieren evaluación.",
+          "La OMS lo ubica como fenómeno ocupacional en la CIE-11, no como un trastorno médico. Igual puede coincidir con ansiedad, ánimo bajo o problemas de sueño que sí piden evaluación.",
+      },
+      {
+        question: "¿Es lo mismo que estrés laboral?",
+        answer:
+          "No. El estrés laboral es la carga del día. El burnout es el agotamiento que el descanso ya no repone, con distancia y menos eficacia. Pueden ir juntos y no son el mismo nombre.",
       },
       {
         question: "¿Vacaciones alcanzan?",
         answer:
           "Sirven para ver si el descanso repone. Si a los dos días de volver estás igual, el puesto y tus hábitos de disponibilidad siguen produciendo el mismo resultado.",
-      },
-      {
-        question: "¿Solo le pasa a quienes cuidan personas?",
-        answer:
-          "Se describió mucho en oficios de cuidado y también se usa para otros trabajos con carga crónica y poco control. El contexto laboral es parte de la definición.",
       },
     ],
     related: [
@@ -1379,20 +1374,20 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "senales-de-baja-autoestima",
-    updated: "2026-10-18",
-    navLabel: "Señales de autoestima baja",
-    title: "Señales de una autoestima baja: qué mirar y qué no es",
-    h1: "Señales de autoestima baja",
+    updated: "2026-10-25",
+    navLabel: "Señales de baja autoestima",
+    title: "Señales de baja autoestima: qué mirar en el día a día",
+    h1: "Señales de baja autoestima",
     description:
-      "Señales de autoestima baja en lo cotidiano: crítica dura, evitar y comparar. No es un test ni un diagnóstico. Enlaza con la página de Chillán.",
+      "Las señales de baja autoestima se ven al evitar, compararte y descartar un logro. No es un test ni un diagnóstico. Una lista no te pone un nombre.",
     answer:
-      "La autoestima baja es un modo repetido de leerte como menos capaz o menos digno de cuidado, no un defecto de carácter ni un test de internet. Se nota en lo que haces: evitas, te disculpas de más, comparas y descartas un logro apenas aparece. Una lista de señales no diagnostica. Sirve para mirar el patrón con más precisión.",
+      "Las señales de baja autoestima son un modo repetido de leerte como menos capaz o menos digno de cuidado. No son un defecto de carácter ni un test de internet. Se notan en lo que haces: evitas, te disculpas de más, te comparas y descartas un logro apenas aparece. Una lista no diagnostica.",
     sections: [
       {
-        heading: "Señales en el día a día",
+        heading: "Cómo se reconocen",
         paragraphs: [
           "La crítica suele sonar como un hecho: si me equivoco en esto, confirmo que no sirvo. El elogio se explica por suerte o por lástima. Pedir algo cuesta más que ceder, y ceder después deja rabia. No hace falta que todas las señales estén presentes.",
-          "También se ve en el cuerpo y en la agenda. Hombros tensos antes de hablar, revisar el mensaje diez veces, no postular, no decir que no. La guía de regulación emocional ayuda a separar la emoción del veredicto. Poner un límite es otra pieza: la culpa de decir que no no demuestra que el límite esté mal.",
+          "También se ve en el cuerpo y en la agenda: hombros tensos antes de hablar, revisar el mensaje diez veces, no postular, no decir que no. La guía de [regulación emocional](/guias/regulacion-emocional) ayuda a separar la emoción del veredicto. La culpa de decir que no no demuestra que el límite esté mal: de eso habla [cómo poner un límite](/preguntas/como-poner-un-limite).",
         ],
         bullets: [
           "Compararte y salir siempre perdiendo, aunque el dato no alcance.",
@@ -1402,23 +1397,30 @@ const QUESTION_PAGES: InfoPage[] = [
         ],
       },
       {
-        heading: "Qué no es",
+        heading: "Causas generales",
         paragraphs: [
-          "No es modestia. La modestia puede reconocer un límite real. La autoestima baja convierte un error chico en una identidad. Tampoco es un diagnóstico con nombre propio en una tarde: a veces viene junto a ánimo bajo, ansiedad o una historia de crítica, y a veces no.",
-          "Un día inseguro después de una mala noticia no es el patrón. El patrón es la lectura que se repite cuando las pruebas cambian y la conclusión sobre ti no cambia.",
+          "A veces el modo viene de una historia de crítica, de comparación constante o de un entorno donde equivocarse se pagaba caro. A veces aparece junto a ánimo bajo o ansiedad, y a veces no. Esta página no atribuye una causa única ni un origen familiar obligatorio.",
+          "No es modestia. La modestia puede reconocer un límite real. La autoestima baja convierte un error chico en una identidad. Un día inseguro después de una mala noticia tampoco es el patrón: el patrón es la lectura que se repite cuando las pruebas cambian y la conclusión sobre ti no cambia.",
         ],
       },
       {
-        heading: "Qué puedes observar esta semana",
+        heading: "Qué puedes hacer esta semana",
         paragraphs: [
           "Anota tres momentos en que la frase sobre ti fue más dura que el hecho. Al lado, escribe qué hiciste: evitaste, te adelantaste a pedir perdón, o seguiste. No tienes que corregirlo todo el mismo día. Ver la secuencia ya es información.",
-          "Si la autocrítica te deja el cuerpo muy activo por un malestar leve, el ejercicio bilateral del sitio es un recurso para esa activación cotidiana. No procesa una historia de humillación grave ni reemplaza una evaluación. Si la crítica incluye hacerte daño, deja el ejercicio y llama.",
+          "Si la autocrítica te deja el cuerpo muy activo por un malestar leve, el [ejercicio bilateral](/emdr-autoadministrado) del sitio es un recurso para esa activación cotidiana. No procesa una historia de humillación grave ni reemplaza una evaluación. Si la crítica incluye hacerte daño, deja el ejercicio y llama.",
+        ],
+      },
+      {
+        heading: "Cuándo consultar",
+        paragraphs: [
+          "Conviene conversarlo si el modo ya te saca de postular, de decir que no o de quedarte en vínculos donde el trato te achica, y si eso lleva semanas. Una lista leída de noche no alcanza como plan.",
+          "La página de [baja autoestima en Chillán](/psicologo-baja-autoestima-chillan) cuenta cómo se plantea ese trabajo, incluido el perfeccionismo y el impostor, que se le parecen y no son lo mismo. Esta pregunta se queda en las señales. No fija un plazo.",
         ],
       },
     ],
     faqs: [
       {
-        question: "¿La autoestima baja es una enfermedad?",
+        question: "¿La baja autoestima es una enfermedad?",
         answer:
           "No es, por sí sola, un diagnóstico. Puede acompañar ansiedad, ánimo bajo u otras dificultades. Una evaluación mira el conjunto, no una frase suelta.",
       },
@@ -1428,9 +1430,9 @@ const QUESTION_PAGES: InfoPage[] = [
           "Una frase bonita que no te crees suele durar poco. Sirve más registrar el hecho, la crítica y la conducta que la siguió, y practicar una acción distinta en un caso chico.",
       },
       {
-        question: "¿Se puede trabajar?",
+        question: "¿Un día inseguro cuenta como señal?",
         answer:
-          "El modo de interpretarte se puede revisar. No hay un plazo único ni un resultado garantizado. La página sobre baja autoestima en Chillán cuenta cómo se plantea ese trabajo.",
+          "Un día después de una mala noticia no es el patrón. La señal es la lectura que se repite aunque el hecho cambie.",
       },
     ],
     related: [
@@ -1675,47 +1677,48 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "que-es-un-trauma-psicologico",
-    updated: "2026-10-22",
+    updated: "2026-10-25",
     navLabel: "Qué es un trauma psicológico",
-    title: "Qué es un trauma psicológico y cuándo no es un TEPT",
+    title: "Trauma psicológico: qué es y en qué difiere del TEPT",
     h1: "Qué es un trauma psicológico",
     description:
-      "Un trauma psicológico es un hecho que dejó la alarma encendida. No todo golpe duro es trauma ni todo trauma es TEPT. La guía de TEPT sigue desde aquí.",
+      "Un trauma psicológico es la marca de un hecho que la alarma no archivó. No todo momento difícil es trauma, y no todo trauma es un TEPT. Esta página no diagnostica.",
     answer:
-      "Un trauma psicológico es la marca que deja un hecho que superó lo que podías integrar en ese momento: una amenaza, violencia, un accidente, o haber visto que otra persona estaba en peligro. El hecho ya pasó y la alarma, la imagen o la vergüenza siguen. No todo momento difícil es un trauma, y no todo trauma llega a ser un trastorno de estrés postraumático.",
+      "Un trauma psicológico es la marca que deja un hecho que superó lo que podías integrar en ese momento: una amenaza, violencia, un accidente, o haber visto que otra persona estaba en peligro. El hecho ya pasó y la alarma, la imagen o la vergüenza siguen. No todo momento difícil es un trauma, y no todo trauma es un trastorno de estrés postraumático.",
     sections: [
       {
-        heading: "Qué lo distingue de un mal rato",
+        heading: "Cómo se reconoce",
         paragraphs: [
           "Un despido, una pelea o una decepción duelen y no por eso son un trauma. El trauma se parece más a esto: el sistema de alarma no archivó el hecho. Un ruido, un olor, una fecha o una cercanía física traen la escena, o te dejan en guardia como si todavía estuviera pasando.",
-          "Tampoco hace falta que el hecho haya salido en las noticias. Abuso, violencia en la casa, un asalto o un accidente alcanzan para dejar esa marca. La gravedad la miras por el efecto en tu semana, no por si otra persona lo consideraría suficiente.",
+          "La gravedad la miras por el efecto en tu semana, no por si otra persona lo consideraría suficiente. Un mal día de pega, sin esa alarma, no entra en esta definición.",
         ],
         bullets: [
           "El recuerdo vuelve solo, en imágenes, sueños o en el cuerpo.",
           "Evitas lugares, conversaciones o personas para no activarte.",
           "La vergüenza o la culpa se sienten presentes, no como un dato viejo.",
-          "Un mal día de pega, sin esa alarma, no entra en esta definición.",
+          "Un hecho difícil que ya quedó archivado no es, por sí solo, este nombre.",
         ],
       },
       {
-        heading: "Trauma y TEPT no son sinónimos",
+        heading: "Causas generales",
         paragraphs: [
-          "Puedes haber vivido un hecho grave y seguir con miedo un tiempo, sin que el recuerdo organice la semana. Eso no se llama TEPT por una búsqueda en internet. El TEPT es el cuadro en que el recuerdo sigue activo y limita la vida. La guía de qué es el TEPT recorre esas señales y cita la guía de la OMS sobre condiciones relacionadas con el estrés.",
-          "Ponerte el nombre antes de una evaluación no ayuda. Sirve reconocer el patrón y decidir si conversarlo. Esta pregunta se queda en la definición. La guía sigue con el trastorno.",
+          "Puede dejar marca un abuso, violencia en la casa, un asalto, un accidente o haber presenciado que otra persona estaba en peligro. No hace falta que el hecho haya salido en las noticias.",
+          "Tampoco todo hecho grave deja un trauma. Hay personas que lo atraviesan y el recuerdo no toma la semana. El nombre no se pone por el tamaño del hecho, sino por cómo quedó la alarma. Esta página no da una cifra ni una causa única.",
         ],
       },
       {
-        heading: "Qué lugar tiene el EMDR",
+        heading: "Qué puedes hacer, y qué no",
         paragraphs: [
-          "La misma guía de la OMS nombra, para adultos con TEPT, terapias centradas en el trauma, entre ellas la cognitivo-conductual y el EMDR, cuando las aplica personal de salud capacitado. El EMDR no es un punto que se mueve en una pantalla. El procedimiento completo incluye evaluación, preparación y cierre. La guía de qué es el EMDR lo explica.",
-          "Si buscas psicólogos que trabajen trauma, la página de EMDR en Chillán es la de atención con ese método. No certifica un resultado. Dice qué es la atención. La ficha local de estrés postraumático es otra URL, ya sobre ese cuadro.",
+          "Si al leer esto la alarma sube mucho, cierra la página. No hace falta terminar el texto para demostrar que puedes. Anotar, cuando estés más estable, si el recuerdo vuelve solo y qué evitas te da un lenguaje para una conversación. No es una evaluación.",
+          "El [ejercicio de estimulación bilateral](/emdr-autoadministrado) es para un estrés leve del día, sin imágenes que no puedes guardar. No lo uses para reprocesar un abuso, un accidente, un TEPT o una crisis. Si la escena vuelve y no puedes dejarla, la propia página pide que lo pares.",
+          "La guía de la OMS de 2013 nombra, para adultos con TEPT, terapias centradas en el trauma, entre ellas la cognitivo-conductual y el EMDR, cuando las aplica personal de salud capacitado. El EMDR no es un punto en una pantalla. Las fases están en [qué es la terapia EMDR](/guias/que-es-el-emdr).",
         ],
       },
       {
-        heading: "El ejercicio del sitio no es para un trauma",
+        heading: "Cuándo consultar",
         paragraphs: [
-          "Si lo que te pasa es un estrés leve del día, sin imágenes que no puedes guardar, el ejercicio de estimulación bilateral es un recurso acotado para esa activación. No lo uses para reprocesar un abuso, un accidente, un TEPT o una crisis. La propia página pide que lo pares si la escena vuelve y no puedes dejarla.",
-          "Un trauma no se trabaja solo con un video. Si al leer esto la alarma sube mucho, cierra la página y busca a alguien que pueda detenerse contigo.",
+          "Conviene conversarlo si el recuerdo organiza la semana, si evitas cada vez más o si la vergüenza se siente de ahora. El TEPT es el cuadro en que esa marca limita la vida. [Qué es el TEPT](/guias/que-es-el-tept) recorre esas señales. No son sinónimos.",
+          "Qué hace quien evalúa un recuerdo activo está en [qué hace un especialista en estrés postraumático](/preguntas/que-hace-un-especialista-en-estres-postraumatico). La atención con EMDR en Chillán está en [terapia EMDR en Chillán](/terapia-emdr-chillan). La ficha local del cuadro es [estrés postraumático en Chillán](/estres-postraumatico-chillan). Si el hecho fue un abuso en la infancia, la pregunta [cómo ayuda la terapia tras un abuso en la infancia](/preguntas/como-ayuda-la-terapia-tras-abuso-en-la-infancia) sigue desde ahí, sin pedir el relato completo.",
         ],
       },
     ],
@@ -1896,46 +1899,40 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "como-funciona-la-terapia-psicologica-online",
-    updated: "2026-10-21",
-    navLabel: "Cómo funciona la terapia online",
-    title: "Cómo funciona la terapia psicológica online en Chile",
-    h1: "¿Cómo funciona la terapia psicológica online?",
+    updated: "2026-10-25",
+    navLabel: "Qué necesitas para la terapia online",
+    title: "Qué necesitas para hacer terapia psicológica online",
+    h1: "Qué necesitas para la terapia psicológica online",
     description:
-      "La terapia psicológica online es una hora con inicio, un tema de la semana y un cierre. Pide conexión, privacidad y poder alternarla con la sala.",
+      "Para una terapia psicológica online necesitas conexión, cámara, micrófono y un lugar privado. Cómo funciona el formato en Chile está en la página informativa.",
     answer:
-      "La terapia psicológica online funciona como una cita con hora de inicio y de cierre, hecha por videollamada. Antes recibes el enlace. En los 50 minutos se trabaja un punto de la semana. Al terminar puedes anotar un paso. Se puede alternar con la consulta presencial en Chillán. Pide conexión estable, cámara, micrófono y un lugar donde nadie más escuche.",
+      "Cómo funciona la terapia online en Chile —la videollamada, la hora con inicio y cierre, y en qué se diferencia de una sala— está en [terapia online en Chile: cómo funciona](/terapia-online). Esta pregunta se queda en lo que necesitas tú: conexión estable, cámara, micrófono y un lugar donde nadie más escuche.",
     sections: [
-      {
-        heading: "El recorrido, sin una reserva en esta página",
-        paragraphs: [
-          "El orden que ya está descrito en el sitio es este: se coordina la hora, llega el enlace con una indicación breve, te conectas a la hora y la sesión dura 50 minutos. No es una conversación que queda abierta el resto del día. La página de terapia online en Chile resume el formato. Esta pregunta baja al funcionamiento.",
-          "Llegas con un punto: una situación, un pensamiento que se repitió o algo que intentaste. Si entras a mitad de un traslado, la hora se gasta en acomodarte. Conviene estar sentado, con el enlace a mano.",
-        ],
-      },
       {
         heading: "Qué tiene que estar listo",
         paragraphs: [
-          "Internet que no se corte cada minuto, cámara, micrófono y una pieza con puerta. Computador, tablet o celular alcanzan. Si la casa es ruidosa, audífonos. Si compartes pieza y no hay forma de hablar con reserva, el formato deja de cuidar la confidencialidad: eso ya está dicho en la pregunta de si la terapia online funciona.",
-          "La videollamada es para quien está en Chile. La sala está en Chillán. No hay otras ciudades en esta ficha. Si estás en otra comuna, el requisito sigue siendo horario, conexión y un lugar privado.",
+          "Internet que no se corte cada minuto, cámara, micrófono y una pieza con puerta. Computador, tablet o celular alcanzan. Si la casa es ruidosa, unos audífonos ayudan. Si compartes pieza y no hay forma de hablar con reserva, el formato deja de cuidar la confidencialidad.",
+          "Llegas con un punto de la semana: una situación, un pensamiento que se repitió o algo que intentaste. Si entras a mitad de un traslado, la hora se gasta en acomodarte. Conviene estar sentado, con el enlace a mano. Cómo es esa hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online).",
         ],
         bullets: [
           "Enlace de videollamada antes de la hora.",
           "Cámara, micrófono e internet estable.",
-          "Lugar privado durante los 50 minutos.",
+          "Lugar privado durante la hora.",
           "Un tema concreto de la semana, no un relato sin borde.",
         ],
       },
       {
         heading: "En qué se diferencia de la sala",
         paragraphs: [
-          "No hay traslado. La privacidad depende de tu casa u oficina, no de una sala ya reservada. Se ve parte del lenguaje del cuerpo; el encuadre de la cámara importa. En un malestar muy intenso, la videollamada pide que tengas un lugar seguro. La sala puede sentirse más contenida para quien prefiere salir de la casa. La comparación online y presencial ordena esas diferencias. Se pueden alternar las dos modalidades.",
-          "El secreto profesional es el mismo. Lo que cambia es el lugar desde el que hablas.",
+          "No hay traslado. La privacidad depende de tu casa u oficina, no de una sala ya reservada. Se ve parte del lenguaje del cuerpo y el encuadre de la cámara importa. En un malestar muy intenso, la videollamada pide un lugar seguro. La sala puede sentirse más contenida si prefieres salir de la casa.",
+          "El secreto profesional es el mismo. Lo que cambia es el lugar desde el que hablas. La comparación está en [terapia online y presencial](/terapia-online-vs-presencial-chillan). Si la duda es si el formato puede servir, está en [¿la terapia online funciona?](/preguntas/la-terapia-online-funciona).",
         ],
       },
       {
-        heading: "Cómo preguntar el valor",
+        heading: "Dónde está el formato, y dónde la atención",
         paragraphs: [
-          "Online y presencial tienen el mismo valor. El número publicado en el sitio es $35.000 por 50 minutos, con boleta para reembolso Isapre. El pago, la primera sesión y la cancelación están en la ficha de precio. Esta pregunta no reserva una hora.",
+          "El recorrido del formato en Chile está en [terapia online en Chile: cómo funciona](/terapia-online). Esta pregunta no lo repite. La videollamada es para quien está en Chile. La sala está en Chillán. No hay otras ciudades en esta ficha.",
+          "La atención local es [psicólogo online en Chillán](/psicologo-online-chillan). El valor publicado, el pago y la cancelación están en la [ficha de precio](/consulta-psicologica-precio-chillan). Esta página no reserva una hora ni escribe un monto.",
         ],
       },
     ],
@@ -1946,9 +1943,9 @@ const QUESTION_PAGES: InfoPage[] = [
           "Sí. La videollamada y la consulta en Chillán se pueden alternar. El trabajo sigue siendo el mismo proceso, con otra puerta de entrada.",
       },
       {
-        question: "¿El valor cambia por ser online?",
+        question: "¿Dónde se explica cómo funciona?",
         answer:
-          "No. El valor publicado es el mismo: $35.000 por 50 minutos, con boleta para Isapre. El detalle de pago está en la ficha de precio.",
+          "En la página de terapia online en Chile. Esta pregunta se queda en la conexión, la privacidad y el lugar. No repite el recorrido.",
       },
       {
         question: "¿Qué pasa si se corta internet?",
@@ -1957,12 +1954,12 @@ const QUESTION_PAGES: InfoPage[] = [
       },
     ],
     related: [
+      { href: "/terapia-online", label: "Terapia online en Chile: cómo funciona" },
       { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "Cómo es una sesión de psicología online" },
-      { href: "/terapia-online", label: "Terapia online en Chile" },
-      { href: "/psicologo-online-chillan", label: "Psicólogo online en Chile, consulta en Chillán" },
-      { href: "/terapia-online-vs-presencial-chillan", label: "Online y presencial" },
       { href: "/preguntas/la-terapia-online-funciona", label: "¿La terapia online funciona?" },
-      { href: "/consulta-psicologica-precio-chillan", label: "Valor publicado de la sesión" },
+      { href: "/psicologo-online-chillan", label: "Psicólogo online en Chillán" },
+      { href: "/terapia-online-vs-presencial-chillan", label: "Terapia online y presencial" },
+      { href: "/consulta-psicologica-precio-chillan", label: "Ficha de precio de la sesión" },
     ],
     safety:
       "Una videollamada no es una urgencia. Si hay ideas de hacerte daño o de querer morir, llama ahora al *4141. Es gratuito, confidencial y atiende las 24 horas. Salud Responde atiende al 600 360 7777. En una urgencia, llama al 131.",

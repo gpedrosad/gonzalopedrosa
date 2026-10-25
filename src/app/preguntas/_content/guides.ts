@@ -25,16 +25,18 @@ export type Guide = {
   sections: GuideSection[];
   related: GuideLink[];
   faqs: GuideFaq[];
+  /** Si está, la página publica Article con la persona del sitio. */
+  updated?: string;
 };
 
 const durationLead =
   "Una terapia psicológica no tiene una duración única. El plazo cambia según el problema, qué tan intenso y antiguo es, los objetivos que te propones, cada cuánto asistes y lo que practicas entre sesiones. Un tema acotado a veces se trabaja en semanas o pocos meses. Un patrón de años, o varios problemas juntos, suele pedir más tiempo.";
 
 const cbtLead =
-  "La terapia cognitivo-conductual, o TCC, es una psicoterapia que trabaja la relación entre lo que piensas, lo que sientes y lo que haces. Suele ser ordenada, centrada en problemas de ahora y con ejercicios entre sesiones. Se usa con frecuencia en ansiedad, ánimo bajo, obsesiones, insomnio y algunas adicciones. El resultado depende de la persona, del problema y de la constancia.";
+  "La terapia cognitivo-conductual, o TCC, es una psicoterapia que trabaja la relación entre lo que piensas, lo que sientes y lo que haces. Suele mirar un problema de ahora, con un mapa simple y un paso concreto entre sesiones. No es pensar en positivo ni un plazo igual para todo el mundo.";
 
 const onlineLead =
-  "La terapia online puede funcionar. En problemas frecuentes, como ansiedad, ánimo bajo y algunos hábitos que quieres cambiar, la investigación clínica ha encontrado resultados parecidos a la presencial cuando hay un lugar privado, conexión estable y asistencia regular. Una videollamada no reemplaza una urgencia médica ni rinde igual si no puedes hablar con reserva.";
+  "Cómo funciona la terapia online en Chile está en la página de terapia online: la videollamada, la hora con inicio y cierre, y en qué se diferencia de una sala. Esta pregunta responde otra cosa. El formato puede servir cuando tienes un lugar privado, conexión estable y continuidad. No reemplaza una urgencia médica ni cuida la reserva si alguien puede oírte.";
 
 const anxietyLead =
   "El estrés es la alarma frente a una exigencia concreta, como la pega, una prueba, una deuda o un conflicto. Cuando esa exigencia baja, el cuerpo suele aflojar. La ansiedad puede seguir encendida aunque el motivo ya pasó, o aparecer sin un disparador claro, con preocupación difícil de cortar y ganas de evitar. Las dos pueden ir juntas. Sentirlas no es, por sí solo, un diagnóstico.";
@@ -49,7 +51,7 @@ const frequencyLead =
   "Al comienzo, lo más habitual es una sesión por semana. Esa continuidad ayuda a retomar lo conversado y a probar algo en la vida real antes de que se enfríe. Cuando el malestar baja y ya usas lo aprendido, hay personas que pasan a cada dos semanas. En una crisis corta a veces se acuerda un contacto más seguido. La frecuencia sale del problema, del riesgo y de tu vida práctica.";
 
 const panicLead =
-  "Un ataque de pánico es un golpe súbito de miedo intenso que llega a su punto máximo en minutos. Puede traer palpitaciones, falta de aire, mareo, sudor, temblor, sensación de irrealidad y miedo a perder el control o a morirte. Después baja, aunque el susto puede quedar un rato. No es lo mismo que vivir ansioso todo el día. Si el dolor de pecho es nuevo o muy fuerte, un médico tiene que descartar un problema cardíaco.";
+  "Un ataque de pánico es un golpe súbito de miedo intenso que llega a su punto máximo en minutos. Puede traer palpitaciones, falta de aire, mareo, sudor, temblor, sensación de irrealidad y miedo a perder el control o a morirte. Después baja, aunque el susto puede quedar un rato. No es lo mismo que la ansiedad de todo el día. Si el dolor de pecho es nuevo o muy fuerte, un médico tiene que descartar un problema cardíaco.";
 
 const griefLead =
   "No hay un plazo único ni sano para el duelo. El dolor agudo suele cambiar de forma con los meses y, aun así, vuelve en fechas, canciones o lugares. Las clasificaciones hablan de duelo prolongado cuando, pasado un tiempo largo, la pena sigue tan intensa que traba la vida diaria: cerca de doce meses en adultos según el DSM-5-TR y seis meses según la CIE-11. Esas cifras sirven para evaluar, no para exigirte que ya estés bien.";
@@ -113,100 +115,118 @@ export const guides: Guide[] = [
   {
     slug: "que-es-la-terapia-cognitivo-conductual",
     path: "/preguntas/que-es-la-terapia-cognitivo-conductual",
-    title: "¿Qué es la terapia cognitivo-conductual?",
+    title: "Terapia cognitivo-conductual: qué es y cómo se usa",
     description:
-      "La TCC trabaja pensamientos, emociones y conductas, con foco en el presente y ejercicios entre sesiones. Guía clara y sin promesas.",
+      "La terapia cognitivo-conductual, o TCC, mira pensamientos, emociones y conductas del presente, con un paso entre sesiones. No es pensar en positivo ni un plazo fijo.",
     breadcrumbLabel: "Terapia cognitivo-conductual",
-    h1: "¿Qué es la terapia cognitivo-conductual?",
+    h1: "Qué es la terapia cognitivo-conductual",
     lead: cbtLead,
+    updated: "2026-10-25",
     sections: [
       {
-        heading: "Qué se hace en la práctica",
+        heading: "Cómo se reconoce una sesión de TCC",
         paragraphs: [
-          "En una sesión de TCC se elige un problema concreto y se arma un mapa simple: qué situación lo dispara, qué pensamiento aparece, qué emoción sube y qué haces después. Ese mapa muestra el círculo que se repite. Desde ahí se prueban cambios chicos, uno por vez.",
-          "El trabajo mira el presente. Si una historia antigua sigue empujando el círculo de hoy, se nombra, y el énfasis sigue en lo que puedes ensayar esta semana. Hay tareas entre sesiones: registrar un pensamiento, acercarte a algo que evitas, o cambiar una conducta que alivia un minuto y después empeora el problema.",
-          "La relación es colaborativa. Tú traes el conocimiento de tu vida y quien atiende trae un método. Se acuerdan objetivos que se pueden observar. Si una herramienta no te calza, se ajusta. La TCC tiene estructura, y también se adapta a la persona que está en la sala o en la videollamada.",
+          "Se elige un problema concreto y se arma un mapa: qué situación lo dispara, qué pensamiento aparece, qué emoción sube y qué haces después. Ese mapa muestra el círculo. Desde ahí se prueba un cambio chico, uno por vez.",
+          "El trabajo mira el presente. Si una historia antigua sigue empujando el círculo de hoy, se nombra, y el énfasis sigue en lo que puedes ensayar esta semana. Tú traes el conocimiento de tu vida y quien atiende trae un método. Si una herramienta no te calza, se ajusta.",
+        ],
+        bullets: [
+          "Hay un problema nombrado, no una charla sin borde.",
+          "Se mira el pensamiento, la emoción y la conducta juntos.",
+          "Queda un paso para la semana: anotar, acercarte o dejar una conducta que alivia un minuto y después empeora.",
+          "Puedes preguntar el objetivo si sales sin saber qué observar.",
         ],
       },
       {
-        heading: "Dónde se usa con más frecuencia",
+        heading: "Dónde se usa, en general",
         paragraphs: [
-          "Hay programas estudiados para ansiedad, crisis de pánico, fobia social, obsesiones y compulsiones, ánimo bajo, insomnio y algunos problemas de juego o de consumo. Eso significa que existen pasos descritos y resultados observados en investigación. Un programa descrito en un manual todavía tiene que encajar con tu caso.",
-          "La TCC convive con otros enfoques. Hay personas que se benefician de un trabajo más centrado en la historia o en el vínculo. Elegir TCC tiene sentido cuando quieres herramientas prácticas y un foco claro. Si el encaje no se siente, decirlo forma parte del proceso.",
-          "Por videollamada, la TCC se puede hacer cuando hay privacidad y constancia. La guía sobre [si la terapia online funciona](/preguntas/la-terapia-online-funciona) resume en qué condiciones los resultados se parecen a la presencial.",
+          "Hay programas descritos para ansiedad, crisis de pánico, fobia social, obsesiones y compulsiones, ánimo bajo, insomnio y algunos problemas de juego o de consumo. Que un manual describa pasos no dice que ese programa te corresponda ni en qué orden.",
+          "Cuando el tema son obsesiones y rituales, una forma de TCC es la exposición con prevención de respuesta. Qué es esa pieza está en [qué es la ERP para el TOC](/preguntas/que-es-la-erp-para-el-toc). La diferencia entre la alarma y el ritual está en [obsesiones y compulsiones](/preguntas/obsesiones-y-compulsiones). La atención de ese método en Chillán es otra página: [terapia ERP para el TOC](/tratamiento-toc-chillan).",
+          "La TCC convive con otros enfoques. Elegirla tiene sentido cuando quieres un foco claro y un paso práctico. Si el encaje no se siente, decirlo forma parte del proceso.",
         ],
       },
       {
-        heading: "Qué puedes esperar, con los pies en la tierra",
+        heading: "Qué puedes hacer entre una lectura y otra",
         paragraphs: [
-          "Al inicio se dedica tiempo a entender el problema y a definir por dónde partir. Después vienen ensayos. Algunos se sienten incómodos a propósito, como acercarte a una situación que evitabas, siempre de a poco y con acuerdo. El alivio estable suele venir después de repetir, no después de una frase bonita dicha una vez.",
-          "Una sesión ordenada incluye revisar la semana, trabajar un punto y dejar un paso para la siguiente. Si sales sin saber qué observar, conviene preguntarlo antes de cortar. La claridad es parte del método.",
-          "Si buscas este enfoque con alguien que atiende en Chillán o por videollamada, la página de [psicólogo cognitivo conductual en Chillán](/psicologo-cognitivo-conductual-chillan) cuenta cómo se ofrece ese trabajo. Esta guía se queda en la definición.",
+          "Elige una situación de esta semana y escribe cuatro líneas: qué pasó, qué pensaste, qué sentiste y qué hiciste. No tienes que corregirlo. Ver el círculo ya es información.",
+          "Por videollamada, el mismo mapa se puede hacer si hay privacidad y continuidad. Cómo funciona ese formato en Chile está en [terapia online en Chile](/terapia-online). Si la duda es si el formato puede servir, está en [¿la terapia online funciona?](/preguntas/la-terapia-online-funciona).",
+        ],
+      },
+      {
+        heading: "Cuándo consultar",
+        paragraphs: [
+          "Conviene conversarlo si el círculo ya te limita en la pega, en la casa o en el sueño durante semanas, o si evitas cada vez más para no sentir la alarma. Esta página explica el método. No reserva una hora ni promete un plazo.",
+          "Si buscas este enfoque con alguien que atiende en Chillán o por videollamada, la página de [psicólogo cognitivo conductual en Chillán](/psicologo-cognitivo-conductual-chillan) cuenta cómo se ofrece ese trabajo. La ansiedad del día, distinta del método, está en [ansiedad en Chillán](/psicologo-ansiedad-chillan).",
         ],
       },
     ],
     related: [
       { href: "/psicologo-cognitivo-conductual-chillan", label: "Psicólogo cognitivo conductual en Chillán" },
-      { href: "/terapia-online", label: "Cómo es una sesión de terapia online" },
+      { href: "/preguntas/que-es-la-erp-para-el-toc", label: "Qué es la ERP para el TOC" },
+      { href: "/tratamiento-toc-chillan", label: "Terapia ERP para el TOC en Chillán" },
+      { href: "/terapia-online", label: "Terapia online en Chile: cómo funciona" },
       { href: "/psicologo-ansiedad-chillan", label: "Ansiedad: información y atención en Chillán" },
-      { href: "/preguntas/la-terapia-online-funciona", label: "¿La terapia online funciona?" },
       { href: "/preguntas/cuanto-dura-una-terapia-psicologica", label: "¿Cuánto dura una terapia psicológica?" },
     ],
     faqs: [
       {
         question: "¿La TCC es pensar en positivo?",
         answer:
-          "El método revisa pensamientos que empujan una emoción o una conducta, y los contrasta con lo que ocurre. Una frase alegre pegada en el espejo, por sí sola, no es una sesión de TCC.",
+          "No. Revisa pensamientos que empujan una emoción o una conducta y los contrasta con lo que ocurre. Una frase alegre en el espejo, por sí sola, no es una sesión de TCC.",
       },
       {
-        question: "¿Sirve para cualquier problema?",
+        question: "¿La ERP es otra terapia, distinta de la TCC?",
         answer:
-          "Tiene más desarrollo en algunos problemas, como ansiedad, ánimo, obsesiones, insomnio y ciertas adicciones. En otros casos se combina con otra ayuda, o se elige un camino distinto. Eso se ve en la evaluación.",
+          "La ERP es una forma de trabajar obsesiones y compulsiones dentro de la TCC: te acercas al disparador y no haces el ritual. La pregunta de la ERP lo explica. Esta página se queda en el método general.",
+      },
+      {
+        question: "¿Hay un número de sesiones que sirva para todos?",
+        answer:
+          "No. Un problema acotado y un patrón de años no piden el mismo tramo. Esta lectura no fija un plazo.",
       },
     ],
   },
   {
     slug: "la-terapia-online-funciona",
     path: "/preguntas/la-terapia-online-funciona",
-    title: "¿La terapia online funciona?",
+    title: "¿La terapia online funciona? Condiciones y límites",
     description:
-      "La videollamada puede funcionar en ansiedad, ánimo y otros problemas frecuentes si hay privacidad y constancia. También tiene límites.",
-    breadcrumbLabel: "Terapia online",
+      "La terapia online puede servir si hay privacidad, conexión estable y continuidad. No reemplaza una urgencia. Cómo funciona en Chile está en otra página.",
+    breadcrumbLabel: "Si la terapia online funciona",
     h1: "¿La terapia online funciona?",
     lead: onlineLead,
+    updated: "2026-10-25",
     sections: [
       {
-        heading: "Cuándo los resultados se parecen",
+        heading: "Qué condiciones pide el formato",
         paragraphs: [
-          "La terapia online es psicoterapia por videollamada, con hora, objetivo y continuidad. Para varios problemas frecuentes, los estudios de terapia cognitivo-conductual a distancia han observado mejoras parecidas a las de la misma terapia en una sala, cuando la persona puede asistir y el formato le permite concentrarse.",
-          "Esa frase pide condiciones. Necesitas un lugar donde nadie entre, audífonos si la casa es ruidosa, y una conexión que no se corte cada minuto. También necesitas tratar la hora como una cita: llegar, quedarte el tiempo y retomar el hilo la semana siguiente.",
-          "El método importa tanto como la pantalla. Una conversación suelta puede aliviar un día. Un proceso con objetivos, revisión y ejercicios entre sesiones es otra cosa. Si quieres ver el encuadre de la [terapia cognitivo-conductual](/preguntas/que-es-la-terapia-cognitivo-conductual), esa guía lo explica aparte.",
+          "La terapia online es psicoterapia por videollamada, con hora, un tema y continuidad. Puede ser un formato razonable cuando puedes asistir, concentrarte y hablar con reserva. Esta página no compara resultados ni cita un estudio.",
+          "Necesitas un lugar donde nadie entre, audífonos si la casa es ruidosa, y una conexión que no se corte cada minuto. También necesitas tratar la hora como una cita: llegar, quedarte el tiempo y retomar el hilo la semana siguiente.",
+          "El método importa tanto como la pantalla. Una conversación suelta puede aliviar un día. Un proceso con un mapa y un paso entre sesiones es otra cosa. El encuadre de la [terapia cognitivo-conductual](/preguntas/que-es-la-terapia-cognitivo-conductual) está en esa pregunta.",
         ],
       },
       {
         heading: "Cuándo la videollamada queda corta",
         paragraphs: [
-          "Hay situaciones en que la presencia importa. Una crisis con riesgo para ti o para otra persona se atiende por las vías de urgencia, no como una sesión programada. Algunas evaluaciones piden materiales o un encuadre que la cámara no cubre bien. Si compartes pieza y no hay forma de hablar con reserva, el formato deja de cuidar la confidencialidad.",
-          "También está tu modo de atender. Hay personas que en su casa se distraen, se censuran porque alguien podría escuchar, o sienten que la pantalla las deja lejos. En ese caso, una sala puede ser mejor. La comparación entre [terapia online y presencial](/terapia-online-vs-presencial-chillan) ordena esas ventajas y esos límites con más detalle.",
-          "La tecnología falla. Conviene tener un plan simple si se corta el enlace: un número de teléfono de respaldo y unos minutos para retomar. Un corte aislado no invalida el proceso. Una conexión que siempre se cae sí lo desgasta.",
+          "Una crisis con riesgo para ti o para otra persona se atiende por las vías de urgencia, no como una sesión programada. Algunas evaluaciones piden materiales o un encuadre que la cámara no cubre bien. Si compartes pieza y no hay forma de hablar con reserva, el formato deja de cuidar la confidencialidad.",
+          "Hay personas que en su casa se distraen, se censuran porque alguien podría escuchar, o sienten que la pantalla las deja lejos. En ese caso, una sala puede ser mejor. La comparación entre [terapia online y presencial](/terapia-online-vs-presencial-chillan) ordena esas diferencias.",
+          "Un corte aislado del enlace se puede retomar. Una conexión que siempre se cae desgasta la hora.",
         ],
       },
       {
-        heading: "Cómo cuidar una sesión desde la casa",
+        heading: "Dónde está cómo funciona",
         paragraphs: [
-          "Elige el mismo tipo de condiciones que pedirías en una consulta: luz suficiente para que te vean, cámara a la altura de los ojos, y avisos del celular en silencio. Si vives con más gente, avisa que esa hora no está disponible. Una puerta cerrada cambia la calidad de lo que te atreves a decir.",
-          "Llega con un punto de la semana. Puede ser una situación, un pensamiento que se repitió o algo que intentaste. Esa preparación ayuda a que los 50 o 60 minutos alcancen para trabajar un tema con calma.",
-          "La página [terapia online en Chile](/terapia-online) resume el formato. Cómo es la hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online). Cómo funciona el proceso está en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online). Esta respuesta se limita a si el formato puede servir.",
+          "El formato en Chile —qué ocurre en la hora, qué preparas y en qué se diferencia de una sala— está en [terapia online en Chile: cómo funciona](/terapia-online). Esta respuesta no repite ese recorrido.",
+          "Cómo es la hora, con el enlace y la pieza con puerta, está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online). Qué tienes que tener listo está en [qué necesitas para la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online). La atención, con consulta en Chillán, es [psicólogo online en Chillán](/psicologo-online-chillan).",
         ],
       },
     ],
     related: [
+      { href: "/terapia-online", label: "Terapia online en Chile: cómo funciona" },
       { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "¿Cómo es una sesión de psicología online?" },
-      { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "¿Cómo funciona la terapia psicológica online?" },
-      { href: "/terapia-online", label: "Terapia online en Chile" },
+      { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "Qué necesitas para la terapia psicológica online" },
       { href: "/terapia-online-vs-presencial-chillan", label: "Terapia online y presencial en Chillán" },
-      { href: "/psicologo-online-chillan", label: "Psicólogo online desde Chillán" },
-      { href: "/preguntas/que-es-la-terapia-cognitivo-conductual", label: "¿Qué es la terapia cognitivo-conductual?" },
+      { href: "/psicologo-online-chillan", label: "Psicólogo online en Chillán" },
+      { href: "/preguntas/que-es-la-terapia-cognitivo-conductual", label: "Qué es la terapia cognitivo-conductual" },
       { href: "/preguntas/ansiedad-o-estres", label: "¿Cómo sé si tengo ansiedad o estrés?" },
     ],
     faqs: [
@@ -439,42 +459,56 @@ export const guides: Guide[] = [
   {
     slug: "que-es-un-ataque-de-panico",
     path: "/preguntas/que-es-un-ataque-de-panico",
-    title: "¿Qué es un ataque de pánico?",
+    title: "Ataques de pánico: qué son, cómo se sienten y qué hacer",
     description:
-      "Es un miedo súbito que sube en minutos, con síntomas físicos intensos. En qué se diferencia de la ansiedad del día a día.",
-    breadcrumbLabel: "Ataque de pánico",
-    h1: "¿Qué es un ataque de pánico?",
+      "Un ataque de pánico es un golpe de miedo que sube en minutos, con el cuerpo en alarma. No es la ansiedad del día. Si el pecho duele y es nuevo, ve a un médico.",
+    breadcrumbLabel: "Ataques de pánico",
+    h1: "Qué son los ataques de pánico",
     lead: panicLead,
+    updated: "2026-10-25",
     sections: [
       {
-        heading: "Cómo se siente",
+        heading: "Cómo se reconoce un ataque de pánico",
         paragraphs: [
-          "El ataque llega rápido. En pocos minutos el corazón se acelera, falta el aire, tiemblan las manos, aparece sudor frío, mareo o un hormigueo. Hay personas que sienten el cuerpo raro, como si estuvieran lejos de sí mismas. El miedo más frecuente es morirse, volverse loco o perder el control delante de otros.",
-          "Después la ola baja. Puedes quedar cansado, asustado y atento al cuerpo por horas. Ese residuo no es un segundo ataque. Es el sistema de alarma todavía sensible. Muchas personas empiezan a vigilar el pulso, y esa vigilancia prepara el susto siguiente.",
-          "Un ataque puede ocurrir de día o de noche, en la micro, en la pega o en la cama. A veces hay un disparador claro. A veces parece salir de la nada. Las dos formas asustan. La guía de [ansiedad o estrés](/preguntas/ansiedad-o-estres) ayuda si lo que sientes es una alarma más pareja, no un golpe de minutos.",
+          "Llega rápido. En pocos minutos el corazón se acelera, falta el aire, tiemblan las manos, aparece sudor frío, mareo o un hormigueo. Hay personas que sienten el cuerpo raro, como si estuvieran lejos de sí mismas. El miedo más frecuente es morirte, volverse loco o perder el control delante de otros.",
+          "Después la ola baja. Puedes quedar cansado, asustado y atento al cuerpo por horas. Ese residuo no es un segundo ataque: la alarma sigue sensible. Vigilar el pulso prepara el susto siguiente.",
+          "Puede ocurrir de día o de noche, en la micro, en la pega o en la cama. A veces hay un disparador claro y a veces parece salir de la nada. Si lo que sientes es una alarma pareja, no un golpe de minutos, la pregunta [ansiedad o estrés](/preguntas/ansiedad-o-estres) está más cerca. La ficha de [ansiedad en Chillán](/psicologo-ansiedad-chillan) es la atención de esa alarma, no de este pico.",
+        ],
+        bullets: [
+          "Sube en minutos y después baja.",
+          "El cuerpo entra en alarma: corazón, aire, mareo, sudor o temblor.",
+          "Puede venir el miedo a morirte o a perder el control.",
+          "El cansancio de después no es otro ataque.",
         ],
       },
       {
-        heading: "Ataque, ansiedad y urgencia médica",
+        heading: "Causas generales",
         paragraphs: [
-          "La ansiedad del día es una preocupación que se estira por horas. El ataque de pánico es un pico. Puedes tener los dos: una base de preocupación y, encima, episodios súbitos. También puedes tener un ataque aislado en una etapa de mucho estrés y que no se repita.",
-          "El cuerpo imita problemas médicos, sobre todo del corazón y de la respiración. Si el dolor de pecho es nuevo, muy intenso, viene con desmayo o con falta de aire que no cede, corresponde una evaluación médica urgente. Descartar una causa física es un paso de cuidado, no una exageración.",
-          "Cuando los ataques se repiten y empiezas a evitar lugares por miedo a que vuelvan, el problema ya ocupa más espacio. Ahí una evaluación psicológica tiene sentido. La página de [crisis de pánico en Chillán](/psicologo-crisis-de-panico-chillan) incluye la agorafobia: el miedo a los ataques que te saca de la calle, de la micro o de los locales.",
+          "Un ataque puede aparecer en una etapa de mucho estrés, con poco sueño, o encima de una ansiedad que ya venía de antes. También puede ser aislado y no repetirse. Esta página no lista una causa única ni un porcentaje.",
+          "El cuerpo imita problemas del corazón y de la respiración. Por eso un episodio nuevo, con dolor de pecho intenso, desmayo o falta de aire que no cede, se mira primero con un médico. Descartar una causa física es cuidado, no una exageración.",
+          "Cuando los ataques se repiten, es fácil empezar a evitar la micro, una tienda o salir, por si vuelve. Ese miedo al lugar no es el ataque: es la agorafobia, y la ficha de [crisis de pánico en Chillán](/psicologo-crisis-de-panico-chillan) la explica aparte.",
         ],
       },
       {
-        heading: "Qué suele ayudar en el momento",
+        heading: "Qué puedes hacer en el momento",
         paragraphs: [
-          "En el minuto, ayuda recordar que la ola tiene subida y bajada. Apoya los pies en el suelo, suelta un poco los hombros y alarga la salida del aire, sin forzar una técnica perfecta. Hablarte con una frase corta, del tipo esto es un ataque y va a bajar, le da contexto al cuerpo.",
-          "Si el ataque te deja con miedo a salir, anota hora, duración y qué estabas haciendo. Ese registro ordena la evaluación. Si aparece una idea de hacerte daño, llama al 131 o a Salud Responde (600 360 7777).",
+          "Recuerda que la ola tiene subida y bajada. Apoya los pies en el suelo, suelta un poco los hombros y alarga la salida del aire, sin forzar una técnica perfecta. Una frase corta, del tipo esto es un ataque y va a bajar, le da contexto al cuerpo.",
+          "Los pasos de esa hora, con más detalle, están en la guía [ataque de pánico: qué hacer](/guias/ataque-de-panico-que-hacer). Si el susto te deja con miedo a salir, anota hora, duración y qué estabas haciendo. Ese registro ordena una conversación posterior. No es un diagnóstico.",
+        ],
+      },
+      {
+        heading: "Cuándo consultar",
+        paragraphs: [
+          "Pide evaluación médica urgente si el dolor de pecho es nuevo o muy fuerte, si hay desmayo o si falta el aire y no cede. Si aparece una idea de hacerte daño, llama al 131 o a Salud Responde (600 360 7777).",
+          "Conviene conversarlo con un profesional de salud mental si los ataques se repiten, si ya evitas lugares o si la ansiedad del día no baja entre un pico y otro. Esta pregunta define el episodio. La atención local está en la ficha de crisis de pánico.",
         ],
       },
     ],
     related: [
-      { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer durante el ataque" },
+      { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer durante un ataque de pánico" },
       { href: "/psicologo-crisis-de-panico-chillan", label: "Crisis de pánico y agorafobia en Chillán" },
-      { href: "/psicologo-ansiedad-chillan", label: "Ansiedad: información y atención en Chillán" },
-      { href: "/preguntas/ansiedad-o-estres", label: "¿Cómo sé si tengo ansiedad o estrés?" },
+      { href: "/psicologo-ansiedad-chillan", label: "Ansiedad en Chillán: qué es y cómo se trabaja" },
+      { href: "/preguntas/ansiedad-o-estres", label: "Cómo distinguir ansiedad y estrés" },
     ],
     faqs: [
       {
@@ -483,9 +517,14 @@ export const guides: Guide[] = [
           "El pico suele ser de minutos. El cansancio y el miedo a que vuelva pueden quedarse varias horas. Si los síntomas físicos intensos no bajan o el dolor de pecho es nuevo, pide evaluación médica.",
       },
       {
-        question: "¿Es lo mismo que una crisis de ansiedad?",
+        question: "¿Es lo mismo que ansiedad?",
         answer:
-          "En la conversación diaria los nombres se mezclan. Un ataque de pánico es el pico súbito. Una crisis de ansiedad puede ser un período más largo de angustia. Contar cómo partió y cuánto tardó en llegar al máximo ayuda a distinguirlos.",
+          "No. La ansiedad del día es una preocupación que se estira. El ataque de pánico es el pico de minutos. Puedes tener los dos. La pregunta de ansiedad o estrés ordena la alarma pareja.",
+      },
+      {
+        question: "¿Evitar la micro es parte del ataque?",
+        answer:
+          "El ataque es el pico. Evitar lugares por miedo a que vuelva es otra pieza, la agorafobia. La ficha de crisis de pánico en Chillán la separa.",
       },
     ],
   },

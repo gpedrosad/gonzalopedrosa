@@ -174,6 +174,10 @@ export default function PsicologoAnsiedadChillanPage() {
         y{" "}
         <Link href="/guias/ataque-de-panico-que-hacer" style={{ color: "#000", textDecoration: "underline" }}>
           qué hacer en un ataque de pánico
+        </Link>{" "}
+        y{" "}
+        <Link href="/preguntas/que-es-un-ataque-de-panico" style={{ color: "#000", textDecoration: "underline" }}>
+          qué son los ataques de pánico
         </Link>
         .
       </p>
