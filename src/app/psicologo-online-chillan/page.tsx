@@ -21,17 +21,17 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Psicólogo online en Chile por videollamada, con consulta en Chillán. Cómo es la sesión y cómo funciona están en otras páginas. El valor está publicado.";
+  "Psicólogo online en Chillán: consulta presencial y videollamada. Cómo funciona la terapia online en Chile está en otra página. Esta ficha es la atención.";
 
 export const metadata: Metadata = {
-  title: "Psicólogo online en Chile: videollamada desde Chillán",
+  title: "Psicólogo online en Chillán: consulta y videollamada",
   description,
   alternates: {
     canonical: "/psicologo-online-chillan",
   },
   openGraph: {
     locale: "es_CL",
-    title: "Psicólogo online en Chile: videollamada desde Chillán",
+    title: "Psicólogo online en Chillán: consulta y videollamada",
     description,
     url: `${SITE_URL}/psicologo-online-chillan`,
     type: "website",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicólogo online en Chile: videollamada desde Chillán",
+    title: "Psicólogo online en Chillán: consulta y videollamada",
     description: getTwitterDescription(description),
   },
 };
@@ -51,9 +51,9 @@ const breadcrumbItems = getClusterBreadcrumb(
 
 const onlineFAQs = [
   {
-    question: "¿Es tan efectiva como presencial?",
+    question: "¿Dónde se compara la videollamada con la sala?",
     answer:
-      "Sí. Múltiples estudios demuestran que la terapia online tiene la misma efectividad que la presencial para la mayoría de las condiciones, especialmente con enfoque cognitivo-conductual.",
+      "En la página de terapia online y presencial. Cómo funciona el formato en Chile está en la página informativa. Esta ficha es la atención en Chillán. No promete un resultado ni un plazo.",
   },
   {
     question: "¿Qué pasa si falla internet?",
@@ -75,14 +75,14 @@ const onlineFAQs = [
 const faqSchema = getPageFAQSchema(onlineFAQs);
 const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
 const webPageSchema = getWebPageSchema({
-  name: "Psicólogo online Chile",
+  name: "Psicólogo online en Chillán",
   description,
   path: "/psicologo-online-chillan",
 });
 const serviceSchema = getServiceSchema({
   serviceType: "Psicoterapia online",
   description:
-    "Sesiones de psicología por videollamada para pacientes en todo Chile, con Terapia Cognitivo-Conductual.",
+    "Atención psicológica en Chillán, presencial y por videollamada. Cómo funciona la terapia online en Chile está en otra página.",
   url: `${SITE_URL}/psicologo-online-chillan`,
 });
 
@@ -136,7 +136,7 @@ export default function PsicologoOnlineChillanPage() {
                 marginBottom: "0.125rem",
               }}
             >
-              Chillán · Todo Chile
+              Chillán
             </p>
             <p style={{ fontWeight: 500, color: "#000" }}>Gonzalo Pedrosa</p>
           </div>
@@ -164,7 +164,7 @@ export default function PsicologoOnlineChillanPage() {
             lineHeight: 1.1,
           }}
         >
-          Psicólogo online en Chile
+          Psicólogo online en Chillán
         </h1>
 
         <p
@@ -175,19 +175,19 @@ export default function PsicologoOnlineChillanPage() {
             lineHeight: 1.6,
           }}
         >
-          Esta es la página de atención: psicólogo online, con consulta
-          presencial en Chillán y videollamada para quien está en Chile. La
-          página informativa del formato es{" "}
+          Esta es la página de atención en Chillán: consulta presencial y
+          videollamada para quien está en Chile. Cómo funciona la terapia online
+          en Chile está en{" "}
           <Link href="/terapia-online" style={{ color: "#000", textDecoration: "underline" }}>
-            terapia online en Chile
+            terapia online en Chile: cómo funciona
           </Link>
           . Cómo es la hora está en{" "}
           <Link href="/preguntas/como-es-una-sesion-de-psicologia-online" style={{ color: "#000", textDecoration: "underline" }}>
             cómo es una sesión de psicología online
           </Link>
-          . Cómo funciona el proceso está en{" "}
+          . Qué necesitas tener listo está en{" "}
           <Link href="/preguntas/como-funciona-la-terapia-psicologica-online" style={{ color: "#000", textDecoration: "underline" }}>
-            cómo funciona la terapia psicológica online
+            qué necesitas para la terapia psicológica online
           </Link>
           . Si la duda es si el formato sirve, está en{" "}
           <Link href="/preguntas/la-terapia-online-funciona" style={{ color: "#000", textDecoration: "underline" }}>

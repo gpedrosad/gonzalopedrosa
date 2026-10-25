@@ -2,6 +2,10 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-10-25
+
+- Lote informativo: ocho lecturas profundizadas (burnout, EMDR, TEPT, trauma, ataques de pánico, TCC, autoestima, psicólogo o psiquiatra), con FAQ y artículo donde faltaba. Terapia online en Chile explica el formato; psicólogo online queda como la atención en Chillán. Detalle: [lote](../../docs/seo-lote-2026-10-25.md).
+
 ## 2026-10-24
 
 - Lote de fin de semana: seis redirecciones permanentes (timidez, burnout, perfeccionismo, impostor, Chillán Viejo y agorafobia) con el contenido útil fundido en fobia social, estrés laboral, autoestima, la portada y crisis de pánico. Enlaces de descubrimiento hacia preguntas y guías que siguen sin indexar. Detalle: [lote](../../docs/seo-lote-2026-10-24.md).

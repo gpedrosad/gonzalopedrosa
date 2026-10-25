@@ -85,15 +85,23 @@ export default function EstresPostraumaticoChillanPage() {
         el recuerdo sigue organizando la semana. Esta página es la ficha local,
         en Chillán. Qué es el trastorno está en la{" "}
         <Link href="/guias/que-es-el-tept" style={{ color: "#000", textDecoration: "underline" }}>
-          guía de TEPT
+          qué es el TEPT
+        </Link>
+        . Qué es un trauma psicológico, antes de ese nombre, está en{" "}
+        <Link href="/preguntas/que-es-un-trauma-psicologico" style={{ color: "#000", textDecoration: "underline" }}>
+          qué es un trauma psicológico
         </Link>
         . Qué hace un especialista en estrés postraumático está en{" "}
         <Link href="/preguntas/que-hace-un-especialista-en-estres-postraumatico" style={{ color: "#000", textDecoration: "underline" }}>
-          esta pregunta
+          qué hace un especialista en estrés postraumático
         </Link>
         . La atención con EMDR está en{" "}
         <Link href="/terapia-emdr-chillan" style={{ color: "#000", textDecoration: "underline" }}>
-          la página del método
+          terapia EMDR en Chillán
+        </Link>
+        . Las fases del método están en{" "}
+        <Link href="/guias/que-es-el-emdr" style={{ color: "#000", textDecoration: "underline" }}>
+          qué es la terapia EMDR
         </Link>
         .
       </p>

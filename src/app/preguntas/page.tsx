@@ -66,9 +66,9 @@ const blurbs: Record<string, string> = {
   "cuanto-dura-una-terapia-psicologica":
     "Qué factores alargan o acortan un proceso, sin un número mágico de sesiones.",
   "que-es-la-terapia-cognitivo-conductual":
-    "Qué mira la TCC en una sesión y qué puedes esperar de los ejercicios entre semana.",
+    "Qué es la TCC, cómo se reconoce una sesión y en qué se parece la ERP del TOC.",
   "la-terapia-online-funciona":
-    "En qué condiciones la videollamada se parece a la sala, y cuándo el formato queda corto.",
+    "Si el formato puede servir, y dónde está cómo funciona la terapia online en Chile.",
   "ansiedad-o-estres":
     "Cómo distinguir una alarma pegada a una exigencia de una preocupación que sigue después.",
   "la-ludopatia-es-una-enfermedad":
@@ -78,7 +78,7 @@ const blurbs: Record<string, string> = {
   "cada-cuanto-ir-al-psicologo":
     "Por qué al inicio suele servir una vez por semana y cuándo tiene sentido espaciar.",
   "que-es-un-ataque-de-panico":
-    "Qué es el pico de minutos, en qué se diferencia de la ansiedad del día y cuándo ver a un médico.",
+    "Qué son los ataques de pánico, en qué se diferencian de la ansiedad y qué hacer en el minuto.",
   "cuanto-dura-un-duelo":
     "Por qué no hay una fecha para estar bien y qué umbrales usan las clasificaciones para evaluar.",
 };
@@ -133,7 +133,27 @@ export default function PreguntasIndexPage() {
         <h2 style={{ fontSize: "1.35rem", fontWeight: 650, margin: "2rem 0 0.75rem" }}>Cómo leer estas guías</h2>
         <p style={{ fontSize: "1.0625rem", lineHeight: 1.75, color: "#333", margin: "0 0 1rem" }}>
           Parte por la pregunta que más se parece a la tuya. Si dudas entre dos, lee las dos: ansiedad y
-          estrés se tocan, y lo mismo pasa con el duelo y el ánimo bajo. Si la duda es el ánimo,{" "}
+          estrés se tocan, y lo mismo pasa con el duelo y el ánimo bajo.{" "}
+          <Link href="/preguntas/que-es-la-terapia-cognitivo-conductual" style={{ color: "#111", textDecoration: "underline" }}>
+            Qué es la terapia cognitivo-conductual
+          </Link>{" "}
+          define el método.{" "}
+          <Link href="/preguntas/que-es-un-ataque-de-panico" style={{ color: "#111", textDecoration: "underline" }}>
+            Qué son los ataques de pánico
+          </Link>
+          ,{" "}
+          <Link href="/preguntas/que-es-un-trauma-psicologico" style={{ color: "#111", textDecoration: "underline" }}>
+            qué es un trauma psicológico
+          </Link>{" "}
+          y{" "}
+          <Link href="/preguntas/senales-de-baja-autoestima" style={{ color: "#111", textDecoration: "underline" }}>
+            señales de baja autoestima
+          </Link>{" "}
+          contestan la pregunta en el primer párrafo. Cómo funciona la terapia online en Chile está en{" "}
+          <Link href="/terapia-online" style={{ color: "#111", textDecoration: "underline" }}>
+            terapia online en Chile: cómo funciona
+          </Link>
+          . Si la duda es el ánimo,{" "}
           <Link href="/preguntas/senales-de-depresion" style={{ color: "#111", textDecoration: "underline" }}>
             cómo saber si tengo depresión
           </Link>{" "}

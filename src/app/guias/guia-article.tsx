@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/app/components/JsonLd";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
-import { getBreadcrumbSchema } from "@/lib/schemas";
+import { getBreadcrumbSchema, getPageFAQSchema } from "@/lib/schemas";
 import { CANONICAL_ORIGIN } from "@/lib/site-config";
 
 export const GUIA_UPDATED_ISO = "2026-10-17";
@@ -15,6 +15,11 @@ export type GuiaLink = {
   note: string;
 };
 
+type GuiaFaq = {
+  question: string;
+  answer: string;
+};
+
 type GuiaArticleProps = {
   h1: string;
   breadcrumbLabel: string;
@@ -23,6 +28,9 @@ type GuiaArticleProps = {
   children: ReactNode;
   relatedSite: GuiaLink[];
   relatedGuides: GuiaLink[];
+  faqs?: GuiaFaq[];
+  updatedIso?: string;
+  updatedLabel?: string;
 };
 
 export function guiaMetadata(opts: {
@@ -66,6 +74,7 @@ function articleSchema(props: {
   h1: string;
   path: string;
   description: string;
+  updatedIso: string;
 }) {
   const url = `${CANONICAL_ORIGIN}${props.path}`;
 
@@ -75,8 +84,8 @@ function articleSchema(props: {
     headline: props.h1,
     description: props.description,
     inLanguage: "es-CL",
-    datePublished: GUIA_UPDATED_ISO,
-    dateModified: GUIA_UPDATED_ISO,
+    datePublished: props.updatedIso,
+    dateModified: props.updatedIso,
     image: [`${CANONICAL_ORIGIN}/og.png`],
     author: {
       "@type": "Person",
@@ -109,6 +118,9 @@ export function GuiaArticle({
   children,
   relatedSite,
   relatedGuides,
+  faqs,
+  updatedIso = GUIA_UPDATED_ISO,
+  updatedLabel = GUIA_UPDATED_LABEL,
 }: GuiaArticleProps) {
   const breadcrumbItems = [
     { label: "Inicio", href: "/" },
@@ -118,18 +130,21 @@ export function GuiaArticle({
 
   return (
     <>
-      <JsonLd id="article" data={articleSchema({ h1, path, description })} />
+      <JsonLd id="article" data={articleSchema({ h1, path, description, updatedIso })} />
       <JsonLd
         id="breadcrumb"
         data={getBreadcrumbSchema(breadcrumbItems) as Record<string, unknown>}
       />
+      {faqs && faqs.length > 0 ? (
+        <JsonLd id="faq-schema" data={getPageFAQSchema(faqs) as Record<string, unknown>} />
+      ) : null}
       <main className="guia">
         <Breadcrumb items={breadcrumbItems} />
         <h1>{h1}</h1>
         <p className="guia-byline">
           Por{" "}
           <Link href="/perfil">Gonzalo Pedrosa</Link>, psicólogo · Actualizado
-          el {GUIA_UPDATED_LABEL}
+          el {updatedLabel}
         </p>
         <p className="guia-disclaimer" role="note">
           Esta guía es información general. No hace un diagnóstico, no reemplaza
@@ -138,6 +153,18 @@ export function GuiaArticle({
           busca ayuda de inmediato.
         </p>
         <article className="guia-prose">{children}</article>
+
+        {faqs && faqs.length > 0 ? (
+          <section className="guia-faq" aria-labelledby="preguntas-guia">
+            <h2 id="preguntas-guia">Preguntas frecuentes</h2>
+            {faqs.map((faq) => (
+              <details key={faq.question}>
+                <summary>{faq.question}</summary>
+                <p>{faq.answer}</p>
+              </details>
+            ))}
+          </section>
+        ) : null}
 
         <section className="guia-related" aria-labelledby="en-este-sitio">
           <h2 id="en-este-sitio">En este sitio</h2>
@@ -229,6 +256,29 @@ export function GuiaArticle({
         .guia-prose a {
           color: #111;
           text-underline-offset: 2px;
+        }
+        .guia-faq {
+          margin-top: 2.5rem;
+        }
+        .guia-faq h2 {
+          font-size: 1.35rem;
+          line-height: 1.25;
+          letter-spacing: -0.02em;
+          margin: 0 0 0.75rem;
+        }
+        .guia-faq details {
+          border-top: 1px solid #eee;
+          padding: 0.85rem 0;
+        }
+        .guia-faq summary {
+          cursor: pointer;
+          font-weight: 600;
+        }
+        .guia-faq p {
+          font-size: 1.05rem;
+          line-height: 1.75;
+          color: #333;
+          margin: 0.75rem 0 0;
         }
         .guia-related {
           margin-top: 2.5rem;

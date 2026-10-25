@@ -143,6 +143,14 @@ export default function PsicologoCognitivoConductualChillanPage() {
         <Link href="/preguntas/que-es-la-terapia-cognitivo-conductual" style={{ color: "#000", textDecoration: "underline" }}>
           qué es la terapia cognitivo-conductual
         </Link>
+        . Cuando el tema son obsesiones y rituales, una forma de TCC es la ERP:{" "}
+        <Link href="/preguntas/que-es-la-erp-para-el-toc" style={{ color: "#000", textDecoration: "underline" }}>
+          qué es la ERP para el TOC
+        </Link>{" "}
+        y la atención en{" "}
+        <Link href="/tratamiento-toc-chillan" style={{ color: "#000", textDecoration: "underline" }}>
+          terapia ERP para el TOC en Chillán
+        </Link>
         .
       </p>
 
@@ -245,7 +253,7 @@ export default function PsicologoCognitivoConductualChillanPage() {
               href: "/psicologo-crisis-de-panico-chillan",
             },
             { label: "Depresión", href: null },
-            { label: "TOC", href: null },
+            { label: "TOC", href: "/tratamiento-toc-chillan" },
             { label: "Estrés postraumático", href: null },
             { label: "Problemas de sueño", href: null },
             { label: "Adicciones", href: "/psicologo-adicciones-chillan" },

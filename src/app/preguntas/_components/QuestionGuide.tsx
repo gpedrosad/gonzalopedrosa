@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { JsonLd } from "@/app/components/JsonLd";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
-import { getBreadcrumbSchema, getPageFAQSchema } from "@/lib/schemas";
+import { getArticleSchema, getBreadcrumbSchema, getPageFAQSchema } from "@/lib/schemas";
 import type { Guide } from "../_content/guides";
 
 const LINK_RE = /\[([^\]]+)\]\((\/[^)\s]+)\)/g;
@@ -67,6 +67,20 @@ export function QuestionGuide({ guide }: { guide: Guide }) {
   return (
     <>
       <JsonLd id="breadcrumb" data={getBreadcrumbSchema(breadcrumbItems) as Record<string, unknown>} />
+      {guide.updated ? (
+        <JsonLd
+          id="article"
+          data={
+            getArticleSchema({
+              headline: guide.h1,
+              description: guide.description,
+              path: guide.path,
+              datePublished: guide.updated,
+              dateModified: guide.updated,
+            }) as Record<string, unknown>
+          }
+        />
+      ) : null}
       <JsonLd
         id="faq-schema"
         data={

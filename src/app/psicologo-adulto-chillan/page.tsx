@@ -172,9 +172,9 @@ export default function PsicologoAdultoChillanPage() {
           <Link href="/preguntas/cada-cuanto-ir-al-psicologo" style={{ color: "#000", textDecoration: "underline" }}>
             cada cuánto ir al psicólogo
           </Link>
-          . Si dudas entre psicólogo y psiquiatra, la{" "}
+          . Si dudas entre psicólogo y psiquiatra, la guía{" "}
           <Link href="/guias/psicologo-o-psiquiatra" style={{ color: "#000", textDecoration: "underline" }}>
-            guía
+            psicólogo o psiquiatra
           </Link>{" "}
           los separa. Cuándo tiene sentido pedir compañía está en{" "}
           <Link href="/cuando-ir-al-psicologo-chillan" style={{ color: "#000", textDecoration: "underline" }}>
