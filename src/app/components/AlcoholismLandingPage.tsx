@@ -303,7 +303,7 @@ export function AlcoholismLandingPage({
                 href="/terapia-online"
                 className="font-medium text-stone-700 underline decoration-stone-300 underline-offset-4 transition hover:text-stone-900"
               >
-                Cómo funciona la terapia online
+                Terapia online en Chile
               </Link>
               <Link
                 href="/agendar"

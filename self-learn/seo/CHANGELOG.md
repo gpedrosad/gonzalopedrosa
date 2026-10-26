@@ -2,6 +2,10 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-10-26
+
+- Clúster online nacional: `/terapia-online` queda como hub de Chile (terapia online, psicólogo online, terapia psicológica online). Chillán sigue como ficha local. Las tres preguntas online se separan: proceso, evidencia citada (Norwood 2018, sin porcentaje) y sesión paso a paso. Detalle: [lote](../../docs/seo-lote-2026-10-26.md).
+
 ## 2026-10-25
 
 - Lote informativo: ocho lecturas profundizadas (burnout, EMDR, TEPT, trauma, ataques de pánico, TCC, autoestima, psicólogo o psiquiatra), con FAQ y artículo donde faltaba. Terapia online en Chile explica el formato; psicólogo online queda como la atención en Chillán. Detalle: [lote](../../docs/seo-lote-2026-10-25.md).

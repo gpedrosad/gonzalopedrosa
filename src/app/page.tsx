@@ -257,7 +257,7 @@ export default function HomePage() {
               <p style={{ color: "#666", fontSize: "0.875rem" }}>
                 50 minutos ·{" "}
                 <Link href="/terapia-online" style={{ color: "#666", textDecoration: "underline" }}>
-                  Cómo funciona la terapia online
+                  Terapia online en Chile
                 </Link>
               </p>
             </div>

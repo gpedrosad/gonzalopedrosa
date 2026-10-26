@@ -68,7 +68,7 @@ const blurbs: Record<string, string> = {
   "que-es-la-terapia-cognitivo-conductual":
     "Qué es la TCC, cómo se reconoce una sesión y en qué se parece la ERP del TOC.",
   "la-terapia-online-funciona":
-    "Si el formato puede servir, y dónde está cómo funciona la terapia online en Chile.",
+    "Si la videollamada puede servir, con la evidencia citada y sus límites. Sin un porcentaje.",
   "ansiedad-o-estres":
     "Cómo distinguir una alarma pegada a una exigencia de una preocupación que sigue después.",
   "la-ludopatia-es-una-enfermedad":
@@ -149,11 +149,12 @@ export default function PreguntasIndexPage() {
           <Link href="/preguntas/senales-de-baja-autoestima" style={{ color: "#111", textDecoration: "underline" }}>
             señales de baja autoestima
           </Link>{" "}
-          contestan la pregunta en el primer párrafo. Cómo funciona la terapia online en Chile está en{" "}
+          contestan la pregunta en el primer párrafo.{" "}
           <Link href="/terapia-online" style={{ color: "#111", textDecoration: "underline" }}>
-            terapia online en Chile: cómo funciona
-          </Link>
-          . Si la duda es el ánimo,{" "}
+            Terapia online en Chile
+          </Link>{" "}
+          reúne psicólogo online y terapia psicológica online. Cómo funciona el proceso, cómo es la hora y si
+          puede servir tienen pregunta propia. Si la duda es el ánimo,{" "}
           <Link href="/preguntas/senales-de-depresion" style={{ color: "#111", textDecoration: "underline" }}>
             cómo saber si tengo depresión
           </Link>{" "}

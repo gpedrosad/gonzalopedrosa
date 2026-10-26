@@ -158,6 +158,25 @@ export function QuestionGuide({ guide }: { guide: Guide }) {
             ))}
           </ul>
 
+          {guide.sources && guide.sources.length > 0 ? (
+            <>
+              <h2 style={h2Style}>Fuentes</h2>
+              <ul style={{ margin: "0 0 1rem", paddingLeft: "1.2rem" }}>
+                {guide.sources.map((source) => (
+                  <li key={source.href} style={{ marginBottom: "0.45rem", lineHeight: 1.6 }}>
+                    <a href={source.href} rel="noopener noreferrer" style={{ color: "#111" }}>
+                      {source.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <p style={pStyle}>
+                La fuente está para que leas el estudio. Esta página no convierte sus resultados en un porcentaje
+                para ti.
+              </p>
+            </>
+          ) : null}
+
           <h2 style={h2Style}>Otras dudas frecuentes</h2>
           <div>
             {guide.faqs.map((faq) => (

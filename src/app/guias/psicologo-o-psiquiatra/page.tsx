@@ -15,8 +15,8 @@ export default function GuiaPsicologoPsiquiatraPage() {
       breadcrumbLabel="Psicólogo o psiquiatra"
       path={path}
       description={description}
-      updatedIso="2026-10-25"
-      updatedLabel="25 de octubre de 2026"
+      updatedIso="2026-10-26"
+      updatedLabel="26 de octubre de 2026"
       faqs={[
         {
           question: "¿El psicólogo puede recetar?",
@@ -66,6 +66,16 @@ export default function GuiaPsicologoPsiquiatraPage() {
           href: "/guias/duelo-etapas-y-mitos",
           label: "Duelo: etapas y mitos",
           note: "Para distinguir un duelo doloroso de la idea de que toda tristeza pide un fármaco.",
+        },
+        {
+          href: "/terapia-online",
+          label: "Terapia online en Chile",
+          note: "El formato por videollamada para cualquier región, distinto de elegir entre psicólogo y psiquiatra.",
+        },
+        {
+          href: "/preguntas/como-funciona-la-terapia-psicologica-online",
+          label: "Cómo funciona la terapia psicológica online",
+          note: "El proceso de una semana a la otra, si la hora es por videollamada.",
         },
       ]}
     >
@@ -229,6 +239,13 @@ export default function GuiaPsicologoPsiquiatraPage() {
         explicado en{" "}
         <Link href="/preguntas/que-es-la-terapia-cognitivo-conductual">
           qué es la terapia cognitivo-conductual
+        </Link>
+        . Elegir profesión no es lo mismo que elegir sala o videollamada. Si la
+        duda es el formato para cualquier región de Chile, está en{" "}
+        <Link href="/terapia-online">terapia online en Chile</Link>. Cómo
+        funciona ese proceso está en{" "}
+        <Link href="/preguntas/como-funciona-la-terapia-psicologica-online">
+          cómo funciona la terapia psicológica online
         </Link>
         .
       </p>

@@ -220,7 +220,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
   {
     cluster: "guias",
     slug: "comunicacion-en-pareja",
-    updated: "2026-10-23",
+    updated: "2026-10-26",
     navLabel: "Comunicación en pareja",
     title: "Comunicación en pareja y ciclos de discusión",
     h1: "Comunicación en pareja: cuando la pelea se repite",
@@ -265,7 +265,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       {
         heading: "Cuándo el patrón pide otra mirada",
         paragraphs: [
-          "Tiene sentido pedir ayuda si el ciclo se repite cada semana, si uno de los dos ya no quiere hablar, o si la conversación incluye desprecio, control o miedo. Esta guía solo nombra el circuito. No dice quién tiene la razón ni qué debería hacer tu pareja.",
+          "Tiene sentido pedir ayuda si el ciclo se repite cada semana, si uno de los dos ya no quiere hablar, o si la conversación incluye desprecio, control o miedo. Esta guía solo nombra el circuito. No dice quién tiene la razón ni qué debería hacer tu pareja. Si no están en la misma pieza, la videollamada pide un lugar donde cada uno pueda hablar sin público. Ese formato, para cualquier región, está en [terapia online en Chile](/terapia-online). Cómo es la hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online).",
           "El estilo de apego a veces explica por qué uno insiste y el otro se cierra. Esa lectura está en la guía de [estilos de apego en adultos](/guias/estilos-de-apego). La página de terapia de pareja en Chillán describe la atención local, que es otra intención: aquí el objetivo es entender la pelea.",
         ],
       },
@@ -292,13 +292,15 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       { href: "/guias/estilos-de-apego", label: "Estilos de apego en adultos" },
       { href: "/preguntas/que-es-el-apego-ansioso", label: "Qué es el apego ansioso" },
       { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
+      { href: "/terapia-online", label: "Terapia online en Chile" },
+      { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "Cómo es una sesión de psicología online" },
     ],
     sources: [APA_APEGO],
   },
   {
     cluster: "guias",
     slug: "que-es-el-tept",
-    updated: "2026-10-25",
+    updated: "2026-10-26",
     navLabel: "Qué es el TEPT",
     title: "Qué es el TEPT: señales, causas y cuándo consultar",
     h1: "Qué es el TEPT",
@@ -331,7 +333,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
         heading: "Qué puedes hacer",
         paragraphs: [
           "Anota, con calma, si el recuerdo vuelve solo, qué evitas y si la alerta ya cambia el sueño o la pega. Ese registro no diagnostica. Te da un lenguaje más preciso si después conversas con alguien.",
-          "La guía de la OMS de 2013 sobre condiciones relacionadas con el estrés nombra, para adultos con TEPT, terapias centradas en el trauma. Entre ellas están la terapia cognitivo-conductual focalizada en el trauma y el EMDR, cuando las aplica personal de salud capacitado. Que una guía las nombre no dice cuál te corresponde ni en qué orden. Las fases del método están en [qué es la terapia EMDR](/guias/que-es-el-emdr).",
+          "La guía de la OMS de 2013 sobre condiciones relacionadas con el estrés nombra, para adultos con TEPT, terapias centradas en el trauma. Entre ellas están la terapia cognitivo-conductual focalizada en el trauma y el EMDR, cuando las aplica personal de salud capacitado. Que una guía las nombre no dice cuál te corresponde ni en qué orden. Las fases del método están en [qué es la terapia EMDR](/guias/que-es-el-emdr). Esas terapias también se describen por videollamada cuando hay un lugar privado y continuidad. El formato en Chile está en [terapia online en Chile](/terapia-online). Si la duda es si puede servir, está en [¿la terapia online funciona?](/preguntas/la-terapia-online-funciona).",
           "El [ejercicio de estimulación bilateral](/emdr-autoadministrado) de este sitio es para un malestar leve. No reprocesa un TEPT. Si aparecen imágenes que no puedes guardar, la propia página pide que lo pares.",
         ],
       },
@@ -367,6 +369,8 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       { href: "/guias/que-es-el-emdr", label: "Qué es el EMDR" },
       { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "Límites del ejercicio bilateral" },
       { href: "/emdr-autoadministrado", label: "Ejercicio bilateral gratuito" },
+      { href: "/terapia-online", label: "Terapia online en Chile" },
+      { href: "/preguntas/la-terapia-online-funciona", label: "¿La terapia online funciona?" },
       { href: "/terapia-emdr-chillan", label: "Página de atención con EMDR" },
       { href: "/estres-postraumatico-chillan", label: "Estrés postraumático en Chillán" },
     ],
@@ -462,7 +466,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
   {
     cluster: "guias",
     slug: "burnout-laboral",
-    updated: "2026-10-25",
+    updated: "2026-10-26",
     navLabel: "Burnout laboral",
     title: "Burnout laboral: qué es, señales y qué puedes hacer",
     h1: "Qué es el burnout laboral",
@@ -501,7 +505,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       {
         heading: "Cuándo consultar",
         paragraphs: [
-          "Conviene conversarlo con un profesional si el agotamiento lleva semanas, el descanso ya no repone y la distancia con la pega ya cambia el ánimo o la casa. Si el lugar no permite ningún límite y tu salud ya se quebró, la conversación deja de ser solo de hábitos.",
+          "Conviene conversarlo con un profesional si el agotamiento lleva semanas, el descanso ya no repone y la distancia con la pega ya cambia el ánimo o la casa. Si el lugar no permite ningún límite y tu salud ya se quebró, la conversación deja de ser solo de hábitos. Si el traslado o el horario no dan, el formato para cualquier región está en [terapia online en Chile](/terapia-online). Cómo es la hora, paso a paso, está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online).",
           "Esta guía explica el fenómeno. La ficha local es [estrés laboral y burnout en Chillán](/psicologo-estres-laboral-chillan). Un texto no decide una renuncia por ti. Si el agotamiento viene con ideas de hacerte daño, llama al *4141. Es gratuito y atiende las 24 horas.",
         ],
       },
@@ -528,6 +532,8 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
       { href: "/guias/higiene-del-sueno", label: "Hábitos de sueño" },
       { href: "/psicologo-estres-laboral-chillan", label: "Estrés laboral y burnout en Chillán" },
+      { href: "/terapia-online", label: "Terapia online en Chile" },
+      { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "Cómo es una sesión de psicología online" },
     ],
     safety:
       "Si el agotamiento viene con ideas de hacerte daño, llama al *4141. Es gratuito y atiende las 24 horas.",
@@ -833,6 +839,7 @@ const QUESTION_PAGES: InfoPage[] = [
     {
     cluster: "preguntas",
     slug: "que-es-la-erp-para-el-toc",
+    updated: "2026-10-26",
     navLabel: "Qué es la ERP para el TOC",
     title: "Qué es la terapia ERP para el TOC",
     h1: "Qué es la terapia ERP para el TOC",
@@ -851,7 +858,7 @@ const QUESTION_PAGES: InfoPage[] = [
       {
         heading: "Cómo se ve en la práctica",
         paragraphs: [
-          "Se arma una lista de situaciones de menor a mayor miedo. Se elige una que puedas sostener, se acuerda qué ritual no vas a hacer y se permanece ahí el tiempo pactado. No se parte por la imagen más aterradora ni se hace como castigo.",
+          "Se arma una lista de situaciones de menor a mayor miedo. Se elige una que puedas sostener, se acuerda qué ritual no vas a hacer y se permanece ahí el tiempo pactado. No se parte por la imagen más aterradora ni se hace como castigo. Ese paso se puede conversar por videollamada si el lugar es privado y queda escrito qué ritual no vas a hacer. Cómo funciona ese proceso está en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online). El mapa del formato en Chile está en [terapia online en Chile](/terapia-online).",
           "La guía CG31 de NICE considera la TCC que incluye ERP como un tratamiento psicológico principal del TOC. Eso orienta la elección del método. No indica que debas diseñarte una exposición intensa sin evaluación, sobre todo si hay riesgo de daño, de contaminación grave o de horas de ritual.",
         ],
         bullets: [
@@ -898,6 +905,8 @@ const QUESTION_PAGES: InfoPage[] = [
       { href: "/preguntas/que-es-la-terapia-cognitivo-conductual", label: "Qué es la terapia cognitivo-conductual" },
       { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
       { href: "/tratamiento-toc-chillan", label: "Página de atención para TOC" },
+      { href: "/terapia-online", label: "Terapia online en Chile" },
+      { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "Cómo funciona la terapia psicológica online" },
     ],
     sources: [NICE_TOC],
   },
@@ -977,6 +986,7 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "como-saber-si-es-burnout",
+    updated: "2026-10-26",
     navLabel: "Cómo saber si es burnout",
     title: "Cómo saber si lo que tienes es burnout",
     h1: "Cómo saber si es burnout",
@@ -1008,7 +1018,7 @@ const QUESTION_PAGES: InfoPage[] = [
       {
         heading: "Qué hacer con la respuesta",
         paragraphs: [
-          "Si es un mal mes, recorta una demanda concreta y cuida el sueño una semana antes de concluir. Si se parece al burnout, mira qué parte es carga del puesto y qué parte es tu disponibilidad sin borde. Las dos se pueden conversar. Solo la segunda depende de ti.",
+          "Si es un mal mes, recorta una demanda concreta y cuida el sueño una semana antes de concluir. Si se parece al burnout, mira qué parte es carga del puesto y qué parte es tu disponibilidad sin borde. Las dos se pueden conversar. Solo la segunda depende de ti. Si el horario no da para una sala, el formato para cualquier región está en [terapia online en Chile](/terapia-online).",
           "Renunciar, pedir un cambio de funciones o ir a un médico son decisiones distintas. Esta respuesta no elige por ti. Sí deja fuera la idea de que te falta carácter.",
         ],
       },
@@ -1034,6 +1044,7 @@ const QUESTION_PAGES: InfoPage[] = [
       { href: "/guias/burnout-laboral", label: "Guía sobre burnout laboral" },
       { href: "/preguntas/duelo-o-depresion", label: "Duelo o depresión" },
       { href: "/guias/higiene-del-sueno", label: "Higiene del sueño" },
+      { href: "/terapia-online", label: "Terapia online en Chile" },
     ],
     sources: [OMS_BURNOUT],
   },
@@ -1305,7 +1316,7 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "sintomas-fisicos-de-la-ansiedad",
-    updated: "2026-10-18",
+    updated: "2026-10-26",
     navLabel: "Síntomas físicos de la ansiedad",
     title: "Síntomas físicos de la ansiedad y qué pueden indicar",
     h1: "Síntomas físicos de la ansiedad",
@@ -1337,7 +1348,7 @@ const QUESTION_PAGES: InfoPage[] = [
       {
         heading: "Qué puedes hacer cuando el cuerpo ya está encendido",
         paragraphs: [
-          "Baja el ritmo de una cosa a la vez. Apoya los pies en el suelo, alarga la salida del aire y nombra tres objetos que ves. No es un tratamiento. Es una forma de no alimentar la alarma con más lucha. La guía de regulación emocional explica por qué aguantar en silencio y explotar después no es lo mismo que bajar la activación.",
+          "Baja el ritmo de una cosa a la vez. Apoya los pies en el suelo, alarga la salida del aire y nombra tres objetos que ves. No es un tratamiento. Es una forma de no alimentar la alarma con más lucha. La guía de regulación emocional explica por qué aguantar en silencio y explotar después no es lo mismo que bajar la activación. Si después conversas esto por videollamada, el formato en Chile está en [terapia online en Chile](/terapia-online) y la hora, paso a paso, en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online).",
           "Si el malestar es leve y de un día cargado, el ejercicio de estimulación bilateral del sitio sirve para conocer esa sensación en un marco acotado. No lo uses en medio de un pánico que no puedes guardar, ni para un recuerdo de trauma. La propia página del ejercicio lo dice.",
         ],
       },
@@ -1365,6 +1376,8 @@ const QUESTION_PAGES: InfoPage[] = [
       { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
       { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer en un ataque de pánico" },
       { href: "/preguntas/que-es-un-ataque-de-panico", label: "Qué es un ataque de pánico" },
+      { href: "/terapia-online", label: "Terapia online en Chile" },
+      { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "Cómo es una sesión de psicología online" },
     ],
     product: EMDR_PRODUCT,
     safety:
@@ -1374,7 +1387,7 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "senales-de-baja-autoestima",
-    updated: "2026-10-25",
+    updated: "2026-10-26",
     navLabel: "Señales de baja autoestima",
     title: "Señales de baja autoestima: qué mirar en el día a día",
     h1: "Señales de baja autoestima",
@@ -1414,7 +1427,7 @@ const QUESTION_PAGES: InfoPage[] = [
         heading: "Cuándo consultar",
         paragraphs: [
           "Conviene conversarlo si el modo ya te saca de postular, de decir que no o de quedarte en vínculos donde el trato te achica, y si eso lleva semanas. Una lista leída de noche no alcanza como plan.",
-          "La página de [baja autoestima en Chillán](/psicologo-baja-autoestima-chillan) cuenta cómo se plantea ese trabajo, incluido el perfeccionismo y el impostor, que se le parecen y no son lo mismo. Esta pregunta se queda en las señales. No fija un plazo.",
+          "La página de [baja autoestima en Chillán](/psicologo-baja-autoestima-chillan) cuenta cómo se plantea ese trabajo, incluido el perfeccionismo y el impostor, que se le parecen y no son lo mismo. Esta pregunta se queda en las señales. No fija un plazo. Si no puedes ir a una sala, el formato de [psicólogo online](/terapia-online) explica la videollamada en Chile. Si la duda es si ese formato puede servir, está en [¿la terapia online funciona?](/preguntas/la-terapia-online-funciona).",
         ],
       },
     ],
@@ -1441,6 +1454,8 @@ const QUESTION_PAGES: InfoPage[] = [
       { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
       { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
       { href: "/primera-consulta-psicologo-chillan", label: "Qué ocurre en una primera consulta" },
+      { href: "/terapia-online", label: "Psicólogo online: terapia online en Chile" },
+      { href: "/preguntas/la-terapia-online-funciona", label: "¿La terapia online funciona?" },
     ],
     product: EMDR_PRODUCT,
     safety:
@@ -1450,7 +1465,7 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "obsesiones-y-compulsiones",
-    updated: "2026-10-19",
+    updated: "2026-10-26",
     navLabel: "Obsesiones y compulsiones",
     title: "Obsesiones y compulsiones: cómo distinguirlas en el TOC",
     h1: "Obsesiones y compulsiones en el TOC",
@@ -1483,7 +1498,7 @@ const QUESTION_PAGES: InfoPage[] = [
         heading: "Por qué se encadenan",
         paragraphs: [
           "La obsesión abre una amenaza y la compulsión la cierra en falso. El cerebro registra que, sin el ritual, el peligro seguía. Por eso la siguiente obsesión pide el mismo acto, o uno más largo. Discutir durante horas si el peligro era real alimenta la duda.",
-          "La ERP ensaya quedarte con la duda sin completar el ritual, en un paso acordado. No se parte por la imagen más aterradora. Si el TOC ocupa varias horas del día, esta distinción no alcanza como plan. Sirve para reconocer las dos partes cuando lo converses con quien te evalúe.",
+          "La ERP ensaya quedarte con la duda sin completar el ritual, en un paso acordado. No se parte por la imagen más aterradora. Si el TOC ocupa varias horas del día, esta distinción no alcanza como plan. Sirve para reconocer las dos partes cuando lo converses con quien te evalúe. Si esa conversación es por videollamada, el formato en Chile está en [terapia psicológica online](/terapia-online).",
         ],
       },
       {
@@ -1517,6 +1532,7 @@ const QUESTION_PAGES: InfoPage[] = [
       { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
       { href: "/preguntas/que-es-la-terapia-cognitivo-conductual", label: "Qué es la terapia cognitivo-conductual" },
       { href: "/guias/regulacion-emocional", label: "Regulación emocional" },
+      { href: "/terapia-online", label: "Terapia online en Chile" },
     ],
     safety:
       "Si hay ideas de hacerte daño o de querer morir, llama al *4141 (gratuito, 24 horas). Salud Responde atiende al 600 360 7777. En una urgencia, llama al 131. Esta lectura no reemplaza esa llamada.",
@@ -1830,44 +1846,57 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "como-es-una-sesion-de-psicologia-online",
-    updated: "2026-10-24",
+    updated: "2026-10-26",
     navLabel: "Cómo es una sesión online",
-    title: "¿Cómo es una sesión de psicología online? La videollamada",
+    title: "Cómo es una sesión de psicología online, paso a paso",
     h1: "¿Cómo es una sesión de psicología online?",
     description:
-      "Una sesión de psicología online es una videollamada de 50 minutos, con enlace previo y un lugar donde nadie más escuche. No es un chat ni una urgencia.",
+      "Una sesión de psicología online es una videollamada de 50 minutos, paso a paso: enlace, lugar privado y un cierre. No es un chat ni una urgencia.",
     answer:
-      "Una sesión de psicología online es una videollamada de 50 minutos. Antes de la hora recibes un enlace (Zoom, Google Meet u otra). Te conectas desde un computador, una tablet o un celular, con cámara, micrófono e internet estable, en una pieza donde nadie más escuche. El secreto profesional se mantiene igual que en una sala. La consulta presencial está en Chillán. La videollamada es para quien está en Chile.",
+      "Una sesión de psicología online, paso a paso, es una videollamada de 50 minutos. Antes llega un enlace. Entras desde un lugar con puerta, con cámara y micrófono. La hora parte por un punto de la semana, se queda en ese punto y cierra con un paso para los días que vienen. No es un chat ni una urgencia.",
     sections: [
       {
-        heading: "Qué ocurre en esos 50 minutos",
+        heading: "1. Antes de la hora",
         paragraphs: [
-          "La hora tiene inicio y cierre. Partes por lo que trajiste de la semana: una situación, un pensamiento que se repitió o algo que intentaste. La conversación se queda en ese punto. Al terminar puedes anotar un paso para los días que vienen. No es un chat abierto ni un mensaje que se responde cuando se puede.",
-          "El enlace llega antes. Conviene probar cámara y micrófono y entrar ya sentado, no en un traslado. Si la conexión se corta, en la página de atención está escrito que se retoma o se reprograma sin un cobro extra por ese corte.",
-        ],
-        bullets: [
-          "Duración: 50 minutos, los mismos de una sesión presencial.",
-          "Llega un enlace de Zoom, Google Meet u otra videollamada.",
-          "Sirve computador, tablet o celular, con cámara y micrófono.",
-          "La pieza tiene puerta: la conversación no tiene público.",
+          "El enlace llega antes, de Zoom, Google Meet u otra videollamada. Prueba cámara y micrófono. Elige una pieza con puerta, donde la conversación no tenga público. Si la casa es ruidosa, unos audífonos ayudan. Deja los avisos del celular en silencio.",
+          "Conviene estar sentado, no en un traslado. Si entras a mitad de un viaje, la hora se gasta en acomodarte. Llegas con un punto de la semana: una situación, un pensamiento que se repitió o algo que intentaste.",
         ],
       },
       {
-        heading: "Conexión, privacidad y lugar",
+        heading: "2. Al entrar",
         paragraphs: [
-          "Internet estable, cámara y micrófono son el mínimo. Si la casa es ruidosa, unos audífonos ayudan. Avisos del celular en silencio. Si vives con más gente, esa hora no está disponible para el resto: una puerta cerrada cambia lo que te atreves a decir.",
-          "El secreto profesional no cambia por la pantalla. Lo que sí cambia es tu entorno. Si alguien puede oír desde el pasillo, la reserva baja aunque la persona que atiende no esté en la misma ciudad. La diferencia entre videollamada y sala, con más detalle, está en la comparación de modalidades.",
+          "Te conectas a la hora desde un computador, una tablet o un celular. Se confirma que se escucha y que nadie más está en la pieza. La hora son 50 minutos, los mismos de una sesión presencial.",
+          "El secreto profesional es el mismo que en una sala. Lo que cambia es tu entorno: si alguien puede oír desde el pasillo, la reserva baja aunque la otra persona no esté en la misma ciudad.",
         ],
       },
       {
-        heading: "Qué no es esta hora",
+        heading: "3. Durante los 50 minutos",
         paragraphs: [
-          "No reemplaza una urgencia médica ni una crisis con riesgo. Si hay ideas de hacerte daño, esa llamada es el *4141, Salud Responde o el 131, no una sesión programada. Tampoco es la página de atención: esa es la de psicólogo online, con consulta en Chillán y videollamada para quien está en Chile.",
-          "Si la pregunta es cómo se organiza el proceso (antes, durante y después, y en qué se diferencia de la sala), está en la otra pregunta. Si la duda es si el formato puede servir, está en la pregunta de si la terapia online funciona. Esta ficha se queda en cómo es la hora.",
+          "La conversación se queda en el punto que trajiste. No es un recuento de toda la vida ni un chat que sigue después. Se mira qué pasó, qué pensaste o qué hiciste, y qué de eso quieres trabajar en esa hora.",
+          "Se ve parte del lenguaje del cuerpo, según el encuadre de la cámara. Si la conexión se corta, en la página de atención está escrito que se retoma o se reprograma sin un cobro extra por ese corte.",
+        ],
+      },
+      {
+        heading: "4. Al cerrar",
+        paragraphs: [
+          "La hora tiene cierre. Puedes anotar un paso para los días que vienen: algo concreto, no un propósito enorme. Después se corta la llamada. No queda un chat abierto para seguir la sesión por mensajes.",
+          "Cómo se organiza el proceso de una semana a la otra está en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online). El mapa para cualquier región está en [terapia online en Chile](/terapia-online).",
+        ],
+      },
+      {
+        heading: "5. Qué no es esta hora",
+        paragraphs: [
+          "No reemplaza una urgencia médica ni una crisis con riesgo. Si hay ideas de hacerte daño, esa llamada es el *4141, Salud Responde o el 131, no una sesión programada.",
+          "Tampoco responde si el formato puede servir: eso está en [¿la terapia online funciona?](/preguntas/la-terapia-online-funciona). La atención local, con sala en Chillán, es [psicólogo online en Chillán](/psicologo-online-chillan). Esta ficha se queda en cómo es la hora.",
         ],
       },
     ],
     faqs: [
+      {
+        question: "¿Cómo es una sesión de psicología online?",
+        answer:
+          "Es una videollamada de 50 minutos. Llega un enlace, entras desde un lugar privado y la hora cierra con un paso para la semana. No es un chat ni una urgencia.",
+      },
       {
         question: "¿Qué plataforma se usa?",
         answer:
@@ -1879,7 +1908,7 @@ const QUESTION_PAGES: InfoPage[] = [
           "El secreto profesional se mantiene. La reserva de tu lado depende del lugar: puerta, audífonos si hace falta, y que nadie más esté en la pieza.",
       },
       {
-        question: "¿Puedo estar en otra ciudad de Chile?",
+        question: "¿Puedo estar en otra región de Chile?",
         answer:
           "La videollamada es para quien está en Chile, con horario compatible, conexión y un lugar privado. La consulta presencial está en Chillán. Esta página no abre sedes en otras ciudades.",
       },
@@ -1888,9 +1917,8 @@ const QUESTION_PAGES: InfoPage[] = [
       { href: "/terapia-online", label: "Terapia online en Chile" },
       { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "Cómo funciona la terapia psicológica online" },
       { href: "/preguntas/la-terapia-online-funciona", label: "¿La terapia online funciona?" },
-      { href: "/psicologo-online-chillan", label: "Psicólogo online en Chile, consulta en Chillán" },
+      { href: "/psicologo-online-chillan", label: "Psicólogo online en Chillán" },
       { href: "/terapia-online-vs-presencial-chillan", label: "Online y presencial" },
-      { href: "/consulta-psicologica-precio-chillan", label: "Valor publicado de la sesión" },
     ],
     safety:
       "Una videollamada no es una urgencia. Si hay ideas de hacerte daño o de querer morir, llama ahora al *4141. Es gratuito, confidencial y atiende las 24 horas. Salud Responde atiende al 600 360 7777. En una urgencia, llama al 131.",
@@ -1899,53 +1927,65 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "como-funciona-la-terapia-psicologica-online",
-    updated: "2026-10-25",
-    navLabel: "Qué necesitas para la terapia online",
-    title: "Qué necesitas para hacer terapia psicológica online",
-    h1: "Qué necesitas para la terapia psicológica online",
+    updated: "2026-10-26",
+    navLabel: "Cómo funciona la terapia online",
+    title: "Cómo funciona la terapia psicológica online: el proceso",
+    h1: "Cómo funciona la terapia psicológica online",
     description:
-      "Para una terapia psicológica online necesitas conexión, cámara, micrófono y un lugar privado. Cómo funciona el formato en Chile está en la página informativa.",
+      "Cómo funciona la terapia psicológica online en Chile: proceso por videollamada, con hora y continuidad. El paso a paso de la sesión está en otra pregunta.",
     answer:
-      "Cómo funciona la terapia online en Chile —la videollamada, la hora con inicio y cierre, y en qué se diferencia de una sala— está en [terapia online en Chile: cómo funciona](/terapia-online). Esta pregunta se queda en lo que necesitas tú: conexión estable, cámara, micrófono y un lugar donde nadie más escuche.",
+      "La terapia psicológica online funciona como un proceso, no como un mensaje suelto. Coordinas una hora, recibes un enlace, te conectas en un lugar privado y retomas el mismo hilo la semana siguiente. El minuto a minuto de esa hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online). El mapa para cualquier región está en [terapia online en Chile](/terapia-online).",
     sections: [
       {
-        heading: "Qué tiene que estar listo",
+        heading: "De una semana a la siguiente",
         paragraphs: [
-          "Internet que no se corte cada minuto, cámara, micrófono y una pieza con puerta. Computador, tablet o celular alcanzan. Si la casa es ruidosa, unos audífonos ayudan. Si compartes pieza y no hay forma de hablar con reserva, el formato deja de cuidar la confidencialidad.",
-          "Llegas con un punto de la semana: una situación, un pensamiento que se repitió o algo que intentaste. Si entras a mitad de un traslado, la hora se gasta en acomodarte. Conviene estar sentado, con el enlace a mano. Cómo es esa hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online).",
+          "Partes por un tema que puedas nombrar. En la hora se trabaja ese punto. Al cerrar puedes anotar un paso chico para los días que vienen. La semana siguiente se retoma qué pasó con ese paso, no se empieza de cero cada vez.",
+          "Sin esa continuidad, la videollamada se parece a una conversación suelta. El formato pide tratar la hora como una cita: llegar, quedarte el tiempo y volver. Al inicio, lo más habitual es una vez por semana. El plazo total no es el mismo para todo el mundo y esta página no lo fija.",
         ],
         bullets: [
-          "Enlace de videollamada antes de la hora.",
-          "Cámara, micrófono e internet estable.",
-          "Lugar privado durante la hora.",
-          "Un tema concreto de la semana, no un relato sin borde.",
+          "Una hora con inicio y cierre, no un chat abierto.",
+          "Un enlace de videollamada antes de esa hora.",
+          "Un paso entre sesiones, concreto y revisable.",
+          "El mismo hilo la semana siguiente.",
         ],
       },
       {
-        heading: "En qué se diferencia de la sala",
+        heading: "Qué tiene que estar listo para que el proceso ocurra",
         paragraphs: [
-          "No hay traslado. La privacidad depende de tu casa u oficina, no de una sala ya reservada. Se ve parte del lenguaje del cuerpo y el encuadre de la cámara importa. En un malestar muy intenso, la videollamada pide un lugar seguro. La sala puede sentirse más contenida si prefieres salir de la casa.",
-          "El secreto profesional es el mismo. Lo que cambia es el lugar desde el que hablas. La comparación está en [terapia online y presencial](/terapia-online-vs-presencial-chillan). Si la duda es si el formato puede servir, está en [¿la terapia online funciona?](/preguntas/la-terapia-online-funciona).",
+          "Internet que no se corte cada minuto, cámara, micrófono y una pieza con puerta. Computador, tablet o celular alcanzan. Si compartes pieza y no hay forma de hablar con reserva, el formato deja de cuidar la confidencialidad y el proceso se traba.",
+          "El detalle de la hora —enlace, entrada, los 50 minutos y el cierre— está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online). Esta pregunta no lo repite.",
         ],
       },
       {
-        heading: "Dónde está el formato, y dónde la atención",
+        heading: "Qué cambia respecto de una sala",
         paragraphs: [
-          "El recorrido del formato en Chile está en [terapia online en Chile: cómo funciona](/terapia-online). Esta pregunta no lo repite. La videollamada es para quien está en Chile. La sala está en Chillán. No hay otras ciudades en esta ficha.",
-          "La atención local es [psicólogo online en Chillán](/psicologo-online-chillan). El valor publicado, el pago y la cancelación están en la [ficha de precio](/consulta-psicologica-precio-chillan). Esta página no reserva una hora ni escribe un monto.",
+          "No hay traslado. La privacidad depende de tu casa u oficina, no de una sala ya reservada. Se ve parte del lenguaje del cuerpo. En un malestar muy intenso, la videollamada pide un lugar seguro. La sala puede sentirse más contenida si prefieres salir de la casa.",
+          "El secreto profesional es el mismo. La comparación está en [terapia online y presencial](/terapia-online-vs-presencial-chillan). Si la duda es si el formato puede servir, está en [¿la terapia online funciona?](/preguntas/la-terapia-online-funciona).",
+        ],
+      },
+      {
+        heading: "Qué no responde esta pregunta",
+        paragraphs: [
+          "No dice si te va a servir. No describe el minuto a minuto. No pone un precio. El formato para cualquier región de Chile está en [terapia online en Chile](/terapia-online). La atención con sala en Chillán es [psicólogo online en Chillán](/psicologo-online-chillan).",
+          "La videollamada es para quien está en Chile. Esta ficha no abre sedes en otras ciudades.",
         ],
       },
     ],
     faqs: [
       {
-        question: "¿Puedo alternar online y presencial?",
+        question: "¿Cómo funciona la terapia psicológica online?",
         answer:
-          "Sí. La videollamada y la consulta en Chillán se pueden alternar. El trabajo sigue siendo el mismo proceso, con otra puerta de entrada.",
+          "Como un proceso por videollamada: hora con inicio y cierre, un enlace, un lugar privado y un paso que se retoma la semana siguiente. No es un chat ni una sesión única suelta.",
       },
       {
-        question: "¿Dónde se explica cómo funciona?",
+        question: "¿Puedo alternar online y presencial?",
         answer:
-          "En la página de terapia online en Chile. Esta pregunta se queda en la conexión, la privacidad y el lugar. No repite el recorrido.",
+          "Sí, si hay una sala a la que puedas ir. La videollamada y la consulta en Chillán se pueden alternar. El trabajo sigue siendo el mismo proceso, con otra puerta de entrada.",
+      },
+      {
+        question: "¿Dónde está el paso a paso de la hora?",
+        answer:
+          "En la pregunta de cómo es una sesión de psicología online. Esta página se queda en el proceso entre semanas.",
       },
       {
         question: "¿Qué pasa si se corta internet?",
@@ -1954,12 +1994,11 @@ const QUESTION_PAGES: InfoPage[] = [
       },
     ],
     related: [
-      { href: "/terapia-online", label: "Terapia online en Chile: cómo funciona" },
+      { href: "/terapia-online", label: "Terapia online en Chile" },
       { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "Cómo es una sesión de psicología online" },
       { href: "/preguntas/la-terapia-online-funciona", label: "¿La terapia online funciona?" },
       { href: "/psicologo-online-chillan", label: "Psicólogo online en Chillán" },
       { href: "/terapia-online-vs-presencial-chillan", label: "Terapia online y presencial" },
-      { href: "/consulta-psicologica-precio-chillan", label: "Ficha de precio de la sesión" },
     ],
     safety:
       "Una videollamada no es una urgencia. Si hay ideas de hacerte daño o de querer morir, llama ahora al *4141. Es gratuito, confidencial y atiende las 24 horas. Salud Responde atiende al 600 360 7777. En una urgencia, llama al 131.",
@@ -2159,7 +2198,7 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
     { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "¿Cómo es una sesión de psicología online?" },
     { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "¿Cómo funciona la terapia psicológica online?" },
     { href: "/preguntas/la-terapia-online-funciona", label: "¿La terapia online funciona?" },
-    { href: "/psicologo-online-chillan", label: "Psicólogo online en Chile" },
+    { href: "/psicologo-online-chillan", label: "Psicólogo online en Chillán" },
     { href: "/terapia-online-vs-presencial-chillan", label: "Online y presencial" },
   ],
   "/psicologo-online-chillan": [

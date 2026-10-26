@@ -13,23 +13,23 @@ import {
 import {
   SITE_URL,
   getBreadcrumbSchema,
-  getServiceSchema,
   getPageFAQSchema,
   getTwitterDescription,
 } from "@/lib/schemas";
 
 const description =
-  "La terapia online en Chile es una videollamada con hora de inicio y de cierre, un lugar privado y continuidad. La atención local, en Chillán, está en otra página.";
+  "La terapia online en Chile nombra al psicólogo online y a la terapia psicológica online: videollamada para cualquier región. La ficha local está en Chillán.";
 
 export const metadata: Metadata = {
-  title: "Terapia online en Chile: cómo funciona, paso a paso",
+  title: "Terapia online en Chile: psicólogo y psicoterapia",
   description,
   alternates: {
     canonical: "/terapia-online",
   },
+  robots: { index: true, follow: true },
   openGraph: {
     locale: "es_CL",
-    title: "Terapia online en Chile: cómo funciona, paso a paso",
+    title: "Terapia online en Chile: psicólogo y psicoterapia",
     description,
     url: `${SITE_URL}/terapia-online`,
     type: "website",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terapia online en Chile: cómo funciona, paso a paso",
+    title: "Terapia online en Chile: psicólogo y psicoterapia",
     description: getTwitterDescription(description),
   },
 };
@@ -49,39 +49,39 @@ const breadcrumbItems = getClusterBreadcrumb(
 
 const terapiaOnlineFAQs = [
   {
-    question: "¿Cómo funciona la terapia online en Chile?",
+    question: "¿Qué es la terapia online en Chile?",
     answer:
-      "Es una videollamada con hora de inicio y de cierre. Llega un enlace antes. En la hora se trabaja un punto de la semana y al terminar puedes anotar un paso. Pide conexión, cámara, micrófono y un lugar privado. La sala está en Chillán. La videollamada es para quien está en Chile.",
+      "Es psicoterapia por videollamada para quien está en cualquier región del país. Psicólogo online y terapia psicológica online nombran ese mismo formato en esta página. Hay una hora, un enlace y un lugar privado. No es un chat ni una urgencia. La consulta presencial está en Chillán.",
   },
   {
-    question: "¿Dónde se describe cómo es la hora?",
+    question: "¿Psicólogo online y terapia psicológica online es lo mismo?",
     answer:
-      "En la pregunta dedicada: el enlace, los 50 minutos y la pieza con puerta. Qué necesitas tener listo está en otra pregunta. Esta página explica el formato.",
+      "En esta página, sí: las dos frases buscan el formato por videollamada en Chile, no una sede en otra ciudad. El paso a paso de la hora, cómo funciona el proceso y si puede servir están en tres preguntas distintas.",
   },
   {
-    question: "¿Esta página dice si el formato sirve?",
+    question: "¿Dónde está el detalle, sin mezclar las preguntas?",
     answer:
-      "No compara resultados. Si la duda es si puede servirte, está en la pregunta de si la terapia online funciona. Aquí se explica cómo funciona el formato en Chile.",
+      "Cómo funciona el proceso está en la pregunta de la terapia psicológica online. Cómo es la hora, paso a paso, está en la pregunta de la sesión. Si puede servir, con la evidencia y sus límites, está en la pregunta de si la terapia online funciona.",
   },
   {
-    question: "¿Qué plataforma utilizan?",
+    question: "¿Puedo combinar la videollamada con una sala en Chillán?",
     answer:
-      "Utilizo plataformas seguras de videollamada (Zoom, Google Meet u otra según preferencia). El enlace se envía antes de cada sesión.",
-  },
-  {
-    question: "¿Puedo combinar sesiones online y presenciales?",
-    answer:
-      "Sí, es posible alternar modalidades según tu disponibilidad y preferencia.",
+      "Sí se pueden alternar, si hay una sala a la que puedas ir. La ficha local es la de psicólogo online en Chillán. Esta página explica el formato para cualquier región y no reserva una hora.",
   },
 ];
 
 const faqSchema = getPageFAQSchema(terapiaOnlineFAQs);
 const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
-const serviceSchema = getServiceSchema({
-  serviceType: "Información sobre terapia psicológica online",
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Información sobre terapia psicológica online en Chile",
+  url: `${SITE_URL}/terapia-online`,
+  provider: { "@id": `${SITE_URL}/#persona` },
+  areaServed: { "@type": "Country", name: "Chile" },
   description:
-    "Cómo funciona la terapia online en Chile: videollamada, hora con inicio y cierre, y diferencia con la sala. La atención local está en Chillán.",
-});
+    "Terapia online en Chile: psicólogo online y terapia psicológica online por videollamada, para cualquier región. La atención local está en Chillán.",
+};
 
 export default function TerapiaOnlinePage() {
   return (
@@ -137,9 +137,9 @@ export default function TerapiaOnlinePage() {
           }}
         >
           <p style={{ fontSize: "0.8125rem", color: "#444", lineHeight: 1.6, margin: 0 }}>
-            Página informativa de Chile. La atención, con consulta en Chillán, está en{" "}
+            Página de Chile, para cualquier región. La consulta local está en{" "}
             <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
-              psicólogo online
+              psicólogo online en Chillán
             </Link>
             .
           </p>
@@ -154,7 +154,7 @@ export default function TerapiaOnlinePage() {
             lineHeight: 1.1,
           }}
         >
-          Terapia online en Chile: cómo funciona
+          Terapia online en Chile
         </h1>
 
         <p
@@ -165,25 +165,13 @@ export default function TerapiaOnlinePage() {
             lineHeight: 1.6,
           }}
         >
-          La terapia online en Chile funciona como una videollamada con hora de
-          inicio y de cierre. Antes llega un enlace. En la hora se trabaja un
-          punto de la semana y al terminar puedes anotar un paso. Pide conexión
-          estable, cámara, micrófono y un lugar donde nadie más escuche. La
-          consulta presencial está en Chillán. La atención local está en{" "}
+          Terapia online en Chile, psicólogo online y terapia psicológica online
+          nombran aquí lo mismo: psicoterapia por videollamada para quien está
+          en cualquier región del país. Hay una hora, un enlace y un lugar
+          privado. No es un chat ni una urgencia. La consulta presencial, y la
+          ficha local, están en{" "}
           <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
             psicólogo online en Chillán
-          </Link>
-          . Cómo es la hora está en{" "}
-          <Link href="/preguntas/como-es-una-sesion-de-psicologia-online" style={{ color: "#000", textDecoration: "underline" }}>
-            cómo es una sesión de psicología online
-          </Link>
-          . Qué necesitas tener listo está en{" "}
-          <Link href="/preguntas/como-funciona-la-terapia-psicologica-online" style={{ color: "#000", textDecoration: "underline" }}>
-            qué necesitas para la terapia psicológica online
-          </Link>
-          . Si la duda es si el formato sirve, está en{" "}
-          <Link href="/preguntas/la-terapia-online-funciona" style={{ color: "#000", textDecoration: "underline" }}>
-            ¿la terapia online funciona?
           </Link>
           .
         </p>
@@ -201,12 +189,7 @@ export default function TerapiaOnlinePage() {
             {terapiaOnlineFAQs[0].question}
           </h2>
           <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
-            {terapiaOnlineFAQs[0].answer}{" "}
-            El recorrido de la hora está en{" "}
-            <Link href="/preguntas/como-es-una-sesion-de-psicologia-online" style={{ color: "#000", textDecoration: "underline" }}>
-              cómo es una sesión de psicología online
-            </Link>
-            .
+            {terapiaOnlineFAQs[0].answer}
           </p>
         </section>
 
@@ -223,15 +206,7 @@ export default function TerapiaOnlinePage() {
             {terapiaOnlineFAQs[1].question}
           </h2>
           <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
-            {terapiaOnlineFAQs[1].answer}{" "}
-            Qué necesitas tener listo está en{" "}
-            <Link href="/preguntas/como-funciona-la-terapia-psicologica-online" style={{ color: "#000", textDecoration: "underline" }}>
-              qué necesitas para la terapia psicológica online
-            </Link>
-            . Si la duda es si el formato sirve, está en{" "}
-            <Link href="/preguntas/la-terapia-online-funciona" style={{ color: "#000", textDecoration: "underline" }}>
-              ¿la terapia online funciona?
-            </Link>
+            {terapiaOnlineFAQs[1].answer}
           </p>
         </section>
 
@@ -245,18 +220,31 @@ export default function TerapiaOnlinePage() {
               lineHeight: 1.3,
             }}
           >
-            Qué preparas antes de conectarte
+            Tres preguntas, tres páginas
           </h2>
           <p style={{ color: "#444", lineHeight: 1.7, margin: "0 0 0.75rem" }}>
-            Deja el enlace a mano. Prueba cámara y micrófono. Elige una pieza
-            con puerta, donde la conversación no tenga público. La hora son 50
-            minutos, los mismos de una sesión presencial, así que conviene
-            entrar ya sentado y no en medio de un traslado.
+            Esta página no repite el proceso, la hora ni la evidencia. Cada
+            búsqueda tiene su ficha:
           </p>
           <ul style={{ margin: 0, paddingLeft: "1.2rem", color: "#444", lineHeight: 1.7 }}>
-            <li>Internet estable y el enlace de Zoom, Google Meet u otra videollamada.</li>
-            <li>Cámara, micrófono y un lugar privado.</li>
-            <li>Un punto de la semana: una situación, un pensamiento o algo que intentaste.</li>
+            <li>
+              <Link href="/preguntas/como-funciona-la-terapia-psicologica-online" style={{ color: "#000", textDecoration: "underline" }}>
+                Cómo funciona la terapia psicológica online
+              </Link>
+              : el proceso, de una semana a la siguiente.
+            </li>
+            <li>
+              <Link href="/preguntas/como-es-una-sesion-de-psicologia-online" style={{ color: "#000", textDecoration: "underline" }}>
+                Cómo es una sesión de psicología online
+              </Link>
+              : la hora, paso a paso.
+            </li>
+            <li>
+              <Link href="/preguntas/la-terapia-online-funciona" style={{ color: "#000", textDecoration: "underline" }}>
+                ¿La terapia online funciona?
+              </Link>
+              : qué se puede decir de la evidencia, y qué no.
+            </li>
           </ul>
         </section>
 
@@ -270,24 +258,17 @@ export default function TerapiaOnlinePage() {
               lineHeight: 1.3,
             }}
           >
-            En qué se diferencia de una sala
+            La sala en Chillán es otra ficha
           </h2>
-          <p style={{ color: "#444", lineHeight: 1.7, margin: "0 0 0.75rem" }}>
-            No hay traslado. La privacidad depende de tu casa u oficina. Se ve
-            parte del lenguaje del cuerpo y el encuadre de la cámara importa.
-            En un malestar muy intenso, la videollamada pide un lugar seguro.
-            La sala, en Chillán, puede sentirse más contenida si prefieres
-            salir de la casa. El secreto profesional es el mismo. Se pueden
-            alternar las dos modalidades. La comparación está en{" "}
+          <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
+            La videollamada de esta página es para quien está en Chile, con
+            horario compatible y un lugar donde nadie más escuche. La consulta
+            presencial está en Chillán. Si puedes ir a esa sala y quieres
+            comparar, está en{" "}
             <Link href="/terapia-online-vs-presencial-chillan" style={{ color: "#000", textDecoration: "underline" }}>
               terapia online y presencial
             </Link>
-            . El valor publicado es el mismo en las dos; el número y el pago
-            están en{" "}
-            <Link href="/consulta-psicologica-precio-chillan" style={{ color: "#000", textDecoration: "underline" }}>
-              la ficha de precio
-            </Link>
-            .
+            . Esta página no abre sedes en otras ciudades.
           </p>
         </section>
 
@@ -314,198 +295,9 @@ export default function TerapiaOnlinePage() {
               color: "#000",
             }}
           >
-            Reservar psicólogo online
+            Psicólogo online en Chillán
           </Link>
         </div>
-
-        <section style={{ marginBottom: "3rem" }}>
-          <h2
-            style={{
-              fontSize: "0.75rem",
-              fontWeight: 600,
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-              color: "#999",
-              marginBottom: "1.25rem",
-            }}
-          >
-            Cómo funciona
-          </h2>
-          <ol style={{ listStyle: "none", padding: 0, counterReset: "step" }}>
-            <li
-              style={{
-                display: "flex",
-                gap: "1rem",
-                marginBottom: "1.25rem",
-                alignItems: "flex-start",
-              }}
-            >
-              <span
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "1.75rem",
-                  height: "1.75rem",
-                  backgroundColor: "#000",
-                  color: "#fff",
-                  borderRadius: "9999px",
-                  fontSize: "0.75rem",
-                  fontWeight: 600,
-                  flexShrink: 0,
-                }}
-              >
-                1
-              </span>
-              <div>
-                <strong style={{ display: "block", marginBottom: "0.125rem" }}>
-                  Contacto inicial
-                </strong>
-                <span style={{ color: "#666", fontSize: "0.9375rem" }}>
-                  Coordinas por{" "}
-                  <Link href="/agendar" style={{ color: "#000", textDecoration: "underline" }}>
-                    agendar
-                  </Link>{" "}
-                  o WhatsApp.
-                </span>
-              </div>
-            </li>
-            {[
-              {
-                title: "Confirmación",
-                desc: "Te envío el enlace de videollamada junto con instrucciones básicas.",
-              },
-              {
-                title: "Sesión",
-                desc: "Nos conectamos en el horario acordado. Duración: 50 minutos.",
-              },
-              {
-                title: "Seguimiento",
-                desc: "Acordamos la frecuencia según tus necesidades.",
-              },
-            ].map((step, i) => (
-              <li
-                key={i}
-                style={{
-                  display: "flex",
-                  gap: "1rem",
-                  marginBottom: "1.25rem",
-                  alignItems: "flex-start",
-                }}
-              >
-                <span
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "1.75rem",
-                    height: "1.75rem",
-                    backgroundColor: "#000",
-                    color: "#fff",
-                    borderRadius: "9999px",
-                    fontSize: "0.75rem",
-                    fontWeight: 600,
-                    flexShrink: 0,
-                  }}
-                >
-                  {i + 2}
-                </span>
-                <div>
-                  <strong style={{ display: "block", marginBottom: "0.125rem" }}>
-                    {step.title}
-                  </strong>
-                  <span style={{ color: "#666", fontSize: "0.9375rem" }}>
-                    {step.desc}
-                  </span>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </section>
-
-        <section style={{ marginBottom: "3rem" }}>
-          <h2
-            style={{
-              fontSize: "0.75rem",
-              fontWeight: 600,
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-              color: "#999",
-              marginBottom: "1rem",
-            }}
-          >
-            Ventajas
-          </h2>
-          <ul
-            style={{
-              listStyle: "none",
-              padding: 0,
-              display: "grid",
-              gap: "0.75rem",
-            }}
-          >
-            {[
-              "Sin traslados",
-              "Mayor flexibilidad horaria",
-              "Acceso desde cualquier ubicación",
-              "Mismo nivel de confidencialidad",
-              "Comodidad de tu propio espacio",
-            ].map((item, i) => (
-              <li
-                key={i}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.75rem",
-                  color: "#444",
-                }}
-              >
-                <span style={{ color: "#000" }}>✓</span>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section style={{ marginBottom: "3rem" }}>
-          <h2
-            style={{
-              fontSize: "0.75rem",
-              fontWeight: 600,
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-              color: "#999",
-              marginBottom: "1rem",
-            }}
-          >
-            Requisitos técnicos
-          </h2>
-          <ul
-            style={{
-              listStyle: "none",
-              padding: 0,
-              display: "flex",
-              gap: "0.5rem",
-              flexWrap: "wrap",
-            }}
-          >
-            {["Internet estable", "Cámara y micrófono", "Espacio privado"].map(
-              (item, i) => (
-                <li
-                  key={i}
-                  style={{
-                    padding: "0.5rem 1rem",
-                    backgroundColor: "#f5f5f5",
-                    borderRadius: "9999px",
-                    fontSize: "0.875rem",
-                  }}
-                >
-                  {item}
-                </li>
-              )
-            )}
-          </ul>
-        </section>
 
         <section style={{ marginBottom: "3rem" }}>
           <h2
@@ -551,45 +343,9 @@ export default function TerapiaOnlinePage() {
           </div>
         </section>
 
-        <section
-          style={{
-            padding: "2rem",
-            backgroundColor: "#fafafa",
-            borderRadius: "16px",
-            marginBottom: "3rem",
-            textAlign: "center",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: "1.25rem",
-              fontWeight: 600,
-              marginBottom: "0.75rem",
-            }}
-          >
-            ¿Listo para comenzar?
-          </h2>
-          <p
-            style={{
-              color: "#666",
-              marginBottom: "1.5rem",
-              fontSize: "0.9375rem",
-            }}
-          >
-            Reserva tu primera sesión online en la página de agendamiento.
-          </p>
-          <Button href="/agendar">Agendar sesión</Button>
-        </section>
-
         <RelatedReading currentPath="/terapia-online" />
 
-        <IntentClusterSection
-          currentPath="/terapia-online"
-          extraLinks={[
-            { label: "Ansiedad", href: "/psicologo-ansiedad-chillan" },
-            { label: "TCC", href: "/psicologo-cognitivo-conductual-chillan" },
-          ]}
-        />
+        <IntentClusterSection currentPath="/terapia-online" />
       </main>
     </>
   );
