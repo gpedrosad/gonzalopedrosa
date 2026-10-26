@@ -9,7 +9,6 @@ import {
   type AlcoholismPageKey,
 } from "@/lib/alcoholism-pages";
 import {
-  localBusinessSchema,
   getBreadcrumbSchema,
   getServiceSchema,
   getPageFAQSchema,
@@ -97,10 +96,6 @@ export function AlcoholismLandingPage({
 
   return (
     <>
-      <JsonLd
-        id={`${pageKey}-local-business`}
-        data={localBusinessSchema as Record<string, unknown>}
-      />
       <JsonLd
         id={`${pageKey}-service`}
         data={serviceSchema as Record<string, unknown>}

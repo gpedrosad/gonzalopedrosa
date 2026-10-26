@@ -12,7 +12,6 @@ import {
 } from "@/lib/intent-clusters";
 import {
   SITE_URL,
-  localBusinessSchema,
   getBreadcrumbSchema,
   getServiceSchema,
   getPageFAQSchema,
@@ -111,7 +110,6 @@ export default function TerapiaParejaChillanPage() {
   return (
     <>
       <JsonLd id="webpage" data={webPageSchema as Record<string, unknown>} />
-      <JsonLd id="local-business" data={localBusinessSchema as Record<string, unknown>} />
       <JsonLd id="breadcrumb" data={breadcrumbSchema as Record<string, unknown>} />
       <JsonLd id="service" data={serviceSchema as Record<string, unknown>} />
       <JsonLd id="faq-schema" data={faqSchema as Record<string, unknown>} />

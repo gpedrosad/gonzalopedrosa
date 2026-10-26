@@ -9,7 +9,6 @@ import {
   getClusterBreadcrumb,
 } from "@/lib/intent-clusters";
 import {
-  localBusinessSchema,
   getBreadcrumbSchema,
   getServiceSchema,
   getPageFAQSchema,
@@ -105,7 +104,6 @@ const filasComparacion = [
 export default function TerapiaOnlineVsPresencialChillanPage() {
   return (
     <>
-      <JsonLd id="local-business" data={localBusinessSchema as Record<string, unknown>} />
       <JsonLd id="breadcrumb" data={breadcrumbSchema as Record<string, unknown>} />
       <JsonLd id="service" data={serviceSchema as Record<string, unknown>} />
       <JsonLd id="faq-schema" data={faqSchema as Record<string, unknown>} />

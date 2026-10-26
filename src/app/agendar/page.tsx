@@ -7,7 +7,6 @@ import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { Button } from "../components/Button";
 import {
   SITE_URL,
-  localBusinessSchema,
   getBreadcrumbSchema,
   getServiceSchema,
   getPageFAQSchema,
@@ -68,7 +67,6 @@ const serviceSchema = getServiceSchema({
 export default function AgendarPage() {
   return (
     <>
-      <JsonLd id="local-business" data={localBusinessSchema as Record<string, unknown>} />
       <JsonLd id="breadcrumb" data={breadcrumbSchema as Record<string, unknown>} />
       <JsonLd id="service" data={serviceSchema as Record<string, unknown>} />
       <JsonLd id="faq-schema" data={faqSchema as Record<string, unknown>} />

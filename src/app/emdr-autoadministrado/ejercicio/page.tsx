@@ -3,7 +3,7 @@ import Link from 'next/link';
 import EmdrBilateralPlayer from './EmdrBilateralPlayer';
 import { Breadcrumb } from '@/app/components/Breadcrumb';
 import { JsonLd } from '@/app/components/JsonLd';
-import { SITE_URL, getBreadcrumbSchema, getTwitterDescription, localBusinessSchema } from '@/lib/schemas';
+import { SITE_URL, getBreadcrumbSchema, getTwitterDescription } from '@/lib/schemas';
 
 export const metadata: Metadata = {
   title: 'Ejercicio EMDR autoadministrado | Estimulación visual',
@@ -35,7 +35,6 @@ const breadcrumbItems = [
 export default function EjercicioEmdrPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white py-8 px-4">
-      <JsonLd id="local-business" data={localBusinessSchema as Record<string, unknown>} />
       <JsonLd id="breadcrumb" data={getBreadcrumbSchema(breadcrumbItems) as Record<string, unknown>} />
       <div className="max-w-6xl mx-auto">
         <Breadcrumb items={breadcrumbItems} />
