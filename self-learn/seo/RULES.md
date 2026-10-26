@@ -16,17 +16,20 @@
 
 | Rol | URL |
 |---|---|
-| Transaccional («psicólogo online», reservar) | `/psicologo-online-chillan` |
-| Explicativo (cómo funciona) | `/terapia-online` |
+| Hub nacional («terapia online chile», «psicólogo online», «terapia psicológica online») | `/terapia-online` |
+| Cómo funciona el proceso | `/preguntas/como-funciona-la-terapia-psicologica-online` |
+| Cómo es la hora, paso a paso | `/preguntas/como-es-una-sesion-de-psicologia-online` |
+| Si el formato sirve (evidencia citada, sin cifras inventadas) | `/preguntas/la-terapia-online-funciona` |
 | Comparativa | `/terapia-online-vs-presencial-chillan` |
+| Atención local (sala en Chillán) | `/psicologo-online-chillan` |
 | Conversión | `/agendar` |
 | Autoridad | `/perfil` |
 
-Title/H1 de `/psicologo-online-chillan` anclan **Chile** (videollamada). El slug conserva Chillán. No crear landings por ciudad.
+Title/H1 de `/psicologo-online-chillan` anclan **Chillán**. El ancla nacional («terapia online en Chile», «psicólogo online») apunta a `/terapia-online`. No crear landings por ciudad.
 
 No recrear `/psicologo-hombres-chillan` (301 → `/psicologo-adulto-chillan`).
 
-No apuntar chips/CTAs «Online» transaccionales a `/terapia-online`.
+Los chips «Online» de una ficha local pueden seguir a `/psicologo-online-chillan`. No uses esa URL con el ancla «psicólogo online en Chile».
 
 ## Contenido
 

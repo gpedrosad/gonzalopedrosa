@@ -20,7 +20,7 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Psicólogo online en Chillán: consulta presencial y videollamada. Cómo funciona la terapia online en Chile está en otra página. Esta ficha es la atención.";
+  "Psicólogo online en Chillán: consulta y videollamada con sala en esta ciudad. La terapia online para cualquier región de Chile está en otra página.";
 
 export const metadata: Metadata = {
   title: "Psicólogo online en Chillán: consulta y videollamada",
@@ -52,7 +52,7 @@ const onlineFAQs = [
   {
     question: "¿Dónde se compara la videollamada con la sala?",
     answer:
-      "En la página de terapia online y presencial. Cómo funciona el formato en Chile está en la página informativa. Esta ficha es la atención en Chillán. No promete un resultado ni un plazo.",
+      "En la página de terapia online y presencial. Terapia online en Chile, para cualquier región, está en la página informativa. Esta ficha es la atención en Chillán. No promete un resultado ni un plazo.",
   },
   {
     question: "¿Qué pasa si falla internet?",
@@ -81,7 +81,7 @@ const webPageSchema = getWebPageSchema({
 const serviceSchema = getServiceSchema({
   serviceType: "Psicoterapia online",
   description:
-    "Atención psicológica en Chillán, presencial y por videollamada. Cómo funciona la terapia online en Chile está en otra página.",
+    "Atención psicológica en Chillán, presencial y por videollamada. La terapia online para cualquier región de Chile está en otra página.",
   url: `${SITE_URL}/psicologo-online-chillan`,
 });
 
@@ -174,18 +174,18 @@ export default function PsicologoOnlineChillanPage() {
           }}
         >
           Esta es la página de atención en Chillán: consulta presencial y
-          videollamada para quien está en Chile. Cómo funciona la terapia online
-          en Chile está en{" "}
+          videollamada con sala en esta ciudad. Si buscas{" "}
           <Link href="/terapia-online" style={{ color: "#000", textDecoration: "underline" }}>
-            terapia online en Chile: cómo funciona
+            terapia online en Chile
           </Link>
-          . Cómo es la hora está en{" "}
+          , psicólogo online o terapia psicológica online para cualquier región,
+          esa es la página. Cómo es la hora está en{" "}
           <Link href="/preguntas/como-es-una-sesion-de-psicologia-online" style={{ color: "#000", textDecoration: "underline" }}>
             cómo es una sesión de psicología online
           </Link>
-          . Qué necesitas tener listo está en{" "}
+          . Cómo funciona el proceso está en{" "}
           <Link href="/preguntas/como-funciona-la-terapia-psicologica-online" style={{ color: "#000", textDecoration: "underline" }}>
-            qué necesitas para la terapia psicológica online
+            cómo funciona la terapia psicológica online
           </Link>
           . Si la duda es si el formato sirve, está en{" "}
           <Link href="/preguntas/la-terapia-online-funciona" style={{ color: "#000", textDecoration: "underline" }}>
@@ -232,7 +232,7 @@ export default function PsicologoOnlineChillanPage() {
               color: "#000",
             }}
           >
-            Cómo funciona la terapia online
+            Terapia online en Chile
           </Link>
         </div>
 
@@ -358,8 +358,8 @@ export default function PsicologoOnlineChillanPage() {
             {[
               "Desde tu hogar u oficina, sin desplazamientos",
               "Mayor flexibilidad de horarios",
-              "Ideal si vives fuera de Chillán o tienes movilidad reducida",
-              "Misma efectividad que sesiones presenciales",
+              "La videollamada se coordina desde Chillán",
+              "La evidencia de si sirve está en otra página",
               "Total privacidad y confidencialidad",
               "Compatible con reembolso Isapre",
             ].map((item, i) => (
@@ -472,11 +472,15 @@ export default function PsicologoOnlineChillanPage() {
               marginBottom: "1rem",
             }}
           >
-            ¿Para qué temas sirve?
+            Temas de la consulta en Chillán
           </h2>
           <p style={{ color: "#444", lineHeight: 1.7, marginBottom: "1rem" }}>
-            La terapia online es efectiva para la mayoría de las problemáticas que
-            atiendo:
+            Cada tema de esta consulta tiene ficha propia. Si la duda es si la
+            videollamada puede servir, está en{" "}
+            <Link href="/preguntas/la-terapia-online-funciona" style={{ color: "#000", textDecoration: "underline" }}>
+              ¿la terapia online funciona?
+            </Link>
+            .
           </p>
           <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
             {[

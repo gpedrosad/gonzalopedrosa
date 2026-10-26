@@ -42,26 +42,26 @@ export const COUPLES_CLUSTER: IntentCluster = {
 
 export const ONLINE_CLUSTER: IntentCluster = {
   id: "online",
-  hubHref: "/psicologo-online-chillan",
-  hubLabel: "Psicólogo online en Chillán",
-  hubSectionTitle: "Terapia online en Chile",
-  hubSectionSubtitle: "La atención local está en Chillán. El formato se explica aparte.",
+  hubHref: "/terapia-online",
+  hubLabel: "Terapia online en Chile",
+  hubSectionTitle: "Formato nacional y ficha local",
+  hubSectionSubtitle: "El formato para cualquier región. La consulta local está en Chillán.",
   satelliteSectionTitle: "Más sobre terapia online",
   pages: [
     {
-      href: "/psicologo-online-chillan",
-      label: "Psicólogo online",
-      shortTitle: "Psicólogo online en Chillán",
+      href: "/terapia-online",
+      label: "Terapia online en Chile",
+      shortTitle: "Terapia online en Chile",
       cardDescription:
-        "Consulta presencial en Chillán y videollamada. La atención local.",
+        "Psicólogo online y terapia psicológica online por videollamada, para cualquier región.",
       role: "hub",
     },
     {
-      href: "/terapia-online",
-      label: "Cómo funciona",
-      shortTitle: "Terapia online en Chile: cómo funciona",
+      href: "/psicologo-online-chillan",
+      label: "Psicólogo online en Chillán",
+      shortTitle: "Psicólogo online en Chillán",
       cardDescription:
-        "Página informativa de Chile: qué es el formato y en qué se diferencia de una sala.",
+        "Consulta presencial y videollamada con sala en Chillán. La ficha local.",
       role: "satellite",
     },
     {
