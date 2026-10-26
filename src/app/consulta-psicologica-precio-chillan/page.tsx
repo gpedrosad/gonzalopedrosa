@@ -4,7 +4,6 @@ import Link from "next/link";
 import { JsonLd } from "@/app/components/JsonLd";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import {
-  localBusinessSchema,
   getBreadcrumbSchema,
   getServiceSchema,
   getPageFAQSchema,
@@ -82,7 +81,6 @@ const serviceSchema = getServiceSchema({
 export default function ConsultaPsicologicaPrecioChillanPage() {
   return (
     <>
-      <JsonLd id="local-business" data={localBusinessSchema as Record<string, unknown>} />
       <JsonLd id="breadcrumb" data={breadcrumbSchema as Record<string, unknown>} />
       <JsonLd id="service" data={serviceSchema as Record<string, unknown>} />
       <JsonLd id="faq-schema" data={faqSchema as Record<string, unknown>} />

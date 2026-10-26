@@ -1,6 +1,5 @@
 import { JsonLd } from "@/app/components/JsonLd";
 import {
-  localBusinessSchema,
   getBreadcrumbSchema,
   getServiceSchema,
   getPageFAQSchema,
@@ -15,7 +14,9 @@ interface OrganicSeoScriptsProps {
   areaServed?: string;
 }
 
-/** Schemas SEO para landings orgánicas (no usar en Ads). */
+/** Schemas SEO para landings orgánicas (no usar en Ads).
+ * LocalBusiness y AggregateRating viven solo en el layout (`ld-professional`).
+ */
 export function OrganicSeoScripts({
   breadcrumbItems,
   faqs,
@@ -33,7 +34,6 @@ export function OrganicSeoScripts({
 
   return (
     <>
-      <JsonLd id="local-business" data={localBusinessSchema as Record<string, unknown>} />
       <JsonLd id="breadcrumb" data={breadcrumbSchema as Record<string, unknown>} />
       <JsonLd id="service" data={serviceSchema as Record<string, unknown>} />
       <JsonLd id="faq-schema" data={faqSchema as Record<string, unknown>} />

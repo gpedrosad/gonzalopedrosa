@@ -6,7 +6,6 @@ import { ProfessionalCredentials } from "@/app/components/ProfessionalCredential
 import { JsonLd } from "@/app/components/JsonLd";
 import {
   SITE_URL,
-  localBusinessSchema,
   getServiceSchema,
   getPageFAQSchema,
   getBreadcrumbSchema,
@@ -577,7 +576,6 @@ export default function HomePage() {
         id="home-webpage"
         data={getHomeEntityWebPageSchema({ name: "Gonzalo Pedrosa", description }) as Record<string, unknown>}
       />
-      <JsonLd id="local-business" data={localBusinessSchema} />
       <JsonLd
         id="breadcrumb"
         data={getBreadcrumbSchema([{ label: "Inicio", href: "/" }]) as Record<string, unknown>}

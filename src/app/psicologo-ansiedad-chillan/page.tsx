@@ -7,7 +7,6 @@ import { ANXIETY_CLUSTER, getClusterBreadcrumb } from "@/lib/intent-clusters";
 import { ProfessionalCredentials } from "@/app/components/ProfessionalCredentials";
 import { Breadcrumb } from "@/app/components/Breadcrumb";
 import {
-  localBusinessSchema,
   getBreadcrumbSchema,
   getServiceSchema,
   getPageFAQSchema,
@@ -79,7 +78,6 @@ const serviceSchema = getServiceSchema({
 export default function PsicologoAnsiedadChillanPage() {
   return (
     <>
-      <JsonLd id="local-business" data={localBusinessSchema as Record<string, unknown>} />
       <JsonLd id="breadcrumb" data={breadcrumbSchema as Record<string, unknown>} />
       <JsonLd id="service" data={serviceSchema as Record<string, unknown>} />
       <JsonLd id="faq-schema" data={faqSchema as Record<string, unknown>} />

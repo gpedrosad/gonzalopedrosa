@@ -5,7 +5,6 @@ import { Breadcrumb } from "@/app/components/Breadcrumb";
 import { JsonLd } from "@/app/components/JsonLd";
 import {
   SITE_URL,
-  localBusinessSchema,
   getBreadcrumbSchema,
   getServiceSchema,
   getPageFAQSchema,
@@ -75,7 +74,6 @@ export default function ProfilePage() {
         id="profile-page"
         data={getProfilePageSchema({ name: "Gonzalo Pedrosa", description }) as Record<string, unknown>}
       />
-      <JsonLd id="local-business" data={localBusinessSchema as Record<string, unknown>} />
       <JsonLd id="breadcrumb" data={breadcrumbSchema as Record<string, unknown>} />
       <JsonLd id="service" data={serviceSchema as Record<string, unknown>} />
       <JsonLd id="faq-schema" data={faqSchema as Record<string, unknown>} />
