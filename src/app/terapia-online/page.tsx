@@ -18,10 +18,10 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "La terapia online en Chile nombra al psicólogo online y a la terapia psicológica online: videollamada para cualquier región. La ficha local está en Chillán.";
+  "Terapia online y terapias online en Chile: terapia psicológica online por videollamada, para cualquier región. También si buscas terapia con psicólogo online.";
 
 export const metadata: Metadata = {
-  title: "Terapia online en Chile: psicólogo y psicoterapia",
+  title: "Terapia online: terapia psicológica online en Chile",
   description,
   alternates: {
     canonical: "/terapia-online",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     locale: "es_CL",
-    title: "Terapia online en Chile: psicólogo y psicoterapia",
+    title: "Terapia online: terapia psicológica online en Chile",
     description,
     url: `${SITE_URL}/terapia-online`,
     type: "website",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terapia online en Chile: psicólogo y psicoterapia",
+    title: "Terapia online: terapia psicológica online en Chile",
     description: getTwitterDescription(description),
   },
 };
@@ -51,12 +51,22 @@ const terapiaOnlineFAQs = [
   {
     question: "¿Qué es la terapia online en Chile?",
     answer:
-      "Es psicoterapia por videollamada para quien está en cualquier región del país. Psicólogo online y terapia psicológica online nombran ese mismo formato en esta página. Hay una hora, un enlace y un lugar privado. No es un chat ni una urgencia. La consulta presencial está en Chillán.",
+      "Es psicoterapia por videollamada para quien está en cualquier región del país. Terapias online, terapia psicológica online y psicólogo online nombran ese mismo formato en esta página. Hay una hora, un enlace y un lugar privado. No es un chat ni una urgencia. La consulta presencial está en Chillán.",
   },
   {
-    question: "¿Psicólogo online y terapia psicológica online es lo mismo?",
+    question: "¿Terapias online y terapia psicológica online son lo mismo?",
     answer:
-      "En esta página, sí: las dos frases buscan el formato por videollamada en Chile, no una sede en otra ciudad. El paso a paso de la hora, cómo funciona el proceso y si puede servir están en tres preguntas distintas.",
+      "En esta página, sí. Terapias online, terapia psicológica online y psicólogo online buscan la videollamada en Chile, no una sede en otra ciudad. El paso a paso de la hora, cómo funciona el proceso y si puede servir están en tres preguntas distintas.",
+  },
+  {
+    question: "¿Qué es la terapia con psicólogo online?",
+    answer:
+      "Cuando la búsqueda dice terapia psicólogo online, en esta página es la misma videollamada: un psicólogo, una hora y un enlace, para cualquier región de Chile. No es un directorio de sedes ni un chat.",
+  },
+  {
+    question: "¿El reembolso Isapre aplica a la terapia online?",
+    answer:
+      "Las fichas ya publicadas dicen que la boleta sirve para la videollamada y para la sala, sin convenio directo. El porcentaje lo define tu plan. El detalle, sin un precio, está en la pregunta de reembolso Isapre en la terapia online.",
   },
   {
     question: "¿Dónde está el detalle, sin mezclar las preguntas?",
@@ -80,7 +90,7 @@ const serviceSchema = {
   provider: { "@id": `${SITE_URL}/#persona` },
   areaServed: { "@type": "Country", name: "Chile" },
   description:
-    "Terapia online en Chile: psicólogo online y terapia psicológica online por videollamada, para cualquier región. La atención local está en Chillán.",
+    "Terapia online en Chile: terapias online y terapia psicológica online por videollamada, para cualquier región. La atención local está en Chillán.",
 };
 
 export default function TerapiaOnlinePage() {
@@ -165,11 +175,11 @@ export default function TerapiaOnlinePage() {
             lineHeight: 1.6,
           }}
         >
-          Terapia online en Chile, psicólogo online y terapia psicológica online
-          nombran aquí lo mismo: psicoterapia por videollamada para quien está
-          en cualquier región del país. Hay una hora, un enlace y un lugar
-          privado. No es un chat ni una urgencia. La consulta presencial, y la
-          ficha local, están en{" "}
+          Terapia online en Chile es psicoterapia por videollamada para
+          cualquier región. Terapias online, terapia psicológica online y
+          terapia con psicólogo online nombran aquí ese mismo formato: una
+          hora, un enlace y un lugar privado. No es un chat ni una urgencia. La
+          consulta presencial, y la ficha local, están en{" "}
           <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
             psicólogo online en Chillán
           </Link>
@@ -220,6 +230,23 @@ export default function TerapiaOnlinePage() {
               lineHeight: 1.3,
             }}
           >
+            {terapiaOnlineFAQs[2].question}
+          </h2>
+          <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
+            {terapiaOnlineFAQs[2].answer}
+          </p>
+        </section>
+
+        <section style={{ marginBottom: "2.5rem" }}>
+          <h2
+            style={{
+              fontSize: "1.35rem",
+              fontWeight: 600,
+              letterSpacing: "-0.02em",
+              marginBottom: "0.75rem",
+              lineHeight: 1.3,
+            }}
+          >
             Tres preguntas, tres páginas
           </h2>
           <p style={{ color: "#444", lineHeight: 1.7, margin: "0 0 0.75rem" }}>
@@ -229,13 +256,13 @@ export default function TerapiaOnlinePage() {
           <ul style={{ margin: 0, paddingLeft: "1.2rem", color: "#444", lineHeight: 1.7 }}>
             <li>
               <Link href="/preguntas/como-funciona-la-terapia-psicologica-online" style={{ color: "#000", textDecoration: "underline" }}>
-                Cómo funciona la terapia psicológica online
+                ¿Cómo funciona la terapia psicológica online?
               </Link>
               : el proceso, de una semana a la siguiente.
             </li>
             <li>
               <Link href="/preguntas/como-es-una-sesion-de-psicologia-online" style={{ color: "#000", textDecoration: "underline" }}>
-                Cómo es una sesión de psicología online
+                ¿Cómo es una sesión de psicología online?
               </Link>
               : la hora, paso a paso.
             </li>
@@ -269,6 +296,33 @@ export default function TerapiaOnlinePage() {
               terapia online y presencial
             </Link>
             . Esta página no abre sedes en otras ciudades.
+          </p>
+        </section>
+
+        <section style={{ marginBottom: "2.5rem" }}>
+          <h2
+            style={{
+              fontSize: "1.35rem",
+              fontWeight: 600,
+              letterSpacing: "-0.02em",
+              marginBottom: "0.75rem",
+              lineHeight: 1.3,
+            }}
+          >
+            {terapiaOnlineFAQs[3].question}
+          </h2>
+          <p style={{ color: "#444", lineHeight: 1.7, margin: "0 0 0.75rem" }}>
+            {terapiaOnlineFAQs[3].answer}
+          </p>
+          <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>
+            <Link
+              href="/preguntas/reembolso-isapre-terapia-online"
+              style={{ color: "#000", textDecoration: "underline" }}
+            >
+              Reembolso Isapre en la terapia online
+            </Link>
+            {" "}
+            ordena la boleta y el plan. No copia un precio.
           </p>
         </section>
 
@@ -314,7 +368,7 @@ export default function TerapiaOnlinePage() {
           </h2>
 
           <div style={{ display: "grid", gap: "0.5rem" }}>
-            {terapiaOnlineFAQs.slice(2).map((faq, index) => (
+            {terapiaOnlineFAQs.slice(4).map((faq, index) => (
               <details
                 key={index}
                 style={{

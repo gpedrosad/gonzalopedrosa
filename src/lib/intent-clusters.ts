@@ -53,7 +53,7 @@ export const ONLINE_CLUSTER: IntentCluster = {
       label: "Terapia online en Chile",
       shortTitle: "Terapia online en Chile",
       cardDescription:
-        "Psicólogo online y terapia psicológica online por videollamada, para cualquier región.",
+        "Terapia online, terapias online y terapia psicológica online por videollamada.",
       role: "hub",
     },
     {

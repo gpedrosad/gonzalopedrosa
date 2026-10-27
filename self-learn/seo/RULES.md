@@ -20,6 +20,7 @@
 | Cómo funciona el proceso | `/preguntas/como-funciona-la-terapia-psicologica-online` |
 | Cómo es la hora, paso a paso | `/preguntas/como-es-una-sesion-de-psicologia-online` |
 | Si el formato sirve (evidencia citada, sin cifras inventadas) | `/preguntas/la-terapia-online-funciona` |
+| Reembolso Isapre de la videollamada, solo con hechos ya publicados | `/preguntas/reembolso-isapre-terapia-online` |
 | Comparativa | `/terapia-online-vs-presencial-chillan` |
 | Atención local (sala en Chillán) | `/psicologo-online-chillan` |
 | Conversión | `/agendar` |
