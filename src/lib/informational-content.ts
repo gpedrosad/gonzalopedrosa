@@ -220,7 +220,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
   {
     cluster: "guias",
     slug: "comunicacion-en-pareja",
-    updated: "2026-10-26",
+    updated: "2026-10-27",
     navLabel: "Comunicación en pareja",
     title: "Comunicación en pareja y ciclos de discusión",
     h1: "Comunicación en pareja: cuando la pelea se repite",
@@ -265,7 +265,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       {
         heading: "Cuándo el patrón pide otra mirada",
         paragraphs: [
-          "Tiene sentido pedir ayuda si el ciclo se repite cada semana, si uno de los dos ya no quiere hablar, o si la conversación incluye desprecio, control o miedo. Esta guía solo nombra el circuito. No dice quién tiene la razón ni qué debería hacer tu pareja. Si no están en la misma pieza, la videollamada pide un lugar donde cada uno pueda hablar sin público. Ese formato, para cualquier región, está en [terapia online en Chile](/terapia-online). Cómo es la hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online).",
+          "Tiene sentido pedir ayuda si el ciclo se repite cada semana, si uno de los dos ya no quiere hablar, o si la conversación incluye desprecio, control o miedo. Esta guía solo nombra el circuito. No dice quién tiene la razón ni qué debería hacer tu pareja. Si no están en la misma pieza, la videollamada pide un lugar donde cada uno pueda hablar sin público. Ese formato, para cualquier región, está en [terapias online](/terapia-online). Cómo es la hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online).",
           "El estilo de apego a veces explica por qué uno insiste y el otro se cierra. Esa lectura está en la guía de [estilos de apego en adultos](/guias/estilos-de-apego). La página de terapia de pareja en Chillán describe la atención local, que es otra intención: aquí el objetivo es entender la pelea.",
         ],
       },
@@ -292,7 +292,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       { href: "/guias/estilos-de-apego", label: "Estilos de apego en adultos" },
       { href: "/preguntas/que-es-el-apego-ansioso", label: "Qué es el apego ansioso" },
       { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
-      { href: "/terapia-online", label: "Terapia online en Chile" },
+      { href: "/terapia-online", label: "Terapias online" },
       { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "Cómo es una sesión de psicología online" },
     ],
     sources: [APA_APEGO],
@@ -300,7 +300,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
   {
     cluster: "guias",
     slug: "que-es-el-tept",
-    updated: "2026-10-26",
+    updated: "2026-10-27",
     navLabel: "Qué es el TEPT",
     title: "Qué es el TEPT: señales, causas y cuándo consultar",
     h1: "Qué es el TEPT",
@@ -333,7 +333,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
         heading: "Qué puedes hacer",
         paragraphs: [
           "Anota, con calma, si el recuerdo vuelve solo, qué evitas y si la alerta ya cambia el sueño o la pega. Ese registro no diagnostica. Te da un lenguaje más preciso si después conversas con alguien.",
-          "La guía de la OMS de 2013 sobre condiciones relacionadas con el estrés nombra, para adultos con TEPT, terapias centradas en el trauma. Entre ellas están la terapia cognitivo-conductual focalizada en el trauma y el EMDR, cuando las aplica personal de salud capacitado. Que una guía las nombre no dice cuál te corresponde ni en qué orden. Las fases del método están en [qué es la terapia EMDR](/guias/que-es-el-emdr). Esas terapias también se describen por videollamada cuando hay un lugar privado y continuidad. El formato en Chile está en [terapia online en Chile](/terapia-online). Si la duda es si puede servir, está en [¿la terapia online funciona?](/preguntas/la-terapia-online-funciona).",
+          "La guía de la OMS de 2013 sobre condiciones relacionadas con el estrés nombra, para adultos con TEPT, terapias centradas en el trauma. Entre ellas están la terapia cognitivo-conductual focalizada en el trauma y el EMDR, cuando las aplica personal de salud capacitado. Que una guía las nombre no dice cuál te corresponde ni en qué orden. Las fases del método están en [qué es la terapia EMDR](/guias/que-es-el-emdr). Esas terapias también se describen por videollamada cuando hay un lugar privado y continuidad. El formato en Chile está en [terapia psicológica online](/terapia-online). Si la duda es si puede servir, está en [¿la terapia online funciona?](/preguntas/la-terapia-online-funciona).",
           "El [ejercicio de estimulación bilateral](/emdr-autoadministrado) de este sitio es para un malestar leve. No reprocesa un TEPT. Si aparecen imágenes que no puedes guardar, la propia página pide que lo pares.",
         ],
       },
@@ -369,7 +369,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       { href: "/guias/que-es-el-emdr", label: "Qué es el EMDR" },
       { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "Límites del ejercicio bilateral" },
       { href: "/emdr-autoadministrado", label: "Ejercicio bilateral gratuito" },
-      { href: "/terapia-online", label: "Terapia online en Chile" },
+      { href: "/terapia-online", label: "Terapia psicológica online" },
       { href: "/preguntas/la-terapia-online-funciona", label: "¿La terapia online funciona?" },
       { href: "/terapia-emdr-chillan", label: "Página de atención con EMDR" },
       { href: "/estres-postraumatico-chillan", label: "Estrés postraumático en Chillán" },
@@ -382,7 +382,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
   {
     cluster: "guias",
     slug: "estilos-de-apego",
-    updated: "2026-10-24",
+    updated: "2026-10-27",
     navLabel: "Estilos de apego",
     title: "Estilos de apego en adultos: una guía clara",
     h1: "Estilos de apego en adultos",
@@ -428,7 +428,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       {
         heading: "Si el patrón ya está en una relación",
         paragraphs: [
-          "Si se ve en una discusión de a dos, la página de [terapia de pareja en Chillán](/terapia-de-pareja-chillan) describe ese espacio: qué es y cómo se conversa, incluidos los celos. Esta guía no reserva una hora.",
+          "Si se ve en una discusión de a dos, la página de [terapia de pareja en Chillán](/terapia-de-pareja-chillan) describe ese espacio: qué es y cómo se conversa, incluidos los celos. Si no comparten ciudad, el formato de [terapia online](/terapia-online) explica la videollamada para cualquier región. Esta guía no reserva una hora.",
           "Si el vínculo duele de otra forma, la ficha de [ruptura, dependencia y relación tóxica](/psicologo-ruptura-amorosa-chillan) separa tres momentos: que la relación terminó, que tu estado queda tomado por el otro, y que hay control o miedo. Si hay violencia, esa página deja el Fono Familia 149.",
         ],
       },
@@ -458,6 +458,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
     related: [
       { href: "/preguntas/que-es-el-apego-ansioso", label: "Qué es el apego ansioso" },
       { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
+      { href: "/terapia-online", label: "Terapia online" },
       { href: "/terapia-de-pareja-chillan", label: "Terapia de pareja en Chillán" },
       { href: "/psicologo-ruptura-amorosa-chillan", label: "Ruptura, dependencia y relación tóxica" },
     ],
@@ -466,7 +467,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
   {
     cluster: "guias",
     slug: "burnout-laboral",
-    updated: "2026-10-26",
+    updated: "2026-10-27",
     navLabel: "Burnout laboral",
     title: "Burnout laboral: qué es, señales y qué puedes hacer",
     h1: "Qué es el burnout laboral",
@@ -505,7 +506,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       {
         heading: "Cuándo consultar",
         paragraphs: [
-          "Conviene conversarlo con un profesional si el agotamiento lleva semanas, el descanso ya no repone y la distancia con la pega ya cambia el ánimo o la casa. Si el lugar no permite ningún límite y tu salud ya se quebró, la conversación deja de ser solo de hábitos. Si el traslado o el horario no dan, el formato para cualquier región está en [terapia online en Chile](/terapia-online). Cómo es la hora, paso a paso, está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online).",
+          "Conviene conversarlo con un profesional si el agotamiento lleva semanas, el descanso ya no repone y la distancia con la pega ya cambia el ánimo o la casa. Si el lugar no permite ningún límite y tu salud ya se quebró, la conversación deja de ser solo de hábitos. Si el traslado o el horario no dan, el formato para cualquier región está en [terapia online](/terapia-online). Cómo es la hora, paso a paso, está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online).",
           "Esta guía explica el fenómeno. La ficha local es [estrés laboral y burnout en Chillán](/psicologo-estres-laboral-chillan). Un texto no decide una renuncia por ti. Si el agotamiento viene con ideas de hacerte daño, llama al *4141. Es gratuito y atiende las 24 horas.",
         ],
       },
@@ -532,7 +533,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
       { href: "/guias/higiene-del-sueno", label: "Hábitos de sueño" },
       { href: "/psicologo-estres-laboral-chillan", label: "Estrés laboral y burnout en Chillán" },
-      { href: "/terapia-online", label: "Terapia online en Chile" },
+      { href: "/terapia-online", label: "Terapia online" },
       { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "Cómo es una sesión de psicología online" },
     ],
     safety:
@@ -839,7 +840,7 @@ const QUESTION_PAGES: InfoPage[] = [
     {
     cluster: "preguntas",
     slug: "que-es-la-erp-para-el-toc",
-    updated: "2026-10-26",
+    updated: "2026-10-27",
     navLabel: "Qué es la ERP para el TOC",
     title: "Qué es la terapia ERP para el TOC",
     h1: "Qué es la terapia ERP para el TOC",
@@ -858,7 +859,7 @@ const QUESTION_PAGES: InfoPage[] = [
       {
         heading: "Cómo se ve en la práctica",
         paragraphs: [
-          "Se arma una lista de situaciones de menor a mayor miedo. Se elige una que puedas sostener, se acuerda qué ritual no vas a hacer y se permanece ahí el tiempo pactado. No se parte por la imagen más aterradora ni se hace como castigo. Ese paso se puede conversar por videollamada si el lugar es privado y queda escrito qué ritual no vas a hacer. Cómo funciona ese proceso está en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online). El mapa del formato en Chile está en [terapia online en Chile](/terapia-online).",
+          "Se arma una lista de situaciones de menor a mayor miedo. Se elige una que puedas sostener, se acuerda qué ritual no vas a hacer y se permanece ahí el tiempo pactado. No se parte por la imagen más aterradora ni se hace como castigo. Ese paso se puede conversar por videollamada si el lugar es privado y queda escrito qué ritual no vas a hacer. Cómo funciona ese proceso está en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online). El mapa del formato en Chile está en [terapia online](/terapia-online).",
           "La guía CG31 de NICE considera la TCC que incluye ERP como un tratamiento psicológico principal del TOC. Eso orienta la elección del método. No indica que debas diseñarte una exposición intensa sin evaluación, sobre todo si hay riesgo de daño, de contaminación grave o de horas de ritual.",
         ],
         bullets: [
@@ -905,7 +906,7 @@ const QUESTION_PAGES: InfoPage[] = [
       { href: "/preguntas/que-es-la-terapia-cognitivo-conductual", label: "Qué es la terapia cognitivo-conductual" },
       { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
       { href: "/tratamiento-toc-chillan", label: "Página de atención para TOC" },
-      { href: "/terapia-online", label: "Terapia online en Chile" },
+      { href: "/terapia-online", label: "Terapia online" },
       { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "Cómo funciona la terapia psicológica online" },
     ],
     sources: [NICE_TOC],
@@ -986,7 +987,7 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "como-saber-si-es-burnout",
-    updated: "2026-10-26",
+    updated: "2026-10-27",
     navLabel: "Cómo saber si es burnout",
     title: "Cómo saber si lo que tienes es burnout",
     h1: "Cómo saber si es burnout",
@@ -1018,7 +1019,7 @@ const QUESTION_PAGES: InfoPage[] = [
       {
         heading: "Qué hacer con la respuesta",
         paragraphs: [
-          "Si es un mal mes, recorta una demanda concreta y cuida el sueño una semana antes de concluir. Si se parece al burnout, mira qué parte es carga del puesto y qué parte es tu disponibilidad sin borde. Las dos se pueden conversar. Solo la segunda depende de ti. Si el horario no da para una sala, el formato para cualquier región está en [terapia online en Chile](/terapia-online).",
+          "Si es un mal mes, recorta una demanda concreta y cuida el sueño una semana antes de concluir. Si se parece al burnout, mira qué parte es carga del puesto y qué parte es tu disponibilidad sin borde. Las dos se pueden conversar. Solo la segunda depende de ti. Si el horario no da para una sala, el formato para cualquier región está en [terapias online](/terapia-online).",
           "Renunciar, pedir un cambio de funciones o ir a un médico son decisiones distintas. Esta respuesta no elige por ti. Sí deja fuera la idea de que te falta carácter.",
         ],
       },
@@ -1044,18 +1045,19 @@ const QUESTION_PAGES: InfoPage[] = [
       { href: "/guias/burnout-laboral", label: "Guía sobre burnout laboral" },
       { href: "/preguntas/duelo-o-depresion", label: "Duelo o depresión" },
       { href: "/guias/higiene-del-sueno", label: "Higiene del sueño" },
-      { href: "/terapia-online", label: "Terapia online en Chile" },
+      { href: "/terapia-online", label: "Terapias online" },
     ],
     sources: [OMS_BURNOUT],
   },
   {
     cluster: "preguntas",
     slug: "que-es-el-apego-ansioso",
+    updated: "2026-10-27",
     navLabel: "Qué es el apego ansioso",
-    title: "Apego ansioso: qué es y cómo se nota",
-    h1: "Qué es el apego ansioso",
+    title: "Apego ansioso: qué es y cómo se nota, sin etiqueta",
+    h1: "¿Qué es el apego ansioso?",
     description:
-      "El apego ansioso es una alarma ante la distancia de alguien que te importa. Mira cómo se nota y qué puedes hacer sin etiquetarte de por vida.",
+      "El apego ansioso es la alarma rápida ante la distancia de alguien que te importa. No es una enfermedad ni una sentencia. Aquí está qué es y cómo se nota.",
     answer:
       "El apego ansioso es un patrón: cuando alguien importante se demora, se enfría o no responde, tu alarma de rechazo se enciende rápido. Buscas cercanía, revisas señales y te cuesta quedarte tranquilo hasta tener una confirmación. Es una descripción de esa reacción, no una enfermedad ni una sentencia.",
     sections: [
@@ -1088,6 +1090,16 @@ const QUESTION_PAGES: InfoPage[] = [
       },
     ],
     faqs: [
+      {
+        question: "¿Qué es el apego ansioso?",
+        answer:
+          "Es un patrón: cuando alguien importante se demora, se enfría o no responde, la alarma de rechazo se enciende rápido. Buscas cercanía y te cuesta quedarte tranquilo hasta tener una confirmación. No es una enfermedad ni una sentencia.",
+      },
+      {
+        question: "¿Cuáles son las características del apego ansioso?",
+        answer:
+          "Un mensaje sin respuesta se vuelve una prueba, preguntas si está todo bien más de una vez y un pedido de espacio se siente como castigo. También puede aparecer con amistades o en la pega. No es solo un tema de pareja.",
+      },
       {
         question: "¿Se cura?",
         answer:
@@ -1316,7 +1328,7 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "sintomas-fisicos-de-la-ansiedad",
-    updated: "2026-10-26",
+    updated: "2026-10-27",
     navLabel: "Síntomas físicos de la ansiedad",
     title: "Síntomas físicos de la ansiedad y qué pueden indicar",
     h1: "Síntomas físicos de la ansiedad",
@@ -1348,7 +1360,7 @@ const QUESTION_PAGES: InfoPage[] = [
       {
         heading: "Qué puedes hacer cuando el cuerpo ya está encendido",
         paragraphs: [
-          "Baja el ritmo de una cosa a la vez. Apoya los pies en el suelo, alarga la salida del aire y nombra tres objetos que ves. No es un tratamiento. Es una forma de no alimentar la alarma con más lucha. La guía de regulación emocional explica por qué aguantar en silencio y explotar después no es lo mismo que bajar la activación. Si después conversas esto por videollamada, el formato en Chile está en [terapia online en Chile](/terapia-online) y la hora, paso a paso, en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online).",
+          "Baja el ritmo de una cosa a la vez. Apoya los pies en el suelo, alarga la salida del aire y nombra tres objetos que ves. No es un tratamiento. Es una forma de no alimentar la alarma con más lucha. La guía de regulación emocional explica por qué aguantar en silencio y explotar después no es lo mismo que bajar la activación. Si después conversas esto por videollamada, el formato en Chile está en [terapia online](/terapia-online) y la hora, paso a paso, en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online).",
           "Si el malestar es leve y de un día cargado, el ejercicio de estimulación bilateral del sitio sirve para conocer esa sensación en un marco acotado. No lo uses en medio de un pánico que no puedes guardar, ni para un recuerdo de trauma. La propia página del ejercicio lo dice.",
         ],
       },
@@ -1376,7 +1388,7 @@ const QUESTION_PAGES: InfoPage[] = [
       { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
       { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer en un ataque de pánico" },
       { href: "/preguntas/que-es-un-ataque-de-panico", label: "Qué es un ataque de pánico" },
-      { href: "/terapia-online", label: "Terapia online en Chile" },
+      { href: "/terapia-online", label: "Terapia online" },
       { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "Cómo es una sesión de psicología online" },
     ],
     product: EMDR_PRODUCT,
@@ -1465,7 +1477,7 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "obsesiones-y-compulsiones",
-    updated: "2026-10-26",
+    updated: "2026-10-27",
     navLabel: "Obsesiones y compulsiones",
     title: "Obsesiones y compulsiones: cómo distinguirlas en el TOC",
     h1: "Obsesiones y compulsiones en el TOC",
@@ -1532,7 +1544,7 @@ const QUESTION_PAGES: InfoPage[] = [
       { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
       { href: "/preguntas/que-es-la-terapia-cognitivo-conductual", label: "Qué es la terapia cognitivo-conductual" },
       { href: "/guias/regulacion-emocional", label: "Regulación emocional" },
-      { href: "/terapia-online", label: "Terapia online en Chile" },
+      { href: "/terapia-online", label: "Terapia psicológica online" },
     ],
     safety:
       "Si hay ideas de hacerte daño o de querer morir, llama al *4141 (gratuito, 24 horas). Salud Responde atiende al 600 360 7777. En una urgencia, llama al 131. Esta lectura no reemplaza esa llamada.",
@@ -1846,14 +1858,14 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "como-es-una-sesion-de-psicologia-online",
-    updated: "2026-10-26",
+    updated: "2026-10-27",
     navLabel: "Cómo es una sesión online",
-    title: "Cómo es una sesión de psicología online, paso a paso",
+    title: "¿Cómo es una sesión de psicología online? Paso a paso",
     h1: "¿Cómo es una sesión de psicología online?",
     description:
       "Una sesión de psicología online es una videollamada de 50 minutos, paso a paso: enlace, lugar privado y un cierre. No es un chat ni una urgencia.",
     answer:
-      "Una sesión de psicología online, paso a paso, es una videollamada de 50 minutos. Antes llega un enlace. Entras desde un lugar con puerta, con cámara y micrófono. La hora parte por un punto de la semana, se queda en ese punto y cierra con un paso para los días que vienen. No es un chat ni una urgencia.",
+      "Una sesión de psicología online es una videollamada de 50 minutos. Antes llega un enlace. Entras desde un lugar con puerta, con cámara y micrófono. La hora parte por un punto de la semana, se queda en ese punto y cierra con un paso para los días que vienen. No es un chat ni una urgencia.",
     sections: [
       {
         heading: "1. Antes de la hora",
@@ -1880,7 +1892,7 @@ const QUESTION_PAGES: InfoPage[] = [
         heading: "4. Al cerrar",
         paragraphs: [
           "La hora tiene cierre. Puedes anotar un paso para los días que vienen: algo concreto, no un propósito enorme. Después se corta la llamada. No queda un chat abierto para seguir la sesión por mensajes.",
-          "Cómo se organiza el proceso de una semana a la otra está en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online). El mapa para cualquier región está en [terapia online en Chile](/terapia-online).",
+          "Cómo se organiza el proceso de una semana a la otra está en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online). El mapa para cualquier región está en [terapia psicológica online](/terapia-online).",
         ],
       },
       {
@@ -1914,8 +1926,8 @@ const QUESTION_PAGES: InfoPage[] = [
       },
     ],
     related: [
-      { href: "/terapia-online", label: "Terapia online en Chile" },
-      { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "Cómo funciona la terapia psicológica online" },
+      { href: "/terapia-online", label: "Terapia online" },
+      { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "¿Cómo funciona la terapia psicológica online?" },
       { href: "/preguntas/la-terapia-online-funciona", label: "¿La terapia online funciona?" },
       { href: "/psicologo-online-chillan", label: "Psicólogo online en Chillán" },
       { href: "/terapia-online-vs-presencial-chillan", label: "Online y presencial" },
@@ -1927,14 +1939,14 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "como-funciona-la-terapia-psicologica-online",
-    updated: "2026-10-26",
+    updated: "2026-10-27",
     navLabel: "Cómo funciona la terapia online",
-    title: "Cómo funciona la terapia psicológica online: el proceso",
-    h1: "Cómo funciona la terapia psicológica online",
+    title: "¿Cómo funciona la terapia psicológica online? El proceso",
+    h1: "¿Cómo funciona la terapia psicológica online?",
     description:
-      "Cómo funciona la terapia psicológica online en Chile: proceso por videollamada, con hora y continuidad. El paso a paso de la sesión está en otra pregunta.",
+      "Cómo funciona la terapia psicológica online en Chile: un proceso por videollamada, con hora y continuidad. El paso a paso de la sesión está en otra pregunta.",
     answer:
-      "La terapia psicológica online funciona como un proceso, no como un mensaje suelto. Coordinas una hora, recibes un enlace, te conectas en un lugar privado y retomas el mismo hilo la semana siguiente. El minuto a minuto de esa hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online). El mapa para cualquier región está en [terapia online en Chile](/terapia-online).",
+      "La terapia psicológica online funciona como un proceso, no como un mensaje suelto. Coordinas una hora, recibes un enlace, te conectas en un lugar privado y retomas el mismo hilo la semana siguiente. El minuto a minuto de esa hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online). El mapa del formato está en [terapia online](/terapia-online).",
     sections: [
       {
         heading: "De una semana a la siguiente",
@@ -1966,7 +1978,7 @@ const QUESTION_PAGES: InfoPage[] = [
       {
         heading: "Qué no responde esta pregunta",
         paragraphs: [
-          "No dice si te va a servir. No describe el minuto a minuto. No pone un precio. El formato para cualquier región de Chile está en [terapia online en Chile](/terapia-online). La atención con sala en Chillán es [psicólogo online en Chillán](/psicologo-online-chillan).",
+          "No dice si te va a servir. No describe el minuto a minuto. No pone un precio. La boleta y el reembolso Isapre, sin copiar un monto, están en [reembolso Isapre en la terapia online](/preguntas/reembolso-isapre-terapia-online). El formato para cualquier región de Chile está en [terapias online](/terapia-online). La atención con sala en Chillán es [psicólogo online en Chillán](/psicologo-online-chillan).",
           "La videollamada es para quien está en Chile. Esta ficha no abre sedes en otras ciudades.",
         ],
       },
@@ -1994,8 +2006,9 @@ const QUESTION_PAGES: InfoPage[] = [
       },
     ],
     related: [
-      { href: "/terapia-online", label: "Terapia online en Chile" },
-      { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "Cómo es una sesión de psicología online" },
+      { href: "/terapia-online", label: "Terapias online" },
+      { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "¿Cómo es una sesión de psicología online?" },
+      { href: "/preguntas/reembolso-isapre-terapia-online", label: "Reembolso Isapre en la terapia online" },
       { href: "/preguntas/la-terapia-online-funciona", label: "¿La terapia online funciona?" },
       { href: "/psicologo-online-chillan", label: "Psicólogo online en Chillán" },
       { href: "/terapia-online-vs-presencial-chillan", label: "Terapia online y presencial" },
@@ -2007,14 +2020,14 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "que-hace-un-especialista-en-estres-postraumatico",
-    updated: "2026-10-21",
+    updated: "2026-10-27",
     navLabel: "Especialista en estrés postraumático",
-    title: "Qué hace un especialista en estrés postraumático (TEPT)",
-    h1: "¿Qué hace un especialista en estrés postraumático?",
+    title: "Especialista en TEPT y estrés postraumático: qué hace",
+    h1: "¿Qué hace un especialista en TEPT?",
     description:
-      "Un especialista en estrés postraumático evalúa si el recuerdo sigue activo y limita la semana. No pone el nombre TEPT por un párrafo. La guía explica el cuadro.",
+      "Un especialista en TEPT evalúa si el recuerdo sigue activo. Es la misma búsqueda que especialista en estrés postraumático. La guía define el cuadro.",
     answer:
-      "Un especialista en estrés postraumático, o en TEPT, evalúa si un recuerdo sigue activo y limita la semana, y conoce terapias centradas en el trauma. No pone ese nombre porque leíste una lista. TEPT y estrés postraumático nombran el mismo cuadro. Qué es el trastorno está en la guía. Esta pregunta se queda en qué hace esa persona en el trabajo.",
+      "Un especialista en TEPT, o en estrés postraumático, evalúa si un recuerdo sigue activo y limita la semana, y conoce terapias centradas en el trauma. No pone ese nombre porque leíste una lista. Qué es el cuadro está en [qué es el TEPT](/guias/que-es-el-tept). Esta pregunta se queda en qué hace esa persona.",
     sections: [
       {
         heading: "Qué mira en una evaluación",
@@ -2034,6 +2047,7 @@ const QUESTION_PAGES: InfoPage[] = [
         paragraphs: [
           "La guía de la OMS de 2013 sobre condiciones relacionadas con el estrés nombra, para adultos con TEPT, terapias centradas en el trauma. Entre ellas están la terapia cognitivo-conductual focalizada en el trauma y el EMDR, cuando las aplica personal de salud capacitado. Que una guía las nombre no dice cuál te corresponde ni en cuántas horas.",
           "El EMDR no es un punto que se mueve en una pantalla. El procedimiento completo incluye evaluación, preparación y cierre. Las fases están en la guía de EMDR. La página de EMDR en Chillán es la de atención con ese método. No certifica un resultado.",
+          "Esas terapias también se describen por videollamada cuando hay un lugar privado y continuidad. Eso ya está en la guía de [qué es el TEPT](/guias/que-es-el-tept). El formato en Chile está en [terapia online](/terapia-online). Esta pregunta no certifica a quien escribe ni abre una sede.",
         ],
       },
       {
@@ -2045,6 +2059,11 @@ const QUESTION_PAGES: InfoPage[] = [
       },
     ],
     faqs: [
+      {
+        question: "¿Esas terapias se describen por videollamada?",
+        answer:
+          "Sí, cuando hay un lugar privado y continuidad. La guía de qué es el TEPT ya lo dice. El formato en Chile está en la página de terapia online. Esta pregunta no certifica a quien escribe.",
+      },
       {
         question: "¿Especialista en TEPT y especialista en estrés postraumático es la misma búsqueda?",
         answer:
@@ -2063,6 +2082,7 @@ const QUESTION_PAGES: InfoPage[] = [
     ],
     related: [
       { href: "/guias/que-es-el-tept", label: "Qué es el TEPT" },
+      { href: "/terapia-online", label: "Terapia online" },
       { href: "/terapia-emdr-chillan", label: "EMDR en Chillán: página de atención" },
       { href: "/estres-postraumatico-chillan", label: "Estrés postraumático en Chillán" },
       { href: "/guias/que-es-el-emdr", label: "Qué es el EMDR" },
@@ -2073,6 +2093,86 @@ const QUESTION_PAGES: InfoPage[] = [
     safety:
       "Si hay ideas de hacerte daño o de querer morir, llama al *4141 (gratuito, 24 horas). Salud Responde atiende al 600 360 7777. En una urgencia, llama al 131. Esta lectura no reemplaza esa llamada.",
     sources: [OMS_ESTRES, MINSAL_4141, SALUD_RESPONDE],
+  },
+  {
+    cluster: "preguntas",
+    slug: "reembolso-isapre-terapia-online",
+    updated: "2026-10-27",
+    navLabel: "Reembolso Isapre online",
+    title: "Psicólogo con reembolso Isapre: terapia online en Chile",
+    h1: "¿Cómo funciona el reembolso Isapre en la terapia online?",
+    description:
+      "Psicólogo con reembolso Isapre: en la terapia online la boleta se emite el mismo día y no hay convenio directo. El porcentaje lo define tu plan, no esta página.",
+    answer:
+      "Un psicólogo con reembolso Isapre, en lo que este sitio ya publica para la terapia online, no tiene convenio directo: emite boleta de honorarios el mismo día y tú la presentas en tu Isapre. El porcentaje lo define tu plan, no esta página. La videollamada y la sala usan esa misma boleta.",
+    sections: [
+      {
+        heading: "Qué ya está escrito sobre la boleta",
+        paragraphs: [
+          "No hay convenio directo. La boleta de honorarios es el documento con el que se pide el reembolso. La boleta electrónica se emite el mismo día de la sesión y llega al correo. Con eso se puede pedir el reembolso de inmediato.",
+          "El orden que esas fichas ya publican es este: pagas la sesión directo, recibes la boleta al terminar, la subes al portal de tu Isapre y el reembolso sale según tu plan.",
+        ],
+      },
+      {
+        heading: "Terapia online y la sala",
+        paragraphs: [
+          "Las fichas dicen que las Isapres aceptan el reembolso tanto de la sesión presencial como de la [terapia online](/terapia-online), y que la boleta indica el servicio. No dicen que la videollamada tenga una regla distinta ni que toda Isapre pague lo mismo. Hay que mirarlo en el portal o en la cartola.",
+          "El formato de la videollamada, para cualquier región, está en [terapia online](/terapia-online). Esta pregunta no abre sedes en otras ciudades.",
+        ],
+      },
+      {
+        heading: "El porcentaje que las fichas ya nombran",
+        paragraphs: [
+          "En la ficha de reembolso ya publicada se dice que, en general, las Isapres reembolsan entre el 50% y el 80% del valor de la sesión, con un tope en UF definido por la cobertura. Hay que confirmarlo en la cartola o en el portal. No es un número nuevo de esta página.",
+          "Esa ficha nombra Colmena, Cruz Blanca, Banmédica, Vida Tres, Consalud, Nueva Masvida y otras, y dice que la boleta es aceptada por las Isapres del país. Esta pregunta no agrega nombres ni condiciones.",
+          "También dice que, para atención psicológica particular, no pide orden médica ni derivación.",
+        ],
+      },
+      {
+        heading: "Qué no dice esta pregunta",
+        paragraphs: [
+          "No copia un precio. No inventa una norma nacional ni un convenio que las fichas no tengan. Si buscas los pasos tal como quedaron escritos en la ficha local, están en [reembolso Isapre en Chillán](/psicologo-reembolso-isapre-chillan). El mapa del formato sigue en [terapia online](/terapia-online).",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Cómo funciona el reembolso Isapre en la terapia online?",
+        answer:
+          "Con la boleta: no hay convenio directo, se emite el mismo día y la presentas en tu Isapre. Las fichas dicen que sirve para la videollamada y para la sala. El porcentaje lo define tu plan.",
+      },
+      {
+        question: "¿Hay convenio directo con la Isapre?",
+        answer:
+          "No. La ficha de Isapre ya publicada dice que no hay convenio directo y que la boleta de honorarios es lo que permite pedir el reembolso.",
+      },
+      {
+        question: "¿Cuánto reembolsa la Isapre?",
+        answer:
+          "Depende del plan. Las fichas nombran, en general, entre el 50% y el 80% del valor de la sesión, con un tope en UF, y piden confirmarlo en la cartola o el portal. Esta página no fija otro número.",
+      },
+      {
+        question: "¿Necesito orden médica?",
+        answer:
+          "No, para atención psicológica particular, según la ficha de reembolso. No pide orden médica ni derivación.",
+      },
+    ],
+    related: [
+      { href: "/terapia-online", label: "Terapia online" },
+      { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "¿Cómo funciona la terapia psicológica online?" },
+      { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "¿Cómo es una sesión de psicología online?" },
+      { href: "/psicologo-reembolso-isapre-chillan", label: "Ficha local: reembolso Isapre en Chillán" },
+    ],
+    sources: [
+      {
+        label: "Ficha de este sitio: reembolso Isapre en Chillán, con la boleta, los pasos y el rango según el plan",
+        href: "/psicologo-reembolso-isapre-chillan",
+      },
+      {
+        label: "Ficha de este sitio: psicólogo con Isapre en Chillán, sin convenio directo",
+        href: "/psicologo-isapre-chillan",
+      },
+    ],
   },
 ];
 
@@ -2197,6 +2297,7 @@ const READING_BY_PATH: Record<string, InfoLink[]> = {
   "/terapia-online": [
     { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "¿Cómo es una sesión de psicología online?" },
     { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "¿Cómo funciona la terapia psicológica online?" },
+    { href: "/preguntas/reembolso-isapre-terapia-online", label: "Reembolso Isapre en la terapia online" },
     { href: "/preguntas/la-terapia-online-funciona", label: "¿La terapia online funciona?" },
     { href: "/psicologo-online-chillan", label: "Psicólogo online en Chillán" },
     { href: "/terapia-online-vs-presencial-chillan", label: "Online y presencial" },
