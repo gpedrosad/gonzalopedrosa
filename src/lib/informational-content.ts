@@ -143,20 +143,20 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
         {
     cluster: "guias",
     slug: "que-es-el-emdr",
-    updated: "2026-10-25",
+    updated: "2026-10-28",
     navLabel: "Qué es el EMDR",
-    title: "EMDR en psicología: qué es la terapia y cómo se usa",
-    h1: "Qué es la terapia EMDR",
+    title: "Qué es el EMDR en psicología: fases y para qué se usa",
+    h1: "Qué es el EMDR",
     description:
-      "La terapia EMDR trabaja recuerdos que siguen activos. Incluye evaluación, preparación y cierre. El movimiento de ojos es una parte, no el tratamiento entero.",
+      "Qué es el EMDR: una psicoterapia para recuerdos que siguen activos, con evaluación, preparación y cierre. El movimiento de ojos es una parte, no todo el método.",
     answer:
       "EMDR significa desensibilización y reprocesamiento por movimientos oculares. En psicología es una psicoterapia para recuerdos que siguen disparando miedo, vergüenza o imágenes como si estuvieran pasando ahora. La estimulación bilateral (ojos, sonidos o golpes suaves alternados) es una parte del procedimiento, no la terapia entera.",
     sections: [
       {
-        heading: "Cómo se reconoce un proceso de EMDR",
+        heading: "Qué puedes esperar, en fases",
         paragraphs: [
-          "Primero se revisa tu historia y si hoy estás lo bastante estable para trabajar un recuerdo. Después se acuerdan recursos para volver a sentirte en el presente. Solo entonces se elige una memoria concreta y se alterna la atención entre esa memoria y la estimulación bilateral.",
-          "Al cierre se comprueba cómo quedaste y qué harás si el malestar sube en las horas siguientes. Un punto que se mueve en una pantalla, solo, no es esta terapia. Saltarse la preparación y el cierre es el error más común de los ejercicios sueltos.",
+          "El orden habitual tiene fases, y no parte por el peor recuerdo. Primero se revisa tu historia y si hoy estás lo bastante estable para trabajar un recuerdo. Después se acuerdan recursos para volver a sentirte en el presente. Solo entonces se elige una memoria concreta y se alterna la atención entre esa memoria y la estimulación bilateral.",
+          "Al cierre se comprueba cómo quedaste y qué harás si el malestar sube en las horas siguientes. Puedes parar. Un punto que se mueve en una pantalla, solo, no es esta terapia. Saltarse la preparación y el cierre es el error más común de los ejercicios sueltos.",
         ],
         bullets: [
           "No se parte por el peor recuerdo el primer día.",
@@ -183,11 +183,16 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
         heading: "Cuándo consultar y qué no reemplaza",
         paragraphs: [
           "EMDR no es hipnosis ni te obliga a creer una versión nueva del pasado. Tampoco es el primer paso si estás en crisis, con ideas de hacerte daño, o sin un lugar seguro donde volver después.",
-          "Conviene una evaluación si el recuerdo organiza la semana: vuelve en imágenes, evitas para no activarte o la alerta no baja. El nombre de la técnica no reemplaza esa evaluación. La atención con este método en Chillán está en [terapia EMDR en Chillán](/terapia-emdr-chillan). La ficha local del cuadro es [estrés postraumático en Chillán](/estres-postraumatico-chillan).",
+          "Conviene una evaluación si el recuerdo organiza la semana: vuelve en imágenes, evitas para no activarte o la alerta no baja. El nombre de la técnica no reemplaza esa evaluación. Qué hace quien mira ese recuerdo está en [qué hace un especialista en estrés postraumático](/preguntas/que-hace-un-especialista-en-estres-postraumatico). El cuadro, distinto del método, está en [qué es el TEPT](/guias/que-es-el-tept). Si la hora es por videollamada, el formato en Chile está en [terapia online](/terapia-online) y el proceso, de una semana a la otra, en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online). La atención con este método en Chillán está en [terapia EMDR en Chillán](/terapia-emdr-chillan). La ficha local del cuadro es [estrés postraumático en Chillán](/estres-postraumatico-chillan).",
         ],
       },
     ],
     faqs: [
+      {
+        question: "¿Qué es el EMDR?",
+        answer:
+          "EMDR significa desensibilización y reprocesamiento por movimientos oculares. Es una psicoterapia para recuerdos que siguen activos. La estimulación bilateral es una parte del procedimiento, no la terapia entera.",
+      },
       {
         question: "¿El movimiento de ojos es lo único que importa?",
         answer:
@@ -205,10 +210,13 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       },
     ],
     related: [
+      { href: "/guias/que-es-el-tept", label: "Qué significa TEPT" },
+      { href: "/preguntas/que-hace-un-especialista-en-estres-postraumatico", label: "Qué hace un especialista en estrés postraumático" },
       { href: "/preguntas/que-es-un-trauma-psicologico", label: "Qué es un trauma psicológico" },
-      { href: "/guias/que-es-el-tept", label: "Qué es el TEPT" },
       { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "¿El ejercicio reemplaza la terapia?" },
       { href: "/emdr-autoadministrado/ejercicio", label: "Ir al ejercicio bilateral" },
+      { href: "/terapia-online", label: "Terapia online" },
+      { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "Cómo funciona la terapia psicológica online" },
       { href: "/estres-postraumatico-chillan", label: "Información sobre estrés postraumático" },
       { href: "/terapia-emdr-chillan", label: "Página de atención con EMDR" },
     ],
@@ -300,14 +308,14 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
   {
     cluster: "guias",
     slug: "que-es-el-tept",
-    updated: "2026-10-27",
+    updated: "2026-10-28",
     navLabel: "Qué es el TEPT",
-    title: "Qué es el TEPT: señales, causas y cuándo consultar",
-    h1: "Qué es el TEPT",
+    title: "Qué significa TEPT: definición, señales y cuándo consultar",
+    h1: "Qué significa TEPT",
     description:
-      "El TEPT es un trastorno en que un hecho ya pasó y el recuerdo sigue activo: imágenes, evitación y alerta. No todo susto es TEPT. El nombre lo pone una evaluación.",
+      "TEPT significa trastorno de estrés postraumático: el hecho ya pasó y el recuerdo sigue activo, con imágenes, evitación y alerta. No todo susto es TEPT.",
     answer:
-      "El TEPT, o trastorno de estrés postraumático, aparece cuando un hecho que amenazó la vida, la integridad o la de alguien cercano ya pasó, y el recuerdo no queda archivado. Vuelve en imágenes, sueños o alarma, y la persona organiza el día para no toparse con él. No todo susto fuerte es un TEPT.",
+      "TEPT significa trastorno de estrés postraumático. Aparece cuando un hecho que amenazó la vida, la integridad o la de alguien cercano ya pasó, y el recuerdo no queda archivado. Vuelve en imágenes, sueños o alarma, y la persona organiza el día para no toparse con él. No todo susto fuerte es un TEPT. La definición no reemplaza una evaluación.",
     sections: [
       {
         heading: "Cómo se reconoce",
@@ -333,7 +341,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
         heading: "Qué puedes hacer",
         paragraphs: [
           "Anota, con calma, si el recuerdo vuelve solo, qué evitas y si la alerta ya cambia el sueño o la pega. Ese registro no diagnostica. Te da un lenguaje más preciso si después conversas con alguien.",
-          "La guía de la OMS de 2013 sobre condiciones relacionadas con el estrés nombra, para adultos con TEPT, terapias centradas en el trauma. Entre ellas están la terapia cognitivo-conductual focalizada en el trauma y el EMDR, cuando las aplica personal de salud capacitado. Que una guía las nombre no dice cuál te corresponde ni en qué orden. Las fases del método están en [qué es la terapia EMDR](/guias/que-es-el-emdr). Esas terapias también se describen por videollamada cuando hay un lugar privado y continuidad. El formato en Chile está en [terapia psicológica online](/terapia-online). Si la duda es si puede servir, está en [¿la terapia online funciona?](/preguntas/la-terapia-online-funciona).",
+          "La guía de la OMS de 2013 sobre condiciones relacionadas con el estrés nombra, para adultos con TEPT, terapias centradas en el trauma. Entre ellas están la terapia cognitivo-conductual focalizada en el trauma y el EMDR, cuando las aplica personal de salud capacitado. Que una guía las nombre no dice cuál te corresponde ni en qué orden. Las fases del método están en [qué es el EMDR](/guias/que-es-el-emdr). Qué hace quien evalúa el recuerdo está en [qué hace un especialista en estrés postraumático](/preguntas/que-hace-un-especialista-en-estres-postraumatico). Esas terapias también se describen por videollamada cuando hay un lugar privado y continuidad. El formato en Chile está en [terapia psicológica online](/terapia-online). Cómo funciona ese proceso, de una semana a la otra, está en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online). Si la duda es si puede servir, está en [¿la terapia online funciona?](/preguntas/la-terapia-online-funciona).",
           "El [ejercicio de estimulación bilateral](/emdr-autoadministrado) de este sitio es para un malestar leve. No reprocesa un TEPT. Si aparecen imágenes que no puedes guardar, la propia página pide que lo pares.",
         ],
       },
@@ -347,6 +355,11 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       },
     ],
     faqs: [
+      {
+        question: "¿Qué significa TEPT?",
+        answer:
+          "Significa trastorno de estrés postraumático. Nombra un cuadro en que un hecho ya pasó y el recuerdo sigue activo: imágenes, evitación y alerta. No todo susto fuerte es un TEPT. El nombre lo pone una evaluación, no una lista.",
+      },
       {
         question: "¿El TEPT solo aparece después de una guerra o un accidente?",
         answer:
@@ -370,6 +383,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "Límites del ejercicio bilateral" },
       { href: "/emdr-autoadministrado", label: "Ejercicio bilateral gratuito" },
       { href: "/terapia-online", label: "Terapia psicológica online" },
+      { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "Cómo funciona la terapia psicológica online" },
       { href: "/preguntas/la-terapia-online-funciona", label: "¿La terapia online funciona?" },
       { href: "/terapia-emdr-chillan", label: "Página de atención con EMDR" },
       { href: "/estres-postraumatico-chillan", label: "Estrés postraumático en Chillán" },
@@ -467,14 +481,14 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
   {
     cluster: "guias",
     slug: "burnout-laboral",
-    updated: "2026-10-27",
+    updated: "2026-10-28",
     navLabel: "Burnout laboral",
-    title: "Burnout laboral: qué es, señales y qué puedes hacer",
+    title: "Qué es el burnout laboral y el burnout en el trabajo",
     h1: "Qué es el burnout laboral",
     description:
-      "El burnout laboral es agotamiento del trabajo que el descanso ya no repone, con distancia y menos eficacia. No es una enfermedad ni el cansancio de un viernes.",
+      "El burnout laboral, o burnout en el trabajo, es el agotamiento que el descanso no repone, con distancia y menos eficacia. No es una enfermedad.",
     answer:
-      "El burnout laboral es lo que queda cuando el estrés del trabajo se alarga y el descanso ya no repone. La Organización Mundial de la Salud lo describe como un fenómeno ocupacional, no como una enfermedad. Se reconoce cuando se juntan tres rasgos: agotamiento, distancia mental o cinismo hacia la pega, y la sensación de ser menos eficaz.",
+      "El burnout laboral, también llamado burnout o burnout en el trabajo, es lo que queda cuando el estrés del trabajo se alarga y el descanso ya no repone. La Organización Mundial de la Salud lo describe como un fenómeno ocupacional, no como una enfermedad. Se reconoce cuando se juntan tres rasgos: agotamiento, distancia mental o cinismo hacia la pega, y la sensación de ser menos eficaz.",
     sections: [
       {
         heading: "Cómo se reconoce",
@@ -493,7 +507,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
         heading: "Causas generales",
         paragraphs: [
           "La definición mueve la causa fuera del carácter. Parte puede estar en tus límites o en la autoexigencia, y parte está en la carga, los turnos, un jefe que no prioriza o la falta de control sobre cómo haces el trabajo.",
-          "No es lo mismo que el estrés de un día cargado, ni que una depresión. El estrés es la exigencia de ahora. El burnout es el agotamiento que el descanso ya no repone. La depresión puede coincidir cuando el vacío está en toda la vida y no solo en la pega. El hostigamiento dirigido a ti es otro motivo: la ficha de [estrés laboral y burnout en Chillán](/psicologo-estres-laboral-chillan) lo separa del acoso.",
+          "No es lo mismo que el estrés de un día cargado, ni que una ansiedad que sigue encendida cuando la exigencia baja, ni que una depresión. El estrés es la exigencia de ahora. El burnout en el trabajo es el agotamiento que el descanso ya no repone. La diferencia entre estrés y ansiedad está en [ansiedad o estrés](/preguntas/ansiedad-o-estres). La depresión puede coincidir cuando el vacío está en toda la vida y no solo en la pega. El hostigamiento dirigido a ti es otro motivo: la ficha de [estrés laboral y burnout en Chillán](/psicologo-estres-laboral-chillan) lo separa del acoso.",
         ],
       },
       {
@@ -506,16 +520,27 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       {
         heading: "Cuándo consultar",
         paragraphs: [
-          "Conviene conversarlo con un profesional si el agotamiento lleva semanas, el descanso ya no repone y la distancia con la pega ya cambia el ánimo o la casa. Si el lugar no permite ningún límite y tu salud ya se quebró, la conversación deja de ser solo de hábitos. Si el traslado o el horario no dan, el formato para cualquier región está en [terapia online](/terapia-online). Cómo es la hora, paso a paso, está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online).",
+          "Conviene conversarlo con un profesional si el agotamiento lleva semanas, el descanso ya no repone y la distancia con la pega ya cambia el ánimo o la casa. Si el lugar no permite ningún límite y tu salud ya se quebró, la conversación deja de ser solo de hábitos. Qué puedes esperar de esa conversación es un orden: qué parte es carga del puesto, qué parte es no poder desconectarte y si hay ansiedad o ánimo bajo al mismo tiempo. No es una orden de renuncia.",
+          "Si el traslado o el horario no dan, el formato para cualquier región está en [terapia online](/terapia-online). Cómo funciona ese proceso, de una semana a la otra, está en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online). Cómo es una sola hora, paso a paso, está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online).",
           "Esta guía explica el fenómeno. La ficha local es [estrés laboral y burnout en Chillán](/psicologo-estres-laboral-chillan). Un texto no decide una renuncia por ti. Si el agotamiento viene con ideas de hacerte daño, llama al *4141. Es gratuito y atiende las 24 horas.",
         ],
       },
     ],
     faqs: [
       {
+        question: "¿Qué es el burnout laboral?",
+        answer:
+          "Es el burnout en el trabajo: agotamiento que el descanso ya no repone, distancia hacia la pega y la sensación de rendir menos. La OMS lo describe como fenómeno ocupacional, no como una enfermedad.",
+      },
+      {
         question: "¿El burnout laboral es una enfermedad?",
         answer:
           "La OMS lo ubica como fenómeno ocupacional en la CIE-11, no como un trastorno médico. Igual puede coincidir con ansiedad, ánimo bajo o problemas de sueño que sí piden evaluación.",
+      },
+      {
+        question: "¿El burnout es lo mismo que ansiedad?",
+        answer:
+          "No. El burnout se ancla en el trabajo. La ansiedad puede seguir encendida aunque la exigencia baje. Pueden ir juntos y no son el mismo nombre.",
       },
       {
         question: "¿Es lo mismo que estrés laboral?",
@@ -530,10 +555,12 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
     ],
     related: [
       { href: "/preguntas/como-saber-si-es-burnout", label: "Cómo saber si es burnout" },
+      { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
       { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
-      { href: "/guias/higiene-del-sueno", label: "Hábitos de sueño" },
+      { href: "/guias/higiene-del-sueno", label: "Higiene del sueño" },
       { href: "/psicologo-estres-laboral-chillan", label: "Estrés laboral y burnout en Chillán" },
       { href: "/terapia-online", label: "Terapia online" },
+      { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "Cómo funciona la terapia psicológica online" },
       { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "Cómo es una sesión de psicología online" },
     ],
     safety:
@@ -543,13 +570,14 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
   {
     cluster: "guias",
     slug: "higiene-del-sueno",
+    updated: "2026-10-28",
     navLabel: "Higiene del sueño",
-    title: "Higiene del sueño: hábitos que ayudan a dormir",
-    h1: "Higiene del sueño: hábitos que sí puedes probar",
+    title: "Higiene del sueño: qué es, hábitos y cuándo consultar",
+    h1: "Qué es la higiene del sueño",
     description:
-      "Horario, luz, cafeína y cama solo para dormir. Una guía de hábitos de sueño y el límite de lo que esos hábitos pueden resolver por sí solos.",
+      "La higiene del sueño junta horario, luz y cafeína para asociar la noche con dormir. No trata el insomnio por sí sola. Si llevas semanas sin dormir, no alcanza.",
     answer:
-      "La higiene del sueño es un conjunto de hábitos que facilitan que el cuerpo asocie la noche con dormir: horario parejo, luz de día, cafeína más temprano y cama reservada al sueño. No es un tratamiento completo del insomnio. Si llevas semanas sin dormir pese a hacerlo bien, los hábitos ya no son toda la respuesta.",
+      "La higiene del sueño es un conjunto de hábitos que facilitan que el cuerpo asocie la noche con dormir: horario parejo, luz de día, cafeína más temprano y cama reservada al sueño. No es un tratamiento del insomnio. Si llevas semanas sin dormir pese a hacerlo bien, los hábitos ya no son toda la respuesta.",
     sections: [
       {
         heading: "Lo que más mueve la aguja",
@@ -574,8 +602,9 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       {
         heading: "Cuando los hábitos no alcanzan",
         paragraphs: [
-          "Si duermes mal tres noches o más por semana, durante más de un mes, y al día siguiente rindes peor, ya estás en terreno de insomnio y no solo de una mala higiene. El abordaje psicológico con más investigación para ese cuadro es la terapia cognitivo-conductual para el insomnio. No la reemplaza esta lista.",
-          "Ronquidos con pausas, sueño que no repone nunca, dolor o síntomas de ánimo muy bajo necesitan una evaluación médica. Ajustar el café no trata una apnea.",
+          "Si duermes mal tres noches o más por semana, durante más de un mes, y al día siguiente rindes peor, ya estás en terreno de insomnio y no solo de una mala higiene. El abordaje psicológico con más investigación para ese cuadro es la terapia cognitivo-conductual para el insomnio. No la reemplaza esta lista. Qué es ese método, en general, está en [qué es la terapia cognitivo-conductual](/preguntas/que-es-la-terapia-cognitivo-conductual).",
+          "Si el sueño se quebró junto con el agotamiento de la pega, la guía de [burnout laboral](/guias/burnout-laboral) separa ese fenómeno de un mal hábito de cafeína. Los hábitos de sueño no corrigen la carga del puesto. Si la alarma del día es lo que te deja despierto, [ansiedad o estrés](/preguntas/ansiedad-o-estres) ordena esa diferencia.",
+          "Ronquidos con pausas, sueño que no repone nunca, dolor o síntomas de ánimo muy bajo necesitan una evaluación médica. Ajustar el café no trata una apnea. Si conversas el sueño por videollamada, el formato en Chile está en [terapia online](/terapia-online). Cómo funciona ese proceso está en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online). Cómo es una hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online).",
         ],
       },
       {
@@ -587,6 +616,11 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       },
     ],
     faqs: [
+      {
+        question: "¿Qué es la higiene del sueño?",
+        answer:
+          "Es un conjunto de hábitos —horario parejo, luz de día, cafeína más temprano y cama reservada al sueño— para asociar la noche con dormir. No es un tratamiento del insomnio.",
+      },
       {
         question: "¿Cuántas horas tengo que dormir?",
         answer:
@@ -604,8 +638,13 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       },
     ],
     related: [
-      { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
+      { href: "/guias/burnout-laboral", label: "Burnout laboral" },
       { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad y estrés" },
+      { href: "/preguntas/que-es-la-terapia-cognitivo-conductual", label: "Qué es la terapia cognitivo-conductual" },
+      { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
+      { href: "/terapia-online", label: "Terapia online" },
+      { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "Cómo funciona la terapia psicológica online" },
+      { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "Cómo es una sesión de psicología online" },
       { href: "/tratamiento-insomnio-chillan", label: "Página de atención por insomnio" },
     ],
     sources: [NHS_SUENO],
@@ -1399,14 +1438,14 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "senales-de-baja-autoestima",
-    updated: "2026-10-26",
-    navLabel: "Señales de baja autoestima",
-    title: "Señales de baja autoestima: qué mirar en el día a día",
-    h1: "Señales de baja autoestima",
+    updated: "2026-10-28",
+    navLabel: "Señales de autoestima baja",
+    title: "Autoestima baja: qué es, señales y cuándo consultar",
+    h1: "Señales de autoestima baja",
     description:
-      "Las señales de baja autoestima se ven al evitar, compararte y descartar un logro. No es un test ni un diagnóstico. Una lista no te pone un nombre.",
+      "La autoestima baja se nota al evitar, compararte y descartar un logro. No es un test ni un diagnóstico. Una lista de señales no te pone un nombre.",
     answer:
-      "Las señales de baja autoestima son un modo repetido de leerte como menos capaz o menos digno de cuidado. No son un defecto de carácter ni un test de internet. Se notan en lo que haces: evitas, te disculpas de más, te comparas y descartas un logro apenas aparece. Una lista no diagnostica.",
+      "La autoestima baja es un modo repetido de leerte como menos capaz o menos digno de cuidado. No es un defecto de carácter ni un test de internet. Las señales se notan en lo que haces: evitas, te disculpas de más, te comparas y descartas un logro apenas aparece. Una lista no diagnostica.",
     sections: [
       {
         heading: "Cómo se reconocen",
@@ -1438,12 +1477,17 @@ const QUESTION_PAGES: InfoPage[] = [
       {
         heading: "Cuándo consultar",
         paragraphs: [
-          "Conviene conversarlo si el modo ya te saca de postular, de decir que no o de quedarte en vínculos donde el trato te achica, y si eso lleva semanas. Una lista leída de noche no alcanza como plan.",
-          "La página de [baja autoestima en Chillán](/psicologo-baja-autoestima-chillan) cuenta cómo se plantea ese trabajo, incluido el perfeccionismo y el impostor, que se le parecen y no son lo mismo. Esta pregunta se queda en las señales. No fija un plazo. Si no puedes ir a una sala, el formato de [psicólogo online](/terapia-online) explica la videollamada en Chile. Si la duda es si ese formato puede servir, está en [¿la terapia online funciona?](/preguntas/la-terapia-online-funciona).",
+          "Conviene conversarlo si el modo ya te saca de postular, de decir que no o de quedarte en vínculos donde el trato te achica, y si eso lleva semanas. Una lista leída de noche no alcanza como plan. Qué puedes esperar de esa conversación es mirar el patrón: el hecho, la frase dura sobre ti y lo que hiciste después. No es un puntaje ni un elogio frente al espejo.",
+          "La página de [baja autoestima en Chillán](/psicologo-baja-autoestima-chillan) cuenta cómo se plantea ese trabajo, incluido el perfeccionismo y el impostor, que se le parecen y no son lo mismo. Esta pregunta se queda en las señales. No fija un plazo. Si no puedes ir a una sala, el formato de [psicólogo online](/terapia-online) explica la videollamada en Chile. Cómo funciona ese proceso está en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online). Cómo es una hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online). Si la duda es si ese formato puede servir, está en [¿la terapia online funciona?](/preguntas/la-terapia-online-funciona).",
         ],
       },
     ],
     faqs: [
+      {
+        question: "¿Qué es la autoestima baja?",
+        answer:
+          "Es un modo repetido de leerte como menos capaz o menos digno de cuidado. Se nota al evitar, compararte y descartar un logro. No es, por sí sola, un diagnóstico.",
+      },
       {
         question: "¿La baja autoestima es una enfermedad?",
         answer:
@@ -1467,6 +1511,8 @@ const QUESTION_PAGES: InfoPage[] = [
       { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
       { href: "/primera-consulta-psicologo-chillan", label: "Qué ocurre en una primera consulta" },
       { href: "/terapia-online", label: "Psicólogo online: terapia online en Chile" },
+      { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "Cómo funciona la terapia psicológica online" },
+      { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "Cómo es una sesión de psicología online" },
       { href: "/preguntas/la-terapia-online-funciona", label: "¿La terapia online funciona?" },
     ],
     product: EMDR_PRODUCT,
@@ -1858,7 +1904,7 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "como-es-una-sesion-de-psicologia-online",
-    updated: "2026-10-27",
+    updated: "2026-10-28",
     navLabel: "Cómo es una sesión online",
     title: "¿Cómo es una sesión de psicología online? Paso a paso",
     h1: "¿Cómo es una sesión de psicología online?",
@@ -1884,8 +1930,8 @@ const QUESTION_PAGES: InfoPage[] = [
       {
         heading: "3. Durante los 50 minutos",
         paragraphs: [
-          "La conversación se queda en el punto que trajiste. No es un recuento de toda la vida ni un chat que sigue después. Se mira qué pasó, qué pensaste o qué hiciste, y qué de eso quieres trabajar en esa hora.",
-          "Se ve parte del lenguaje del cuerpo, según el encuadre de la cámara. Si la conexión se corta, en la página de atención está escrito que se retoma o se reprograma sin un cobro extra por ese corte.",
+          "Los primeros minutos se van en comprobar que se escucha y que estás a solas. Después la conversación se queda en el punto que trajiste. Hacia el final anotas un paso chico. No hay un guion de minutos que sirva para todas las horas: el orden es ese. No es un recuento de toda la vida ni un chat que sigue después.",
+          "Se ve parte del lenguaje del cuerpo, según el encuadre de la cámara. Si la conexión se corta, en la página de atención está escrito que se retoma o se reprograma sin un cobro extra por ese corte. Esta ficha describe una hora. Cómo se retoma el mismo hilo la semana siguiente es otra pregunta.",
         ],
       },
       {
@@ -1899,7 +1945,8 @@ const QUESTION_PAGES: InfoPage[] = [
         heading: "5. Qué no es esta hora",
         paragraphs: [
           "No reemplaza una urgencia médica ni una crisis con riesgo. Si hay ideas de hacerte daño, esa llamada es el *4141, Salud Responde o el 131, no una sesión programada.",
-          "Tampoco responde si el formato puede servir: eso está en [¿la terapia online funciona?](/preguntas/la-terapia-online-funciona). La atención local, con sala en Chillán, es [psicólogo online en Chillán](/psicologo-online-chillan). Esta ficha se queda en cómo es la hora.",
+          "Tampoco explica cómo funciona la terapia psicológica online de una semana a la otra. Esa respuesta está en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online): la continuidad, el paso entre sesiones y qué pide la modalidad. Aquí solo está el recorrido de una videollamada.",
+          "Tampoco responde si el formato puede servir: eso está en [¿la terapia online funciona?](/preguntas/la-terapia-online-funciona). El mapa del formato está en [terapia online](/terapia-online). La atención local, con sala en Chillán, es [psicólogo online en Chillán](/psicologo-online-chillan). Esta ficha se queda en cómo es la hora.",
         ],
       },
     ],
@@ -1939,7 +1986,7 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "como-funciona-la-terapia-psicologica-online",
-    updated: "2026-10-27",
+    updated: "2026-10-28",
     navLabel: "Cómo funciona la terapia online",
     title: "¿Cómo funciona la terapia psicológica online? El proceso",
     h1: "¿Cómo funciona la terapia psicológica online?",
@@ -1955,17 +2002,17 @@ const QUESTION_PAGES: InfoPage[] = [
           "Sin esa continuidad, la videollamada se parece a una conversación suelta. El formato pide tratar la hora como una cita: llegar, quedarte el tiempo y volver. Al inicio, lo más habitual es una vez por semana. El plazo total no es el mismo para todo el mundo y esta página no lo fija.",
         ],
         bullets: [
-          "Una hora con inicio y cierre, no un chat abierto.",
-          "Un enlace de videollamada antes de esa hora.",
+          "Varias horas con el mismo tema, no una conversación suelta.",
           "Un paso entre sesiones, concreto y revisable.",
-          "El mismo hilo la semana siguiente.",
+          "Al volver se mira qué pasó con ese paso.",
+          "El minuto a minuto de una sola hora está en la otra pregunta.",
         ],
       },
       {
-        heading: "Qué tiene que estar listo para que el proceso ocurra",
+        heading: "Qué pide la modalidad, no el minuto a minuto",
         paragraphs: [
-          "Internet que no se corte cada minuto, cámara, micrófono y una pieza con puerta. Computador, tablet o celular alcanzan. Si compartes pieza y no hay forma de hablar con reserva, el formato deja de cuidar la confidencialidad y el proceso se traba.",
-          "El detalle de la hora —enlace, entrada, los 50 minutos y el cierre— está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online). Esta pregunta no lo repite.",
+          "Para que el proceso ocurra hacen falta internet que no se corte cada minuto, cámara, micrófono y una pieza con puerta cada vez que te conectas. Computador, tablet o celular alcanzan. Si compartes pieza y no hay forma de hablar con reserva, el formato deja de cuidar la confidencialidad y la continuidad se traba.",
+          "El enlace, la entrada, los 50 minutos y el cierre de una sola hora no se explican aquí. Eso es [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online). Esta pregunta responde cómo funciona la terapia psicológica online: un proceso entre semanas.",
         ],
       },
       {

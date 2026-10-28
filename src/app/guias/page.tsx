@@ -91,8 +91,8 @@ export default function GuiasIndexPage() {
           Si comparas oficios, lee{" "}
           <Link href="/guias/psicologo-o-psiquiatra">psicólogo o psiquiatra</Link>.
           Si el recuerdo sigue activo, están{" "}
-          <Link href="/guias/que-es-el-tept">qué es el TEPT</Link> y{" "}
-          <Link href="/guias/que-es-el-emdr">qué es la terapia EMDR</Link>.
+          <Link href="/guias/que-es-el-tept">qué significa TEPT</Link> y{" "}
+          <Link href="/guias/que-es-el-emdr">qué es el EMDR</Link>.
         </p>
         <p className="guia-disclaimer" role="note">
           Si tú o alguien cercano está en riesgo de hacerse daño, no uses estas
