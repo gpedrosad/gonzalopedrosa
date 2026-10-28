@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { GuiaArticle, guiaMetadata } from "../guia-article";
 
-const title = "Psicólogo o psiquiatra: cuál es la diferencia real";
+const title = "Psicólogo o psiquiatra: diferencia y quién hace terapia";
 const description =
-  "Psicólogo o psiquiatra no son el mismo oficio: el psiquiatra es médico y puede recetar. El psicólogo no indica fármacos. A veces trabajan juntos.";
+  "Psicólogo o psiquiatra no es lo mismo: el psiquiatra es médico y puede recetar. El psicólogo no indica fármacos. Algunos psiquiatras también hacen terapia.";
 const path = "/guias/psicologo-o-psiquiatra";
 
 export const metadata = guiaMetadata({ title, description, path });
@@ -11,13 +11,23 @@ export const metadata = guiaMetadata({ title, description, path });
 export default function GuiaPsicologoPsiquiatraPage() {
   return (
     <GuiaArticle
-      h1="Psicólogo o psiquiatra: cuál es la diferencia"
+      h1="Psicólogo o psiquiatra: diferencia y quién hace terapia"
       breadcrumbLabel="Psicólogo o psiquiatra"
       path={path}
       description={description}
-      updatedIso="2026-10-26"
-      updatedLabel="26 de octubre de 2026"
+      updatedIso="2026-10-28"
+      updatedLabel="28 de octubre de 2026"
       faqs={[
+        {
+          question: "¿Psicólogo o psiquiatra?",
+          answer:
+            "No son el mismo oficio. El psiquiatra es médico y puede recetar. El psicólogo trabaja con psicoterapia y no indica fármacos. A veces se complementan. Elegir uno no significa que el otro esté de más.",
+        },
+        {
+          question: "¿El psiquiatra hace terapia?",
+          answer:
+            "Puede hacerla, y no siempre la hace. Hay consultas centradas en diagnóstico y medicación, y otras que incluyen psicoterapia. No se deduce del título: conviene preguntarlo antes de la hora.",
+        },
         {
           question: "¿El psicólogo puede recetar?",
           answer:
@@ -73,9 +83,19 @@ export default function GuiaPsicologoPsiquiatraPage() {
           note: "El formato por videollamada para cualquier región, distinto de elegir entre psicólogo y psiquiatra.",
         },
         {
+          href: "/preguntas/que-es-la-terapia-cognitivo-conductual",
+          label: "Qué es la terapia cognitivo-conductual",
+          note: "El método de una psicoterapia frecuente, distinto de elegir entre psicólogo y psiquiatra.",
+        },
+        {
           href: "/preguntas/como-funciona-la-terapia-psicologica-online",
           label: "Cómo funciona la terapia psicológica online",
           note: "El proceso de una semana a la otra, si la hora es por videollamada.",
+        },
+        {
+          href: "/preguntas/como-es-una-sesion-de-psicologia-online",
+          label: "Cómo es una sesión de psicología online",
+          note: "El recorrido de una hora, distinto de cómo funciona el proceso.",
         },
       ]}
     >
@@ -113,6 +133,35 @@ export default function GuiaPsicologoPsiquiatraPage() {
         estar más estable con una evaluación a tiempo. Ir al psiquiatra no
         significa que tu caso sea el más grave del sistema, y ver a un
         psicólogo no significa que tu problema “sea solo de cabeza” o inventado.
+      </p>
+
+      <h2>¿El psiquiatra hace terapia?</h2>
+      <p>
+        A veces. Algunos psiquiatras hacen psicoterapia además del diagnóstico
+        y la medicación. Otros concentran la hora en el cuadro médico y derivan
+        la terapia a un psicólogo. Quien busca «psiquiatra terapia» suele
+        preguntar eso: si la consulta incluye un trabajo psicológico o se queda
+        en la revisión del fármaco. Conviene preguntarlo antes de suponer qué
+        incluye la hora. El psicólogo, en la práctica clínica, trabaja con
+        psicoterapia. No receta.
+      </p>
+      <p>
+        Si lo que buscas es el método de una psicoterapia frecuente, está en{" "}
+        <Link href="/preguntas/que-es-la-terapia-cognitivo-conductual">
+          qué es la terapia cognitivo-conductual
+        </Link>
+        . Elegir profesión no es lo mismo que elegir sala o videollamada. El
+        formato para cualquier región de Chile está en{" "}
+        <Link href="/terapia-online">terapia online</Link>. Cómo funciona ese
+        proceso, de una semana a la otra, está en{" "}
+        <Link href="/preguntas/como-funciona-la-terapia-psicologica-online">
+          cómo funciona la terapia psicológica online
+        </Link>
+        . Cómo es una sola hora está en{" "}
+        <Link href="/preguntas/como-es-una-sesion-de-psicologia-online">
+          cómo es una sesión de psicología online
+        </Link>
+        .
       </p>
 
       <h2>Qué hace cada uno en la hora</h2>

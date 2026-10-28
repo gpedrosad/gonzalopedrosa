@@ -116,13 +116,13 @@ export const guides: Guide[] = [
   {
     slug: "que-es-la-terapia-cognitivo-conductual",
     path: "/preguntas/que-es-la-terapia-cognitivo-conductual",
-    title: "Terapia cognitivo-conductual: qué es y cómo se usa",
+    title: "Terapia cognitivo-conductual (TCC): qué es y cómo es",
     description:
-      "La terapia cognitivo-conductual, o TCC, mira pensamientos, emociones y conductas del presente, con un paso entre sesiones. No es pensar en positivo ni un plazo fijo.",
+      "La terapia cognitivo-conductual (TCC) mira pensamientos, emociones y lo que haces ahora, con un paso entre sesiones. No es pensar en positivo ni un plazo fijo.",
     breadcrumbLabel: "Terapia cognitivo-conductual",
-    h1: "Qué es la terapia cognitivo-conductual",
+    h1: "¿Qué es la terapia cognitivo-conductual?",
     lead: cbtLead,
-    updated: "2026-10-25",
+    updated: "2026-10-28",
     sections: [
       {
         heading: "Cómo se reconoce una sesión de TCC",
@@ -149,7 +149,8 @@ export const guides: Guide[] = [
         heading: "Qué puedes hacer entre una lectura y otra",
         paragraphs: [
           "Elige una situación de esta semana y escribe cuatro líneas: qué pasó, qué pensaste, qué sentiste y qué hiciste. No tienes que corregirlo. Ver el círculo ya es información.",
-          "Por videollamada, el mismo mapa se puede hacer si hay privacidad y continuidad. Cómo funciona ese formato en Chile está en [terapia online en Chile](/terapia-online). Si la duda es si el formato puede servir, está en [¿la terapia online funciona?](/preguntas/la-terapia-online-funciona).",
+          "En las primeras conversaciones se nombra un problema, se arma ese mapa y queda un paso chico para la semana. No sales con una orden de pensar en positivo ni con un número de sesiones igual para todo el mundo. Si una herramienta no te calza, decirlo forma parte del método.",
+          "Por videollamada, el mismo mapa se puede hacer si hay privacidad y continuidad. El formato en Chile está en [terapia online en Chile](/terapia-online). Cómo funciona ese proceso, de una semana a la otra, está en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online). Cómo es una hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online). Si la duda es si el formato puede servir, está en [¿la terapia online funciona?](/preguntas/la-terapia-online-funciona).",
         ],
       },
       {
@@ -165,6 +166,8 @@ export const guides: Guide[] = [
       { href: "/preguntas/que-es-la-erp-para-el-toc", label: "Qué es la ERP para el TOC" },
       { href: "/tratamiento-toc-chillan", label: "Terapia ERP para el TOC en Chillán" },
       { href: "/terapia-online", label: "Terapia online en Chile" },
+      { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "Cómo funciona la terapia psicológica online" },
+      { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "Cómo es una sesión de psicología online" },
       { href: "/psicologo-ansiedad-chillan", label: "Ansiedad: información y atención en Chillán" },
       { href: "/preguntas/cuanto-dura-una-terapia-psicologica", label: "¿Cuánto dura una terapia psicológica?" },
     ],
@@ -173,6 +176,11 @@ export const guides: Guide[] = [
         question: "¿La TCC es pensar en positivo?",
         answer:
           "No. Revisa pensamientos que empujan una emoción o una conducta y los contrasta con lo que ocurre. Una frase alegre en el espejo, por sí sola, no es una sesión de TCC.",
+      },
+      {
+        question: "¿Psicoterapia cognitivo-conductual es lo mismo que TCC?",
+        answer:
+          "En esta página, sí. Terapia cognitivo-conductual, psicoterapia cognitivo-conductual y TCC nombran este método. No nombran un plazo ni un resultado.",
       },
       {
         question: "¿La ERP es otra terapia, distinta de la TCC?",
@@ -281,7 +289,7 @@ export const guides: Guide[] = [
         heading: "Dónde se parecen y dónde se enredan",
         paragraphs: [
           "Tensión muscular, sueño cortado, fatiga, dolores de estómago e irritabilidad aparecen en el estrés y en la ansiedad. Por eso una semana muy cargada en la pega puede sentirse igual que un cuadro de ansiedad que ya lleva meses. El calendario ayuda: el estrés de una entrega tiene fecha. La ansiedad se queda después de la fecha.",
-          "También se alimentan. Un período largo de estrés puede dejar la alarma sensible, y después cualquier correo te dispara. El [estrés laboral](/psicologo-estres-laboral-chillan) y el agotamiento prolongado tienen páginas propias cuando el foco es el trabajo.",
+          "También se alimentan. Un período largo de estrés puede dejar la alarma sensible, y después cualquier correo te dispara. Si el agotamiento del trabajo ya no se repone con descanso, la guía de [burnout laboral](/guias/burnout-laboral) lo separa del estrés de un día. El [estrés laboral](/psicologo-estres-laboral-chillan) es la ficha de atención cuando el foco es ese trabajo.",
         ],
       },
       {
@@ -295,6 +303,7 @@ export const guides: Guide[] = [
     ],
     related: [
       { href: "/psicologo-ansiedad-chillan", label: "Ansiedad: información y atención en Chillán" },
+      { href: "/guias/burnout-laboral", label: "Qué es el burnout laboral" },
       { href: "/psicologo-estres-laboral-chillan", label: "Estrés laboral y burnout en Chillán" },
       { href: "/preguntas/como-saber-si-es-burnout", label: "Cómo saber si es burnout" },
       { href: "/preguntas/que-es-un-ataque-de-panico", label: "¿Qué es un ataque de pánico?" },
@@ -479,20 +488,20 @@ export const guides: Guide[] = [
   {
     slug: "que-es-un-ataque-de-panico",
     path: "/preguntas/que-es-un-ataque-de-panico",
-    title: "Ataques de pánico: qué son, cómo se sienten y qué hacer",
+    title: "Ataques de pánico: qué es un ataque y qué puedes hacer",
     description:
-      "Un ataque de pánico es un golpe de miedo que sube en minutos, con el cuerpo en alarma. No es la ansiedad del día. Si el pecho duele y es nuevo, ve a un médico.",
+      "Un ataque de pánico sube en minutos, con el cuerpo en alarma. Los ataques de pánico no son la ansiedad del día. Si el pecho duele y es nuevo, ve a un médico.",
     breadcrumbLabel: "Ataques de pánico",
-    h1: "Qué son los ataques de pánico",
+    h1: "¿Qué es un ataque de pánico?",
     lead: panicLead,
-    updated: "2026-10-25",
+    updated: "2026-10-28",
     sections: [
       {
         heading: "Cómo se reconoce un ataque de pánico",
         paragraphs: [
           "Llega rápido. En pocos minutos el corazón se acelera, falta el aire, tiemblan las manos, aparece sudor frío, mareo o un hormigueo. Hay personas que sienten el cuerpo raro, como si estuvieran lejos de sí mismas. El miedo más frecuente es morirte, volverse loco o perder el control delante de otros.",
           "Después la ola baja. Puedes quedar cansado, asustado y atento al cuerpo por horas. Ese residuo no es un segundo ataque: la alarma sigue sensible. Vigilar el pulso prepara el susto siguiente.",
-          "Puede ocurrir de día o de noche, en la micro, en la pega o en la cama. A veces hay un disparador claro y a veces parece salir de la nada. Si lo que sientes es una alarma pareja, no un golpe de minutos, la pregunta [ansiedad o estrés](/preguntas/ansiedad-o-estres) está más cerca. La ficha de [ansiedad en Chillán](/psicologo-ansiedad-chillan) es la atención de esa alarma, no de este pico.",
+          "Puede ocurrir de día o de noche, en la micro, en la pega o en la cama. A veces hay un disparador claro y a veces parece salir de la nada. Si lo que sientes es una alarma pareja, no un golpe de minutos, la pregunta [ansiedad o estrés](/preguntas/ansiedad-o-estres) está más cerca. Si el cuerpo se queda encendido sin ese pico, los [síntomas físicos de la ansiedad](/preguntas/sintomas-fisicos-de-la-ansiedad) ordenan esa diferencia. La ficha de [ansiedad en Chillán](/psicologo-ansiedad-chillan) es la atención de esa alarma, no de este pico.",
         ],
         bullets: [
           "Sube en minutos y después baja.",
@@ -520,17 +529,27 @@ export const guides: Guide[] = [
         heading: "Cuándo consultar",
         paragraphs: [
           "Pide evaluación médica urgente si el dolor de pecho es nuevo o muy fuerte, si hay desmayo o si falta el aire y no cede. Si aparece una idea de hacerte daño, llama al 131 o a Salud Responde (600 360 7777).",
-          "Conviene conversarlo con un profesional de salud mental si los ataques se repiten, si ya evitas lugares o si la ansiedad del día no baja entre un pico y otro. Esta pregunta define el episodio. La atención local está en la ficha de crisis de pánico.",
+          "Conviene conversarlo con un profesional de salud mental si los ataques de pánico se repiten, si ya evitas lugares o si la ansiedad del día no baja entre un pico y otro. Qué puedes esperar de esa conversación es ordenar el pico: cuánto duró, qué hizo el cuerpo y qué empezaste a evitar después. Esta pregunta define el episodio. No reserva una hora.",
+          "Si esa conversación es por videollamada, el formato en Chile está en [terapia online](/terapia-online). Cómo es una hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online). Cómo funciona el proceso está en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online).",
         ],
       },
     ],
     related: [
       { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer durante un ataque de pánico" },
+      { href: "/preguntas/sintomas-fisicos-de-la-ansiedad", label: "Síntomas físicos de la ansiedad" },
+      { href: "/preguntas/ansiedad-o-estres", label: "Cómo distinguir ansiedad y estrés" },
+      { href: "/terapia-online", label: "Terapia online" },
+      { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "Cómo es una sesión de psicología online" },
+      { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "Cómo funciona la terapia psicológica online" },
       { href: "/psicologo-crisis-de-panico-chillan", label: "Crisis de pánico y agorafobia en Chillán" },
       { href: "/psicologo-ansiedad-chillan", label: "Ansiedad en Chillán: qué es y cómo se trabaja" },
-      { href: "/preguntas/ansiedad-o-estres", label: "Cómo distinguir ansiedad y estrés" },
     ],
     faqs: [
+      {
+        question: "¿Qué son los ataques de pánico?",
+        answer:
+          "Son picos de miedo intenso que suben en minutos, con el cuerpo en alarma, y después bajan. No son la ansiedad pareja de todo el día. Si se repiten, o si evitas lugares por miedo a que vuelvan, conviene una evaluación.",
+      },
       {
         question: "¿Un ataque de pánico puede durar horas?",
         answer:

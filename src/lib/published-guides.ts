@@ -13,7 +13,7 @@ export const PUBLISHED_GUIDES: PublishedGuide[] = [
   },
   {
     href: "/guias/psicologo-o-psiquiatra",
-    title: "Psicólogo o psiquiatra: cuál es la diferencia",
+    title: "Psicólogo o psiquiatra: diferencia y quién hace terapia",
     note: "El psiquiatra es médico y puede recetar. El psicólogo no indica fármacos. Criterios para no elegir a ciegas.",
   },
   {
