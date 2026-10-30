@@ -18,10 +18,10 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Terapia online y terapias online en Chile: terapia psicológica online por videollamada, para cualquier región. También si buscas terapia con psicólogo online.";
+  "Terapia online y psicoterapia online en Chile: videollamada para cualquier región. También terapias online, terapia psicológica online y psicólogo online.";
 
 export const metadata: Metadata = {
-  title: "Terapia online: terapia psicológica online en Chile",
+  title: "Terapia online y psicoterapia online en Chile",
   description,
   alternates: {
     canonical: "/terapia-online",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     locale: "es_CL",
-    title: "Terapia online: terapia psicológica online en Chile",
+    title: "Terapia online y psicoterapia online en Chile",
     description,
     url: `${SITE_URL}/terapia-online`,
     type: "website",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terapia online: terapia psicológica online en Chile",
+    title: "Terapia online y psicoterapia online en Chile",
     description: getTwitterDescription(description),
   },
 };
@@ -49,14 +49,14 @@ const breadcrumbItems = getClusterBreadcrumb(
 
 const terapiaOnlineFAQs = [
   {
-    question: "¿Qué es la terapia online en Chile?",
+    question: "¿Qué es la terapia online y la psicoterapia online?",
     answer:
-      "Es psicoterapia por videollamada para quien está en cualquier región del país. Terapias online, terapia psicológica online y psicólogo online nombran ese mismo formato en esta página. Hay una hora, un enlace y un lugar privado. No es un chat ni una urgencia. La consulta presencial está en Chillán.",
+      "En esta página son la misma videollamada para cualquier región de Chile: una hora, un enlace y un lugar privado. Terapias online, terapia psicológica online y terapia con psicólogo online nombran ese formato. No es un chat ni una urgencia. La consulta presencial está en Chillán. El proceso, la hora y si puede servir están en tres preguntas distintas.",
   },
   {
     question: "¿Terapias online y terapia psicológica online son lo mismo?",
     answer:
-      "En esta página, sí. Terapias online, terapia psicológica online y psicólogo online buscan la videollamada en Chile, no una sede en otra ciudad. El paso a paso de la hora, cómo funciona el proceso y si puede servir están en tres preguntas distintas.",
+      "En esta página, sí, igual que la psicoterapia online. Terapias online, terapia psicológica online y psicoterapia online buscan la videollamada en Chile, no una sede en otra ciudad. El paso a paso de la hora, cómo funciona el proceso y si puede servir están en tres preguntas distintas.",
   },
   {
     question: "¿Qué es la terapia con psicólogo online?",
@@ -85,12 +85,12 @@ const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  serviceType: "Información sobre terapia psicológica online en Chile",
+  serviceType: "Terapia online y psicoterapia online en Chile",
   url: `${SITE_URL}/terapia-online`,
   provider: { "@id": `${SITE_URL}/#persona` },
   areaServed: { "@type": "Country", name: "Chile" },
   description:
-    "Terapia online en Chile: terapias online y terapia psicológica online por videollamada, para cualquier región. La atención local está en Chillán.",
+    "Terapia online y psicoterapia online en Chile: videollamada para cualquier región. La atención local está en Chillán.",
 };
 
 export default function TerapiaOnlinePage() {
@@ -164,7 +164,7 @@ export default function TerapiaOnlinePage() {
             lineHeight: 1.1,
           }}
         >
-          Terapia online en Chile
+          Terapia online y psicoterapia online en Chile
         </h1>
 
         <p
@@ -175,11 +175,13 @@ export default function TerapiaOnlinePage() {
             lineHeight: 1.6,
           }}
         >
-          Terapia online en Chile es psicoterapia por videollamada para
-          cualquier región. Terapias online, terapia psicológica online y
-          terapia con psicólogo online nombran aquí ese mismo formato: una
-          hora, un enlace y un lugar privado. No es un chat ni una urgencia. La
-          consulta presencial, y la ficha local, están en{" "}
+          Terapia online y psicoterapia online, en Chile, son la misma
+          videollamada para cualquier región: una hora, un enlace y un lugar
+          privado. Terapias online, terapia psicológica online y terapia con
+          psicólogo online nombran ese formato en esta página. No es un chat ni
+          una urgencia. Cómo funciona el proceso, cómo es la hora y si puede
+          servir tienen pregunta propia, más abajo. La consulta presencial, y
+          la ficha local, están en{" "}
           <Link href="/psicologo-online-chillan" style={{ color: "#000", textDecoration: "underline" }}>
             psicólogo online en Chillán
           </Link>

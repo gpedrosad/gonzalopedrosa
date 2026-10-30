@@ -58,9 +58,10 @@ const h2Style = {
 } as const;
 
 export function QuestionGuide({ guide }: { guide: Guide }) {
+  const parent = guide.crumbParent ?? { label: "Preguntas", href: "/preguntas" };
   const breadcrumbItems = [
     { label: "Inicio", href: "/" },
-    { label: "Preguntas", href: "/preguntas" },
+    { label: parent.label, href: parent.href },
     { label: guide.breadcrumbLabel },
   ];
 

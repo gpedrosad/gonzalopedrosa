@@ -151,9 +151,9 @@ export default function PreguntasIndexPage() {
           </Link>{" "}
           contestan la pregunta en el primer párrafo.{" "}
           <Link href="/terapia-online" style={{ color: "#111", textDecoration: "underline" }}>
-            Terapia online en Chile
+            Terapia online y psicoterapia online
           </Link>{" "}
-          reúne psicólogo online y terapia psicológica online. Cómo funciona el proceso, cómo es la hora y si
+          reúne terapias online y terapia psicológica online. Cómo funciona el proceso, cómo es la hora y si
           puede servir tienen pregunta propia. Si la duda es el ánimo,{" "}
           <Link href="/preguntas/senales-de-depresion" style={{ color: "#111", textDecoration: "underline" }}>
             cómo saber si tengo depresión

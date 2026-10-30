@@ -101,6 +101,8 @@ export type InfoPage = {
   /** Fecha de esta ficha. Si falta, se usa INFORMATIONAL_UPDATED. */
   updated?: string;
   navLabel: string;
+  /** Si está, la miga sube a esa ficha en vez del índice de guías o preguntas. */
+  crumbParent?: { label: string; href: string };
   title: string;
   h1: string;
   description: string;
@@ -879,14 +881,14 @@ const QUESTION_PAGES: InfoPage[] = [
     {
     cluster: "preguntas",
     slug: "que-es-la-erp-para-el-toc",
-    updated: "2026-10-27",
-    navLabel: "Qué es la ERP para el TOC",
-    title: "Qué es la terapia ERP para el TOC",
-    h1: "Qué es la terapia ERP para el TOC",
+    updated: "2026-10-30",
+    navLabel: "Terapia ERP para el TOC",
+    title: "Terapia ERP para el TOC: qué es y cómo se practica",
+    h1: "¿Qué es la terapia ERP para el TOC?",
     description:
-      "La ERP es exposición con prevención de respuesta: te acercas al miedo del TOC y no haces el ritual. Esta página explica; la atención en Chillán es otra.",
+      "La terapia ERP, o ERP terapia, es exposición con prevención de respuesta para el TOC. Te acercas al miedo y no haces el ritual. Sin un plan para hacerla sola.",
     answer:
-      "ERP significa exposición con prevención de respuesta. En el TOC, te acercas de forma planificada a lo que dispara la obsesión y no haces el ritual que normalmente baja la angustia. El aprendizaje es que la ansiedad sube, se mantiene un rato y puede bajar sin la compulsión.",
+      "La terapia ERP es exposición con prevención de respuesta. En el TOC te acercas, de forma planificada, a lo que dispara la obsesión y no haces el ritual que normalmente baja la angustia. La ansiedad puede subir y bajar sin la compulsión. No es el peor miedo el primer día ni un plan para armarla sin evaluación.",
     sections: [
       {
         heading: "Por qué el ritual no cierra el tema",
@@ -898,7 +900,7 @@ const QUESTION_PAGES: InfoPage[] = [
       {
         heading: "Cómo se ve en la práctica",
         paragraphs: [
-          "Se arma una lista de situaciones de menor a mayor miedo. Se elige una que puedas sostener, se acuerda qué ritual no vas a hacer y se permanece ahí el tiempo pactado. No se parte por la imagen más aterradora ni se hace como castigo. Ese paso se puede conversar por videollamada si el lugar es privado y queda escrito qué ritual no vas a hacer. Cómo funciona ese proceso está en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online). El mapa del formato en Chile está en [terapia online](/terapia-online).",
+          "Se arma una lista de situaciones de menor a mayor miedo. Se elige una que puedas sostener, se acuerda qué ritual no vas a hacer y se permanece ahí el tiempo pactado. No se parte por la imagen más aterradora ni se hace como castigo. Ese paso se puede conversar por videollamada si el lugar es privado y queda escrito qué ritual no vas a hacer. Cómo funciona ese proceso está en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online). El mapa del formato en Chile está en [psicoterapia online](/terapia-online).",
           "La guía CG31 de NICE considera la TCC que incluye ERP como un tratamiento psicológico principal del TOC. Eso orienta la elección del método. No indica que debas diseñarte una exposición intensa sin evaluación, sobre todo si hay riesgo de daño, de contaminación grave o de horas de ritual.",
         ],
         bullets: [
@@ -925,6 +927,11 @@ const QUESTION_PAGES: InfoPage[] = [
     ],
     faqs: [
       {
+        question: "¿Qué es la terapia ERP?",
+        answer:
+          "La terapia ERP, también buscada como ERP terapia, es exposición con prevención de respuesta para el TOC. Te acercas al disparador y no haces el ritual. No es el peor miedo el primer día ni un plan para hacerla sin evaluación.",
+      },
+      {
         question: "¿ERP y EPR son lo mismo?",
         answer:
           "Sí. En español se dice exposición con prevención de respuesta. Las siglas ERP vienen del nombre en inglés. No es otro tratamiento.",
@@ -945,7 +952,7 @@ const QUESTION_PAGES: InfoPage[] = [
       { href: "/preguntas/que-es-la-terapia-cognitivo-conductual", label: "Qué es la terapia cognitivo-conductual" },
       { href: "/preguntas/por-que-la-mente-no-para", label: "Por qué la mente no para" },
       { href: "/tratamiento-toc-chillan", label: "Página de atención para TOC" },
-      { href: "/terapia-online", label: "Terapia online" },
+      { href: "/terapia-online", label: "Psicoterapia online" },
       { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "Cómo funciona la terapia psicológica online" },
     ],
     sources: [NICE_TOC],
@@ -1091,14 +1098,14 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "que-es-el-apego-ansioso",
-    updated: "2026-10-27",
+    updated: "2026-10-30",
     navLabel: "Qué es el apego ansioso",
-    title: "Apego ansioso: qué es y cómo se nota, sin etiqueta",
+    title: "Apego ansioso: qué es, señales y características",
     h1: "¿Qué es el apego ansioso?",
     description:
-      "El apego ansioso es la alarma rápida ante la distancia de alguien que te importa. No es una enfermedad ni una sentencia. Aquí está qué es y cómo se nota.",
+      "El apego ansioso es la alarma rápida si alguien que te importa se aleja. Buscas confirmación y un silencio se vuelve prueba. No es una enfermedad.",
     answer:
-      "El apego ansioso es un patrón: cuando alguien importante se demora, se enfría o no responde, tu alarma de rechazo se enciende rápido. Buscas cercanía, revisas señales y te cuesta quedarte tranquilo hasta tener una confirmación. Es una descripción de esa reacción, no una enfermedad ni una sentencia.",
+      "El apego ansioso es un patrón: cuando alguien importante se demora, se enfría o no responde, tu alarma de rechazo se enciende rápido. Entre las características están buscar cercanía, revisar señales y no quedarte tranquilo hasta tener una confirmación. Es una descripción de esa reacción, no una enfermedad ni una sentencia.",
     sections: [
       {
         heading: "Cómo se nota en el día",
@@ -1125,6 +1132,7 @@ const QUESTION_PAGES: InfoPage[] = [
         paragraphs: [
           "Decirte que estás loco, o que por tener apego ansioso no puedes querer a nadie. Tampoco sirve un test que te encasilla y te da una lista de defectos. El nombre es útil si te muestra la próxima conducta que puedes cambiar.",
           "Si la relación tiene control, humillación o miedo, el problema no es tu estilo de apego. Ahí el paso es protegerte, no trabajar tu tolerancia a la distancia.",
+          "El mapa de los otros estilos está en [estilos de apego en adultos](/guias/estilos-de-apego). Si el ciclo de buscar y retirarse ya es la discusión de la pareja, [comunicación en pareja](/guias/comunicacion-en-pareja) ordena ese circuito. Si conversas el patrón por videollamada, el formato para cualquier región está en [psicoterapia online](/terapia-online).",
         ],
       },
     ],
@@ -1132,7 +1140,7 @@ const QUESTION_PAGES: InfoPage[] = [
       {
         question: "¿Qué es el apego ansioso?",
         answer:
-          "Es un patrón: cuando alguien importante se demora, se enfría o no responde, la alarma de rechazo se enciende rápido. Buscas cercanía y te cuesta quedarte tranquilo hasta tener una confirmación. No es una enfermedad ni una sentencia.",
+          "Es un patrón: cuando alguien importante se demora, se enfría o no responde, la alarma de rechazo se enciende rápido. Características: buscas cercanía, revisas señales y no te quedas tranquilo hasta tener una confirmación. No es una enfermedad ni una sentencia.",
       },
       {
         question: "¿Cuáles son las características del apego ansioso?",
@@ -1156,8 +1164,10 @@ const QUESTION_PAGES: InfoPage[] = [
       },
     ],
     related: [
-      { href: "/guias/estilos-de-apego", label: "Guía de estilos de apego" },
+      { href: "/guias/estilos-de-apego", label: "Estilos de apego en adultos" },
+      { href: "/guias/comunicacion-en-pareja", label: "Comunicación en pareja" },
       { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
+      { href: "/terapia-online", label: "Psicoterapia online" },
       { href: "/psicologo-ruptura-amorosa-chillan", label: "Ruptura, dependencia y relación tóxica" },
     ],
     sources: [APA_APEGO],
@@ -1367,14 +1377,14 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "sintomas-fisicos-de-la-ansiedad",
-    updated: "2026-10-27",
+    updated: "2026-10-30",
     navLabel: "Síntomas físicos de la ansiedad",
-    title: "Síntomas físicos de la ansiedad y qué pueden indicar",
+    title: "Síntomas físicos de la ansiedad: cuáles son y cuándo",
     h1: "Síntomas físicos de la ansiedad",
     description:
-      "Palpitaciones, falta de aire, tensión o malestar digestivo pueden ser ansiedad. Cuándo conviene una revisión médica y qué no confirma un diagnóstico.",
+      "Síntomas físicos de la ansiedad: palpitaciones, falta de aire, tensión o malestar digestivo. Cuáles se describen y cuándo un dolor de pecho pide un médico.",
     answer:
-      "La ansiedad no vive solo en la cabeza. Puede sentirse en el corazón, la respiración, el estómago, los músculos o el sueño. Esas sensaciones son reales. Un síntoma físico no confirma por sí solo un trastorno de ansiedad, y un dolor de pecho nuevo o muy intenso igual pide una revisión médica.",
+      "Los síntomas físicos de la ansiedad pueden sentirse en el corazón, la respiración, el estómago, los músculos o el sueño. Palpitaciones, falta de aire, tensión y malestar digestivo están entre los que más se describen. Esas sensaciones son reales. Un síntoma no confirma por sí solo un trastorno, y un dolor de pecho nuevo o muy intenso pide una revisión médica.",
     sections: [
       {
         heading: "Qué se describe con más frecuencia",
@@ -1406,6 +1416,11 @@ const QUESTION_PAGES: InfoPage[] = [
     ],
     faqs: [
       {
+        question: "¿Cuáles son los síntomas físicos de la ansiedad?",
+        answer:
+          "Los que más se describen son palpitaciones, falta de aire, tensión muscular, malestar digestivo y un sueño que no repone. No tienes que cumplir la lista entera. Un dolor de pecho nuevo, intenso o que no cede se mira con un médico antes de ponerle el nombre de ansiedad.",
+      },
+      {
         question: "¿Si me late el corazón tengo ansiedad?",
         answer:
           "Puede ser una alarma de ansiedad y puede ser otra cosa. Un episodio nuevo, intenso o con dolor de pecho se mira con un médico. La etiqueta viene después, no antes de descartar lo urgente.",
@@ -1427,7 +1442,7 @@ const QUESTION_PAGES: InfoPage[] = [
       { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
       { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer en un ataque de pánico" },
       { href: "/preguntas/que-es-un-ataque-de-panico", label: "Qué es un ataque de pánico" },
-      { href: "/terapia-online", label: "Terapia online" },
+      { href: "/terapia-online", label: "Psicoterapia online" },
       { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "Cómo es una sesión de psicología online" },
     ],
     product: EMDR_PRODUCT,
@@ -1904,8 +1919,9 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "como-es-una-sesion-de-psicologia-online",
-    updated: "2026-10-28",
-    navLabel: "Cómo es una sesión online",
+    updated: "2026-10-30",
+    navLabel: "Cómo es la hora",
+    crumbParent: { label: "Terapia online", href: "/terapia-online" },
     title: "¿Cómo es una sesión de psicología online? Paso a paso",
     h1: "¿Cómo es una sesión de psicología online?",
     description:
@@ -1938,7 +1954,7 @@ const QUESTION_PAGES: InfoPage[] = [
         heading: "4. Al cerrar",
         paragraphs: [
           "La hora tiene cierre. Puedes anotar un paso para los días que vienen: algo concreto, no un propósito enorme. Después se corta la llamada. No queda un chat abierto para seguir la sesión por mensajes.",
-          "Cómo se organiza el proceso de una semana a la otra está en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online). El mapa para cualquier región está en [terapia psicológica online](/terapia-online).",
+          "Cómo se organiza el proceso de una semana a la otra está en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online). El mapa para cualquier región está en [psicoterapia online](/terapia-online).",
         ],
       },
       {
@@ -1986,14 +2002,15 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "como-funciona-la-terapia-psicologica-online",
-    updated: "2026-10-28",
-    navLabel: "Cómo funciona la terapia online",
+    updated: "2026-10-30",
+    navLabel: "Cómo funciona el proceso",
+    crumbParent: { label: "Terapia online", href: "/terapia-online" },
     title: "¿Cómo funciona la terapia psicológica online? El proceso",
     h1: "¿Cómo funciona la terapia psicológica online?",
     description:
-      "Cómo funciona la terapia psicológica online en Chile: un proceso por videollamada, con hora y continuidad. El paso a paso de la sesión está en otra pregunta.",
+      "Cómo funciona la terapia psicológica online: el proceso entre semanas, con hora y continuidad. El mapa de la psicoterapia online está en otra página.",
     answer:
-      "La terapia psicológica online funciona como un proceso, no como un mensaje suelto. Coordinas una hora, recibes un enlace, te conectas en un lugar privado y retomas el mismo hilo la semana siguiente. El minuto a minuto de esa hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online). El mapa del formato está en [terapia online](/terapia-online).",
+      "Cómo funciona la terapia psicológica online se responde aquí como un proceso entre semanas, no como la ficha del formato. Coordinas una hora, recibes un enlace, te conectas en un lugar privado y retomas el mismo hilo la semana siguiente. El minuto a minuto de esa hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online). El mapa para cualquier región está en [terapia online y psicoterapia online](/terapia-online).",
     sections: [
       {
         heading: "De una semana a la siguiente",
@@ -2067,12 +2084,12 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "que-hace-un-especialista-en-estres-postraumatico",
-    updated: "2026-10-27",
-    navLabel: "Especialista en estrés postraumático",
-    title: "Especialista en TEPT y estrés postraumático: qué hace",
+    updated: "2026-10-30",
+    navLabel: "Especialista en TEPT",
+    title: "Especialista en TEPT y estrés postraumático: qué evalúa",
     h1: "¿Qué hace un especialista en TEPT?",
     description:
-      "Un especialista en TEPT evalúa si el recuerdo sigue activo. Es la misma búsqueda que especialista en estrés postraumático. La guía define el cuadro.",
+      "Un especialista en TEPT, o en estrés postraumático, evalúa si el recuerdo sigue activo. No es un directorio. Qué mira y qué terapias se nombran.",
     answer:
       "Un especialista en TEPT, o en estrés postraumático, evalúa si un recuerdo sigue activo y limita la semana, y conoce terapias centradas en el trauma. No pone ese nombre porque leíste una lista. Qué es el cuadro está en [qué es el TEPT](/guias/que-es-el-tept). Esta pregunta se queda en qué hace esa persona.",
     sections: [
@@ -2094,7 +2111,7 @@ const QUESTION_PAGES: InfoPage[] = [
         paragraphs: [
           "La guía de la OMS de 2013 sobre condiciones relacionadas con el estrés nombra, para adultos con TEPT, terapias centradas en el trauma. Entre ellas están la terapia cognitivo-conductual focalizada en el trauma y el EMDR, cuando las aplica personal de salud capacitado. Que una guía las nombre no dice cuál te corresponde ni en cuántas horas.",
           "El EMDR no es un punto que se mueve en una pantalla. El procedimiento completo incluye evaluación, preparación y cierre. Las fases están en la guía de EMDR. La página de EMDR en Chillán es la de atención con ese método. No certifica un resultado.",
-          "Esas terapias también se describen por videollamada cuando hay un lugar privado y continuidad. Eso ya está en la guía de [qué es el TEPT](/guias/que-es-el-tept). El formato en Chile está en [terapia online](/terapia-online). Esta pregunta no certifica a quien escribe ni abre una sede.",
+          "Esas terapias también se describen por videollamada cuando hay un lugar privado y continuidad. Eso ya está en la guía de [qué es el TEPT](/guias/que-es-el-tept). El formato en Chile está en [psicoterapia online](/terapia-online). Esta pregunta no certifica a quien escribe ni abre una sede.",
         ],
       },
       {
@@ -2107,9 +2124,14 @@ const QUESTION_PAGES: InfoPage[] = [
     ],
     faqs: [
       {
+        question: "¿Qué hace un especialista en TEPT?",
+        answer:
+          "Evalúa si un recuerdo sigue activo y limita la semana, y conoce terapias centradas en el trauma. Especialista en TEPT y especialista en estrés postraumático nombran esa misma búsqueda. No es un directorio ni un certificado de quien escribe esta página.",
+      },
+      {
         question: "¿Esas terapias se describen por videollamada?",
         answer:
-          "Sí, cuando hay un lugar privado y continuidad. La guía de qué es el TEPT ya lo dice. El formato en Chile está en la página de terapia online. Esta pregunta no certifica a quien escribe.",
+          "Sí, cuando hay un lugar privado y continuidad. La guía de qué es el TEPT ya lo dice. El formato en Chile está en la página de psicoterapia online. Esta pregunta no certifica a quien escribe.",
       },
       {
         question: "¿Especialista en TEPT y especialista en estrés postraumático es la misma búsqueda?",
@@ -2129,7 +2151,7 @@ const QUESTION_PAGES: InfoPage[] = [
     ],
     related: [
       { href: "/guias/que-es-el-tept", label: "Qué es el TEPT" },
-      { href: "/terapia-online", label: "Terapia online" },
+      { href: "/terapia-online", label: "Psicoterapia online" },
       { href: "/terapia-emdr-chillan", label: "EMDR en Chillán: página de atención" },
       { href: "/estres-postraumatico-chillan", label: "Estrés postraumático en Chillán" },
       { href: "/guias/que-es-el-emdr", label: "Qué es el EMDR" },

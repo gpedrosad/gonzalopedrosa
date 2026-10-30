@@ -92,9 +92,10 @@ export function InformationalArticle({
   const updated = page.updated ?? INFORMATIONAL_UPDATED;
   const hubLabel = cluster === "guias" ? "Guías" : "Preguntas";
   const hubHref = cluster === "guias" ? "/guias" : "/preguntas";
+  const parent = page.crumbParent ?? { label: hubLabel, href: hubHref };
   const breadcrumbItems = [
     { label: "Inicio", href: "/" },
-    { label: hubLabel, href: hubHref },
+    { label: parent.label, href: parent.href },
     { label: page.navLabel },
   ];
   const articleSchema = getArticleSchema({
