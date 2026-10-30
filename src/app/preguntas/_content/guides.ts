@@ -20,6 +20,8 @@ export type Guide = {
   title: string;
   description: string;
   breadcrumbLabel: string;
+  /** Si está, la miga sube a esa ficha en vez del índice de preguntas. */
+  crumbParent?: { label: string; href: string };
   h1: string;
   lead: string;
   sections: GuideSection[];
@@ -49,7 +51,7 @@ const partnerLead =
   "Si tu pareja tiene adicción al juego, protege la plata compartida, deja de cubrir deudas en silencio y habla en un momento tranquilo, con hechos concretos. Puedes ofrecer compañía para una evaluación y también buscar apoyo para ti. No puedes hacer el tratamiento por la otra persona. Si aparece una amenaza de hacerse daño, usa las líneas de urgencia.";
 
 const frequencyLead =
-  "Al comienzo, lo más habitual es una sesión por semana. Esa continuidad ayuda a retomar lo conversado y a probar algo en la vida real antes de que se enfríe. Cuando el malestar baja y ya usas lo aprendido, hay personas que pasan a cada dos semanas. En una crisis corta a veces se acuerda un contacto más seguido. La frecuencia sale del problema, del riesgo y de tu vida práctica.";
+  "Cada cuánto ir al psicólogo no tiene una cifra única. Al comienzo, lo más habitual es una sesión por semana, para retomar lo conversado antes de que se enfríe. Cuando el malestar baja y ya usas lo aprendido, hay personas que pasan a cada dos semanas. En una crisis corta a veces se acuerda un contacto más seguido. La frecuencia sale del problema, del riesgo y de tu vida práctica.";
 
 const panicLead =
   "Un ataque de pánico es un golpe súbito de miedo intenso que llega a su punto máximo en minutos. Puede traer palpitaciones, falta de aire, mareo, sudor, temblor, sensación de irrealidad y miedo a perder el control o a morirte. Después baja, aunque el susto puede quedar un rato. No es lo mismo que la ansiedad de todo el día. Si el dolor de pecho es nuevo o muy fuerte, un médico tiene que descartar un problema cardíaco.";
@@ -200,10 +202,11 @@ export const guides: Guide[] = [
     title: "¿La terapia online funciona? Evidencia y límites",
     description:
       "¿La terapia online funciona? En una revisión, la videollamada no quedó por debajo de la sala en síntomas. No hay un porcentaje único y no cubre una urgencia.",
-    breadcrumbLabel: "Si la terapia online funciona",
+    breadcrumbLabel: "Si la videollamada funciona",
+    crumbParent: { label: "Terapia online", href: "/terapia-online" },
     h1: "¿La terapia online funciona?",
     lead: onlineLead,
-    updated: "2026-10-26",
+    updated: "2026-10-30",
     sections: [
       {
         heading: "Qué se comparó",
@@ -230,13 +233,13 @@ export const guides: Guide[] = [
       {
         heading: "Dónde están el proceso y la hora",
         paragraphs: [
-          "Esta respuesta no explica el formato entero. El mapa para cualquier región de Chile está en [terapia online en Chile](/terapia-online). Cómo funciona el proceso, de una semana a la otra, está en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online).",
+          "Esta respuesta no explica el formato entero ni reemplaza la ficha de terapia online. El mapa para cualquier región de Chile está en [terapia online y psicoterapia online](/terapia-online). Cómo funciona el proceso, de una semana a la otra, está en [cómo funciona la terapia psicológica online](/preguntas/como-funciona-la-terapia-psicologica-online).",
           "El minuto a minuto de la hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online). La atención con sala en Chillán es [psicólogo online en Chillán](/psicologo-online-chillan).",
         ],
       },
     ],
     related: [
-      { href: "/terapia-online", label: "Terapia online en Chile" },
+      { href: "/terapia-online", label: "Psicoterapia online" },
       { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "Cómo funciona la terapia psicológica online" },
       { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "¿Cómo es una sesión de psicología online?" },
       { href: "/terapia-online-vs-presencial-chillan", label: "Terapia online y presencial en Chillán" },
@@ -433,11 +436,12 @@ export const guides: Guide[] = [
     {
     slug: "cada-cuanto-ir-al-psicologo",
     path: "/preguntas/cada-cuanto-ir-al-psicologo",
-    title: "¿Cada cuánto conviene ir al psicólogo?",
+    title: "¿Cada cuánto ir al psicólogo? Una vez por semana",
     description:
-      "Al inicio suele convenir una sesión por semana. Después el ritmo puede espaciarse. Qué mirar para elegir la frecuencia.",
+      "Cada cuánto ir al psicólogo: al inicio suele ser una vez por semana. Después puedes espaciar. Qué mirar si faltas, sin un número único de horas.",
     breadcrumbLabel: "Frecuencia de sesiones",
-    h1: "¿Cada cuánto conviene ir al psicólogo?",
+    h1: "¿Cada cuánto ir al psicólogo?",
+    updated: "2026-10-30",
     lead: frequencyLead,
     sections: [
       {
@@ -460,7 +464,7 @@ export const guides: Guide[] = [
         heading: "Qué mirar si faltas seguido",
         paragraphs: [
           "Faltar una vez por un imprevisto forma parte de la vida. Faltar seguido pide una conversación: si el horario no calza, si el tema asusta, si la sesión no se siente útil, o si la plata de la hora compite con otra necesidad. Cada una de esas razones tiene una salida distinta.",
-          "Llegar tarde y salir corriendo también cambia la frecuencia real. Media hora alcanzando a conectarte no es una sesión semanal. Si la terapia es online, entra a la hora con el enlace listo. Cómo es esa hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online). El formato para cualquier región está en [terapia online en Chile](/terapia-online).",
+          "Llegar tarde y salir corriendo también cambia la frecuencia real. Media hora alcanzando a conectarte no es una sesión semanal. Si la terapia es online, entra a la hora con el enlace listo. Cómo es esa hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online). El formato para cualquier región está en [psicoterapia online](/terapia-online).",
           "Revisa el ritmo cada cierto tiempo, con hechos: qué practicaste, qué mejoró y qué sigue igual. La frecuencia es un acuerdo vivo. Se ajusta cuando cambia el problema, no por costumbre ni por culpa.",
         ],
       },
@@ -468,7 +472,7 @@ export const guides: Guide[] = [
     related: [
       { href: "/primera-consulta-psicologo-chillan", label: "Qué ocurre en la primera consulta" },
       { href: "/cuando-ir-al-psicologo-chillan", label: "Cuándo ir al psicólogo" },
-      { href: "/terapia-online", label: "Terapia online en Chile" },
+      { href: "/terapia-online", label: "Terapia online" },
       { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "Cómo es una sesión de psicología online" },
       { href: "/preguntas/cuanto-dura-una-terapia-psicologica", label: "¿Cuánto dura una terapia psicológica?" },
     ],

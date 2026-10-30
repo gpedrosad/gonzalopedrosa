@@ -2,6 +2,10 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-10-30
+
+- Hub `/terapia-online` toma «terapia online» y «psicoterapia online». Las preguntas del formato quedan en su pregunta (miga hacia el hub, ancla distinta). Snippets de ERP, TEPT, apego ansioso, frecuencia y síntomas físicos. Detalle: [lote](../../docs/seo-lote-2026-10-30.md).
+
 ## 2026-10-26
 
 - Clúster online nacional: `/terapia-online` queda como hub de Chile (terapia online, psicólogo online, terapia psicológica online). Chillán sigue como ficha local. Las tres preguntas online se separan: proceso, evidencia citada (Norwood 2018, sin porcentaje) y sesión paso a paso. Detalle: [lote](../../docs/seo-lote-2026-10-26.md).
