@@ -41,6 +41,13 @@ export function OrganicReadFooter() {
           <Link href="/preguntas" style={{ color: "#111" }}>
             Preguntas
           </Link>
+          {" · "}
+          <Link
+            href="/guias/como-elegir-psicologo-online"
+            style={{ color: "#111" }}
+          >
+            Elegir psicólogo online
+          </Link>
         </p>
       </nav>
     </footer>
