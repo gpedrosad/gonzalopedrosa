@@ -797,12 +797,12 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
   {
     cluster: "guias",
     slug: "familiar-con-problema-de-alcohol",
-    updated: "2026-10-18",
+    updated: "2026-11-03",
     navLabel: "Familiar con problema de alcohol",
-    title: "Familiar con alcohol: señales y cómo puedes ayudar",
+    title: "Familiar con problema de alcohol: señales y qué hacer",
     h1: "Cómo reconocer un problema con el alcohol y ayudar a un familiar",
     description:
-      "Señales de que el alcohol ya ordena la vida de un familiar, cómo conversar y qué no ayuda. No diagnostica y no reemplaza una urgencia médica.",
+      "Señales de que el alcohol ya ordena la vida de un familiar, cómo conversar y qué no ayuda en casa. No diagnostica ni reemplaza una urgencia médica.",
     answer:
       "Una relación problemática con el alcohol no se define solo por la cantidad. Importa si la bebida ya decide el ánimo, el sueño, la plata o las peleas, y si los intentos de parar duran menos de lo que la persona se promete. Desde la familia puedes describir lo que ves, cuidar tus límites y pedir ayuda. No puedes controlar el trago de otra persona ni diagnosticarla.",
     sections: [
@@ -1846,19 +1846,19 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "como-ayuda-la-terapia-tras-abuso-en-la-infancia",
-    updated: "2026-10-22",
-    navLabel: "Terapia tras abuso en la infancia",
-    title: "Terapia para un adulto que vivió abuso en la infancia",
-    h1: "¿Cómo ayuda la terapia a un adulto que vivió abuso en la infancia?",
+    updated: "2026-11-03",
+    navLabel: "Terapia tras maltrato o abuso",
+    title: "Terapia para adultos tras maltrato o abuso en la infancia",
+    h1: "¿Cómo ayuda la terapia a un adulto que vivió maltrato o abuso en la infancia?",
     description:
-      "La terapia puede acompañar a un adulto que vivió abuso en la infancia, sin el relato completo y sin un plazo. El TEPT y el EMDR están en las guías.",
+      "Cómo puede acompañar la terapia a un adulto que vivió maltrato o abuso en la infancia: sin el relato completo, sin un plazo y a tu ritmo.",
     answer:
-      "La terapia puede acompañar a un adulto que vivió abuso en la infancia cuando la vergüenza, las imágenes o la guardia alta siguen en la semana. No pide el relato completo el primer día y no promete un plazo ni un resultado. Esta pregunta explica eso. No diagnostica y no abre una ciudad.",
+      "La terapia puede acompañar a un adulto que vivió maltrato o abuso en la infancia cuando la vergüenza, las imágenes o la guardia alta siguen en la semana. No pide el relato completo el primer día y no promete un plazo ni un resultado. Esta pregunta explica eso. No diagnostica y no abre una ciudad.",
     sections: [
       {
         heading: "Qué puede quedar años después",
         paragraphs: [
-          "Un abuso, también sexual, puede dejar la alarma encendida: el hecho ya pasó y vuelven imágenes, sueños o una vergüenza que se siente de ahora. No todo momento difícil es un trauma, y no todo trauma es un trastorno de estrés postraumático. La pregunta de qué es un trauma psicológico separa esas palabras. La guía de TEPT sigue con el cuadro.",
+          "Un maltrato o un abuso, también sexual, puede dejar la alarma encendida: el hecho ya pasó y vuelven imágenes, sueños o una vergüenza que se siente de ahora. Aquí cuentan el maltrato físico, el maltrato emocional (gritos, humillación, amenazas), la negligencia y el abuso sexual. Ninguno pesa más que otro en esta lectura. No todo momento difícil es un trauma, y no todo trauma es un trastorno de estrés postraumático. La pregunta de qué es un trauma psicológico separa esas palabras. La guía de TEPT sigue con el cuadro.",
           "Que haya ocurrido en la infancia no cierra el tema en la adultez. Tampoco lo convierte, por sí solo, en un diagnóstico. Sirve notar si el recuerdo organiza la semana. El nombre lo pone una evaluación, no esta lectura.",
         ],
         bullets: [
@@ -1901,6 +1901,11 @@ const QUESTION_PAGES: InfoPage[] = [
         answer:
           "No para reprocesarlo. El ejercicio es para un malestar leve. Si la escena vuelve y no puedes dejarla, páralo.",
       },
+      {
+        question: "¿Y si fue maltrato y no abuso sexual?",
+        answer:
+          "También se puede conversar. El maltrato físico, el emocional y la negligencia son motivos para hablarlo, igual que el abuso sexual. No necesitas ordenar los hechos ni probar que fue grave para pedir una evaluación.",
+      },
     ],
     related: [
       { href: "/psicologo-abuso-sexual-chillan", label: "Atención en Chillán por abuso sexual" },
@@ -1910,6 +1915,7 @@ const QUESTION_PAGES: InfoPage[] = [
       { href: "/guias/que-es-el-emdr", label: "Qué es el EMDR" },
       { href: "/terapia-emdr-chillan", label: "EMDR en Chillán: página de atención" },
       { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "Límites del ejercicio bilateral" },
+      { href: "/preguntas/como-funciona-la-terapia-psicologica-online", label: "Cómo funciona la terapia online" },
     ],
     product: EMDR_PRODUCT,
     safety:

@@ -261,7 +261,7 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
   { route: "/guias/regulacion-emocional", lastModified: "2026-10-23", changeFrequency: "monthly", priority: 0.7 },
   {
     route: "/guias/familiar-con-problema-de-alcohol",
-    lastModified: "2026-10-18",
+    lastModified: "2026-11-03",
     changeFrequency: "monthly",
     priority: 0.72,
   },
@@ -286,7 +286,7 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
   { route: "/preguntas/que-es-un-trauma-psicologico", lastModified: "2026-10-25", changeFrequency: "monthly", priority: 0.72 },
   {
     route: "/preguntas/como-ayuda-la-terapia-tras-abuso-en-la-infancia",
-    lastModified: "2026-10-22",
+    lastModified: "2026-11-03",
     changeFrequency: "monthly",
     priority: 0.72,
   },
