@@ -382,12 +382,13 @@ export const guides: Guide[] = [
   {
     slug: "pareja-con-adiccion-al-juego",
     path: "/preguntas/pareja-con-adiccion-al-juego",
-    title: "¿Qué hacer si tu pareja tiene ludopatía?",
+    title: "Pareja con ludopatía: qué hacer y cómo protegerte",
     description:
-      "Protege la plata compartida, habla con hechos y busca apoyo para ti. No puedes hacer el tratamiento por la otra persona.",
+      "Qué hacer si tu pareja tiene adicción al juego: proteger la plata compartida, hablar con hechos y buscar apoyo para ti, sin hacer su tratamiento.",
     breadcrumbLabel: "Pareja y juego",
     h1: "¿Qué hacer si tu pareja tiene adicción al juego?",
     lead: partnerLead,
+    updated: "2026-11-04",
     sections: [
       {
         heading: "Qué puedes hacer esta semana",
@@ -419,6 +420,7 @@ export const guides: Guide[] = [
       { href: "/psicologo-adicciones-chillan", label: "Psicólogo para adicciones en Chillán" },
       { href: "/terapia-de-pareja-chillan", label: "Terapia de pareja en Chillán" },
       { href: "/preguntas/la-ludopatia-es-una-enfermedad", label: "¿La ludopatía es una enfermedad?" },
+      { href: "/guias/familiar-con-ludopatia", label: "Ayudar a un familiar con adicción al juego" },
     ],
     faqs: [
       {
@@ -574,12 +576,13 @@ export const guides: Guide[] = [
   {
     slug: "cuanto-dura-un-duelo",
     path: "/preguntas/cuanto-dura-un-duelo",
-    title: "¿Cuánto dura un duelo normal?",
+    title: "¿Cuánto dura un duelo? No hay un plazo único",
     description:
-      "El duelo no tiene una fecha de término. El dolor cambia de forma y puede volver. Cuándo conviene pedir una evaluación.",
+      "No hay un plazo único: el dolor cambia y vuelve en olas. Qué umbrales usan el DSM-5-TR y la CIE-11, y cuándo conviene pedir una evaluación.",
     breadcrumbLabel: "Duración del duelo",
     h1: "¿Cuánto dura un duelo normal?",
     lead: griefLead,
+    updated: "2026-11-04",
     sections: [
       {
         heading: "No hay un calendario único",
