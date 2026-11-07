@@ -287,6 +287,44 @@ export default function TerapiaOnlinePage() {
               lineHeight: 1.3,
             }}
           >
+            Guías para decidir con calma
+          </h2>
+          <p style={{ color: "#444", lineHeight: 1.7, margin: "0 0 0.75rem" }}>
+            Tres lecturas cortas sobre el formato online, sin repetir el proceso
+            ni la evidencia de las preguntas de arriba:
+          </p>
+          <ul style={{ margin: 0, paddingLeft: "1.2rem", color: "#444", lineHeight: 1.7 }}>
+            <li>
+              <Link href="/guias/como-elegir-psicologo-online" style={{ color: "#000", textDecoration: "underline" }}>
+                Cómo elegir psicólogo online en Chile
+              </Link>
+              : qué mirar antes de agendar.
+            </li>
+            <li>
+              <Link href="/guias/terapia-online-es-segura" style={{ color: "#000", textDecoration: "underline" }}>
+                ¿Es segura la terapia online?
+              </Link>
+              : confidencialidad, plataforma y límites.
+            </li>
+            <li>
+              <Link href="/guias/terapia-online-o-presencial" style={{ color: "#000", textDecoration: "underline" }}>
+                Terapia online o presencial
+              </Link>
+              : criterios prácticos para elegir el formato.
+            </li>
+          </ul>
+        </section>
+
+        <section style={{ marginBottom: "2.5rem" }}>
+          <h2
+            style={{
+              fontSize: "1.35rem",
+              fontWeight: 600,
+              letterSpacing: "-0.02em",
+              marginBottom: "0.75rem",
+              lineHeight: 1.3,
+            }}
+          >
             La sala en Chillán es otra ficha
           </h2>
           <p style={{ color: "#444", lineHeight: 1.7, margin: 0 }}>

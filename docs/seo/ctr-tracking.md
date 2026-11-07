@@ -11,9 +11,7 @@ Métricas de antes: 7 días = 2026-10-27..2026-11-02; 90 días = 2026-08-05..202
 | /preguntas/pareja-con-adiccion-al-juego | pareja con ludopatía / pareja con adicción al juego | 0/51/0 %/7,6 (prev7 1/34) | 1/85/1,2 %/7,5 | «¿Qué hacer si tu pareja tiene ludopatía?» → «Pareja con ludopatía: qué hacer y cómo protegerte» | «Protege la plata compartida, habla con hechos y busca apoyo para ti. No puedes hacer el tratamiento por la otra persona.» → «Qué hacer si tu pareja tiene adicción al juego: proteger la plata compartida, hablar con hechos y buscar apoyo para ti, sin hacer su tratamiento.» | sin cambio («¿Qué hacer si tu pareja tiene adicción al juego?») |
 | /preguntas/cuanto-dura-un-duelo | cuánto dura un duelo | 1/20/5 %/12,2 (prev7 0/5, pos 40,2) | 1/25/4 %/17,8 | «¿Cuánto dura un duelo normal?» → «¿Cuánto dura un duelo? No hay un plazo único» | «El duelo no tiene una fecha de término. El dolor cambia de forma y puede volver. Cuándo conviene pedir una evaluación.» → «No hay un plazo único: el dolor cambia y vuelve en olas. Qué umbrales usan el DSM-5-TR y la CIE-11, y cuándo conviene pedir una evaluación.» | sin cambio |
 
-### Propuestas fechadas 2026-11-04 (no aplicadas porque las páginas se editaron el 2026-10-30)
-
-Aplicar desde el 2026-11-06.
+### Propuestas fechadas 2026-11-04 — APLICADAS el 2026-11-07
 
 - /preguntas/sintomas-fisicos-de-la-ansiedad: 7d 0/229, CTR 0 %, pos 21,6 (90d 0/239).
   - Consultas: «ataques de ansiedad síntomas físicos» 0/10 (pos 5,7); «síntomas de la ansiedad en el cuerpo» 0/9 (pos 7,2); «sintomas de ansiedad» 0/9 (pos 8,6); «ataque de panico boca seca» 0/7 (pos 4,6); «síntomas físicos de la ansiedad» 0/6 (pos 4,7).
@@ -24,3 +22,15 @@ Aplicar desde el 2026-11-06.
   - Title: «¿Cada cuánto ir al psicólogo? Una vez por semana» → «¿Cada cuánto ir al psicólogo? Frecuencia de las citas».
   - Description: → «Al inicio suele ser una vez por semana y después se puede espaciar. Qué considerar para definir la frecuencia y cuándo conviene ajustarla.» (138).
   - H1: sin cambio.
+
+## 2026-11-07 (medir el 2026-11-21)
+
+Métricas de antes: 7 días = 2026-10-31..2026-11-06; 90 días según GSC del run. Search Console anonimiza muchas consultas.
+
+| URL | Consulta objetivo | Antes 7d (clics/impr/CTR/pos) | Title antes → después | Description / H1 | Notas |
+|---|---|---|---|---|---|
+| /preguntas/sintomas-fisicos-de-la-ansiedad | síntomas físicos de la ansiedad / ataques de ansiedad síntomas físicos | 0/283/0 %/27,6 (90d similar) | «Síntomas físicos de la ansiedad: cuáles son y cuándo» → «Síntomas físicos de la ansiedad en el cuerpo» | H1 → «…: qué se siente en el cuerpo». Desc menciona palpitaciones, falta de aire, sudor, boca seca o tensión (el cuerpo ya citaba sudor y boca seca vía NICE). | Propuesta 11-04 aplicada |
+| /preguntas/cada-cuanto-ir-al-psicologo | cada cuánto ir al psicólogo | 0/68/0 %/9,7 | «¿Cada cuánto ir al psicólogo? Una vez por semana» → «¿Cada cuánto ir al psicólogo? Frecuencia de las citas» | H1 sin cambio. Desc: semanal al inicio y luego espaciar. | Propuesta 11-04 aplicada |
+
+También el 2026-11-07: enlaces internos del hub `/terapia-online` y del índice `/guias` a las guías `/guias/como-elegir-psicologo-online` (31-oct), `/guias/terapia-online-es-segura` (1-nov) y `/guias/terapia-online-o-presencial` (2-nov); las tres entram en `PUBLISHED_GUIDES`. Cannib «terapia online»: se refuerza `/preguntas/como-funciona-la-terapia-psicologica-online` con enlaces; title sin cambio (pos profunda, CTR 0). Prior CTR de pareja/duelo sigue midiendo el **2026-11-18**.
+
