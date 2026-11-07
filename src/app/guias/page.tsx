@@ -55,7 +55,7 @@ const itemList = {
   description,
   url,
   inLanguage: "es-CL",
-  dateModified: "2026-10-25",
+  dateModified: "2026-11-07",
   isPartOf: `${SITE_URL}/`,
   mainEntity: {
     "@type": "ItemList",
@@ -93,6 +93,10 @@ export default function GuiasIndexPage() {
           Si el recuerdo sigue activo, están{" "}
           <Link href="/guias/que-es-el-tept">qué significa TEPT</Link> y{" "}
           <Link href="/guias/que-es-el-emdr">qué es el EMDR</Link>.
+          Sobre el formato online están{" "}
+          <Link href="/guias/como-elegir-psicologo-online">cómo elegir psicólogo online</Link>,{" "}
+          <Link href="/guias/terapia-online-es-segura">si la terapia online es segura</Link> y{" "}
+          <Link href="/guias/terapia-online-o-presencial">online o presencial</Link>.
         </p>
         <p className="guia-disclaimer" role="note">
           Si tú o alguien cercano está en riesgo de hacerse daño, no uses estas

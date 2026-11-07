@@ -1377,12 +1377,12 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "sintomas-fisicos-de-la-ansiedad",
-    updated: "2026-10-30",
+    updated: "2026-11-07",
     navLabel: "Síntomas físicos de la ansiedad",
-    title: "Síntomas físicos de la ansiedad: cuáles son y cuándo",
-    h1: "Síntomas físicos de la ansiedad",
+    title: "Síntomas físicos de la ansiedad en el cuerpo",
+    h1: "Síntomas físicos de la ansiedad: qué se siente en el cuerpo",
     description:
-      "Síntomas físicos de la ansiedad: palpitaciones, falta de aire, tensión o malestar digestivo. Cuáles se describen y cuándo un dolor de pecho pide un médico.",
+      "Palpitaciones, falta de aire, sudor, boca seca o tensión: qué se siente en el cuerpo con ansiedad y cuándo un síntoma pide evaluación médica.",
     answer:
       "Los síntomas físicos de la ansiedad pueden sentirse en el corazón, la respiración, el estómago, los músculos o el sueño. Palpitaciones, falta de aire, tensión y malestar digestivo están entre los que más se describen. Esas sensaciones son reales. Un síntoma no confirma por sí solo un trastorno, y un dolor de pecho nuevo o muy intenso pide una revisión médica.",
     sections: [

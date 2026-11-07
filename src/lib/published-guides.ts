@@ -7,6 +7,21 @@ export type PublishedGuide = {
 /** Guías estáticas que ya estaban en main. El hub y el directorio las suman a las de informational-content. */
 export const PUBLISHED_GUIDES: PublishedGuide[] = [
   {
+    href: "/guias/como-elegir-psicologo-online",
+    title: "Cómo elegir psicólogo online en Chile",
+    note: "Cómo verificar que está habilitado, qué preguntar antes de la primera sesión, privacidad y señales de alerta.",
+  },
+  {
+    href: "/guias/terapia-online-es-segura",
+    title: "¿Es segura la terapia online? Confidencialidad y límites",
+    note: "Confidencialidad, grabaciones, desventajas del formato y qué hacer ante una crisis en sesión.",
+  },
+  {
+    href: "/guias/terapia-online-o-presencial",
+    title: "Terapia online o presencial: cómo elegir el formato",
+    note: "Criterios prácticos: lugar privado, tiempos, horarios, motivo de consulta y qué cambia en cada formato.",
+  },
+  {
     href: "/guias/familiar-con-ludopatia",
     title: "Ayudar a un familiar con adicción al juego",
     note: "Señales que ve la familia, cómo conversar y cómo dejar de financiar la apuesta sin abandonar a la persona.",
