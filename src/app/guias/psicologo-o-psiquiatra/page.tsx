@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { GuiaArticle, guiaMetadata } from "../guia-article";
 
-const title = "Psicólogo o psiquiatra: diferencia y quién hace terapia";
+const title = "Psicólogo o psiquiatra: diferencia, terapia y quién receta";
 const description =
-  "Psicólogo o psiquiatra no es lo mismo: el psiquiatra es médico y puede recetar. El psicólogo no indica fármacos. Algunos psiquiatras también hacen terapia.";
+  "El psiquiatra es médico y puede recetar; el psicólogo hace psicoterapia y no indica fármacos. Cuándo conviene sumar a un psiquiatra y si hace terapia.";
 const path = "/guias/psicologo-o-psiquiatra";
 
 export const metadata = guiaMetadata({ title, description, path });

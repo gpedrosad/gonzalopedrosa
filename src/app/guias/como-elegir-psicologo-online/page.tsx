@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { GuiaArticle, guiaMetadata } from "../guia-article";
 
-const title = "Cómo elegir psicólogo online en Chile";
+const title = "Cómo elegir psicólogo online en Chile: qué revisar";
+const h1 = "Cómo elegir psicólogo online en Chile";
 const description =
-  "Cómo verificar que un psicólogo online está habilitado en Chile, qué preguntar antes de la primera sesión, privacidad, plataforma y señales de alerta.";
+  "Verifica la habilitación en el registro de la Superintendencia de Salud, qué preguntar antes de la primera hora, privacidad y cuándo no conviene online.";
 const path = "/guias/como-elegir-psicologo-online";
 
 export const metadata = guiaMetadata({ title, description, path });
@@ -11,7 +12,7 @@ export const metadata = guiaMetadata({ title, description, path });
 export default function GuiaComoElegirPsicologoOnlinePage() {
   return (
     <GuiaArticle
-      h1={title}
+      h1={h1}
       breadcrumbLabel="Elegir psicólogo online"
       path={path}
       description={description}

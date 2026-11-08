@@ -199,9 +199,9 @@ export const guides: Guide[] = [
   {
     slug: "la-terapia-online-funciona",
     path: "/preguntas/la-terapia-online-funciona",
-    title: "¿La terapia online funciona? Evidencia y límites",
+    title: "¿La terapia online funciona? Evidencia y cuándo queda corta",
     description:
-      "¿La terapia online funciona? En una revisión, la videollamada no quedó por debajo de la sala en síntomas. No hay un porcentaje único y no cubre una urgencia.",
+      "Qué dice una revisión de estudios sobre psicoterapia por videollamada, qué no dice y cuándo queda corta: urgencias, falta de privacidad o mala conexión.",
     breadcrumbLabel: "Si la videollamada funciona",
     crumbParent: { label: "Terapia online", href: "/terapia-online" },
     h1: "¿La terapia online funciona?",
