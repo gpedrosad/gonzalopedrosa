@@ -34,3 +34,12 @@ Métricas de antes: 7 días = 2026-10-31..2026-11-06; 90 días según GSC del ru
 
 También el 2026-11-07: enlaces internos del hub `/terapia-online` y del índice `/guias` a las guías `/guias/como-elegir-psicologo-online` (31-oct), `/guias/terapia-online-es-segura` (1-nov) y `/guias/terapia-online-o-presencial` (2-nov); las tres entram en `PUBLISHED_GUIDES`. Cannib «terapia online»: se refuerza `/preguntas/como-funciona-la-terapia-psicologica-online` con enlaces; title sin cambio (pos profunda, CTR 0). Prior CTR de pareja/duelo sigue midiendo el **2026-11-18**.
 
+## 2026-11-08 — CTR test Opus 5.5 (medir el 2026-11-22)
+
+Solo title y meta description (H1 sin cambio). No se tocan `/ads`, `/sitelink` ni fichas locales de Chillán. Baseline del draft aprobado (métricas de página). Consulta objetivo: la query con más impresiones documentada para esa URL.
+
+| URL | Consulta objetivo | Antes (clics/impr/CTR/pos) | Title antes → después | Description antes → después | H1 |
+|---|---|---|---|---|---|
+| /preguntas/que-es-la-erp-para-el-toc | terapia erp | 0/57/0 %/6,96 | «Terapia ERP para el TOC: qué es y cómo se practica» → «Terapia ERP para el TOC: qué es y cómo funciona» | «La terapia ERP, o ERP terapia, es exposición con prevención de respuesta para el TOC. Te acercas al miedo y no haces el ritual. Sin un plan para hacerla sola.» → «La ERP (o EPR) es exposición con prevención de respuesta: te acercas a lo que dispara la obsesión sin hacer el ritual. Qué no es y errores comunes.» | sin cambio («¿Qué es la terapia ERP para el TOC?») |
+| /preguntas/que-hace-un-especialista-en-estres-postraumatico | especialista en tept | 0/55/0 %/14,85 | «Especialista en TEPT y estrés postraumático: qué evalúa» → «¿Qué hace un especialista en estrés postraumático?» | «Un especialista en TEPT, o en estrés postraumático, evalúa si el recuerdo sigue activo. No es un directorio. Qué mira y qué terapias se nombran.» → «Qué mira un especialista en TEPT: si el recuerdo sigue activo, la evitación y la alerta. Qué terapias nombra la OMS. Guía informativa, no un directorio.» | sin cambio («¿Qué hace un especialista en TEPT?») |
+
