@@ -2011,10 +2011,10 @@ const QUESTION_PAGES: InfoPage[] = [
     updated: "2026-10-30",
     navLabel: "Cómo funciona el proceso",
     crumbParent: { label: "Terapia online", href: "/terapia-online" },
-    title: "¿Cómo funciona la terapia psicológica online? El proceso",
+    title: "Cómo funciona la terapia psicológica online, semana a semana",
     h1: "¿Cómo funciona la terapia psicológica online?",
     description:
-      "Cómo funciona la terapia psicológica online: el proceso entre semanas, con hora y continuidad. El mapa de la psicoterapia online está en otra página.",
+      "Por videollamada: coordinas una hora, te conectas en un lugar privado y retomas el mismo hilo la semana siguiente. Qué pide el formato y sus límites.",
     answer:
       "Cómo funciona la terapia psicológica online se responde aquí como un proceso entre semanas, no como la ficha del formato. Coordinas una hora, recibes un enlace, te conectas en un lugar privado y retomas el mismo hilo la semana siguiente. El minuto a minuto de esa hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online). El mapa para cualquier región está en [terapia online y psicoterapia online](/terapia-online).",
     sections: [
@@ -2174,10 +2174,10 @@ const QUESTION_PAGES: InfoPage[] = [
     slug: "reembolso-isapre-terapia-online",
     updated: "2026-10-27",
     navLabel: "Reembolso Isapre online",
-    title: "Psicólogo con reembolso Isapre: terapia online en Chile",
+    title: "¿Cómo funciona el reembolso Isapre en la terapia online?",
     h1: "¿Cómo funciona el reembolso Isapre en la terapia online?",
     description:
-      "Psicólogo con reembolso Isapre: en la terapia online la boleta se emite el mismo día y no hay convenio directo. El porcentaje lo define tu plan, no esta página.",
+      "Con la boleta de honorarios, sin convenio directo: sirve para videollamada y sala. El porcentaje y el tope los define tu plan; confírmalos en tu Isapre.",
     answer:
       "Un psicólogo con reembolso Isapre, en lo que este sitio ya publica para la terapia online, no tiene convenio directo: emite boleta de honorarios el mismo día y tú la presentas en tu Isapre. El porcentaje lo define tu plan, no esta página. La videollamada y la sala usan esa misma boleta.",
     sections: [
