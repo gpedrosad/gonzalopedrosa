@@ -883,10 +883,10 @@ const QUESTION_PAGES: InfoPage[] = [
     slug: "que-es-la-erp-para-el-toc",
     updated: "2026-10-30",
     navLabel: "Terapia ERP para el TOC",
-    title: "Terapia ERP para el TOC: qué es y cómo se practica",
+    title: "Terapia ERP para el TOC: qué es y cómo funciona",
     h1: "¿Qué es la terapia ERP para el TOC?",
     description:
-      "La terapia ERP, o ERP terapia, es exposición con prevención de respuesta para el TOC. Te acercas al miedo y no haces el ritual. Sin un plan para hacerla sola.",
+      "La ERP (o EPR) es exposición con prevención de respuesta: te acercas a lo que dispara la obsesión sin hacer el ritual. Qué no es y errores comunes.",
     answer:
       "La terapia ERP es exposición con prevención de respuesta. En el TOC te acercas, de forma planificada, a lo que dispara la obsesión y no haces el ritual que normalmente baja la angustia. La ansiedad puede subir y bajar sin la compulsión. No es el peor miedo el primer día ni un plan para armarla sin evaluación.",
     sections: [
@@ -2092,10 +2092,10 @@ const QUESTION_PAGES: InfoPage[] = [
     slug: "que-hace-un-especialista-en-estres-postraumatico",
     updated: "2026-10-30",
     navLabel: "Especialista en TEPT",
-    title: "Especialista en TEPT y estrés postraumático: qué evalúa",
+    title: "¿Qué hace un especialista en estrés postraumático?",
     h1: "¿Qué hace un especialista en TEPT?",
     description:
-      "Un especialista en TEPT, o en estrés postraumático, evalúa si el recuerdo sigue activo. No es un directorio. Qué mira y qué terapias se nombran.",
+      "Qué mira un especialista en TEPT: si el recuerdo sigue activo, la evitación y la alerta. Qué terapias nombra la OMS. Guía informativa, no un directorio.",
     answer:
       "Un especialista en TEPT, o en estrés postraumático, evalúa si un recuerdo sigue activo y limita la semana, y conoce terapias centradas en el trauma. No pone ese nombre porque leíste una lista. Qué es el cuadro está en [qué es el TEPT](/guias/que-es-el-tept). Esta pregunta se queda en qué hace esa persona.",
     sections: [
