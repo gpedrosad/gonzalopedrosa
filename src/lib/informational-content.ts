@@ -1098,12 +1098,12 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "que-es-el-apego-ansioso",
-    updated: "2026-10-30",
+    updated: "2026-11-09",
     navLabel: "Qué es el apego ansioso",
-    title: "Apego ansioso: qué es, señales y características",
-    h1: "¿Qué es el apego ansioso?",
+    title: "Apego ansioso: señales, síntomas y cómo reconocerlo",
+    h1: "¿Qué es el apego ansioso y cuáles son sus señales?",
     description:
-      "El apego ansioso es la alarma rápida si alguien que te importa se aleja. Buscas confirmación y un silencio se vuelve prueba. No es una enfermedad.",
+      "Apego ansioso: señales como revisar el celular o necesitar confirmación. Mira cómo saber si tienes apego ansioso y qué hacer, sin diagnosticarte.",
     answer:
       "El apego ansioso es un patrón: cuando alguien importante se demora, se enfría o no responde, tu alarma de rechazo se enciende rápido. Entre las características están buscar cercanía, revisar señales y no quedarte tranquilo hasta tener una confirmación. Es una descripción de esa reacción, no una enfermedad ni una sentencia.",
     sections: [
@@ -1112,6 +1112,21 @@ const QUESTION_PAGES: InfoPage[] = [
         paragraphs: [
           "Un mensaje sin respuesta se vuelve una prueba. Preguntas si está todo bien más de una vez. Lees un tono seco como el inicio de un abandono. Si la otra persona pide espacio, el espacio se siente como castigo y no como aire.",
           "También puede aparecer fuera de la pareja: con amistades o en la pega, cuando el silencio de alguien con autoridad te desordena el día. El mapa del apego viene de cómo buscamos cuidado ante una amenaza, no solo del pololeo.",
+        ],
+      },
+      {
+        heading: "Cómo saber si tienes apego ansioso",
+        paragraphs: [
+          "No hay un examen que lo confirme. Lo que puedes mirar son señales que se repiten en tus vínculos: qué haces cuando alguien se demora, cómo interpretas un silencio y qué necesitas para calmarte.",
+          "«Síntomas» es una forma de hablar. El apego ansioso no es un diagnóstico del DSM ni de la CIE. Un test en internet no reemplaza una conversación con un profesional. Si en la relación hay control, humillación o miedo, el foco es protegerte. El mapa de los estilos está en [estilos de apego en adultos](/guias/estilos-de-apego).",
+        ],
+        bullets: [
+          "Revisas el celular más de una vez esperando respuesta.",
+          "Necesitas confirmación repetida de que todo está bien.",
+          "Un silencio o un tono seco lo lees como rechazo.",
+          "Te cuesta calmarte si la otra persona no responde.",
+          "Preguntas varias veces si está todo bien o si se va a ir.",
+          "Si la otra persona pide espacio, lo vives como castigo y no como aire.",
         ],
       },
       {
@@ -1141,6 +1156,11 @@ const QUESTION_PAGES: InfoPage[] = [
         question: "¿Qué es el apego ansioso?",
         answer:
           "Es un patrón: cuando alguien importante se demora, se enfría o no responde, la alarma de rechazo se enciende rápido. Características: buscas cercanía, revisas señales y no te quedas tranquilo hasta tener una confirmación. No es una enfermedad ni una sentencia.",
+      },
+      {
+        question: "¿Cuáles son los síntomas del apego ansioso?",
+        answer:
+          "Señales que se repiten: revisas el celular esperando respuesta, necesitas confirmación repetida y un silencio se te vuelve rechazo. También puede costarte calmarte si la otra persona no contesta. «Síntomas» es una forma de hablar: no es un diagnóstico del DSM ni de la CIE, y un test en internet no reemplaza una conversación con un profesional.",
       },
       {
         question: "¿Cuáles son las características del apego ansioso?",
