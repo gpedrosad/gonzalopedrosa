@@ -280,7 +280,7 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
   { route: "/preguntas/procrastinacion-y-ansiedad", lastModified: "2026-10-19", changeFrequency: "monthly", priority: 0.72 },
   { route: "/preguntas/emdr-autoadministrado-y-terapia", lastModified: "2026-10-17", changeFrequency: "monthly", priority: 0.72 },
   { route: "/preguntas/como-saber-si-es-burnout", lastModified: "2026-10-27", changeFrequency: "monthly", priority: 0.7 },
-  { route: "/preguntas/que-es-el-apego-ansioso", lastModified: "2026-10-30", changeFrequency: "monthly", priority: 0.7 },
+  { route: "/preguntas/que-es-el-apego-ansioso", lastModified: "2026-11-09", changeFrequency: "monthly", priority: 0.7 },
   { route: "/preguntas/duelo-o-depresion", lastModified: "2026-10-23", changeFrequency: "monthly", priority: 0.7 },
   { route: "/preguntas/senales-de-depresion", lastModified: "2026-10-20", changeFrequency: "monthly", priority: 0.72 },
   { route: "/preguntas/que-es-un-trauma-psicologico", lastModified: "2026-10-25", changeFrequency: "monthly", priority: 0.72 },
