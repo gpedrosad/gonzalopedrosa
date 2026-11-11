@@ -20,7 +20,7 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "La terapia de pareja es un espacio para los dos: se mira el ciclo de la pelea, los celos o la distancia, sin tomar bandos. En Chillán, también si están casados.";
+  "Terapia de pareja en Chillán: espacio para los dos, sin tomar bandos. Se mira el ciclo de la pelea, los celos o la distancia, también si están casados.";
 
 export const metadata: Metadata = {
   title: "Terapia de pareja en Chillán: qué es y cómo funciona",

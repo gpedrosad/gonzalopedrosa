@@ -2,6 +2,10 @@
 
 Formato: `YYYY-MM-DD` · qué · cómo. Una viñeta por cambio.
 
+## 2026-11-10
+
+- Lote CTR: `/guias/familiar-con-problema-de-alcohol` (title, H1, description y lead; 0/32, pos 7,2). Snippet solo en `/terapia-de-pareja-chillan` (0/89, pos 9,5) y `/tratamiento-toc-chillan` (0/29, pos 7,2). Sin página nueva: el brief no documenta un gap de contenido. Enlaces de la guía de alcohol a `/guias` y `/terapia-online`; el índice `/guias` ya la lista. Hub `/terapia-online` sin editar (cuerpo congelado hasta 11-14). Sin `/ads` ni `/sitelink`. Detalle: [lote](../../docs/seo-lote-2026-11-10.md) · [CTR](../../docs/seo/ctr-tracking.md).
+
 ## 2026-10-30
 
 - Hub `/terapia-online` toma «terapia online» y «psicoterapia online». Las preguntas del formato quedan en su pregunta (miga hacia el hub, ancla distinta). Snippets de ERP, TEPT, apego ansioso, frecuencia y síntomas físicos. Detalle: [lote](../../docs/seo-lote-2026-10-30.md).

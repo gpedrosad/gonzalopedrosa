@@ -797,14 +797,14 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
   {
     cluster: "guias",
     slug: "familiar-con-problema-de-alcohol",
-    updated: "2026-11-03",
+    updated: "2026-11-10",
     navLabel: "Familiar con problema de alcohol",
-    title: "Familiar con problema de alcohol: señales y qué hacer",
-    h1: "Cómo reconocer un problema con el alcohol y ayudar a un familiar",
+    title: "Familiar con problema de alcohol: qué hacer y qué no",
+    h1: "Qué hacer si un familiar tiene un problema con el alcohol",
     description:
-      "Señales de que el alcohol ya ordena la vida de un familiar, cómo conversar y qué no ayuda en casa. No diagnostica ni reemplaza una urgencia médica.",
+      "Qué hacer si un familiar bebe de más: señales que se ven desde afuera, cómo hablarle en sobrio y qué no ayuda: pagar, esconder o vigilar. No diagnostica.",
     answer:
-      "Una relación problemática con el alcohol no se define solo por la cantidad. Importa si la bebida ya decide el ánimo, el sueño, la plata o las peleas, y si los intentos de parar duran menos de lo que la persona se promete. Desde la familia puedes describir lo que ves, cuidar tus límites y pedir ayuda. No puedes controlar el trago de otra persona ni diagnosticarla.",
+      "Si un familiar bebe de más, el problema no se define solo por la cantidad. Importa si el alcohol ya decide el ánimo, el sueño, la plata o las peleas, y si los intentos de parar duran poco. Tú puedes anotar hechos, hablarle en sobrio y cuidar tus límites. No puedes controlar el trago de otra persona ni diagnosticarla.",
     sections: [
       {
         heading: "Señales que se ven desde afuera",
@@ -823,7 +823,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
         heading: "Cómo conversar sin convertir la casa en un juicio",
         paragraphs: [
           "Elige un momento en que la persona esté sobria y tú no estés en la peor rabia. Habla de hechos y de cómo te afecta: el domingo no pudiste dormir porque no sabías si iba a llegar. Evita la etiqueta como primera frase. Alcoholismo, dicho como insulto, suele cerrar la puerta.",
-          "Puedes ofrecer una opción concreta: acompañar a una evaluación, dejar un número a mano, o leer juntos la página general sobre alcoholismo. La decisión de ir sigue siendo de la otra persona. Si dice que no, el límite tuyo igual puede existir.",
+          "Puedes ofrecer una opción concreta: acompañar a una evaluación, dejar un número a mano, o leer juntos la página general sobre alcoholismo. La decisión de ir sigue siendo de la otra persona. Si dice que no, el límite tuyo igual puede existir. Cómo se formula ese límite está en [cómo poner un límite](/preguntas/como-poner-un-limite). El resto de lecturas del mismo tipo está en [guías](/guias). Si esa conversación para ti es por videollamada, el formato en Chile está en [terapia online](/terapia-online).",
         ],
         bullets: [
           "Una razón breve alcanza. Un discurso largo invita a discutir cada ejemplo.",
@@ -835,7 +835,7 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       {
         heading: "Qué suele empeorar el problema",
         paragraphs: [
-          "Pagar la deuda del trago, mentir en la pega o esconder las botellas para que no se note enseña que el costo lo absorbe otra persona. Es parecido a lo que ocurre cuando una familia financia la apuesta: la guía sobre un familiar con ludopatía recorre ese mismo nudo de plata, secreto y desgaste.",
+          "Pagar la deuda del trago, mentir en la pega o esconder las botellas para que no se note enseña que el costo lo absorbe otra persona. Es parecido a lo que ocurre cuando una familia financia la apuesta: la guía sobre [un familiar con ludopatía](/guias/familiar-con-ludopatia) recorre ese mismo nudo de plata, secreto y desgaste.",
           "Vigilar el celular toda la noche tampoco es un plan. Te agota y no le devuelve el control a quien bebe. Un límite dice lo que tú vas a hacer: no presto plata para alcohol, no cubro la ausencia en el trabajo, no sigo la pelea si hay gritos.",
         ],
       },
@@ -869,6 +869,8 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
       { href: "/guias/familiar-con-ludopatia", label: "Ayudar a un familiar con adicción al juego" },
       { href: "/preguntas/como-poner-un-limite", label: "Cómo poner un límite" },
       { href: "/psicologo-adicciones-chillan", label: "Información sobre adicciones" },
+      { href: "/guias", label: "Guías" },
+      { href: "/terapia-online", label: "Terapia online en Chile" },
     ],
     product: EMDR_PRODUCT,
     safety:
@@ -1391,6 +1393,7 @@ const QUESTION_PAGES: InfoPage[] = [
       { href: "/guias/burnout-laboral", label: "Burnout laboral" },
       { href: "/preguntas/que-es-el-apego-ansioso", label: "Qué es el apego ansioso" },
       { href: "/psicologo-sentimiento-culpa-chillan", label: "Información sobre la culpa" },
+      { href: "/guias/familiar-con-problema-de-alcohol", label: "Familiar con problema de alcohol" },
     ],
     sources: [APA_APEGO],
   },

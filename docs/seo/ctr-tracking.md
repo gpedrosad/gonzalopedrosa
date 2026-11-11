@@ -66,3 +66,15 @@ Solo title y meta description (H1 sin cambio). No se tocan `/ads`, `/sitelink` n
 - Nueva FAQ «¿Cuáles son los síntomas del apego ansioso?» como segunda pregunta.
 - updated: 2026-11-09.
 - Fecha de medición: 2026-11-23. Modelo: DeepSeek V4.1 Flash (gen-1794227304-rgRtzpVOlIF0jBjfBcpR), revisado por Grok Bot. lastModified en organic-routes 2026-11-09.
+
+## 2026-11-10 (medir el 2026-11-24)
+
+Métricas de antes: Search Console `sc-domain:gonzalopedrosa.cl`, 28d = 2026-10-13..2026-11-09 (último día completo 2026-11-09). 7d = 2026-11-03..2026-11-09 vs prev7 2026-10-27..2026-11-02. Sin página nueva: el brief no documenta un gap real de consulta. `/ads` y `/sitelink` no se tocaron. En Chillán, solo snippet.
+
+| URL | Consulta objetivo | Antes 28d (clics/impr/CTR/pos) | Antes 7d | Title antes → después | Description / H1 | Cambio |
+|---|---|---|---|---|---|---|
+| /guias/familiar-con-problema-de-alcohol | familiar con problema de alcohol (consultas anonimizadas) | 0/32/0,00 %/7,2 | 0/19 vs 0/13 | «Familiar con problema de alcohol: señales y qué hacer» → «Familiar con problema de alcohol: qué hacer y qué no» | H1 «Cómo reconocer un problema con el alcohol y ayudar a un familiar» → «Qué hacer si un familiar tiene un problema con el alcohol». Desc: «Qué hacer si un familiar bebe de más: señales que se ven desde afuera, cómo hablarle en sobrio y qué no ayuda: pagar, esconder o vigilar. No diagnostica.» (153). Lead reescrito en el mismo sentido. | Title 11-03 vencido; 0 CTR en pos 7,2 |
+| /terapia-de-pareja-chillan | terapia de pareja chillan (0/15 pos 10,5) | 0/89/0,00 %/9,5 | 0/26 vs 0/39 | sin cambio («Terapia de pareja en Chillán: qué es y cómo funciona») | H1 sin cambio. Desc «La terapia de pareja es un espacio para los dos: se mira el ciclo de la pelea, los celos o la distancia, sin tomar bandos. En Chillán, también si están casados.» → «Terapia de pareja en Chillán: espacio para los dos, sin tomar bandos. Se mira el ciclo de la pelea, los celos o la distancia, también si están casados.» (151) | Solo snippet; no expandir; no pedir indexación |
+| /tratamiento-toc-chillan | erp psicologia (0/4 pos 17,8) / terapia erp toc | 0/29/0,00 %/7,2 | 0/5 vs 0/8 | sin cambio («Terapia ERP para el TOC: qué es y cómo se practica») | H1 sin cambio. Desc «Terapia ERP para el TOC, también llamada ERP TOC: te acercas al disparador y no haces el ritual. Se practica en Chillán u online, sin un plazo de sesiones.» → «Terapia ERP para el TOC en Chillán: te acercas al disparador y no haces el ritual. También se llama EPR o ERP TOC. Presencial u online, sin un plazo fijo.» (154) | Solo snippet; no expandir; no pedir indexación |
+
+Fecha de cambio: 2026-11-10. Fecha de medición: ~2026-11-24.
