@@ -7,7 +7,7 @@ import { SITE_URL, getTwitterDescription } from "@/lib/schemas";
 import { RelatedReading } from "@/app/components/RelatedReading";
 
 const description =
-  "Terapia ERP para el TOC, también llamada ERP TOC: te acercas al disparador y no haces el ritual. Se practica en Chillán u online, sin un plazo de sesiones.";
+  "Terapia ERP para el TOC en Chillán: te acercas al disparador y no haces el ritual. También se llama EPR o ERP TOC. Presencial u online, sin un plazo fijo.";
 
 export const metadata: Metadata = {
   title: "Terapia ERP para el TOC: qué es y cómo se practica",

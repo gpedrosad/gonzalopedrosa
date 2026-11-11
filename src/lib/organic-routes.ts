@@ -114,7 +114,7 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
     priority: 0.8,
   },
   { route: "/tratamiento-toc-chillan",
-    lastModified: "2026-10-25", changeFrequency: "monthly", priority: 0.8 },
+    lastModified: "2026-11-10", changeFrequency: "monthly", priority: 0.8 },
   {
     route: "/psicologo-reembolso-isapre-chillan",
     changeFrequency: "monthly",
@@ -134,7 +134,7 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
   },
   {
     route: "/terapia-de-pareja-chillan",
-    lastModified: "2026-10-24",
+    lastModified: "2026-11-10",
     changeFrequency: "monthly",
     priority: 0.9,
   },
@@ -261,7 +261,7 @@ export const ORGANIC_SITEMAP_ENTRIES: OrganicSitemapEntry[] = [
   { route: "/guias/regulacion-emocional", lastModified: "2026-10-23", changeFrequency: "monthly", priority: 0.7 },
   {
     route: "/guias/familiar-con-problema-de-alcohol",
-    lastModified: "2026-11-03",
+    lastModified: "2026-11-10",
     changeFrequency: "monthly",
     priority: 0.72,
   },
