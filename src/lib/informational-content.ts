@@ -1271,7 +1271,7 @@ const QUESTION_PAGES: InfoPage[] = [
     title: "Por qué la mente no para de pensar",
     h1: "Por qué la mente no para de pensar",
     description:
-      "Rumiación no es lo mismo que resolver un problema. Mira por qué el pensamiento se queda pegado y qué intento de control lo empeora de noche.",
+      "Si tu mente no para de pensar, puede ser rumiación: dar vueltas al mismo tema sin llegar a una acción. Mira qué la echa a andar y qué la empeora.",
     answer:
       "La mente no para porque está tratando de cerrar una amenaza o una pena que no tiene un cierre claro. Eso se llama rumiación cuando das vueltas al mismo tema sin llegar a una acción. Resolver un problema tiene un paso siguiente. Rumiar se siente igual de urgente y no produce ese paso.",
     sections: [
