@@ -2,6 +2,16 @@
 
 Cada entrada registra la URL, la consulta, las métricas de antes (Search Console, `sc-domain:gonzalopedrosa.cl`), el cambio, la fecha y la fecha de medición (+14 días). No se tocan `/ads`, `/sitelink` ni las páginas locales de Chillán.
 
+## 2026-11-13 — Lote 2026-11-13 (CTR)
+
+Search Console (último día 2026-11-12). 90d: 65 clics / 2.985 impr / CTR 2.18 % / pos 27.0. 7d (2026-11-06..2026-11-12): 7 clics / 694 impr / CTR 1.01 % / pos 30.5 vs prev7 (2026-10-30..2026-11-05): 10 clics / 924 impr / CTR 1.08 % / pos 26.2. Copy: claude-opus-5-5 (effort high) vía API de Anthropic, revisado y aplicado por Grok Bot. Congeladas y no tocadas: test Opus 11-08 (hasta 2026-11-22) y todo lo editado el 11-04/11-07/11-09/11-10 (ver freeze del run). GA4: conector pide reautenticación. PageSpeed: HTTP 429 (cuota). Medir el 2026-11-27.
+
+### `/preguntas/por-que-la-mente-no-para`
+
+Antes — 28d (2026-10-16..2026-11-12): 0 clics / 12 impr / CTR 0.00 % / pos 6.8; 7d 0/4 vs prev7 0/7. Consultas: .
+Consulta objetivo: «(sin consultas visibles en GSC; se usa la frase del title/H1 «mente no para de pensar»)». Title `Por qué la mente no para de pensar` → `Por qué la mente no para de pensar`. Meta → «Si tu mente no para de pensar, puede ser rumiación: dar vueltas al mismo tema sin llegar a una acción. Mira qué la echa a andar y qué la empeora.». H1: igual. Motivo: El title ya es corto y claro, y sin consultas no hay base para cambiarlo. La meta ahora repite la frase del title y da la respuesta directa del texto (rumiación = vueltas sin acción) en 144 caracteres.
+Aplicado 2026-11-13. Medir 2026-11-27 (14 d).
+
 ## 2026-11-04 (medir el 2026-11-18)
 
 Métricas de antes: 7 días = 2026-10-27..2026-11-02; 90 días = 2026-08-05..2026-11-02. Search Console anonimiza las consultas de estas dos páginas: con ≥3 impresiones no aparece ninguna.
