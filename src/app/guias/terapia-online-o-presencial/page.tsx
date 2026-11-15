@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { GuiaArticle, guiaMetadata } from "../guia-article";
 
-const title = "Terapia online o presencial: cómo elegir el formato";
+const title = "Terapia online o presencial: ¿cuál es mejor?";
 const description =
-  "Criterios prácticos para decidir entre terapia online y presencial: lugar privado, tiempos, horarios, motivo de consulta y qué cambia en cada formato.";
+  "Diferencias entre terapia online y presencial y cómo elegir: lugar privado, tiempos, horarios, motivo de consulta y qué cambia en cada formato.";
 const path = "/guias/terapia-online-o-presencial";
 
 export const metadata = guiaMetadata({ title, description, path });

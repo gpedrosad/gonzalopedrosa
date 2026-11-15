@@ -2,6 +2,20 @@
 
 Cada entrada registra la URL, la consulta, las métricas de antes (Search Console, `sc-domain:gonzalopedrosa.cl`), el cambio, la fecha y la fecha de medición (+14 días). No se tocan `/ads`, `/sitelink` ni las páginas locales de Chillán.
 
+## 2026-11-15 — Lote 2026-11-15 (CTR): título de la guía terapia online o presencial
+
+Search Console (último día 2026-11-14). 90d: 67 clics / 3.150 impr / CTR 2.13 % / pos 27.7. 7d (2026-11-08..2026-11-14): 7 clics / 672 impr / CTR 1.04 % / pos 33.2 vs prev7 (2026-11-01..2026-11-07): 10 clics / 974 impr / CTR 1.03 % / pos 27.0. Copy: claude-opus-5-5 (effort high) vía API de Anthropic, revisado y aplicado por Grok Bot. Congeladas y no tocadas: test Opus 11-08 (hasta 2026-11-22), lotes 11-04/11-07/11-09/11-10 y lo editado el 11-13 (hasta 2026-11-20). GA4: conector sigue pidiendo reautenticación. PageSpeed: HTTP 429 (cuota). Medir el 2026-11-29.
+
+### `/guias/terapia-online-o-presencial`
+
+Antes — 28d (2026-10-18..2026-11-14): 0 clics / 101 impr / CTR 0.00 % / pos 38.5; 7d 0/56 vs prev7 0/45. Consultas: «psicólogo online o presencial» 0 clics/13 impr, pos 40.2; «terapia presencial vs online» 0 clics/11 impr, pos 39.9; «¿es mejor la terapia online o presencial?» 0 clics/11 impr, pos 32.3; «diferencias entre terapia online y presencial» 0 clics/10 impr, pos 30.3.
+Consulta objetivo: «¿es mejor la terapia online o presencial?». Title `Terapia online o presencial: cómo elegir el formato` → `Terapia online o presencial: ¿cuál es mejor?`. Meta → «Diferencias entre terapia online y presencial y cómo elegir: lugar privado, tiempos, horarios, motivo de consulta y qué cambia en cada formato.». H1: Terapia online o presencial: ¿cuál es mejor? (misma constante title). Motivo: El title (44 caracteres) toma la pregunta que más se repite en las consultas («¿es mejor…?», «¿qué es mejor…?»). La meta abre con la consulta literal «diferencias entre terapia online y presencial» y conserva los criterios que ya existían, sin afirmar nada sobre efectividad.
+Aplicado 2026-11-15. Medir 2026-11-29 (14 d).
+
+No aplicado: `/psicologo-cognitivo-conductual-chillan` — El title ya contiene literalmente la única consulta visible («psicólogo cognitivo conductual»). La página está en posición 8 con muy pocas impresiones y la meta actual (152 caracteres) ya es clara, así que no hay una mejora evidente que justifique tocar el snippet.
+
+Sin páginas Chillán editadas (Opus descartó otra vez /psicologo-cognitivo-conductual-chillan). Sin pedidos de indexación Chillán. `/ads` y `/sitelink` intactos. `src/lib/published-guides.ts` conserva el título viejo como etiqueta del índice.
+
 ## 2026-11-13 — Lote 2026-11-13 (CTR)
 
 Search Console (último día 2026-11-12). 90d: 65 clics / 2.985 impr / CTR 2.18 % / pos 27.0. 7d (2026-11-06..2026-11-12): 7 clics / 694 impr / CTR 1.01 % / pos 30.5 vs prev7 (2026-10-30..2026-11-05): 10 clics / 924 impr / CTR 1.08 % / pos 26.2. Copy: claude-opus-5-5 (effort high) vía API de Anthropic, revisado y aplicado por Grok Bot. Congeladas y no tocadas: test Opus 11-08 (hasta 2026-11-22) y todo lo editado el 11-04/11-07/11-09/11-10 (ver freeze del run). GA4: conector pide reautenticación. PageSpeed: HTTP 429 (cuota). Medir el 2026-11-27.
