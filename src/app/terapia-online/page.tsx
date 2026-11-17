@@ -18,10 +18,10 @@ import {
 } from "@/lib/schemas";
 
 const description =
-  "Terapia online y psicoterapia online en Chile: videollamada para cualquier región. También terapias online, terapia psicológica online y psicólogo online.";
+  "Terapia online en Chile con psicólogo clínico por videollamada, desde cualquier región. Qué es la psicoterapia online y qué esperar de ella.";
 
 export const metadata: Metadata = {
-  title: "Terapia online y psicoterapia online en Chile",
+  title: "Terapia online en Chile: psicólogo online",
   description,
   alternates: {
     canonical: "/terapia-online",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     locale: "es_CL",
-    title: "Terapia online y psicoterapia online en Chile",
+    title: "Terapia online en Chile: psicólogo online",
     description,
     url: `${SITE_URL}/terapia-online`,
     type: "website",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terapia online y psicoterapia online en Chile",
+    title: "Terapia online en Chile: psicólogo online",
     description: getTwitterDescription(description),
   },
 };
