@@ -2,6 +2,18 @@
 
 Cada entrada registra la URL, la consulta, las métricas de antes (Search Console, `sc-domain:gonzalopedrosa.cl`), el cambio, la fecha y la fecha de medición (+14 días). No se tocan `/ads`, `/sitelink` ni las páginas locales de Chillán.
 
+## 2026-11-17 — Lote 2026-11-17 (CTR): snippet del hub terapia online
+
+Search Console (último día 2026-11-16). 90d: 73 clics / 3.328 impr / CTR 2.19 % / pos 28.3. 7d (2026-11-10..2026-11-16): 9 clics / 650 impr / CTR 1.38 % / pos 33.5 vs prev7 (2026-11-03..2026-11-09): 12 clics / 783 impr / CTR 1.53 % / pos 31.0. Copy: claude-opus-5-5 (effort high) vía API de Anthropic, revisado y aplicado por Grok Bot. Congeladas y no tocadas: test Opus 11-08 (hasta 2026-11-22), lotes 11-04 (hasta 11-18), 11-07 (11-21), 11-09/11-10 (11-23/24), 11-13 (11-20) y 11-15 (11-22). GA4: conector sigue pidiendo reautenticación. PageSpeed: HTTP 429. Medir el 2026-12-01.
+
+### `/terapia-online`
+
+Antes — 28d (2026-10-20..2026-11-16): 0 clics / 52 impr / CTR 0.00 % / pos 53.5; 7d 0/10 vs prev7 0/20. Consultas: «¿cómo es una sesión de psicología online?» 0 clics/20 impr, pos 65.7; «¿cómo funciona la terapia psicológica online?» 0 clics/16 impr, pos 64.2; «psicólogo online o presencial» 0 clics/8 impr, pos 37.9; «terapia individual online» 0 clics/1 impr, pos 6.0.
+Consulta objetivo: «terapia online chile». Title `Terapia online y psicoterapia online en Chile` → `Terapia online en Chile: psicólogo online`. Meta → «Terapia online en Chile con psicólogo clínico por videollamada, desde cualquier región. Qué es la psicoterapia online y qué esperar de ella.». H1: igual. Motivo: El title y la meta apuntan a «terapia online en Chile» y «psicólogo online» sin competir con la pregunta dedicada sobre cómo funciona. La meta elimina el relleno de keywords y conserva solo los datos existentes: videollamada, cualquier región y psicólogo clínico. El title cabe en 60 caracteres aun si el layout agrega un sufijo de marca de unos 18 caracteres.
+Aplicado 2026-11-17. Medir 2026-12-01 (14 d).
+
+Sin páginas Chillán editadas. Sin pedidos de indexación Chillán. `/ads` y `/sitelink` intactos. El hub deja de competir por «¿cómo es una sesión de psicología online?» (canibalización con `/preguntas/como-funciona-la-terapia-psicologica-online`, que ya está enlazada desde el hub).
+
 ## 2026-11-15 — Lote 2026-11-15 (CTR): título de la guía terapia online o presencial
 
 Search Console (último día 2026-11-14). 90d: 67 clics / 3.150 impr / CTR 2.13 % / pos 27.7. 7d (2026-11-08..2026-11-14): 7 clics / 672 impr / CTR 1.04 % / pos 33.2 vs prev7 (2026-11-01..2026-11-07): 10 clics / 974 impr / CTR 1.03 % / pos 27.0. Copy: claude-opus-5-5 (effort high) vía API de Anthropic, revisado y aplicado por Grok Bot. Congeladas y no tocadas: test Opus 11-08 (hasta 2026-11-22), lotes 11-04/11-07/11-09/11-10 y lo editado el 11-13 (hasta 2026-11-20). GA4: conector sigue pidiendo reautenticación. PageSpeed: HTTP 429 (cuota). Medir el 2026-11-29.
