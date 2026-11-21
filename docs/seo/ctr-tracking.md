@@ -2,6 +2,24 @@
 
 Cada entrada registra la URL, la consulta, las métricas de antes (Search Console, `sc-domain:gonzalopedrosa.cl`), el cambio, la fecha y la fecha de medición (+14 días). No se tocan `/ads`, `/sitelink` ni las páginas locales de Chillán.
 
+## 2026-11-21 — Lote 2026-11-21 (CTR): snippet de cada cuánto ir al psicólogo
+
+Search Console (último día 2026-11-20). 90d: 76 clics / 3.627 impr / CTR 2.1 % / pos 28.8. 7d (2026-11-14..2026-11-20): 12 clics / 584 impr / CTR 2.05 % / pos 34.6 vs prev7 (2026-11-07..2026-11-13): 7 clics / 695 impr / CTR 1.01 % / pos 32.3. Copy: claude-sonnet-5-5 vía API de Anthropic, revisado y aplicado por Grok Bot. Congeladas y no tocadas: test Opus 11-08 (se mide desde 2026-11-22) y lotes 11-09 en adelante. GA4: conector sigue pidiendo reautenticación. Medir el 2026-12-05.
+
+### `/preguntas/cada-cuanto-ir-al-psicologo`
+
+Antes — 28d (2026-10-24..2026-11-20): 0 clics / 116 impr / CTR 0.00 % / pos 10.3; 7d 0/29 vs prev7 0/21. Consultas: «cada cuanto ir al psicologo» 0 clics/14 impr, pos 21.1; «cada cuanto son las citas con el psicologo» 0 clics/3 impr, pos 12.0; «cada cuánto se va al psicólogo» 0 clics/2 impr, pos 20.0; «cuando ir al psicologo» 0 clics/2 impr, pos 23.0.
+Consulta objetivo: «cada cuanto ir al psicologo». Title `¿Cada cuánto ir al psicólogo? Frecuencia de las citas` → `¿Cada cuánto ir al psicólogo? Cómo decidirlo`. Meta → «¿Cada cuánto se va al psicólogo? Al inicio suele ser una vez por semana y después se puede espaciar. Qué considerar para decidir el ritmo en tu caso.». H1: ¿Cada cuánto ir al psicólogo?. Motivo: El title anterior tenía 53 caracteres y se cortaba (límite 45 por el sufijo de marca). El nuevo mide 44 y cambia el enfoque a 'cómo decidirlo'. La meta abre con la variante 'cada cuánto se va al psicólogo' y mantiene el dato existente de una vez por semana al inicio.
+Modelo: claude-sonnet-5-5. Aplicado 2026-11-21. Medir 2026-12-05 (14 d).
+
+
+### Medición vencida (cambios 2026-11-07, medir 11-21)
+
+- `/preguntas/sintomas-fisicos-de-la-ansiedad` (cambio 11-07): antes 2026-10-24..2026-11-06 0/280 CTR 0.0 % pos 27.5 → después 2026-11-07..2026-11-20 0/93 CTR 0.0 % pos 64.7. Cae por posición (27,5 → 64,7), no por snippet: no se toca el snippet; revisar contenido/competencia más adelante.
+- `/preguntas/cada-cuanto-ir-al-psicologo` (cambio 11-07): antes 2026-10-24..2026-11-06 0/66 CTR 0.0 % pos 9.8 → después 2026-11-07..2026-11-20 0/50 CTR 0.0 % pos 11.0. Sin clics en ambos períodos: reintento hoy con Sonnet.
+
+Sin páginas Chillán editadas. `/ads` y `/sitelink` intactos.
+
 ## 2026-11-17 — Lote 2026-11-17 (CTR): snippet del hub terapia online
 
 Search Console (último día 2026-11-16). 90d: 73 clics / 3.328 impr / CTR 2.19 % / pos 28.3. 7d (2026-11-10..2026-11-16): 9 clics / 650 impr / CTR 1.38 % / pos 33.5 vs prev7 (2026-11-03..2026-11-09): 12 clics / 783 impr / CTR 1.53 % / pos 31.0. Copy: claude-opus-5-5 (effort high) vía API de Anthropic, revisado y aplicado por Grok Bot. Congeladas y no tocadas: test Opus 11-08 (hasta 2026-11-22), lotes 11-04 (hasta 11-18), 11-07 (11-21), 11-09/11-10 (11-23/24), 11-13 (11-20) y 11-15 (11-22). GA4: conector sigue pidiendo reautenticación. PageSpeed: HTTP 429. Medir el 2026-12-01.

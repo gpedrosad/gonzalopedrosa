@@ -438,12 +438,12 @@ export const guides: Guide[] = [
     {
     slug: "cada-cuanto-ir-al-psicologo",
     path: "/preguntas/cada-cuanto-ir-al-psicologo",
-    title: "¿Cada cuánto ir al psicólogo? Frecuencia de las citas",
+    title: "¿Cada cuánto ir al psicólogo? Cómo decidirlo",
     description:
-      "Al inicio suele ser una vez por semana y después se puede espaciar. Qué considerar para definir la frecuencia y cuándo conviene ajustarla.",
+      "¿Cada cuánto se va al psicólogo? Al inicio suele ser una vez por semana y después se puede espaciar. Qué considerar para decidir el ritmo en tu caso.",
     breadcrumbLabel: "Frecuencia de sesiones",
     h1: "¿Cada cuánto ir al psicólogo?",
-    updated: "2026-11-07",
+    updated: "2026-11-21",
     lead: frequencyLead,
     sections: [
       {
