@@ -382,13 +382,13 @@ export const guides: Guide[] = [
   {
     slug: "pareja-con-adiccion-al-juego",
     path: "/preguntas/pareja-con-adiccion-al-juego",
-    title: "Pareja con ludopatía: qué hacer y cómo protegerte",
+    title: "Pareja con ludopatía: qué hacer y cuidarte",
     description:
       "Qué hacer si tu pareja tiene adicción al juego: proteger la plata compartida, hablar con hechos y buscar apoyo para ti, sin hacer su tratamiento.",
     breadcrumbLabel: "Pareja y juego",
     h1: "¿Qué hacer si tu pareja tiene adicción al juego?",
     lead: partnerLead,
-    updated: "2026-11-04",
+    updated: "2026-11-23",
     sections: [
       {
         heading: "Qué puedes hacer esta semana",

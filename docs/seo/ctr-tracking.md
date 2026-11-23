@@ -2,6 +2,46 @@
 
 Cada entrada registra la URL, la consulta, las métricas de antes (Search Console, `sc-domain:gonzalopedrosa.cl`), el cambio, la fecha y la fecha de medición (+14 días). No se tocan `/ads`, `/sitelink` ni las páginas locales de Chillán.
 
+## 2026-11-23 — Lote 2026-11-23: cómo funciona la terapia online y pareja con adicción al juego
+
+Search Console (último día 2026-11-22). 90d: 76 clics / 3.770 impr / CTR 2.02 % / pos 29.2. 7d (2026-11-16..2026-11-22): 12 clics / 566 impr / CTR 2.12 % / pos 34.2 vs prev7 (2026-11-09..2026-11-15): 5 clics / 682 impr / CTR 0.73 % / pos 33.6. Copy: claude-opus-5-5 (effort high) vía API de Anthropic, revisado y aplicado por Grok Bot. Congeladas y no tocadas: lotes 2026-11-21 (hasta 11-28), tienda #40 (hasta 11-26) y lotes 11-10 (hasta 11-24). GA4: conector sigue pidiendo reautenticación. Medir el 2026-12-07.
+
+### `/preguntas/como-funciona-la-terapia-psicologica-online`
+
+Antes — 28d (2026-10-26..2026-11-22): 0 clics / 134 impr / CTR 0.00 % / pos 31.0; 7d 0/8 vs prev7 0/7. Consultas: «terapia online» 0 clics/22 impr, pos 26.4; «terapia online chile» 0 clics/13 impr, pos 17.9; «¿cómo es una sesión de psicología online?» 0 clics/12 impr, pos 29.6; «psicoterapia online» 0 clics/10 impr, pos 42.8.
+Consulta objetivo: «¿cómo funciona la terapia psicológica online?». Title `Cómo funciona la terapia psicológica online, semana a semana` → `Cómo funciona la terapia psicológica online`. Meta → «Cómo funciona la terapia online en Chile por videollamada: coordinas una hora, recibes un enlace, te conectas desde un lugar privado y sigues cada semana.». H1: igual. Motivo: El title superaba los 45 caracteres y se truncaba con la marca. Ahora calza exacto con la consulta mejor posicionada. La meta suma «terapia online chile» y «videollamada». La primera frase responde directo en lugar de describir la página.
+Modelo: claude-opus-5-5. Aplicado 2026-11-23. Medir 2026-12-07 (14 d).
+
+### `/preguntas/pareja-con-adiccion-al-juego`
+
+Antes — 28d (2026-10-26..2026-11-22): 4 clics / 165 impr / CTR 2.42 % / pos 7.4; 7d 1/21 vs prev7 0/30. Consultas: (anonimizadas).
+Consulta objetivo: «pareja con adicción al juego / ludopatía (sin consultas visibles)». Title `Pareja con ludopatía: qué hacer y cómo protegerte` → `Pareja con ludopatía: qué hacer y cuidarte`. Meta → «Qué hacer si tu pareja tiene adicción al juego: proteger la plata compartida, hablar con hechos y buscar apoyo para ti, sin hacer su tratamiento.». H1: igual. Motivo: El title tenía 49 caracteres y se truncaba con el sufijo de marca. Ahora queda en 42 con el mismo mensaje. La meta se mantiene.
+Modelo: claude-opus-5-5. Aplicado 2026-11-23. Medir 2026-12-07 (14 d).
+
+No aplicado: `/guias/terapia-online-o-presencial` — El title (44 caracteres) y la meta ya calzan con las consultas «online o presencial», «cuál es mejor» y «diferencias». Además, el último cambio fue el 15/11, hace solo 8 días, y la página está en posición ~38, donde el CTR depende del ranking y no del snippet. Conviene esperar datos antes de volver a tocarla.
+
+
+### Test CTR Opus 5.5 — medición 14 d (2026-11-23)
+
+Antes 2026-10-24..2026-11-06 vs después 2026-11-09..2026-11-22 (GSC dataState all; el 22/11 puede no estar final: provisional). Total del sitio (7 URLs): 1/423 (CTR 0.24 %) → 0/329 (CTR 0.00 %). Sin control A/B: no es causal. Las páginas se descongelan. Re-medición 28 d en la primera corrida desde 2026-12-06.
+
+| URL | Var. | Antes (clics/impr, CTR, pos) | Después | Veredicto |
+|---|---|---|---|---|
+| `/preguntas/que-es-la-erp-para-el-toc` | A | 0/56, 0.00 %, 7.0 | 0/13, 0.00 %, 25.0 | sin datos suficientes |
+| `/preguntas/que-hace-un-especialista-en-estres-postraumatico` | A | 0/55, 0.00 %, 14.9 | 0/28, 0.00 %, 18.9 | sin datos suficientes |
+| `/preguntas/como-funciona-la-terapia-psicologica-online` | A | 0/147, 0.00 %, 33.5 | 0/15, 0.00 %, 14.7 | sin datos suficientes |
+| `/guias/psicologo-o-psiquiatra` | A | 0/52, 0.00 %, 36.2 | 0/92, 0.00 %, 34.2 | sin datos suficientes |
+| `/guias/como-elegir-psicologo-online` | A | 0/30, 0.00 %, 29.1 | 0/130, 0.00 %, 28.6 | sin datos suficientes |
+| `/preguntas/reembolso-isapre-terapia-online` | B | 0/16, 0.00 %, 14.1 | 0/16, 0.00 %, 14.6 | sin datos suficientes |
+| `/preguntas/la-terapia-online-funciona` | B | 1/67, 1.49 %, 35.1 | 0/35, 0.00 %, 59.4 | sin datos suficientes |
+
+Volumen insuficiente y posiciones > 25 en casi todas: el cambio de ranking domina sobre el snippet. No se revierte nada.
+
+### Medición vencida (cambios 2026-11-09, medir 11-23)
+
+- `/preguntas/que-es-el-apego-ansioso` (cambio 11-09): antes 2026-10-27..2026-11-08 0/65 CTR 0.0 % pos 53.0 → después 2026-11-10..2026-11-22 0/29 CTR 0.0 % pos 53.6. Posición ~53 en ambos períodos: es un tema de posición, no de snippet.
+
+
 ## 2026-11-21 — Lote 2026-11-21 (CTR): snippet de cada cuánto ir al psicólogo
 
 Search Console (último día 2026-11-20). 90d: 76 clics / 3.627 impr / CTR 2.1 % / pos 28.8. 7d (2026-11-14..2026-11-20): 12 clics / 584 impr / CTR 2.05 % / pos 34.6 vs prev7 (2026-11-07..2026-11-13): 7 clics / 695 impr / CTR 1.01 % / pos 32.3. Copy: claude-sonnet-5-5 vía API de Anthropic, revisado y aplicado por Grok Bot. Congeladas y no tocadas: test Opus 11-08 (se mide desde 2026-11-22) y lotes 11-09 en adelante. GA4: conector sigue pidiendo reautenticación. Medir el 2026-12-05.

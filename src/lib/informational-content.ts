@@ -2031,15 +2031,15 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "como-funciona-la-terapia-psicologica-online",
-    updated: "2026-10-30",
+    updated: "2026-11-23",
     navLabel: "Cómo funciona el proceso",
     crumbParent: { label: "Terapia online", href: "/terapia-online" },
-    title: "Cómo funciona la terapia psicológica online, semana a semana",
+    title: "Cómo funciona la terapia psicológica online",
     h1: "¿Cómo funciona la terapia psicológica online?",
     description:
-      "Por videollamada: coordinas una hora, te conectas en un lugar privado y retomas el mismo hilo la semana siguiente. Qué pide el formato y sus límites.",
+      "Cómo funciona la terapia online en Chile por videollamada: coordinas una hora, recibes un enlace, te conectas desde un lugar privado y sigues cada semana.",
     answer:
-      "Cómo funciona la terapia psicológica online se responde aquí como un proceso entre semanas, no como la ficha del formato. Coordinas una hora, recibes un enlace, te conectas en un lugar privado y retomas el mismo hilo la semana siguiente. El minuto a minuto de esa hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online). El mapa para cualquier región está en [terapia online y psicoterapia online](/terapia-online).",
+      "La terapia psicológica online funciona por videollamada, como un proceso entre semanas: coordinas una hora, recibes un enlace, te conectas en un lugar privado y retomas el mismo hilo la semana siguiente. El minuto a minuto de esa hora está en [cómo es una sesión de psicología online](/preguntas/como-es-una-sesion-de-psicologia-online). El mapa para cualquier región está en [terapia online y psicoterapia online](/terapia-online).",
     sections: [
       {
         heading: "De una semana a la siguiente",
