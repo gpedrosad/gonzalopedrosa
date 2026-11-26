@@ -2113,7 +2113,7 @@ const QUESTION_PAGES: InfoPage[] = [
   {
     cluster: "preguntas",
     slug: "que-hace-un-especialista-en-estres-postraumatico",
-    updated: "2026-10-30",
+    updated: "2026-11-26",
     navLabel: "Especialista en TEPT",
     title: "¿Qué hace un especialista en estrés postraumático?",
     h1: "¿Qué hace un especialista en TEPT?",
@@ -2141,6 +2141,28 @@ const QUESTION_PAGES: InfoPage[] = [
           "La guía de la OMS de 2013 sobre condiciones relacionadas con el estrés nombra, para adultos con TEPT, terapias centradas en el trauma. Entre ellas están la terapia cognitivo-conductual focalizada en el trauma y el EMDR, cuando las aplica personal de salud capacitado. Que una guía las nombre no dice cuál te corresponde ni en cuántas horas.",
           "El EMDR no es un punto que se mueve en una pantalla. El procedimiento completo incluye evaluación, preparación y cierre. Las fases están en la guía de EMDR. La página de EMDR en Chillán es la de atención con ese método. No certifica un resultado.",
           "Esas terapias también se describen por videollamada cuando hay un lugar privado y continuidad. Eso ya está en la guía de [qué es el TEPT](/guias/que-es-el-tept). El formato en Chile está en [psicoterapia online](/terapia-online). Esta pregunta no certifica a quien escribe ni abre una sede.",
+        ],
+      },
+      {
+        heading: "Psicólogo o psiquiatra para el estrés postraumático",
+        paragraphs: [
+          "Las dos búsquedas aparecen juntas, pero no son el mismo oficio. El psiquiatra es médico. Evalúa, diagnostica y puede indicar fármacos. El psicólogo evalúa y hace psicoterapia. No receta.",
+          "Las terapias centradas en el trauma que nombra la OMS son psicoterapias. Las aplica personal de salud capacitado, y un psicólogo con esa formación puede hacerlas. Si el sueño, el ánimo o la alerta pesan mucho, a veces se suma una evaluación psiquiátrica. A veces los dos trabajan en conjunto, cada uno en lo suyo.",
+          "La diferencia general está en [psicólogo o psiquiatra](/guias/psicologo-o-psiquiatra). Esta sección no decide por ti a cuál ir primero.",
+        ],
+      },
+      {
+        heading: "Qué preguntar al buscar un psicólogo para estrés postraumático",
+        paragraphs: [
+          "Preguntar no es desconfiar. Es parte de elegir. Estas preguntas sirven con cualquier profesional. No recomiendan a nadie, tampoco a quien escribe este sitio.",
+          "Una respuesta clara no garantiza un resultado. Una respuesta vaga también te da información.",
+        ],
+        bullets: [
+          "¿Qué formación tienes en terapias centradas en el trauma, como la terapia cognitivo-conductual focalizada en el trauma o el EMDR?",
+          "¿Cómo evalúas antes de proponer un tratamiento?",
+          "¿Cómo preparas antes de trabajar el recuerdo?",
+          "¿Qué pasa si en una sesión me desbordo?",
+          "¿Atiendes por videollamada? ¿Qué pides del lugar donde me conecto para que sea privado?",
         ],
       },
       {
@@ -2177,6 +2199,21 @@ const QUESTION_PAGES: InfoPage[] = [
         answer:
           "No para reprocesar ese recuerdo. El ejercicio es para un malestar leve. Si aparecen imágenes que no puedes guardar, páralo.",
       },
+      {
+        question: "¿Un psicólogo puede tratar el estrés postraumático?",
+        answer:
+          "Puede evaluarlo y hacer psicoterapia. Las terapias centradas en el trauma que nombra la OMS son psicoterapias que aplica personal de salud capacitado. El psicólogo no receta fármacos. Que pueda tratarlo no promete un resultado.",
+      },
+      {
+        question: "¿Psicólogo o psiquiatra para el TEPT?",
+        answer:
+          "Son oficios distintos. El psiquiatra es médico y puede indicar fármacos. El psicólogo evalúa y hace psicoterapia. A veces trabajan en conjunto. La guía de psicólogo o psiquiatra explica la diferencia general.",
+      },
+      {
+        question: "¿Cómo sé si un psicólogo trabaja con trauma?",
+        answer:
+          "Puedes preguntarle. Qué formación tiene en terapias centradas en el trauma, cómo evalúa, cómo prepara antes de trabajar el recuerdo y qué hace si te desbordas. Esta página no certifica a nadie.",
+      },
     ],
     related: [
       { href: "/guias/que-es-el-tept", label: "Qué es el TEPT" },
@@ -2186,6 +2223,8 @@ const QUESTION_PAGES: InfoPage[] = [
       { href: "/guias/que-es-el-emdr", label: "Qué es el EMDR" },
       { href: "/preguntas/que-es-un-trauma-psicologico", label: "Qué es un trauma psicológico" },
       { href: "/preguntas/emdr-autoadministrado-y-terapia", label: "Límites del ejercicio bilateral" },
+      { href: "/guias/psicologo-o-psiquiatra", label: "Psicólogo o psiquiatra" },
+      { href: "/preguntas/como-ayuda-la-terapia-tras-abuso-en-la-infancia", label: "Terapia tras un abuso en la infancia" },
     ],
     product: EMDR_PRODUCT,
     safety:
