@@ -97,6 +97,11 @@ export default function GuiaPsicologoPsiquiatraPage() {
           label: "Cómo es una sesión de psicología online",
           note: "El recorrido de una hora, distinto de cómo funciona el proceso.",
         },
+        {
+          href: "/preguntas/que-hace-un-especialista-en-estres-postraumatico",
+          label: "Qué hace un especialista en estrés postraumático",
+          note: "Psicólogo o psiquiatra cuando un recuerdo sigue activo, y qué preguntar al buscar.",
+        },
       ]}
     >
       <p>
