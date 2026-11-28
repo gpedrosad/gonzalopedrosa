@@ -880,10 +880,114 @@ export const INFORMATIONAL_PAGES: InfoPage[] = [
 ];
 
 const QUESTION_PAGES: InfoPage[] = [
+  {
+    cluster: "preguntas",
+    slug: "ataque-de-ansiedad-o-ataque-de-panico",
+    updated: "2026-11-28",
+    navLabel: "Ataque de ansiedad o de pánico",
+    title: "¿Ataque de ansiedad o de pánico? Diferencias y qué hacer",
+    h1: "¿Ataque de ansiedad y ataque de pánico son lo mismo?",
+    description:
+      "No son lo mismo: ataque de pánico es un término clínico y ataque de ansiedad, una expresión común. Cómo se diferencian y qué hacer en el momento.",
+    answer:
+      "No exactamente. Ataque de pánico es un término clínico, con criterios: un miedo intenso que empieza de golpe y llega a su punto más alto en minutos. Ataque de ansiedad es una expresión de uso común, sin una definición diagnóstica propia: a veces se usa para nombrar un ataque de pánico y otras para un aumento de ansiedad más gradual, ligado a una preocupación.",
+    sections: [
+      {
+        heading: "Qué es un ataque de pánico",
+        paragraphs: [
+          "Un ataque de pánico es un episodio de miedo intenso que empieza de forma brusca y llega a su máximo en minutos. El cuerpo entra en alarma: corazón acelerado, falta de aire, temblor, sudor o mareo. Suele venir con un miedo muy concreto: a morirte, a perder el control o a volverte loco.",
+          "Puede aparecer frente a una situación temida o sin un desencadenante claro, incluso en reposo o de noche. Después la ola baja. La definición completa, con lo que pasa antes y después del episodio, está en [qué es un ataque de pánico](/preguntas/que-es-un-ataque-de-panico).",
+        ],
+      },
+      {
+        heading: "Qué suele querer decir «ataque de ansiedad»",
+        paragraphs: [
+          "No es un diagnóstico. Mucha gente usa la expresión para describir una subida de ansiedad más gradual, ligada a una preocupación o a una situación concreta: una conversación pendiente, una prueba, un problema de plata o de salud. La tensión crece a medida que se acerca el momento o que la preocupación vuelve una y otra vez.",
+          "Esa subida puede durar más que un ataque de pánico, con un pico menos marcado. Otras personas, en cambio, dicen ataque de ansiedad cuando lo que vivieron fue un ataque de pánico. Por eso la etiqueta sola no alcanza: orienta más describir cómo empezó, cómo subió y qué miedo apareció.",
+        ],
+      },
+      {
+        heading: "Diferencias entre ataque de ansiedad y ataque de pánico",
+        paragraphs: [
+          "Son descripciones generales para orientarte, no criterios para diagnosticarte. Un mismo episodio puede tener rasgos de ambos.",
+        ],
+        bullets: [
+          "Inicio: el ataque de pánico empieza de golpe; lo que se suele llamar ataque de ansiedad va subiendo de a poco.",
+          "Curva: el pánico llega a su máximo en minutos y luego baja; la ansiedad gradual puede mantenerse más tiempo, con un pico menor.",
+          "Desencadenante: el pánico puede aparecer sin un motivo claro; la ansiedad gradual suele estar ligada a una preocupación o situación reconocible.",
+          "Tipo de miedo: en el pánico aparece el miedo a morir, a perder el control o a volverse loco; en la ansiedad gradual predomina la preocupación por lo que podría pasar.",
+          "Qué queda después: tras un ataque de pánico puede quedar el miedo a que se repita y la atención pegada al cuerpo; tras una subida de ansiedad suele quedar cansancio y la preocupación de fondo.",
+        ],
+      },
+      {
+        heading: "Síntomas que tienen en común",
+        paragraphs: [
+          "En los dos el cuerpo puede reaccionar con palpitaciones, respiración corta, tensión, sudor, temblor o malestar en el estómago. Los síntomas por sí solos no dicen cuál de los dos es: importa más cómo empezó el episodio y cómo evolucionó. El listado ordenado, con lo que se siente en cada parte del cuerpo, está en [síntomas físicos de la ansiedad](/preguntas/sintomas-fisicos-de-la-ansiedad).",
+          "Si es la primera vez que te pasa, o si hay dolor en el pecho, conviene descartar una causa médica antes de ponerle nombre. No es exagerar: varias de estas sensaciones se parecen a problemas del corazón o de la respiración, y esa revisión le corresponde a un médico.",
+        ],
+      },
+      {
+        heading: "Ansiedad generalizada y ataques de pánico",
+        paragraphs: [
+          "Pueden darse juntos. La ansiedad generalizada se describe como una preocupación sostenida, difícil de cortar, que se estira por muchos temas y se acompaña de tensión, cansancio o mal dormir. Los ataques de pánico son crisis puntuales, de minutos. Una persona puede vivir con la preocupación de fondo y, además, tener picos de pánico.",
+          "La guía CG113 de NICE aborda la ansiedad generalizada y el pánico en un mismo documento, como cuadros distintos. Esta página no sirve para diagnosticar ninguno de los dos: si te reconoces en ambas descripciones, eso se ordena en una evaluación. Si lo que dudas es si tu preocupación es ansiedad o estrés, esa comparación está en [ansiedad o estrés](/preguntas/ansiedad-o-estres).",
+        ],
+      },
+      {
+        heading: "Qué hacer en el momento",
+        paragraphs: [
+          "Sea cual sea el nombre, en el momento ayudan cosas simples. No son un tratamiento: son formas de no alimentar la alarma con más lucha.",
+          "Los pasos con más detalle están en [qué hacer en un ataque de pánico](/guias/ataque-de-panico-que-hacer). Si el dolor de pecho es intenso, aparece un desmayo o la falta de aire no cede, la prioridad es una evaluación médica de urgencia.",
+        ],
+        bullets: [
+          "Recuerda que la ola sube y después baja. Una frase corta, del tipo esto va a bajar, le da contexto al cuerpo.",
+          "Apoya los pies en el suelo y alarga la salida del aire, sin buscar una técnica perfecta.",
+          "Nombra algunas cosas que ves alrededor para volver al lugar donde estás.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Un ataque de ansiedad es lo mismo que un ataque de pánico?",
+        answer:
+          "No siempre. Ataque de pánico es un término clínico: miedo intenso que empieza de golpe y llega a su máximo en minutos. Ataque de ansiedad es una expresión de uso común que algunas personas usan para un ataque de pánico y otras para una subida de ansiedad más gradual.",
+      },
+      {
+        question: "¿Un ataque de ansiedad puede convertirse en uno de pánico?",
+        answer:
+          "Puede pasar. Una ansiedad que viene subiendo puede, en algún momento, dispararse en un pico brusco con miedo intenso. También puede bajar sin llegar a eso. Lo que distingue al pánico es el inicio brusco y el máximo en minutos.",
+      },
+      {
+        question: "¿Se puede tener ansiedad generalizada y ataques de pánico?",
+        answer:
+          "Sí, pueden coexistir. La ansiedad generalizada es una preocupación sostenida en el tiempo; los ataques de pánico son crisis puntuales. Reconocerte en ambas descripciones no es un diagnóstico: eso se ordena en una evaluación.",
+      },
+      {
+        question: "¿Cuánto dura un ataque de pánico?",
+        answer:
+          "El pico suele alcanzarse en minutos y luego baja. El cansancio y el miedo a que vuelva pueden quedarse después. Si los síntomas físicos intensos no bajan o hay dolor de pecho, pide evaluación médica.",
+      },
+      {
+        question: "¿Cuándo conviene consultar?",
+        answer:
+          "Ante un primer episodio o dolor en el pecho, primero con un médico. Con un profesional de salud mental, cuando los ataques se repiten, cuando empiezas a evitar lugares o situaciones por miedo a que vuelvan, o cuando la ansiedad de fondo no baja entre un episodio y otro.",
+      },
+    ],
+    related: [
+      { href: "/preguntas/que-es-un-ataque-de-panico", label: "Qué es un ataque de pánico" },
+      { href: "/preguntas/sintomas-fisicos-de-la-ansiedad", label: "Síntomas físicos de la ansiedad" },
+      { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer en un ataque de pánico" },
+      { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
+      { href: "/preguntas/que-es-la-terapia-cognitivo-conductual", label: "Terapia cognitivo-conductual" },
+    ],
+    safety:
+      "Dolor de pecho nuevo o intenso, desmayo o falta de aire que no cede: llama al 131 o acude a un servicio de urgencia. Si aparecen ideas de hacerte daño, llama al *4141.",
+    sources: [NICE_ANSIEDAD, DIPRECE_ANSIEDAD],
+  },
     {
     cluster: "preguntas",
     slug: "que-es-la-erp-para-el-toc",
-    updated: "2026-10-30",
+    updated: "2026-11-28",
     navLabel: "Terapia ERP para el TOC",
     title: "Terapia ERP para el TOC: qué es y cómo funciona",
     h1: "¿Qué es la terapia ERP para el TOC?",
@@ -926,6 +1030,26 @@ const QUESTION_PAGES: InfoPage[] = [
           "Si el TOC ocupa varias horas del día, esta explicación no alcanza como plan. Sirve para reconocer el método cuando lo converses con quien te evalúe. La página de terapia ERP para el TOC en Chillán es la ficha local: esta pregunta no la reemplaza.",
         ],
       },
+      {
+        heading: "ERP en distintos tipos de TOC",
+        paragraphs: [
+          "La lógica es la misma en todos los casos: acercarte al disparador y no hacer el ritual. Lo que cambia es qué se expone y qué ritual se deja de hacer. Cada plan se arma según cómo se presenta el TOC en esa persona.",
+          "Cuando las obsesiones son pensamientos, el ritual no siempre se ve: repasar, neutralizar con otra idea, buscar certeza o pedir confirmación. Por eso una parte del trabajo es aprender a reconocer esas respuestas internas antes de dejar de hacerlas. Los ejemplos de abajo son generales y no reemplazan una evaluación, sobre todo si los rituales ocupan buena parte del día.",
+        ],
+        bullets: [
+          "Contaminación: tocar de a poco superficies u objetos que se evitan y no hacer el lavado o la limpieza extra.",
+          "Comprobación: revisar la llave, el gas o la puerta una sola vez, o ninguna, y no volver a confirmar.",
+          "Simetría u orden: dejar algo levemente desordenado o asimétrico y tolerar la sensación de que no está bien.",
+          "Obsesiones de pensamiento puro: como el disparador es un pensamiento, se trabaja también con exposición imaginada o escrita, y se identifican los rituales mentales que reemplazan a los visibles.",
+        ],
+      },
+      {
+        heading: "ERP y terapia cognitivo-conductual",
+        paragraphs: [
+          "La ERP es una forma de terapia cognitivo-conductual (TCC). La guía CG31 de NICE se refiere a la TCC que incluye exposición con prevención de respuesta como tratamiento psicológico del TOC. No es una terapia aparte de la TCC, sino uno de sus métodos, pensado para el ciclo entre obsesión y ritual.",
+          "Dentro de la TCC, la ERP suele acompañarse de otras piezas: entender el mapa del TOC, revisar creencias como la necesidad de certeza o la responsabilidad excesiva, y planificar los pasos entre sesiones. Qué es ese enfoque en general está en [qué es la terapia cognitivo-conductual](/preguntas/que-es-la-terapia-cognitivo-conductual). La diferencia entre obsesión y compulsión se explica en [obsesiones y compulsiones](/preguntas/obsesiones-y-compulsiones).",
+        ],
+      },
     ],
     faqs: [
       {
@@ -947,6 +1071,21 @@ const QUESTION_PAGES: InfoPage[] = [
         question: "¿La medicación reemplaza la ERP?",
         answer:
           "No necesariamente. En cuadros moderados o severos un médico puede indicar fármacos, a veces junto con la terapia. La decisión de medicar no se toma en una página.",
+      },
+      {
+        question: "¿Qué significa ERP en psicología?",
+        answer:
+          "ERP viene del inglés Exposure and Response Prevention, que en español se dice exposición con prevención de respuesta. Es un método de la terapia cognitivo-conductual que se usa en el TOC: acercarte a lo que dispara la obsesión sin hacer el ritual.",
+      },
+      {
+        question: "¿La ERP es lo mismo que la terapia cognitivo-conductual?",
+        answer:
+          "No exactamente. La ERP es una forma de terapia cognitivo-conductual, pero no abarca todo lo que es la TCC. La TCC es un enfoque más amplio; la ERP es uno de sus métodos, centrado en el ciclo entre obsesión y ritual.",
+      },
+      {
+        question: "¿Sirve la ERP si las obsesiones son solo pensamientos?",
+        answer:
+          "La ERP también se aplica cuando las obsesiones son pensamientos sin rituales visibles. En esos casos se trabaja con exposición imaginada o escrita y se identifican los rituales mentales, como repasar, neutralizar o buscar certeza, para dejar de hacerlos. Cómo se adapta a cada caso se define en una evaluación.",
       },
     ],
     related: [
@@ -1465,6 +1604,7 @@ const QUESTION_PAGES: InfoPage[] = [
       { href: "/preguntas/ansiedad-o-estres", label: "Ansiedad o estrés" },
       { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer en un ataque de pánico" },
       { href: "/preguntas/que-es-un-ataque-de-panico", label: "Qué es un ataque de pánico" },
+      { href: "/preguntas/ataque-de-ansiedad-o-ataque-de-panico", label: "Ataque de ansiedad o de pánico" },
       { href: "/terapia-online", label: "Psicoterapia online" },
       { href: "/preguntas/como-es-una-sesion-de-psicologia-online", label: "Cómo es una sesión de psicología online" },
     ],
