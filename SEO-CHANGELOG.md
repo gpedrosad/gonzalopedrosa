@@ -2,6 +2,31 @@
 
 Historial anterior de lotes CTR en docs/seo/ctr-tracking.md.
 
+## 2026-11-28 — Contenido nuevo: ataque de ansiedad vs. ataque de pánico + refuerzo de ERP para el TOC
+
+### `/preguntas/ataque-de-ansiedad-o-ataque-de-panico` (nueva)
+- Ficha informativa que responde la comparación que hoy ninguna URL cubre. Las queries caían en `/preguntas/sintomas-fisicos-de-la-ansiedad`, que no la responde (GSC, 90 d al 26/11/2026):
+  - "ataque de ansiedad es lo mismo que ataque de panico": 4 impr, pos 28,2
+  - "ataque de panico y ansiedad es lo mismo": 3 impr, pos 24,3
+  - "ataque de panico y ataque de ansiedad es lo mismo": 3 impr, pos 26,0
+  - "ataque de ansiedad y panico es lo mismo": 2 impr, pos 25,5
+  - "ataque de panico ataque de ansiedad": 1 impr, pos 23,0
+  - "ansiedad generalizada con ataques de panico": 3 impr, pos 26,0
+  - "ataque de panico por ansiedad": 1 impr, pos 16,0
+- Estructura: answer directa (término clínico vs. expresión de uso común), 6 secciones (qué es un ataque de pánico, qué suele querer decir "ataque de ansiedad", diferencias en bullets, síntomas en común, ansiedad generalizada y pánico, qué hacer en el momento), 5 FAQs alineadas con las queries, safety (131 / urgencia / *4141) y fuentes NICE CG113 + DIPRECE.
+- Anticanibalización: no repite la definición extensa de `/preguntas/que-es-un-ataque-de-panico`, ni el listado de `/preguntas/sintomas-fisicos-de-la-ansiedad`, ni el paso a paso de `/guias/ataque-de-panico-que-hacer`; enlaza a las tres y a `/preguntas/ansiedad-o-estres`. Sin enlaces a páginas locales.
+- Agregada a `src/lib/organic-routes.ts` (priority 0.72, lastModified 2026-11-28).
+- Enlaces entrantes: related de `/preguntas/sintomas-fisicos-de-la-ansiedad` y de `/preguntas/que-es-un-ataque-de-panico`.
+
+### `/preguntas/que-es-la-erp-para-el-toc` (refuerzo)
+- GSC 28 d: 56 impr, pos 11,9 (crecimiento x5,6). Queries 90 d: "terapia erp toc" 8 impr pos 33,2; "erp toc" 3 pos 14,0; "erp psicologia" 2 pos 35,0; "terapia erp" 2 pos 6,0; "terapia para toc" 1 pos 30,0; "what does erp stand for therapy" 1 pos 6,0.
+- Sin cambios en title, h1, description ni answer (rutina CTR aparte).
+- 2 secciones nuevas: "ERP en distintos tipos de TOC" (contaminación, comprobación, simetría/orden, obsesiones de pensamiento puro con exposición imaginada o escrita y rituales mentales) y "ERP y terapia cognitivo-conductual" (ERP como forma de TCC, coherente con NICE CG31; enlaces a TCC y a obsesiones y compulsiones).
+- 3 FAQs nuevas: significado de ERP en psicología (Exposure and Response Prevention), ERP vs. TCC, ERP cuando las obsesiones son solo pensamientos.
+- updated y lastModified: 2026-10-30 → 2026-11-28.
+
+Medir: 2026-12-12 (14 d) y 2026-12-26 (28 d)
+
 ## 2026-11-26 — Contenido nuevo: boost de /preguntas/que-hace-un-especialista-en-estres-postraumatico
 
 Hoy no se crea página nueva: todas las intenciones con demanda real en GSC ya tienen URL.

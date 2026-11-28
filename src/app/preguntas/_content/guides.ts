@@ -542,6 +542,7 @@ export const guides: Guide[] = [
     ],
     related: [
       { href: "/guias/ataque-de-panico-que-hacer", label: "Qué hacer durante un ataque de pánico" },
+      { href: "/preguntas/ataque-de-ansiedad-o-ataque-de-panico", label: "Ataque de ansiedad o de pánico" },
       { href: "/preguntas/sintomas-fisicos-de-la-ansiedad", label: "Síntomas físicos de la ansiedad" },
       { href: "/preguntas/ansiedad-o-estres", label: "Cómo distinguir ansiedad y estrés" },
       { href: "/terapia-online", label: "Terapia online" },
